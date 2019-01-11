@@ -1,0 +1,21 @@
+# Table of contents
+
+* [What is Sentiance Platform?](README.md)
+* [Getting Started](getting-started/README.md)
+  * [Android Quick Start](getting-started/android-sdk.md)
+  * [iOS Quick Start](getting-started/ios-sdk/README.md)
+    * [1. Include SDK](getting-started/ios-sdk/1.-include-sdk.md)
+    * [2. Configuring capabilities](getting-started/ios-sdk/2.-configuring-capabilities.md)
+    * [3. Compiler build settings](getting-started/ios-sdk/3.-compiler-build-settings.md)
+    * [4. Changing Info.plist](getting-started/ios-sdk/4.-changing-info.plist.md)
+    * [5. Configuration](getting-started/ios-sdk/5.-configuration.md)
+    * [6. Initialization](getting-started/ios-sdk/6.-initialization.md)
+    * [7. Start](getting-started/ios-sdk/7.-start.md)
+    * [More](getting-started/ios-sdk/more.md)
+* [API](api/README.md)
+  * [Quick Overview](api/quick-overview.md)
+  * [GraphQL API](api/graphql-api.md)
+  * [REST API](api/rest-api.md)
+* [Changelog](changelog.md)
+* [FAQ](faq.md)
+
