@@ -12,7 +12,7 @@ First, collect GPS and motion sensor data from a user's phone or IOT devices via
 
 Once the data is collected, we turn this into valuable insights about the user then group them into EVENTS, MOMENTS, and SEGMENTS. 
 
-In other words, we give you an understanding of where the user likes to go, what the user likes to, and the persona of the user.
+In other words, we give you an understanding of where the user likes to go, what the user likes to do, and provide an insight into the persona of the user.
 
 ![](.gitbook/assets/context-layers.png)
 
