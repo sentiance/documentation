@@ -1,5 +1,18 @@
 # iOS SDK
 
+## 2019-01-28
+
+### iOS SDK \[5.1.6\]
+
+#### New features
+
+* Crash detection speed check
+
+#### Improvements
+
+* Improved trip start detection
+* Stability improvements
+
 ## 2018-12-21
 
 ### iOS SDK \[5.1.5\]
