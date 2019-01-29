@@ -1,2 +1,0 @@
-# Appendix: Permission, battery optimization
-

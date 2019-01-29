@@ -1,4 +1,0 @@
-# GraphQL API
-
-## Coming soon
-
