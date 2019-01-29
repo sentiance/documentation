@@ -3,11 +3,11 @@
 {% hint style="info" %}
 **Switch developer account**
 
-When using the [portal to manage your apps](https://developers.sentiance.com/apps), make sure to select your developer account.   
+When using the [portal to manage your apps](https://developers.sentiance.com/apps), make sure to select your developer account.  
 You can change developer accounts using the dropdown menu next to your current user.
 {% endhint %}
 
-### Create an application
+## Create an application
 
 An application provides the ID & key you can use to integrate the Sentiance SDK's into your mobile application and manage the SDK behavior.
 

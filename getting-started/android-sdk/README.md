@@ -1,7 +1,7 @@
 # Android Quick Start
 
 {% hint style="success" %}
-### Platform requirements
+## Platform requirements
 
 The Sentiance SDK requires Android API level 14 or higher, i.e. Android 4.0 \(Ice Cream Sandwich\).
 {% endhint %}
