@@ -30,5 +30,9 @@ private Notification createNotification() {
 }
 ```
 
+{% hint style="info" %}
+You can quickly test the notification appearance by running a fresh SDK install on an Android Oreo device. The notification will appear the first time the SDK starts automatic detections, or when you manually start a trip. More about this [here](../../../appendix/controlled-detections/).
+{% endhint %}
+
 
 
