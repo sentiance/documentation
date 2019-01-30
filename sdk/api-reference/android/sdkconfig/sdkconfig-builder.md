@@ -6,7 +6,7 @@ This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentian
 
 | constructor |  |
 | :--- | :--- |
-| Builder \(String appId, String secret, Notification notification\) |  |
+| [Builder](sdkconfig-builder.md#builder) \(String appId, String secret, [Notification](https://developer.android.com/reference/android/app/Notification) notification\) |  |
 
 |  |  |
 | :--- | :--- |

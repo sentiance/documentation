@@ -1,6 +1,6 @@
 # Detecting Vehicle Crashes
 
-The Sentiance SDK can be configured to detect vehicle accidents/crashes during trips. You can be notified of these crash events by settings a callback as follows:
+The Sentiance SDK can be configured to detect vehicle accidents/crashes during trips. You can be notified of these crash events by setting a callback as follows:
 
 {% tabs %}
 {% tab title="iOS" %}
