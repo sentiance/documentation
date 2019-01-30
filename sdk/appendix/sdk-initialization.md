@@ -14,10 +14,14 @@ Once the Sentiance SDK has been initialized, it will set jobs, alarms, and geofe
 
 Initializing the SDK in the `onCreate()` or `didFinishLaunchingWithOptions` method of your `Application` / `AppDelegate` class will ensure the SDK components are constructed, since these methods are guaranteed to finish before an intent or a notification is delivered to any broadcast receiver / delegate function.
 
+{% hint style="info" %}
+The only exception to the above rule is the first ever SDK initialization call. This can be delayed since the SDK has not yet set any alarms, geofences, etc. A good reason to delay this first call for example, is when you need to download the Sentiance credentials from a remote server, or you need to handle a first user login.
+{% endhint %}
+
 Another important consideration is that initialization must be done on the main application \(UI\) thread. When `onCreate()` or `didFinishLaunchingWithOptions` is finished, `init` should have already returned.
 
 {% hint style="info" %}
-The only exception to the above rule is the first ever SDK initialization call. This can be delayed since the SDK has not yet set any alarms, geofences, etc. A good reason to delay this first call for example, is when you need to download the Sentiance credentials from a remote server, or you need to handle a first user login.
+On Android, when the SDK detects improper initialization, it will output the following error to logcat: "**SDK is not initialized. Make sure to call Sentiance.init\(\) in your Application.onCreate\(\) method.**"
 {% endhint %}
 
 ## Initialization Must be Done Only Once

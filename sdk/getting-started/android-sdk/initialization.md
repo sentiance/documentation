@@ -4,7 +4,7 @@ Initialization is a very important step; before initialization, almost none of t
 
 ## Create an Application Class
 
-Initialization must be done in the `onCreate()` method of your `Application` class. If you don't already have a custom application class, first create a new class that extends `Application`.
+Initialization [must be done](../../appendix/sdk-initialization.md#why-initialize-in-the-application-appdelegate-class) in the `onCreate()` method of your `Application` class. If you don't already have a custom application class, first create a new class that extends `Application`.
 
 ```java
 import android.app.Application;
@@ -51,5 +51,5 @@ public void onCreate() {
 
 Upon successful initialization, [`onInitSuccess()`](../../api-reference/android/oninitcallback/#oninitsuccess) will be called. If it fails, [`onInitFailure()`](../../api-reference/android/oninitcallback/#oninitfailure) will be called with an appropriate [`InitIssue`](../../api-reference/android/oninitcallback/initissue.md).
 
-To learn more about initialization, see the [Sdk Initialization](../../appendix/sdk-initialization.md) section.
+To learn more about initialization, see the [SDK Initialization](../../appendix/sdk-initialization.md) section.
 
