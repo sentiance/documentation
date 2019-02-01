@@ -26,11 +26,13 @@ This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentian
 >
 > Creates a builder object used for initializing the Sentiance SDK.
 >
+> **Please note: hard-coded credentials are not secure. Load your Sentiance credentials from a secure source such a remote server, and store them securely on the device.**
+>
 > | Parameters |  |
 > | :--- | :--- |
 > | appId | The Sentiance app credential ID. |
 > | secret | The Sentiance app credential secret. |
-> | notification | A [`Notification`](https://developer.android.com/reference/android/app/Notification) used by the SDK when starting a foreground service. |
+> | notification  | A [`Notification`](https://developer.android.com/reference/android/app/Notification) used by the SDK when starting a foreground service. |
 
 
 

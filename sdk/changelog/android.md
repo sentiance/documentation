@@ -9,12 +9,12 @@
 
 #### Changed
 
-* Prevent Sentiance credentials change for an already authenticated user \(init will fail with `CHANGED_CREDENTIALS`\).
+* Prevent Sentiance credentials change for an already authenticated user \(init will fail with [`CHANGED_CREDENTIALS`](../api-reference/android/initstate.md)\).
 * Prevent premature user access token refreshes.
 
 #### Deprecated
 
-* `Sentiance.isInitialized()` is now deprecated. Use `Sentiance.getInitState()` instead, which returns an `InitState` enum.
+* `Sentiance.isInitialized()` is now deprecated. Use [`Sentiance.getInitState()`](../api-reference/android/sentiance.md#getinitstate) instead, which returns an [`InitState`](../api-reference/android/initstate.md) enum.
 
 #### Fixed
 
@@ -25,7 +25,7 @@
 #### Added
 
 * Ability to disable battery optimization for improved detections \(see [here](../appendix/android/android-battery-optimization.md)\).
-* New SdkStatus fields \(see [here]()\).
+* New [`SdkStatus`](../api-reference/android/sdkstatus/) fields.
   * `isBatteryOptimizationEnabled`
   * `isBatterySavingEnabled`
   * `isBackgroundProcessingRestricted`
