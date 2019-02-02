@@ -25,7 +25,7 @@ implementation ('com.sentiance:sdk:4.4.0@aar') {
 
 ### I see a lot of missed trips and stationary moments in the timeline
 
-Our SDK depends on proper device configuration in order to do detections. Missed events can be due to the user disabling the device location mode, enabling airplane mode, or sometimes restricting the app's background execution. You can be notified of these changes by handling [SdkStatus]() updates as shown [here](../getting-started/android-sdk/sdk-status-updates.md).
+Our SDK depends on proper device configuration in order to do detections. Missed events can be due to the user disabling the device location mode, enabling airplane mode, or sometimes restricting the app's background execution. You can be notified of these changes by handling [SdkStatus](../api-reference/android/sdkstatus/) updates as shown [here](../getting-started/android-sdk/sdk-status-updates.md).
 
 On some devices however, manufacturers tend to be very restrictive on background execution for newly installed apps. On these devices, the user has to manually whitelist the app to allow proper detections. A handy whitelisting guide can be found on [www.dontkillmyapp.com](www.dontkillmyapp.com).
 
