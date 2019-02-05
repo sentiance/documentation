@@ -8,7 +8,7 @@ When including our SDK in your application, your application will grow by about 
 
 Our SDK consumes about 8000 methods \(12%\) of the available 65,536 methods in a single dex file.
 
-### I'm getting version collision error with the certain library
+### I'm getting version collision error with a certain library
 
 Our SDK has a dependency on the Google Play location services library, which itself has dependencies on various other support libraries. If your application has a dependency on a different version of a play services, support, or location library, it may result in version conflict.
 

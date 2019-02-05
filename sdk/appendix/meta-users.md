@@ -4,7 +4,7 @@ Meta-Users can be used to link your app’s user to a Sentiance user.
 
 A user in Sentiance is identified by a unique **user ID**. An SDK instance \(or an app install\) on the other hand is identified by its **install ID**. By default, every new installation gets its own install and user IDs. However, it is possible to link the installation to an existing user.
 
-To do so, we first link your app's user account \(e.g. email, UUID, etc.\) to the newly created Sentiance user. Next time when the user reinstalls your app, we'll use your app's user account to check for an existing link. If found, we'll will link this new installation to the existing user.
+To do so, we first link your app's user account \(e.g. email, UUID, etc.\) to the newly created Sentiance user. Next time when the user re-installs your app, we'll use your app's user account to check for an existing link. If found, we will link this new installation to the existing user.
 
 The biggest benefit here is the ability to get single continuous timelines for your users across app reinstalls and device migration.
 
@@ -65,7 +65,7 @@ Sentiance.getInstance(this).init(config, initCallback);
 
 During initialization, the SDK will call the [`link(String)`](../api-reference/android/metauserlinker.md#link) method of your [`MetaUserLinker`](../api-reference/android/metauserlinker.md) object from a background thread, passing to it the SDK install ID. In this method, you must initiate a link request towards the Sentiance API \(via your server\), supplying the install ID and your app’s User ID.
 
-\`\`[`link(String)`](../api-reference/android/metauserlinker.md#link) must return true only after linking with the Sentiance API succeeds. If linking fails, you must return false. The SDK initialization will then fail with reason `LINK_FAILED`.
+[`link(String)`](../api-reference/android/metauserlinker.md#link) must return true only after linking with the Sentiance API succeeds. If linking fails, you must return false. The SDK initialization will then fail with reason `LINK_FAILED`.
 {% endtab %}
 {% endtabs %}
 

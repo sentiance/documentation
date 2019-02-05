@@ -4,7 +4,7 @@ Automatic detection mode is the default mode the SDK runs in. In this mode, the 
 
 Detections start when you call the `start` method and all detection requirements are met \(on [iOS](../../api-reference/ios/sentsdkstatus/#candetect) and [Android](../../api-reference/android/sdkstatus/#candetect)\).
 
-To stop detection, call the `stop` method. This will put the SDK in a stopped state where only regular SDK maintenance tasks will run.
+To stop detections, call the `stop` method. This will put the SDK in a stopped state where only regular SDK maintenance tasks will run.
 
 
 
