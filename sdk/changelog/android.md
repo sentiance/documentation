@@ -1,5 +1,17 @@
 # Android
 
+## 4.5.0 - 2019-02-11
+
+#### Added
+
+* Upload device location-mode, battery-saving state, and battery optimization config to the Sentiance platform.
+* Capture hourly heartbeat events to track SDK runtime.
+* Support uploading select SDK events \(e.g. heartbeat\) to the Sentiance platform over mobile data.
+
+#### Fixed
+
+* `TransportMode` enum obfuscation issue.
+
 ## 4.4.0 - 2019-01-17
 
 #### Added
