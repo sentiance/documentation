@@ -39,7 +39,7 @@ public void onCreate() {
         public void onInitSuccess() {
         }
         @Override
-        public void onInitFailure(InitIssue issue) {
+        public void onInitFailure(InitIssue issue, @Nullable Throwable th) {
         }
     };
         

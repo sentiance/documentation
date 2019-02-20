@@ -1,5 +1,21 @@
 # Android
 
+## 4.5.1 - 2019-02-20
+
+#### Added
+
+* Capture unexpected exceptions and errors during SDK init, and fail with reason [`InitIssue.INITIALIZATION_ERROR`](../api-reference/android/oninitcallback/initissue.md).
+* Minor detection improvement.
+
+#### Changed
+
+* [`OnInitCallback.onInitFailure()`](../api-reference/android/oninitcallback/#oninitfailure) now passes a [`Throwable`](https://developer.android.com/reference/java/lang/Throwable) as an additional parameter in case of the aforementioned [`InitIssue.INITIALIZATION_ERROR` ](../api-reference/android/oninitcallback/initissue.md).
+
+#### Fixed
+
+* Stuck stationary issue.
+* Alarms not triggering on Samsung.
+
 ## 4.5.0 - 2019-02-11
 
 #### Added
@@ -10,7 +26,7 @@
 
 #### Fixed
 
-* `TransportMode` enum obfuscation issue.
+* [`TransportMode`](../api-reference/android/trip/transportmode.md) enum obfuscation issue.
 
 ## 4.4.0 - 2019-01-17
 

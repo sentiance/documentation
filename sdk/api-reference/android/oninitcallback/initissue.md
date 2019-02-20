@@ -9,4 +9,5 @@ Indicates the SDK initialization failure reason.
 | **SERVICE\_UNREACHABLE** | An issue was encountered while trying to reach the Sentiance API. Make sure your internet connection is working and retry. |
 | **LINK\_FAILED** | An issue was encountered when trying to link the installation ID to the meta-user. |
 | **REMOTE\_DISABLED** | This user was remote disabled. If this is not what you expect, double check the rollout settings of your Sentiance app. |
+| **INITIALIZATION\_ERROR** | Initialization was aborted due to an unexpected exception or error.  |
 

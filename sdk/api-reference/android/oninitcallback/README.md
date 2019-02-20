@@ -6,7 +6,7 @@ This interface is used with [`init(SdkConfig, OnInitCallback)`](../sentiance.md#
 
 |  |  |
 | :--- | :--- |
-| void | [onInitFailure](./#oninitfailure) \([InitIssue](initissue.md) issue\) |
+| void | [onInitFailure](./#oninitfailure) \([InitIssue](initissue.md) issue, @Nullable [Throwable](https://developer.android.com/reference/java/lang/Throwable) throwable\) |
 | void | [onInitSuccess](./#oninitsuccess) \(\) |
 
 
@@ -14,7 +14,7 @@ This interface is used with [`init(SdkConfig, OnInitCallback)`](../sentiance.md#
 ### `onInitFailure()`
 
 > ```java
-> void onInitFailure(InitIssue issue)
+> void onInitFailure(InitIssue issue, @Nullable Throwable throwable)
 > ```
 >
 > Called when an issue was encountered while initializing the SDK.
@@ -22,6 +22,7 @@ This interface is used with [`init(SdkConfig, OnInitCallback)`](../sentiance.md#
 > | Parameters |  |
 > | :--- | :--- |
 > | issue | An [`InitIssue`](initissue.md) enum indicating the issue. |
+> | throwable | An optional [`Throwable`](https://developer.android.com/reference/java/lang/Throwable) in case of [`INITIALIZATION_ERROR`](initissue.md). |
 
 ### `onInitSuccess()`
 
