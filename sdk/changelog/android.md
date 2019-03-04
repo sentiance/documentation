@@ -1,5 +1,18 @@
 # Android
 
+## 4.5.2 - 2019-03-04
+
+#### Changed
+
+* Include geofence exit triggering locations in trips.
+* Drop payloads when the API responds with 413 \(payload too large\).
+* Reschedule SDK tasks with changed criteria.
+
+#### Fixed
+
+* Rare crash caused by shared SimpleDateFormat instance.
+* Prevent stopping of incoming location fixes during trips caused by high frequency requests \(1 per 10 secs or higher\).
+
 ## 4.5.1 - 2019-02-20
 
 #### Added

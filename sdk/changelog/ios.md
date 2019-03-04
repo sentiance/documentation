@@ -1,5 +1,11 @@
 # iOS
 
+## 5.1.8 - 2019-02-28
+
+#### Changed
+
+* Stability improvements.
+
 ## 5.1.7 - 2019-01-28
 
 #### Added
