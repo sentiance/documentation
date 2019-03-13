@@ -7,7 +7,7 @@ The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secr
 |  |  |
 | :--- | :--- |
 | String | [getAppId](./#getappid) \(\) |
-| String | [getBaseURL](sdkconfig-builder.md#baseurl) \(\) |
+| String | [getBaseURL](./#getbaseurl) \(\) |
 | [MetaUserLinker](../metauserlinker.md)  | [getMetaUserLinker](./#getmetauserlinker) \(\) |
 | Notification  | [getNotification](./#getnotification) \(\) |
 | int  | [getNotificationId](./#getnotificationid) \(\) |
