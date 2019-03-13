@@ -10,6 +10,7 @@ This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentian
 
 |  |  |
 | :--- | :--- |
+| [Builder](sdkconfig-builder.md) | [baseURL](sdkconfig-builder.md#baseurl) \(String url\) |
 | [SdkConfig](./) | [build](sdkconfig-builder.md#build) \(\) |
 | [Builder](sdkconfig-builder.md) | [setMetaUserLinker](sdkconfig-builder.md#setmetauserlinker) \([MetaUserLinker](../metauserlinker.md) linker\) |
 | [Builder](sdkconfig-builder.md) | [setNotificationId](sdkconfig-builder.md#setnotificationid) \(int id\) |
@@ -35,6 +36,18 @@ This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentian
 > | notification  | A [`Notification`](https://developer.android.com/reference/android/app/Notification) used by the SDK when starting a foreground service. |
 
 
+
+### `baseURL()`
+
+> ```java
+> Builder baseURL(String url)
+> ```
+>
+> Sets the Sentiance API URL.
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | url | The Sentiance API URL. |
 
 ### `build()`
 

@@ -7,6 +7,7 @@ The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secr
 |  |  |
 | :--- | :--- |
 | String | [getAppId](./#getappid) \(\) |
+| String | [getBaseURL](sdkconfig-builder.md#baseurl) \(\) |
 | [MetaUserLinker](../metauserlinker.md)  | [getMetaUserLinker](./#getmetauserlinker) \(\) |
 | Notification  | [getNotification](./#getnotification) \(\) |
 | int  | [getNotificationId](./#getnotificationid) \(\) |
@@ -23,6 +24,14 @@ The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secr
 > ```
 >
 > Returns the Sentiance app credential ID.
+
+### `getBaseURL()`
+
+> ```java
+> String getBaseURL()
+> ```
+>
+> Returns the Sentiance API URL.
 
 ### `getMetaUserLinker()`
 

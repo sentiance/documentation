@@ -1,5 +1,16 @@
 # Android
 
+## 4.6.0 - 2019-03-13
+
+#### Added
+
+* Support overwriting the Sentiance API URL with [`SdkConfig.Builder.baseURL(String)`](../api-reference/android/sdkconfig/sdkconfig-builder.md#baseurl).
+* App version code in the device info payload.
+
+#### Fixed
+
+* Prevent creating very long stationaries when the device has been offline \(no location updates or powered off\).
+
 ## 4.5.2 - 2019-03-04
 
 #### Changed
