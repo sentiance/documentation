@@ -8,6 +8,10 @@ When including our SDK in your application, your application will grow by about 
 
 Our SDK consumes about 8000 methods \(12%\) of the available 65,536 methods in a single dex file.
 
+### What app permissions are required by the SDK?
+
+Please see our list of [manifest permissions](../appendix/android/manifest-permission.md). The only permission that requires user consent is the location permission, and is mandatory for the proper operation of the SDK detections.
+
 ### I'm getting version collision error with a certain library
 
 Our SDK has a dependency on the Google Play location services library, which itself has dependencies on various other support libraries. If your application has a dependency on a different version of a play services, support, or location library, it may result in version conflict.
@@ -25,7 +29,7 @@ implementation ('com.sentiance:sdk:4.4.0@aar') {
 
 ### I see a lot of missed trips and stationary moments in the timeline
 
-Our SDK depends on proper device configuration in order to do detections. Missed events can be due to the user disabling the device location mode, enabling airplane mode, or sometimes restricting the app's background execution. You can be notified of these changes by handling [SdkStatus](../api-reference/android/sdkstatus/) updates as shown [here](../getting-started/android-sdk/sdk-status-updates.md).
+Our SDK depends on proper device configuration in order to do detections. Missed events can be due to the user disabling device location tracking, enabling airplane mode, or sometimes restricting the app's background execution. You can be notified of these changes by handling [SdkStatus](../api-reference/android/sdkstatus/) updates as shown [here](../getting-started/android-sdk/sdk-status-updates.md).
 
-On some devices however, manufacturers tend to be very restrictive on background execution for newly installed apps. On these devices, the user has to manually whitelist the app to allow proper detections. A handy whitelisting guide can be found on [www.dontkillmyapp.com](www.dontkillmyapp.com).
+On some devices however, manufacturers tend to be very restrictive on background execution for newly installed apps. On these devices, the user has to manually whitelist the app to allow proper detections. A handy whitelisting guide can be found on [www.dontkillmyapp.com](www.dontkillmyapp.com). Also, have a look at our [battery optimization page](../appendix/android/android-battery-optimization.md) to learn how to ask the user to disable Android's battery optimization.
 

@@ -79,6 +79,7 @@
       * [SENTQuotaStatus](sdk/api-reference/ios/sentsdkstatus/sentquotastatus.md)
 * [FAQ](sdk/faq/README.md)
   * [Android](sdk/faq/android.md)
+  * [iOS](sdk/faq/ios.md)
 * [Changelog](sdk/changelog/README.md)
   * [Android](sdk/changelog/android.md)
   * [iOS](sdk/changelog/ios.md)
