@@ -12,8 +12,8 @@ When the application requests permission for background locations or motion acti
 
 * `NSLocationAlwaysUsageDescription`
 * `NSLocationWhenInUseUsageDescription`
-* `NSMotionUsageDescription`
 * `NSLocationAlwaysAndWhenInUseUsageDescription`
+* `NSMotionUsageDescription`
 
 ![](../../../.gitbook/assets/ios-plist.png)
 
