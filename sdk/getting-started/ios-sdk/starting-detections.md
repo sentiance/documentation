@@ -2,7 +2,7 @@
 
 We recommend the SDK start to be done within `didFinishLaunchingWithOptions` of `AppDelegate` file to ensure that there are no unintended side effects.
 
-Call the `start` method from the `success` block of the `initWithConfig` method:
+Call the `start` method from the `success` block of the [`initWithConfig`](../../api-reference/ios/sentsdk/#initwithconfig-success-failure) method:
 
 ```text
 [[SENTSDK sharedInstance] start:^(SENTSDKStatus *status) {

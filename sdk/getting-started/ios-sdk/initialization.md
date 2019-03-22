@@ -26,8 +26,8 @@ In the project's AppDelegate file,
 }
 ```
 
-1. In the `didFinishLaunchingWithOptions` method of your `AppDelegate`, pass the `SENTConfig` you created in the previous step to the `initWithConfig` method of the Sentiance SDK.
-2. Additionally, a `success` and `failure` block must be passed as well, which will inform you when initialization has failed or succeeded.
+1. In the `didFinishLaunchingWithOptions` method of your `AppDelegate`, pass the [`SENTConfig`](../../api-reference/ios/sentconfig-1.md) you created in the previous step to the `initWithConfig` method of the Sentiance SDK.
+2. Additionally, a [`success`](../../api-reference/ios/sentsdk/#initwithconfig-success-failure) and [`failure`](../../api-reference/ios/sentsdk/#initwithconfig-success-failure) block must be passed as well, which will inform you when initialization has failed or succeeded.
 
 
 

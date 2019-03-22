@@ -31,5 +31,5 @@ sentianceSdk.submitDetections(new SubmitDetectionsCallback() {
 {% endtab %}
 {% endtabs %}
 
-In order to know when it makes sense to do this, you can check the disk, mobile network and WiFi quotas of the [`SdkStatus`](../api-reference/android/sdkstatus/) and [`SENTSdkStatus`](../api-reference/ios/sentsdkstatus/) objects.
+In order to know when it makes sense to do this, you can check the disk, mobile network and WiFi quotas of the [`SdkStatus`](../api-reference/android/sdkstatus/) and [`SENTSdkStatus`]() objects.
 

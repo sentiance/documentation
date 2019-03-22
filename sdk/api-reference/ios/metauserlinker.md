@@ -1,6 +1,6 @@
 # MetaUserLinker
 
-This interface is used with MetaUsersLinker.
+This interface is used with MetaUsersLinker class.
 
 Learn more about Meta-Users [here](../../appendix/meta-users.md).
 
@@ -8,13 +8,16 @@ Learn more about Meta-Users [here](../../appendix/meta-users.md).
 
 Linker method will be called during the first ever SDK initialization, and will execute on a background thread. 
 
-| Class | Method |
-| :--- | :--- |
-| **MetaUserLinker** | ^\(NSString \*installId, void \(^linkSuccess\)\(void\), void \(^linkFailed\)\(void\)\)link |
+```objectivec
+typedef void (^MetaUserLinker)(NSString *installId, 
+                                void (^linkSuccess) (void), 
+                                void (^linkFailed) (void)
+                                );
+```
 
 | Parameter | Description |
 | :--- | :--- |
-| NSString\* **installId** | A unique Sentiance id representing the current installation. |
+| installId | A unique Sentiance id representing the current installation. |
 | linkSuccess\(\) | should be called if linking is succeeded |
 | linkFailed\(\) | should be called if linking is failed |
 
