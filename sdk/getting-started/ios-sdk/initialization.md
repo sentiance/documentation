@@ -1,7 +1,7 @@
 # 6. Initialization
 
 {% hint style="info" %}
-Until the SDK is properly initialized, most of the methods in the SDK will not work with the exception of `sharedInstance`, `initWithConfig` and `isInitialized.`
+Until the SDK is properly initialized, most of the methods in the SDK will not work with the exception of `sharedInstance`, `initWithConfig` and `getInitState.`
 {% endhint %}
 
 In the project's AppDelegate file,

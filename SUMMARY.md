@@ -106,7 +106,7 @@
 
 ## Privacy
 
-* [Journeys Privacy Policy](https://www.sentiance.com/terms/journeys/)
+* [Journeys Privacy Policy](https://www.sentiance.com/privacy/)
 
 ## Security
 
