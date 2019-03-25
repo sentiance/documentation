@@ -21,20 +21,23 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 | long  | [getMobileQuotaUsage](sentiance.md#getmobilequotausage) \(\) |
 | [SdkStatus](sdkstatus/)  | [getSdkStatus](sentiance.md#getsdkstatus) \(\) |
 | void  | [getUserAccessToken](sentiance.md#getuseraccesstoken) \([TokenResultCallback](tokenresultcallback.md) callback\) |
+| [UserActivity](useractivity.md) | [getUserActivity](sentiance.md#getuseractivity) \(\) |
 | String  | [getUserId](sentiance.md#getuserid) \(\) |
 | String  | [getVersion](sentiance.md#getversion) \(\) |
 | long  | [getWiFiQuotaLimit](sentiance.md#getwifiquotalimit) \(\) |
 | long  | [getWiFiQuotaUsage](sentiance.md#getwifiquotausage) \(\) |
-| void | [init](sentiance.md#init) \([SdkConfig](sdkconfig/) sdkConfig, final [OnInitCallback](oninitcallback/) initCallback\) |
+| void | [init](sentiance.md#init) \([SdkConfig](sdkconfig/) sdkConfig, [OnInitCallback](oninitcallback/) initCallback\) |
 | boolean  | [isTripOngoing](sentiance.md#istripongoing) \([TripType](trip/triptype.md) tripType\) |
 | void  | [removeUserMetadataField](sentiance.md#removeusermetadatafield) \(String label\) |
-| void  | [setCrashCallback](sentiance.md#setcrashcallback) \(@Nullable final [CrashCallback](crashdetection/crashcallback.md) callback\) |
-| void  | [setTripTimeoutListener](sentiance.md#settriptimeoutlistener) \(final [TripTimeoutListener](trip/triptimeoutlistener.md) listener\) |
+| void  | [setCrashCallback](sentiance.md#setcrashcallback) \(@Nullable [CrashCallback](crashdetection/crashcallback.md) callback\) |
+| void  | [setTripTimeoutListener](sentiance.md#settriptimeoutlistener) \(@Nullable [TripTimeoutListener](trip/triptimeoutlistener.md) listener\) |
+| [UserActivity](useractivity.md) | [setUserActivityListener](sentiance.md#setuseractivitylistener) \(@Nullable [UserActivityListener](useractivitylistener.md) listener\) |
 | void  | [start](sentiance.md#start) \([OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
 | void  | [startTrip](sentiance.md#starttrip) \(final @Nullable Map&lt;String, String&gt; metadata, final @Nullable [TransportMode](trip/transportmode.md) transportModeHint, @Nullable [StartTripCallback](trip/starttripcallback.md) callback\) |
 | void  | [stop](sentiance.md#stop) \(\) |
 | void  | [stopTrip](sentiance.md#stoptrip) \(@Nullable [StopTripCallback](trip/stoptripcallback.md) callback\) |
 | void  | [submitDetections](sentiance.md#submitdetections) \(@Nullable [SubmitDetectionsCallback](submitdetectionscallback.md) callback\) |
+| void | [updateSdkNotification](sentiance.md#updatesdknotification) \([Notification](https://developer.android.com/reference/android/app/Notification) notification\) |
 
 
 
@@ -134,6 +137,14 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 > ```
 >
 > Returns an [`SdkStatus`](sdkstatus/) object representing the state of the SDK.
+
+### `getUserActivity()`
+
+> ```java
+> UserActivity getUserActivity()
+> ```
+>
+> Returns a [`UserActivity`](useractivity.md) object representing the currently detected user's activity.
 
 ### `getUserAccessToken()`
 
@@ -244,7 +255,19 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 >
 > | Parameters |  |
 > | :--- | :--- |
-> | listener | A [`TripTimeoutListener`](trip/triptimeoutlistener.md) to handle trip timeouts. |
+> | listener | A [`TripTimeoutListener`](trip/triptimeoutlistener.md) to handle trip timeouts, or null to remove the previous listener. |
+
+### `setUserActivityListener()`
+
+> ```java
+> void setUserActivityListener(@Nullable UserActivityListener listener)
+> ```
+>
+> Sets a listener that is invoked when a new user activity is detected. After calling this method, the current user activity will be immediately delivered to the listener.
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | listener | A [`UserActivityListener`](useractivitylistener.md) to handle [`UserActivity`](useractivity.md) changes, or null to remove the previous listener. |
 
 ### `start()`
 
@@ -313,4 +336,18 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 > | Parameters |  |
 > | :--- | :--- |
 > | callback | A [`SubmitDetectionsCallback`](submitdetectionscallback.md) invoked with the result. |
+
+### `updateSdkNotification()`
+
+> ```java
+> void updateSdkNotification(Notification notification)
+> ```
+>
+> Replaces the notification set in [`SdkConfig.Builder`](sdkconfig/sdkconfig-builder.md). After calling this method, any notification shown by the SDK will be updated.
+>
+>  Note that this change is valid only during the process's lifetime. After the app process retarts, the SDK will default back to the notification set in [`SdkConfig.Builder`](sdkconfig/sdkconfig-builder.md).
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | notification | A [`Notification`](https://developer.android.com/reference/android/app/Notification) used by the SDK when starting a foreground service. |
 

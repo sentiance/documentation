@@ -1,5 +1,17 @@
 # Android
 
+## 4.7.0
+
+#### Added
+
+* Support updating the SDK notification at runtime with [`updateSdkNotification(Notification)`](../api-reference/android/sentiance.md#updatesdknotification).
+* Ability to register for user activity updates \(trips and stationary moments\) with [`setUserActivityListener(UserActivityListener)`](../api-reference/android/sentiance.md#setuseractivitylistener).
+
+#### Fixed
+
+* Fixed a rare issue where the location availability sdk status value is incorrect.
+* Other minor bugs.
+
 ## 4.6.0 - 2019-03-13
 
 #### Added

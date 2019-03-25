@@ -1,5 +1,54 @@
 # Builder
 
+|  |  |
+| :--- | :--- |
+| [Builder](sdkconfig-builder.md) | [baseURL](sdkconfig-builder.md#baseurl) \(String url\) |
+| [SdkConfig](./) | [build](sdkconfig-builder.md#build) \(\) |
+| [Builder](sdkconfig-builder.md) | [setMetaUserLinker](sdkconfig-builder.md#setmetauserlinker) \([MetaUserLinker](../metauserlinker.md) linker\) |
+| [Builder](sdkconfig-builder.md) | [setNotificationId](sdkconfig-builder.md#setnotificationid) \(int id\) |
+| [Builder](sdkconfig-builder.md) | [setOnSdkStatusUpdateHandler](sdkconfig-builder.md#setonsdkstatusupdatehandler) \([OnSdkStatusUpdateHandler](../onsdkstatusupdatehandler.md) handler\) |
+| [Builder](sdkconfig-builder.md) | [setTriggeredTripsEnabled](sdkconfig-builder.md#settriggeredtripsenabled) \(boolean enabled\) |
+
+### `baseURL()`
+
+> ```java
+> Builder baseURL(String url)
+> ```
+>
+> Sets the Sentiance API URL.
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | url | The Sentiance API URL. |
+
+### `build()`
+
+> ```java
+> SdkConfig build()
+> ```
+>
+> Builds an [`SdkConfig`](./) object.
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | id | The ID used when starting a foreground service. |
+
+### `setMetaUserLinker`
+
+> ```java
+> Builder setMetaUserLinker(MetaUserLinker linker)
+> ```
+>
+> Sentiance assigns to each user a unique ID. You can link your app's user to the Sentiance user using meta-user linking. The linking step involves server-to-server communication, and is triggered by the SDK via this meta-user linking callback.
+>
+> Learn more about Meta-User linking [here](../../../appendix/meta-users.md).
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | linker | A [`MetaUserLinker`](../metauserlinker.md) which will handle the linking. |
+
+### `setNotificationId`
+
 This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentiance.md#init).
 
 ## Builder API
@@ -48,34 +97,6 @@ This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentian
 > | Parameters |  |
 > | :--- | :--- |
 > | url | The Sentiance API URL. |
-
-### `build()`
-
-> ```java
-> SdkConfig build()
-> ```
->
-> Builds an [`SdkConfig`](./) object.
->
-> | Parameters |  |
-> | :--- | :--- |
-> | id | The ID used when starting a foreground service. |
-
-### `setMetaUserLinker`
-
-> ```java
-> Builder setMetaUserLinker(MetaUserLinker linker)
-> ```
->
-> Sentiance assigns to each user a unique ID. You can link your app's user to the Sentiance user using meta-user linking. The linking step involves server-to-server communication, and is triggered by the SDK via this meta-user linking callback.
->
-> Learn more about Meta-User linking [here](../../../appendix/meta-users.md).
->
-> | Parameters |  |
-> | :--- | :--- |
-> | linker | A [`MetaUserLinker`](../metauserlinker.md) which will handle the linking. |
-
-### `setNotificationId`
 
 > ```java
 > Builder setNotificationId(int Id)

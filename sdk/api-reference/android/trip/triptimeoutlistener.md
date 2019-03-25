@@ -2,7 +2,7 @@
 
 This interface is used with [`setTripTimeoutListener(TripTimeoutListener)`](../sentiance.md#settriptimeoutlistener).
 
-## TripTimeoutListener
+## TripTimeoutListener API
 
 |  |  |
 | :--- | :--- |
