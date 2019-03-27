@@ -26,7 +26,7 @@ Represents a user activity detected by the SDK detections.
 > @Nullable TripInfo getTripInfo()
 > ```
 >
-> Returns the a [`TripInfo`](tripinfo.md) object containing info about the ongoing trip. If the current activity is not a trip, this method will return `null` instead.
+> Returns a [`TripInfo`](tripinfo.md) object containing info about the ongoing trip. If the current activity is not a trip, this method will return `null` instead.
 
 ### `getStationaryInfo()`
 
@@ -34,5 +34,5 @@ Represents a user activity detected by the SDK detections.
 > @Nullable StationaryInfo getStationaryInfo()
 > ```
 >
-> Returns the a [`StationaryInfo`](stationaryinfo.md) object containing info about the current stationary state. If the current activity is not a stationary, this method will return `null` instead.
+> Returns a [`StationaryInfo`](stationaryinfo.md) object containing info about the current stationary state. If the current activity is not a stationary, this method will return `null` instead.
 
