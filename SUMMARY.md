@@ -92,9 +92,10 @@
 
 ## Backend
 
-* [GraphQL API](https://developers.sentiance.com/docs/gql)
 * [Authentication and Authorization](api-1/authentication-and-authorization.md)
+* [GraphQL](api-1/graphql.md)
 * [REST API Reference](api-1/rest-api.md)
+* [GraphQL API](https://developers.sentiance.com/docs/gql)
 * [Data Explorer](https://developers.sentiance.com/docs/gql/explorer)
 * [Meta-Users API](https://developers.sentiance.com/docs/metausers-api)
 
