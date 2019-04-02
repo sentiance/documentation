@@ -63,10 +63,10 @@
       * [Quota Status](sdk/api-reference/android/sdkstatus/quota-status.md)
       * [StartStatus](sdk/api-reference/android/sdkstatus/startstatus.md)
     * [SubmitDetectionsCallback](sdk/api-reference/android/submitdetectionscallback.md)
-    * [Sentiance](sdk/api-reference/android/sentiance.md)
     * [Token](sdk/api-reference/android/token.md)
-    * [StationaryInfo](sdk/api-reference/android/stationaryinfo.md)
+    * [Sentiance](sdk/api-reference/android/sentiance.md)
     * [TokenResultCallback](sdk/api-reference/android/tokenresultcallback.md)
+    * [StationaryInfo](sdk/api-reference/android/stationaryinfo.md)
     * [Trip](sdk/api-reference/android/trip/README.md)
       * [StartTripCallback](sdk/api-reference/android/trip/starttripcallback.md)
       * [StopTripCallback](sdk/api-reference/android/trip/stoptripcallback.md)
@@ -78,11 +78,11 @@
     * [UserActivityListener](sdk/api-reference/android/useractivitylistener.md)
     * [UserActivityType](sdk/api-reference/android/useractivitytype.md)
   * [iOS](sdk/api-reference/ios/README.md)
+    * [MetaUserLinker](sdk/api-reference/ios/metauserlinker.md)
     * [SENTSDK](sdk/api-reference/ios/sentsdk/README.md)
       * [SENTSDKStatus](sdk/api-reference/ios/sentsdk/sentsdkstatus.md)
       * [SENTPublicDefinitions](sdk/api-reference/ios/sentsdk/sentpublicdefinitions.md)
     * [SENTConfig](sdk/api-reference/ios/sentconfig-1.md)
-    * [MetaUserLinker](sdk/api-reference/ios/metauserlinker.md)
 * [FAQ](sdk/faq/README.md)
   * [Android](sdk/faq/android.md)
   * [iOS](sdk/faq/ios.md)
@@ -90,11 +90,11 @@
   * [Android](sdk/changelog/android.md)
   * [iOS](sdk/changelog/ios.md)
 
-## API
+## Backend
 
-* [Rest API](https://developers.sentiance.com/docs/rest)
 * [GraphQL API](https://developers.sentiance.com/docs/gql)
-* [Data Reference](https://developers.sentiance.com/docs/data-model)
+* [Authentication and Authorization](api-1/authentication-and-authorization.md)
+* [REST API Reference](api-1/rest-api.md)
 * [Data Explorer](https://developers.sentiance.com/docs/gql/explorer)
 * [Meta-Users API](https://developers.sentiance.com/docs/metausers-api)
 
@@ -116,4 +116,8 @@
 ## Security
 
 * [Technical & Organizational Measures](https://www.sentiance.com/technical-and-organizational-measures/)
+
+## Misc
+
+* [Glossary](misc/glossary.md)
 
