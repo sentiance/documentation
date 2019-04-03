@@ -31,6 +31,7 @@
   * [iOS](sdk/appendix/ios/README.md)
     * [Swift Support](sdk/appendix/ios/swift-support.md)
     * [App Store Release](sdk/appendix/ios/app-store-release.md)
+  * [Xamarin](sdk/appendix/xamarin.md)
   * [SDK Initialization](sdk/appendix/sdk-initialization.md)
   * [Controlled Detections](sdk/appendix/controlled-detections/README.md)
     * [Automatic Detections](sdk/appendix/controlled-detections/automatic-detections.md)
