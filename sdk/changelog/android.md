@@ -1,5 +1,13 @@
 # Android
 
+## 4.7.1
+
+#### Fixed
+
+* Deobfuscate [`TripInfo`](../api-reference/android/tripinfo.md) and [`StationaryInfo`](../api-reference/android/stationaryinfo.md) classes used with [`UserActivity`](../api-reference/android/useractivity.md).
+* Fix crash when targeting a pre-12.0.1 version of Google Play Location Services.
+* Minor internal bug fixes and improvements.
+
 ## 4.7.0
 
 #### Added

@@ -17,7 +17,7 @@ buildscript {
 In the **build.gradle** file of your app module, add the following line to the dependencies section.
 
 ```groovy
-compile ('com.sentiance:sdk:4.7.0@aar') { transitive = true }
+compile ('com.sentiance:sdk:4.7.1@aar') { transitive = true }
 ```
 
 Your app should now build with the Sentiance SDK as a dependency.
@@ -29,6 +29,6 @@ The Sentiance SDK is also available in a native optimization flavor. This versio
 To include this version in your app, use the **-R** appended version of the SDK.
 
 ```groovy
-compile ('com.sentiance:sdk:4.7.0-R@aar') { transitive = true }
+compile ('com.sentiance:sdk:4.7.1-R@aar') { transitive = true }
 ```
 
