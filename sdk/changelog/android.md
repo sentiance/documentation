@@ -1,6 +1,6 @@
 # Android
 
-## 4.7.1
+## 4.7.1 - 2019-04-03
 
 #### Fixed
 
@@ -8,7 +8,7 @@
 * Fix crash when targeting a pre-12.0.1 version of Google Play Location Services.
 * Minor internal bug fixes and improvements.
 
-## 4.7.0
+## 4.7.0 - 2019-03-25
 
 #### Added
 
