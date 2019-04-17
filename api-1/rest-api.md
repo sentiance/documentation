@@ -1,6 +1,8 @@
 # REST API Reference
 
-`https://api.sentiance.com/<version>/` is the base url for all REST endpoints, where the currently supported versions are `v2` and `v3`. `v1` has been fully deprecated. Note that not all APIs are common between `v2` and `v3` versions.
+All endpoints speak JSON. A `Content-Type` header with value `application/json` is expected to always be present.
+
+The base url is `https://api.sentiance.com/<version>/` for all REST endpoints, where the currently supported versions are `v2` and `v3`. `v1` has been fully deprecated. Note that not all APIs are common between `v2` and `v3` versions.
 
 ### V2 Endpoints
 
@@ -1261,6 +1263,105 @@ Include results up to this date.
         "moment_definition_id": null
     }
 ]
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="" path="/v2/users/:install\_id/link" %}
+{% api-method-summary %}
+Meta User Link
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Used to link an Install ID to your system's User ID. The JSON body should contain a single parameter as described below.  
+Check out the guide for further details on how Meta Users work and how it can benefit you.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="install\_id" type="string" required=true %}
+The ID of the user returned by the SDK into the Linker's callback function.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Unlike other endpoints, which can be called with both an user token and an app token, this endpoint can ONLY be called with an app token. User tokens will be rejected.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="external\_id" type="string" required=true %}
+This is the unique ID of the user in your system.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+The returned \`person\_id\` is linked to all installs for the same user, going forward and should be used thenceforth.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "person_id": "5a18fc4b0962209e0000000d"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  "message": "Install does not belong to this application.",
+  "errorCode": "INSTALL_DOES_NOT_BELONG_TO_APP",
+  "ref": "403b03b1-35ea-4ae4-af0a-7ebb65211543"
+}
+
+{
+  "message": "Install is disabled.",
+  "errorCode": "INSTALL_DISABLED",
+  "ref": "403b03b1-35ea-4ae4-af0a-7ebb65211543"
+}
+
+{
+  "message": "Install is deleted.",
+  "errorCode": "INSTALL_DELETED",
+  "ref": "403b03b1-35ea-4ae4-af0a-7ebb65211543"
+}
+
+{
+  "message": "This install is already in use, linking to another install is not possible.",
+  "errorCode": "CANNOT_LINK_EXISTING_PERSON_TO_OTHER_PERSON",
+  "ref": "403b03b1-35ea-4ae4-af0a-7ebb65211543"
+}
+
+{
+  "message": "Install linked to another user.",
+  "errorCode": "INSTALL_LINKED_TO_OTHER_USER",
+  "ref": "403b03b1-35ea-4ae4-af0a-7ebb65211543"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  "message": "Install was not found by the install ID provided.",
+  "errorCode": "INSTALL_NOT_FOUND",
+  "ref": "403b03b1-35ea-4ae4-af0a-7ebb65211543"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
