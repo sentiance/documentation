@@ -95,6 +95,7 @@
 
 * [Authentication and Authorization](api-1/authentication-and-authorization.md)
 * [GraphQL](api-1/graphql.md)
+* [Data Reference](api-1/data-reference.md)
 * [REST API Reference](api-1/rest-api.md)
 * [Data Explorer](https://developers.sentiance.com/docs/gql/explorer)
 
