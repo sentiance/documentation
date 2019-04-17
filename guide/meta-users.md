@@ -36,11 +36,11 @@ For details please check out: [SDK Config for Meta User](../sdk/appendix/meta-us
 
 ## API
 
-Check out the [reference for the linking call.](../api-1/rest-api.md#meta-user-link)
+Check out the [reference for the linking call.](../backend/rest-api.md#meta-user-link)
 
 If linking succeeds you will receive the Sentiance ID associated with the user. All future associations of an install ID with one of your system's user IDs will return this same Sentiance ID.
 
-If the linking fails, you will be returned an error. For details please check out: [Meta User API Reference](../api-1/rest-api.md#meta-user-link)
+If the linking fails, you will be returned an error. For details please check out: [Meta User API Reference](../backend/rest-api.md#meta-user-link)
 
 ### Diagram
 

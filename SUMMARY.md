@@ -93,10 +93,10 @@
 
 ## Backend
 
-* [Authentication and Authorization](api-1/authentication-and-authorization.md)
-* [GraphQL](api-1/graphql.md)
-* [Data Reference](api-1/data-reference.md)
-* [REST API Reference](api-1/rest-api.md)
+* [Authentication and Authorization](backend/authentication-and-authorization.md)
+* [GraphQL](backend/graphql.md)
+* [Data Reference](backend/data-reference.md)
+* [REST API Reference](backend/rest-api.md)
 * [Data Explorer](https://developers.sentiance.com/docs/gql/explorer)
 
 ## Guide
