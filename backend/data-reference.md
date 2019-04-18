@@ -83,7 +83,8 @@
 - [ZoneCarBehaviorScores](#zonecarbehaviorscores)
 
 ### AccelerationBehaviorAnnotation
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [ITransportBehaviorAnnotation](#itransportbehaviorannotation)
 
 | Property | Type | Description |
@@ -100,8 +101,10 @@
 ### AccelerationEnum
 **Kind**: ENUM
 
+
 ### AccessToken
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -111,7 +114,8 @@
 
 
 ### Account
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -123,7 +127,8 @@
 
 
 ### Address
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 An Address describes a reverse geocoded location.
 
 | Property | Type | Description |
@@ -135,7 +140,8 @@ An Address describes a reverse geocoded location.
 
 
 ### AggregatedDistanceAnomaly
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IAnomaly](#ianomaly), [IDistanceAnomaly](#idistanceanomaly), [IAggregatedAnomaly](#iaggregatedanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
 
 | Property | Type | Description |
@@ -159,7 +165,8 @@ An Address describes a reverse geocoded location.
 
 
 ### AggregatedDurationAnomaly
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IAnomaly](#ianomaly), [IDurationAnomaly](#idurationanomaly), [IAggregatedAnomaly](#iaggregatedanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
 
 | Property | Type | Description |
@@ -184,13 +191,16 @@ An Address describes a reverse geocoded location.
 
 ### AnalysisType
 **Kind**: ENUM
+
 The platform analyzes data in multiple stages, and updates values over time, how well the data is analyzed, can be identified by the analysis type.
 
 ### Anomaly
 **Kind**: ENUM
 
+
 ### AnomalyBehaviorAnnotation
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [ITransportBehaviorAnnotation](#itransportbehaviorannotation)
 
 | Property | Type | Description |
@@ -205,11 +215,14 @@ The platform analyzes data in multiple stages, and updates values over time, how
 ### AnomalyTimePeriod
 **Kind**: ENUM
 
+
 ### AnomalyType
 **Kind**: ENUM
 
+
 ### Application
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 An Application refers to an integration of the mobile SDK and pools together the users from this mobile app.
 
 | Property | Type | Description |
@@ -222,9 +235,7 @@ An Application refers to an integration of the mobile SDK and pools together the
 | logging | String | An optional override for the default debug logging behavior of the mobile SDKs. |
 | flavor | String | An optional override for the default flavor configuration of the mobile SDKs. |
 | project_code | String | An optional project code used to assign users from the demo applications to this application. |
-| created_at | String | The time when this user was created, ISO8601.
-Example:
-2015-05-28T14:37:14.839+00:00. |
+| created_at | String | The time when this user was created, ISO8601.<br>Example:<br>2015-05-28T14:37:14.839+00:00. |
 | account_id | String | The developer account this application belongs to. |
 | users | [UsersConnection](#usersconnection) | The users that belong to this application. |
 | active_users | [UsersConnection](#usersconnection) | The users that belong to this application and have been active in the last 7 days. |
@@ -232,7 +243,8 @@ Example:
 
 
 ### ApplicationsConnection
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Access the application nodes
 
 | Property | Type | Description |
@@ -245,8 +257,10 @@ Access the application nodes
 ### BehaviorAnnotationAnomalyEnum
 **Kind**: ENUM
 
+
 ### BehaviorAnnotationPathWaypoint
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -258,10 +272,12 @@ Access the application nodes
 
 ### BigInt
 **Kind**: SCALAR
+
 The `BigInt` scalar type represents non-fractional signed whole numeric values. BigInt can represent values between -(2^53) + 1 and 2^53 - 1. 
 
 ### BoundaryBehaviorAnnotation
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [ITransportBehaviorAnnotation](#itransportbehaviorannotation)
 
 | Property | Type | Description |
@@ -275,8 +291,10 @@ The `BigInt` scalar type represents non-fractional signed whole numeric values. 
 ### BoundaryBehaviorAnnotationQuality
 **Kind**: ENUM
 
+
 ### Branch
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 A possible series of events predicted for the user.
 
 | Property | Type | Description |
@@ -287,7 +305,8 @@ A possible series of events predicted for the user.
 
 
 ### CarBehaviorFeatures
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -297,7 +316,8 @@ A possible series of events predicted for the user.
 
 
 ### CarBehaviorScores
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -318,31 +338,27 @@ A possible series of events predicted for the user.
 
 
 ### CityMoment
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IMoment](#imoment)
 An occurrence of a City moment that we have detected for a user. 
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | [MomentType](#momenttype) | 'CityMoment' |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
+| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | start_ts | [BigInt](#bigint) |  |
 | end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.
-Possible values:
-preliminary, indepth, processed. |
+| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
 | moment_definition_id | String | The ID of the MomentDefinition this moment relates to. |
 | moment_definition | [MomentDefinition](#momentdefinition) | The MomentDefinition this moment relates to. |
 | city_name | String | The name of the city this moment applies to. |
 
 
 ### CommuteTimeAggregate
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [ITimeAggregateAttribute](#itimeaggregateattribute), [IUserAttribute](#iuserattribute)
 
 | Property | Type | Description |
@@ -354,7 +370,8 @@ preliminary, indepth, processed. |
 
 
 ### ControlUser
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IUser](#iuser)
 A user that can authenticate using either password or token strategies, has an email address, might have access to dashboards, might have multiple roles, might manage multiple accounts and applications.
 
@@ -365,9 +382,7 @@ A user that can authenticate using either password or token strategies, has an e
 | account_roles | [UserAccountRole](#useraccountrole) | The accounts this user has elevated permissions to. |
 | id | String | The unique identifier for this user. |
 | can_login | Boolean |  |
-| created_at | String | The time when this user was created, ISO8601.
-Example:
-2015-05-28T14:37:14.839+00:00 |
+| created_at | String | The time when this user was created, ISO8601.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | sdk | [UserSdkSettings](#usersdksettings) |  |
 | application_id | String | The ID of the Application this user relates to. |
 | application | [Application](#application) | The Application this user relates to. |
@@ -392,31 +407,27 @@ Example:
 
 
 ### CountryMoment
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IMoment](#imoment)
 An occurrence of a Country moment that we have detected for a user. 
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | [MomentType](#momenttype) | 'CountryMoment' |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
+| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | start_ts | [BigInt](#bigint) |  |
 | end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.
-Possible values:
-preliminary, indepth, processed. |
+| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
 | moment_definition_id | String | The ID of the MomentDefinition this moment relates to. |
 | moment_definition | [MomentDefinition](#momentdefinition) | The MomentDefinition this moment relates to. |
 | country_name | String | The name of the country this moment applies to. |
 
 
 ### CustomEvent
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Custom Events.
 
 | Property | Type | Description |
@@ -438,10 +449,12 @@ Custom Events.
 
 ### CustomEventSources
 **Kind**: ENUM
+
 Where the custome event originates at.
 
 ### DayCountAnomaly
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IAnomaly](#ianomaly), [IDayCountAnomaly](#idaycountanomaly), [IAggregatedAnomaly](#iaggregatedanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
 
 | Property | Type | Description |
@@ -466,10 +479,12 @@ Where the custome event originates at.
 
 ### DayPart
 **Kind**: ENUM
+
 Grouping of local time.
 
 ### DeviceInfo
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Tracking device metadata.
 
 | Property | Type | Description |
@@ -480,7 +495,8 @@ Tracking device metadata.
 
 
 ### DistanceAnomaly
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IAnomaly](#ianomaly), [IDistanceAnomaly](#idistanceanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
 
 | Property | Type | Description |
@@ -502,7 +518,8 @@ Tracking device metadata.
 
 
 ### DurationAnomaly
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IAnomaly](#ianomaly), [IDurationAnomaly](#idurationanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
 
 | Property | Type | Description |
@@ -524,7 +541,8 @@ Tracking device metadata.
 
 
 ### EventFeedback
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -541,14 +559,18 @@ Tracking device metadata.
 ### EventType
 **Kind**: ENUM
 
+
 ### FeedbackAssessment
 **Kind**: ENUM
+
 
 ### FeedbackType
 **Kind**: ENUM
 
+
 ### FloatAttribute
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 A float attribute
 
 | Property | Type | Description |
@@ -558,30 +580,26 @@ A float attribute
 
 
 ### GenericMoment
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IMoment](#imoment)
-An occurrence of a moment that we have detected for a user.
+An occurrence of a moment that we have detected for a user. 
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | [MomentType](#momenttype) | 'GenericMoment' |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
+| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | start_ts | [BigInt](#bigint) |  |
 | end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.
-Possible values:
-preliminary, indepth, processed. |
+| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
 | moment_definition_id | String | The ID of the MomentDefinition this moment relates to. |
 | moment_definition | [MomentDefinition](#momentdefinition) | The MomentDefinition this moment relates to. |
 
 
 ### GenericSegment
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [ISegment](#isegment)
 An occurrence of a SegmentDefinition that we have detected for this user.
 
@@ -596,6 +614,7 @@ An occurrence of a SegmentDefinition that we have detected for this user.
 
 ### IAggregatedAnomaly
 **Kind**: INTERFACE
+
 **Implemented by**: [AggregatedDistanceAnomaly](#aggregateddistanceanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly), [DayCountAnomaly](#daycountanomaly), [OccurrenceCountAnomaly](#occurrencecountanomaly)
 An anomaly that we have detected for a user over a period of time.
 
@@ -607,6 +626,7 @@ An anomaly that we have detected for a user over a period of time.
 
 ### IAnomaly
 **Kind**: INTERFACE
+
 **Implemented by**: [DistanceAnomaly](#distanceanomaly), [AggregatedDistanceAnomaly](#aggregateddistanceanomaly), [DurationAnomaly](#durationanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly), [DayCountAnomaly](#daycountanomaly), [OccurrenceCountAnomaly](#occurrencecountanomaly)
 An anomaly that we have detected for a user.
 
@@ -623,6 +643,7 @@ An anomaly that we have detected for a user.
 
 ### IBranchEvent
 **Kind**: INTERFACE
+
 **Implemented by**: [StationaryPrediction](#stationaryprediction), [TransportPrediction](#transportprediction)
 A single predicted event.
 
@@ -636,6 +657,7 @@ A single predicted event.
 
 ### IDayCountAnomaly
 **Kind**: INTERFACE
+
 **Implemented by**: [DayCountAnomaly](#daycountanomaly)
 
 | Property | Type | Description |
@@ -646,6 +668,7 @@ A single predicted event.
 
 ### IDistanceAnomaly
 **Kind**: INTERFACE
+
 **Implemented by**: [DistanceAnomaly](#distanceanomaly), [AggregatedDistanceAnomaly](#aggregateddistanceanomaly)
 
 | Property | Type | Description |
@@ -656,6 +679,7 @@ A single predicted event.
 
 ### IDurationAnomaly
 **Kind**: INTERFACE
+
 **Implemented by**: [DurationAnomaly](#durationanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly)
 
 | Property | Type | Description |
@@ -666,6 +690,7 @@ A single predicted event.
 
 ### IEvent
 **Kind**: INTERFACE
+
 **Implemented by**: [Trip](#trip), [Stationary](#stationary), [Transport](#transport)
 An occurrence of an event that we have detected for a user. This interface is implemented by the Stationary and Transport models.
 
@@ -673,22 +698,17 @@ An occurrence of an event that we have detected for a user. This interface is im
 | :--- | :--- | :--- |
 | type | [EventType](#eventtype) | 'IEvent' |
 | event_id | String |  |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
+| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | start_ts | [BigInt](#bigint) |  |
 | end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this event is analyzed by the platform, this value will update over time.
-Possible values:
-preliminary, indepth, processed. |
+| analysis_type | [AnalysisType](#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
 | weather | [WeatherRange](#weatherrange) | Weather data associated with this event. |
 
 
 ### IEventFeedback
 **Kind**: INTERFACE
+
 **Implemented by**: [StationaryFeedback](#stationaryfeedback), [TransportFeedback](#transportfeedback)
 An occurrence of event feedback submitted by a user.
 
@@ -699,6 +719,7 @@ An occurrence of event feedback submitted by a user.
 
 ### IEventPrediction
 **Kind**: INTERFACE
+
 **Implemented by**: [StationaryIntervalPrediction](#stationaryintervalprediction), [TransportIntervalPrediction](#transportintervalprediction)
 An occurrence of an event prediction that we have detected for a user.
 
@@ -709,6 +730,7 @@ An occurrence of an event prediction that we have detected for a user.
 
 ### IFeedback
 **Kind**: INTERFACE
+
 **Implemented by**: [StationaryFeedback](#stationaryfeedback), [TransportFeedback](#transportfeedback), [MomentFeedback](#momentfeedback)
 An occurrence of feedback submitted by a user.
 
@@ -722,6 +744,7 @@ An occurrence of feedback submitted by a user.
 
 ### IIntervalPrediction
 **Kind**: INTERFACE
+
 **Implemented by**: [StationaryIntervalPrediction](#stationaryintervalprediction), [TransportIntervalPrediction](#transportintervalprediction)
 A prediction that has a start interval.
 
@@ -732,29 +755,25 @@ A prediction that has a start interval.
 
 ### IMoment
 **Kind**: INTERFACE
+
 **Implemented by**: [GenericMoment](#genericmoment), [CityMoment](#citymoment), [CountryMoment](#countrymoment)
 An occurrence of a MomentDefinition that we have detected for a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | [MomentType](#momenttype) | 'IMoment' |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
+| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | start_ts | [BigInt](#bigint) |  |
 | end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.
-Possible values:
-preliminary, indepth, processed. |
+| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
 | moment_definition_id | String | The ID of the MomentDefinition this moment relates to. |
 | moment_definition | [MomentDefinition](#momentdefinition) | The MomentDefinition this moment relates to. |
 
 
 ### IMomentAnomaly
 **Kind**: INTERFACE
+
 **Implemented by**: [DistanceAnomaly](#distanceanomaly), [AggregatedDistanceAnomaly](#aggregateddistanceanomaly), [DurationAnomaly](#durationanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly), [DayCountAnomaly](#daycountanomaly), [OccurrenceCountAnomaly](#occurrencecountanomaly)
 
 | Property | Type | Description |
@@ -764,6 +783,7 @@ preliminary, indepth, processed. |
 
 ### IMomentFeedback
 **Kind**: INTERFACE
+
 **Implemented by**: [MomentFeedback](#momentfeedback)
 An occurrence of moment feedback submitted by a user.
 
@@ -774,6 +794,7 @@ An occurrence of moment feedback submitted by a user.
 
 ### IOccurrenceCountAnomaly
 **Kind**: INTERFACE
+
 **Implemented by**: [OccurrenceCountAnomaly](#occurrencecountanomaly)
 
 | Property | Type | Description |
@@ -784,6 +805,7 @@ An occurrence of moment feedback submitted by a user.
 
 ### IPrediction
 **Kind**: INTERFACE
+
 **Implemented by**: [StationaryIntervalPrediction](#stationaryintervalprediction), [TransportIntervalPrediction](#transportintervalprediction)
 An occurance of a prediction that we have detected for a user.
 
@@ -795,6 +817,7 @@ An occurance of a prediction that we have detected for a user.
 
 ### ISegment
 **Kind**: INTERFACE
+
 **Implemented by**: [GenericSegment](#genericsegment)
 An occurrence of a SegmentDefinition that we have detected for this user.
 
@@ -807,6 +830,7 @@ An occurrence of a SegmentDefinition that we have detected for this user.
 
 ### IStationaryAnomaly
 **Kind**: INTERFACE
+
 **Implemented by**: [DistanceAnomaly](#distanceanomaly), [AggregatedDistanceAnomaly](#aggregateddistanceanomaly), [DurationAnomaly](#durationanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly), [DayCountAnomaly](#daycountanomaly), [OccurrenceCountAnomaly](#occurrencecountanomaly)
 
 | Property | Type | Description |
@@ -817,6 +841,7 @@ An occurrence of a SegmentDefinition that we have detected for this user.
 
 ### ITimeAggregateAttribute
 **Kind**: INTERFACE
+
 **Implemented by**: [CommuteTimeAggregate](#commutetimeaggregate), [StationaryTimeAggregate](#stationarytimeaggregate), [TransportTimeAggregate](#transporttimeaggregate), [WorkingTimeAggregate](#workingtimeaggregate)
 An attribute that aggregates by TimePeriod.
 
@@ -827,6 +852,7 @@ An attribute that aggregates by TimePeriod.
 
 ### ITransportAnomaly
 **Kind**: INTERFACE
+
 **Implemented by**: [DistanceAnomaly](#distanceanomaly), [AggregatedDistanceAnomaly](#aggregateddistanceanomaly), [DurationAnomaly](#durationanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly), [DayCountAnomaly](#daycountanomaly), [OccurrenceCountAnomaly](#occurrencecountanomaly)
 
 | Property | Type | Description |
@@ -837,6 +863,7 @@ An attribute that aggregates by TimePeriod.
 
 ### ITransportBehaviorAnnotation
 **Kind**: INTERFACE
+
 **Implemented by**: [BoundaryBehaviorAnnotation](#boundarybehaviorannotation), [AccelerationBehaviorAnnotation](#accelerationbehaviorannotation), [AnomalyBehaviorAnnotation](#anomalybehaviorannotation), [TurnBehaviorAnnotation](#turnbehaviorannotation)
 
 | Property | Type | Description |
@@ -848,6 +875,7 @@ An attribute that aggregates by TimePeriod.
 
 ### IUser
 **Kind**: INTERFACE
+
 **Implemented by**: [User](#user), [ControlUser](#controluser)
 
 | Property | Type | Description |
@@ -855,9 +883,7 @@ An attribute that aggregates by TimePeriod.
 | type | [UserType](#usertype) | 'IUser' |
 | id | String | The unique identifier for this user. |
 | can_login | Boolean |  |
-| created_at | String | The time when this user was created, ISO8601.
-Example:
-2015-05-28T14:37:14.839+00:00 |
+| created_at | String | The time when this user was created, ISO8601.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | sdk | [UserSdkSettings](#usersdksettings) |  |
 | application_id | String | The ID of the Application this user relates to. |
 | application | [Application](#application) | The Application this user relates to. |
@@ -883,6 +909,7 @@ Example:
 
 ### IUserAttribute
 **Kind**: INTERFACE
+
 **Implemented by**: [CommuteTimeAggregate](#commutetimeaggregate), [StationaryTimeAggregate](#stationarytimeaggregate), [TransportTimeAggregate](#transporttimeaggregate), [WorkingTimeAggregate](#workingtimeaggregate)
 
 | Property | Type | Description |
@@ -893,49 +920,64 @@ Example:
 ### InputAddress
 **Kind**: INPUT_OBJECT
 
+
 ### InputEventFeedback
 **Kind**: INPUT_OBJECT
+
 
 ### InputLocationPlaceCandidate
 **Kind**: INPUT_OBJECT
 
+
 ### InputMoment
 **Kind**: INPUT_OBJECT
+
 
 ### InputMomentFeedback
 **Kind**: INPUT_OBJECT
 
+
 ### InputStationary
 **Kind**: INPUT_OBJECT
+
 
 ### InputStationaryLocation
 **Kind**: INPUT_OBJECT
 
+
 ### InputTrajectoryWaypoint
 **Kind**: INPUT_OBJECT
+
 A single waypoint in the augmented trajectory.
 
 ### InputTransport
 **Kind**: INPUT_OBJECT
 
+
 ### InputTransportBehaviorFeatures
 **Kind**: SCALAR
+
 
 ### InputTransportBehaviorScores
 **Kind**: SCALAR
 
+
 ### InputTransportTrajectory
 **Kind**: INPUT_OBJECT
+
 
 ### InputWaypoint
 **Kind**: INPUT_OBJECT
 
+
 ### JSON
 **Kind**: SCALAR
+
 The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
 ### LocationCluster
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -951,7 +993,8 @@ The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://
 
 
 ### LocationPlaceCandidate
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 A place selected from one of our data sources.
 
 | Property | Type | Description |
@@ -968,8 +1011,10 @@ A place selected from one of our data sources.
 ### LocationSignificance
 **Kind**: ENUM
 
+
 ### MomentDefinition
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 A single moment definition.
 
 | Property | Type | Description |
@@ -982,7 +1027,8 @@ A single moment definition.
 
 
 ### MomentFeedback
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IFeedback](#ifeedback), [IMomentFeedback](#imomentfeedback)
 
 | Property | Type | Description |
@@ -996,7 +1042,8 @@ A single moment definition.
 
 
 ### MomentFeedbackFeedback
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1007,8 +1054,10 @@ A single moment definition.
 ### MomentType
 **Kind**: ENUM
 
+
 ### Mutation
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Through mutations you can update data.
 
 | Property | Type | Description |
@@ -1022,7 +1071,8 @@ Through mutations you can update data.
 
 
 ### OccurrenceCountAnomaly
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IAnomaly](#ianomaly), [IOccurrenceCountAnomaly](#ioccurrencecountanomaly), [IAggregatedAnomaly](#iaggregatedanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
 
 | Property | Type | Description |
@@ -1048,8 +1098,10 @@ Through mutations you can update data.
 ### OperatingSystem
 **Kind**: ENUM
 
+
 ### Paging
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 The paging information that allows you to paginate through a large response list.
 
 | Property | Type | Description |
@@ -1059,7 +1111,8 @@ The paging information that allows you to paginate through a large response list
 
 
 ### PagingCursors
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 The paging cursors that you use to paginate through a large response set.
 
 | Property | Type | Description |
@@ -1070,7 +1123,8 @@ The paging cursors that you use to paginate through a large response set.
 
 
 ### PredictionInterval
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1079,7 +1133,8 @@ The paging cursors that you use to paginate through a large response set.
 
 
 ### PredictionTree
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Multiple possible events that might occur for a user.
 
 | Property | Type | Description |
@@ -1092,11 +1147,14 @@ Multiple possible events that might occur for a user.
 ### PredictionType
 **Kind**: ENUM
 
+
 ### SdkFlavor
 **Kind**: ENUM
 
+
 ### SegmentDefinition
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 A single segment definition.
 
 | Property | Type | Description |
@@ -1114,17 +1172,21 @@ A single segment definition.
 
 ### SegmentDefinitionStatus
 **Kind**: ENUM
+
 Identifies the release status of a segment definition.
 
 ### SegmentType
 **Kind**: ENUM
 
+
 ### SemanticTime
 **Kind**: ENUM
+
 The user semantic time.
 
 ### SemanticTimeAggregate
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1139,8 +1201,10 @@ The user semantic time.
 ### SemanticTimeAggregateDaysEnum
 **Kind**: ENUM
 
+
 ### SemanticTimeAggregateValue
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1152,24 +1216,19 @@ The user semantic time.
 
 
 ### Stationary
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IEvent](#ievent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | [EventType](#eventtype) | 'Stationary' |
 | event_id | String |  |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
+| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | start_ts | [BigInt](#bigint) |  |
 | end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this event is analyzed by the platform, this value will update over time.
-Possible values:
-preliminary, indepth, processed. |
+| analysis_type | [AnalysisType](#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
 | latitude | Float |  |
 | longitude | Float |  |
 | duration | [BigInt](#bigint) |  |
@@ -1179,7 +1238,8 @@ preliminary, indepth, processed. |
 
 
 ### StationaryFeedback
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IFeedback](#ifeedback), [IEventFeedback](#ieventfeedback)
 
 | Property | Type | Description |
@@ -1193,7 +1253,8 @@ preliminary, indepth, processed. |
 
 
 ### StationaryIntervalPrediction
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IPrediction](#iprediction), [IEventPrediction](#ieventprediction), [IIntervalPrediction](#iintervalprediction)
 
 | Property | Type | Description |
@@ -1206,7 +1267,8 @@ preliminary, indepth, processed. |
 
 
 ### StationaryLocation
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Holds more information about a stationary location.
 
 | Property | Type | Description |
@@ -1218,7 +1280,8 @@ Holds more information about a stationary location.
 
 
 ### StationaryPrediction
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IBranchEvent](#ibranchevent)
 
 | Property | Type | Description |
@@ -1231,7 +1294,8 @@ Holds more information about a stationary location.
 
 
 ### StationaryTimeAggregate
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [ITimeAggregateAttribute](#itimeaggregateattribute), [IUserAttribute](#iuserattribute)
 
 | Property | Type | Description |
@@ -1244,7 +1308,8 @@ Holds more information about a stationary location.
 
 
 ### StreamDefinition
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Stream definition that can be activated/subscribed to with the Sentiance Firehose
 
 | Property | Type | Description |
@@ -1259,10 +1324,12 @@ Stream definition that can be activated/subscribed to with the Sentiance Firehos
 
 ### StreamDefinitionConnectionType
 **Kind**: ENUM
+
 Stream definition connection type.
 
 ### StreamDefinitionsConnection
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Access the stream definitions
 
 | Property | Type | Description |
@@ -1272,7 +1339,8 @@ Access the stream definitions
 
 
 ### Subscription
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Subscription that can be activated to receive data from the Sentiance Firehose.
 
 | Property | Type | Description |
@@ -1287,7 +1355,8 @@ Subscription that can be activated to receive data from the Sentiance Firehose.
 
 
 ### SubscriptionsConnection
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Access the stream subscriptions
 
 | Property | Type | Description |
@@ -1296,12 +1365,13 @@ Access the stream subscriptions
 | slice | [Subscription](#subscription) | The individual subscriptions. Provide the right paging parameters to slice your result set. |
 
 
-
 ### TimePeriod
 **Kind**: ENUM
 
+
 ### TimeWindowTransportHeatmaps
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1310,7 +1380,8 @@ Access the stream subscriptions
 
 
 ### TimeWindowUserCarBehaviorFeatures
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1320,7 +1391,8 @@ Access the stream subscriptions
 
 
 ### TrajectoryWaypoint
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 A single waypoint in the augmented trajectory.
 
 | Property | Type | Description |
@@ -1337,24 +1409,19 @@ A single waypoint in the augmented trajectory.
 
 
 ### Transport
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IEvent](#ievent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | [EventType](#eventtype) | 'Transport' |
 | event_id | String |  |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.
-Example:
-2015-05-28T14:37:14.839+00:00 |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
+| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | start_ts | [BigInt](#bigint) |  |
 | end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this event is analyzed by the platform, this value will update over time.
-Possible values:
-preliminary, indepth, processed. |
+| analysis_type | [AnalysisType](#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
 | mode | [TransportMode](#transportmode) | The transport mode that was identified for this transport.  |
 | distance | Int |  |
 | occupant_role | [TransportOccupantRole](#transportoccupantrole) |  |
@@ -1369,17 +1436,21 @@ preliminary, indepth, processed. |
 ### TransportBehaviorAnnotationType
 **Kind**: ENUM
 
+
 ### TransportBehaviorFeatures
 **Kind**: UNION
+
 **Possible types**: [CarBehaviorFeatures](#carbehaviorfeatures)
 
 ### TransportBehaviorScores
 **Kind**: UNION
+
 **Possible types**: [CarBehaviorScores](#carbehaviorscores)
 The transport behavior scores we have detected during a transport. These scores are only available when the full trip is processed.
 
 ### TransportFeedback
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IFeedback](#ifeedback), [IEventFeedback](#ieventfeedback)
 
 | Property | Type | Description |
@@ -1393,7 +1464,8 @@ The transport behavior scores we have detected during a transport. These scores 
 
 
 ### TransportHeatmaps
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Historically aggregated transport heatmaps.
 
 | Property | Type | Description |
@@ -1403,7 +1475,8 @@ Historically aggregated transport heatmaps.
 
 
 ### TransportIntervalPrediction
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IPrediction](#iprediction), [IEventPrediction](#ieventprediction), [IIntervalPrediction](#iintervalprediction)
 
 | Property | Type | Description |
@@ -1417,13 +1490,16 @@ Historically aggregated transport heatmaps.
 
 ### TransportMode
 **Kind**: ENUM
+
 The transport modes the platform supports.
 
 ### TransportModeCategory
 **Kind**: ENUM
 
+
 ### TransportModeHeatmaps
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1434,8 +1510,10 @@ The transport modes the platform supports.
 ### TransportOccupantRole
 **Kind**: ENUM
 
+
 ### TransportPrediction
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IBranchEvent](#ibranchevent)
 
 | Property | Type | Description |
@@ -1448,7 +1526,8 @@ The transport modes the platform supports.
 
 
 ### TransportTimeAggregate
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [ITimeAggregateAttribute](#itimeaggregateattribute), [IUserAttribute](#iuserattribute)
 
 | Property | Type | Description |
@@ -1460,7 +1539,8 @@ The transport modes the platform supports.
 
 
 ### TransportTrajectory
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1472,8 +1552,10 @@ The transport modes the platform supports.
 ### TreePredictionType
 **Kind**: ENUM
 
+
 ### Trip
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IEvent](#ievent)
 
 | Property | Type | Description |
@@ -1492,7 +1574,8 @@ The transport modes the platform supports.
 
 
 ### TripConnection
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Access trips across all users.
 
 | Property | Type | Description |
@@ -1502,7 +1585,8 @@ Access trips across all users.
 
 
 ### TurnBehaviorAnnotation
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [ITransportBehaviorAnnotation](#itransportbehaviorannotation)
 
 | Property | Type | Description |
@@ -1519,8 +1603,10 @@ Access trips across all users.
 ### TurnBehaviorAnnotationManeuver
 **Kind**: ENUM
 
+
 ### User
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [IUser](#iuser)
 An anonymous SDK user that authenticates using the token strategy, can push data and can query only it's own data.
 
@@ -1531,9 +1617,7 @@ An anonymous SDK user that authenticates using the token strategy, can push data
 | external_id | String | The external id that was linked to this person. |
 | id | String | The unique identifier for this user. |
 | can_login | Boolean |  |
-| created_at | String | The time when this user was created, ISO8601.
-Example:
-2015-05-28T14:37:14.839+00:00 |
+| created_at | String | The time when this user was created, ISO8601.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | sdk | [UserSdkSettings](#usersdksettings) |  |
 | application_id | String | The ID of the Application this user relates to. |
 | application | [Application](#application) | The Application this user relates to. |
@@ -1558,7 +1642,8 @@ Example:
 
 
 ### UserAccountRole
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1572,8 +1657,10 @@ Example:
 ### UserAttributeType
 **Kind**: ENUM
 
+
 ### UserCarBehavior
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 The historical car behavior profile for a user.
 
 | Property | Type | Description |
@@ -1584,7 +1671,8 @@ The historical car behavior profile for a user.
 
 
 ### UserCarBehaviorFeatures
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1594,7 +1682,8 @@ The historical car behavior profile for a user.
 
 
 ### UserCarBehaviorScores
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1604,7 +1693,8 @@ The historical car behavior profile for a user.
 
 
 ### UserHealth
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 The historical health attributes.
 
 | Property | Type | Description |
@@ -1614,7 +1704,8 @@ The historical health attributes.
 
 
 ### UserHealthScores
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 This scoring system is used to track an individuals health.
 
 | Property | Type | Description |
@@ -1627,10 +1718,12 @@ This scoring system is used to track an individuals health.
 
 ### UserRole
 **Kind**: ENUM
+
 The roles a user can have, both on accounts and apps.
 
 ### UserSdkSettings
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 User overrides that are used by the SDK configuration. This is not the SDK configuration model.
 
 | Property | Type | Description |
@@ -1642,7 +1735,8 @@ User overrides that are used by the SDK configuration. This is not the SDK confi
 
 
 ### UserSemanticTime
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1653,8 +1747,10 @@ User overrides that are used by the SDK configuration. This is not the SDK confi
 ### UserType
 **Kind**: ENUM
 
+
 ### UsersConnection
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Access the user nodes
 
 | Property | Type | Description |
@@ -1665,7 +1761,8 @@ Access the user nodes
 
 
 ### Waypoint
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1677,7 +1774,8 @@ Access the user nodes
 
 
 ### Weather
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1700,7 +1798,8 @@ Access the user nodes
 
 
 ### WeatherRange
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1709,7 +1808,8 @@ Access the user nodes
 
 
 ### WeightedLocation
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1720,7 +1820,8 @@ Access the user nodes
 
 
 ### WorkingTimeAggregate
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 **Implements**: [ITimeAggregateAttribute](#itimeaggregateattribute), [IUserAttribute](#iuserattribute)
 
 | Property | Type | Description |
@@ -1734,8 +1835,10 @@ Access the user nodes
 ### WorkingTimeWhereabouts
 **Kind**: ENUM
 
+
 ### ZoneCarBehaviorScores
-**Kind**: OBJECT
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
 Car transport behavior scores by road type
 
 | Property | Type | Description |
@@ -1746,3 +1849,4 @@ Car transport behavior scores by road type
 | motorway | [CarBehaviorScores](#carbehaviorscores) | Scores based on features in the motorway zones. |
 | city | [CarBehaviorScores](#carbehaviorscores) | Scores based on features in non-motorway city zones. |
 | non_city | [CarBehaviorScores](#carbehaviorscores) | Scores based on features in non-motorway non-city zones. |
+
