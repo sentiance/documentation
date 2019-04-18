@@ -2,7 +2,7 @@
 
 ## Motivation
 
-On ever install of an app which embeds the Sentiance SDK, our system generates a new User ID. Normally this is not a problem. But in today's world of constantly changing phones and end-users installing/uninstalling an app multiple times, it can be hard to keep track of these multiple User IDs generated on each install, and map them to their corresponding account on your system.
+On every install of an app which embeds the Sentiance SDK, our system generates a new User ID. Normally this is not a problem. But in today's world of constantly changing phones and end-users installing/uninstalling an app multiple times, it can be hard to keep track of these multiple User IDs generated on each install, and map them to their corresponding account on your system.
 
 Classically customers have solved this problem by maintaining a one-to-many mapping of their own user account data to the Sentiance User IDs generated on each install.
 

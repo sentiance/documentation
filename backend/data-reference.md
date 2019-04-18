@@ -1,229 +1,217 @@
 # Data Reference
+
 ## Objects
-- [AccelerationBehaviorAnnotation](#accelerationbehaviorannotation)
-- [AccessToken](#accesstoken)
-- [Account](#account)
-- [Address](#address)
-- [AggregatedDistanceAnomaly](#aggregateddistanceanomaly)
-- [AggregatedDurationAnomaly](#aggregateddurationanomaly)
-- [AnomalyBehaviorAnnotation](#anomalybehaviorannotation)
-- [Application](#application)
-- [ApplicationsConnection](#applicationsconnection)
-- [BehaviorAnnotationPathWaypoint](#behaviorannotationpathwaypoint)
-- [BoundaryBehaviorAnnotation](#boundarybehaviorannotation)
-- [Branch](#branch)
-- [CarBehaviorFeatures](#carbehaviorfeatures)
-- [CarBehaviorScores](#carbehaviorscores)
-- [CityMoment](#citymoment)
-- [CommuteTimeAggregate](#commutetimeaggregate)
-- [ControlUser](#controluser)
-- [CountryMoment](#countrymoment)
-- [CustomEvent](#customevent)
-- [DayCountAnomaly](#daycountanomaly)
-- [DeviceInfo](#deviceinfo)
-- [DistanceAnomaly](#distanceanomaly)
-- [DurationAnomaly](#durationanomaly)
-- [EventFeedback](#eventfeedback)
-- [FloatAttribute](#floatattribute)
-- [GenericMoment](#genericmoment)
-- [GenericSegment](#genericsegment)
-- [LocationCluster](#locationcluster)
-- [LocationPlaceCandidate](#locationplacecandidate)
-- [MomentDefinition](#momentdefinition)
-- [MomentFeedback](#momentfeedback)
-- [MomentFeedbackFeedback](#momentfeedbackfeedback)
-- [Mutation](#mutation)
-- [OccurrenceCountAnomaly](#occurrencecountanomaly)
-- [Paging](#paging)
-- [PagingCursors](#pagingcursors)
-- [PredictionInterval](#predictioninterval)
-- [PredictionTree](#predictiontree)
-- [SegmentDefinition](#segmentdefinition)
-- [SemanticTimeAggregate](#semantictimeaggregate)
-- [SemanticTimeAggregateValue](#semantictimeaggregatevalue)
-- [Stationary](#stationary)
-- [StationaryFeedback](#stationaryfeedback)
-- [StationaryIntervalPrediction](#stationaryintervalprediction)
-- [StationaryLocation](#stationarylocation)
-- [StationaryPrediction](#stationaryprediction)
-- [StationaryTimeAggregate](#stationarytimeaggregate)
-- [StreamDefinition](#streamdefinition)
-- [StreamDefinitionsConnection](#streamdefinitionsconnection)
-- [Subscription](#subscription)
-- [SubscriptionsConnection](#subscriptionsconnection)
-- [TimeWindowTransportHeatmaps](#timewindowtransportheatmaps)
-- [TimeWindowUserCarBehaviorFeatures](#timewindowusercarbehaviorfeatures)
-- [TrajectoryWaypoint](#trajectorywaypoint)
-- [Transport](#transport)
-- [TransportFeedback](#transportfeedback)
-- [TransportHeatmaps](#transportheatmaps)
-- [TransportIntervalPrediction](#transportintervalprediction)
-- [TransportModeHeatmaps](#transportmodeheatmaps)
-- [TransportPrediction](#transportprediction)
-- [TransportTimeAggregate](#transporttimeaggregate)
-- [TransportTrajectory](#transporttrajectory)
-- [Trip](#trip)
-- [TripConnection](#tripconnection)
-- [TurnBehaviorAnnotation](#turnbehaviorannotation)
-- [User](#user)
-- [UserAccountRole](#useraccountrole)
-- [UserCarBehavior](#usercarbehavior)
-- [UserCarBehaviorFeatures](#usercarbehaviorfeatures)
-- [UserCarBehaviorScores](#usercarbehaviorscores)
-- [UserHealth](#userhealth)
-- [UserHealthScores](#userhealthscores)
-- [UserSdkSettings](#usersdksettings)
-- [UserSemanticTime](#usersemantictime)
-- [UsersConnection](#usersconnection)
-- [Waypoint](#waypoint)
-- [Weather](#weather)
-- [WeatherRange](#weatherrange)
-- [WeightedLocation](#weightedlocation)
-- [WorkingTimeAggregate](#workingtimeaggregate)
-- [ZoneCarBehaviorScores](#zonecarbehaviorscores)
+
+* [AccelerationBehaviorAnnotation](data-reference.md#accelerationbehaviorannotation)
+* [AccessToken](data-reference.md#accesstoken)
+* [Account](data-reference.md#account)
+* [Address](data-reference.md#address)
+* [AggregatedDistanceAnomaly](data-reference.md#aggregateddistanceanomaly)
+* [AggregatedDurationAnomaly](data-reference.md#aggregateddurationanomaly)
+* [AnomalyBehaviorAnnotation](data-reference.md#anomalybehaviorannotation)
+* [Application](data-reference.md#application)
+* [ApplicationsConnection](data-reference.md#applicationsconnection)
+* [BehaviorAnnotationPathWaypoint](data-reference.md#behaviorannotationpathwaypoint)
+* [BoundaryBehaviorAnnotation](data-reference.md#boundarybehaviorannotation)
+* [Branch](data-reference.md#branch)
+* [CarBehaviorFeatures](data-reference.md#carbehaviorfeatures)
+* [CarBehaviorScores](data-reference.md#carbehaviorscores)
+* [CityMoment](data-reference.md#citymoment)
+* [CommuteTimeAggregate](data-reference.md#commutetimeaggregate)
+* [ControlUser](data-reference.md#controluser)
+* [CountryMoment](data-reference.md#countrymoment)
+* [CustomEvent](data-reference.md#customevent)
+* [DayCountAnomaly](data-reference.md#daycountanomaly)
+* [DeviceInfo](data-reference.md#deviceinfo)
+* [DistanceAnomaly](data-reference.md#distanceanomaly)
+* [DurationAnomaly](data-reference.md#durationanomaly)
+* [EventFeedback](data-reference.md#eventfeedback)
+* [FloatAttribute](data-reference.md#floatattribute)
+* [GenericMoment](data-reference.md#genericmoment)
+* [GenericSegment](data-reference.md#genericsegment)
+* [LocationCluster](data-reference.md#locationcluster)
+* [LocationPlaceCandidate](data-reference.md#locationplacecandidate)
+* [MomentDefinition](data-reference.md#momentdefinition)
+* [MomentFeedback](data-reference.md#momentfeedback)
+* [MomentFeedbackFeedback](data-reference.md#momentfeedbackfeedback)
+* [Mutation](data-reference.md#mutation)
+* [OccurrenceCountAnomaly](data-reference.md#occurrencecountanomaly)
+* [Paging](data-reference.md#paging)
+* [PagingCursors](data-reference.md#pagingcursors)
+* [PredictionInterval](data-reference.md#predictioninterval)
+* [PredictionTree](data-reference.md#predictiontree)
+* [SegmentDefinition](data-reference.md#segmentdefinition)
+* [SemanticTimeAggregate](data-reference.md#semantictimeaggregate)
+* [SemanticTimeAggregateValue](data-reference.md#semantictimeaggregatevalue)
+* [Stationary](data-reference.md#stationary)
+* [StationaryFeedback](data-reference.md#stationaryfeedback)
+* [StationaryIntervalPrediction](data-reference.md#stationaryintervalprediction)
+* [StationaryLocation](data-reference.md#stationarylocation)
+* [StationaryPrediction](data-reference.md#stationaryprediction)
+* [StationaryTimeAggregate](data-reference.md#stationarytimeaggregate)
+* [StreamDefinition](data-reference.md#streamdefinition)
+* [StreamDefinitionsConnection](data-reference.md#streamdefinitionsconnection)
+* [Subscription](data-reference.md#subscription)
+* [SubscriptionsConnection](data-reference.md#subscriptionsconnection)
+* [TimeWindowTransportHeatmaps](data-reference.md#timewindowtransportheatmaps)
+* [TimeWindowUserCarBehaviorFeatures](data-reference.md#timewindowusercarbehaviorfeatures)
+* [TrajectoryWaypoint](data-reference.md#trajectorywaypoint)
+* [Transport](data-reference.md#transport)
+* [TransportFeedback](data-reference.md#transportfeedback)
+* [TransportHeatmaps](data-reference.md#transportheatmaps)
+* [TransportIntervalPrediction](data-reference.md#transportintervalprediction)
+* [TransportModeHeatmaps](data-reference.md#transportmodeheatmaps)
+* [TransportPrediction](data-reference.md#transportprediction)
+* [TransportTimeAggregate](data-reference.md#transporttimeaggregate)
+* [TransportTrajectory](data-reference.md#transporttrajectory)
+* [Trip](data-reference.md#trip)
+* [TripConnection](data-reference.md#tripconnection)
+* [TurnBehaviorAnnotation](data-reference.md#turnbehaviorannotation)
+* [User](data-reference.md#user)
+* [UserAccountRole](data-reference.md#useraccountrole)
+* [UserCarBehavior](data-reference.md#usercarbehavior)
+* [UserCarBehaviorFeatures](data-reference.md#usercarbehaviorfeatures)
+* [UserCarBehaviorScores](data-reference.md#usercarbehaviorscores)
+* [UserHealth](data-reference.md#userhealth)
+* [UserHealthScores](data-reference.md#userhealthscores)
+* [UserSdkSettings](data-reference.md#usersdksettings)
+* [UserSemanticTime](data-reference.md#usersemantictime)
+* [UsersConnection](data-reference.md#usersconnection)
+* [Waypoint](data-reference.md#waypoint)
+* [Weather](data-reference.md#weather)
+* [WeatherRange](data-reference.md#weatherrange)
+* [WeightedLocation](data-reference.md#weightedlocation)
+* [WorkingTimeAggregate](data-reference.md#workingtimeaggregate)
+* [ZoneCarBehaviorScores](data-reference.md#zonecarbehaviorscores)
 
 ### AccelerationBehaviorAnnotation
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITransportBehaviorAnnotation](#itransportbehaviorannotation)
+**Kind**: OBJECT **Implements**: [ITransportBehaviorAnnotation](data-reference.md#itransportbehaviorannotation)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [TransportBehaviorAnnotationType](#transportbehaviorannotationtype) | 'AccelerationBehaviorAnnotation' |
+| type | [TransportBehaviorAnnotationType](data-reference.md#transportbehaviorannotationtype) | 'AccelerationBehaviorAnnotation' |
 | start | String |  |
 | end | String |  |
 | duration | Int |  |
-| acceleration | [AccelerationEnum](#accelerationenum) |  |
-| path | [BehaviorAnnotationPathWaypoint](#behaviorannotationpathwaypoint) |  |
-| magnitude | Float | The longitudinal g-force you experience during accelerations and brakes, measured in (0.2*m)/s². Doing a fast acceleration will result in a higher value compared to a slower acceleration. |
-
+| acceleration | [AccelerationEnum](data-reference.md#accelerationenum) |  |
+| path | [BehaviorAnnotationPathWaypoint](data-reference.md#behaviorannotationpathwaypoint) |  |
+| magnitude | Float | The longitudinal g-force you experience during accelerations and brakes, measured in \(0.2\*m\)/s². Doing a fast acceleration will result in a higher value compared to a slower acceleration. |
 
 ### AccelerationEnum
+
 **Kind**: ENUM
 
-
 ### AccessToken
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: OBJECT
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'AccessToken' |
-| token | String | The access (bearer) token |
-| expires_at | String | When this token will expire |
-
+| token | String | The access \(bearer\) token |
+| expires\_at | String | When this token will expire |
 
 ### Account
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: OBJECT
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'Account' |
 | id | String |  |
-| display_name | String |  |
-| created_at | String |  |
-| applications | [ApplicationsConnection](#applicationsconnection) | The applications that belong to this account. |
-
+| display\_name | String |  |
+| created\_at | String |  |
+| applications | [ApplicationsConnection](data-reference.md#applicationsconnection) | The applications that belong to this account. |
 
 ### Address
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-An Address describes a reverse geocoded location.
+**Kind**: OBJECT An Address describes a reverse geocoded location.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'Address' |
 | country | String |  |
 | city | String |  |
-| city_type | String |  |
-
+| city\_type | String |  |
 
 ### AggregatedDistanceAnomaly
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IAnomaly](#ianomaly), [IDistanceAnomaly](#idistanceanomaly), [IAggregatedAnomaly](#iaggregatedanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
+**Kind**: OBJECT **Implements**: [IAnomaly](data-reference.md#ianomaly), [IDistanceAnomaly](data-reference.md#idistanceanomaly), [IAggregatedAnomaly](data-reference.md#iaggregatedanomaly), [IStationaryAnomaly](data-reference.md#istationaryanomaly), [ITransportAnomaly](data-reference.md#itransportanomaly), [IMomentAnomaly](data-reference.md#imomentanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [AnomalyType](#anomalytype) | 'AggregatedDistanceAnomaly' |
+| type | [AnomalyType](data-reference.md#anomalytype) | 'AggregatedDistanceAnomaly' |
 | start | String |  |
 | end | String |  |
-| analysis_type | [AnalysisType](#analysistype) |  |
-| anomaly | [Anomaly](#anomaly) |  |
+| analysis\_type | [AnalysisType](data-reference.md#analysistype) |  |
+| anomaly | [Anomaly](data-reference.md#anomaly) |  |
 | sigma | Float | The observed standard deviation from expected behavior for this anomaly. If the standard deviation is high, the anomaly confidence will be low. |
 | probability | Float | The larger the probability, the more anomaly. Value is between 0.0 and 1.0. |
-| observed_distance | Float | Observed distance in meter. |
-| expected_distance | Float | Expected distance in meter. |
-| period | [AnomalyTimePeriod](#anomalytimeperiod) | Aggregation period over which the data is calculated. |
-| day_part | [DayPart](#daypart) | Optional additional aggregation over which the data is calculated. |
-| place_category | String |  |
-| location_significance | [LocationSignificance](#locationsignificance) |  |
-| transport_mode | [TransportMode](#transportmode) |  |
-| transport_mode_category | [TransportModeCategory](#transportmodecategory) |  |
-| moment_definition_id | String |  |
-
+| observed\_distance | Float | Observed distance in meter. |
+| expected\_distance | Float | Expected distance in meter. |
+| period | [AnomalyTimePeriod](data-reference.md#anomalytimeperiod) | Aggregation period over which the data is calculated. |
+| day\_part | [DayPart](data-reference.md#daypart) | Optional additional aggregation over which the data is calculated. |
+| place\_category | String |  |
+| location\_significance | [LocationSignificance](data-reference.md#locationsignificance) |  |
+| transport\_mode | [TransportMode](data-reference.md#transportmode) |  |
+| transport\_mode\_category | [TransportModeCategory](data-reference.md#transportmodecategory) |  |
+| moment\_definition\_id | String |  |
 
 ### AggregatedDurationAnomaly
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IAnomaly](#ianomaly), [IDurationAnomaly](#idurationanomaly), [IAggregatedAnomaly](#iaggregatedanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
+**Kind**: OBJECT **Implements**: [IAnomaly](data-reference.md#ianomaly), [IDurationAnomaly](data-reference.md#idurationanomaly), [IAggregatedAnomaly](data-reference.md#iaggregatedanomaly), [IStationaryAnomaly](data-reference.md#istationaryanomaly), [ITransportAnomaly](data-reference.md#itransportanomaly), [IMomentAnomaly](data-reference.md#imomentanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [AnomalyType](#anomalytype) | 'AggregatedDurationAnomaly' |
+| type | [AnomalyType](data-reference.md#anomalytype) | 'AggregatedDurationAnomaly' |
 | start | String |  |
 | end | String |  |
-| analysis_type | [AnalysisType](#analysistype) |  |
-| anomaly | [Anomaly](#anomaly) |  |
+| analysis\_type | [AnalysisType](data-reference.md#analysistype) |  |
+| anomaly | [Anomaly](data-reference.md#anomaly) |  |
 | sigma | Float | The observed standard deviation from expected behavior for this anomaly. If the standard deviation is high, the anomaly confidence will be low. |
 | probability | Float | The larger the probability, the more anomaly. Value is between 0.0 and 1.0. |
-| observed_duration | Float | Observed duration in seconds. |
-| expected_duration | Float | Expected duration in seconds. |
-| period | [AnomalyTimePeriod](#anomalytimeperiod) | Aggregation period over which the data is calculated. |
-| day_part | [DayPart](#daypart) | Optional additional aggregation over which the data is calculated. |
-| place_category | String |  |
-| location_significance | [LocationSignificance](#locationsignificance) |  |
-| transport_mode | [TransportMode](#transportmode) |  |
-| transport_mode_category | [TransportModeCategory](#transportmodecategory) |  |
-| moment_definition_id | String |  |
-
+| observed\_duration | Float | Observed duration in seconds. |
+| expected\_duration | Float | Expected duration in seconds. |
+| period | [AnomalyTimePeriod](data-reference.md#anomalytimeperiod) | Aggregation period over which the data is calculated. |
+| day\_part | [DayPart](data-reference.md#daypart) | Optional additional aggregation over which the data is calculated. |
+| place\_category | String |  |
+| location\_significance | [LocationSignificance](data-reference.md#locationsignificance) |  |
+| transport\_mode | [TransportMode](data-reference.md#transportmode) |  |
+| transport\_mode\_category | [TransportModeCategory](data-reference.md#transportmodecategory) |  |
+| moment\_definition\_id | String |  |
 
 ### AnalysisType
-**Kind**: ENUM
 
-The platform analyzes data in multiple stages, and updates values over time, how well the data is analyzed, can be identified by the analysis type.
+**Kind**: ENUM The platform analyzes data in multiple stages, and updates values over time, how well the data is analyzed, can be identified by the analysis type.
 
 ### Anomaly
+
 **Kind**: ENUM
 
-
 ### AnomalyBehaviorAnnotation
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITransportBehaviorAnnotation](#itransportbehaviorannotation)
+**Kind**: OBJECT **Implements**: [ITransportBehaviorAnnotation](data-reference.md#itransportbehaviorannotation)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [TransportBehaviorAnnotationType](#transportbehaviorannotationtype) | 'AnomalyBehaviorAnnotation' |
+| type | [TransportBehaviorAnnotationType](data-reference.md#transportbehaviorannotationtype) | 'AnomalyBehaviorAnnotation' |
 | start | String |  |
 | end | String |  |
-| anomaly | [BehaviorAnnotationAnomalyEnum](#behaviorannotationanomalyenum) |  |
+| anomaly | [BehaviorAnnotationAnomalyEnum](data-reference.md#behaviorannotationanomalyenum) |  |
 | duration | Int |  |
 
-
 ### AnomalyTimePeriod
-**Kind**: ENUM
 
+**Kind**: ENUM
 
 ### AnomalyType
+
 **Kind**: ENUM
 
-
 ### Application
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-An Application refers to an integration of the mobile SDK and pools together the users from this mobile app.
+**Kind**: OBJECT An Application refers to an integration of the mobile SDK and pools together the users from this mobile app.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -234,33 +222,28 @@ An Application refers to an integration of the mobile SDK and pools together the
 | description | String | A short description of this application. |
 | logging | String | An optional override for the default debug logging behavior of the mobile SDKs. |
 | flavor | String | An optional override for the default flavor configuration of the mobile SDKs. |
-| project_code | String | An optional project code used to assign users from the demo applications to this application. |
-| created_at | String | The time when this user was created, ISO8601.<br>Example:<br>2015-05-28T14:37:14.839+00:00. |
-| account_id | String | The developer account this application belongs to. |
-| users | [UsersConnection](#usersconnection) | The users that belong to this application. |
-| active_users | [UsersConnection](#usersconnection) | The users that belong to this application and have been active in the last 7 days. |
-| trips | [TripConnection](#tripconnection) | Trips across all users recorded against this application. |
+| project\_code | String | An optional project code used to assign users from the demo applications to this application. |
+| created\_at | String | The time when this user was created, ISO8601. |
 
+Example: 2015-05-28T14:37:14.839+00:00. \| \| account\_id \| String \| The developer account this application belongs to. \| \| users \| [UsersConnection](data-reference.md#usersconnection) \| The users that belong to this application. \| \| active\_users \| [UsersConnection](data-reference.md#usersconnection) \| The users that belong to this application and have been active in the last 7 days. \| \| trips \| [TripConnection](data-reference.md#tripconnection) \| Trips across all users recorded against this application. \|
 
 ### ApplicationsConnection
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-Access the application nodes
+**Kind**: OBJECT Access the application nodes
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'ApplicationsConnection' |
-| slice | [Application](#application) | The individual application nodes. Provide the right paging parameters to slice your response data. By default a slice holds up to 100 applications. |
-| paging | [Paging](#paging) |  |
-
+| slice | [Application](data-reference.md#application) | The individual application nodes. Provide the right paging parameters to slice your response data. By default a slice holds up to 100 applications. |
+| paging | [Paging](data-reference.md#paging) |  |
 
 ### BehaviorAnnotationAnomalyEnum
+
 **Kind**: ENUM
 
-
 ### BehaviorAnnotationPathWaypoint
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: OBJECT
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -269,851 +252,676 @@ Access the application nodes
 | longitude | Float |  |
 | index | Int |  |
 
-
 ### BigInt
-**Kind**: SCALAR
 
-The `BigInt` scalar type represents non-fractional signed whole numeric values. BigInt can represent values between -(2^53) + 1 and 2^53 - 1. 
+**Kind**: SCALAR The `BigInt` scalar type represents non-fractional signed whole numeric values. BigInt can represent values between -\(2^53\) + 1 and 2^53 - 1.
 
 ### BoundaryBehaviorAnnotation
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITransportBehaviorAnnotation](#itransportbehaviorannotation)
+**Kind**: OBJECT **Implements**: [ITransportBehaviorAnnotation](data-reference.md#itransportbehaviorannotation)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [TransportBehaviorAnnotationType](#transportbehaviorannotationtype) | 'BoundaryBehaviorAnnotation' |
+| type | [TransportBehaviorAnnotationType](data-reference.md#transportbehaviorannotationtype) | 'BoundaryBehaviorAnnotation' |
 | start | String |  |
 | end | String |  |
-| quality | [BoundaryBehaviorAnnotationQuality](#boundarybehaviorannotationquality) |  |
-
+| quality | [BoundaryBehaviorAnnotationQuality](data-reference.md#boundarybehaviorannotationquality) |  |
 
 ### BoundaryBehaviorAnnotationQuality
+
 **Kind**: ENUM
 
-
 ### Branch
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-A possible series of events predicted for the user.
+**Kind**: OBJECT A possible series of events predicted for the user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | id | String | Id of the branch unique among all the branches returned for the user at the given time. |
 | probability | Float | Percentage probability of the events of this beam taking place. |
-| events | [IBranchEvent](#ibranchevent) | The list of events predicted to occur. |
-
+| events | [IBranchEvent](data-reference.md#ibranchevent) | The list of events predicted to occur. |
 
 ### CarBehaviorFeatures
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: OBJECT
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'CarBehaviorFeatures' |
-| phone_handling | Int | Total time in milliseconds we detected phone handling by the user during this transport. Value will be -1 when the transport data was not sufficient. |
-| distance_during_annotations | Int | Distance in meter during which the system had good quality sensor data available to observe transport behavior. Value will be -1 when the transport data was not sufficient. |
-
+| phone\_handling | Int | Total time in milliseconds we detected phone handling by the user during this transport. Value will be -1 when the transport data was not sufficient. |
+| distance\_during\_annotations | Int | Distance in meter during which the system had good quality sensor data available to observe transport behavior. Value will be -1 when the transport data was not sufficient. |
 
 ### CarBehaviorScores
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: OBJECT
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'CarBehaviorScores' |
-| overall | Float | An aggregation of all scores where we had sufficient data. A low score in one of the scores will result in a lower overall score.  |
+| overall | Float | An aggregation of all scores where we had sufficient data. A low score in one of the scores will result in a lower overall score. |
 | smooth | Float | The smooth driving score measures how calm you drive. High accelerations and heavy braking result in a lower score, the use of coasting results in a higher score. The higher your score, the calmer you drive! When we did not have sufficient data value will be -1. |
 | legal | Float | The legal driving score measures how well you adhere to speed limits. The higher your score, the more you respect the speed limits! When we did not have sufficient data value will be -1. |
 | anticipative | Float | The anticipative driving score measures how well you anticipate traffic. A fast sequence of braking and accelerations in general traffic situations results in a lower score, the use of coasting results in a higher score. The higher your score, the more anticipative you drive! When we did not have sufficient data value will be -1. |
-| focus | Float | The proportion of time (percentage) the user is focused while driving, being focused means: not using the phone, which is detected through phone handling. |
-| mounted | Float | The proportion of time (percentage) the phone is mounted while driving. |
-| hard_accel | Float | Measures how often you accelerate hard. Every hard acceleration will be penalised by subtracting a percentage of your score. When we do not have sufficient data this value will be -1. |
-| hard_brake | Float | Measures how often you need to brake hard. Every hard brake will be penalised by subtracting a percentage of your score. When we do not have sufficient data this value will be -1. |
-| hard_events | Float | This is a combination of hard_accel and hard_brake score. The hard brakes and accelerations are also normalized by the total number of events. When we do not have sufficient data this value will be -1. |
-| legal_v2 | Float | The legal driving score measures how well you adhere to speed limits. The higher your score, the more you respect the speed limits! When we did not have sufficient data value will be -1. The difference with legal score is that this score has better speed estimation. |
-| hard_turn | Float | Measures how often you turn hard. Every hard turn will be penalised by subtracting a percentage of your score. When we do not have sufficient data this value will be -1. |
-| smooth_v2 | Float | The smooth driving score measures how smooth you drive. High accelerations, heavy braking and heavy turning result in a lower score. The use of coasting results in a higher score. Scores are normalized with respect to a wide population. The higher your score, the smoother you drive! When we did not have sufficient sensor data characterizing your drive, the value will be -1. Beside an updated normalization, the difference with smooth score v1 is that turns are also taken in account. |
-| anticipative_v2 | Float | The anticipative driving score measures how well you anticipate turns. Hard accelerations before or hard braking during a turn result in a lower score. The use of coasting results in a higher score. The higher your score, the more anticipative you drive! When we did not have sufficient sensor data characterizing your drive, the value will be -1. Beside an updated normalization, this new version has a more accurate detection of brakes in turns. |
-
+| focus | Float | The proportion of time \(percentage\) the user is focused while driving, being focused means: not using the phone, which is detected through phone handling. |
+| mounted | Float | The proportion of time \(percentage\) the phone is mounted while driving. |
+| hard\_accel | Float | Measures how often you accelerate hard. Every hard acceleration will be penalised by subtracting a percentage of your score. When we do not have sufficient data this value will be -1. |
+| hard\_brake | Float | Measures how often you need to brake hard. Every hard brake will be penalised by subtracting a percentage of your score. When we do not have sufficient data this value will be -1. |
+| hard\_events | Float | This is a combination of hard\_accel and hard\_brake score. The hard brakes and accelerations are also normalized by the total number of events. When we do not have sufficient data this value will be -1. |
+| legal\_v2 | Float | The legal driving score measures how well you adhere to speed limits. The higher your score, the more you respect the speed limits! When we did not have sufficient data value will be -1. The difference with legal score is that this score has better speed estimation. |
+| hard\_turn | Float | Measures how often you turn hard. Every hard turn will be penalised by subtracting a percentage of your score. When we do not have sufficient data this value will be -1. |
+| smooth\_v2 | Float | The smooth driving score measures how smooth you drive. High accelerations, heavy braking and heavy turning result in a lower score. The use of coasting results in a higher score. Scores are normalized with respect to a wide population. The higher your score, the smoother you drive! When we did not have sufficient sensor data characterizing your drive, the value will be -1. Beside an updated normalization, the difference with smooth score v1 is that turns are also taken in account. |
+| anticipative\_v2 | Float | The anticipative driving score measures how well you anticipate turns. Hard accelerations before or hard braking during a turn result in a lower score. The use of coasting results in a higher score. The higher your score, the more anticipative you drive! When we did not have sufficient sensor data characterizing your drive, the value will be -1. Beside an updated normalization, this new version has a more accurate detection of brakes in turns. |
 
 ### CityMoment
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IMoment](#imoment)
-An occurrence of a City moment that we have detected for a user. 
+**Kind**: OBJECT **Implements**: [IMoment](data-reference.md#imoment) An occurrence of a City moment that we have detected for a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [MomentType](#momenttype) | 'CityMoment' |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| start_ts | [BigInt](#bigint) |  |
-| end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
-| moment_definition_id | String | The ID of the MomentDefinition this moment relates to. |
-| moment_definition | [MomentDefinition](#momentdefinition) | The MomentDefinition this moment relates to. |
-| city_name | String | The name of the city this moment applies to. |
+| type | [MomentType](data-reference.md#momenttype) | 'CityMoment' |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time. |
 
+Example: 2015-05-28T14:37:14.839+00:00 \| \| end \| String \| The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time. Example: 2015-05-28T14:37:14.839+00:00 \| \| start\_ts \| [BigInt](data-reference.md#bigint) \| \| \| end\_ts \| [BigInt](data-reference.md#bigint) \| \| \| analysis\_type \| [AnalysisType](data-reference.md#analysistype) \| How well this moment is analyzed by the platform, this value will update over time. Possible values: preliminary, indepth, processed. \| \| moment\_definition\_id \| String \| The ID of the MomentDefinition this moment relates to. \| \| moment\_definition \| [MomentDefinition](data-reference.md#momentdefinition) \| The MomentDefinition this moment relates to. \| \| city\_name \| String \| The name of the city this moment applies to. \|
 
 ### CommuteTimeAggregate
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITimeAggregateAttribute](#itimeaggregateattribute), [IUserAttribute](#iuserattribute)
+**Kind**: OBJECT **Implements**: [ITimeAggregateAttribute](data-reference.md#itimeaggregateattribute), [IUserAttribute](data-reference.md#iuserattribute)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [UserAttributeType](#userattributetype) | 'CommuteTimeAggregate' |
-| period | [TimePeriod](#timeperiod) |  |
-| transport_duration | Float |  |
-| mode_category | [TransportModeCategory](#transportmodecategory) |  |
-
+| type | [UserAttributeType](data-reference.md#userattributetype) | 'CommuteTimeAggregate' |
+| period | [TimePeriod](data-reference.md#timeperiod) |  |
+| transport\_duration | Float |  |
+| mode\_category | [TransportModeCategory](data-reference.md#transportmodecategory) |  |
 
 ### ControlUser
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IUser](#iuser)
-A user that can authenticate using either password or token strategies, has an email address, might have access to dashboards, might have multiple roles, might manage multiple accounts and applications.
+**Kind**: OBJECT **Implements**: [IUser](data-reference.md#iuser) A user that can authenticate using either password or token strategies, has an email address, might have access to dashboards, might have multiple roles, might manage multiple accounts and applications.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [UserType](#usertype) | 'ControlUser' |
-| email | String | The email address that is optionally linked to provide access to the https://developers.sentiance.com and others. |
-| account_roles | [UserAccountRole](#useraccountrole) | The accounts this user has elevated permissions to. |
+| type | [UserType](data-reference.md#usertype) | 'ControlUser' |
+| email | String | The email address that is optionally linked to provide access to the [https://developers.sentiance.com](https://developers.sentiance.com) and others. |
+| account\_roles | [UserAccountRole](data-reference.md#useraccountrole) | The accounts this user has elevated permissions to. |
 | id | String | The unique identifier for this user. |
-| can_login | Boolean |  |
-| created_at | String | The time when this user was created, ISO8601.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| sdk | [UserSdkSettings](#usersdksettings) |  |
-| application_id | String | The ID of the Application this user relates to. |
-| application | [Application](#application) | The Application this user relates to. |
-| custom_event_history | [CustomEvent](#customevent) | Custom Event History |
-| event_history | [IEvent](#ievent) | An unordered list of events we have detected for this user. |
-| car_behavior | [UserCarBehavior](#usercarbehavior) | The user car behavior aggregated over the last 9 weeks. |
-| transport_heatmaps | [TransportHeatmaps](#transportheatmaps) | The aggregated transport heatmaps calculated over time. |
-| metadata | [JSON](#json) | All custom set metadata properties on this user. This is a JSON object with key->value pairs. |
-| device | [DeviceInfo](#deviceinfo) | The last known active tracking device metadata |
-| active_moments | [IMoment](#imoment) | An unordered list of moments that are ongoing from the point of view of the platform. |
-| moment_history | [IMoment](#imoment) | An unordered list of moments we have detected for this user. |
-| semantic_time | [UserSemanticTime](#usersemantictime) | The user's semantic time averaged over time. |
-| anomaly_history | [IAnomaly](#ianomaly) |  |
-| segments | [ISegment](#isegment) | An unordered list of segments that are detected for this user. |
-| location_clusters | [LocationCluster](#locationcluster) | Locations this user has been stationary at and the features we have learned about those locations (significance, point of interest, ...) |
-| location | [Waypoint](#waypoint) | The last known location we have for this user. |
-| health | [UserHealth](#userhealth) | The historical health attributes. |
-| attributes | [IUserAttribute](#iuserattribute) |  |
-| predictions | [IPrediction](#iprediction) | Event/Moment predictions for this user |
-| prediction_tree | [PredictionTree](#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. |
-| feedback_history | [IFeedback](#ifeedback) | Feedback on this user |
+| can\_login | Boolean |  |
+| created\_at | String | The time when this user was created, ISO8601. |
 
+Example: 2015-05-28T14:37:14.839+00:00 \| \| sdk \| [UserSdkSettings](data-reference.md#usersdksettings) \| \| \| application\_id \| String \| The ID of the Application this user relates to. \| \| application \| [Application](data-reference.md#application) \| The Application this user relates to. \| \| custom\_event\_history \| [CustomEvent](data-reference.md#customevent) \| Custom Event History \| \| event\_history \| [IEvent](data-reference.md#ievent) \| An unordered list of events we have detected for this user. \| \| car\_behavior \| [UserCarBehavior](data-reference.md#usercarbehavior) \| The user car behavior aggregated over the last 9 weeks. \| \| transport\_heatmaps \| [TransportHeatmaps](data-reference.md#transportheatmaps) \| The aggregated transport heatmaps calculated over time. \| \| metadata \| [JSON](data-reference.md#json) \| All custom set metadata properties on this user. This is a JSON object with key-&gt;value pairs. \| \| device \| [DeviceInfo](data-reference.md#deviceinfo) \| The last known active tracking device metadata \| \| active\_moments \| [IMoment](data-reference.md#imoment) \| An unordered list of moments that are ongoing from the point of view of the platform. \| \| moment\_history \| [IMoment](data-reference.md#imoment) \| An unordered list of moments we have detected for this user. \| \| semantic\_time \| [UserSemanticTime](data-reference.md#usersemantictime) \| The user's semantic time averaged over time. \| \| anomaly\_history \| [IAnomaly](data-reference.md#ianomaly) \| \| \| segments \| [ISegment](data-reference.md#isegment) \| An unordered list of segments that are detected for this user. \| \| location\_clusters \| [LocationCluster](data-reference.md#locationcluster) \| Locations this user has been stationary at and the features we have learned about those locations \(significance, point of interest, ...\) \| \| location \| [Waypoint](data-reference.md#waypoint) \| The last known location we have for this user. \| \| health \| [UserHealth](data-reference.md#userhealth) \| The historical health attributes. \| \| attributes \| [IUserAttribute](data-reference.md#iuserattribute) \| \| \| predictions \| [IPrediction](data-reference.md#iprediction) \| Event/Moment predictions for this user \| \| prediction\_tree \| [PredictionTree](data-reference.md#predictiontree) \| Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. \| \| feedback\_history \| [IFeedback](data-reference.md#ifeedback) \| Feedback on this user \|
 
 ### CountryMoment
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IMoment](#imoment)
-An occurrence of a Country moment that we have detected for a user. 
+**Kind**: OBJECT **Implements**: [IMoment](data-reference.md#imoment) An occurrence of a Country moment that we have detected for a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [MomentType](#momenttype) | 'CountryMoment' |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| start_ts | [BigInt](#bigint) |  |
-| end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
-| moment_definition_id | String | The ID of the MomentDefinition this moment relates to. |
-| moment_definition | [MomentDefinition](#momentdefinition) | The MomentDefinition this moment relates to. |
-| country_name | String | The name of the country this moment applies to. |
+| type | [MomentType](data-reference.md#momenttype) | 'CountryMoment' |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time. |
 
+Example: 2015-05-28T14:37:14.839+00:00 \| \| end \| String \| The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time. Example: 2015-05-28T14:37:14.839+00:00 \| \| start\_ts \| [BigInt](data-reference.md#bigint) \| \| \| end\_ts \| [BigInt](data-reference.md#bigint) \| \| \| analysis\_type \| [AnalysisType](data-reference.md#analysistype) \| How well this moment is analyzed by the platform, this value will update over time. Possible values: preliminary, indepth, processed. \| \| moment\_definition\_id \| String \| The ID of the MomentDefinition this moment relates to. \| \| moment\_definition \| [MomentDefinition](data-reference.md#momentdefinition) \| The MomentDefinition this moment relates to. \| \| country\_name \| String \| The name of the country this moment applies to. \|
 
 ### CustomEvent
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-Custom Events.
+**Kind**: OBJECT Custom Events.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | id | String | The ID of the event in the Sentiance system. This is unique across all custom events |
-| created_at | String | The time this event was created ISO8601. |
-| created_at_ts | [BigInt](#bigint) |  |
+| created\_at | String | The time this event was created ISO8601. |
+| created\_at\_ts | [BigInt](data-reference.md#bigint) |  |
 | type | String | 'CustomEvent' |
 | start | String | The time this event started, ISO8601. |
 | end | String | The time this event ended, ISO8601. Value can be null when it is a one time event. |
-| start_ts | [BigInt](#bigint) |  |
-| end_ts | [BigInt](#bigint) |  |
-| source | [CustomEventSources](#customeventsources) | Where the event originates. |
-| event_id | String |  |
+| start\_ts | [BigInt](data-reference.md#bigint) |  |
+| end\_ts | [BigInt](data-reference.md#bigint) |  |
+| source | [CustomEventSources](data-reference.md#customeventsources) | Where the event originates. |
+| event\_id | String |  |
 | latitude | Float | Latitude value of the event. |
 | longitude | Float | Longitude value of the event. |
-| values | [JSON](#json) | JSON string of key,value pairs submitted during event creation. |
-
+| values | [JSON](data-reference.md#json) | JSON string of key,value pairs submitted during event creation. |
 
 ### CustomEventSources
-**Kind**: ENUM
 
-Where the custome event originates at.
+**Kind**: ENUM Where the custome event originates at.
 
 ### DayCountAnomaly
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IAnomaly](#ianomaly), [IDayCountAnomaly](#idaycountanomaly), [IAggregatedAnomaly](#iaggregatedanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
+**Kind**: OBJECT **Implements**: [IAnomaly](data-reference.md#ianomaly), [IDayCountAnomaly](data-reference.md#idaycountanomaly), [IAggregatedAnomaly](data-reference.md#iaggregatedanomaly), [IStationaryAnomaly](data-reference.md#istationaryanomaly), [ITransportAnomaly](data-reference.md#itransportanomaly), [IMomentAnomaly](data-reference.md#imomentanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [AnomalyType](#anomalytype) | 'DayCountAnomaly' |
+| type | [AnomalyType](data-reference.md#anomalytype) | 'DayCountAnomaly' |
 | start | String |  |
 | end | String |  |
-| analysis_type | [AnalysisType](#analysistype) |  |
-| anomaly | [Anomaly](#anomaly) |  |
+| analysis\_type | [AnalysisType](data-reference.md#analysistype) |  |
+| anomaly | [Anomaly](data-reference.md#anomaly) |  |
 | sigma | Float | The observed standard deviation from expected behavior for this anomaly. If the standard deviation is high, the anomaly confidence will be low. |
 | probability | Float | The larger the probability, the more anomaly. Value is between 0.0 and 1.0. |
-| period | [AnomalyTimePeriod](#anomalytimeperiod) | Aggregation period over which the data is calculated. |
-| day_part | [DayPart](#daypart) | Optional additional aggregation over which the data is calculated. |
-| observed_days | Float | Observed amount of days. |
-| expected_days | Float | Expected amount of days. |
-| place_category | String |  |
-| location_significance | [LocationSignificance](#locationsignificance) |  |
-| transport_mode | [TransportMode](#transportmode) |  |
-| transport_mode_category | [TransportModeCategory](#transportmodecategory) |  |
-| moment_definition_id | String |  |
-
+| period | [AnomalyTimePeriod](data-reference.md#anomalytimeperiod) | Aggregation period over which the data is calculated. |
+| day\_part | [DayPart](data-reference.md#daypart) | Optional additional aggregation over which the data is calculated. |
+| observed\_days | Float | Observed amount of days. |
+| expected\_days | Float | Expected amount of days. |
+| place\_category | String |  |
+| location\_significance | [LocationSignificance](data-reference.md#locationsignificance) |  |
+| transport\_mode | [TransportMode](data-reference.md#transportmode) |  |
+| transport\_mode\_category | [TransportModeCategory](data-reference.md#transportmodecategory) |  |
+| moment\_definition\_id | String |  |
 
 ### DayPart
-**Kind**: ENUM
 
-Grouping of local time.
+**Kind**: ENUM Grouping of local time.
 
 ### DeviceInfo
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-Tracking device metadata.
+**Kind**: OBJECT Tracking device metadata.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'DeviceInfo' |
-| os | [OperatingSystem](#operatingsystem) | The operating system this device is running. |
-| os_version | String | The version of the operating system this device is running. |
-
+| os | [OperatingSystem](data-reference.md#operatingsystem) | The operating system this device is running. |
+| os\_version | String | The version of the operating system this device is running. |
 
 ### DistanceAnomaly
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IAnomaly](#ianomaly), [IDistanceAnomaly](#idistanceanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
+**Kind**: OBJECT **Implements**: [IAnomaly](data-reference.md#ianomaly), [IDistanceAnomaly](data-reference.md#idistanceanomaly), [IStationaryAnomaly](data-reference.md#istationaryanomaly), [ITransportAnomaly](data-reference.md#itransportanomaly), [IMomentAnomaly](data-reference.md#imomentanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [AnomalyType](#anomalytype) | 'DistanceAnomaly' |
+| type | [AnomalyType](data-reference.md#anomalytype) | 'DistanceAnomaly' |
 | start | String |  |
 | end | String |  |
-| analysis_type | [AnalysisType](#analysistype) |  |
-| anomaly | [Anomaly](#anomaly) |  |
+| analysis\_type | [AnalysisType](data-reference.md#analysistype) |  |
+| anomaly | [Anomaly](data-reference.md#anomaly) |  |
 | sigma | Float | The observed standard deviation from expected behavior for this anomaly. If the standard deviation is high, the anomaly confidence will be low. |
 | probability | Float | The larger the probability, the more anomaly. Value is between 0.0 and 1.0. |
-| observed_distance | Float | Observed distance in meter. |
-| expected_distance | Float | Expected distance in meter. |
-| place_category | String |  |
-| location_significance | [LocationSignificance](#locationsignificance) |  |
-| transport_mode | [TransportMode](#transportmode) |  |
-| transport_mode_category | [TransportModeCategory](#transportmodecategory) |  |
-| moment_definition_id | String |  |
-
+| observed\_distance | Float | Observed distance in meter. |
+| expected\_distance | Float | Expected distance in meter. |
+| place\_category | String |  |
+| location\_significance | [LocationSignificance](data-reference.md#locationsignificance) |  |
+| transport\_mode | [TransportMode](data-reference.md#transportmode) |  |
+| transport\_mode\_category | [TransportModeCategory](data-reference.md#transportmodecategory) |  |
+| moment\_definition\_id | String |  |
 
 ### DurationAnomaly
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IAnomaly](#ianomaly), [IDurationAnomaly](#idurationanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
+**Kind**: OBJECT **Implements**: [IAnomaly](data-reference.md#ianomaly), [IDurationAnomaly](data-reference.md#idurationanomaly), [IStationaryAnomaly](data-reference.md#istationaryanomaly), [ITransportAnomaly](data-reference.md#itransportanomaly), [IMomentAnomaly](data-reference.md#imomentanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [AnomalyType](#anomalytype) | 'DurationAnomaly' |
+| type | [AnomalyType](data-reference.md#anomalytype) | 'DurationAnomaly' |
 | start | String |  |
 | end | String |  |
-| analysis_type | [AnalysisType](#analysistype) |  |
-| anomaly | [Anomaly](#anomaly) |  |
+| analysis\_type | [AnalysisType](data-reference.md#analysistype) |  |
+| anomaly | [Anomaly](data-reference.md#anomaly) |  |
 | sigma | Float | The observed standard deviation from expected behavior for this anomaly. If the standard deviation is high, the anomaly confidence will be low. |
 | probability | Float | The larger the probability, the more anomaly. Value is between 0.0 and 1.0. |
-| observed_duration | Float | Observed duration in seconds. |
-| expected_duration | Float | Expected duration in seconds. |
-| place_category | String |  |
-| location_significance | [LocationSignificance](#locationsignificance) |  |
-| transport_mode | [TransportMode](#transportmode) |  |
-| transport_mode_category | [TransportModeCategory](#transportmodecategory) |  |
-| moment_definition_id | String |  |
-
+| observed\_duration | Float | Observed duration in seconds. |
+| expected\_duration | Float | Expected duration in seconds. |
+| place\_category | String |  |
+| location\_significance | [LocationSignificance](data-reference.md#locationsignificance) |  |
+| transport\_mode | [TransportMode](data-reference.md#transportmode) |  |
+| transport\_mode\_category | [TransportModeCategory](data-reference.md#transportmodecategory) |  |
+| moment\_definition\_id | String |  |
 
 ### EventFeedback
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: OBJECT
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type_assessment | [FeedbackAssessment](#feedbackassessment) | If the user thinks the detected type is correct. |
-| place_assessment | [FeedbackAssessment](#feedbackassessment) | If the user thinks the detected place is correct. |
-| place_feedback | [LocationPlaceCandidate](#locationplacecandidate) | The place candidate that was selected by the user as a better match, if any. |
-| significance_assessment | [FeedbackAssessment](#feedbackassessment) | If the user thinks the detected location significance is correct. |
-| significance_feedback | [LocationSignificance](#locationsignificance) | The location significance that was selected by the user as a better match, if any. |
-| mode_assessment | [FeedbackAssessment](#feedbackassessment) | What the user thinks about the transport mode. |
-| mode_feedback | [TransportMode](#transportmode) | The transport mode that was selected by the user as a better match, if any. |
-| occupant_role_feedback | [TransportOccupantRole](#transportoccupantrole) | The occupant role that was selected by the user as a better match, if any. |
-
+| type\_assessment | [FeedbackAssessment](data-reference.md#feedbackassessment) | If the user thinks the detected type is correct. |
+| place\_assessment | [FeedbackAssessment](data-reference.md#feedbackassessment) | If the user thinks the detected place is correct. |
+| place\_feedback | [LocationPlaceCandidate](data-reference.md#locationplacecandidate) | The place candidate that was selected by the user as a better match, if any. |
+| significance\_assessment | [FeedbackAssessment](data-reference.md#feedbackassessment) | If the user thinks the detected location significance is correct. |
+| significance\_feedback | [LocationSignificance](data-reference.md#locationsignificance) | The location significance that was selected by the user as a better match, if any. |
+| mode\_assessment | [FeedbackAssessment](data-reference.md#feedbackassessment) | What the user thinks about the transport mode. |
+| mode\_feedback | [TransportMode](data-reference.md#transportmode) | The transport mode that was selected by the user as a better match, if any. |
+| occupant\_role\_feedback | [TransportOccupantRole](data-reference.md#transportoccupantrole) | The occupant role that was selected by the user as a better match, if any. |
 
 ### EventType
-**Kind**: ENUM
 
+**Kind**: ENUM
 
 ### FeedbackAssessment
-**Kind**: ENUM
 
+**Kind**: ENUM
 
 ### FeedbackType
+
 **Kind**: ENUM
 
-
 ### FloatAttribute
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-A float attribute
+**Kind**: OBJECT A float attribute
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'FloatAttribute' |
 | value | Float |  |
 
-
 ### GenericMoment
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IMoment](#imoment)
-An occurrence of a moment that we have detected for a user. 
+**Kind**: OBJECT **Implements**: [IMoment](data-reference.md#imoment) An occurrence of a moment that we have detected for a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [MomentType](#momenttype) | 'GenericMoment' |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| start_ts | [BigInt](#bigint) |  |
-| end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
-| moment_definition_id | String | The ID of the MomentDefinition this moment relates to. |
-| moment_definition | [MomentDefinition](#momentdefinition) | The MomentDefinition this moment relates to. |
+| type | [MomentType](data-reference.md#momenttype) | 'GenericMoment' |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time. |
 
+Example: 2015-05-28T14:37:14.839+00:00 \| \| end \| String \| The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time. Example: 2015-05-28T14:37:14.839+00:00 \| \| start\_ts \| [BigInt](data-reference.md#bigint) \| \| \| end\_ts \| [BigInt](data-reference.md#bigint) \| \| \| analysis\_type \| [AnalysisType](data-reference.md#analysistype) \| How well this moment is analyzed by the platform, this value will update over time. Possible values: preliminary, indepth, processed. \| \| moment\_definition\_id \| String \| The ID of the MomentDefinition this moment relates to. \| \| moment\_definition \| [MomentDefinition](data-reference.md#momentdefinition) \| The MomentDefinition this moment relates to. \|
 
 ### GenericSegment
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ISegment](#isegment)
-An occurrence of a SegmentDefinition that we have detected for this user.
+**Kind**: OBJECT **Implements**: [ISegment](data-reference.md#isegment) An occurrence of a SegmentDefinition that we have detected for this user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [SegmentType](#segmenttype) | 'GenericSegment' |
-| segment_definition_id | String | The ID of the SegmentDefinition this segment relates to. |
+| type | [SegmentType](data-reference.md#segmenttype) | 'GenericSegment' |
+| segment\_definition\_id | String | The ID of the SegmentDefinition this segment relates to. |
 | explanation | String | Reasoning why this segment was assigned to this user from a third person point of view. |
-| explanation_you | String | Reasoning why this segment was assigned to this from a second person point of view. |
-| segment_definition | [SegmentDefinition](#segmentdefinition) | The SegmentDefinition this segment relates to. |
-
+| explanation\_you | String | Reasoning why this segment was assigned to this from a second person point of view. |
+| segment\_definition | [SegmentDefinition](data-reference.md#segmentdefinition) | The SegmentDefinition this segment relates to. |
 
 ### IAggregatedAnomaly
-**Kind**: INTERFACE
 
-**Implemented by**: [AggregatedDistanceAnomaly](#aggregateddistanceanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly), [DayCountAnomaly](#daycountanomaly), [OccurrenceCountAnomaly](#occurrencecountanomaly)
-An anomaly that we have detected for a user over a period of time.
+**Kind**: INTERFACE **Implemented by**: [AggregatedDistanceAnomaly](data-reference.md#aggregateddistanceanomaly), [AggregatedDurationAnomaly](data-reference.md#aggregateddurationanomaly), [DayCountAnomaly](data-reference.md#daycountanomaly), [OccurrenceCountAnomaly](data-reference.md#occurrencecountanomaly) An anomaly that we have detected for a user over a period of time.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| period | [AnomalyTimePeriod](#anomalytimeperiod) | Aggregation period over which the data is calculated. |
-| day_part | [DayPart](#daypart) | Optional additional aggregation over which the data is calculated. |
-
+| period | [AnomalyTimePeriod](data-reference.md#anomalytimeperiod) | Aggregation period over which the data is calculated. |
+| day\_part | [DayPart](data-reference.md#daypart) | Optional additional aggregation over which the data is calculated. |
 
 ### IAnomaly
-**Kind**: INTERFACE
 
-**Implemented by**: [DistanceAnomaly](#distanceanomaly), [AggregatedDistanceAnomaly](#aggregateddistanceanomaly), [DurationAnomaly](#durationanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly), [DayCountAnomaly](#daycountanomaly), [OccurrenceCountAnomaly](#occurrencecountanomaly)
-An anomaly that we have detected for a user.
+**Kind**: INTERFACE **Implemented by**: [DistanceAnomaly](data-reference.md#distanceanomaly), [AggregatedDistanceAnomaly](data-reference.md#aggregateddistanceanomaly), [DurationAnomaly](data-reference.md#durationanomaly), [AggregatedDurationAnomaly](data-reference.md#aggregateddurationanomaly), [DayCountAnomaly](data-reference.md#daycountanomaly), [OccurrenceCountAnomaly](data-reference.md#occurrencecountanomaly) An anomaly that we have detected for a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [AnomalyType](#anomalytype) | 'IAnomaly' |
+| type | [AnomalyType](data-reference.md#anomalytype) | 'IAnomaly' |
 | start | String |  |
 | end | String |  |
-| analysis_type | [AnalysisType](#analysistype) |  |
-| anomaly | [Anomaly](#anomaly) |  |
+| analysis\_type | [AnalysisType](data-reference.md#analysistype) |  |
+| anomaly | [Anomaly](data-reference.md#anomaly) |  |
 | sigma | Float | The observed standard deviation from expected behavior for this anomaly. If the standard deviation is high, the anomaly confidence will be low. |
 | probability | Float | The larger the probability, the more anomaly. Value is between 0.0 and 1.0. |
 
-
 ### IBranchEvent
-**Kind**: INTERFACE
 
-**Implemented by**: [StationaryPrediction](#stationaryprediction), [TransportPrediction](#transportprediction)
-A single predicted event.
+**Kind**: INTERFACE **Implemented by**: [StationaryPrediction](data-reference.md#stationaryprediction), [TransportPrediction](data-reference.md#transportprediction) A single predicted event.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | start | String | Predicted start time of the event. |
 | end | String | Predicted end time of the event. |
 | probability | Float | The probability of this prediction occurring. |
-| type | [TreePredictionType](#treepredictiontype) | 'IBranchEvent' |
-
+| type | [TreePredictionType](data-reference.md#treepredictiontype) | 'IBranchEvent' |
 
 ### IDayCountAnomaly
-**Kind**: INTERFACE
 
-**Implemented by**: [DayCountAnomaly](#daycountanomaly)
+**Kind**: INTERFACE **Implemented by**: [DayCountAnomaly](data-reference.md#daycountanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| observed_days | Float | Observed amount of days. |
-| expected_days | Float | Expected amount of days. |
-
+| observed\_days | Float | Observed amount of days. |
+| expected\_days | Float | Expected amount of days. |
 
 ### IDistanceAnomaly
-**Kind**: INTERFACE
 
-**Implemented by**: [DistanceAnomaly](#distanceanomaly), [AggregatedDistanceAnomaly](#aggregateddistanceanomaly)
+**Kind**: INTERFACE **Implemented by**: [DistanceAnomaly](data-reference.md#distanceanomaly), [AggregatedDistanceAnomaly](data-reference.md#aggregateddistanceanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| observed_distance | Float | Observed distance in meter. |
-| expected_distance | Float | Expected distance in meter. |
-
+| observed\_distance | Float | Observed distance in meter. |
+| expected\_distance | Float | Expected distance in meter. |
 
 ### IDurationAnomaly
-**Kind**: INTERFACE
 
-**Implemented by**: [DurationAnomaly](#durationanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly)
+**Kind**: INTERFACE **Implemented by**: [DurationAnomaly](data-reference.md#durationanomaly), [AggregatedDurationAnomaly](data-reference.md#aggregateddurationanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| observed_duration | Float | Observed duration in seconds. |
-| expected_duration | Float | Expected duration in seconds. |
-
+| observed\_duration | Float | Observed duration in seconds. |
+| expected\_duration | Float | Expected duration in seconds. |
 
 ### IEvent
-**Kind**: INTERFACE
 
-**Implemented by**: [Trip](#trip), [Stationary](#stationary), [Transport](#transport)
-An occurrence of an event that we have detected for a user. This interface is implemented by the Stationary and Transport models.
+**Kind**: INTERFACE **Implemented by**: [Trip](data-reference.md#trip), [Stationary](data-reference.md#stationary), [Transport](data-reference.md#transport) An occurrence of an event that we have detected for a user. This interface is implemented by the Stationary and Transport models.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [EventType](#eventtype) | 'IEvent' |
-| event_id | String |  |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| start_ts | [BigInt](#bigint) |  |
-| end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
-| weather | [WeatherRange](#weatherrange) | Weather data associated with this event. |
+| type | [EventType](data-reference.md#eventtype) | 'IEvent' |
+| event\_id | String |  |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time. |
 
+Example: 2015-05-28T14:37:14.839+00:00 \| \| end \| String \| The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time. Example: 2015-05-28T14:37:14.839+00:00 \| \| start\_ts \| [BigInt](data-reference.md#bigint) \| \| \| end\_ts \| [BigInt](data-reference.md#bigint) \| \| \| analysis\_type \| [AnalysisType](data-reference.md#analysistype) \| How well this event is analyzed by the platform, this value will update over time. Possible values: preliminary, indepth, processed. \| \| weather \| [WeatherRange](data-reference.md#weatherrange) \| Weather data associated with this event. \|
 
 ### IEventFeedback
-**Kind**: INTERFACE
 
-**Implemented by**: [StationaryFeedback](#stationaryfeedback), [TransportFeedback](#transportfeedback)
-An occurrence of event feedback submitted by a user.
+**Kind**: INTERFACE **Implemented by**: [StationaryFeedback](data-reference.md#stationaryfeedback), [TransportFeedback](data-reference.md#transportfeedback) An occurrence of event feedback submitted by a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| event_feedback | [EventFeedback](#eventfeedback) |  |
-
+| event\_feedback | [EventFeedback](data-reference.md#eventfeedback) |  |
 
 ### IEventPrediction
-**Kind**: INTERFACE
 
-**Implemented by**: [StationaryIntervalPrediction](#stationaryintervalprediction), [TransportIntervalPrediction](#transportintervalprediction)
-An occurrence of an event prediction that we have detected for a user.
+**Kind**: INTERFACE **Implemented by**: [StationaryIntervalPrediction](data-reference.md#stationaryintervalprediction), [TransportIntervalPrediction](data-reference.md#transportintervalprediction) An occurrence of an event prediction that we have detected for a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| event_type | [EventType](#eventtype) |  |
-
+| event\_type | [EventType](data-reference.md#eventtype) |  |
 
 ### IFeedback
-**Kind**: INTERFACE
 
-**Implemented by**: [StationaryFeedback](#stationaryfeedback), [TransportFeedback](#transportfeedback), [MomentFeedback](#momentfeedback)
-An occurrence of feedback submitted by a user.
+**Kind**: INTERFACE **Implemented by**: [StationaryFeedback](data-reference.md#stationaryfeedback), [TransportFeedback](data-reference.md#transportfeedback), [MomentFeedback](data-reference.md#momentfeedback) An occurrence of feedback submitted by a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [FeedbackType](#feedbacktype) | 'IFeedback' |
+| type | [FeedbackType](data-reference.md#feedbacktype) | 'IFeedback' |
 | end | String | End time the feedback relates to, sourced by the event, moment or user-provided. |
 | created | String | Time when this feedback entry was created. |
-| projection_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
-
+| projection\_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
 
 ### IIntervalPrediction
-**Kind**: INTERFACE
 
-**Implemented by**: [StationaryIntervalPrediction](#stationaryintervalprediction), [TransportIntervalPrediction](#transportintervalprediction)
-A prediction that has a start interval.
+**Kind**: INTERFACE **Implemented by**: [StationaryIntervalPrediction](data-reference.md#stationaryintervalprediction), [TransportIntervalPrediction](data-reference.md#transportintervalprediction) A prediction that has a start interval.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| start_interval | [PredictionInterval](#predictioninterval) |  |
-
+| start\_interval | [PredictionInterval](data-reference.md#predictioninterval) |  |
 
 ### IMoment
-**Kind**: INTERFACE
 
-**Implemented by**: [GenericMoment](#genericmoment), [CityMoment](#citymoment), [CountryMoment](#countrymoment)
-An occurrence of a MomentDefinition that we have detected for a user.
+**Kind**: INTERFACE **Implemented by**: [GenericMoment](data-reference.md#genericmoment), [CityMoment](data-reference.md#citymoment), [CountryMoment](data-reference.md#countrymoment) An occurrence of a MomentDefinition that we have detected for a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [MomentType](#momenttype) | 'IMoment' |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| start_ts | [BigInt](#bigint) |  |
-| end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this moment is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
-| moment_definition_id | String | The ID of the MomentDefinition this moment relates to. |
-| moment_definition | [MomentDefinition](#momentdefinition) | The MomentDefinition this moment relates to. |
+| type | [MomentType](data-reference.md#momenttype) | 'IMoment' |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time. |
 
+Example: 2015-05-28T14:37:14.839+00:00 \| \| end \| String \| The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time. Example: 2015-05-28T14:37:14.839+00:00 \| \| start\_ts \| [BigInt](data-reference.md#bigint) \| \| \| end\_ts \| [BigInt](data-reference.md#bigint) \| \| \| analysis\_type \| [AnalysisType](data-reference.md#analysistype) \| How well this moment is analyzed by the platform, this value will update over time. Possible values: preliminary, indepth, processed. \| \| moment\_definition\_id \| String \| The ID of the MomentDefinition this moment relates to. \| \| moment\_definition \| [MomentDefinition](data-reference.md#momentdefinition) \| The MomentDefinition this moment relates to. \|
 
 ### IMomentAnomaly
-**Kind**: INTERFACE
 
-**Implemented by**: [DistanceAnomaly](#distanceanomaly), [AggregatedDistanceAnomaly](#aggregateddistanceanomaly), [DurationAnomaly](#durationanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly), [DayCountAnomaly](#daycountanomaly), [OccurrenceCountAnomaly](#occurrencecountanomaly)
+**Kind**: INTERFACE **Implemented by**: [DistanceAnomaly](data-reference.md#distanceanomaly), [AggregatedDistanceAnomaly](data-reference.md#aggregateddistanceanomaly), [DurationAnomaly](data-reference.md#durationanomaly), [AggregatedDurationAnomaly](data-reference.md#aggregateddurationanomaly), [DayCountAnomaly](data-reference.md#daycountanomaly), [OccurrenceCountAnomaly](data-reference.md#occurrencecountanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| moment_definition_id | String |  |
-
+| moment\_definition\_id | String |  |
 
 ### IMomentFeedback
-**Kind**: INTERFACE
 
-**Implemented by**: [MomentFeedback](#momentfeedback)
-An occurrence of moment feedback submitted by a user.
+**Kind**: INTERFACE **Implemented by**: [MomentFeedback](data-reference.md#momentfeedback) An occurrence of moment feedback submitted by a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| moment_feedback | [MomentFeedbackFeedback](#momentfeedbackfeedback) |  |
-
+| moment\_feedback | [MomentFeedbackFeedback](data-reference.md#momentfeedbackfeedback) |  |
 
 ### IOccurrenceCountAnomaly
-**Kind**: INTERFACE
 
-**Implemented by**: [OccurrenceCountAnomaly](#occurrencecountanomaly)
+**Kind**: INTERFACE **Implemented by**: [OccurrenceCountAnomaly](data-reference.md#occurrencecountanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| observed_occurrences | Float | Observed amount of occurrences. |
-| expected_occurrences | Float | Expected amount of occurrences. |
-
+| observed\_occurrences | Float | Observed amount of occurrences. |
+| expected\_occurrences | Float | Expected amount of occurrences. |
 
 ### IPrediction
-**Kind**: INTERFACE
 
-**Implemented by**: [StationaryIntervalPrediction](#stationaryintervalprediction), [TransportIntervalPrediction](#transportintervalprediction)
-An occurance of a prediction that we have detected for a user.
+**Kind**: INTERFACE **Implemented by**: [StationaryIntervalPrediction](data-reference.md#stationaryintervalprediction), [TransportIntervalPrediction](data-reference.md#transportintervalprediction) An occurance of a prediction that we have detected for a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [PredictionType](#predictiontype) | 'IPrediction' |
+| type | [PredictionType](data-reference.md#predictiontype) | 'IPrediction' |
 | probability | Float |  |
 
-
 ### ISegment
-**Kind**: INTERFACE
 
-**Implemented by**: [GenericSegment](#genericsegment)
-An occurrence of a SegmentDefinition that we have detected for this user.
+**Kind**: INTERFACE **Implemented by**: [GenericSegment](data-reference.md#genericsegment) An occurrence of a SegmentDefinition that we have detected for this user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [SegmentType](#segmenttype) | 'ISegment' |
-| segment_definition_id | String | The ID of the SegmentDefinition this segment relates to. |
-| segment_definition | [SegmentDefinition](#segmentdefinition) | The SegmentDefinition this segment relates to. |
-
+| type | [SegmentType](data-reference.md#segmenttype) | 'ISegment' |
+| segment\_definition\_id | String | The ID of the SegmentDefinition this segment relates to. |
+| segment\_definition | [SegmentDefinition](data-reference.md#segmentdefinition) | The SegmentDefinition this segment relates to. |
 
 ### IStationaryAnomaly
-**Kind**: INTERFACE
 
-**Implemented by**: [DistanceAnomaly](#distanceanomaly), [AggregatedDistanceAnomaly](#aggregateddistanceanomaly), [DurationAnomaly](#durationanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly), [DayCountAnomaly](#daycountanomaly), [OccurrenceCountAnomaly](#occurrencecountanomaly)
+**Kind**: INTERFACE **Implemented by**: [DistanceAnomaly](data-reference.md#distanceanomaly), [AggregatedDistanceAnomaly](data-reference.md#aggregateddistanceanomaly), [DurationAnomaly](data-reference.md#durationanomaly), [AggregatedDurationAnomaly](data-reference.md#aggregateddurationanomaly), [DayCountAnomaly](data-reference.md#daycountanomaly), [OccurrenceCountAnomaly](data-reference.md#occurrencecountanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| place_category | String |  |
-| location_significance | [LocationSignificance](#locationsignificance) |  |
-
+| place\_category | String |  |
+| location\_significance | [LocationSignificance](data-reference.md#locationsignificance) |  |
 
 ### ITimeAggregateAttribute
-**Kind**: INTERFACE
 
-**Implemented by**: [CommuteTimeAggregate](#commutetimeaggregate), [StationaryTimeAggregate](#stationarytimeaggregate), [TransportTimeAggregate](#transporttimeaggregate), [WorkingTimeAggregate](#workingtimeaggregate)
-An attribute that aggregates by TimePeriod.
+**Kind**: INTERFACE **Implemented by**: [CommuteTimeAggregate](data-reference.md#commutetimeaggregate), [StationaryTimeAggregate](data-reference.md#stationarytimeaggregate), [TransportTimeAggregate](data-reference.md#transporttimeaggregate), [WorkingTimeAggregate](data-reference.md#workingtimeaggregate) An attribute that aggregates by TimePeriod.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| period | [TimePeriod](#timeperiod) |  |
-
+| period | [TimePeriod](data-reference.md#timeperiod) |  |
 
 ### ITransportAnomaly
-**Kind**: INTERFACE
 
-**Implemented by**: [DistanceAnomaly](#distanceanomaly), [AggregatedDistanceAnomaly](#aggregateddistanceanomaly), [DurationAnomaly](#durationanomaly), [AggregatedDurationAnomaly](#aggregateddurationanomaly), [DayCountAnomaly](#daycountanomaly), [OccurrenceCountAnomaly](#occurrencecountanomaly)
+**Kind**: INTERFACE **Implemented by**: [DistanceAnomaly](data-reference.md#distanceanomaly), [AggregatedDistanceAnomaly](data-reference.md#aggregateddistanceanomaly), [DurationAnomaly](data-reference.md#durationanomaly), [AggregatedDurationAnomaly](data-reference.md#aggregateddurationanomaly), [DayCountAnomaly](data-reference.md#daycountanomaly), [OccurrenceCountAnomaly](data-reference.md#occurrencecountanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| transport_mode | [TransportMode](#transportmode) |  |
-| transport_mode_category | [TransportModeCategory](#transportmodecategory) |  |
-
+| transport\_mode | [TransportMode](data-reference.md#transportmode) |  |
+| transport\_mode\_category | [TransportModeCategory](data-reference.md#transportmodecategory) |  |
 
 ### ITransportBehaviorAnnotation
-**Kind**: INTERFACE
 
-**Implemented by**: [BoundaryBehaviorAnnotation](#boundarybehaviorannotation), [AccelerationBehaviorAnnotation](#accelerationbehaviorannotation), [AnomalyBehaviorAnnotation](#anomalybehaviorannotation), [TurnBehaviorAnnotation](#turnbehaviorannotation)
+**Kind**: INTERFACE **Implemented by**: [BoundaryBehaviorAnnotation](data-reference.md#boundarybehaviorannotation), [AccelerationBehaviorAnnotation](data-reference.md#accelerationbehaviorannotation), [AnomalyBehaviorAnnotation](data-reference.md#anomalybehaviorannotation), [TurnBehaviorAnnotation](data-reference.md#turnbehaviorannotation)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [TransportBehaviorAnnotationType](#transportbehaviorannotationtype) | 'ITransportBehaviorAnnotation' |
+| type | [TransportBehaviorAnnotationType](data-reference.md#transportbehaviorannotationtype) | 'ITransportBehaviorAnnotation' |
 | start | String |  |
 | end | String |  |
 
-
 ### IUser
-**Kind**: INTERFACE
 
-**Implemented by**: [User](#user), [ControlUser](#controluser)
+**Kind**: INTERFACE **Implemented by**: [User](data-reference.md#user), [ControlUser](data-reference.md#controluser)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [UserType](#usertype) | 'IUser' |
+| type | [UserType](data-reference.md#usertype) | 'IUser' |
 | id | String | The unique identifier for this user. |
-| can_login | Boolean |  |
-| created_at | String | The time when this user was created, ISO8601.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| sdk | [UserSdkSettings](#usersdksettings) |  |
-| application_id | String | The ID of the Application this user relates to. |
-| application | [Application](#application) | The Application this user relates to. |
-| custom_event_history | [CustomEvent](#customevent) | Custom Event History |
-| event_history | [IEvent](#ievent) | An unordered list of events we have detected for this user. |
-| car_behavior | [UserCarBehavior](#usercarbehavior) | The user car behavior aggregated over the last 9 weeks. |
-| transport_heatmaps | [TransportHeatmaps](#transportheatmaps) | The aggregated transport heatmaps calculated over time. |
-| metadata | [JSON](#json) | All custom set metadata properties on this user. This is a JSON object with key->value pairs. |
-| device | [DeviceInfo](#deviceinfo) | The last known active tracking device metadata |
-| active_moments | [IMoment](#imoment) | An unordered list of moments that are ongoing from the point of view of the platform. |
-| moment_history | [IMoment](#imoment) | An unordered list of moments we have detected for this user. |
-| semantic_time | [UserSemanticTime](#usersemantictime) | The user's semantic time averaged over time. |
-| anomaly_history | [IAnomaly](#ianomaly) |  |
-| segments | [ISegment](#isegment) | An unordered list of segments that are detected for this user. |
-| location_clusters | [LocationCluster](#locationcluster) | Locations this user has been stationary at and the features we have learned about those locations (significance, point of interest, ...) |
-| location | [Waypoint](#waypoint) | The last known location we have for this user. |
-| health | [UserHealth](#userhealth) | The historical health attributes. |
-| attributes | [IUserAttribute](#iuserattribute) |  |
-| predictions | [IPrediction](#iprediction) | Event/Moment predictions for this user |
-| prediction_tree | [PredictionTree](#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. |
-| feedback_history | [IFeedback](#ifeedback) | Feedback on this user |
+| can\_login | Boolean |  |
+| created\_at | String | The time when this user was created, ISO8601. |
 
+Example: 2015-05-28T14:37:14.839+00:00 \| \| sdk \| [UserSdkSettings](data-reference.md#usersdksettings) \| \| \| application\_id \| String \| The ID of the Application this user relates to. \| \| application \| [Application](data-reference.md#application) \| The Application this user relates to. \| \| custom\_event\_history \| [CustomEvent](data-reference.md#customevent) \| Custom Event History \| \| event\_history \| [IEvent](data-reference.md#ievent) \| An unordered list of events we have detected for this user. \| \| car\_behavior \| [UserCarBehavior](data-reference.md#usercarbehavior) \| The user car behavior aggregated over the last 9 weeks. \| \| transport\_heatmaps \| [TransportHeatmaps](data-reference.md#transportheatmaps) \| The aggregated transport heatmaps calculated over time. \| \| metadata \| [JSON](data-reference.md#json) \| All custom set metadata properties on this user. This is a JSON object with key-&gt;value pairs. \| \| device \| [DeviceInfo](data-reference.md#deviceinfo) \| The last known active tracking device metadata \| \| active\_moments \| [IMoment](data-reference.md#imoment) \| An unordered list of moments that are ongoing from the point of view of the platform. \| \| moment\_history \| [IMoment](data-reference.md#imoment) \| An unordered list of moments we have detected for this user. \| \| semantic\_time \| [UserSemanticTime](data-reference.md#usersemantictime) \| The user's semantic time averaged over time. \| \| anomaly\_history \| [IAnomaly](data-reference.md#ianomaly) \| \| \| segments \| [ISegment](data-reference.md#isegment) \| An unordered list of segments that are detected for this user. \| \| location\_clusters \| [LocationCluster](data-reference.md#locationcluster) \| Locations this user has been stationary at and the features we have learned about those locations \(significance, point of interest, ...\) \| \| location \| [Waypoint](data-reference.md#waypoint) \| The last known location we have for this user. \| \| health \| [UserHealth](data-reference.md#userhealth) \| The historical health attributes. \| \| attributes \| [IUserAttribute](data-reference.md#iuserattribute) \| \| \| predictions \| [IPrediction](data-reference.md#iprediction) \| Event/Moment predictions for this user \| \| prediction\_tree \| [PredictionTree](data-reference.md#predictiontree) \| Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. \| \| feedback\_history \| [IFeedback](data-reference.md#ifeedback) \| Feedback on this user \|
 
 ### IUserAttribute
-**Kind**: INTERFACE
 
-**Implemented by**: [CommuteTimeAggregate](#commutetimeaggregate), [StationaryTimeAggregate](#stationarytimeaggregate), [TransportTimeAggregate](#transporttimeaggregate), [WorkingTimeAggregate](#workingtimeaggregate)
+**Kind**: INTERFACE **Implemented by**: [CommuteTimeAggregate](data-reference.md#commutetimeaggregate), [StationaryTimeAggregate](data-reference.md#stationarytimeaggregate), [TransportTimeAggregate](data-reference.md#transporttimeaggregate), [WorkingTimeAggregate](data-reference.md#workingtimeaggregate)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [UserAttributeType](#userattributetype) | 'IUserAttribute' |
-
+| type | [UserAttributeType](data-reference.md#userattributetype) | 'IUserAttribute' |
 
 ### InputAddress
-**Kind**: INPUT_OBJECT
 
+**Kind**: INPUT\_OBJECT
 
 ### InputEventFeedback
-**Kind**: INPUT_OBJECT
 
+**Kind**: INPUT\_OBJECT
 
 ### InputLocationPlaceCandidate
-**Kind**: INPUT_OBJECT
 
+**Kind**: INPUT\_OBJECT
 
 ### InputMoment
-**Kind**: INPUT_OBJECT
 
+**Kind**: INPUT\_OBJECT
 
 ### InputMomentFeedback
-**Kind**: INPUT_OBJECT
 
+**Kind**: INPUT\_OBJECT
 
 ### InputStationary
-**Kind**: INPUT_OBJECT
 
+**Kind**: INPUT\_OBJECT
 
 ### InputStationaryLocation
-**Kind**: INPUT_OBJECT
 
+**Kind**: INPUT\_OBJECT
 
 ### InputTrajectoryWaypoint
-**Kind**: INPUT_OBJECT
 
-A single waypoint in the augmented trajectory.
+**Kind**: INPUT\_OBJECT A single waypoint in the augmented trajectory.
 
 ### InputTransport
-**Kind**: INPUT_OBJECT
 
+**Kind**: INPUT\_OBJECT
 
 ### InputTransportBehaviorFeatures
-**Kind**: SCALAR
 
+**Kind**: SCALAR
 
 ### InputTransportBehaviorScores
-**Kind**: SCALAR
 
+**Kind**: SCALAR
 
 ### InputTransportTrajectory
-**Kind**: INPUT_OBJECT
 
+**Kind**: INPUT\_OBJECT
 
 ### InputWaypoint
-**Kind**: INPUT_OBJECT
 
+**Kind**: INPUT\_OBJECT
 
 ### JSON
-**Kind**: SCALAR
 
-The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+**Kind**: SCALAR The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
 ### LocationCluster
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: OBJECT
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'LocationCluster' |
-| last_visit | String |  |
+| last\_visit | String |  |
 | latitude | Float |  |
 | longitude | Float |  |
-| address | [Address](#address) |  |
+| address | [Address](data-reference.md#address) |  |
 | radius | Int |  |
-| is_poi | Boolean |  |
-| significance | [LocationSignificance](#locationsignificance) |  |
-| place | [LocationPlaceCandidate](#locationplacecandidate) |  |
-
+| is\_poi | Boolean |  |
+| significance | [LocationSignificance](data-reference.md#locationsignificance) |  |
+| place | [LocationPlaceCandidate](data-reference.md#locationplacecandidate) |  |
 
 ### LocationPlaceCandidate
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-A place selected from one of our data sources.
+**Kind**: OBJECT A place selected from one of our data sources.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'LocationPlaceCandidate' |
 | name | String | Name of the place. Can be null if no specific place can be assigned. |
-| category_hierarchy | [String](#string) | A list of venue categories in hierarchical order. The first item represents the broadest category, with each subsequent item representing a more specific one. For ex. `["shop","food","grocery","supermarket"]` |
+| category\_hierarchy | [String](data-reference.md#string) | A list of venue categories in hierarchical order. The first item represents the broadest category, with each subsequent item representing a more specific one. For ex. `["shop","food","grocery","supermarket"]` |
 | probability | Float |  |
 | latitude | Float |  |
 | longitude | Float |  |
 | provider | String |  |
 
-
 ### LocationSignificance
+
 **Kind**: ENUM
 
-
 ### MomentDefinition
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-A single moment definition.
+**Kind**: OBJECT A single moment definition.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'MomentDefinition' |
-| id | String | Identifier of this MomentDefinition. Possible values: working_at_work,working_remote,home,morning,lunch,afternoon,evening,night,commute_from_work,commute_from_home,business_trip,holiday,nearby_home,nearby_work,city_name,country,children_drop_off,sport_routine,shopping_routine,evening_entertainment,night_out,afternoon_drinks,evening_drinks,breakfast_out,lunch_out,dinner_out,about_to_working,about_to_commute_from_home,about_to_commute_from_work,about_to_children_drop_off,about_to_sport,about_to_shopping,nearby_poi |
-| category | String | Category ID of this MomentDefinition, if any. Possible values: activity,semantic_time,travel,geography,location,about_to_routine |
-| display_name | String | A displayable name for this MomentDefinition. |
+| id | String | Identifier of this MomentDefinition. Possible values: working\_at\_work,working\_remote,home,morning,lunch,afternoon,evening,night,commute\_from\_work,commute\_from\_home,business\_trip,holiday,nearby\_home,nearby\_work,city\_name,country,children\_drop\_off,sport\_routine,shopping\_routine,evening\_entertainment,night\_out,afternoon\_drinks,evening\_drinks,breakfast\_out,lunch\_out,dinner\_out,about\_to\_working,about\_to\_commute\_from\_home,about\_to\_commute\_from\_work,about\_to\_children\_drop\_off,about\_to\_sport,about\_to\_shopping,nearby\_poi |
+| category | String | Category ID of this MomentDefinition, if any. Possible values: activity,semantic\_time,travel,geography,location,about\_to\_routine |
+| display\_name | String | A displayable name for this MomentDefinition. |
 | description | String | A short description about this MomentDefinition. |
 
-
 ### MomentFeedback
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IFeedback](#ifeedback), [IMomentFeedback](#imomentfeedback)
+**Kind**: OBJECT **Implements**: [IFeedback](data-reference.md#ifeedback), [IMomentFeedback](data-reference.md#imomentfeedback)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [FeedbackType](#feedbacktype) | 'MomentFeedback' |
+| type | [FeedbackType](data-reference.md#feedbacktype) | 'MomentFeedback' |
 | end | String | End time the feedback relates to, sourced by the event, moment or user-provided. |
 | created | String | Time when this feedback entry was created. |
-| projection_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
-| moment_feedback | [MomentFeedbackFeedback](#momentfeedbackfeedback) |  |
-| moment | [IMoment](#imoment) | The Moment this feedback refers to. |
-
+| projection\_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
+| moment\_feedback | [MomentFeedbackFeedback](data-reference.md#momentfeedbackfeedback) |  |
+| moment | [IMoment](data-reference.md#imoment) | The Moment this feedback refers to. |
 
 ### MomentFeedbackFeedback
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: OBJECT
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| moment_definition_id_assessment | [FeedbackAssessment](#feedbackassessment) | If the user thinks our detected moment is correct. |
-| moment_definition_id_feedback | String | Correction by the user in case our detection was incorrect. |
-
+| moment\_definition\_id\_assessment | [FeedbackAssessment](data-reference.md#feedbackassessment) | If the user thinks our detected moment is correct. |
+| moment\_definition\_id\_feedback | String | Correction by the user in case our detection was incorrect. |
 
 ### MomentType
-**Kind**: ENUM
 
+**Kind**: ENUM
 
 ### Mutation
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-Through mutations you can update data.
+**Kind**: OBJECT Through mutations you can update data.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| validateAccessTokens | [AccessToken](#accesstoken) | Validate access tokens. The valid tokens will be in the response. |
-| createSubscription | [Subscription](#subscription) |  |
-| deleteStreamDefinition | [StreamDefinition](#streamdefinition) | Allows one to delete a Stream Definition either because it was mistakenly created or because it has outlived its use. Trying to delete a non-existent Stream Definition will result in an error. |
-| createStreamDefinition | [StreamDefinition](#streamdefinition) |  |
-| createFeedback | [IFeedback](#ifeedback) |  |
-| createUserRole | [UserAccountRole](#useraccountrole) |  |
-
+| validateAccessTokens | [AccessToken](data-reference.md#accesstoken) | Validate access tokens. The valid tokens will be in the response. |
+| createSubscription | [Subscription](data-reference.md#subscription) |  |
+| deleteStreamDefinition | [StreamDefinition](data-reference.md#streamdefinition) | Allows one to delete a Stream Definition either because it was mistakenly created or because it has outlived its use. Trying to delete a non-existent Stream Definition will result in an error. |
+| createStreamDefinition | [StreamDefinition](data-reference.md#streamdefinition) |  |
+| createFeedback | [IFeedback](data-reference.md#ifeedback) |  |
+| createUserRole | [UserAccountRole](data-reference.md#useraccountrole) |  |
 
 ### OccurrenceCountAnomaly
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IAnomaly](#ianomaly), [IOccurrenceCountAnomaly](#ioccurrencecountanomaly), [IAggregatedAnomaly](#iaggregatedanomaly), [IStationaryAnomaly](#istationaryanomaly), [ITransportAnomaly](#itransportanomaly), [IMomentAnomaly](#imomentanomaly)
+**Kind**: OBJECT **Implements**: [IAnomaly](data-reference.md#ianomaly), [IOccurrenceCountAnomaly](data-reference.md#ioccurrencecountanomaly), [IAggregatedAnomaly](data-reference.md#iaggregatedanomaly), [IStationaryAnomaly](data-reference.md#istationaryanomaly), [ITransportAnomaly](data-reference.md#itransportanomaly), [IMomentAnomaly](data-reference.md#imomentanomaly)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [AnomalyType](#anomalytype) | 'OccurrenceCountAnomaly' |
+| type | [AnomalyType](data-reference.md#anomalytype) | 'OccurrenceCountAnomaly' |
 | start | String |  |
 | end | String |  |
-| analysis_type | [AnalysisType](#analysistype) |  |
-| anomaly | [Anomaly](#anomaly) |  |
+| analysis\_type | [AnalysisType](data-reference.md#analysistype) |  |
+| anomaly | [Anomaly](data-reference.md#anomaly) |  |
 | sigma | Float | The observed standard deviation from expected behavior for this anomaly. If the standard deviation is high, the anomaly confidence will be low. |
 | probability | Float | The larger the probability, the more anomaly. Value is between 0.0 and 1.0. |
-| period | [AnomalyTimePeriod](#anomalytimeperiod) | Aggregation period over which the data is calculated. |
-| day_part | [DayPart](#daypart) | Optional additional aggregation over which the data is calculated. |
-| observed_occurrences | Float | Observed amount of occurrences. |
-| expected_occurrences | Float | Expected amount of occurrences. |
-| place_category | String |  |
-| location_significance | [LocationSignificance](#locationsignificance) |  |
-| transport_mode | [TransportMode](#transportmode) |  |
-| transport_mode_category | [TransportModeCategory](#transportmodecategory) |  |
-| moment_definition_id | String |  |
-
+| period | [AnomalyTimePeriod](data-reference.md#anomalytimeperiod) | Aggregation period over which the data is calculated. |
+| day\_part | [DayPart](data-reference.md#daypart) | Optional additional aggregation over which the data is calculated. |
+| observed\_occurrences | Float | Observed amount of occurrences. |
+| expected\_occurrences | Float | Expected amount of occurrences. |
+| place\_category | String |  |
+| location\_significance | [LocationSignificance](data-reference.md#locationsignificance) |  |
+| transport\_mode | [TransportMode](data-reference.md#transportmode) |  |
+| transport\_mode\_category | [TransportModeCategory](data-reference.md#transportmodecategory) |  |
+| moment\_definition\_id | String |  |
 
 ### OperatingSystem
+
 **Kind**: ENUM
 
-
 ### Paging
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-The paging information that allows you to paginate through a large response list.
+**Kind**: OBJECT The paging information that allows you to paginate through a large response list.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'Paging' |
-| cursors | [PagingCursors](#pagingcursors) | The offset cursors to use when paging through results. |
-
+| cursors | [PagingCursors](data-reference.md#pagingcursors) | The offset cursors to use when paging through results. |
 
 ### PagingCursors
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-The paging cursors that you use to paginate through a large response set.
+**Kind**: OBJECT The paging cursors that you use to paginate through a large response set.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1121,41 +929,36 @@ The paging cursors that you use to paginate through a large response set.
 | before | String | This is the cursor that points to the start of the page of data that has been returned. |
 | after | String | This is the cursor that points to the end of the page of data that has been returned. |
 
-
 ### PredictionInterval
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: OBJECT
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | start | String |  |
 | end | String |  |
 
-
 ### PredictionTree
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-Multiple possible events that might occur for a user.
+**Kind**: OBJECT Multiple possible events that might occur for a user.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| is_updated | Boolean |  |
+| is\_updated | Boolean |  |
 | probability | Float | Percentage probability of these events taking place. |
-| events | [IBranchEvent](#ibranchevent) | The list of events predicted to occur. |
-
+| events | [IBranchEvent](data-reference.md#ibranchevent) | The list of events predicted to occur. |
 
 ### PredictionType
-**Kind**: ENUM
 
+**Kind**: ENUM
 
 ### SdkFlavor
+
 **Kind**: ENUM
 
-
 ### SegmentDefinition
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-A single segment definition.
+**Kind**: OBJECT A single segment definition.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1164,153 +967,127 @@ A single segment definition.
 | version | Int | Version which will increase everytime minor changes or improvements happen to the calculation of this segment. |
 | category | String | Category of this segment, if any. |
 | subcategory | String | Subcategory of this segment, if any. |
-| display_name | String | A displayable name for this segment. |
+| display\_name | String | A displayable name for this segment. |
 | description | String | A short description about this segment. |
 | deprecated | Boolean | Flag that indicates if this segment will be removed in one of the following releases. Do not use segments that are marked deprecated for new development. |
-| deprecated_at | String | Date when the segment will be removed. Default null. |
-
+| deprecated\_at | String | Date when the segment will be removed. Default null. |
 
 ### SegmentDefinitionStatus
-**Kind**: ENUM
 
-Identifies the release status of a segment definition.
+**Kind**: ENUM Identifies the release status of a segment definition.
 
 ### SegmentType
-**Kind**: ENUM
 
+**Kind**: ENUM
 
 ### SemanticTime
-**Kind**: ENUM
 
-The user semantic time.
+**Kind**: ENUM The user semantic time.
 
 ### SemanticTimeAggregate
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: OBJECT
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'SemanticTimeAggregate' |
-| morning | [SemanticTimeAggregateValue](#semantictimeaggregatevalue) |  |
-| lunch | [SemanticTimeAggregateValue](#semantictimeaggregatevalue) |  |
-| afternoon | [SemanticTimeAggregateValue](#semantictimeaggregatevalue) |  |
-| evening | [SemanticTimeAggregateValue](#semantictimeaggregatevalue) |  |
-| night | [SemanticTimeAggregateValue](#semantictimeaggregatevalue) |  |
-
+| morning | [SemanticTimeAggregateValue](data-reference.md#semantictimeaggregatevalue) |  |
+| lunch | [SemanticTimeAggregateValue](data-reference.md#semantictimeaggregatevalue) |  |
+| afternoon | [SemanticTimeAggregateValue](data-reference.md#semantictimeaggregatevalue) |  |
+| evening | [SemanticTimeAggregateValue](data-reference.md#semantictimeaggregatevalue) |  |
+| night | [SemanticTimeAggregateValue](data-reference.md#semantictimeaggregatevalue) |  |
 
 ### SemanticTimeAggregateDaysEnum
+
 **Kind**: ENUM
 
-
 ### SemanticTimeAggregateValue
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: OBJECT
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'SemanticTimeAggregateValue' |
-| semantic_time | [SemanticTime](#semantictime) |  |
-| days | [SemanticTimeAggregateDaysEnum](#semantictimeaggregatedaysenum) |  |
+| semantic\_time | [SemanticTime](data-reference.md#semantictime) |  |
+| days | [SemanticTimeAggregateDaysEnum](data-reference.md#semantictimeaggregatedaysenum) |  |
 | start | String | The average start time of the semantic time, in local time, ISO 8601 time format, second precision. Example: 15:34:00 |
 | end | String | The average end time of the semantic time, in local time, ISO 8601 time format, second precision. Example: 15:34:00 |
 
-
 ### Stationary
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IEvent](#ievent)
+**Kind**: OBJECT **Implements**: [IEvent](data-reference.md#ievent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [EventType](#eventtype) | 'Stationary' |
-| event_id | String |  |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| start_ts | [BigInt](#bigint) |  |
-| end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
-| latitude | Float |  |
-| longitude | Float |  |
-| duration | [BigInt](#bigint) |  |
-| address | [Address](#address) |  |
-| location | [StationaryLocation](#stationarylocation) |  |
-| weather | [WeatherRange](#weatherrange) | Weather data associated with this event. |
+| type | [EventType](data-reference.md#eventtype) | 'Stationary' |
+| event\_id | String |  |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time. |
 
+Example: 2015-05-28T14:37:14.839+00:00 \| \| end \| String \| The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time. Example: 2015-05-28T14:37:14.839+00:00 \| \| start\_ts \| [BigInt](data-reference.md#bigint) \| \| \| end\_ts \| [BigInt](data-reference.md#bigint) \| \| \| analysis\_type \| [AnalysisType](data-reference.md#analysistype) \| How well this event is analyzed by the platform, this value will update over time. Possible values: preliminary, indepth, processed. \| \| latitude \| Float \| \| \| longitude \| Float \| \| \| duration \| [BigInt](data-reference.md#bigint) \| \| \| address \| [Address](data-reference.md#address) \| \| \| location \| [StationaryLocation](data-reference.md#stationarylocation) \| \| \| weather \| [WeatherRange](data-reference.md#weatherrange) \| Weather data associated with this event. \|
 
 ### StationaryFeedback
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IFeedback](#ifeedback), [IEventFeedback](#ieventfeedback)
+**Kind**: OBJECT **Implements**: [IFeedback](data-reference.md#ifeedback), [IEventFeedback](data-reference.md#ieventfeedback)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [FeedbackType](#feedbacktype) | 'StationaryFeedback' |
+| type | [FeedbackType](data-reference.md#feedbacktype) | 'StationaryFeedback' |
 | end | String | End time the feedback relates to, sourced by the event, moment or user-provided. |
 | created | String | Time when this feedback entry was created. |
-| projection_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
-| event_feedback | [EventFeedback](#eventfeedback) |  |
-| stationary | [Stationary](#stationary) | The Stationary this feedback refers to. |
-
+| projection\_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
+| event\_feedback | [EventFeedback](data-reference.md#eventfeedback) |  |
+| stationary | [Stationary](data-reference.md#stationary) | The Stationary this feedback refers to. |
 
 ### StationaryIntervalPrediction
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IPrediction](#iprediction), [IEventPrediction](#ieventprediction), [IIntervalPrediction](#iintervalprediction)
+**Kind**: OBJECT **Implements**: [IPrediction](data-reference.md#iprediction), [IEventPrediction](data-reference.md#ieventprediction), [IIntervalPrediction](data-reference.md#iintervalprediction)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [PredictionType](#predictiontype) | 'StationaryIntervalPrediction' |
+| type | [PredictionType](data-reference.md#predictiontype) | 'StationaryIntervalPrediction' |
 | probability | Float |  |
-| event_type | [EventType](#eventtype) |  |
-| start_interval | [PredictionInterval](#predictioninterval) |  |
-| location | [StationaryLocation](#stationarylocation) |  |
-
+| event\_type | [EventType](data-reference.md#eventtype) |  |
+| start\_interval | [PredictionInterval](data-reference.md#predictioninterval) |  |
+| location | [StationaryLocation](data-reference.md#stationarylocation) |  |
 
 ### StationaryLocation
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-Holds more information about a stationary location.
+**Kind**: OBJECT Holds more information about a stationary location.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'StationaryLocation' |
-| significance | [LocationSignificance](#locationsignificance) | What this location means for the user, or the frequency it's being visited. |
-| place | [LocationPlaceCandidate](#locationplacecandidate) |  |
-| place_candidates | [LocationPlaceCandidate](#locationplacecandidate) |  |
-
+| significance | [LocationSignificance](data-reference.md#locationsignificance) | What this location means for the user, or the frequency it's being visited. |
+| place | [LocationPlaceCandidate](data-reference.md#locationplacecandidate) |  |
+| place\_candidates | [LocationPlaceCandidate](data-reference.md#locationplacecandidate) |  |
 
 ### StationaryPrediction
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IBranchEvent](#ibranchevent)
+**Kind**: OBJECT **Implements**: [IBranchEvent](data-reference.md#ibranchevent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | start | String | Predicted start time of the event. |
 | end | String | Predicted end time of the event. |
 | probability | Float | The probability of this prediction occurring. |
-| type | [TreePredictionType](#treepredictiontype) | 'StationaryPrediction' |
-| location_type | String |  |
-
+| type | [TreePredictionType](data-reference.md#treepredictiontype) | 'StationaryPrediction' |
+| location\_type | String |  |
 
 ### StationaryTimeAggregate
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITimeAggregateAttribute](#itimeaggregateattribute), [IUserAttribute](#iuserattribute)
+**Kind**: OBJECT **Implements**: [ITimeAggregateAttribute](data-reference.md#itimeaggregateattribute), [IUserAttribute](data-reference.md#iuserattribute)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [UserAttributeType](#userattributetype) | 'StationaryTimeAggregate' |
-| period | [TimePeriod](#timeperiod) |  |
+| type | [UserAttributeType](data-reference.md#userattributetype) | 'StationaryTimeAggregate' |
+| period | [TimePeriod](data-reference.md#timeperiod) |  |
 | duration | Float |  |
-| place_category | String |  |
-| location_significance | [LocationSignificance](#locationsignificance) |  |
-
+| place\_category | String |  |
+| location\_significance | [LocationSignificance](data-reference.md#locationsignificance) |  |
 
 ### StreamDefinition
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-Stream definition that can be activated/subscribed to with the Sentiance Firehose
+**Kind**: OBJECT Stream definition that can be activated/subscribed to with the Sentiance Firehose
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1318,30 +1095,25 @@ Stream definition that can be activated/subscribed to with the Sentiance Firehos
 | id | String |  |
 | name | String |  |
 | projection | String | The GQL query that will be provided on every notification. |
-| created_at | String |  |
-| subscriptions | [SubscriptionsConnection](#subscriptionsconnection) |  |
-
+| created\_at | String |  |
+| subscriptions | [SubscriptionsConnection](data-reference.md#subscriptionsconnection) |  |
 
 ### StreamDefinitionConnectionType
-**Kind**: ENUM
 
-Stream definition connection type.
+**Kind**: ENUM Stream definition connection type.
 
 ### StreamDefinitionsConnection
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-Access the stream definitions
+**Kind**: OBJECT Access the stream definitions
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'StreamDefinitionsConnection' |
-| slice | [StreamDefinition](#streamdefinition) | The individual stream definitions. Provide the right paging parameters to slice your result set. |
-
+| slice | [StreamDefinition](data-reference.md#streamdefinition) | The individual stream definitions. Provide the right paging parameters to slice your result set. |
 
 ### Subscription
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-Subscription that can be activated to receive data from the Sentiance Firehose.
+**Kind**: OBJECT Subscription that can be activated to receive data from the Sentiance Firehose.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -1349,504 +1121,16 @@ Subscription that can be activated to receive data from the Sentiance Firehose.
 | id | String |  |
 | token | String |  |
 | active | Boolean |  |
-| connection_type | [StreamDefinitionConnectionType](#streamdefinitionconnectiontype) |  |
-| user_ids | [String](#string) |  |
-| created_at | String |  |
-
+| connection\_type | [StreamDefinitionConnectionType](data-reference.md#streamdefinitionconnectiontype) |  |
+| user\_ids | [String](data-reference.md#string) |  |
+| created\_at | String |  |
 
 ### SubscriptionsConnection
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-Access the stream subscriptions
+**Kind**: OBJECT Access the stream subscriptions
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'SubscriptionsConnection' |
-| slice | [Subscription](#subscription) | The individual subscriptions. Provide the right paging parameters to slice your result set. |
-
-
-### TimePeriod
-**Kind**: ENUM
-
-
-### TimeWindowTransportHeatmaps
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'TimeWindowTransportHeatmaps' |
-| car | [TransportModeHeatmaps](#transportmodeheatmaps) |  |
-
-
-### TimeWindowUserCarBehaviorFeatures
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'TimeWindowUserCarBehaviorFeatures' |
-| phone_handling | Float | The average number of milliseconds this user is using his phone per hour in transport, during this time window. |
-| distance | Int | Aggregated distance measured in meter for all car transports during this time window. |
-
-
-### TrajectoryWaypoint
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-A single waypoint in the augmented trajectory.
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'TrajectoryWaypoint' |
-| latitude | Float |  |
-| longitude | Float |  |
-| timestamp | String |  |
-| road_type | String |  |
-| speed | Float | The average speed between this waypoint and the next waypoint, in km/h. |
-| speed_v2 | Float | The average speed between this waypoint and the next waypoint, in km/h. The difference with speed is that it has an improved estimation algorithm. |
-| distance | Float | The distance in meter between the current waypoint and the next waypoint. |
-| speed_limit | Float | Speed limit measured at this point in the trajectory. As is provided by our mapping data partners. |
-
-
-### Transport
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-**Implements**: [IEvent](#ievent)
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | [EventType](#eventtype) | 'Transport' |
-| event_id | String |  |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| start_ts | [BigInt](#bigint) |  |
-| end_ts | [BigInt](#bigint) |  |
-| analysis_type | [AnalysisType](#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
-| mode | [TransportMode](#transportmode) | The transport mode that was identified for this transport.  |
-| distance | Int |  |
-| occupant_role | [TransportOccupantRole](#transportoccupantrole) |  |
-| waypoints | [Waypoint](#waypoint) |  |
-| trajectory | [TransportTrajectory](#transporttrajectory) |  |
-| behavior_scores | [TransportBehaviorScores](#transportbehaviorscores) |  |
-| behavior_annotations | [ITransportBehaviorAnnotation](#itransportbehaviorannotation) |  |
-| behavior_features | [TransportBehaviorFeatures](#transportbehaviorfeatures) |  |
-| weather | [WeatherRange](#weatherrange) | Weather data associated with this event. |
-
-
-### TransportBehaviorAnnotationType
-**Kind**: ENUM
-
-
-### TransportBehaviorFeatures
-**Kind**: UNION
-
-**Possible types**: [CarBehaviorFeatures](#carbehaviorfeatures)
-
-### TransportBehaviorScores
-**Kind**: UNION
-
-**Possible types**: [CarBehaviorScores](#carbehaviorscores)
-The transport behavior scores we have detected during a transport. These scores are only available when the full trip is processed.
-
-### TransportFeedback
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-**Implements**: [IFeedback](#ifeedback), [IEventFeedback](#ieventfeedback)
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | [FeedbackType](#feedbacktype) | 'TransportFeedback' |
-| end | String | End time the feedback relates to, sourced by the event, moment or user-provided. |
-| created | String | Time when this feedback entry was created. |
-| projection_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
-| event_feedback | [EventFeedback](#eventfeedback) |  |
-| transport | [Transport](#transport) | The Transport this feedback refers to. |
-
-
-### TransportHeatmaps
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-Historically aggregated transport heatmaps.
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'TransportHeatmaps' |
-| l30d | [TimeWindowTransportHeatmaps](#timewindowtransportheatmaps) | Transport heatmaps that are calculated using the last . |
-
-
-### TransportIntervalPrediction
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-**Implements**: [IPrediction](#iprediction), [IEventPrediction](#ieventprediction), [IIntervalPrediction](#iintervalprediction)
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | [PredictionType](#predictiontype) | 'TransportIntervalPrediction' |
-| probability | Float |  |
-| event_type | [EventType](#eventtype) |  |
-| start_interval | [PredictionInterval](#predictioninterval) |  |
-| mode | [TransportMode](#transportmode) |  |
-
-
-### TransportMode
-**Kind**: ENUM
-
-The transport modes the platform supports.
-
-### TransportModeCategory
-**Kind**: ENUM
-
-
-### TransportModeHeatmaps
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'TransportModeHeatmaps' |
-| passed | [WeightedLocation](#weightedlocation) | An aggregate heatmap based on the amounts of times you have passed the coordinates during transports. |
-
-
-### TransportOccupantRole
-**Kind**: ENUM
-
-
-### TransportPrediction
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-**Implements**: [IBranchEvent](#ibranchevent)
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| start | String | Predicted start time of the event. |
-| end | String | Predicted end time of the event. |
-| probability | Float | The probability of this prediction occurring. |
-| type | [TreePredictionType](#treepredictiontype) | 'TransportPrediction' |
-| mode | String |  |
-
-
-### TransportTimeAggregate
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-**Implements**: [ITimeAggregateAttribute](#itimeaggregateattribute), [IUserAttribute](#iuserattribute)
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | [UserAttributeType](#userattributetype) | 'TransportTimeAggregate' |
-| period | [TimePeriod](#timeperiod) |  |
-| duration | Float |  |
-| mode | [TransportMode](#transportmode) |  |
-
-
-### TransportTrajectory
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'TransportTrajectory' |
-| waypoints | [TrajectoryWaypoint](#trajectorywaypoint) |  |
-| encoded | String | An encoded list of trajectory waypoints, [[lat,lon],[lat,lon]]. More info on polyline decoding: https://developers.google.com/maps/documentation/utilities/polylinealgorithm |
-
-
-### TreePredictionType
-**Kind**: ENUM
-
-
-### Trip
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-**Implements**: [IEvent](#ievent)
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | [EventType](#eventtype) | 'Trip' |
-| event_id | String |  |
-| user_id | String |  |
-| start | String |  |
-| end | String |  |
-| start_ts | [BigInt](#bigint) |  |
-| end_ts | [BigInt](#bigint) |  |
-| mode | String | Car, tram, walking, etc. |
-| analysis_type | [AnalysisType](#analysistype) | Type of processing applied on the trip. |
-| behavior_scores | [CarBehaviorScores](#carbehaviorscores) |  |
-| weather | [WeatherRange](#weatherrange) |  |
-
-
-### TripConnection
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-Access trips across all users.
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'TripConnection' |
-| slice | [Trip](#trip) | The individual trips. Provide the right paging parameters to slice your result set. |
-
-
-### TurnBehaviorAnnotation
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-**Implements**: [ITransportBehaviorAnnotation](#itransportbehaviorannotation)
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | [TransportBehaviorAnnotationType](#transportbehaviorannotationtype) | 'TurnBehaviorAnnotation' |
-| start | String |  |
-| end | String |  |
-| maneuver | [TurnBehaviorAnnotationManeuver](#turnbehaviorannotationmaneuver) |  |
-| duration | Int |  |
-| path | [BehaviorAnnotationPathWaypoint](#behaviorannotationpathwaypoint) |  |
-| magnitude | Float | The centripetal g-force you experience during turns, measured in (0.2*m)/s². Taking a turn at 60km/h will result in a higher magnitude compared to the same turn at 30 km/h |
-
-
-### TurnBehaviorAnnotationManeuver
-**Kind**: ENUM
-
-
-### User
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-**Implements**: [IUser](#iuser)
-An anonymous SDK user that authenticates using the token strategy, can push data and can query only it's own data.
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | [UserType](#usertype) | 'User' |
-| install_id | String | The unique identifier for active install id. |
-| external_id | String | The external id that was linked to this person. |
-| id | String | The unique identifier for this user. |
-| can_login | Boolean |  |
-| created_at | String | The time when this user was created, ISO8601.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| sdk | [UserSdkSettings](#usersdksettings) |  |
-| application_id | String | The ID of the Application this user relates to. |
-| application | [Application](#application) | The Application this user relates to. |
-| custom_event_history | [CustomEvent](#customevent) | Custom Event History |
-| event_history | [IEvent](#ievent) | An unordered list of events we have detected for this user. |
-| car_behavior | [UserCarBehavior](#usercarbehavior) | The user car behavior aggregated over the last 9 weeks. |
-| transport_heatmaps | [TransportHeatmaps](#transportheatmaps) | The aggregated transport heatmaps calculated over time. |
-| metadata | [JSON](#json) | All custom set metadata properties on this user. This is a JSON object with key->value pairs. |
-| device | [DeviceInfo](#deviceinfo) | The last known active tracking device metadata |
-| active_moments | [IMoment](#imoment) | An unordered list of moments that are ongoing from the point of view of the platform. |
-| moment_history | [IMoment](#imoment) | An unordered list of moments we have detected for this user. |
-| semantic_time | [UserSemanticTime](#usersemantictime) | The user's semantic time averaged over time. |
-| anomaly_history | [IAnomaly](#ianomaly) |  |
-| segments | [ISegment](#isegment) | An unordered list of segments that are detected for this user. |
-| location_clusters | [LocationCluster](#locationcluster) | Locations this user has been stationary at and the features we have learned about those locations (significance, point of interest, ...) |
-| location | [Waypoint](#waypoint) | The last known location we have for this user. |
-| health | [UserHealth](#userhealth) | The historical health attributes. |
-| attributes | [IUserAttribute](#iuserattribute) |  |
-| predictions | [IPrediction](#iprediction) | Event/Moment predictions for this user |
-| prediction_tree | [PredictionTree](#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. |
-| feedback_history | [IFeedback](#ifeedback) | Feedback on this user |
-
-
-### UserAccountRole
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'UserAccountRole' |
-| user_id | String |  |
-| account_id | String |  |
-| role | String |  |
-| account | [Account](#account) |  |
-
-
-### UserAttributeType
-**Kind**: ENUM
-
-
-### UserCarBehavior
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-The historical car behavior profile for a user.
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'UserCarBehavior' |
-| scores | [UserCarBehaviorScores](#usercarbehaviorscores) |  |
-| features | [UserCarBehaviorFeatures](#usercarbehaviorfeatures) |  |
-
-
-### UserCarBehaviorFeatures
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'UserCarBehaviorFeatures' |
-| l7d | [TimeWindowUserCarBehaviorFeatures](#timewindowusercarbehaviorfeatures) | Recent features based on the transports we have analyzed in the last 7 days of data. |
-| past | [TimeWindowUserCarBehaviorFeatures](#timewindowusercarbehaviorfeatures) | Historical features based on all transports we have available, excluding the last 7 days of data. |
-
-
-### UserCarBehaviorScores
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'UserCarBehaviorScores' |
-| l7d | [ZoneCarBehaviorScores](#zonecarbehaviorscores) | Recent scores based on the transports we have analyzed in the last 7 days of data. |
-| past | [ZoneCarBehaviorScores](#zonecarbehaviorscores) | Historical scores based on all transports we have analysed excluding the last 7 days of data. |
-
-
-### UserHealth
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-The historical health attributes.
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'UserHealth' |
-| scores | [UserHealthScores](#userhealthscores) |  |
-
-
-### UserHealthScores
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-This scoring system is used to track an individuals health.
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'UserHealthScores' |
-| activity | [FloatAttribute](#floatattribute) | Score that measures a general overview of user health. It takes into account sport duration, walking/biking distance & walking/biking speed. A higher score means you are more active in regard to physical activity and exercise. |
-| mobility | [FloatAttribute](#floatattribute) | Score that measures a general overview of user mobility, the higher the score, the more ability to pursue various activities in life. It combines the locations visited frequency, distance travelled and user action radius. It is independent of transport mode. |
-| work_social | [FloatAttribute](#floatattribute) | Score that measures a general overview of user's social activities. It is calculated considering two components: the social score and work score. It takes into account how much time the user spends in locations, as well as how many locations the user visits. It is a measure of the number user social relationships together with their duration. It doesn't count user's home and work location, but remote work locations are considered. The higher the score, the more and the longer social interactions the user has. |
-
-
-### UserRole
-**Kind**: ENUM
-
-The roles a user can have, both on accounts and apps.
-
-### UserSdkSettings
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-User overrides that are used by the SDK configuration. This is not the SDK configuration model.
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'UserSdkSettings' |
-| flavor | [SdkFlavor](#sdkflavor) | If null, app-wide settings or defaults are active. |
-| killswitch_action | String |  |
-| debug_logging | String | If null, app-wide settings or defaults are active. |
-
-
-### UserSemanticTime
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'UserSemanticTime' |
-| all_days | [SemanticTimeAggregate](#semantictimeaggregate) | Historical semantic time averaged for all days over all data. |
-
-
-### UserType
-**Kind**: ENUM
-
-
-### UsersConnection
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-Access the user nodes
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'UsersConnection' |
-| slice | [IUser](#iuser) | The individual user nodes. Provide the right paging parameters to slice your response data. By default a slice holds 100 users, which you can increase to 1000. |
-| paging | [Paging](#paging) |  |
-
-
-### Waypoint
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'Waypoint' |
-| latitude | Float |  |
-| longitude | Float |  |
-| timestamp | String |  |
-| accuracy | Int | The estimated horizontal accuracy of this location, radial, in meters. |
-
-
-### Weather
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| summary | String |  |
-| icon | String |  |
-| precipIntensity | Float |  |
-| precipProbability | Float |  |
-| temperature | Float |  |
-| apparentTemperature | Float |  |
-| dewPoint | Float |  |
-| humidity | Float |  |
-| pressure | Float |  |
-| windSpeed | Float |  |
-| windGust | Float |  |
-| windBearing | Float |  |
-| cloudCover | Float |  |
-| uvIndex | Float |  |
-| visibility | Float |  |
-| ozone | Float |  |
-
-
-### WeatherRange
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| start | [Weather](#weather) | Weather data at the start of this event. |
-| end | [Weather](#weather) | Weather data at the end of this event. Could be the same as the start if the event was short-lived. |
-
-
-### WeightedLocation
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'WeightedLocation' |
-| latitude | Float |  |
-| longitude | Float |  |
-| weight | Float |  |
-
-
-### WorkingTimeAggregate
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-**Implements**: [ITimeAggregateAttribute](#itimeaggregateattribute), [IUserAttribute](#iuserattribute)
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | [UserAttributeType](#userattributetype) | 'WorkingTimeAggregate' |
-| period | [TimePeriod](#timeperiod) |  |
-| duration | Float |  |
-| whereabouts | [WorkingTimeWhereabouts](#workingtimewhereabouts) |  |
-
-
-### WorkingTimeWhereabouts
-**Kind**: ENUM
-
-
-### ZoneCarBehaviorScores
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
-
-Car transport behavior scores by road type
-
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'ZoneCarBehaviorScores' |
-| all | [CarBehaviorScores](#carbehaviorscores) | Scores based on aggregated features across all zones. |
-| total | [CarBehaviorScores](#carbehaviorscores) | Scores based on the average of features per zone. |
-| motorway | [CarBehaviorScores](#carbehaviorscores) | Scores based on features in the motorway zones. |
-| city | [CarBehaviorScores](#carbehaviorscores) | Scores based on features in non-motorway city zones. |
-| non_city | [CarBehaviorScores](#carbehaviorscores) | Scores based on features in non-motorway non-city zones. |
+| slice | [Subscription](data-reference.md#subscription) | The individual subscriptions. Provide the right paging parameters to slice your result set. |
 
