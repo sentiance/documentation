@@ -1294,3 +1294,455 @@ Access the stream subscriptions
 | :--- | :--- | :--- |
 | type | String | 'SubscriptionsConnection' |
 | slice | [Subscription](#subscription) | The individual subscriptions. Provide the right paging parameters to slice your result set. |
+
+
+
+### TimePeriod
+**Kind**: ENUM
+
+### TimeWindowTransportHeatmaps
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'TimeWindowTransportHeatmaps' |
+| car | [TransportModeHeatmaps](#transportmodeheatmaps) |  |
+
+
+### TimeWindowUserCarBehaviorFeatures
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'TimeWindowUserCarBehaviorFeatures' |
+| phone_handling | Float | The average number of milliseconds this user is using his phone per hour in transport, during this time window. |
+| distance | Int | Aggregated distance measured in meter for all car transports during this time window. |
+
+
+### TrajectoryWaypoint
+**Kind**: OBJECT
+A single waypoint in the augmented trajectory.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'TrajectoryWaypoint' |
+| latitude | Float |  |
+| longitude | Float |  |
+| timestamp | String |  |
+| road_type | String |  |
+| speed | Float | The average speed between this waypoint and the next waypoint, in km/h. |
+| speed_v2 | Float | The average speed between this waypoint and the next waypoint, in km/h. The difference with speed is that it has an improved estimation algorithm. |
+| distance | Float | The distance in meter between the current waypoint and the next waypoint. |
+| speed_limit | Float | Speed limit measured at this point in the trajectory. As is provided by our mapping data partners. |
+
+
+### Transport
+**Kind**: OBJECT
+**Implements**: [IEvent](#ievent)
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | [EventType](#eventtype) | 'Transport' |
+| event_id | String |  |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.
+Example:
+2015-05-28T14:37:14.839+00:00 |
+| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.
+Example:
+2015-05-28T14:37:14.839+00:00 |
+| start_ts | [BigInt](#bigint) |  |
+| end_ts | [BigInt](#bigint) |  |
+| analysis_type | [AnalysisType](#analysistype) | How well this event is analyzed by the platform, this value will update over time.
+Possible values:
+preliminary, indepth, processed. |
+| mode | [TransportMode](#transportmode) | The transport mode that was identified for this transport.  |
+| distance | Int |  |
+| occupant_role | [TransportOccupantRole](#transportoccupantrole) |  |
+| waypoints | [Waypoint](#waypoint) |  |
+| trajectory | [TransportTrajectory](#transporttrajectory) |  |
+| behavior_scores | [TransportBehaviorScores](#transportbehaviorscores) |  |
+| behavior_annotations | [ITransportBehaviorAnnotation](#itransportbehaviorannotation) |  |
+| behavior_features | [TransportBehaviorFeatures](#transportbehaviorfeatures) |  |
+| weather | [WeatherRange](#weatherrange) | Weather data associated with this event. |
+
+
+### TransportBehaviorAnnotationType
+**Kind**: ENUM
+
+### TransportBehaviorFeatures
+**Kind**: UNION
+**Possible types**: [CarBehaviorFeatures](#carbehaviorfeatures)
+
+### TransportBehaviorScores
+**Kind**: UNION
+**Possible types**: [CarBehaviorScores](#carbehaviorscores)
+The transport behavior scores we have detected during a transport. These scores are only available when the full trip is processed.
+
+### TransportFeedback
+**Kind**: OBJECT
+**Implements**: [IFeedback](#ifeedback), [IEventFeedback](#ieventfeedback)
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | [FeedbackType](#feedbacktype) | 'TransportFeedback' |
+| end | String | End time the feedback relates to, sourced by the event, moment or user-provided. |
+| created | String | Time when this feedback entry was created. |
+| projection_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
+| event_feedback | [EventFeedback](#eventfeedback) |  |
+| transport | [Transport](#transport) | The Transport this feedback refers to. |
+
+
+### TransportHeatmaps
+**Kind**: OBJECT
+Historically aggregated transport heatmaps.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'TransportHeatmaps' |
+| l30d | [TimeWindowTransportHeatmaps](#timewindowtransportheatmaps) | Transport heatmaps that are calculated using the last . |
+
+
+### TransportIntervalPrediction
+**Kind**: OBJECT
+**Implements**: [IPrediction](#iprediction), [IEventPrediction](#ieventprediction), [IIntervalPrediction](#iintervalprediction)
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | [PredictionType](#predictiontype) | 'TransportIntervalPrediction' |
+| probability | Float |  |
+| event_type | [EventType](#eventtype) |  |
+| start_interval | [PredictionInterval](#predictioninterval) |  |
+| mode | [TransportMode](#transportmode) |  |
+
+
+### TransportMode
+**Kind**: ENUM
+The transport modes the platform supports.
+
+### TransportModeCategory
+**Kind**: ENUM
+
+### TransportModeHeatmaps
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'TransportModeHeatmaps' |
+| passed | [WeightedLocation](#weightedlocation) | An aggregate heatmap based on the amounts of times you have passed the coordinates during transports. |
+
+
+### TransportOccupantRole
+**Kind**: ENUM
+
+### TransportPrediction
+**Kind**: OBJECT
+**Implements**: [IBranchEvent](#ibranchevent)
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| start | String | Predicted start time of the event. |
+| end | String | Predicted end time of the event. |
+| probability | Float | The probability of this prediction occurring. |
+| type | [TreePredictionType](#treepredictiontype) | 'TransportPrediction' |
+| mode | String |  |
+
+
+### TransportTimeAggregate
+**Kind**: OBJECT
+**Implements**: [ITimeAggregateAttribute](#itimeaggregateattribute), [IUserAttribute](#iuserattribute)
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | [UserAttributeType](#userattributetype) | 'TransportTimeAggregate' |
+| period | [TimePeriod](#timeperiod) |  |
+| duration | Float |  |
+| mode | [TransportMode](#transportmode) |  |
+
+
+### TransportTrajectory
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'TransportTrajectory' |
+| waypoints | [TrajectoryWaypoint](#trajectorywaypoint) |  |
+| encoded | String | An encoded list of trajectory waypoints, [[lat,lon],[lat,lon]]. More info on polyline decoding: https://developers.google.com/maps/documentation/utilities/polylinealgorithm |
+
+
+### TreePredictionType
+**Kind**: ENUM
+
+### Trip
+**Kind**: OBJECT
+**Implements**: [IEvent](#ievent)
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | [EventType](#eventtype) | 'Trip' |
+| event_id | String |  |
+| user_id | String |  |
+| start | String |  |
+| end | String |  |
+| start_ts | [BigInt](#bigint) |  |
+| end_ts | [BigInt](#bigint) |  |
+| mode | String | Car, tram, walking, etc. |
+| analysis_type | [AnalysisType](#analysistype) | Type of processing applied on the trip. |
+| behavior_scores | [CarBehaviorScores](#carbehaviorscores) |  |
+| weather | [WeatherRange](#weatherrange) |  |
+
+
+### TripConnection
+**Kind**: OBJECT
+Access trips across all users.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'TripConnection' |
+| slice | [Trip](#trip) | The individual trips. Provide the right paging parameters to slice your result set. |
+
+
+### TurnBehaviorAnnotation
+**Kind**: OBJECT
+**Implements**: [ITransportBehaviorAnnotation](#itransportbehaviorannotation)
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | [TransportBehaviorAnnotationType](#transportbehaviorannotationtype) | 'TurnBehaviorAnnotation' |
+| start | String |  |
+| end | String |  |
+| maneuver | [TurnBehaviorAnnotationManeuver](#turnbehaviorannotationmaneuver) |  |
+| duration | Int |  |
+| path | [BehaviorAnnotationPathWaypoint](#behaviorannotationpathwaypoint) |  |
+| magnitude | Float | The centripetal g-force you experience during turns, measured in (0.2*m)/s². Taking a turn at 60km/h will result in a higher magnitude compared to the same turn at 30 km/h |
+
+
+### TurnBehaviorAnnotationManeuver
+**Kind**: ENUM
+
+### User
+**Kind**: OBJECT
+**Implements**: [IUser](#iuser)
+An anonymous SDK user that authenticates using the token strategy, can push data and can query only it's own data.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | [UserType](#usertype) | 'User' |
+| install_id | String | The unique identifier for active install id. |
+| external_id | String | The external id that was linked to this person. |
+| id | String | The unique identifier for this user. |
+| can_login | Boolean |  |
+| created_at | String | The time when this user was created, ISO8601.
+Example:
+2015-05-28T14:37:14.839+00:00 |
+| sdk | [UserSdkSettings](#usersdksettings) |  |
+| application_id | String | The ID of the Application this user relates to. |
+| application | [Application](#application) | The Application this user relates to. |
+| custom_event_history | [CustomEvent](#customevent) | Custom Event History |
+| event_history | [IEvent](#ievent) | An unordered list of events we have detected for this user. |
+| car_behavior | [UserCarBehavior](#usercarbehavior) | The user car behavior aggregated over the last 9 weeks. |
+| transport_heatmaps | [TransportHeatmaps](#transportheatmaps) | The aggregated transport heatmaps calculated over time. |
+| metadata | [JSON](#json) | All custom set metadata properties on this user. This is a JSON object with key->value pairs. |
+| device | [DeviceInfo](#deviceinfo) | The last known active tracking device metadata |
+| active_moments | [IMoment](#imoment) | An unordered list of moments that are ongoing from the point of view of the platform. |
+| moment_history | [IMoment](#imoment) | An unordered list of moments we have detected for this user. |
+| semantic_time | [UserSemanticTime](#usersemantictime) | The user's semantic time averaged over time. |
+| anomaly_history | [IAnomaly](#ianomaly) |  |
+| segments | [ISegment](#isegment) | An unordered list of segments that are detected for this user. |
+| location_clusters | [LocationCluster](#locationcluster) | Locations this user has been stationary at and the features we have learned about those locations (significance, point of interest, ...) |
+| location | [Waypoint](#waypoint) | The last known location we have for this user. |
+| health | [UserHealth](#userhealth) | The historical health attributes. |
+| attributes | [IUserAttribute](#iuserattribute) |  |
+| predictions | [IPrediction](#iprediction) | Event/Moment predictions for this user |
+| prediction_tree | [PredictionTree](#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. |
+| feedback_history | [IFeedback](#ifeedback) | Feedback on this user |
+
+
+### UserAccountRole
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'UserAccountRole' |
+| user_id | String |  |
+| account_id | String |  |
+| role | String |  |
+| account | [Account](#account) |  |
+
+
+### UserAttributeType
+**Kind**: ENUM
+
+### UserCarBehavior
+**Kind**: OBJECT
+The historical car behavior profile for a user.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'UserCarBehavior' |
+| scores | [UserCarBehaviorScores](#usercarbehaviorscores) |  |
+| features | [UserCarBehaviorFeatures](#usercarbehaviorfeatures) |  |
+
+
+### UserCarBehaviorFeatures
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'UserCarBehaviorFeatures' |
+| l7d | [TimeWindowUserCarBehaviorFeatures](#timewindowusercarbehaviorfeatures) | Recent features based on the transports we have analyzed in the last 7 days of data. |
+| past | [TimeWindowUserCarBehaviorFeatures](#timewindowusercarbehaviorfeatures) | Historical features based on all transports we have available, excluding the last 7 days of data. |
+
+
+### UserCarBehaviorScores
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'UserCarBehaviorScores' |
+| l7d | [ZoneCarBehaviorScores](#zonecarbehaviorscores) | Recent scores based on the transports we have analyzed in the last 7 days of data. |
+| past | [ZoneCarBehaviorScores](#zonecarbehaviorscores) | Historical scores based on all transports we have analysed excluding the last 7 days of data. |
+
+
+### UserHealth
+**Kind**: OBJECT
+The historical health attributes.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'UserHealth' |
+| scores | [UserHealthScores](#userhealthscores) |  |
+
+
+### UserHealthScores
+**Kind**: OBJECT
+This scoring system is used to track an individuals health.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'UserHealthScores' |
+| activity | [FloatAttribute](#floatattribute) | Score that measures a general overview of user health. It takes into account sport duration, walking/biking distance & walking/biking speed. A higher score means you are more active in regard to physical activity and exercise. |
+| mobility | [FloatAttribute](#floatattribute) | Score that measures a general overview of user mobility, the higher the score, the more ability to pursue various activities in life. It combines the locations visited frequency, distance travelled and user action radius. It is independent of transport mode. |
+| work_social | [FloatAttribute](#floatattribute) | Score that measures a general overview of user's social activities. It is calculated considering two components: the social score and work score. It takes into account how much time the user spends in locations, as well as how many locations the user visits. It is a measure of the number user social relationships together with their duration. It doesn't count user's home and work location, but remote work locations are considered. The higher the score, the more and the longer social interactions the user has. |
+
+
+### UserRole
+**Kind**: ENUM
+The roles a user can have, both on accounts and apps.
+
+### UserSdkSettings
+**Kind**: OBJECT
+User overrides that are used by the SDK configuration. This is not the SDK configuration model.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'UserSdkSettings' |
+| flavor | [SdkFlavor](#sdkflavor) | If null, app-wide settings or defaults are active. |
+| killswitch_action | String |  |
+| debug_logging | String | If null, app-wide settings or defaults are active. |
+
+
+### UserSemanticTime
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'UserSemanticTime' |
+| all_days | [SemanticTimeAggregate](#semantictimeaggregate) | Historical semantic time averaged for all days over all data. |
+
+
+### UserType
+**Kind**: ENUM
+
+### UsersConnection
+**Kind**: OBJECT
+Access the user nodes
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'UsersConnection' |
+| slice | [IUser](#iuser) | The individual user nodes. Provide the right paging parameters to slice your response data. By default a slice holds 100 users, which you can increase to 1000. |
+| paging | [Paging](#paging) |  |
+
+
+### Waypoint
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'Waypoint' |
+| latitude | Float |  |
+| longitude | Float |  |
+| timestamp | String |  |
+| accuracy | Int | The estimated horizontal accuracy of this location, radial, in meters. |
+
+
+### Weather
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| summary | String |  |
+| icon | String |  |
+| precipIntensity | Float |  |
+| precipProbability | Float |  |
+| temperature | Float |  |
+| apparentTemperature | Float |  |
+| dewPoint | Float |  |
+| humidity | Float |  |
+| pressure | Float |  |
+| windSpeed | Float |  |
+| windGust | Float |  |
+| windBearing | Float |  |
+| cloudCover | Float |  |
+| uvIndex | Float |  |
+| visibility | Float |  |
+| ozone | Float |  |
+
+
+### WeatherRange
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| start | [Weather](#weather) | Weather data at the start of this event. |
+| end | [Weather](#weather) | Weather data at the end of this event. Could be the same as the start if the event was short-lived. |
+
+
+### WeightedLocation
+**Kind**: OBJECT
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'WeightedLocation' |
+| latitude | Float |  |
+| longitude | Float |  |
+| weight | Float |  |
+
+
+### WorkingTimeAggregate
+**Kind**: OBJECT
+**Implements**: [ITimeAggregateAttribute](#itimeaggregateattribute), [IUserAttribute](#iuserattribute)
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | [UserAttributeType](#userattributetype) | 'WorkingTimeAggregate' |
+| period | [TimePeriod](#timeperiod) |  |
+| duration | Float |  |
+| whereabouts | [WorkingTimeWhereabouts](#workingtimewhereabouts) |  |
+
+
+### WorkingTimeWhereabouts
+**Kind**: ENUM
+
+### ZoneCarBehaviorScores
+**Kind**: OBJECT
+Car transport behavior scores by road type
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| type | String | 'ZoneCarBehaviorScores' |
+| all | [CarBehaviorScores](#carbehaviorscores) | Scores based on aggregated features across all zones. |
+| total | [CarBehaviorScores](#carbehaviorscores) | Scores based on the average of features per zone. |
+| motorway | [CarBehaviorScores](#carbehaviorscores) | Scores based on features in the motorway zones. |
+| city | [CarBehaviorScores](#carbehaviorscores) | Scores based on features in non-motorway city zones. |
+| non_city | [CarBehaviorScores](#carbehaviorscores) | Scores based on features in non-motorway non-city zones. |
