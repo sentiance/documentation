@@ -95,9 +95,14 @@
 
 * [Authentication and Authorization](backend/authentication-and-authorization.md)
 * [GraphQL](backend/graphql.md)
-* [Data Reference](backend/data-reference.md)
 * [REST API Reference](backend/rest-api.md)
-* [Data Explorer](https://developers.sentiance.com/docs/gql/explorer)
+* [Data Reference](backend/data-reference-1/README.md)
+  * [Data Reference A-Z](backend/data-reference-1/data-reference-a-z.md)
+
+## Data Explorer
+
+* [Global \(EU\)](https://insights.sentiance.com/graphql)
+* [US](https://insights.d4.sentiance.com/graphql)
 
 ## Guide
 
