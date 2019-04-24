@@ -96,8 +96,10 @@
 * [Authentication and Authorization](backend/authentication-and-authorization.md)
 * [GraphQL](backend/graphql.md)
 * [REST API Reference](backend/rest-api.md)
-* [Data Reference](backend/data-reference-1/README.md)
-  * [Data Reference A-Z](backend/data-reference-1/data-reference-a-z.md)
+* [Data Reference](backend/data-reference/README.md)
+  * [Data Reference A-G](backend/data-reference/data-reference-a-g.md)
+  * [Data Reference H-P](backend/data-reference/data-reference-h-p.md)
+  * [Data Reference Q-Z](backend/data-reference/data-reference-q-z.md)
 
 ## Data Explorer
 
