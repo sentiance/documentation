@@ -15,7 +15,7 @@ Learn more about Meta-Users [here](../../appendix/meta-users.md).
 ### `link()`
 
 > ```java
-> boolean link()
+> boolean link(String installId)
 > ```
 >
 > This method will be called during the first ever SDK initialization, and will execute on a background thread.
