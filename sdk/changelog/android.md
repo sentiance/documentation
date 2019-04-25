@@ -1,5 +1,20 @@
 # Android
 
+## 4.8.0 - 2019-04-24
+
+#### Added
+
+* Batched payload submission.
+* Voip call detection.
+
+#### Changed
+
+* Improved trip detection.
+
+#### Fixed
+
+* Screen on/off detection during trips.
+
 ## 4.7.1 - 2019-04-03
 
 #### Fixed
