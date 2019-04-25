@@ -1,36 +1,5 @@
 # SdkConfig
 
-|  |  |
-| :--- | :--- |
-| String | [getAppId](./#getappid) \(\) |
-| String | [getBaseURL](./#getbaseurl) \(\) |
-| [MetaUserLinker](../metauserlinker.md)  | [getMetaUserLinker](./#getmetauserlinker) \(\) |
-| Notification  | [getNotification](./#getnotification) \(\) |
-| int  | [getNotificationId](./#getnotificationid) \(\) |
-| [OnSdkStatusUpdateHandler](../onsdkstatusupdatehandler.md)  | [getOnSdkStatusUpdateHandler](./#getonsdkstatusupdatehandler) \(\) |
-| String  | [getSecret](./#getsecret) \(\) |
-| boolean  | [isTriggeredTripsEnabled](./#istriggeredtripsenabled) \(\) |
-
-### `getBaseURL()`
-
-> ```java
-> String getBaseURL()
-> ```
->
-> Returns the Sentiance API URL.
-
-### `getMetaUserLinker()`
-
-> ```java
-> MetaUserLinker getMetaUserLinker()
-> ```
->
-> Returns the [`MetaUserLinker`](../metauserlinker.md) used by the SDK for meta-user linking.
->
-> Learn more about Meta-Users [here](../../../appendix/meta-users.md).
-
-### `getNotification()`
-
 The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secret when initializing the Sentiance SDK. This class uses the builder pattern to provide additional options and allow setting various callbacks and handlers.
 
 ## SdkConfig API
@@ -64,11 +33,21 @@ The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secr
 >
 > Returns the Sentiance API URL.
 
+### `getMetaUserLinker()`
+
+> ```java
+> MetaUserLinker getMetaUserLinker()
+> ```
+>
+> Returns the [`MetaUserLinker`](../metauserlinker.md) used during [MetaUser linking](../../../appendix/meta-users.md).
+
+### `getNotification()`
+
 > ```java
 > Notification getNotification()
 > ```
 >
-> Returns a [`Notification`](https://developer.android.com/reference/android/app/Notification) object used by the SDK when starting a foreground service.
+> Returns a [`Notification`](https://developer.android.com/reference/android/app/Notification) used by the SDK when starting a foreground service.
 
 ### `getNotificationId()`
 
