@@ -91,6 +91,12 @@
   * [Android](sdk/changelog/android.md)
   * [iOS](sdk/changelog/ios.md)
 
+## Library
+
+* [Segments](library/segments.md)
+* [Moments](library/moments.md)
+* [Events](library/events.md)
+
 ## Backend
 
 * [Authentication and Authorization](backend/authentication-and-authorization.md)
