@@ -111,6 +111,7 @@
 
 * [Global \(EU\)](https://insights.sentiance.com/graphql)
 * [US](https://insights.d4.sentiance.com/graphql)
+* [Australia](https://insights.e6.sentiance.com/graphql)
 
 ## Guide
 
