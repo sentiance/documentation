@@ -93,9 +93,9 @@
 
 ## Library
 
-* [Segments](library/segments.md)
-* [Moments](library/moments.md)
 * [Events](library/events.md)
+* [Moments](library/moments.md)
+* [Segments](library/segments.md)
 
 ## Backend
 

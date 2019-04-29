@@ -1,10 +1,10 @@
 # Moments
 
-Moments bring meaning and context to what a user is doing. You can use these contextual moments to build a better user experience. Multiple moments can be active in parallel.
+Moments bring meaning and context to what a user is doing. You can use these contextual moments to build a better user experience. Multiple moments can be active at the same time.
 
 ### Example \(moments highlighted\)
 
-After a **long commute** and enjoying his **morning routine**, the user is currently **at work**. His **morning semantic time** is about to end. We are quite confident he will go out to lunch in one hour and afterwards will continue **work**for 5 hours before **commuting home** by bus.
+After a **long commute** and enjoying his **morning routine**, the user is currently **at work**. His **morning semantic time** is about to end. We are quite confident he will go out to lunch in one hour and afterwards will continue **work** for 5 hours before **commuting home** by bus.
 
 ## About to routine <a id="moment-about_to_routine"></a>
 

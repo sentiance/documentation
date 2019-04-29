@@ -1,8 +1,6 @@
 # Events
 
-Situational events describe what a user is doing.
-
-Events are derived from time, location and motion data.  
+Situational events describe what a user is doing. Events are derived from time, location and motion data.  
 They are available as a timeseries of stationaries and transports with duration.
 
 Is the user in transport? In a car? Or a train? Walking? What route?  
@@ -10,34 +8,35 @@ Is the user stationary? What store or business is at that location?
 Is the location a home or work location?  
 
 
-### Stationary events
+### Stationary Events
 
-When a user is a few minutes stationary at a certain location, a stationary event will be available.
+When a user is stationary for a few minutes at a certain location, a Stationary Event will be available.
 
-This stationary event is enriched with:
+This Stationary Event is enriched with:
 
-* The significance what this place means to the user based on historical data. Values: home, work, regular, nonregular, poi, new.
+* The significance of what this place means to the user based on historical data. Values: home, work, regular, non-regular, poi \(point of interest\), new.
 * Place/venue information like name and categories
 * Basic address information like country, city and city\_type
 
 #### Example
 
-[Lookup the Stationary event in the data model reference](https://developers.sentiance.com/docs/data-model#Stationary)
+[Lookup the Stationary event in the data model reference](../backend/data-reference/data-reference-q-z.md#stationary).
 
 ```text
 {
   "type": "Stationary",
   "start": "2017-02-22T08:34:50.785+01:00",
   "end": "2017-02-22T16:24:55.244+01:00",
-  "analysis_type": "processed",
+  "event_id": "6dbc1960-03ef-429a-b6f5-befb7607ae46",
   "latitude": 51.19666,
   "longitude": 4.40816,
   "location": {
     "significance": "work",
     "place": {
       "name": "Sentiance HQ",
-      "categories": [
+      "category_hierarchy": [
         "office",
+        "private",
         "company"
       ]
     }
@@ -50,13 +49,13 @@ This stationary event is enriched with:
 }
 ```
 
-### Transport events
+### Transport Events
 
-When a user is not stationary at a location, the user is in Transport. For each of these transports a Transport event will be available.
+When a user is not stationary at a location, the user is in Transport. For each of these transports a Transport Event will be available.
 
-Additional data derived from the sensor data: distance, transport mode, advanced map-matching is done to build an accurate trajectory and driving behavior analysis.
+Additional data derived from sensor data--distance, transport mode, advanced map-matching--is done to build an accurate trajectory and driving behavior analysis.
 
-Transport modes: car, walking, biking, train, bus, tram, flight
+Transport Modes can include car, walking, biking, train, bus, tram, flight, etc. \(check the full list [here](../backend/data-reference/data-reference-q-z.md#transportmode)\).
 
 Depending on SDK configuration, additional features are derived from the sensor data.   
 Only available in full SDK configuration:
@@ -67,14 +66,14 @@ Only available in full SDK configuration:
 
 #### Example
 
-[Lookup the Transport event in the data model reference](https://developers.sentiance.com/docs/data-model#Transport)
+[Lookup the Transport event in the data model reference](https://developers.sentiance.com/docs/data-model#Transport).
 
 ```text
 {
   "type": "Transport",
   "start": "2017-02-19T15:13:00+01:00",
   "end": "2017-02-19T17:05:00+01:00",
-  "analysis_type": "processed",
+  "event_id": "830a3534edca6c0eb24faa19f0c137dc7877592384409de43a30586643272f65",
   "mode": "car",
   "distance": 158773,
   "waypoints": [
@@ -89,7 +88,7 @@ Only available in full SDK configuration:
   ],
   "trajectory": {
     "type": "TransportTrajectory",
-    "encoded": "quo~Hmaw\\ACW{... polyline encoding",
+    "encoded": "quo~Hmaw\\ACW{... polyline encoding}",
     "waypoints": [
       {
         "type": "TrajectoryWaypoint",

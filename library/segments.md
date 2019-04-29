@@ -1,10 +1,10 @@
 # Segments
 
-Segments are actionable properties/tags we learn about users their behavior over time.
+Segments are actionable properties/tags we learn about users from their behavior, over time.
 
 They show what kind of lifestyle users have, if and how they go to work, in what geographical areas they live, what kind of drivers they are, if they go out a lot and so on.
 
-You use these segments to build a better user experience.
+You can use these segments to build a better user experience.
 
 ### Example \(segments highlighted\)
 
