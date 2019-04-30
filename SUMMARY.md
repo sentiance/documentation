@@ -1,6 +1,6 @@
 # Table of contents
 
-* [What is Sentiance Platform?](README.md)
+* [What is the Sentiance Platform?](README.md)
 
 ## SDK
 

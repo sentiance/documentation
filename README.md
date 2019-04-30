@@ -1,4 +1,4 @@
-# What is Sentiance Platform?
+# What is the Sentiance Platform?
 
 ## What is Sentiance Platform?
 
