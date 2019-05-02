@@ -86,7 +86,7 @@ RESPONSE
 
 ## Examples
 
-Some examples of various GQL queries with example response are presented here. With GraphQL you can fetch as much or as little as you wish, and these 
+Some examples of various GQL queries with example response are presented here. With GraphQL you can fetch as much or as little as you wish. 
 
 ### Moment Definitions
 

@@ -324,7 +324,7 @@ Timeline Event by Start Time
 {% endapi-method-summary %}
 
 {% api-method-description %}
-**Note: This has been deprecated in favour of Event ID based retrieval.**  
+**Note: This has been deprecated in favour of EventID based retrieval.**  
 Returns a single Event corresponding to the start time of the event.
 {% endapi-method-description %}
 
@@ -400,7 +400,7 @@ Trajectories by Start Time
 {% endapi-method-summary %}
 
 {% api-method-description %}
-**Note: This has been deprecated in favour of Event ID based retrieval. Check below.**
+**Note: This has been deprecated in favor of EventID based retrieval. Check below.**
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -478,7 +478,7 @@ Behavior Scores by Start Time
 {% endapi-method-summary %}
 
 {% api-method-description %}
-**Note: This has been deprecated in favour of Event ID based retrieval. Check below.**
+**Note: This has been deprecated in favor of EventID based retrieval. Check below.**
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -535,7 +535,7 @@ Behavior Annotations by Start Time
 {% endapi-method-summary %}
 
 {% api-method-description %}
-**Note: This has been deprecated in favour of Event ID based retrieval. Check below.**
+**Note: This has been deprecated in favor of EventID based retrieval. Check below.**
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -1275,8 +1275,8 @@ Meta User Link
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Used to link an Install ID to your system's User ID. The JSON body should contain a single parameter as described below.  
-Check out the guide for further details on how Meta Users work and how it can benefit you.
+Used to link an Install ID to your system's UserID. The JSON body should contain a single parameter as described below.  
+Check out the guide for further details on how User Linking work and how it can benefit you.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -1289,7 +1289,7 @@ The ID of the user returned by the SDK into the Linker's callback function.
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-Unlike other endpoints, which can be called with both an user token and an app token, this endpoint can ONLY be called with an app token. User tokens will be rejected.
+Unlike other endpoints, which can be called with both a user token and an app token, this endpoint can ONLY be called with an app token. User tokens will be rejected.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -1372,7 +1372,7 @@ The returned \`person\_id\` is linked to all installs for the same user, going f
 
 {% api-method method="get" host="" path="/v3/users/:user\_id/events/:event\_id" %}
 {% api-method-summary %}
-Timeline Event by Event Id
+Timeline Event by EventId
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -1443,11 +1443,11 @@ ID of the event being retrieved. This will be present in the **event\_id** field
 
 {% api-method method="get" host="" path="/v3/users/:user\_id/events/:event\_id/trajectory" %}
 {% api-method-summary %}
-Trajectories by Event ID
+Trajectories by EventID
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Retrieve Trajectories of a Transport by its Event ID.
+Retrieve Trajectories of a Transport by its EventID.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -1519,11 +1519,11 @@ ID of the Transport whose Trajectories are being retrieved.
 
 {% api-method method="get" host="" path="/v3/users/:user\_id/events/:event\_id/behavior\_scores" %}
 {% api-method-summary %}
-Behavior Scores by Event ID
+Behavior Scores by EventID
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Retrieve Behavior Scores of a Transport by its Event ID.
+Retrieve Behavior Scores of a Transport by its EventID.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -1574,7 +1574,7 @@ ID of the Transport whose Behavior Scores are being retrieved.
 
 {% api-method method="get" host="" path="/v3/users/:user\_id/events/:event\_id/behavior\_annotations" %}
 {% api-method-summary %}
-Behavior Annotations by Event ID
+Behavior Annotations by EventID
 {% endapi-method-summary %}
 
 {% api-method-description %}

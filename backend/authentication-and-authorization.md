@@ -2,7 +2,7 @@
 
 The Sentiance Backend speaks REST and GraphQL, and the authentication mechanisms for both of these are the same.
 
-An `authorization` header with content `Bearer <token>` authenticates and authorises your request. Based on what kind of token is supplied, the level of access is determined and could affect the functionality of various calls.
+An `authorization` header with content `Bearer <token>` authenticates and authorizes your request. Based on what kind of token is supplied, the level of access is determined and could affect the functionality of various calls.
 
 #### Example:
 
@@ -16,7 +16,7 @@ To understand the usage of a User Token, let us first talk about the the two typ
 
 ### **SDKUser**
 
-**SDKUsers** are created when the [SDK initializes with an App ID and App Secret](../sdk/getting-started/android-sdk/initialization.md). They only have a user ID and are only authenticated by their token. You can retrieve this token from an initialized SDK.
+**SDKUsers** are created when the [SDK initializes with an App ID and App Secret](../sdk/getting-started/android-sdk/initialization.md). They only have a userID and are only authenticated by their token. You can retrieve this token from an initialized SDK.
 
 ### ControlUsers
 
@@ -36,7 +36,7 @@ Common use-cases of this token include building internal dashboards to view with
 
 ## Authenticating With a Control User
 
-If you've signed up via our [Insights](https://insights.sentiance.com) dashboard or [Journeys](https://www.sentiance.com/demo/), you have a ControlUser to play around with. You can use the following steps to get a token for your user using your email/password pair. The token can then be used to call all GQL and [REST](rest-api.md) endpoints.
+If you've signed up via the [Insights](https://insights.sentiance.com) dashboard or [Journeys](https://www.sentiance.com/demo/), you have a ControlUser to play around with. You can use the following steps to get a token for your user using your email/password pair. The token can then be used to call all GQL and [REST](rest-api.md) endpoints.
 
 {% api-method method="post" host="https://api.sentiance.com" path="/auth/local" %}
 {% api-method-summary %}
