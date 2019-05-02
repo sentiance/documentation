@@ -41,7 +41,7 @@
 >
 > Sentiance assigns to each user a unique ID. You can link your app's user to the Sentiance user using meta-user linking. The linking step involves server-to-server communication, and is triggered by the SDK via this meta-user linking callback.
 >
-> Learn more about Meta-User linking [here](../../../appendix/meta-users.md).
+> Learn more about Meta-User linking [here](../../../appendix/user-linking.md).
 >
 > | Parameters |  |
 > | :--- | :--- |

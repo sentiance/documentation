@@ -1,6 +1,6 @@
 # 7. Starting Detections
 
-We recommend the SDK start to be done within `didFinishLaunchingWithOptions` of `AppDelegate` file to ensure that there are no unintended side effects.
+We recommend that SDK startup is done within `didFinishLaunchingWithOptions` of `AppDelegate` file to ensure that there are no unintended side effects.
 
 Call the `start` method from the `success` block of the [`initWithConfig`](../../api-reference/ios/sentsdk/#initwithconfig-success-failure) method:
 
@@ -16,7 +16,7 @@ Call the `start` method from the `success` block of the [`initWithConfig`](../..
 }];
 ```
 
-You can check the `status` to see whether starting has succeeded or not.
+You can check the `status` to see whether starting has succeeded correctly or not.
 
 Overall Code:
 

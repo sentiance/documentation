@@ -39,7 +39,7 @@ The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secr
 > MetaUserLinker getMetaUserLinker()
 > ```
 >
-> Returns the [`MetaUserLinker`](../metauserlinker.md) used during [MetaUser linking](../../../appendix/meta-users.md).
+> Returns the [`MetaUserLinker`](../metauserlinker.md) used during [MetaUser linking](../../../appendix/user-linking.md).
 
 ### `getNotification()`
 

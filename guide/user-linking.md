@@ -1,4 +1,4 @@
-# Meta Users
+# User Linking
 
 ## Motivation
 
@@ -32,7 +32,7 @@ Do not send us the linking request directly from a mobile device. This would req
 
 During initialization of a Meta User enabled app the SDK will call the `link(String)`method of your `MetaUserLinker` object from a background thread, passing to it the SDK **install ID**. In this method you must call your server and send it the **install ID**. Your server must then call ours, sending us the **install ID** and the **external User ID** \(this is the ID of the user on your system\).
 
-For details please check out: [SDK Config for Meta User](../sdk/appendix/meta-users.md#usage)
+For details please check out: [SDK Config for User Linking](../sdk/appendix/user-linking.md#usage)
 
 ## API
 

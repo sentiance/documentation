@@ -16,7 +16,7 @@
 
 ### Permission message
 
-Make sure you added value for the key `NSLocationAlwaysAndWhenInUseUsageDescription`in the **Info.plist**
+Make sure a value for the key `NSLocationAlwaysAndWhenInUseUsageDescription`has been added to the **Info.plist**
 
 ### Sentiance SDK import update
 
@@ -28,7 +28,7 @@ Make sure you have added `CoreData` library as linked framework in your Xcode pr
 
 ### User access token API change
 
-If you need to get user access token, please change callback to NSString as in example below:
+If you need to get the user access token, change the callback to NSString as in example below:
 
 ```objectivec
 NSString* userId = [[SENTSDK sharedInstance] getUserId];
@@ -39,7 +39,7 @@ NSString* userId = [[SENTSDK sharedInstance] getUserId];
 }];
 ```
 
-Replace code above with code below:
+Replace the code above with the code below:
 
 ```objectivec
 NSString* userId = [[SENTSDK sharedInstance] getUserId];

@@ -1,6 +1,6 @@
 # 1. Including the SDK
 
-## Adding Gradle Dependency
+## Adding the Gradle Dependency
 
 Add the Sentiance repository to your ****project \(top-level\) **build.gradle** file.
 

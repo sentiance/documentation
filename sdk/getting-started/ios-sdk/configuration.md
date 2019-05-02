@@ -12,11 +12,11 @@ In the `didFinishLaunchingWithOptions` method of your `AppDelegate`, create a [`
 }
 ```
 
-If you don't have an app ID and secret yet, read [these instructions](../#create-an-application).
+If you don't have an appID and secret key yet, read [these instructions](../#create-an-application).
 
 ## Optional: SDK Status update handler
 
-This is optional, but indispensable if you want to be kept up-to-date of changes to the [SDK status](../../api-reference/ios/sentsdk/sentsdkstatus.md).
+This step is optional, but indispensable if you want to be kept up-to-date of changes to the [SDK status](../../api-reference/ios/sentsdk/sentsdkstatus.md).
 
 ```text
 [conf setDidReceiveSdkStatusUpdate:^(SENTSDKStatus *status) {

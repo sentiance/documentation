@@ -2,7 +2,7 @@
 
 This interface is used with [`setMetaUserLinker(MetaUserLinker)`](sdkconfig/sdkconfig-builder.md#setmetauserlinker).
 
-Learn more about Meta-Users [here](../../appendix/meta-users.md).
+Learn more about Meta-Users [here](../../appendix/user-linking.md).
 
 ## MetaUserLinker API
 

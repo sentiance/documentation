@@ -1,10 +1,10 @@
 # Control Sending Data
 
-The Sentiance SDK optimizes in which circumstances data submission occurs, to minimize network and battery usage.
+The Sentiance SDK optimizes under which circumstances data submission occurs, to optimize network and battery usage.
 
 For certain users with specific usage patterns \(e.g. someone who rarely connects to Wi-Fi\), it could take a long time before detections are finally submitted.
 
-If you want to override the default behavior, you can initiate a force submission of detections. Ideally, you use this method only after explaining to the user that your app will consume more bandwidth in case the device is not connected to Wi-Fi.
+If you want to override the default behavior, you can initiate a forced submission of detections. Ideally, you use this method only after explaining to the user that your app will consume more bandwidth in case the device is not connected to Wi-Fi.
 
 {% tabs %}
 {% tab title="iOS" %}

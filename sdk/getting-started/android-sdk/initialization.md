@@ -1,6 +1,6 @@
 # 3. Initialization
 
-Initialization is a very important step; before initialization, almost none of the methods on the Sentiance SDK interface are allowed to be called \(with the exception of [`getInstance()`](../../api-reference/android/sentiance.md#getinitstate), [`init()`](../../api-reference/android/sentiance.md#init) and [`getInitState()`](../../api-reference/android/sentiance.md#getinitstate)\).
+Initialization is a very important step; before initialization, none of the methods on the Sentiance SDK interface will work, with the exception of [`getInstance()`](../../api-reference/android/sentiance.md#getinitstate), [`init()`](../../api-reference/android/sentiance.md#init) and [`getInitState()`](../../api-reference/android/sentiance.md#getinitstate).
 
 ## Create an Application Class
 

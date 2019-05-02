@@ -27,7 +27,7 @@ SENTConfig *config = [[SENTConfig alloc] initWithAppId:APPID
                                          launchOptions:launchOptions];
 ```
 
-Learn more about meta-users [here](../../appendix/meta-users.md).
+Learn more about meta-users [here](../../appendix/user-linking.md).
 
 ## SENTConfig API:
 

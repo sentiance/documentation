@@ -51,9 +51,9 @@ This Stationary Event is enriched with:
 
 ### Transport Events
 
-When a user is not stationary at a location, the user is in Transport. For each of these transports a Transport Event will be available.
+When a user is not stationary at a location, the user is in transport. For each of these transports a Transport Event will be available.
 
-Additional data derived from sensor data--distance, transport mode, advanced map-matching--is done to build an accurate trajectory and driving behavior analysis.
+Additional data derived from sensor data--distance, transport mode, advanced map-matching--is computed to build an accurate trajectory and driving behavior analysis.
 
 Transport Modes can include car, walking, biking, train, bus, tram, flight, etc. \(check the full list [here](../backend/data-reference/data-reference-q-z.md#transportmode)\).
 
@@ -71,8 +71,8 @@ Only available in full SDK configuration:
 ```text
 {
   "type": "Transport",
-  "start": "2017-02-19T15:13:00+01:00",
-  "end": "2017-02-19T17:05:00+01:00",
+  "start": "2017-02-19T15:13:00.000+01:00",
+  "end": "2017-02-19T17:05:00.000+01:00",
   "event_id": "830a3534edca6c0eb24faa19f0c137dc7877592384409de43a30586643272f65",
   "mode": "car",
   "distance": 158773,
@@ -81,7 +81,7 @@ Only available in full SDK configuration:
       "type": "Waypoint",
       "latitude": 52.35004,
       "longitude": 4.87475,
-      "timestamp": "2017-02-19T15:13:31.968000+01:00",
+      "timestamp": "2017-02-19T15:13:31.968+01:00",
       "accuracy": 25
     },
     ...
@@ -113,16 +113,16 @@ Only available in full SDK configuration:
   "behavior_annotations": [
     {
       "type": "AccelerationBehaviorAnnotation",
-      "start": "2017-02-19T15:43:32.161604+01:00",
-      "end": "2017-02-19T15:43:38.851760+01:00",
+      "start": "2017-02-19T15:43:32.161+01:00",
+      "end": "2017-02-19T15:43:38.851+01:00",
       "duration": 6690,
       "acceleration": "accelerate",
       "magnitude": 0.096
     },
     {
       "type": "AccelerationBehaviorAnnotation",
-      "start": "2017-02-19T15:50:42.146224+01:00",
-      "end": "2017-02-19T15:50:55.042963+01:00",
+      "start": "2017-02-19T15:50:42.146+01:00",
+      "end": "2017-02-19T15:50:55.042+01:00",
       "duration": 12897,
       "acceleration": "brake",
       "magnitude": 0.261

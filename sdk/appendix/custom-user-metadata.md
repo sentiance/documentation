@@ -1,6 +1,8 @@
 # Custom User Metadata
 
-Custom metadata allows you to store text-based key-value user properties into the Sentiance platform. Examples are custom user IDs and application related properties you need after the processing.
+Custom metadata allows you to store text-based key-value user properties into the Sentiance Platform. These keys and values are treated as opaque strings \(except for the `"user_id"` key, see below\) and are meant for retrieval only. There is a limit of 50 properties per user and a limit of 500 characters for keys and values.
+
+Typical examples include custom userIDs and application-related properties you need after the processing.
 
 ## Example
 
@@ -21,6 +23,6 @@ sentianceSdk.addUserMetadataField("correlation_id", "3a5276ec-b2b2-4636-b893-eb9
 {% endtabs %}
 
 {% hint style="info" %}
-The field `"user_id"` is special. When it is set, it shows up in all our exported reports under `metadata` as `metadata.user_id`. Use this to map the users from your app to their Sentiance user ids.
+The `"user_id"` key is special. When it is set, it shows up in all our exported reports under `metadata` as `metadata.user_id`. Use this to map the users from your app to their Sentiance user ids.
 {% endhint %}
 

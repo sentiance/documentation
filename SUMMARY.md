@@ -38,8 +38,8 @@
     * [Automatic Detections with Forced Trips](sdk/appendix/controlled-detections/automatic-detections-with-forced-trips.md)
     * [Controlled Trips Only](sdk/appendix/controlled-detections/controlled-trips-only.md)
     * [Checking Trip Status](sdk/appendix/controlled-detections/checking-trip-status.md)
-  * [Meta-Users](sdk/appendix/meta-users.md)
-  * [User credentials](sdk/appendix/user-credentials.md)
+  * [User Linking](sdk/appendix/user-linking.md)
+  * [User Credentials](sdk/appendix/user-credentials.md)
   * [Control Sending Data](sdk/appendix/control-sending-data.md)
   * [Custom User Metadata](sdk/appendix/custom-user-metadata.md)
   * [Detecting Vehicle Crashes](sdk/appendix/detecting-vehicle-crashes.md)
@@ -115,7 +115,7 @@
 
 ## Guide
 
-* [Meta Users](guide/meta-users.md)
+* [User Linking](guide/user-linking.md)
 * [Firehose](guide/firehose.md)
 
 ## Terms of Service

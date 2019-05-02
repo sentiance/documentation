@@ -1,8 +1,8 @@
 # 4. Starting Detections
 
-By starting detections, the Sentiance SDK will intelligently detect a user's trips and stationary moments while collecting sensor, location, and motion activity data.
+By starting detections, the Sentiance SDK will intelligently detect a user's real-world movements while collecting sensor, location, and motion activity data.
 
-Starting detections is only allowed after a successful initialization. Ideally, this step is done immediately after initialization succeeds, as this will guarantee that the SDK is detecting as often as possible.
+Starting detections is only allowed after a successful initialization. Ideally, this step is done immediately after initialization succeeds, as this will guarantee that the SDK is detecting as early and often as possible.
 
 Call the [`start()`](../../api-reference/android/sentiance.md#start) method from the body of [`OnInitCallback.onInitSuccess()`](../../api-reference/android/oninitcallback/#oninitsuccess):
 

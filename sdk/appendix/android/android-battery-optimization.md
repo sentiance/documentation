@@ -1,6 +1,6 @@
 # Android Battery Optimization
 
-When running the SDK on Android 6 and higher, it is recommended to ask the user to disable battery optimization for your app. This makes sure that SDK detections continue to work properly when the device is in Doze mode. This is particularly important to manufacturers like OnePlus and Nokia \(HMD Global\) who customize Android to do aggressive battery optimization, keeping the device in Doze mode longer than intended.
+When running the SDK on Android 6 and higher, it is recommended to ask the user to disable battery optimization for your app. This makes sure that SDK detections continue to work properly when the device is in Doze mode. This is particularly important with manufacturers like OnePlus and Nokia \(HMD Global\) who customize Android to do aggressive battery optimization, keeping the device in Doze mode longer than intended.
 
 Additionally, on Android Pie, disabling this will prevent Adaptive Battery from [bucketing](https://developer.android.com/about/versions/pie/power#buckets) your app based on usage and [restricting background processing](https://developer.android.com/reference/android/app/ActivityManager#isBackgroundRestricted%28%29), all of which that can impact the detection quality of the SDK.
 

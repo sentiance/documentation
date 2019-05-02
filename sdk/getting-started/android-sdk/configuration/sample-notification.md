@@ -1,6 +1,6 @@
 # Sample Notification
 
-Here’s an example of how to create a notification that can be passed to [`SdkConfig.Builder`](../../../api-reference/android/sdkconfig/sdkconfig-builder.md). We use the `android.support.v7.app.NotificationCompat` class to build a notification suitable for both old and new Android versions.
+The example below shows how to create a notification that can be passed to [`SdkConfig.Builder`](../../../api-reference/android/sdkconfig/sdkconfig-builder.md). We use the `android.support.v7.app.NotificationCompat` class to build a notification suitable for both old and new Android versions.
 
 The notification channel, necessary for Android 8 and above, has the channel importance set to `IMPORTANCE_LOW`, the minimum [recommended](https://developer.android.com/reference/android/app/NotificationManager#IMPORTANCE_MIN) by Google for notifications used for running services.
 

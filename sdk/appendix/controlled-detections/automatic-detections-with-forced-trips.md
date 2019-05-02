@@ -1,6 +1,6 @@
 # Automatic Detections with Forced Trips
 
-While in [automatic detection mode](automatic-detections.md), the SDK can be forced to start a trip. Doing so will prevent the SDK from detecting stationary moments and force it to continue collecting trip data until the trip is explicitly stopped \(e.g. when a user stops 15 minutes at a gas station, there won't be a stationary event for this generated in the timeline. Instead there will be idle transport events annotating this\).
+While in [automatic detection mode](automatic-detections.md), the SDK can be forced to start a trip. Doing so will prevent the SDK from detecting stationary moments and force it to continue collecting trip data until the trip is explicitly stopped.
 
 Once the forced trip is stopped, the SDK will resume automatic detections.
 
@@ -21,7 +21,7 @@ You can start a trip as follows:
 
 The `metadata` is an `NSDictionary` representing a map of string to string types. You can use it to attach any piece of information to this trip. The `transportModeHint` is a hint you can give the SDK about the type of transport the trip is \(e.g. car, bicycle, etc.\).
 
-In case starting a trip fails, you can [check]() the `SENTSDKStatus` object to determine the reason. 
+In case starting a trip fails, you can check the `SENTSDKStatus` object to determine the reason. 
 {% endtab %}
 
 {% tab title="Android" %}
@@ -59,7 +59,7 @@ To stop a trip that you've started, call `stopTrip` as follows:
 }];
 ```
 
-If stopping the trip fails, you can [check]() the `SENTSDKStatus` to determine why. Note that if no trip was ongoing, `failure`  will be called as well.
+If stopping the trip fails, you can check the `SENTSDKStatus` to determine why. Note that if no trip was ongoing, `failure`  will be called as well.
 
 To check if a trip is ongoing before calling `stopTrip`, see [this](checking-trip-status.md) guide.
 {% endtab %}

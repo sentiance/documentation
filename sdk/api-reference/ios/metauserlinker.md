@@ -2,7 +2,7 @@
 
 This interface is used with MetaUsersLinker class.
 
-Learn more about Meta-Users [here](../../appendix/meta-users.md).
+Learn more about Meta-Users [here](../../appendix/user-linking.md).
 
 ### MetaUserLinker API
 

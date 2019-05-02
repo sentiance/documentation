@@ -4,7 +4,7 @@ When specifying a channel/priority for the SDK notification, use a separate chan
 
 Setting the channel importance to `IMPORTANCE_LOW` and the notification priority to `PRIORITY_MIN` will create notifications that do not pop up in front of the user, or cause sounds and device vibrations. The goal is to not distract the user every time the Sentiance SDK runs, as this will cause frustration and lead to eventual app removal.
 
-Properly wording your notification is also important to let your users know why your application is running. State what value you're adding to your user at that moment. For example:
+Properly wording your notification is also important to let your users know why your application is running. State what value you are adding to your user at that moment. For example:
 
 > **Journeys is running**  
 > Working in the background to improve your driving habits
