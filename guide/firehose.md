@@ -4,19 +4,19 @@
 
 ### Why Firehose?
 
-A common desire among clients is to react to their user's activities in real time. You might want to enhance their experience in a travel app based on their mode of transport or show them relevant offers when they plan to visit a store. Receiving updates of a user's activities in real-time is necessary in such cases.
+A common desire among clients is to react to their user's activities when they happen. You might want to enhance their experience in a travel app based on their mode of transport or show them relevant offers when they plan to visit a store. Receiving updates of a user's activities as they happen is necessary in such cases.
 
-Enter the Firehose: our way of sending you real-time updates on the activities of your users.
+Enter the Firehose: our way of sending you updates on the activities of your users.
 
 ## Webhooks
 
-Delivery of messages in Firehose is done via Webhooks. Webhooks are a well-known and much used concept on the internet and quite popular in linking applications for [real-time](https://www.chargebee.com/blog/what-are-webhooks-explained/) [message](https://zapier.com/blog/what-are-webhooks/) [delivery](https://sendgrid.com/blog/whats-webhook/).
+Delivery of messages in Firehose is done via Webhooks. Webhooks are a well-known and much used integration pattern and quite popular in linking applications for [message](https://zapier.com/blog/what-are-webhooks/) [delivery](https://sendgrid.com/blog/whats-webhook/).
 
 ## Setup
 
 ### Things We Need from You
 
-In order to receive real-time events over Firehose we need you to set up an endpoint capable of receiving **HTTP POST** requests in **JSON format**, compressed with gzip. Messages are based on events that take place on the Sentiance platform. You tell us which events you want to listen to and the details of your endpoint and we start sending you messages whenever we have a new event for a user of your app.
+In order to receive events over Firehose we need you to set up an endpoint capable of receiving **HTTP POST** requests in **JSON format**, compressed with gzip. Messages are based on events that take place on the Sentiance platform. You tell us which events you want to listen to and the details of your endpoint and we start sending you messages whenever we have a new event for a user of your app.
 
 ### Message Format
 
@@ -42,7 +42,7 @@ A message will always be a JSON object with a `data` field which is an array of 
 
 Each item will have a `meta` JSON object with fields `message_type` and `message_timestamp`. On webhooks configured to listen to only one type of event, the `message_type` will always be the same. If you wish to receive more than one type of event on the same webhook, you will need to check the `message_type` field to determine which event you are looking at. The `message_timestamp` field will tell you when the event was generated in our system. These timestamps are in ISO 8601 format.
 
-Based on the value of `message_type` you'll need to parse the `data` field. Keep reading to discover the various message types we currently support and their associated JSON structures.
+Based on the value of `message_type` you'll need to parse the `data` field. 
 
 All messages are gzipped before sending over the wire.
 
@@ -54,9 +54,9 @@ To save on network bandwidth we batch messages sent over the webhook. Batching i
 
 ### Security
 
-To ensure that your messages are indeed from Sentiance and not from a malicious third party, we will set a BasicAuth header on every request. You can send us these basic credentials \(we prefer SMS or [https://onetimesecret.com/](https://onetimesecret.com/) for security\) and we will send them with all our requests.
+To ensure that your messages originate from Sentiance and not from a malicious third party, we will set a BasicAuth header on every request. You can send us these basic credentials \(we prefer SMS or [https://onetimesecret.com/](https://onetimesecret.com/) for security\) and we attach them to all our requests.
 
-But security starts with the basics so we request that you secure your connection with TLS. [https://www.ssllabs.com/](https://www.ssllabs.com/) is a great place to inspect your endpoint and ensure it meets ongoing security standards. We **require** a B grade or above to ensure all data is transmitted securely.
+Furthermore, we request that you secure your connection with TLS. [https://www.ssllabs.com/](https://www.ssllabs.com/) is a great place to inspect your endpoint and ensure it meets ongoing security standards. We **require** a B grade or above to ensure all data is transmitted securely.
 
 **Both these security measures are mandatory.**
 
@@ -69,11 +69,11 @@ Furthermore all our calls originate from the following dedicated IPs, if you wis
 
 ### Handling them like a Champ
 
-If your endpoint is unreachable, whether it be network fluctuations or a temporary server outage, we aim to send your message to you. Firehose expects a 200 OK response for every message sent. If it gets back anything else, it will keep **retrying with exponential backoff from 100 ms up to 5 minutes**.
+If your endpoint is unreachable, whether it be network fluctuations or a temporary server outage, we aim to still send the message to you. Firehose expects a 200 OK response for every message sent. If it gets back anything else, it will keep **retrying with exponential backoff from 100 ms up to 5 minutes**.
 
 ### Retention
 
-Every webhook has a **retention period**. This is the **amount of time we will keep messages** for that webhook before discarding them. This ensures that we get the freshest data for you to react to.
+Every webhook has a **retention period**. This is the **amount of time we will keep messages** for that webhook before discarding them. This ensures that we avoid sending stale information.
 
 For example, if your retention period has been set to 30 minutes and your endpoint has been down for 40 minutes, on resuming you will only receive messages that are up to 30 minutes old. Messages from the first 10 minutes of downtime will have been dropped.
 

@@ -2,7 +2,7 @@
 
 ## Access Types
 
-As a Sentiance user you could have various access roles assigned to you which grants or restricts data access.
+As a Sentiance user you could have various access roles assigned to you which grant or restrict data access.
 
 ### None
 
@@ -14,5 +14,5 @@ With Spectator access, you can view the data for all users of your application. 
 
 ### Developer
 
-With Developer access, you can view the **secret key** of your application along with [App Tokens.](../backend/authentication-and-authorization.md#the-app-token) If an App Token is not present, you can even create one.
+With Developer access, you can view the **secret key** of your application along with [App Tokens.](../backend/authentication-and-authorization.md#the-app-token) If an App Token is not present, contact support.
 
