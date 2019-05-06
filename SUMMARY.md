@@ -15,7 +15,7 @@
     * [6. Location Permission](sdk/getting-started/android-sdk/location-permission.md)
     * [7. What's Next](sdk/getting-started/android-sdk/whats-next.md)
   * [iOS Quick Start](sdk/getting-started/ios-sdk/README.md)
-    * [1. Including the SDK](sdk/getting-started/ios-sdk/1.-include-sdk.md)
+    * [1. Including the SDK](sdk/getting-started/ios-sdk/include-sdk.md)
     * [2. Configuring capabilities](sdk/getting-started/ios-sdk/configuring-capabilities.md)
     * [3. Compiler build settings](sdk/getting-started/ios-sdk/compiler-build-settings.md)
     * [4. Changing Info.plist](sdk/getting-started/ios-sdk/changing-info.plist.md)
