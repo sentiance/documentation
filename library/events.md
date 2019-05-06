@@ -66,7 +66,7 @@ Only available in full SDK configuration:
 
 #### Example
 
-[Lookup the Transport event in the data model reference](https://developers.sentiance.com/docs/data-model#Transport).
+[Lookup the Transport event in the data model reference](../backend/data-reference/data-reference-q-z.md#transport).
 
 ```text
 {

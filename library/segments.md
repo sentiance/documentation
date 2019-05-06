@@ -10,7 +10,7 @@ You can use these segments to build a better user experience.
 
 A user has a **rural home**, is an **early bird** and a **city worker**. While going to work, he has a **long commute**, where he shows **anticipative driver behavior**. His lifestyle shows a **sportive** person, while also being a **resto-lover**.
 
-See the SDK or [REST API](https://developers.sentiance.com/docs/rest-api#get-user-segments) docs on how to access these segments in your app or backend.
+See the SDK or [REST API](../backend/rest-api.md) docs on how to access these segments in your app or backend.
 
 ## Behavior <a id="segment-behavior"></a>
 
