@@ -4,6 +4,8 @@ All endpoints speak JSON. A `Content-Type` header with value `application/json` 
 
 The base url is `https://api.sentiance.com/<version>/` for all REST endpoints, where the currently supported versions are `v2` and `v3`. `v1` has been fully deprecated. Note that not all APIs are common between `v2` and `v3` versions.
 
+> Our US and Australian customers can go to `https://api.d4.sentiance.com/<version>/` and `https://api.e6.sentiance.com/<version>/` respectively.
+
 ### V2 Endpoints
 
 {% api-method method="get" host="" path="/v2/segment\_definitions" %}

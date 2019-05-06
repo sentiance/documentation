@@ -10,6 +10,8 @@ Our GraphQL endpoint lives at **POST** `https://api.sentiance.com/v2/gql` and ac
 
 We adhere to the [GraphQL specification](https://graphql.org/learn/serving-over-http/#post-request) but do not support multiple operation types.
 
+> Our US and Australian customers can go to `https://api.d4.sentiance.com/v2/gql` and `https://api.e6.sentiance.com/v2/gql` respectively.
+
 {% api-method method="post" host="https://api.sentiance.com" path="/v2/gql" %}
 {% api-method-summary %}
 GQL Request

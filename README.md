@@ -27,7 +27,7 @@ In other words, we give you an understanding of where the user likes to go, what
 
 ## API for all your needs
 
-We offer two types of API endpoints. A [REST API](https://developers.sentiance.com/docs/rest) that covers common requests with pre-built resources and a [GraphQL API ](https://developers.sentiance.com/docs/gql)that  covers more complex, customized use cases.
+We offer two types of API endpoints. A [REST API](backend/rest-api.md) that covers common requests with pre-built resources and a [GraphQL API ](backend/graphql.md)that  covers more complex, customized use cases.
 
 ## Demo App
 
