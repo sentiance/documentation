@@ -16,7 +16,7 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 | long  | [getDiskQuotaLimit](sentiance.md#getdiskquotalimit) \(\) |
 | long  | [getDiskQuotaUsage](sentiance.md#getdiskquotausage) \(\) |
 | [InitState](initstate.md)  | [getInitState](sentiance.md#getinitstate) \(\) |
-| [Sentiance](sentiance.md) | getInstance \([Context](https://developer.android.com/reference/android/content/Context) context\) |
+| [Sentiance](sentiance.md) | [getInstance](sentiance.md#getinstance) \([Context](https://developer.android.com/reference/android/content/Context) context\) |
 | long  | [getMobileQuotaLimit](sentiance.md#getmobilequotalimit) \(\) |
 | long  | [getMobileQuotaUsage](sentiance.md#getmobilequotausage) \(\) |
 | [SdkStatus](sdkstatus/)  | [getSdkStatus](sentiance.md#getsdkstatus) \(\) |

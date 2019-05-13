@@ -2,7 +2,7 @@
 
 ## What is the Sentiance Platform?
 
-The Sentiance Platform helps improving your app's user experience by learning and anticipating key moments that matter for end users.
+The Sentiance Platform helps to improve your app's user experience by learning and anticipating key moments that matter for end users.
 
 This is how it's done.
 
