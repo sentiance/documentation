@@ -158,7 +158,7 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 >
 > | Parameters |  |
 > | :--- | :--- |
-> | callback | A callback to handle the token result. |
+> | callback | A callback to handle the token result. Note that the SDK holds a [weak reference](https://developer.android.com/reference/java/lang/ref/WeakReference) to this callback in order to prevent component leaks. Make sure you have a strong reference to it in order to guarantee its execution. |
 
 ### `getUserId()`
 
@@ -281,7 +281,7 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 >
 > | Parameters |  |
 > | :--- | :--- |
-> | listener | A [`TripTimeoutListener`](trip/triptimeoutlistener.md) to handle trip timeouts. |
+> | handler | A [`OnStartFinishedHandler`](trip/triptimeoutlistener.md) used to notify that the SDK start has finished. Note that the SDK holds a [weak reference](https://developer.android.com/reference/java/lang/ref/WeakReference) to this handler to in order to prevent component leaks. Make sure you have a strong reference to it in order to guarantee its execution. |
 
 ### `startTrip()`
 
