@@ -1,5 +1,21 @@
 # Android
 
+## 4.9.0 - 2019-05-21
+
+#### Added
+
+* Support adding trip metadata during an ongoing trip. See [`addTripMetadata()`](../api-reference/android/sentiance.md#addtripmetadata).
+* Support asynchronous user linking. See [`setMetaUserLinker()`](../api-reference/android/sdkconfig/sdkconfig-builder.md#setmetauserlinker-1).
+* Send user-agent info to API calls.
+
+#### Fixed
+
+* Issue related to incorrectly timed activity transition events supplied by play services.
+
+#### Changed
+
+* Internal changes to user linking, sdk configuration updates, and SDK heartbeat data.
+
 ## 4.8.0 - 2019-04-24
 
 #### Added
