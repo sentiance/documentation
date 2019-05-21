@@ -5,6 +5,7 @@
 | [Builder](sdkconfig-builder.md) | [baseURL](sdkconfig-builder.md#baseurl) \(String url\) |
 | [SdkConfig](./) | [build](sdkconfig-builder.md#build) \(\) |
 | [Builder](sdkconfig-builder.md) | [setMetaUserLinker](sdkconfig-builder.md#setmetauserlinker) \([MetaUserLinker](../metauserlinker.md) linker\) |
+| [Builder](sdkconfig-builder.md) | [setMetaUserLinker](sdkconfig-builder.md#setmetauserlinker-1) \([MetaUserLinkerAsync](../metauserlinkerasync.md) linker\) |
 | [Builder](sdkconfig-builder.md) | [setNotificationId](sdkconfig-builder.md#setnotificationid) \(int id\) |
 | [Builder](sdkconfig-builder.md) | [setOnSdkStatusUpdateHandler](sdkconfig-builder.md#setonsdkstatusupdatehandler) \([OnSdkStatusUpdateHandler](../onsdkstatusupdatehandler.md) handler\) |
 | [Builder](sdkconfig-builder.md) | [setTriggeredTripsEnabled](sdkconfig-builder.md#settriggeredtripsenabled) \(boolean enabled\) |
@@ -46,6 +47,18 @@
 > | Parameters |  |
 > | :--- | :--- |
 > | linker | A [`MetaUserLinker`](../metauserlinker.md) which will handle the linking. |
+
+### `setMetaUserLinker`
+
+> ```java
+> Builder setMetaUserLinker(MetaUserLinkerAsync linker)
+> ```
+>
+> Same as [`setMetaUserLinker(MetaUserLinker)`](sdkconfig-builder.md#setmetauserlinker) but accepts an async linker instead.
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | linker | A [`MetaUserLinkerAsync`](../metauserlinkerasync.md) which will handle the linking. |
 
 ### `setNotificationId`
 

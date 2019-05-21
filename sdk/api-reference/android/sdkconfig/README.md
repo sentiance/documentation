@@ -9,7 +9,8 @@ The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secr
 | String | [getAppId](./#getappid) \(\) |
 | String | [getBaseURL](./#getbaseurl) \(\) |
 | [MetaUserLinker](../metauserlinker.md)  | [getMetaUserLinker](./#getmetauserlinker) \(\) |
-| Notification  | [getNotification](./#getnotification) \(\) |
+| [MetaUserLinkerAsync](../metauserlinkerasync.md) | [getMetaUserLinkerAsync](./#getmetauserlinkerasync) \(\) |
+| [Notification](https://developer.android.com/reference/android/app/Notification)  | [getNotification](./#getnotification) \(\) |
 | int  | [getNotificationId](./#getnotificationid) \(\) |
 | [OnSdkStatusUpdateHandler](../onsdkstatusupdatehandler.md)  | [getOnSdkStatusUpdateHandler](./#getonsdkstatusupdatehandler) \(\) |
 | String  | [getSecret](./#getsecret) \(\) |
@@ -40,6 +41,14 @@ The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secr
 > ```
 >
 > Returns the [`MetaUserLinker`](../metauserlinker.md) used during [MetaUser linking](../../../appendix/user-linking.md).
+
+### `getMetaUserLinkerAsync()`
+
+> ```java
+> MetaUserLinkerAsync getMetaUserLinkerAsync()
+> ```
+>
+> Returns the [`MetaUserLinkerAsync`](../metauserlinkerasync.md) used during [MetaUser linking](../../../appendix/user-linking.md).
 
 ### `getNotification()`
 

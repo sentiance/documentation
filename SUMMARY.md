@@ -52,6 +52,8 @@
       * [CrashCallback](sdk/api-reference/android/crashdetection/crashcallback.md)
     * [InitState](sdk/api-reference/android/initstate.md)
     * [MetaUserLinker](sdk/api-reference/android/metauserlinker.md)
+    * [MetaUserLinkerAsync](sdk/api-reference/android/metauserlinkerasync.md)
+    * [MetaUserLinkerCallback](sdk/api-reference/android/metauserlinkercallback.md)
     * [OnInitCallback](sdk/api-reference/android/oninitcallback/README.md)
       * [InitIssue](sdk/api-reference/android/oninitcallback/initissue.md)
     * [OnSdkStatusUpdateHandler](sdk/api-reference/android/onsdkstatusupdatehandler.md)

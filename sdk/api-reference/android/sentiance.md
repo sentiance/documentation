@@ -11,12 +11,13 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 |  |  |
 | :--- | :--- |
 | void  | [addUserMetadataField](sentiance.md#addusermetadatafield) \(String label, String value\) |
-| void | [addUserMetadataFields](sentiance.md#addusermetadatafields) \(Map&lt; String, String &gt; metadata\) |
+| void | [addUserMetadataFields](sentiance.md#addusermetadatafields) \(Map&lt;String, String&gt; metadata\) |
+| boolean | [addTripMetadata](sentiance.md#addtripmetadata) \(Map&lt;String, String&gt; metadata\) |
 | void | [disableBatteryOptimization](sentiance.md#disablebatteryoptimization) \(\) |
 | long  | [getDiskQuotaLimit](sentiance.md#getdiskquotalimit) \(\) |
 | long  | [getDiskQuotaUsage](sentiance.md#getdiskquotausage) \(\) |
 | [InitState](initstate.md)  | [getInitState](sentiance.md#getinitstate) \(\) |
-| [Sentiance](sentiance.md) | [getInstance](sentiance.md#getinstance) \([Context](https://developer.android.com/reference/android/content/Context) context\) |
+| [Sentiance](sentiance.md) | getInstance \([Context](https://developer.android.com/reference/android/content/Context) context\) |
 | long  | [getMobileQuotaLimit](sentiance.md#getmobilequotalimit) \(\) |
 | long  | [getMobileQuotaUsage](sentiance.md#getmobilequotausage) \(\) |
 | [SdkStatus](sdkstatus/)  | [getSdkStatus](sentiance.md#getsdkstatus) \(\) |
@@ -65,6 +66,20 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 > | Parameters |  |
 > | :--- | :--- |
 > | metadata | The metadata fields. |
+
+### `addTripMetadata()`
+
+> ```java
+> boolean addTripMetadata(Map<String, String> metadata)
+> ```
+>
+> Adds metadata while an external trip is ongoing. This method can be called multiple times during a trip.
+>
+> This method returns false if there is no ongoing external trip or `null` metadata is passed.
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | metadata | A map of metadata pertaining to the ongoing trip, which will be saved along with the trip data. |
 
 ### `disableBatteryOptimization()`
 
@@ -323,8 +338,6 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 > | :--- | :--- |
 > | callback | A [`StopTripCallback`](trip/stoptripcallback.md) to handle trip stop success and failure. |
 
-### `submitDetections()`
-
 > ```java
 > void submitDetections(@Nullable SubmitDetectionsCallback callback)
 > ```
@@ -336,6 +349,8 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 > | Parameters |  |
 > | :--- | :--- |
 > | callback | A [`SubmitDetectionsCallback`](submitdetectionscallback.md) invoked with the result. |
+
+### `submitDetections()`
 
 ### `updateSdkNotification()`
 

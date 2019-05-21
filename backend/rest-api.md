@@ -1273,7 +1273,7 @@ Include results up to this date.
 
 {% api-method method="post" host="" path="/v2/users/:install\_id/link" %}
 {% api-method-summary %}
-Meta User Link
+User Link
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -1310,7 +1310,7 @@ The returned \`person\_id\` is linked to all installs for the same user, going f
 
 ```javascript
 {
-  "person_id": "5a18fc4b0962209e0000000d"
+  "id": "5a18fc4b0962209e0000000d"
 }
 ```
 {% endapi-method-response-example %}
