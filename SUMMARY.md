@@ -98,6 +98,7 @@
 * [Events](library/events.md)
 * [Moments](library/moments.md)
 * [Segments](library/segments.md)
+* [Glossary](library/glossary.md)
 
 ## Backend
 
@@ -135,6 +136,4 @@
 * [Technical & Organizational Measures](https://www.sentiance.com/technical-and-organizational-measures/)
 
 ## Misc
-
-* [Glossary](misc/glossary.md)
 

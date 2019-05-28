@@ -30,7 +30,7 @@ Common use-cases of this token included getting user timeline, retrieving segmen
 
 App Tokens provide you access to all the user data under one application. As such they **should only be used in server-side integrations** and **should never be transmitted to end-user devices**.
 
-You can retrieve the app token by visiting [apps page on Insights](https://insights.sentiance.com/#/apps), if you have [Developer](../misc/glossary.md#developer) access.
+You can retrieve the app token by visiting [apps page on Insights](https://insights.sentiance.com/#/apps), if you have [Developer](../library/glossary.md#developer) access.
 
 Common use-cases of this token include building internal dashboards to view within your team, run batch processes on users, etc.
 
