@@ -1,6 +1,6 @@
 # Sentiance
 
-The Sentiance class is the main entry point for interacting with the SDK. This class is a singleton, therefore you can obtain an instance as follows:
+retaThe Sentiance class is the main entry point for interacting with the SDK. This class is a singleton, therefore you can obtain an instance as follows:
 
 ```java
 Sentiance sentianceSDK = Sentiance.getInstance(context);
@@ -360,7 +360,7 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 >
 > Replaces the notification set in [`SdkConfig.Builder`](sdkconfig/sdkconfig-builder.md). After calling this method, any notification shown by the SDK will be updated.
 >
->  Note that this change is valid only during the process's lifetime. After the app process retarts, the SDK will default back to the notification set in [`SdkConfig.Builder`](sdkconfig/sdkconfig-builder.md).
+>  Note that this change is valid only during the process's lifetime. After the app process restarts, the SDK will default back to the notification set in [`SdkConfig.Builder`](sdkconfig/sdkconfig-builder.md).
 >
 > | Parameters |  |
 > | :--- | :--- |
