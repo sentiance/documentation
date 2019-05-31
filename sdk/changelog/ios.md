@@ -1,12 +1,19 @@
 # iOS
 
-## 5.1.8 - 2019-02-28
+## 5.2.1 - 29 MAY 2019
+
+* added method to [add metadata during](../api-reference/ios/sentsdk/#addtripmetadata) the trip
+* added method to [set base API](../api-reference/ios/sentconfig-1.md#baseurl) url for SDK
+* fix with reachability
+* stability and trip detection improvements
+
+## 5.1.8 - 28 FEB 2019
 
 #### Changed
 
 * Stability improvements.
 
-## 5.1.7 - 2019-01-28
+## 5.1.7 - 28 JAN 2019
 
 #### Added
 

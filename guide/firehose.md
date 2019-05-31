@@ -16,7 +16,7 @@ Delivery of messages in Firehose is done via Webhooks. Webhooks are a well-known
 
 ### Things We Need from You
 
-In order to receive events over Firehose we need you to set up an endpoint capable of receiving **HTTP POST** requests in **JSON format**, compressed with gzip. Messages are based on events that take place on the Sentiance platform. You tell us which events you want to listen to and the details of your endpoint and we start sending you messages whenever we have a new event for a user of your app.
+In order to receive events over Firehose we need you to set up an endpoint capable of receiving **HTTP POST** requests in **JSON format**, compressed with **gzip**. Messages are based on events that take place on the Sentiance platform. You tell us which events you want to listen to and the details of your endpoint and we start sending you messages whenever we have a new event for a user of your app.
 
 ### Message Format
 
@@ -38,7 +38,7 @@ All messages will have a general envelope format and then a `data` field with a 
 }
 ```
 
-A message will always be a JSON object with a `data` field which is an array of various events. These events could be of different types and from different users, batched into one request.
+A message will always be a JSON object with a `data` field which is an array of multiple events. These events could be of different types and from different users, batched into one request.
 
 Each item will have a `meta` JSON object with fields `message_type` and `message_timestamp`. On webhooks configured to listen to only one type of event, the `message_type` will always be the same. If you wish to receive more than one type of event on the same webhook, you will need to check the `message_type` field to determine which event you are looking at. The `message_timestamp` field will tell you when the event was generated in our system. These timestamps are in ISO 8601 format.
 
@@ -51,6 +51,10 @@ All messages are gzipped before sending over the wire.
 To save on network bandwidth we batch messages sent over the webhook. Batching is done over both time and space, the defaults are **5 seconds** and **1 MB**, that is to say that once we have 1 MB worth of data or 5 seconds have passed, we will create a batch of data and send a request. These values can be configured so let us know what you want. The ranges are **1 - 300 seconds** and **23kb - 4MB**.
 
 **Note:** The batching by size is done before gzip compression.
+
+### Delivery
+
+On each successful delivery we expect a **200 OK** Status Code. If we don't get one, we will keep retrying \(see below\). We try our best to guarantee **at least** **once** delivery. This means we might sometimes send multiples of the same message if our server fails to recognise a successful acceptance of our POST.
 
 ### Security
 

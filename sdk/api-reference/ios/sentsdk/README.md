@@ -111,6 +111,18 @@ Method to remove user data field to the sdk metadata \(locally as well as on bac
 | :--- | :--- |
 | label | Field name for the new entry. |
 
+### addTripMetadata:
+
+add metadata pertaining to the ongoing external trip. All added metadata will be aggregated and added to the trip payload. Returns NO if there's no ongoing external trip.
+
+```objectivec
+- (BOOL)addTripMetadata:(NSDictionary *)metadata;
+```
+
+| Parameter |  |
+| :--- | :--- |
+| metadata | key value pair data from enclosing app, could have any structure as long as it can be contained in a dictionary. The only time we return NO is when a trip is not ongoing, metadata contains NSNull objects or nil itself. |
+
 ### startTrip: transportModeHint: success: failure:
 
 Start a Trip manually

@@ -31,6 +31,14 @@ Learn more about meta-users [here](../../appendix/user-linking.md).
 
 ## SENTConfig API:
 
+### baseURL
+
+Set the platform base URL
+
+```objectivec
+@property (nonatomic, strong) NSString *baseURL;
+```
+
 ### appId
 
 App ID created and managed by Sentiance's Developer Dashboard
