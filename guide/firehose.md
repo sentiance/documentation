@@ -83,6 +83,23 @@ For example, if your retention period has been set to 30 minutes and your endpoi
 
 You can request a specific retention period when requesting the webhook setup. The retention period can be set up to as high as **24 hours**.
 
+## FAQ
+
+#### Do you support multiple endpoints per webhook?
+
+Unfortunately we don't. We have tried to keep the design of the Firehose as simple and fast as possible which means keeping the core feature-set minimal and maintainable.
+
+#### Can I receive messages from multiple apps on the same endpoint?
+
+While this is possible, it comes with the catch that you won't know which messages are from which app. One way to remedy that is to use a dynamic route parameter in your endpoint that encodes the appId.
+
+For example:
+
+* https://domain.com/endpoint/appId1
+* https://domain.com/endpoint/appId2
+
+With `https://domain.com/endpoint/:appId` being the route that handles and parse `appId`.
+
 ## Event Reference
 
 ### Predictions <a id="predictions"></a>
