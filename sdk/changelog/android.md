@@ -1,6 +1,6 @@
 # Android
 
-## \[4.9.0\] - 2019-05-21
+## \[4.9.0\] - 21 May 2019
 
 #### Added
 
@@ -16,7 +16,7 @@
 
 * Issue related to incorrectly timed activity transition events supplied by play services.
 
-## \[4.8.0\] - 2019-04-24
+## \[4.8.0\] - 24 Apr 2019
 
 #### Added
 
@@ -31,7 +31,7 @@
 
 * Screen on/off detection during trips.
 
-## \[4.7.1\] - 2019-04-03
+## \[4.7.1\] - 3 Apr 2019
 
 #### Fixed
 
@@ -39,7 +39,7 @@
 * Fix crash when targeting a pre-12.0.1 version of Google Play Location Services.
 * Minor internal bug fixes and improvements.
 
-## \[4.7.0\] - 2019-03-25
+## \[4.7.0\] - 25 Mar 2019
 
 #### Added
 
@@ -51,7 +51,7 @@
 * Fixed a rare issue where the location availability sdk status value is incorrect.
 * Other minor bugs.
 
-## \[4.6.0\] - 2019-03-13
+## \[4.6.0\] - 13 Mar 2019
 
 #### Added
 
@@ -62,7 +62,7 @@
 
 * Prevent creating very long stationaries when the device has been offline \(no location updates or powered off\).
 
-## \[4.5.2\] - 2019-03-04
+## \[4.5.2\] - 4 Mar 2019
 
 #### Changed
 
@@ -75,7 +75,7 @@
 * Rare crash caused by shared SimpleDateFormat instance.
 * Prevent stopping of incoming location fixes during trips caused by high frequency requests \(1 per 10 secs or higher\).
 
-## \[4.5.1\] - 2019-02-20
+## \[4.5.1\] - 20 Feb 2019
 
 #### Added
 
@@ -91,7 +91,7 @@
 * Stuck stationary issue.
 * Alarms not triggering on Samsung.
 
-## \[4.5.0\] - 2019-02-11
+## \[4.5.0\] - 11 Feb 2019
 
 #### Added
 
@@ -103,7 +103,7 @@
 
 * [`TransportMode`](../api-reference/android/trip/transportmode.md) enum obfuscation issue.
 
-## \[4.4.0\] - 2019-01-17
+## \[4.4.0\] - 17 Jan 2019
 
 #### Added
 
@@ -123,7 +123,7 @@
 
 * Minor bug fixes.
 
-## \[4.3.0\] - 2019-01-09
+## \[4.3.0\] - 9 Jan 2019
 
 #### Added
 
@@ -142,7 +142,7 @@
 
 * Minor bug fixes.
 
-## \[4.2.9\] - 2018-12-18
+## \[4.2.9\] - 18 Dec 2018
 
 #### Added
 
@@ -156,19 +156,19 @@
 
 * Bug fixes.
 
-## \[4.2.8\] - 2018-11-21
+## \[4.2.8\] - 21 Nov 2018
 
 #### Changed
 
 * Improved detection algorithm.
 
-## \[4.2.7\] - 2018-11-15
+## \[4.2.7\] - 15 Nov 2018
 
 #### Fixed
 
 * Bug fixes.
 
-## \[4.2.6\] - 2018-11-12
+## \[4.2.6\] - 12 Nov 2018
 
 #### Added
 
@@ -182,7 +182,7 @@
 
 * Minor bug fixes.
 
-## \[4.2.5\] - 2018-10-22
+## \[4.2.5\] - 22 Oct 2018
 
 #### Added
 
@@ -196,7 +196,7 @@
 
 * Fix google play console warning related to AWS credentials.
 
-## \[4.2.4\] - 2018-10-08
+## \[4.2.4\] - 8 Oct 2018
 
 #### Changed
 
@@ -206,13 +206,13 @@
 
 * Prevent LocationService from crashing during startup.
 
-## \[4.2.3\] - 2018-10-02
+## \[4.2.3\] - 2 Oct 2018
 
 #### Changed
 
 * Stationary detection improvement.
 
-## \[4.2.1\] - 2018-09-24
+## \[4.2.1\] - 24 Sep 2018
 
 #### Added
 
@@ -226,20 +226,20 @@
 
 * Wakelock prevention and other minor fixes.
 
-## \[4.2.0\] - 2018-08-27
+## \[4.2.0\] - 27 Aug 2018
 
 #### Added
 
 * Support for meta users.
 * Remotely configurable required location providers.
 
-## \[4.1.22\] - 2018-08-23
+## \[4.1.22\] - 23 Aug 2018
 
 #### Fixed
 
 * Prevent automatic detections in triggered trips mode.
 
-## \[4.1.21\] - 2018-08-21
+## \[4.1.21\] - 21 Aug 2018
 
 #### Changed
 

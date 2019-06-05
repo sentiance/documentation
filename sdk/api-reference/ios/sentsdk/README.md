@@ -160,6 +160,22 @@ Set a trip timeout block.
 **tripDidTimeOut** block will be called each time trip will time out
 {% endhint %}
 
+### setUserActivityListerner:
+
+This method provides the enclosing app the ability to get SDK detection updates. So when the SDK is in a trip or a stationary, it informs the app via a callback, providing some extra information.
+
+```objectivec
+- (void)setUserActivityListerner:(void (^)(SENTUserActivity *userActivity))onChange;
+```
+
+### getUserActivity
+
+This method provides the enclosing app the ability to get SDK current user activity state. It is a trip or stationary with some enriched information.
+
+```objectivec
+- (SENTUserActivity *)getUserActivity;
+```
+
 ### isTripOngoing:
 
 Interface method to check if trip is in progress or not.
