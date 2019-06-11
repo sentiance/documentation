@@ -42,7 +42,3 @@ If Linking succeeds you will receive the Sentiance ID associated with the user. 
 
 If the Linking fails, you will be returned an error. For details please check out: [User Linking API Reference](../backend/rest-api.md#meta-user-link)
 
-### Diagram
-
-![](https://developers.sentiance.com/views/public/docs/assets/rest/MetaUsersScheme.png)
-

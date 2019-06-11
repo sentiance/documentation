@@ -1,5 +1,21 @@
 # Android
 
+## \[4.9.1\] - 6 Jun 2019
+
+#### Added
+
+* Remotely configurable sensor collection rate for non -R SDK versions.
+
+#### Changed
+
+* Relax the high accuracy location mode requirement. Detections will also work with battery saving mode.
+
+#### Fixed
+
+* Occasional excessive wake-ups on Samsung devices.
+* Rare issue where duplicate detection payloads are uploaded to the server.
+* Rare issue where an invalid waypoint is added to a trip.
+
 ## \[4.9.0\] - 21 May 2019
 
 #### Added
