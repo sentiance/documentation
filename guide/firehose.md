@@ -100,6 +100,8 @@ curl -X POST \
 
 You'll have to change the url being targeted, but for the rest you can use as is. The encoded basic auth credentials are `sentiance` and `securepassword`. The provided example file is a [Transports](firehose.md##transports) event as shown at the end of the page.
 
+Additionally example server implementations can be found [here](https://github.com/sentiance/firehose-receiver-example).
+
 ## FAQ
 
 #### Do you support multiple endpoints per webhook?
@@ -115,7 +117,7 @@ For example:
 * https://example.com/webhook/appId1
 * https://example.com/webhook/appId2
 
-With `https://example.com/webhook/:appId` being the route that handles and parse `appId`.
+With `https://example.com/webhook/:appId` being the route that handles and parse `appId`. Check our [example server implementation](https://github.com/sentiance/firehose-receiver-example) for how such an endpoint might be written.
 
 ## Event Reference
 
