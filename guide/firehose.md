@@ -83,6 +83,23 @@ For example, if your retention period has been set to 30 minutes and your endpoi
 
 You can request a specific retention period when requesting the webhook setup. The retention period can be set up to as high as **24 hours**.
 
+## Testing
+
+To test out the viability of your newly created endpoint, you can try the following curl:
+
+```text
+curl -X POST \
+  https://example.com/webhook \
+  -H 'Authorization: Basic c2VudGlhbmNlOnNlY3VyZXBhc3N3b3Jk' \
+  -H 'Content-Encoding: gzip' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  --data-binary @firehose-transport-example.gzip
+```
+
+{% file src="../.gitbook/assets/firehose-transport-example.gzip" %}
+
+You'll have to change the url being targeted, but for the rest you can use as is. The encoded basic auth credentials are `sentiance` and `securepassword`. The provided example file is a [Transports](firehose.md##transports) event as shown at the end of the page.
+
 ## FAQ
 
 #### Do you support multiple endpoints per webhook?
@@ -95,44 +112,12 @@ While this is possible, it comes with the catch that you won't know which messag
 
 For example:
 
-* https://domain.com/endpoint/appId1
-* https://domain.com/endpoint/appId2
+* https://example.com/webhook/appId1
+* https://example.com/webhook/appId2
 
-With `https://domain.com/endpoint/:appId` being the route that handles and parse `appId`.
+With `https://example.com/webhook/:appId` being the route that handles and parse `appId`.
 
 ## Event Reference
-
-### Predictions <a id="predictions"></a>
-
-```javascript
-{
-  "meta": {
-    "message_type": "event_prediction",
-    "message_timestamp": "2018-07-14T17:01:52.000+00:00"
-  },
-  "data": {
-    "user_id": "595a29d58fbb430700000027",
-    "branches": [
-      {
-        "events": [
-          {
-            "probability": 0.75,
-            "start": "2018-07-14T17:06:31.000+00:00",
-            "end": "2018-07-14T17:11:08.000+00:00",
-            "type": "TRANSPORT_CAR"
-          },
-          {
-            "probability": 0.41,
-            "start": "2018-07-14T17:11:08.000+00:00",
-            "end": "2018-07-14T17:41:18.000+00:00",
-            "type": "STATIONARY_SHOP"
-          }
-        ]
-      }
-    ]
-  }
-}
-```
 
 ### Transports <a id="#transports"></a>
 
@@ -143,6 +128,7 @@ With `https://domain.com/endpoint/:appId` being the route that handles and parse
     "message_timestamp": "2018-07-14T17:21:00.000+00:00"
   },
   "data": {
+    "event_id": "8b1e30e2-4c51-480c-af26-fd312bcfd08c",
     "user_id": "595a29d58fbb430700000027",
     "mode": "car",
     "start": "2018-07-14T14:31:58.416+00:00",
@@ -172,6 +158,75 @@ With `https://domain.com/endpoint/:appId` being the route that handles and parse
       "timestamp": "2018-07-14T17:11:08.000+00:00",
       "longitude": 4.06919,
       "latitude": 49.23614
+    }
+  }
+}
+```
+
+### Predictions <a id="predictions"></a>
+
+```javascript
+{
+  "meta": {
+    "message_type": "event_prediction",
+    "message_timestamp": "2018-10-01T12:01:53.845764754Z",
+    "updated_attributes": [
+      "events",
+      "probability"
+    ]
+  },
+  "data": {
+    "user_id": "5b83bcd709b90b0600000000",
+    "invalidate_last_prediction": false,
+    "is_updated": true,
+    "events": [
+      {
+        "type": "TransportPrediction",
+        "start": "2019-01-24T17:42:29+01:00",
+        "end": "2019-01-24T17:52:00+01:00",
+        "probability": 0.790647246873976,
+        "mode": "Biking"
+      },
+      {
+        "type": "StationaryPrediction",
+        "start": "2019-01-24T17:42:29+01:00",
+        "end": "2019-01-24T17:52:00+01:00",
+        "probability": 0.790647246873976,
+        "location_type": "Home",
+        "significance": "home",
+        "place": {
+          "category_hierarchy": ["building", "residential"],
+          "name": "Amherst Apartments"
+        },
+        "latitude": 0,
+        "longitude": 0
+      }
+    "probability": 0.022293249629669564,
+  }
+}
+```
+
+### Location
+
+```javascript
+{
+  "meta": {
+    "message_type": "location",
+    "message_timestamp": "2018-07-14T17:21:00.000+00:00"
+  },
+  "data": {
+    "user_id": "595a29d58fbb430700000027",
+    "last_location": {
+      "latitude": 51.19661,
+      "longitude": 4.40805,
+      "accuracy": 14,
+      "time": "2018-10-01T16:03:50+02:00"
+    },
+    "previous_location": {
+      "latitude": 51.19512,
+      "longitude": 4.40805,
+      "accuracy": 19,
+      "time": "2018-10-01T15:03:50+02:00"
     }
   }
 }
