@@ -1,5 +1,11 @@
 # iOS
 
+## \[5.3.2\] - 14 Jun 2019
+
+#### Added
+
+* Method to set[ vehicle crash listener.](https://docs.sentiance.com/sdk/appendix/detecting-vehicle-crashes)
+
 ## \[5.3.0\] - 4 Jun 2019
 
 #### Added
