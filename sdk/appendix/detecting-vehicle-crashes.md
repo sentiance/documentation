@@ -6,9 +6,12 @@ The Sentiance SDK can be configured to detect vehicle accidents/crashes during t
 {% tab title="iOS" %}
 ```objectivec
 // Signature
-- (void) setTripTimeOutListener: (void (^)(void)) tripDidTimeOut;
+- (void)setCrashListener:(void (^)(NSDate *date, CLLocation *lastKnownLocation))crashCallback;
 // Usage
-[[SENTSDK sharedInstance] setTripTimeOutListener:tripTimeoutListener];
+[[SENTSDK sharedInstance] setCrashListener:^(NSDate *date, CLLocation *lastKnownLocation) {
+        // Handle vehicle crash event
+    }];
+
 ```
 {% endtab %}
 

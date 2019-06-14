@@ -171,39 +171,41 @@ With `https://example.com/webhook/:appId` being the route that handles and parse
 {
   "meta": {
     "message_type": "event_prediction",
-    "message_timestamp": "2018-10-01T12:01:53.845764754Z",
-    "updated_attributes": [
-      "events",
-      "probability"
-    ]
+    "message_timestamp": "2019-06-13T08:25:54.496+00:00"
   },
   "data": {
-    "user_id": "5b83bcd709b90b0600000000",
-    "invalidate_last_prediction": false,
-    "is_updated": true,
+    "user_id": "000000000000000000000000",
     "events": [
       {
+        "type": "StationaryPrediction",
+        "start": "2019-06-13T09:34:56.024+01:00",
+        "end": "2019-06-13T19:37:30.000+01:00",
+        "probability": 0.31,
+        "location_type": "Work",
+        "significance": "work",
+        "latitude": 48.872234,
+        "longitude": 2.775808
+      },
+      {
         "type": "TransportPrediction",
-        "start": "2019-01-24T17:42:29+01:00",
-        "end": "2019-01-24T17:52:00+01:00",
-        "probability": 0.790647246873976,
-        "mode": "Biking"
+        "start": "2019-06-13T19:37:30.000+01:00",
+        "end": "2019-06-13T19:45:00.000+01:00",
+        "probability": 0.32,
+        "mode": "car"
       },
       {
         "type": "StationaryPrediction",
-        "start": "2019-01-24T17:42:29+01:00",
-        "end": "2019-01-24T17:52:00+01:00",
-        "probability": 0.790647246873976,
+        "start": "2019-06-13T19:45:00.000+01:00",
+        "end": "2019-06-14T08:22:30.000+01:00",
+        "probability": 0.36,
         "location_type": "Home",
         "significance": "home",
-        "place": {
-          "category_hierarchy": ["building", "residential"],
-          "name": "Amherst Apartments"
-        },
-        "latitude": 0,
-        "longitude": 0
+        "latitude": 48.856613,
+        "longitude": 2.352222
       }
-    "probability": 0.022293249629669564,
+    ],
+    "trigger_time": "2019-06-13T08:24:56.024+00:00",
+    "probability": 0.0037640448000000005
   }
 }
 ```
