@@ -34,6 +34,7 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 | void  | [setTripTimeoutListener](sentiance.md#settriptimeoutlistener) \(@Nullable [TripTimeoutListener](trip/triptimeoutlistener.md) listener\) |
 | [UserActivity](useractivity.md) | [setUserActivityListener](sentiance.md#setuseractivitylistener) \(@Nullable [UserActivityListener](useractivitylistener.md) listener\) |
 | void  | [start](sentiance.md#start) \([OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
+| void | start \([Date](https://developer.android.com/reference/java/util/Date) stopDate, [OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
 | void  | [startTrip](sentiance.md#starttrip) \(final @Nullable Map&lt;String, String&gt; metadata, final @Nullable [TransportMode](trip/transportmode.md) transportModeHint, @Nullable [StartTripCallback](trip/starttripcallback.md) callback\) |
 | void  | [stop](sentiance.md#stop) \(\) |
 | void  | [stopTrip](sentiance.md#stoptrip) \(@Nullable [StopTripCallback](trip/stoptripcallback.md) callback\) |
@@ -296,6 +297,23 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 >
 > | Parameters |  |
 > | :--- | :--- |
+> | handler | A [`OnStartFinishedHandler`](trip/triptimeoutlistener.md) used to notify that the SDK start has finished. Note that the SDK holds a [weak reference](https://developer.android.com/reference/java/lang/ref/WeakReference) to this handler to in order to prevent component leaks. Make sure you have a strong reference to it in order to guarantee its execution. |
+
+### `start()`
+
+> ```java
+> void start(Date stopDate, OnStartFinishedHandler handler)
+> ```
+>
+> Starts the SDK detections.
+>
+> This method has the same behaviour as [`start(OnStartFinishedHandler)`](sentiance.md#start) except an absolute date is passed to automatically stop the SDK some time in the future. A typical use-case is when the app provides a free trial period for its users after which the SDK should stop running.
+>
+> To cancel the auto-stop functionality, the app can call this method with a null stopDate or just call [`start(OnStartFinishedHandler)`](sentiance.md#start).
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | stopDate | An absolute date at which the SDK is stopped. If the date is in the past, the SDK will stop immediately. |
 > | handler | A [`OnStartFinishedHandler`](trip/triptimeoutlistener.md) used to notify that the SDK start has finished. Note that the SDK holds a [weak reference](https://developer.android.com/reference/java/lang/ref/WeakReference) to this handler to in order to prevent component leaks. Make sure you have a strong reference to it in order to guarantee its execution. |
 
 ### `startTrip()`
