@@ -1,5 +1,16 @@
 # Android
 
+## \[4.10.0\] - 24 Jun 2019
+
+#### Added
+
+* Support automatic stopping of detections by specifying an expiry date when calling [`start()`](../api-reference/android/sentiance.md#start-1). The expired detection will cause the [`StartStatus`](../api-reference/android/sdkstatus/startstatus.md) to become `START_EXPIRED`.
+* Support additional fine-tuning of the SDK's disk usage quota.
+
+#### Fixed
+
+* Rare crash caused by a NullPointerException in the ContinuousSensorStreamService class.
+
 ## \[4.9.1\] - 6 Jun 2019
 
 #### Added
