@@ -160,7 +160,15 @@ Set a trip timeout block.
 **tripDidTimeOut** block will be called each time trip will time out
 {% endhint %}
 
-### setUserActivityListerner:
+### setCrashListener:
+
+Set vehicle crash detection block. 
+
+```objectivec
+- (void)setCrashListener:(void (^)(NSDate *date, CLLocation *lastKnownLocation))crashCallback;
+```
+
+### setUserActivityListener:
 
 This method provides the enclosing app the ability to get SDK detection updates. So when the SDK is in a trip or a stationary, it informs the app via a callback, providing some extra information.
 

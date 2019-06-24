@@ -112,14 +112,16 @@
 
 ## Data Explorer
 
-* [Global \(EU\)](https://insights.sentiance.com/graphql)
-* [US](https://insights.d4.sentiance.com/graphql)
-* [Australia](https://insights.e6.sentiance.com/graphql)
+* [Data Explorer](data-explorer/data-explorer/README.md)
+  * [Global \(EU\)](https://insights.sentiance.com/graphql)
+  * [US](https://insights.d4.sentiance.com/graphql)
+  * [Australia](https://insights.e6.sentiance.com/graphql)
 
 ## Guide
 
 * [User Linking](guide/user-linking.md)
 * [Firehose](guide/firehose.md)
+* [Verifying your integration](guide/verifying-your-integration.md)
 
 ## Terms of Service
 
