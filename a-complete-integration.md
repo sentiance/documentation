@@ -4,13 +4,13 @@ description: High level integration guide
 
 # A standard integration
 
-Most of these steps can be done in paralel by different stakeholders and/or developers
+Most of these steps can be done in parallel by different stakeholders and/or developers
 
 ## Getting data on the platform
 
 The first step should always be to start with the [SDK integration](sdk/getting-started/). In our experience this is where most issues pop-up that take some time to resolve. 
 
-Our guide\(s\) are pretty extensive and should get you to a correct integration. But running over [the validation page](guide/verifying-your-integration.md) and sending us your integration code is usually a good way to prevent unexpected behaviour
+Our guide\(s\) are pretty extensive and should get you to a correct integration. But running over [the validation page](guide/verifying-your-integration.md) and sending us your integration code is usually a good way to prevent unexpected behaviour.
 
 ## Looking at & investigating your data
 
@@ -28,7 +28,7 @@ _\*Pro tip: Hold "cmd" or the windows key while clicking a term and the data mod
 
 **Pull based**
 
-Use the[ API / GraphQL](backend/graphql.md). These end points can be used by both server and user based tokens. They are ideal for displaying information in your app or querying for data based on your internal triggers \(Or for example a firehose message\)
+Use the[ API / GraphQL](backend/graphql.md). These end points can be used by both server and user based tokens. They are ideal for displaying information in your app or querying for data based on your internal triggers \(Or for example a firehose message\).
 
 **Push based // Real-time**
 
