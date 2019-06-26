@@ -38,13 +38,20 @@ Common use-cases of this token include building internal dashboards to view with
 
 If you've signed up via the [Insights](https://insights.sentiance.com) dashboard or [Journeys](https://www.sentiance.com/demo/), you have a ControlUser to play around with. You can use the following steps to get a token for your user using your email/password pair. The token can then be used to call all GQL and [REST](rest-api.md) endpoints.
 
+This involves two steps:
+
+* [Pass in email/password to get a short-lived \(&lt; 10 mins\), **Authorization Code**](authentication-and-authorization.md#email-password-greater-than-authorization-code).
+* [Exchange **Authorization Code** for **Authentication Token**.](authentication-and-authorization.md#authorization-code-greater-than-authentication-token)
+
+Note that neither step is optional. You can't make any calls with the **Authoriztion Code** apart from exchanging it for the **Authentication Token** which you can then use for other API calls.
+
 {% api-method method="post" host="https://api.sentiance.com" path="/auth/local" %}
 {% api-method-summary %}
-Auth Start
+Email/Password --&gt; Authorization Code
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Pass in the email/user pair for a short-lived authorization code.
+Pass in the email/user pair for a short-lived **Authorization Code**.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -85,11 +92,11 @@ Your password.
 
 {% api-method method="post" host="https://api.sentiance.com" path="/auth/token" %}
 {% api-method-summary %}
-Code Exchange
+Authorization Code --&gt; Authentication Token
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Exchange authorization code for a longer-lived authentication token.
+Exchange authorization code for a longer-lived **Authentication Token**.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -138,6 +145,8 @@ You will get back a short-lived token authentication token and a refresh token. 
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+Your token may expire after an unspecified period of time. When that happens you can use the refresh token received in the previous API call to get a new **Authentication Token**.
 
 {% api-method method="post" host="https://api.sentiance.com" path="/auth/token" %}
 {% api-method-summary %}
