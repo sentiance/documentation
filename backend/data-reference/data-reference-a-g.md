@@ -47,12 +47,9 @@
 ### AccelerationEnum
 **Kind**: ENUM
 
-**accelerate**
-
-**brake**
-
-**coast**
-
+- **accelerate**
+- **brake**
+- **coast**
 
 ### AccessToken
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -144,59 +141,35 @@ An Address describes a reverse geocoded location.
 ### AnalysisType
 **Kind**: ENUM
 
-**processed**: The most detailed processing with the highest latency. This processing also takes into account motion sensor data, does advanced timelining corrections.
-
-**indepth**: When data is analyzed with potentially more information available compared to the initial preliminary analysis. This type of processing also takes into account motion sensor data.
-
-**preliminary**: The initial realtime analysis of data with the lowest latency.
-
+- **processed**: The most detailed processing with the highest latency. This processing also takes into account motion sensor data, does advanced timelining corrections.
+- **indepth**: When data is analyzed with potentially more information available compared to the initial preliminary analysis. This type of processing also takes into account motion sensor data.
+- **preliminary**: The initial realtime analysis of data with the lowest latency.
 The platform analyzes data in multiple stages, and updates values over time, how well the data is analyzed, can be identified by the analysis type.
 
 ### Anomaly
 **Kind**: ENUM
 
-**transport_distance**
-
-**transport_duration**
-
-**transport_mode_distance**
-
-**transport_mode_duration**
-
-**transport_mode_category_distance**
-
-**transport_mode_category_duration**
-
-**transport_day_part_distance**
-
-**transport_day_part_duration**
-
-**transport_mode_category_occurrence_count**
-
-**stationary_location_significance_duration**
-
-**stationary_location_significance_day_part_duration**
-
-**stationary_place_category_day_count**
-
-**stationary_location_significance_day_part_day_count**
-
-**stationary_place_category_duration**
-
-**stationary_place_category_occurrence_count**
-
-**moment_duration**
-
-**commute_distance**
-
-**commute_duration**: This is an aggregation over the commute_from_home and commute_from_work moments, it includes small stationaries during commutes (such as stopping at the gas station).
-
-**commute_transport_mode_category_duration**
-
-**working_duration**
-
-**dogwalk_occurrence_count**
-
+- **transport_distance**
+- **transport_duration**
+- **transport_mode_distance**
+- **transport_mode_duration**
+- **transport_mode_category_distance**
+- **transport_mode_category_duration**
+- **transport_day_part_distance**
+- **transport_day_part_duration**
+- **transport_mode_category_occurrence_count**
+- **stationary_location_significance_duration**
+- **stationary_location_significance_day_part_duration**
+- **stationary_place_category_day_count**
+- **stationary_location_significance_day_part_day_count**
+- **stationary_place_category_duration**
+- **stationary_place_category_occurrence_count**
+- **moment_duration**
+- **commute_distance**
+- **commute_duration**: This is an aggregation over the commute_from_home and commute_from_work moments, it includes small stationaries during commutes (such as stopping at the gas station).
+- **commute_transport_mode_category_duration**
+- **working_duration**
+- **dogwalk_occurrence_count**
 
 ### AnomalyBehaviorAnnotation
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -216,32 +189,21 @@ The platform analyzes data in multiple stages, and updates values over time, how
 ### AnomalyTimePeriod
 **Kind**: ENUM
 
-**day**: Anomaly calculated on a daily basis.
-
-**week**: Anomaly calculated on a weekly basis.
-
-**month**: Anomaly calculated on a montly basis.
-
-**semantic_day**: Anomaly calculated on the semantic day of the user.
-
-**weekend_day**: Anomaly calculated on a daily basis, ex: each day of the weekend you are at home on average N hours, then if you are not home both days = 2 anomalies (one for saturday, one for sunday) will be available.
-
+- **day**: Anomaly calculated on a daily basis.
+- **week**: Anomaly calculated on a weekly basis.
+- **month**: Anomaly calculated on a montly basis.
+- **semantic_day**: Anomaly calculated on the semantic day of the user.
+- **weekend_day**: Anomaly calculated on a daily basis, ex: each day of the weekend you are at home on average N hours, then if you are not home both days = 2 anomalies (one for saturday, one for sunday) will be available.
 
 ### AnomalyType
 **Kind**: ENUM
 
-**DistanceAnomaly**
-
-**AggregatedDistanceAnomaly**
-
-**DurationAnomaly**
-
-**AggregatedDurationAnomaly**
-
-**DayCountAnomaly**
-
-**OccurrenceCountAnomaly**
-
+- **DistanceAnomaly**
+- **AggregatedDistanceAnomaly**
+- **DurationAnomaly**
+- **AggregatedDurationAnomaly**
+- **DayCountAnomaly**
+- **OccurrenceCountAnomaly**
 
 ### Application
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -280,8 +242,7 @@ Access the application nodes
 ### BehaviorAnnotationAnomalyEnum
 **Kind**: ENUM
 
-**phone_handling**
-
+- **phone_handling**
 
 ### BehaviorAnnotationPathWaypoint
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -315,8 +276,7 @@ The `BigInt` scalar type represents non-fractional signed whole numeric values. 
 ### BoundaryBehaviorAnnotationQuality
 **Kind**: ENUM
 
-**valid**: Section of the transport where the event detection was successful.
-
+- **valid**: Section of the transport where the event detection was successful.
 
 ### Branch
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -481,12 +441,9 @@ Custom Events.
 ### CustomEventSources
 **Kind**: ENUM
 
-**SDK**: Event was generated in the SDK.
-
-**ENCLOSING_APP**: The enclosing application was generating the event through the SDK.
-
-**CUSTOMER**: The event was sent by the Customer.
-
+- **SDK**: Event was generated in the SDK.
+- **ENCLOSING_APP**: The enclosing application was generating the event through the SDK.
+- **CUSTOMER**: The event was sent by the Customer.
 Where the custome event originates at.
 
 ### DayCountAnomaly
@@ -517,20 +474,13 @@ Where the custome event originates at.
 ### DayPart
 **Kind**: ENUM
 
-**morning**: Local time between 06:00-10:00.
-
-**noon**: Local time between 10:00-14:00.
-
-**afternoon**: Local time between 14:00-17:00.
-
-**evening**: Local time between 17:00-24:00.
-
-**night**: Local time between 00:00-06:00.
-
-**business**: Business hours, local time between 08:00-18:00.
-
-**non_business**: Non-business hours, local time excluding 08:00 - 18:00.
-
+- **morning**: Local time between 06:00-10:00.
+- **noon**: Local time between 10:00-14:00.
+- **afternoon**: Local time between 14:00-17:00.
+- **evening**: Local time between 17:00-24:00.
+- **night**: Local time between 00:00-06:00.
+- **business**: Business hours, local time between 08:00-18:00.
+- **non_business**: Non-business hours, local time excluding 08:00 - 18:00.
 Grouping of local time.
 
 ### DeviceInfo
@@ -610,28 +560,21 @@ Tracking device metadata.
 ### EventType
 **Kind**: ENUM
 
-**Transport**
-
-**Stationary**
-
+- **Transport**
+- **Stationary**
 
 ### FeedbackAssessment
 **Kind**: ENUM
 
-**correct**: When the user confirms the detection is correct.
-
-**incorrect**: When the user finds the detection not correct.
-
+- **correct**: When the user confirms the detection is correct.
+- **incorrect**: When the user finds the detection not correct.
 
 ### FeedbackType
 **Kind**: ENUM
 
-**StationaryFeedback**: Feedback on a detected Stationary event.
-
-**TransportFeedback**: Feedback on a detected Transport event.
-
-**MomentFeedback**: Feedback on a detected moment.
-
+- **StationaryFeedback**: Feedback on a detected Stationary event.
+- **TransportFeedback**: Feedback on a detected Transport event.
+- **MomentFeedback**: Feedback on a detected moment.
 
 ### FloatAttribute
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)

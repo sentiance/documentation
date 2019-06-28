@@ -455,18 +455,12 @@ A place selected from one of our data sources.
 ### LocationSignificance
 **Kind**: ENUM
 
-**home**: A location identified as one of the user's home locations.
-
-**work**: A location identified as one of the user's work locations.
-
-**regular**: Locations you regularly visit. Typical examples are places you regularly go shopping, your gym, a friend's place, ...
-
-**nonregular**: Default type for locations you don't often visit.
-
-**poi**: Points of interest that have not been classified as home/work previously.
-
-**new**: Only available a short time when you visit the location the first time.
-
+- **home**: A location identified as one of the user's home locations.
+- **work**: A location identified as one of the user's work locations.
+- **regular**: Locations you regularly visit. Typical examples are places you regularly go shopping, your gym, a friend's place, ...
+- **nonregular**: Default type for locations you don't often visit.
+- **poi**: Points of interest that have not been classified as home/work previously.
+- **new**: Only available a short time when you visit the location the first time.
 
 ### MomentDefinition
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -510,12 +504,9 @@ A single moment definition.
 ### MomentType
 **Kind**: ENUM
 
-**GenericMoment**
-
-**CityMoment**
-
-**CountryMoment**
-
+- **GenericMoment**
+- **CityMoment**
+- **CountryMoment**
 
 ### OccurrenceCountAnomaly
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -545,10 +536,8 @@ A single moment definition.
 ### OperatingSystem
 **Kind**: ENUM
 
-**android**
-
-**ios**
-
+- **android**
+- **ios**
 
 ### Paging
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -597,8 +586,6 @@ Multiple possible events that might occur for a user.
 ### PredictionType
 **Kind**: ENUM
 
-**StationaryIntervalPrediction**: Prediction of a Stationary event.
-
-**TransportIntervalPrediction**: Prediction of a Transport event.
-
+- **StationaryIntervalPrediction**: Prediction of a Stationary event.
+- **TransportIntervalPrediction**: Prediction of a Transport event.
 

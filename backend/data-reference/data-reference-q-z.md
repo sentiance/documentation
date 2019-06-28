@@ -47,16 +47,11 @@
 ### SdkFlavor
 **Kind**: ENUM
 
-**full**
-
-**offline_driving**
-
-**realtime_marketing**
-
-**offline_segmentation**
-
-**triggered_trips**
-
+- **full**
+- **offline_driving**
+- **realtime_marketing**
+- **offline_segmentation**
+- **triggered_trips**
 
 ### SegmentDefinition
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -79,31 +74,23 @@ A single segment definition.
 ### SegmentDefinitionStatus
 **Kind**: ENUM
 
-**ACTIVE**: The current active version of segment definitions.
-
-**ALPHA**: The next version of segment definitions, these will become active in the next release.
-
+- **ACTIVE**: The current active version of segment definitions.
+- **ALPHA**: The next version of segment definitions, these will become active in the next release.
 Identifies the release status of a segment definition.
 
 ### SegmentType
 **Kind**: ENUM
 
-**GenericSegment**
-
+- **GenericSegment**
 
 ### SemanticTime
 **Kind**: ENUM
 
-**morning**
-
-**lunch**
-
-**afternoon**
-
-**evening**
-
-**night**
-
+- **morning**
+- **lunch**
+- **afternoon**
+- **evening**
+- **night**
 The user semantic time.
 
 ### SemanticTimeAggregate
@@ -123,8 +110,7 @@ The user semantic time.
 ### SemanticTimeAggregateDaysEnum
 **Kind**: ENUM
 
-**all_days**: All days are used in the calculation of the aggregate.
-
+- **all_days**: All days are used in the calculation of the aggregate.
 
 ### SemanticTimeAggregateValue
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -250,10 +236,8 @@ Stream definition that can be activated/subscribed to with the Sentiance Firehos
 ### StreamDefinitionConnectionType
 **Kind**: ENUM
 
-**websockets**
-
-**sns**
-
+- **websockets**
+- **sns**
 Stream definition connection type.
 
 ### Subscription
@@ -286,8 +270,7 @@ Access the stream subscriptions
 ### TimePeriod
 **Kind**: ENUM
 
-**week**
-
+- **week**
 
 ### TimeWindowTransportHeatmaps
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -355,20 +338,13 @@ A single waypoint in the augmented trajectory.
 ### TransportBehaviorAnnotationType
 **Kind**: ENUM
 
-**AccelerationBehaviorAnnotation**
-
-**BoundaryBehaviorAnnotation**
-
-**AnomalyBehaviorAnnotation**
-
-**TurnBehaviorAnnotation**
-
-**HandlingWithoutCallingAnnotation**
-
-**HandsfreeCallingAnnotation**
-
-**HandheldCallingAnnotation**
-
+- **AccelerationBehaviorAnnotation**
+- **BoundaryBehaviorAnnotation**
+- **AnomalyBehaviorAnnotation**
+- **TurnBehaviorAnnotation**
+- **HandlingWithoutCallingAnnotation**
+- **HandsfreeCallingAnnotation**
+- **HandheldCallingAnnotation**
 
 ### TransportBehaviorFeatures
 **Kind**: UNION
@@ -424,47 +400,29 @@ Historically aggregated transport heatmaps.
 ### TransportMode
 **Kind**: ENUM
 
-**car**: When we have identified a transport mode as car.
-
-**walking**: When we have identified a transport mode as walking.
-
-**biking**: When we have identified a transport mode as biking.
-
-**train**: When we have identified a transport mode as train.
-
-**bus**: When we have identified a transport mode as bus.
-
-**tram**: When we have identified a transport mode as tram.
-
-**subway**: When we have identified a transport mode as subway/underground/metro.
-
-**boat**: When we have identified a transport mode as boat.
-
-**ferry**: When we have identified a transport mode as ferry.
-
-**motorcycle**: When we have identified a transport mode as motorcycle.
-
-**flight**: When we have identified a transport mode as flight. This is currently only available for processed results.
-
-**running**: When we have identified a transport mode as running. This is currently only available for preliminary results.
-
-**idle**: When a transport is identified as idle behavior.
-
-**other**: When a transport is identified as other transport mode.
-
-**insufficient_data**: When we don't have enough data to identify a transport mode.
-
+- **car**: When we have identified a transport mode as car.
+- **walking**: When we have identified a transport mode as walking.
+- **biking**: When we have identified a transport mode as biking.
+- **train**: When we have identified a transport mode as train.
+- **bus**: When we have identified a transport mode as bus.
+- **tram**: When we have identified a transport mode as tram.
+- **subway**: When we have identified a transport mode as subway/underground/metro.
+- **boat**: When we have identified a transport mode as boat.
+- **ferry**: When we have identified a transport mode as ferry.
+- **motorcycle**: When we have identified a transport mode as motorcycle.
+- **flight**: When we have identified a transport mode as flight. This is currently only available for processed results.
+- **running**: When we have identified a transport mode as running. This is currently only available for preliminary results.
+- **idle**: When a transport is identified as idle behavior.
+- **other**: When a transport is identified as other transport mode.
+- **insufficient_data**: When we don't have enough data to identify a transport mode.
 The transport modes the platform supports.
 
 ### TransportModeCategory
 **Kind**: ENUM
 
-**unknown**
-
-**healthy**
-
-**unhealthy**
-
+- **unknown**
+- **healthy**
+- **unhealthy**
 
 ### TransportModeHeatmaps
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -479,12 +437,9 @@ The transport modes the platform supports.
 ### TransportOccupantRole
 **Kind**: ENUM
 
-**driver**
-
-**passenger**
-
-**unknown**
-
+- **driver**
+- **passenger**
+- **unknown**
 
 ### TransportPrediction
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -527,10 +482,8 @@ The transport modes the platform supports.
 ### TreePredictionType
 **Kind**: ENUM
 
-**StationaryPrediction**: Prediction of a Stationary event.
-
-**TransportPrediction**: Prediction of a Transport event.
-
+- **StationaryPrediction**: Prediction of a Stationary event.
+- **TransportPrediction**: Prediction of a Transport event.
 
 ### Trip
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -581,14 +534,10 @@ Access trips across all users.
 ### TurnBehaviorAnnotationManeuver
 **Kind**: ENUM
 
-**left_turn**
-
-**right_turn**
-
-**roundabout**
-
-**lane_switch**
-
+- **left_turn**
+- **right_turn**
+- **roundabout**
+- **lane_switch**
 
 ### User
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -644,14 +593,10 @@ An anonymous SDK user that authenticates using the token strategy, can push data
 ### UserAttributeType
 **Kind**: ENUM
 
-**TransportTimeAggregate**
-
-**CommuteTimeAggregate**
-
-**StationaryTimeAggregate**
-
-**WorkingTimeAggregate**
-
+- **TransportTimeAggregate**
+- **CommuteTimeAggregate**
+- **StationaryTimeAggregate**
+- **WorkingTimeAggregate**
 
 ### UserCarBehavior
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -714,12 +659,9 @@ This scoring system is used to track an individuals health.
 ### UserRole
 **Kind**: ENUM
 
-**developer**
-
-**spectator**
-
-**basic**
-
+- **developer**
+- **spectator**
+- **basic**
 The roles a user can have, both on accounts and apps.
 
 ### UserSdkSettings
@@ -760,10 +702,8 @@ Car transport scores by month, week, day.
 ### UserType
 **Kind**: ENUM
 
-**User**: An anonymous SDK user that authenticates using the token strategy, can push data and can query only it's own data.
-
-**ControlUser**: A user that can authenticate using either password or token strategies, has an email address, might have access to dashboards, might have multiple roles, might manage multiple accounts and applications.
-
+- **User**: An anonymous SDK user that authenticates using the token strategy, can push data and can query only it's own data.
+- **ControlUser**: A user that can authenticate using either password or token strategies, has an email address, might have access to dashboards, might have multiple roles, might manage multiple accounts and applications.
 
 ### UsersConnection
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
@@ -852,12 +792,9 @@ Access the user nodes
 ### WorkingTimeWhereabouts
 **Kind**: ENUM
 
-**all_locations**: When at either regular work or remote locations visited during working time, excluding transports.
-
-**at_work**: When working at work moment has been active, excluding nothing.
-
-**remote**: When working remote moment has been active, including transports in between.
-
+- **all_locations**: When at either regular work or remote locations visited during working time, excluding transports.
+- **at_work**: When working at work moment has been active, excluding nothing.
+- **remote**: When working remote moment has been active, including transports in between.
 
 ### ZoneCarBehaviorScores
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
