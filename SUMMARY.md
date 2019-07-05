@@ -138,5 +138,3 @@
 
 * [Technical & Organizational Measures](https://www.sentiance.com/technical-and-organizational-measures/)
 
-## Misc
-

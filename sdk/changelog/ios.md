@@ -1,5 +1,12 @@
 # iOS
 
+## \[5.4.0\] - 2 July 2019
+
+#### Added
+
+* Method to [set stop sdk on date](../api-reference/ios/sentsdk/#startwithstopdate)
+* new SENTStartStatus: [SENTStartStatusExpired](../api-reference/ios/sentsdk/sentsdkstatus.md#startstatus)
+
 ## \[5.3.2\] - 14 Jun 2019
 
 #### Added

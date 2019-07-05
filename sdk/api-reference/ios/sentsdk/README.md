@@ -14,7 +14,7 @@ Method to call the shared instance of the SDK.
 
 ### initWithConfig: success: failure:
 
-SDK intialization method. It sets up the modules internally and handles user authentication.
+SDK initialization method. It sets up the modules internally and handles user authentication.
 
 ```objectivec
 - (void) initWithConfig: (SENTConfig *) config 
@@ -29,7 +29,7 @@ SDK intialization method. It sets up the modules internally and handles user aut
 | failure | The failure block called when init failed. It takes a SENTInitIssue issue indicating the reason of the failure. |
 
 {% hint style="warning" %}
-Init should only be called once, unless initialisation fails.
+Init should only be called once, unless initialization fails.
 {% endhint %}
 
 ### start:
@@ -40,13 +40,30 @@ Start the SDK.
 - (void) start: (void (^)(SENTSDKStatus* status)) completion;
 ```
 
-| Parameter |  |
+| Callback |  |
 | :--- | :--- |
-| completion | The completion block called when the SDK has started. SENTSDKStatus object indicates any issue that occured when the SDK started. |
+| **completion** | The completion block called when the SDK has started. [SENTSDKStatus](sentsdkstatus.md) object indicates any issue that occurred when the SDK started. |
 
 {% hint style="info" %}
-start should be called only after the SDK has been successfully initialised.
+start should be called only after the SDK has been successfully initialized.
 {% endhint %}
+
+### startWithStopDate:
+
+Start the SDK with expiration date.
+
+```objectivec
+- (void)startWithStopDate:(NSDate *)sdkStopDate 
+               completion:(void (^)(SENTSDKStatus *status))completion;
+```
+
+| Parameter |  |
+| :--- | :--- |
+| **sdkStopDate** | Should be set with date in the future. Dates in past will cause imediate stop of SDK. Setting nil will start SDK as usual. |
+
+| Callback |  |
+| :--- | :--- |
+| **completion** | The completion block called when the SDK has started. [SENTSDKStatus](sentsdkstatus.md) object indicates any issue that occurred when the SDK started. |
 
 ### stop
 
@@ -89,7 +106,7 @@ Interface method to set metadata for user. Metadata is any additional data that 
 
 ### addUserMetadataFields:
 
-Interface method to set metadata for user. Metadata is any additional data that enclosing app is willing to set for this user/app combination This metadata could contain vital information related to procesing wrt to the enclosing app.
+Interface method to set metadata for user. Metadata is any additional data that enclosing app is willing to set for this user/app combination This metadata could contain vital information related to processing wrt to the enclosing app.
 
 ```objectivec
 - (void) addUserMetadataFields: (NSDictionary *) metadata;
