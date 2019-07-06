@@ -4,9 +4,9 @@
 
 When including our SDK in your application, your application will grow by about 1MB. When using the [native optimization version](../getting-started/android-sdk/include-sdk.md), there will be an additional 1.5 MB on top of this.
 
-### What is the DEX method count?
+### What is the DEX method reference count?
 
-Our SDK consumes about 8000 methods \(12%\) of the available 65,536 methods in a single dex file.
+Our SDK consumes about 8000 \(12%\) of the available 65,536 method reference count for a single dex file.
 
 ### What app permissions are required by the SDK?
 
