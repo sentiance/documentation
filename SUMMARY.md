@@ -2,6 +2,7 @@
 
 * [What is the Sentiance Platform?](README.md)
 * [A standard integration](a-complete-integration.md)
+* [Journeys FAQ](journeys-faq.md)
 
 ## SDK
 
