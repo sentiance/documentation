@@ -1,3 +1,7 @@
+---
+description: All FAQs below are subject to change. We update our applications frequently.
+---
+
 # Journeys FAQ
 
 ## Where can I find Journeys?
@@ -15,6 +19,12 @@ _Requirements operating system: iOS 9.0 or higher iPhone: iPhone 4S or better da
 Project codes are dedicated identifiers for our client projects. If you are an individual user testing out our solutions you do not have to fill this in.
 
 If you'd like to set up a dedicated environment please contact [sales@sentiance.com](mailto:sales@sentiance.com)
+
+## I've installed with the wrong or without a project code while I should have used one.
+
+Please contact your project point of contact or mailt to [support@sentiance.com](mailto:support@sentiance.com).
+
+It is currently not possible to change this yourself due to privacy & GDPR concerns.
 
 ## App navigation & screen explanations
 
@@ -58,11 +68,11 @@ In the Settings view you will find detail about your Journeys account, including
 
 ## I do not see any detections
 
-**I've installed the app less than 3 days ago**
+**I have installed the app less than 3 days ago**
 
 Our platform needs a certain amount of data before we can start identifying your events, moments & segments correctly. Please make sure you've been tracking with the permissions set correctly for at least a few days. 
 
-**I've installed the app more than 3 days**
+**I have installed the app more than 3 days**
 
 * Make sure your device has the required specifications.
 * Make sure you've given the right permissions. 
@@ -73,9 +83,13 @@ Our platform needs a certain amount of data before we can start identifying your
 
 It can take up to 2-3 weeks for Journeys to accurately detect your routines and home/work locations. If you went on holiday or business trip in that period, it might take a bit longer.
 
+## I moved to a new home \(or: I changed jobs recently\) and now my detections are all wrong
+
+I can take up to three weeks after a move before Journeys picks up on it. Stay tuned!
+
 ## I have installed Journeys on multiple devices, will this cause problems?
 
-You will be able to see your timeline on all devices, but the tracking will only be done from the latest non tablet device.
+Journeys is currently not built to handle this kind of behaviour. However our SDK has the possibility to handle this use case when implemented in your application.
 
 ## I gave feedback on an incorrect event, but Journeys made the same mistake again
 
@@ -83,5 +97,22 @@ Feedback is used to train our models and improve our algorithms at Sentiance, bu
 
 ## The timeline looks different today compared to before
 
-We have a great blog post around this topic that you can read [here](https://www.sentiance.com/2019/07/03/when-context-is-king-time-is-queen/). But yes detections may change after the fact.
+We have a great blog post around this topic that you can read [here](https://www.sentiance.com/2019/07/03/when-context-is-king-time-is-queen/). But yes detections may change after the fact. Your current actions may give us more clues and insights into your past behaviour and thus we may want to retroactively update the detections to be more accurate. 
+
+## I see different scores in journeys but do not know what they mean
+
+These scores aim to demonstrate our best effort to provide you with a number that you could use to compare drivers and take actions upon. Please note that these may change often.
+
+## How can I make Journeys stop tracking me temporarily if I visit certain places?
+
+We don't have built-in functionality for that at this time. You could disable location tracking on the OS level to make this happen.
+
+## The detected segments \(or other data points\) are incorrect, how can I change them?
+
+_At the moment it's not possible to change detections on the fly._
+
+It's important to note that Journeys is for demo purposes only, it is what we detect for you out of the box. With an actual integration we can tweak certain parameters to achieve different results.   
+
+
+
 
