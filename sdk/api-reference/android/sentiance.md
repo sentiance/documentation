@@ -356,6 +356,8 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 > | :--- | :--- |
 > | callback | A [`StopTripCallback`](trip/stoptripcallback.md) to handle trip stop success and failure. |
 
+### `submitDetections()`
+
 > ```java
 > void submitDetections(@Nullable SubmitDetectionsCallback callback)
 > ```
@@ -367,8 +369,6 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 > | Parameters |  |
 > | :--- | :--- |
 > | callback | A [`SubmitDetectionsCallback`](submitdetectionscallback.md) invoked with the result. |
-
-### `submitDetections()`
 
 ### `updateSdkNotification()`
 
