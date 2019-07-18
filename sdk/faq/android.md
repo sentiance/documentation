@@ -2,7 +2,7 @@
 
 ### How big is the SDK library?
 
-When including our SDK in your application, your application will grow by about 1MB. When using the [native optimization version](../getting-started/android-sdk/include-sdk.md), there will be an additional 1.5 MB on top of this.
+When including our SDK in your application, your application will grow by about 1 MB. When using the [native optimization version](../getting-started/android-sdk/include-sdk.md), there will be an additional 1.5 MB on top of this.
 
 ### What is the DEX method reference count?
 
@@ -65,4 +65,27 @@ Without this change, your build might fail with the following errors:
 Or, if you've excluded the SDK's support library dependencies as described [here](android.md#im-getting-a-version-collision-or-mismatch-error-with-a-certain-library), SDK initialization will fail at runtime with the following error:
 
 > NoClassDefFoundError: Failed resolution of: Landroid/support/v4/util/ArrayMap
+
+### How do I fix a manifest merger exception caused by conflicting fullBackupContent attribute?
+
+If you have specified custom backup rules in your application's manifest using the `android:fullBackupContent` attribute, then you might run into an exception during the build. This is because our SDK sets its own rules in the library manifest, which causes the manifest merger to complain about the conflict.
+
+To fix this, add the following attribute to your app's `<application>` tag so that the manifest merger picks your app's backup rules instead:
+
+```markup
+<manifest xmlns:tools="http://schemas.android.com/tools" ...>
+   <application 
+      ...
+      tools:replace="android:fullBackupContent">
+```
+
+Then, add the following SDK backup rules to your backup rules XML file:
+
+```markup
+<exclude domain="sharedpref" path="sentiance.xml"/>
+<exclude domain="database" path="sentiance-payloads"/>
+<exclude domain="database" path="sentiance-payloads.db"/>
+<exclude domain="database" path="sentiance"/>
+<exclude domain="database" path="sentiance.db"/>
+```
 
