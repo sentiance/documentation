@@ -3,7 +3,7 @@
 {% hint style="info" %}
 **Make sure to think about your development environments before you get started**
 
-It's a best practice to use multiple environments during the development of your apps \(development, testing, production, etc.\) 
+It is a best practice to use multiple environments during the development of your apps \(Development, Testing, Production, etc.\) 
 
 You will need a separate app id & secret for each of these environments, make sure to mention this in your request.
 
@@ -12,7 +12,7 @@ This will also allow us to enable debugging & analytics on your development envi
 
 ### Requesting an app id & secret
 
-In order to properly integrate the Sentiance SDK you will need an app id & secret. You can request an app id & secret by emailing to [support@sentiance.com](mailto:support@sentiance.com)
+In order to properly integrate the Sentiance SDK you will need an app id & secret. You can request these by emailing to [support@sentiance.com](mailto:support@sentiance.com) or your Sentiance project point of contact.
 
 ### Getting your app credentials
 
