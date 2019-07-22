@@ -22,7 +22,7 @@ If you'd like to set up a dedicated environment please contact [sales@sentiance.
 
 ## I've installed with the wrong or without a project code while I should have used one.
 
-Please contact your project point of contact or mailt to [support@sentiance.com](mailto:support@sentiance.com).
+Please contact your project point of contact or mail to [support@sentiance.com](mailto:support@sentiance.com).
 
 It is currently not possible to change this yourself due to privacy & GDPR concerns.
 

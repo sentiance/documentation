@@ -12,21 +12,6 @@ Our SDK consumes about 8000 \(12%\) of the available 65,536 method reference cou
 
 Please see our list of [manifest permissions](../appendix/android/manifest-permission.md). The only permission that requires user consent is the location permission, and is mandatory for the proper operation of the SDK detections.
 
-### I'm getting a version collision or mismatch error with a certain library
-
-Our SDK has a dependency on the Google Play location services library, which itself has dependencies on various other support libraries. If your application has a dependency on a different version of a play services, support, or location library, it may result in version conflict.
-
-To solve this, you may exclude the conflicting library from our SDK and include a higher version separately.
-
-```groovy
-// In this example, 'com.android.support' has a conflict.
-
-implementation ('com.sentiance:sdk:4.4.0@aar') {
-	transitive = true
-	exclude group: 'com.android.support', module: 'support-v4'
-}
-```
-
 ### I see a lot of missed trips and stationary moments in the timeline
 
 Our SDK depends on proper device configuration in order to perform detections. Missed events can be due to the user disabling device location tracking, enabling airplane mode, or sometimes restricting the app's background execution. You can be notified of these changes by handling [SdkStatus](../api-reference/android/sdkstatus/) updates as shown [here](../getting-started/android-sdk/sdk-status-updates.md).
@@ -42,50 +27,4 @@ By default, our SDK requires the network provider to be enabled so that location
 To overcome this problem on the emulator, first make sure this is the cause by checking the [`LocationSetting`](../api-reference/android/sdkstatus/#locationsetting) field of the [`SdkStatus`](../api-reference/android/sdkstatus/). If it shows `DEVICE_ONLY`, go the device's location settings and set the location mode to "high accuracy". On a Pixel emulator running Android Oreo and above, you may need to expand the "Advanced" section, choose "Google Location Accuracy" and toggle the "Improve Location Accuracy" off and on.
 
 If this does not solve the problem, check the [`SdkStatus`](../api-reference/android/sdkstatus/) to see what other detection condition is not being satisfied.
-
-### Is the SDK compatible with AndroidX support libraries?
-
-Our SDK depends on several `com.android.support` libraries. Therefore, if you've updated your app to use AndroidX support libraries, or you're using [the following](https://developers.google.com/android/guides/releases#june_17_2019) play services library versions \(or higher\), you must enable Jetifier to migrate the SDK's dependencies to the AndroidX equivalent ones. To do so, add the following lines to your project's gradle.properties file:
-
-{% code-tabs %}
-{% code-tabs-item title="gradle.properties" %}
-```groovy
-android.useAndroidX=true
-android.enableJetifier=true
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-Without this change, your build might fail with the following errors:
-
-> Error while merging dex archives
->
-> Error: Program type already present: android.support.v4.app.INotificationSideChannel
-
-Or, if you've excluded the SDK's support library dependencies as described [here](android.md#im-getting-a-version-collision-or-mismatch-error-with-a-certain-library), SDK initialization will fail at runtime with the following error:
-
-> NoClassDefFoundError: Failed resolution of: Landroid/support/v4/util/ArrayMap
-
-### How do I fix a manifest merger exception caused by conflicting fullBackupContent attribute?
-
-If you have specified custom backup rules in your application's manifest using the `android:fullBackupContent` attribute, then you might run into an exception during the build. This is because our SDK sets its own rules in the library manifest, which causes the manifest merger to complain about the conflict.
-
-To fix this, add the following attribute to your app's `<application>` tag so that the manifest merger picks your app's backup rules instead:
-
-```markup
-<manifest xmlns:tools="http://schemas.android.com/tools" ...>
-   <application 
-      ...
-      tools:replace="android:fullBackupContent">
-```
-
-Then, add the following SDK backup rules to your backup rules XML file:
-
-```markup
-<exclude domain="sharedpref" path="sentiance.xml"/>
-<exclude domain="database" path="sentiance-payloads"/>
-<exclude domain="database" path="sentiance-payloads.db"/>
-<exclude domain="database" path="sentiance"/>
-<exclude domain="database" path="sentiance.db"/>
-```
 
