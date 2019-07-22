@@ -1,23 +1,29 @@
 # Getting Started
 
 {% hint style="info" %}
-**Switching developer accounts**
+**Make sure to think about your development environments before you get started**
 
-When using the [portal to manage your apps](https://developers.sentiance.com/apps), make sure to select your developer account.   
-You can change developer accounts using the dropdown menu next to your current user.
+It's a best practice to use multiple environments during the development of your apps \(development, testing, production, etc.\) 
+
+You will need a separate app id & secret for each of these environments, make sure to mention this in your request.
+
+This will also allow us to enable debugging & analytics on your development environment if necessary.
 {% endhint %}
 
-### Create an application
+### Requesting an app id & secret
 
-An application represents a single mobile app. An appID & secret key is generated for the application that is needed to integrate the Sentiance SDK into a mobile application.
+In order to properly integrate the Sentiance SDK you will need an app id & secret. You can request an app id & secret by emailing to [support@sentiance.com](mailto:support@sentiance.com)
 
-1. Head over to [developers.sentiance.com/apps](https://developers.sentiance.com/apps)
-2. Use the "Add app" button to add a new application
-3. It's a good practice to use the same application name as in the App Store / Play Store
-4. Save your changes
+### Getting your app credentials
+
+1. Head over to[ insights.sentiance.com/\#/](http://insights.sentiance.com/#/)
+2. You should see at least one cell with the name of your app or company
+   * You may see one per development environment as mentioned above.
+3. The first field contains your app id & an easy copy button
+4. Click on "Click to reveal" under app secret
 5. You will now have an appID & secret key ready for integrating the Sentiance SDK into your mobile application
 
 {% hint style="warning" %}
-The same app id & secret should be used for a single mobile app that is available both on iOS & Android.
+In order to perform the above steps you will need developer permissions for your app / company.
 {% endhint %}
 
