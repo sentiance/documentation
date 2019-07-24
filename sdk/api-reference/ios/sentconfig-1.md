@@ -65,7 +65,7 @@ Key value pair passed from \[AppDelegate application:application didFinishLaunch
 
 ### didReceiveSdkStatusUpdate
 
-Callback to receive current status of SDK. Returns [SENTSDKStatus]()
+Callback to receive current status of SDK. Returns [SENTSDKStatus](sentsdk/sentsdkstatus.md)
 
 ```objectivec
 @property (nonatomic, copy) void (^didReceiveSdkStatusUpdate)(SENTSDKStatus* issue);
