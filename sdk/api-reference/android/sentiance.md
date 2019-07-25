@@ -17,7 +17,7 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 | long  | [getDiskQuotaLimit](sentiance.md#getdiskquotalimit) \(\) |
 | long  | [getDiskQuotaUsage](sentiance.md#getdiskquotausage) \(\) |
 | [InitState](initstate.md)  | [getInitState](sentiance.md#getinitstate) \(\) |
-| [Sentiance](sentiance.md) | getInstance \([Context](https://developer.android.com/reference/android/content/Context) context\) |
+| [Sentiance](sentiance.md) | [getInstance](sentiance.md#getinstance) \([Context](https://developer.android.com/reference/android/content/Context) context\) |
 | long  | [getMobileQuotaLimit](sentiance.md#getmobilequotalimit) \(\) |
 | long  | [getMobileQuotaUsage](sentiance.md#getmobilequotausage) \(\) |
 | [SdkStatus](sdkstatus/)  | [getSdkStatus](sentiance.md#getsdkstatus) \(\) |
@@ -34,7 +34,7 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 | void  | [setTripTimeoutListener](sentiance.md#settriptimeoutlistener) \(@Nullable [TripTimeoutListener](trip/triptimeoutlistener.md) listener\) |
 | [UserActivity](useractivity.md) | [setUserActivityListener](sentiance.md#setuseractivitylistener) \(@Nullable [UserActivityListener](useractivitylistener.md) listener\) |
 | void  | [start](sentiance.md#start) \([OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
-| void | start \([Date](https://developer.android.com/reference/java/util/Date) stopDate, [OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
+| void | [start](sentiance.md#start-1) \([Date](https://developer.android.com/reference/java/util/Date) stopDate, [OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
 | void  | [startTrip](sentiance.md#starttrip) \(final @Nullable Map&lt;String, String&gt; metadata, final @Nullable [TransportMode](trip/transportmode.md) transportModeHint, @Nullable [StartTripCallback](trip/starttripcallback.md) callback\) |
 | void  | [stop](sentiance.md#stop) \(\) |
 | void  | [stopTrip](sentiance.md#stoptrip) \(@Nullable [StopTripCallback](trip/stoptripcallback.md) callback\) |
