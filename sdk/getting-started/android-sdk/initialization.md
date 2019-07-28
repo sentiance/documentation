@@ -25,7 +25,7 @@ Then reference this new class in the application tag of the `AndroidManifest.xml
 
 ## Call the SDK init Method
 
-In the `onCreate()` method of your `Application` class, call [`init()`](../../api-reference/android/sentiance.md#init) and pass the [`SdkConfig`](../../api-reference/android/sdkconfig/) you created in the previous step, plus an instance of [`OnInitCallback`](../../api-reference/android/oninitcallback/) to handle the initialization result.
+In the `onCreate()` method of your `Application` class, call [`init()`](../../api-reference/android/sentiance.md#init) and pass the [`SdkConfig`](../../api-reference/android/sdkconfig/) you created in the previous step, plus an instance of [`OnInitCallback`](../../api-reference/android/oninitcallback/) to handle the initialization result. 
 
 {% code-tabs %}
 {% code-tabs-item title="MyApplication.java" %}
@@ -50,6 +50,12 @@ public void onCreate() {
 {% endcode-tabs %}
 
 Upon successful initialization, [`onInitSuccess()`](../../api-reference/android/oninitcallback/#oninitsuccess) will be called. If it fails, [`onInitFailure()`](../../api-reference/android/oninitcallback/#oninitfailure) will be called with an appropriate [`InitIssue`](../../api-reference/android/oninitcallback/initissue.md).
+
+{% hint style="warning" %}
+The [`init()`](../../api-reference/android/sentiance.md#init) call must be executed before `onCreate()` returns. Therefore, you must call it synchronously on the main thread. If you plan to add a remote flag to control the initialization \(e.g. Firebase Remote Config\), make sure the check is synchronous \(e.g. using a cached flag\).
+
+See [here](../../appendix/sdk-initialization.md#why-initialize-in-the-application-appdelegate-class) to understand more about why this is important. An [example app](https://github.com/sentiance/sdk-starter-android-sdk-control/blob/master/app/src/main/java/com/sentiance/sdkstarter/MyApplication.java#L53) demonstrating this can be found on our [Github](https://github.com/sentiance/sdk-starter-android-sdk-control).
+{% endhint %}
 
 To learn more about initialization, see the [SDK Initialization](../../appendix/sdk-initialization.md) section.
 
