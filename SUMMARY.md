@@ -110,6 +110,7 @@
 * [Authentication and Authorization](backend/authentication-and-authorization.md)
 * [GraphQL](backend/graphql.md)
 * [REST API Reference](backend/rest-api.md)
+* [Offloads](backend/offloads.md)
 * [Data Reference](backend/data-reference/README.md)
   * [Data Reference A-G](backend/data-reference/data-reference-a-g.md)
   * [Data Reference H-P](backend/data-reference/data-reference-h-p.md)
