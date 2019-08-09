@@ -58,7 +58,7 @@ On each successful delivery we expect a **200 OK** Status Code. If we don't get 
 
 ### Security
 
-To ensure that your messages originate from Sentiance and not from a malicious third party, we will set a BasicAuth header on every request. You can send us these basic credentials \(we prefer SMS or [https://onetimesecret.com/](https://onetimesecret.com/) for security\) and we attach them to all our requests.
+To ensure that your messages originate from Sentiance and not from a malicious third party, we will set a **BasicAuth** header on every request. You can send us the credentials in `username:password` form \([https://onetimesecret.com/](https://onetimesecret.com/) for security\) and we will attach them to every request.
 
 Furthermore, we request that you secure your connection with TLS. [https://www.ssllabs.com/](https://www.ssllabs.com/) is a great place to inspect your endpoint and ensure it meets ongoing security standards. We **require** a B grade or above to ensure all data is transmitted securely.
 
