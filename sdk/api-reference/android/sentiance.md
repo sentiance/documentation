@@ -1,6 +1,6 @@
 # Sentiance
 
-retaThe Sentiance class is the main entry point for interacting with the SDK. This class is a singleton, therefore you can obtain an instance as follows:
+The Sentiance class is the main entry point for interacting with the SDK. This class is a singleton, therefore you can obtain an instance as follows:
 
 ```java
 Sentiance sentianceSDK = Sentiance.getInstance(context);
