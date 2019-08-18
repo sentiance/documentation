@@ -1,5 +1,13 @@
 # Builder
 
+This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentiance.md#init).
+
+## Builder API
+
+| constructor |  |
+| :--- | :--- |
+| [Builder](sdkconfig-builder.md#builder) \(String appId, String secret, [Notification](https://developer.android.com/reference/android/app/Notification) notification\) |  |
+
 |  |  |
 | :--- | :--- |
 | [Builder](sdkconfig-builder.md) | [baseURL](sdkconfig-builder.md#baseurl) \(String url\) |
@@ -9,6 +17,26 @@
 | [Builder](sdkconfig-builder.md) | [setNotificationId](sdkconfig-builder.md#setnotificationid) \(int id\) |
 | [Builder](sdkconfig-builder.md) | [setOnSdkStatusUpdateHandler](sdkconfig-builder.md#setonsdkstatusupdatehandler) \([OnSdkStatusUpdateHandler](../onsdkstatusupdatehandler.md) handler\) |
 | [Builder](sdkconfig-builder.md) | [setTriggeredTripsEnabled](sdkconfig-builder.md#settriggeredtripsenabled) \(boolean enabled\) |
+
+
+
+### `Builder`
+
+> ```java
+> Builder(String appId, String secret, Notification notification)
+> ```
+>
+> Creates a builder object used for initializing the Sentiance SDK.
+>
+> **Please note: hard-coded credentials are not secure. Load your Sentiance credentials from a secure source such a remote server, and store them securely on the device.**
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | appId | The Sentiance app credential ID. |
+> | secret | The Sentiance app credential secret. |
+> | notification  | A [`Notification`](https://developer.android.com/reference/android/app/Notification) used by the SDK when starting a foreground service. |
+
+
 
 ### `baseURL()`
 
@@ -61,55 +89,6 @@
 > | linker | A [`MetaUserLinkerAsync`](../metauserlinkerasync.md) which will handle the linking. |
 
 ### `setNotificationId`
-
-This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentiance.md#init).
-
-## Builder API
-
-| constructor |  |
-| :--- | :--- |
-| [Builder](sdkconfig-builder.md#builder) \(String appId, String secret, [Notification](https://developer.android.com/reference/android/app/Notification) notification\) |  |
-
-|  |  |
-| :--- | :--- |
-| [Builder](sdkconfig-builder.md) | [baseURL](sdkconfig-builder.md#baseurl) \(String url\) |
-| [SdkConfig](./) | [build](sdkconfig-builder.md#build) \(\) |
-| [Builder](sdkconfig-builder.md) | [setMetaUserLinker](sdkconfig-builder.md#setmetauserlinker) \([MetaUserLinker](../metauserlinker.md) linker\) |
-| [Builder](sdkconfig-builder.md) | [setNotificationId](sdkconfig-builder.md#setnotificationid) \(int id\) |
-| [Builder](sdkconfig-builder.md) | [setOnSdkStatusUpdateHandler](sdkconfig-builder.md#setonsdkstatusupdatehandler) \([OnSdkStatusUpdateHandler](../onsdkstatusupdatehandler.md) handler\) |
-| [Builder](sdkconfig-builder.md) | [setTriggeredTripsEnabled](sdkconfig-builder.md#settriggeredtripsenabled) \(boolean enabled\) |
-
-
-
-### `Builder`
-
-> ```java
-> Builder(String appId, String secret, Notification notification)
-> ```
->
-> Creates a builder object used for initializing the Sentiance SDK.
->
-> **Please note: hard-coded credentials are not secure. Load your Sentiance credentials from a secure source such a remote server, and store them securely on the device.**
->
-> | Parameters |  |
-> | :--- | :--- |
-> | appId | The Sentiance app credential ID. |
-> | secret | The Sentiance app credential secret. |
-> | notification  | A [`Notification`](https://developer.android.com/reference/android/app/Notification) used by the SDK when starting a foreground service. |
-
-
-
-### `baseURL()`
-
-> ```java
-> Builder baseURL(String url)
-> ```
->
-> Sets the Sentiance API URL.
->
-> | Parameters |  |
-> | :--- | :--- |
-> | url | The Sentiance API URL. |
 
 > ```java
 > Builder setNotificationId(int Id)
