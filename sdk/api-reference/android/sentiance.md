@@ -32,7 +32,7 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 | void  | [removeUserMetadataField](sentiance.md#removeusermetadatafield) \(String label\) |
 | void  | [setCrashCallback](sentiance.md#setcrashcallback) \(@Nullable [CrashCallback](crashdetection/crashcallback.md) callback\) |
 | void  | [setTripTimeoutListener](sentiance.md#settriptimeoutlistener) \(@Nullable [TripTimeoutListener](trip/triptimeoutlistener.md) listener\) |
-| [UserActivity](useractivity.md) | [setUserActivityListener](sentiance.md#setuseractivitylistener) \(@Nullable [UserActivityListener](useractivitylistener.md) listener\) |
+| void | [setUserActivityListener](sentiance.md#setuseractivitylistener) \(@Nullable [UserActivityListener](useractivitylistener.md) listener\) |
 | void  | [start](sentiance.md#start) \([OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
 | void | [start](sentiance.md#start-1) \([Date](https://developer.android.com/reference/java/util/Date) stopDate, [OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
 | void  | [startTrip](sentiance.md#starttrip) \(final @Nullable Map&lt;String, String&gt; metadata, final @Nullable [TransportMode](trip/transportmode.md) transportModeHint, @Nullable [StartTripCallback](trip/starttripcallback.md) callback\) |
