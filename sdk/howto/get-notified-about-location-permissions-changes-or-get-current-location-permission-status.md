@@ -69,7 +69,7 @@ SdkConfig config = new SdkConfig.Builder(appId, secret, notification)
 
 where callback will be called every time status change is detected.
 
-#### Example code to set status listener:
+**Example code to set status listener when initializing Sentiance SDK:**
 
 {% tabs %}
 {% tab title="iOS" %}
