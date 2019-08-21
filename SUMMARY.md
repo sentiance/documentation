@@ -88,6 +88,8 @@
       * [SENTSDKStatus](sdk/api-reference/ios/sentsdk/sentsdkstatus.md)
       * [SENTPublicDefinitions](sdk/api-reference/ios/sentsdk/sentpublicdefinitions.md)
     * [SENTConfig](sdk/api-reference/ios/sentconfig-1.md)
+* [How To](sdk/howto/README.md)
+  * [Check the Location Permissions](sdk/howto/get-notified-about-location-permissions-changes-or-get-current-location-permission-status.md)
 * [FAQ](sdk/faq/README.md)
   * [Android](sdk/faq/android.md)
   * [iOS](sdk/faq/ios.md)
