@@ -9,7 +9,7 @@ If you see error similar to this:
 ld: symbol(s) not found for architecture arm64 "
 ```
 
-It means that framework is not included. Please check [step 1 in the iOS Quick start](../../getting-started/ios-sdk/include-sdk.md) or simply:
+It means that framework is not included. Please check [step 1 in the iOS Quick start]() or simply:
 
 1. Go to your **Project**
 2. Select your **Target**

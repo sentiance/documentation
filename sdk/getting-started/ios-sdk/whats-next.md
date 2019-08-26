@@ -1,4 +1,4 @@
-# 8. What's Next
+# 5. What's Next
 
 {% hint style="success" %}
 Your app is now properly set up to work with the Sentiance SDK.

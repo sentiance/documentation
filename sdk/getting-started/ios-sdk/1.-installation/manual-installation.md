@@ -1,12 +1,8 @@
----
-description: We offer two SDK integration options. Podfile and manual.
----
+# Manual Installation
 
-# 1. Including the SDK
+## Including the SDK
 
-## Manual
-
-Download Sentiance iOS SDK: [Sentiance iOS SDK 5.4.0](https://sentiance-sdk.s3-eu-west-1.amazonaws.com/ios/transport/SENTSDK-5.4.0.framework.zip)
+Download Sentiance iOS SDK: [Sentiance iOS SDK 5.5.0](https://sentiance-sdk.s3-eu-west-1.amazonaws.com/ios/transport/SENTSDK-5.5.0.framework.zip)
 
 After you've downloaded and unzipped the SDK, import it as a linked framework in your Xcode project:
 
@@ -21,4 +17,16 @@ You'll also need to include the SDK bundle in your project:
 1. Go to the **Build Phases** tab of your target settings
 2. Expand the **Copy Bundle Resources** row and click the **+** button
 3. Choose the **SENTSDK.bundle** file located inside **SENTSDK.framework**
+
+\*\*\*\*
+
+## Build Settings
+
+1. Go to the **Build Settings** tab of your target settings
+2. Look for **Other Linker Flags** in the **Linking** section
+3. Add `-lz`, `-all_load` and `-lc++`
+
+![](../../../../.gitbook/assets/ios-linker-flags-2.png)
+
+
 
