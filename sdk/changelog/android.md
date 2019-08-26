@@ -1,5 +1,22 @@
 # Android
 
+## \[4.10.1\] - 26 Aug 2019
+
+#### Added
+
+* Improved stationary detection.
+* Faster detection of location permission grant.
+
+#### Changed
+
+* Decrease the number of notifications shown during stationary.
+* Explicitly set the `uses-feature` "android.hardware.location.gps" `required` attribute to `false`.
+
+#### Fixed
+
+* Add missing fields to `toString()` and `equals()` methods of the [`SdkStatus`](../api-reference/android/sdkstatus/) class.
+* Properly detect and end ongoing \(internal\) SDK trips with poor location accuracy.
+
 ## \[4.10.0\] - 24 Jun 2019
 
 #### Added
