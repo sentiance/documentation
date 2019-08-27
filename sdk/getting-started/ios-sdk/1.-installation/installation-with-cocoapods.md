@@ -14,7 +14,7 @@ pod 'SENTSDK'
 Then run the following command from Terminal:
 
 ```
-pod install
+pod install --repo-update
 ```
 
 
