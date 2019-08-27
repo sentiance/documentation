@@ -1,5 +1,16 @@
 # iOS
 
+## \[5.5.1\] - 27 Aug 2019
+
+#### Added
+
+* Support for [CocoaPods](https://cocoapods.org)
+* [Integration Guide](../getting-started/ios-sdk/2.-configuration/integration-guide.md), to assist with installation and configuration of the SDK from Xcode
+
+**Fixed**
+
+* An issue that caused location observation to not stop properly when [`startWithStopDate:completion:`](https://docs.sentiance.com/sdk/api-reference/ios/sentsdk#startwithstopdate) is used
+
 ## \[5.4.0\] - 2 July 2019
 
 #### Added
