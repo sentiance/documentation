@@ -34,6 +34,7 @@
   * [iOS](sdk/appendix/ios/README.md)
     * [Swift Support](sdk/appendix/ios/swift-support.md)
     * [App Store Release](sdk/appendix/ios/app-store-release.md)
+    * [iOS 13 permission changes](sdk/appendix/ios/ios-13-permissions.md)
   * [Xamarin](sdk/appendix/xamarin.md)
   * [SDK Initialization](sdk/appendix/sdk-initialization.md)
   * [Controlled Detections](sdk/appendix/controlled-detections/README.md)
