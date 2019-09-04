@@ -128,20 +128,20 @@ The user semantic time.
 ### Stationary
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IEvent](/backend/data-reference/data-reference-q-z#ievent)
+**Implements**: [IEvent](/backend/data-reference/data-reference-h-p#ievent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [EventType](/backend/data-reference/data-reference-q-z#eventtype) | 'Stationary' |
+| type | [EventType](/backend/data-reference/data-reference-a-g#eventtype) | 'Stationary' |
 | start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| start_ts | [BigInt](/backend/data-reference/data-reference-q-z#bigint) |  |
-| end_ts | [BigInt](/backend/data-reference/data-reference-q-z#bigint) |  |
-| analysis_type | [AnalysisType](/backend/data-reference/data-reference-q-z#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
+| start_ts | [BigInt](/backend/data-reference/data-reference-a-g#bigint) |  |
+| end_ts | [BigInt](/backend/data-reference/data-reference-a-g#bigint) |  |
+| analysis_type | [AnalysisType](/backend/data-reference/data-reference-a-g#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
 | latitude | Float |  |
 | longitude | Float |  |
-| duration | [BigInt](/backend/data-reference/data-reference-q-z#bigint) |  |
-| address | [Address](/backend/data-reference/data-reference-q-z#address) |  |
+| duration | [BigInt](/backend/data-reference/data-reference-a-g#bigint) |  |
+| address | [Address](/backend/data-reference/data-reference-a-g#address) |  |
 | location | [StationaryLocation](/backend/data-reference/data-reference-q-z#stationarylocation) |  |
 | weather | [WeatherRange](/backend/data-reference/data-reference-q-z#weatherrange) | Weather data associated with this event. |
 
@@ -149,29 +149,29 @@ The user semantic time.
 ### StationaryFeedback
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IFeedback](/backend/data-reference/data-reference-q-z#ifeedback), [IEventFeedback](/backend/data-reference/data-reference-q-z#ieventfeedback)
+**Implements**: [IFeedback](/backend/data-reference/data-reference-h-p#ifeedback), [IEventFeedback](/backend/data-reference/data-reference-h-p#ieventfeedback)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [FeedbackType](/backend/data-reference/data-reference-q-z#feedbacktype) | 'StationaryFeedback' |
+| type | [FeedbackType](/backend/data-reference/data-reference-a-g#feedbacktype) | 'StationaryFeedback' |
 | end | String | End time the feedback relates to, sourced by the event, moment or user-provided. |
 | created | String | Time when this feedback entry was created. |
 | projection_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
-| event_feedback | [EventFeedback](/backend/data-reference/data-reference-q-z#eventfeedback) |  |
+| event_feedback | [EventFeedback](/backend/data-reference/data-reference-a-g#eventfeedback) |  |
 | stationary | [Stationary](/backend/data-reference/data-reference-q-z#stationary) | The Stationary this feedback refers to. |
 
 
 ### StationaryIntervalPrediction
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IPrediction](/backend/data-reference/data-reference-q-z#iprediction), [IEventPrediction](/backend/data-reference/data-reference-q-z#ieventprediction), [IIntervalPrediction](/backend/data-reference/data-reference-q-z#iintervalprediction)
+**Implements**: [IPrediction](/backend/data-reference/data-reference-h-p#iprediction), [IEventPrediction](/backend/data-reference/data-reference-h-p#ieventprediction), [IIntervalPrediction](/backend/data-reference/data-reference-h-p#iintervalprediction)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [PredictionType](/backend/data-reference/data-reference-q-z#predictiontype) | 'StationaryIntervalPrediction' |
+| type | [PredictionType](/backend/data-reference/data-reference-h-p#predictiontype) | 'StationaryIntervalPrediction' |
 | probability | Float |  |
-| event_type | [EventType](/backend/data-reference/data-reference-q-z#eventtype) |  |
-| start_interval | [PredictionInterval](/backend/data-reference/data-reference-q-z#predictioninterval) |  |
+| event_type | [EventType](/backend/data-reference/data-reference-a-g#eventtype) |  |
+| start_interval | [PredictionInterval](/backend/data-reference/data-reference-h-p#predictioninterval) |  |
 | location | [StationaryLocation](/backend/data-reference/data-reference-q-z#stationarylocation) |  |
 
 
@@ -183,15 +183,15 @@ Holds more information about a stationary location.
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'StationaryLocation' |
-| significance | [LocationSignificance](/backend/data-reference/data-reference-q-z#locationsignificance) | What this location means for the user, or the frequency it's being visited. |
-| place | [LocationPlaceCandidate](/backend/data-reference/data-reference-q-z#locationplacecandidate) |  |
-| place_candidates | [LocationPlaceCandidate](/backend/data-reference/data-reference-q-z#locationplacecandidate) |  |
+| significance | [LocationSignificance](/backend/data-reference/data-reference-h-p#locationsignificance) | What this location means for the user, or the frequency it's being visited. |
+| place | [LocationPlaceCandidate](/backend/data-reference/data-reference-h-p#locationplacecandidate) |  |
+| place_candidates | [LocationPlaceCandidate](/backend/data-reference/data-reference-h-p#locationplacecandidate) |  |
 
 
 ### StationaryPrediction
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IBranchEvent](/backend/data-reference/data-reference-q-z#ibranchevent)
+**Implements**: [IBranchEvent](/backend/data-reference/data-reference-h-p#ibranchevent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -201,13 +201,13 @@ Holds more information about a stationary location.
 | type | [TreePredictionType](/backend/data-reference/data-reference-q-z#treepredictiontype) | 'StationaryPrediction' |
 | location_type | String |  |
 | significance | String |  |
-| place | [LocationPlaceCandidate](/backend/data-reference/data-reference-q-z#locationplacecandidate) |  |
+| place | [LocationPlaceCandidate](/backend/data-reference/data-reference-h-p#locationplacecandidate) |  |
 
 
 ### StationaryTimeAggregate
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITimeAggregateAttribute](/backend/data-reference/data-reference-q-z#itimeaggregateattribute), [IUserAttribute](/backend/data-reference/data-reference-q-z#iuserattribute)
+**Implements**: [ITimeAggregateAttribute](/backend/data-reference/data-reference-h-p#itimeaggregateattribute), [IUserAttribute](/backend/data-reference/data-reference-h-p#iuserattribute)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -215,7 +215,7 @@ Holds more information about a stationary location.
 | period | [TimePeriod](/backend/data-reference/data-reference-q-z#timeperiod) |  |
 | duration | Float |  |
 | place_category | String |  |
-| location_significance | [LocationSignificance](/backend/data-reference/data-reference-q-z#locationsignificance) |  |
+| location_significance | [LocationSignificance](/backend/data-reference/data-reference-h-p#locationsignificance) |  |
 
 
 ### StreamDefinition
@@ -314,23 +314,23 @@ A single waypoint in the augmented trajectory.
 ### Transport
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IEvent](/backend/data-reference/data-reference-q-z#ievent)
+**Implements**: [IEvent](/backend/data-reference/data-reference-h-p#ievent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [EventType](/backend/data-reference/data-reference-q-z#eventtype) | 'Transport' |
+| type | [EventType](/backend/data-reference/data-reference-a-g#eventtype) | 'Transport' |
 | start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| start_ts | [BigInt](/backend/data-reference/data-reference-q-z#bigint) |  |
-| end_ts | [BigInt](/backend/data-reference/data-reference-q-z#bigint) |  |
-| analysis_type | [AnalysisType](/backend/data-reference/data-reference-q-z#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
+| start_ts | [BigInt](/backend/data-reference/data-reference-a-g#bigint) |  |
+| end_ts | [BigInt](/backend/data-reference/data-reference-a-g#bigint) |  |
+| analysis_type | [AnalysisType](/backend/data-reference/data-reference-a-g#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
 | mode | [TransportMode](/backend/data-reference/data-reference-q-z#transportmode) | The transport mode that was identified for this transport.  |
 | distance | Int |  |
 | occupant_role | [TransportOccupantRole](/backend/data-reference/data-reference-q-z#transportoccupantrole) |  |
 | waypoints | [Waypoint](/backend/data-reference/data-reference-q-z#waypoint) |  |
 | trajectory | [TransportTrajectory](/backend/data-reference/data-reference-q-z#transporttrajectory) |  |
 | behavior_scores | [TransportBehaviorScores](/backend/data-reference/data-reference-q-z#transportbehaviorscores) |  |
-| behavior_annotations | [ITransportBehaviorAnnotation](/backend/data-reference/data-reference-q-z#itransportbehaviorannotation) |  |
+| behavior_annotations | [ITransportBehaviorAnnotation](/backend/data-reference/data-reference-h-p#itransportbehaviorannotation) |  |
 | behavior_features | [TransportBehaviorFeatures](/backend/data-reference/data-reference-q-z#transportbehaviorfeatures) |  |
 | weather | [WeatherRange](/backend/data-reference/data-reference-q-z#weatherrange) | Weather data associated with this event. |
 
@@ -349,26 +349,26 @@ A single waypoint in the augmented trajectory.
 ### TransportBehaviorFeatures
 **Kind**: UNION
 
-**Possible types**: [CarBehaviorFeatures](/backend/data-reference/data-reference-q-z#carbehaviorfeatures)
+**Possible types**: [CarBehaviorFeatures](/backend/data-reference/data-reference-a-g#carbehaviorfeatures)
 
 ### TransportBehaviorScores
 **Kind**: UNION
 
-**Possible types**: [CarBehaviorScores](/backend/data-reference/data-reference-q-z#carbehaviorscores)
+**Possible types**: [CarBehaviorScores](/backend/data-reference/data-reference-a-g#carbehaviorscores)
 The transport behavior scores we have detected during a transport. These scores are only available when the full trip is processed.
 
 ### TransportFeedback
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IFeedback](/backend/data-reference/data-reference-q-z#ifeedback), [IEventFeedback](/backend/data-reference/data-reference-q-z#ieventfeedback)
+**Implements**: [IFeedback](/backend/data-reference/data-reference-h-p#ifeedback), [IEventFeedback](/backend/data-reference/data-reference-h-p#ieventfeedback)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [FeedbackType](/backend/data-reference/data-reference-q-z#feedbacktype) | 'TransportFeedback' |
+| type | [FeedbackType](/backend/data-reference/data-reference-a-g#feedbacktype) | 'TransportFeedback' |
 | end | String | End time the feedback relates to, sourced by the event, moment or user-provided. |
 | created | String | Time when this feedback entry was created. |
 | projection_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
-| event_feedback | [EventFeedback](/backend/data-reference/data-reference-q-z#eventfeedback) |  |
+| event_feedback | [EventFeedback](/backend/data-reference/data-reference-a-g#eventfeedback) |  |
 | transport | [Transport](/backend/data-reference/data-reference-q-z#transport) | The Transport this feedback refers to. |
 
 
@@ -386,14 +386,14 @@ Historically aggregated transport heatmaps.
 ### TransportIntervalPrediction
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IPrediction](/backend/data-reference/data-reference-q-z#iprediction), [IEventPrediction](/backend/data-reference/data-reference-q-z#ieventprediction), [IIntervalPrediction](/backend/data-reference/data-reference-q-z#iintervalprediction)
+**Implements**: [IPrediction](/backend/data-reference/data-reference-h-p#iprediction), [IEventPrediction](/backend/data-reference/data-reference-h-p#ieventprediction), [IIntervalPrediction](/backend/data-reference/data-reference-h-p#iintervalprediction)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [PredictionType](/backend/data-reference/data-reference-q-z#predictiontype) | 'TransportIntervalPrediction' |
+| type | [PredictionType](/backend/data-reference/data-reference-h-p#predictiontype) | 'TransportIntervalPrediction' |
 | probability | Float |  |
-| event_type | [EventType](/backend/data-reference/data-reference-q-z#eventtype) |  |
-| start_interval | [PredictionInterval](/backend/data-reference/data-reference-q-z#predictioninterval) |  |
+| event_type | [EventType](/backend/data-reference/data-reference-a-g#eventtype) |  |
+| start_interval | [PredictionInterval](/backend/data-reference/data-reference-h-p#predictioninterval) |  |
 | mode | [TransportMode](/backend/data-reference/data-reference-q-z#transportmode) |  |
 
 
@@ -444,7 +444,7 @@ The transport modes the platform supports.
 ### TransportPrediction
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IBranchEvent](/backend/data-reference/data-reference-q-z#ibranchevent)
+**Implements**: [IBranchEvent](/backend/data-reference/data-reference-h-p#ibranchevent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -458,7 +458,7 @@ The transport modes the platform supports.
 ### TransportTimeAggregate
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITimeAggregateAttribute](/backend/data-reference/data-reference-q-z#itimeaggregateattribute), [IUserAttribute](/backend/data-reference/data-reference-q-z#iuserattribute)
+**Implements**: [ITimeAggregateAttribute](/backend/data-reference/data-reference-h-p#itimeaggregateattribute), [IUserAttribute](/backend/data-reference/data-reference-h-p#iuserattribute)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -488,19 +488,19 @@ The transport modes the platform supports.
 ### Trip
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IEvent](/backend/data-reference/data-reference-q-z#ievent)
+**Implements**: [IEvent](/backend/data-reference/data-reference-h-p#ievent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [EventType](/backend/data-reference/data-reference-q-z#eventtype) | 'Trip' |
+| type | [EventType](/backend/data-reference/data-reference-a-g#eventtype) | 'Trip' |
 | user_id | String |  |
 | start | String |  |
 | end | String |  |
-| start_ts | [BigInt](/backend/data-reference/data-reference-q-z#bigint) |  |
-| end_ts | [BigInt](/backend/data-reference/data-reference-q-z#bigint) |  |
+| start_ts | [BigInt](/backend/data-reference/data-reference-a-g#bigint) |  |
+| end_ts | [BigInt](/backend/data-reference/data-reference-a-g#bigint) |  |
 | mode | String | Car, tram, walking, etc. |
-| analysis_type | [AnalysisType](/backend/data-reference/data-reference-q-z#analysistype) | Type of processing applied on the trip. |
-| behavior_scores | [CarBehaviorScores](/backend/data-reference/data-reference-q-z#carbehaviorscores) |  |
+| analysis_type | [AnalysisType](/backend/data-reference/data-reference-a-g#analysistype) | Type of processing applied on the trip. |
+| behavior_scores | [CarBehaviorScores](/backend/data-reference/data-reference-a-g#carbehaviorscores) |  |
 | weather | [WeatherRange](/backend/data-reference/data-reference-q-z#weatherrange) |  |
 
 
@@ -518,7 +518,7 @@ Access trips across all users.
 ### TurnBehaviorAnnotation
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITransportBehaviorAnnotation](/backend/data-reference/data-reference-q-z#itransportbehaviorannotation)
+**Implements**: [ITransportBehaviorAnnotation](/backend/data-reference/data-reference-h-p#itransportbehaviorannotation)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -527,7 +527,7 @@ Access trips across all users.
 | end | String |  |
 | maneuver | [TurnBehaviorAnnotationManeuver](/backend/data-reference/data-reference-q-z#turnbehaviorannotationmaneuver) |  |
 | duration | Int |  |
-| path | [BehaviorAnnotationPathWaypoint](/backend/data-reference/data-reference-q-z#behaviorannotationpathwaypoint) |  |
+| path | [BehaviorAnnotationPathWaypoint](/backend/data-reference/data-reference-a-g#behaviorannotationpathwaypoint) |  |
 | magnitude | Float | The centripetal g-force you experience during turns, measured in (0.2*m)/s². Taking a turn at 60km/h will result in a higher magnitude compared to the same turn at 30 km/h |
 
 
@@ -542,7 +542,7 @@ Access trips across all users.
 ### User
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IUser](/backend/data-reference/data-reference-q-z#iuser)
+**Implements**: [IUser](/backend/data-reference/data-reference-h-p#iuser)
 An anonymous SDK user that authenticates using the token strategy, can push data and can query only it's own data.
 
 | Property | Type | Description |
@@ -555,26 +555,26 @@ An anonymous SDK user that authenticates using the token strategy, can push data
 | created_at | String | The time when this user was created, ISO8601.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
 | sdk | [UserSdkSettings](/backend/data-reference/data-reference-q-z#usersdksettings) |  |
 | application_id | String | The ID of the Application this user relates to. |
-| application | [Application](/backend/data-reference/data-reference-q-z#application) | The Application this user relates to. |
-| custom_event_history | [CustomEvent](/backend/data-reference/data-reference-q-z#customevent) | Custom Event History |
-| event_history | [IEvent](/backend/data-reference/data-reference-q-z#ievent) | An unordered list of events we have detected for this user. |
+| application | [Application](/backend/data-reference/data-reference-a-g#application) | The Application this user relates to. |
+| custom_event_history | [CustomEvent](/backend/data-reference/data-reference-a-g#customevent) | Custom Event History |
+| event_history | [IEvent](/backend/data-reference/data-reference-h-p#ievent) | An unordered list of events we have detected for this user. |
 | car_behavior | [UserCarBehavior](/backend/data-reference/data-reference-q-z#usercarbehavior) | The user car behavior aggregated over the last 9 weeks. |
 | aggregated_driving_scores | [UserTimeAggregatedScores](/backend/data-reference/data-reference-q-z#usertimeaggregatedscores) |  |
 | transport_heatmaps | [TransportHeatmaps](/backend/data-reference/data-reference-q-z#transportheatmaps) | The aggregated transport heatmaps calculated over time. |
-| metadata | [JSON](/backend/data-reference/data-reference-q-z#json) | All custom set metadata properties on this user. This is a JSON object with key->value pairs. |
-| device | [DeviceInfo](/backend/data-reference/data-reference-q-z#deviceinfo) | The last known active tracking device metadata |
-| active_moments | [IMoment](/backend/data-reference/data-reference-q-z#imoment) | An unordered list of moments that are ongoing from the point of view of the platform. |
-| moment_history | [IMoment](/backend/data-reference/data-reference-q-z#imoment) | An unordered list of moments we have detected for this user. |
+| metadata | [JSON](/backend/data-reference/data-reference-h-p#json) | All custom set metadata properties on this user. This is a JSON object with key->value pairs. |
+| device | [DeviceInfo](/backend/data-reference/data-reference-a-g#deviceinfo) | The last known active tracking device metadata |
+| active_moments | [IMoment](/backend/data-reference/data-reference-h-p#imoment) | An unordered list of moments that are ongoing from the point of view of the platform. |
+| moment_history | [IMoment](/backend/data-reference/data-reference-h-p#imoment) | An unordered list of moments we have detected for this user. |
 | semantic_time | [UserSemanticTime](/backend/data-reference/data-reference-q-z#usersemantictime) | The user's semantic time averaged over time. |
-| anomaly_history | [IAnomaly](/backend/data-reference/data-reference-q-z#ianomaly) |  |
-| segments | [ISegment](/backend/data-reference/data-reference-q-z#isegment) | An unordered list of segments that are detected for this user. |
-| location_clusters | [LocationCluster](/backend/data-reference/data-reference-q-z#locationcluster) | Locations this user has been stationary at and the features we have learned about those locations (significance, point of interest, ...) |
+| anomaly_history | [IAnomaly](/backend/data-reference/data-reference-h-p#ianomaly) |  |
+| segments | [ISegment](/backend/data-reference/data-reference-h-p#isegment) | An unordered list of segments that are detected for this user. |
+| location_clusters | [LocationCluster](/backend/data-reference/data-reference-h-p#locationcluster) | Locations this user has been stationary at and the features we have learned about those locations (significance, point of interest, ...) |
 | location | [Waypoint](/backend/data-reference/data-reference-q-z#waypoint) | The last known location we have for this user. |
 | health | [UserHealth](/backend/data-reference/data-reference-q-z#userhealth) | The historical health attributes. |
-| attributes | [IUserAttribute](/backend/data-reference/data-reference-q-z#iuserattribute) |  |
-| predictions | [IPrediction](/backend/data-reference/data-reference-q-z#iprediction) | Event/Moment predictions for this user |
-| prediction_tree | [PredictionTree](/backend/data-reference/data-reference-q-z#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. |
-| feedback_history | [IFeedback](/backend/data-reference/data-reference-q-z#ifeedback) | Feedback on this user |
+| attributes | [IUserAttribute](/backend/data-reference/data-reference-h-p#iuserattribute) |  |
+| predictions | [IPrediction](/backend/data-reference/data-reference-h-p#iprediction) | Event/Moment predictions for this user |
+| prediction_tree | [PredictionTree](/backend/data-reference/data-reference-h-p#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. |
+| feedback_history | [IFeedback](/backend/data-reference/data-reference-h-p#ifeedback) | Feedback on this user |
 
 
 ### UserAccountRole
@@ -587,7 +587,7 @@ An anonymous SDK user that authenticates using the token strategy, can push data
 | user_id | String |  |
 | account_id | String |  |
 | role | String |  |
-| account | [Account](/backend/data-reference/data-reference-q-z#account) |  |
+| account | [Account](/backend/data-reference/data-reference-a-g#account) |  |
 
 
 ### UserAttributeType
@@ -651,9 +651,9 @@ This scoring system is used to track an individuals health.
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'UserHealthScores' |
-| activity | [FloatAttribute](/backend/data-reference/data-reference-q-z#floatattribute) | Score that measures a general overview of user health. It takes into account sport duration, walking/biking distance & walking/biking speed. A higher score means you are more active in regard to physical activity and exercise. |
-| mobility | [FloatAttribute](/backend/data-reference/data-reference-q-z#floatattribute) | Score that measures a general overview of user mobility, the higher the score, the more ability to pursue various activities in life. It combines the locations visited frequency, distance travelled and user action radius. It is independent of transport mode. |
-| work_social | [FloatAttribute](/backend/data-reference/data-reference-q-z#floatattribute) | Score that measures a general overview of user's social activities. It is calculated considering two components: the social score and work score. It takes into account how much time the user spends in locations, as well as how many locations the user visits. It is a measure of the number user social relationships together with their duration. It doesn't count user's home and work location, but remote work locations are considered. The higher the score, the more and the longer social interactions the user has. |
+| activity | [FloatAttribute](/backend/data-reference/data-reference-a-g#floatattribute) | Score that measures a general overview of user health. It takes into account sport duration, walking/biking distance & walking/biking speed. A higher score means you are more active in regard to physical activity and exercise. |
+| mobility | [FloatAttribute](/backend/data-reference/data-reference-a-g#floatattribute) | Score that measures a general overview of user mobility, the higher the score, the more ability to pursue various activities in life. It combines the locations visited frequency, distance travelled and user action radius. It is independent of transport mode. |
+| work_social | [FloatAttribute](/backend/data-reference/data-reference-a-g#floatattribute) | Score that measures a general overview of user's social activities. It is calculated considering two components: the social score and work score. It takes into account how much time the user spends in locations, as well as how many locations the user visits. It is a measure of the number user social relationships together with their duration. It doesn't count user's home and work location, but remote work locations are considered. The higher the score, the more and the longer social interactions the user has. |
 
 
 ### UserRole
@@ -694,9 +694,9 @@ Car transport scores by month, week, day.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| month | [CarBehaviorScores](/backend/data-reference/data-reference-q-z#carbehaviorscores) |  |
-| week | [CarBehaviorScores](/backend/data-reference/data-reference-q-z#carbehaviorscores) |  |
-| day | [CarBehaviorScores](/backend/data-reference/data-reference-q-z#carbehaviorscores) |  |
+| month | [CarBehaviorScores](/backend/data-reference/data-reference-a-g#carbehaviorscores) |  |
+| week | [CarBehaviorScores](/backend/data-reference/data-reference-a-g#carbehaviorscores) |  |
+| day | [CarBehaviorScores](/backend/data-reference/data-reference-a-g#carbehaviorscores) |  |
 
 
 ### UserType
@@ -713,8 +713,8 @@ Access the user nodes
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'UsersConnection' |
-| slice | [IUser](/backend/data-reference/data-reference-q-z#iuser) | The individual user nodes. Provide the right paging parameters to slice your response data. By default a slice holds 100 users, which you can increase to 1000. |
-| paging | [Paging](/backend/data-reference/data-reference-q-z#paging) |  |
+| slice | [IUser](/backend/data-reference/data-reference-h-p#iuser) | The individual user nodes. Provide the right paging parameters to slice your response data. By default a slice holds 100 users, which you can increase to 1000. |
+| paging | [Paging](/backend/data-reference/data-reference-h-p#paging) |  |
 
 
 ### Waypoint
@@ -779,7 +779,7 @@ Access the user nodes
 ### WorkingTimeAggregate
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITimeAggregateAttribute](/backend/data-reference/data-reference-q-z#itimeaggregateattribute), [IUserAttribute](/backend/data-reference/data-reference-q-z#iuserattribute)
+**Implements**: [ITimeAggregateAttribute](/backend/data-reference/data-reference-h-p#itimeaggregateattribute), [IUserAttribute](/backend/data-reference/data-reference-h-p#iuserattribute)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -804,10 +804,10 @@ Car transport behavior scores by road type
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'ZoneCarBehaviorScores' |
-| all | [CarBehaviorScores](/backend/data-reference/data-reference-q-z#carbehaviorscores) | Scores based on aggregated features across all zones. |
-| total | [CarBehaviorScores](/backend/data-reference/data-reference-q-z#carbehaviorscores) | Scores based on the average of features per zone. |
-| motorway | [CarBehaviorScores](/backend/data-reference/data-reference-q-z#carbehaviorscores) | Scores based on features in the motorway zones. |
-| city | [CarBehaviorScores](/backend/data-reference/data-reference-q-z#carbehaviorscores) | Scores based on features in non-motorway city zones. |
-| non_city | [CarBehaviorScores](/backend/data-reference/data-reference-q-z#carbehaviorscores) | Scores based on features in non-motorway non-city zones. |
+| all | [CarBehaviorScores](/backend/data-reference/data-reference-a-g#carbehaviorscores) | Scores based on aggregated features across all zones. |
+| total | [CarBehaviorScores](/backend/data-reference/data-reference-a-g#carbehaviorscores) | Scores based on the average of features per zone. |
+| motorway | [CarBehaviorScores](/backend/data-reference/data-reference-a-g#carbehaviorscores) | Scores based on features in the motorway zones. |
+| city | [CarBehaviorScores](/backend/data-reference/data-reference-a-g#carbehaviorscores) | Scores based on features in non-motorway city zones. |
+| non_city | [CarBehaviorScores](/backend/data-reference/data-reference-a-g#carbehaviorscores) | Scores based on features in non-motorway non-city zones. |
 
 
