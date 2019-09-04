@@ -27,10 +27,6 @@ Follow these steps below to activate the Integration Guide:
 4. Find the **Sentiance SDK framework file** in your Xcode project and **drag it** at the end of the script.
 5. Finally, finish your script adding **"/Resources/.main.sh".**
 
-```
-/bin/sh /Users/<UserName>/<ProjectName>/SENTSDK.framework/Resources/.main.sh
-```
-
 ![](../../../../.gitbook/assets/ezgif.com-crop-4.gif)
 
 
