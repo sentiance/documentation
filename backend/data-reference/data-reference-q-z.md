@@ -1,59 +1,63 @@
 # Data Reference Q-Z
+
 ## Objects
-- [SegmentDefinition](#segmentdefinition)
-- [SemanticTimeAggregate](#semantictimeaggregate)
-- [SemanticTimeAggregateValue](#semantictimeaggregatevalue)
-- [Stationary](#stationary)
-- [StationaryFeedback](#stationaryfeedback)
-- [StationaryIntervalPrediction](#stationaryintervalprediction)
-- [StationaryLocation](#stationarylocation)
-- [StationaryPrediction](#stationaryprediction)
-- [StationaryTimeAggregate](#stationarytimeaggregate)
-- [StreamDefinition](#streamdefinition)
-- [Subscription](#subscription)
-- [SubscriptionsConnection](#subscriptionsconnection)
-- [TimeWindowTransportHeatmaps](#timewindowtransportheatmaps)
-- [TimeWindowUserCarBehaviorFeatures](#timewindowusercarbehaviorfeatures)
-- [TrajectoryWaypoint](#trajectorywaypoint)
-- [Transport](#transport)
-- [TransportFeedback](#transportfeedback)
-- [TransportHeatmaps](#transportheatmaps)
-- [TransportIntervalPrediction](#transportintervalprediction)
-- [TransportModeHeatmaps](#transportmodeheatmaps)
-- [TransportPrediction](#transportprediction)
-- [TransportTimeAggregate](#transporttimeaggregate)
-- [TransportTrajectory](#transporttrajectory)
-- [Trip](#trip)
-- [TripConnection](#tripconnection)
-- [TurnBehaviorAnnotation](#turnbehaviorannotation)
-- [User](#user)
-- [UserAccountRole](#useraccountrole)
-- [UserCarBehavior](#usercarbehavior)
-- [UserCarBehaviorFeatures](#usercarbehaviorfeatures)
-- [UserCarBehaviorScores](#usercarbehaviorscores)
-- [UserHealth](#userhealth)
-- [UserHealthScores](#userhealthscores)
-- [UserSdkSettings](#usersdksettings)
-- [UserSemanticTime](#usersemantictime)
-- [UserTimeAggregatedScores](#usertimeaggregatedscores)
-- [UsersConnection](#usersconnection)
-- [Waypoint](#waypoint)
-- [Weather](#weather)
-- [WeatherRange](#weatherrange)
-- [WeightedLocation](#weightedlocation)
-- [WorkingTimeAggregate](#workingtimeaggregate)
-- [ZoneCarBehaviorScores](#zonecarbehaviorscores)
+
+* [SegmentDefinition](data-reference-q-z.md#segmentdefinition)
+* [SemanticTimeAggregate](data-reference-q-z.md#semantictimeaggregate)
+* [SemanticTimeAggregateValue](data-reference-q-z.md#semantictimeaggregatevalue)
+* [Stationary](data-reference-q-z.md#stationary)
+* [StationaryFeedback](data-reference-q-z.md#stationaryfeedback)
+* [StationaryIntervalPrediction](data-reference-q-z.md#stationaryintervalprediction)
+* [StationaryLocation](data-reference-q-z.md#stationarylocation)
+* [StationaryPrediction](data-reference-q-z.md#stationaryprediction)
+* [StationaryTimeAggregate](data-reference-q-z.md#stationarytimeaggregate)
+* [StreamDefinition](data-reference-q-z.md#streamdefinition)
+* [Subscription](data-reference-q-z.md#subscription)
+* [SubscriptionsConnection](data-reference-q-z.md#subscriptionsconnection)
+* [TimeWindowTransportHeatmaps](data-reference-q-z.md#timewindowtransportheatmaps)
+* [TimeWindowUserCarBehaviorFeatures](data-reference-q-z.md#timewindowusercarbehaviorfeatures)
+* [TrajectoryWaypoint](data-reference-q-z.md#trajectorywaypoint)
+* [Transport](data-reference-q-z.md#transport)
+* [TransportFeedback](data-reference-q-z.md#transportfeedback)
+* [TransportHeatmaps](data-reference-q-z.md#transportheatmaps)
+* [TransportIntervalPrediction](data-reference-q-z.md#transportintervalprediction)
+* [TransportModeHeatmaps](data-reference-q-z.md#transportmodeheatmaps)
+* [TransportPrediction](data-reference-q-z.md#transportprediction)
+* [TransportTimeAggregate](data-reference-q-z.md#transporttimeaggregate)
+* [TransportTrajectory](data-reference-q-z.md#transporttrajectory)
+* [Trip](data-reference-q-z.md#trip)
+* [TripConnection](data-reference-q-z.md#tripconnection)
+* [TurnBehaviorAnnotation](data-reference-q-z.md#turnbehaviorannotation)
+* [User](data-reference-q-z.md#user)
+* [UserAccountRole](data-reference-q-z.md#useraccountrole)
+* [UserCarBehavior](data-reference-q-z.md#usercarbehavior)
+* [UserCarBehaviorFeatures](data-reference-q-z.md#usercarbehaviorfeatures)
+* [UserCarBehaviorScores](data-reference-q-z.md#usercarbehaviorscores)
+* [UserHealth](data-reference-q-z.md#userhealth)
+* [UserHealthScores](data-reference-q-z.md#userhealthscores)
+* [UserSdkSettings](data-reference-q-z.md#usersdksettings)
+* [UserSemanticTime](data-reference-q-z.md#usersemantictime)
+* [UserTimeAggregatedScores](data-reference-q-z.md#usertimeaggregatedscores)
+* [UsersConnection](data-reference-q-z.md#usersconnection)
+* [Waypoint](data-reference-q-z.md#waypoint)
+* [Weather](data-reference-q-z.md#weather)
+* [WeatherRange](data-reference-q-z.md#weatherrange)
+* [WeightedLocation](data-reference-q-z.md#weightedlocation)
+* [WorkingTimeAggregate](data-reference-q-z.md#workingtimeaggregate)
+* [ZoneCarBehaviorScores](data-reference-q-z.md#zonecarbehaviorscores)
 
 ### SdkFlavor
+
 **Kind**: ENUM
 
-- **full**
-- **offline_driving**
-- **realtime_marketing**
-- **offline_segmentation**
-- **triggered_trips**
+* **full**
+* **offline\_driving**
+* **realtime\_marketing**
+* **offline\_segmentation**
+* **triggered\_trips**
 
 ### SegmentDefinition
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 A single segment definition.
@@ -65,117 +69,121 @@ A single segment definition.
 | version | Int | Version which will increase everytime minor changes or improvements happen to the calculation of this segment. |
 | category | String | Category of this segment, if any. |
 | subcategory | String | Subcategory of this segment, if any. |
-| display_name | String | A displayable name for this segment. |
+| display\_name | String | A displayable name for this segment. |
 | description | String | A short description about this segment. |
 | deprecated | Boolean | Flag that indicates if this segment will be removed in one of the following releases. Do not use segments that are marked deprecated for new development. |
-| deprecated_at | String | Date when the segment will be removed. Default null. |
-
+| deprecated\_at | String | Date when the segment will be removed. Default null. |
 
 ### SegmentDefinitionStatus
+
 **Kind**: ENUM
 
-- **ACTIVE**: The current active version of segment definitions.
-- **ALPHA**: The next version of segment definitions, these will become active in the next release.
-Identifies the release status of a segment definition.
+* **ACTIVE**: The current active version of segment definitions.
+* **ALPHA**: The next version of segment definitions, these will become active in the next release.
+
+  Identifies the release status of a segment definition.
 
 ### SegmentType
+
 **Kind**: ENUM
 
-- **GenericSegment**
+* **GenericSegment**
 
 ### SemanticTime
+
 **Kind**: ENUM
 
-- **morning**
-- **lunch**
-- **afternoon**
-- **evening**
-- **night**
-The user semantic time.
+* **morning**
+* **lunch**
+* **afternoon**
+* **evening**
+* **night**
+
+  The user semantic time.
 
 ### SemanticTimeAggregate
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'SemanticTimeAggregate' |
-| morning | [SemanticTimeAggregateValue](data-reference-q-z#semantictimeaggregatevalue) |  |
-| lunch | [SemanticTimeAggregateValue](data-reference-q-z#semantictimeaggregatevalue) |  |
-| afternoon | [SemanticTimeAggregateValue](data-reference-q-z#semantictimeaggregatevalue) |  |
-| evening | [SemanticTimeAggregateValue](data-reference-q-z#semantictimeaggregatevalue) |  |
-| night | [SemanticTimeAggregateValue](data-reference-q-z#semantictimeaggregatevalue) |  |
-
+| morning | [SemanticTimeAggregateValue](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#semantictimeaggregatevalue) |  |
+| lunch | [SemanticTimeAggregateValue](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#semantictimeaggregatevalue) |  |
+| afternoon | [SemanticTimeAggregateValue](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#semantictimeaggregatevalue) |  |
+| evening | [SemanticTimeAggregateValue](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#semantictimeaggregatevalue) |  |
+| night | [SemanticTimeAggregateValue](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#semantictimeaggregatevalue) |  |
 
 ### SemanticTimeAggregateDaysEnum
+
 **Kind**: ENUM
 
-- **all_days**: All days are used in the calculation of the aggregate.
+* **all\_days**: All days are used in the calculation of the aggregate.
 
 ### SemanticTimeAggregateValue
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'SemanticTimeAggregateValue' |
-| semantic_time | [SemanticTime](data-reference-q-z#semantictime) |  |
-| days | [SemanticTimeAggregateDaysEnum](data-reference-q-z#semantictimeaggregatedaysenum) |  |
+| semantic\_time | [SemanticTime](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#semantictime) |  |
+| days | [SemanticTimeAggregateDaysEnum](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#semantictimeaggregatedaysenum) |  |
 | start | String | The average start time of the semantic time, in local time, ISO 8601 time format, second precision. Example: 15:34:00 |
 | end | String | The average end time of the semantic time, in local time, ISO 8601 time format, second precision. Example: 15:34:00 |
 
-
 ### Stationary
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IEvent](data-reference-h-p#ievent)
+**Implements**: [IEvent](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ievent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [EventType](data-reference-a-g#eventtype) | 'Stationary' |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| start_ts | [BigInt](data-reference-a-g#bigint) |  |
-| end_ts | [BigInt](data-reference-a-g#bigint) |  |
-| analysis_type | [AnalysisType](data-reference-a-g#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
+| type | [EventType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#eventtype) | 'Stationary' |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time. Example: 2015-05-28T14:37:14.839+00:00 |
+| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time. Example: 2015-05-28T14:37:14.839+00:00 |
+| start\_ts | [BigInt](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#bigint) |  |
+| end\_ts | [BigInt](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#bigint) |  |
+| analysis\_type | [AnalysisType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#analysistype) | How well this event is analyzed by the platform, this value will update over time. Possible values: preliminary, indepth, processed. |
 | latitude | Float |  |
 | longitude | Float |  |
-| duration | [BigInt](data-reference-a-g#bigint) |  |
-| address | [Address](data-reference-a-g#address) |  |
-| location | [StationaryLocation](data-reference-q-z#stationarylocation) |  |
-| weather | [WeatherRange](data-reference-q-z#weatherrange) | Weather data associated with this event. |
-
+| duration | [BigInt](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#bigint) |  |
+| address | [Address](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#address) |  |
+| location | [StationaryLocation](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#stationarylocation) |  |
+| weather | [WeatherRange](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#weatherrange) | Weather data associated with this event. |
 
 ### StationaryFeedback
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IFeedback](data-reference-h-p#ifeedback), [IEventFeedback](data-reference-h-p#ieventfeedback)
+**Implements**: [IFeedback](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ifeedback), [IEventFeedback](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ieventfeedback)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [FeedbackType](data-reference-a-g#feedbacktype) | 'StationaryFeedback' |
+| type | [FeedbackType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#feedbacktype) | 'StationaryFeedback' |
 | end | String | End time the feedback relates to, sourced by the event, moment or user-provided. |
 | created | String | Time when this feedback entry was created. |
-| projection_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
-| event_feedback | [EventFeedback](data-reference-a-g#eventfeedback) |  |
-| stationary | [Stationary](data-reference-q-z#stationary) | The Stationary this feedback refers to. |
-
+| projection\_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
+| event\_feedback | [EventFeedback](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#eventfeedback) |  |
+| stationary | [Stationary](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#stationary) | The Stationary this feedback refers to. |
 
 ### StationaryIntervalPrediction
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IPrediction](data-reference-h-p#iprediction), [IEventPrediction](data-reference-h-p#ieventprediction), [IIntervalPrediction](data-reference-h-p#iintervalprediction)
+**Implements**: [IPrediction](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#iprediction), [IEventPrediction](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ieventprediction), [IIntervalPrediction](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#iintervalprediction)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [PredictionType](data-reference-h-p#predictiontype) | 'StationaryIntervalPrediction' |
+| type | [PredictionType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#predictiontype) | 'StationaryIntervalPrediction' |
 | probability | Float |  |
-| event_type | [EventType](data-reference-a-g#eventtype) |  |
-| start_interval | [PredictionInterval](data-reference-h-p#predictioninterval) |  |
-| location | [StationaryLocation](data-reference-q-z#stationarylocation) |  |
-
+| event\_type | [EventType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#eventtype) |  |
+| start\_interval | [PredictionInterval](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#predictioninterval) |  |
+| location | [StationaryLocation](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#stationarylocation) |  |
 
 ### StationaryLocation
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 Holds more information about a stationary location.
@@ -183,42 +191,42 @@ Holds more information about a stationary location.
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'StationaryLocation' |
-| significance | [LocationSignificance](data-reference-h-p#locationsignificance) | What this location means for the user, or the frequency it's being visited. |
-| place | [LocationPlaceCandidate](data-reference-h-p#locationplacecandidate) |  |
-| place_candidates | [LocationPlaceCandidate](data-reference-h-p#locationplacecandidate) |  |
-
+| significance | [LocationSignificance](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#locationsignificance) | What this location means for the user, or the frequency it's being visited. |
+| place | [LocationPlaceCandidate](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#locationplacecandidate) |  |
+| place\_candidates | [LocationPlaceCandidate](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#locationplacecandidate) |  |
 
 ### StationaryPrediction
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IBranchEvent](data-reference-h-p#ibranchevent)
+**Implements**: [IBranchEvent](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ibranchevent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | start | String | Predicted start time of the event. |
 | end | String | Predicted end time of the event. |
 | probability | Float | The probability of this prediction occurring. |
-| type | [TreePredictionType](data-reference-q-z#treepredictiontype) | 'StationaryPrediction' |
-| location_type | String |  |
+| type | [TreePredictionType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#treepredictiontype) | 'StationaryPrediction' |
+| location\_type | String |  |
 | significance | String |  |
-| place | [LocationPlaceCandidate](data-reference-h-p#locationplacecandidate) |  |
-
+| place | [LocationPlaceCandidate](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#locationplacecandidate) |  |
 
 ### StationaryTimeAggregate
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITimeAggregateAttribute](data-reference-h-p#itimeaggregateattribute), [IUserAttribute](data-reference-h-p#iuserattribute)
+**Implements**: [ITimeAggregateAttribute](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#itimeaggregateattribute), [IUserAttribute](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#iuserattribute)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [UserAttributeType](data-reference-q-z#userattributetype) | 'StationaryTimeAggregate' |
-| period | [TimePeriod](data-reference-q-z#timeperiod) |  |
+| type | [UserAttributeType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#userattributetype) | 'StationaryTimeAggregate' |
+| period | [TimePeriod](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#timeperiod) |  |
 | duration | Float |  |
-| place_category | String |  |
-| location_significance | [LocationSignificance](data-reference-h-p#locationsignificance) |  |
-
+| place\_category | String |  |
+| location\_significance | [LocationSignificance](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#locationsignificance) |  |
 
 ### StreamDefinition
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 Stream definition that can be activated/subscribed to with the Sentiance Firehose
@@ -229,18 +237,20 @@ Stream definition that can be activated/subscribed to with the Sentiance Firehos
 | id | String |  |
 | name | String |  |
 | projection | String | The GQL query that will be provided on every notification. |
-| created_at | String |  |
-| subscriptions | [SubscriptionsConnection](data-reference-q-z#subscriptionsconnection) |  |
-
+| created\_at | String |  |
+| subscriptions | [SubscriptionsConnection](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#subscriptionsconnection) |  |
 
 ### StreamDefinitionConnectionType
+
 **Kind**: ENUM
 
-- **websockets**
-- **sns**
-Stream definition connection type.
+* **websockets**
+* **sns**
+
+  Stream definition connection type.
 
 ### Subscription
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 Subscription that can be activated to receive data from the Sentiance Firehose.
@@ -251,12 +261,12 @@ Subscription that can be activated to receive data from the Sentiance Firehose.
 | id | String |  |
 | token | String |  |
 | active | Boolean |  |
-| connection_type | [StreamDefinitionConnectionType](data-reference-q-z#streamdefinitionconnectiontype) |  |
-| user_ids | [String](data-reference-q-z#string) |  |
-| created_at | String |  |
-
+| connection\_type | [StreamDefinitionConnectionType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#streamdefinitionconnectiontype) |  |
+| user\_ids | [String](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#string) |  |
+| created\_at | String |  |
 
 ### SubscriptionsConnection
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 Access the stream subscriptions
@@ -264,36 +274,35 @@ Access the stream subscriptions
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'SubscriptionsConnection' |
-| slice | [Subscription](data-reference-q-z#subscription) | The individual subscriptions. Provide the right paging parameters to slice your result set. |
-
+| slice | [Subscription](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#subscription) | The individual subscriptions. Provide the right paging parameters to slice your result set. |
 
 ### TimePeriod
+
 **Kind**: ENUM
 
-- **week**
+* **week**
 
 ### TimeWindowTransportHeatmaps
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'TimeWindowTransportHeatmaps' |
-| car | [TransportModeHeatmaps](data-reference-q-z#transportmodeheatmaps) |  |
-
+| car | [TransportModeHeatmaps](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#transportmodeheatmaps) |  |
 
 ### TimeWindowUserCarBehaviorFeatures
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'TimeWindowUserCarBehaviorFeatures' |
-| phone_handling | Float | The average number of milliseconds this user is using his phone per hour in transport, during this time window. |
+| phone\_handling | Float | The average number of milliseconds this user is using his phone per hour in transport, during this time window. |
 | distance | Int | Aggregated distance measured in meter for all car transports during this time window. |
 
-
 ### TrajectoryWaypoint
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 A single waypoint in the augmented trajectory.
@@ -304,75 +313,77 @@ A single waypoint in the augmented trajectory.
 | latitude | Float |  |
 | longitude | Float |  |
 | timestamp | String |  |
-| road_type | String |  |
+| road\_type | String |  |
 | speed | Float | The average speed between this waypoint and the next waypoint, in km/h. |
-| speed_v2 | Float | The average speed between this waypoint and the next waypoint, in km/h. The difference with speed is that it has an improved estimation algorithm. |
+| speed\_v2 | Float | The average speed between this waypoint and the next waypoint, in km/h. The difference with speed is that it has an improved estimation algorithm. |
 | distance | Float | The distance in meter between the current waypoint and the next waypoint. |
-| speed_limit | Float | Speed limit measured at this point in the trajectory. As is provided by our mapping data partners. |
-
+| speed\_limit | Float | Speed limit measured at this point in the trajectory. As is provided by our mapping data partners. |
 
 ### Transport
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IEvent](data-reference-h-p#ievent)
+**Implements**: [IEvent](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ievent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [EventType](data-reference-a-g#eventtype) | 'Transport' |
-| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| start_ts | [BigInt](data-reference-a-g#bigint) |  |
-| end_ts | [BigInt](data-reference-a-g#bigint) |  |
-| analysis_type | [AnalysisType](data-reference-a-g#analysistype) | How well this event is analyzed by the platform, this value will update over time.<br>Possible values:<br>preliminary, indepth, processed. |
-| mode | [TransportMode](data-reference-q-z#transportmode) | The transport mode that was identified for this transport.  |
+| type | [EventType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#eventtype) | 'Transport' |
+| start | String | The time this moment started, ISO8601. Value can change and become more accurate over time. Example: 2015-05-28T14:37:14.839+00:00 |
+| end | String | The time this moment ended, ISO8601. Value can be null. Value can change and become more accurate over time. Example: 2015-05-28T14:37:14.839+00:00 |
+| start\_ts | [BigInt](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#bigint) |  |
+| end\_ts | [BigInt](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#bigint) |  |
+| analysis\_type | [AnalysisType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#analysistype) | How well this event is analyzed by the platform, this value will update over time. Possible values: preliminary, indepth, processed. |
+| mode | [TransportMode](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#transportmode) | The transport mode that was identified for this transport. |
 | distance | Int |  |
-| occupant_role | [TransportOccupantRole](data-reference-q-z#transportoccupantrole) |  |
-| waypoints | [Waypoint](data-reference-q-z#waypoint) |  |
-| trajectory | [TransportTrajectory](data-reference-q-z#transporttrajectory) |  |
-| behavior_scores | [TransportBehaviorScores](data-reference-q-z#transportbehaviorscores) |  |
-| behavior_annotations | [ITransportBehaviorAnnotation](data-reference-h-p#itransportbehaviorannotation) |  |
-| behavior_features | [TransportBehaviorFeatures](data-reference-q-z#transportbehaviorfeatures) |  |
-| weather | [WeatherRange](data-reference-q-z#weatherrange) | Weather data associated with this event. |
-
+| occupant\_role | [TransportOccupantRole](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#transportoccupantrole) |  |
+| waypoints | [Waypoint](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#waypoint) |  |
+| trajectory | [TransportTrajectory](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#transporttrajectory) |  |
+| behavior\_scores | [TransportBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#transportbehaviorscores) |  |
+| behavior\_annotations | [ITransportBehaviorAnnotation](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#itransportbehaviorannotation) |  |
+| behavior\_features | [TransportBehaviorFeatures](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#transportbehaviorfeatures) |  |
+| weather | [WeatherRange](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#weatherrange) | Weather data associated with this event. |
 
 ### TransportBehaviorAnnotationType
+
 **Kind**: ENUM
 
-- **AccelerationBehaviorAnnotation**
-- **BoundaryBehaviorAnnotation**
-- **AnomalyBehaviorAnnotation**
-- **TurnBehaviorAnnotation**
-- **HandlingWithoutCallingAnnotation**
-- **HandsfreeCallingAnnotation**
-- **HandheldCallingAnnotation**
+* **AccelerationBehaviorAnnotation**
+* **BoundaryBehaviorAnnotation**
+* **AnomalyBehaviorAnnotation**
+* **TurnBehaviorAnnotation**
+* **HandlingWithoutCallingAnnotation**
+* **HandsfreeCallingAnnotation**
+* **HandheldCallingAnnotation**
 
 ### TransportBehaviorFeatures
+
 **Kind**: UNION
 
-**Possible types**: [CarBehaviorFeatures](data-reference-a-g#carbehaviorfeatures)
+**Possible types**: [CarBehaviorFeatures](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#carbehaviorfeatures)
 
 ### TransportBehaviorScores
+
 **Kind**: UNION
 
-**Possible types**: [CarBehaviorScores](data-reference-a-g#carbehaviorscores)
-The transport behavior scores we have detected during a transport. These scores are only available when the full trip is processed.
+**Possible types**: [CarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#carbehaviorscores) The transport behavior scores we have detected during a transport. These scores are only available when the full trip is processed.
 
 ### TransportFeedback
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IFeedback](data-reference-h-p#ifeedback), [IEventFeedback](data-reference-h-p#ieventfeedback)
+**Implements**: [IFeedback](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ifeedback), [IEventFeedback](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ieventfeedback)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [FeedbackType](data-reference-a-g#feedbacktype) | 'TransportFeedback' |
+| type | [FeedbackType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#feedbacktype) | 'TransportFeedback' |
 | end | String | End time the feedback relates to, sourced by the event, moment or user-provided. |
 | created | String | Time when this feedback entry was created. |
-| projection_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
-| event_feedback | [EventFeedback](data-reference-a-g#eventfeedback) |  |
-| transport | [Transport](data-reference-q-z#transport) | The Transport this feedback refers to. |
-
+| projection\_time | String | Time to provide when the feedback data was read from the API. ISO8601. Optional. |
+| event\_feedback | [EventFeedback](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#eventfeedback) |  |
+| transport | [Transport](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#transport) | The Transport this feedback refers to. |
 
 ### TransportHeatmaps
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 Historically aggregated transport heatmaps.
@@ -380,131 +391,134 @@ Historically aggregated transport heatmaps.
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'TransportHeatmaps' |
-| l30d | [TimeWindowTransportHeatmaps](data-reference-q-z#timewindowtransportheatmaps) | Transport heatmaps that are calculated using the last . |
-
+| l30d | [TimeWindowTransportHeatmaps](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#timewindowtransportheatmaps) | Transport heatmaps that are calculated using the last . |
 
 ### TransportIntervalPrediction
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IPrediction](data-reference-h-p#iprediction), [IEventPrediction](data-reference-h-p#ieventprediction), [IIntervalPrediction](data-reference-h-p#iintervalprediction)
+**Implements**: [IPrediction](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#iprediction), [IEventPrediction](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ieventprediction), [IIntervalPrediction](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#iintervalprediction)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [PredictionType](data-reference-h-p#predictiontype) | 'TransportIntervalPrediction' |
+| type | [PredictionType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#predictiontype) | 'TransportIntervalPrediction' |
 | probability | Float |  |
-| event_type | [EventType](data-reference-a-g#eventtype) |  |
-| start_interval | [PredictionInterval](data-reference-h-p#predictioninterval) |  |
-| mode | [TransportMode](data-reference-q-z#transportmode) |  |
-
+| event\_type | [EventType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#eventtype) |  |
+| start\_interval | [PredictionInterval](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#predictioninterval) |  |
+| mode | [TransportMode](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#transportmode) |  |
 
 ### TransportMode
+
 **Kind**: ENUM
 
-- **car**: When we have identified a transport mode as car.
-- **walking**: When we have identified a transport mode as walking.
-- **biking**: When we have identified a transport mode as biking.
-- **train**: When we have identified a transport mode as train.
-- **bus**: When we have identified a transport mode as bus.
-- **tram**: When we have identified a transport mode as tram.
-- **subway**: When we have identified a transport mode as subway/underground/metro.
-- **boat**: When we have identified a transport mode as boat.
-- **ferry**: When we have identified a transport mode as ferry.
-- **motorcycle**: When we have identified a transport mode as motorcycle.
-- **flight**: When we have identified a transport mode as flight. This is currently only available for processed results.
-- **running**: When we have identified a transport mode as running. This is currently only available for preliminary results.
-- **idle**: When a transport is identified as idle behavior.
-- **other**: When a transport is identified as other transport mode.
-- **insufficient_data**: When we don't have enough data to identify a transport mode.
-The transport modes the platform supports.
+* **car**: When we have identified a transport mode as car.
+* **walking**: When we have identified a transport mode as walking.
+* **biking**: When we have identified a transport mode as biking.
+* **train**: When we have identified a transport mode as train.
+* **bus**: When we have identified a transport mode as bus.
+* **tram**: When we have identified a transport mode as tram.
+* **subway**: When we have identified a transport mode as subway/underground/metro.
+* **boat**: When we have identified a transport mode as boat.
+* **ferry**: When we have identified a transport mode as ferry.
+* **motorcycle**: When we have identified a transport mode as motorcycle.
+* **flight**: When we have identified a transport mode as flight. This is currently only available for processed results.
+* **running**: When we have identified a transport mode as running. This is currently only available for preliminary results.
+* **idle**: When a transport is identified as idle behavior.
+* **other**: When a transport is identified as other transport mode.
+* **insufficient\_data**: When we don't have enough data to identify a transport mode.
+
+  The transport modes the platform supports.
 
 ### TransportModeCategory
+
 **Kind**: ENUM
 
-- **unknown**
-- **healthy**
-- **unhealthy**
+* **unknown**
+* **healthy**
+* **unhealthy**
 
 ### TransportModeHeatmaps
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'TransportModeHeatmaps' |
-| passed | [WeightedLocation](data-reference-q-z#weightedlocation) | An aggregate heatmap based on the amounts of times you have passed the coordinates during transports. |
-
+| passed | [WeightedLocation](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#weightedlocation) | An aggregate heatmap based on the amounts of times you have passed the coordinates during transports. |
 
 ### TransportOccupantRole
+
 **Kind**: ENUM
 
-- **driver**
-- **passenger**
-- **unknown**
+* **driver**
+* **passenger**
+* **unknown**
 
 ### TransportPrediction
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IBranchEvent](data-reference-h-p#ibranchevent)
+**Implements**: [IBranchEvent](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ibranchevent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | start | String | Predicted start time of the event. |
 | end | String | Predicted end time of the event. |
 | probability | Float | The probability of this prediction occurring. |
-| type | [TreePredictionType](data-reference-q-z#treepredictiontype) | 'TransportPrediction' |
+| type | [TreePredictionType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#treepredictiontype) | 'TransportPrediction' |
 | mode | String |  |
 
-
 ### TransportTimeAggregate
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITimeAggregateAttribute](data-reference-h-p#itimeaggregateattribute), [IUserAttribute](data-reference-h-p#iuserattribute)
+**Implements**: [ITimeAggregateAttribute](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#itimeaggregateattribute), [IUserAttribute](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#iuserattribute)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [UserAttributeType](data-reference-q-z#userattributetype) | 'TransportTimeAggregate' |
-| period | [TimePeriod](data-reference-q-z#timeperiod) |  |
+| type | [UserAttributeType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#userattributetype) | 'TransportTimeAggregate' |
+| period | [TimePeriod](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#timeperiod) |  |
 | duration | Float |  |
-| mode | [TransportMode](data-reference-q-z#transportmode) |  |
-
+| mode | [TransportMode](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#transportmode) |  |
 
 ### TransportTrajectory
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'TransportTrajectory' |
-| waypoints | [TrajectoryWaypoint](data-reference-q-z#trajectorywaypoint) |  |
-| encoded | String | An encoded list of trajectory waypoints, [[lat,lon],[lat,lon]]. More info on polyline decoding: https://developers.google.com/maps/documentation/utilities/polylinealgorithm |
-
+| waypoints | [TrajectoryWaypoint](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#trajectorywaypoint) |  |
+| encoded | String | An encoded list of trajectory waypoints, \[\[lat,lon\],\[lat,lon\]\]. More info on polyline decoding: [https://developers.google.com/maps/documentation/utilities/polylinealgorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) |
 
 ### TreePredictionType
+
 **Kind**: ENUM
 
-- **StationaryPrediction**: Prediction of a Stationary event.
-- **TransportPrediction**: Prediction of a Transport event.
+* **StationaryPrediction**: Prediction of a Stationary event.
+* **TransportPrediction**: Prediction of a Transport event.
 
 ### Trip
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IEvent](data-reference-h-p#ievent)
+**Implements**: [IEvent](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ievent)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [EventType](data-reference-a-g#eventtype) | 'Trip' |
-| user_id | String |  |
+| type | [EventType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#eventtype) | 'Trip' |
+| user\_id | String |  |
 | start | String |  |
 | end | String |  |
-| start_ts | [BigInt](data-reference-a-g#bigint) |  |
-| end_ts | [BigInt](data-reference-a-g#bigint) |  |
+| start\_ts | [BigInt](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#bigint) |  |
+| end\_ts | [BigInt](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#bigint) |  |
 | mode | String | Car, tram, walking, etc. |
-| analysis_type | [AnalysisType](data-reference-a-g#analysistype) | Type of processing applied on the trip. |
-| behavior_scores | [CarBehaviorScores](data-reference-a-g#carbehaviorscores) |  |
-| weather | [WeatherRange](data-reference-q-z#weatherrange) |  |
-
+| analysis\_type | [AnalysisType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#analysistype) | Type of processing applied on the trip. |
+| behavior\_scores | [CarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#carbehaviorscores) |  |
+| weather | [WeatherRange](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#weatherrange) |  |
 
 ### TripConnection
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 Access trips across all users.
@@ -512,93 +526,93 @@ Access trips across all users.
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'TripConnection' |
-| slice | [Trip](data-reference-q-z#trip) | The individual trips. Provide the right paging parameters to slice your result set. |
-
+| slice | [Trip](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#trip) | The individual trips. Provide the right paging parameters to slice your result set. |
 
 ### TurnBehaviorAnnotation
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITransportBehaviorAnnotation](data-reference-h-p#itransportbehaviorannotation)
+**Implements**: [ITransportBehaviorAnnotation](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#itransportbehaviorannotation)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [TransportBehaviorAnnotationType](data-reference-q-z#transportbehaviorannotationtype) | 'TurnBehaviorAnnotation' |
+| type | [TransportBehaviorAnnotationType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#transportbehaviorannotationtype) | 'TurnBehaviorAnnotation' |
 | start | String |  |
 | end | String |  |
-| maneuver | [TurnBehaviorAnnotationManeuver](data-reference-q-z#turnbehaviorannotationmaneuver) |  |
+| maneuver | [TurnBehaviorAnnotationManeuver](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#turnbehaviorannotationmaneuver) |  |
 | duration | Int |  |
-| path | [BehaviorAnnotationPathWaypoint](data-reference-a-g#behaviorannotationpathwaypoint) |  |
-| magnitude | Float | The centripetal g-force you experience during turns, measured in (0.2*m)/s². Taking a turn at 60km/h will result in a higher magnitude compared to the same turn at 30 km/h |
-
+| path | [BehaviorAnnotationPathWaypoint](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#behaviorannotationpathwaypoint) |  |
+| magnitude | Float | The centripetal g-force you experience during turns, measured in \(0.2\*m\)/s². Taking a turn at 60km/h will result in a higher magnitude compared to the same turn at 30 km/h |
 
 ### TurnBehaviorAnnotationManeuver
+
 **Kind**: ENUM
 
-- **left_turn**
-- **right_turn**
-- **roundabout**
-- **lane_switch**
+* **left\_turn**
+* **right\_turn**
+* **roundabout**
+* **lane\_switch**
 
 ### User
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [IUser](data-reference-h-p#iuser)
-An anonymous SDK user that authenticates using the token strategy, can push data and can query only it's own data.
+**Implements**: [IUser](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#iuser) An anonymous SDK user that authenticates using the token strategy, can push data and can query only it's own data.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [UserType](data-reference-q-z#usertype) | 'User' |
-| install_id | String | The unique identifier for active install id. |
-| external_id | String | The external id that was linked to this person. |
+| type | [UserType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#usertype) | 'User' |
+| install\_id | String | The unique identifier for active install id. |
+| external\_id | String | The external id that was linked to this person. |
 | id | String | The unique identifier for this user. |
-| can_login | Boolean |  |
-| created_at | String | The time when this user was created, ISO8601.<br>Example:<br>2015-05-28T14:37:14.839+00:00 |
-| sdk | [UserSdkSettings](data-reference-q-z#usersdksettings) |  |
-| application_id | String | The ID of the Application this user relates to. |
-| application | [Application](data-reference-a-g#application) | The Application this user relates to. |
-| custom_event_history | [CustomEvent](data-reference-a-g#customevent) | Custom Event History |
-| event_history | [IEvent](data-reference-h-p#ievent) | An unordered list of events we have detected for this user. |
-| car_behavior | [UserCarBehavior](data-reference-q-z#usercarbehavior) | The user car behavior aggregated over the last 9 weeks. |
-| aggregated_driving_scores | [UserTimeAggregatedScores](data-reference-q-z#usertimeaggregatedscores) |  |
-| transport_heatmaps | [TransportHeatmaps](data-reference-q-z#transportheatmaps) | The aggregated transport heatmaps calculated over time. |
-| metadata | [JSON](data-reference-h-p#json) | All custom set metadata properties on this user. This is a JSON object with key->value pairs. |
-| device | [DeviceInfo](data-reference-a-g#deviceinfo) | The last known active tracking device metadata |
-| active_moments | [IMoment](data-reference-h-p#imoment) | An unordered list of moments that are ongoing from the point of view of the platform. |
-| moment_history | [IMoment](data-reference-h-p#imoment) | An unordered list of moments we have detected for this user. |
-| semantic_time | [UserSemanticTime](data-reference-q-z#usersemantictime) | The user's semantic time averaged over time. |
-| anomaly_history | [IAnomaly](data-reference-h-p#ianomaly) |  |
-| segments | [ISegment](data-reference-h-p#isegment) | An unordered list of segments that are detected for this user. |
-| location_clusters | [LocationCluster](data-reference-h-p#locationcluster) | Locations this user has been stationary at and the features we have learned about those locations (significance, point of interest, ...) |
-| location | [Waypoint](data-reference-q-z#waypoint) | The last known location we have for this user. |
-| health | [UserHealth](data-reference-q-z#userhealth) | The historical health attributes. |
-| attributes | [IUserAttribute](data-reference-h-p#iuserattribute) |  |
-| predictions | [IPrediction](data-reference-h-p#iprediction) | Event/Moment predictions for this user |
-| prediction_tree | [PredictionTree](data-reference-h-p#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. |
-| feedback_history | [IFeedback](data-reference-h-p#ifeedback) | Feedback on this user |
-
+| can\_login | Boolean |  |
+| created\_at | String | The time when this user was created, ISO8601. Example: 2015-05-28T14:37:14.839+00:00 |
+| sdk | [UserSdkSettings](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#usersdksettings) |  |
+| application\_id | String | The ID of the Application this user relates to. |
+| application | [Application](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#application) | The Application this user relates to. |
+| custom\_event\_history | [CustomEvent](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#customevent) | Custom Event History |
+| event\_history | [IEvent](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ievent) | An unordered list of events we have detected for this user. |
+| car\_behavior | [UserCarBehavior](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#usercarbehavior) | The user car behavior aggregated over the last 9 weeks. |
+| aggregated\_driving\_scores | [UserTimeAggregatedScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#usertimeaggregatedscores) |  |
+| transport\_heatmaps | [TransportHeatmaps](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#transportheatmaps) | The aggregated transport heatmaps calculated over time. |
+| metadata | [JSON](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#json) | All custom set metadata properties on this user. This is a JSON object with key-&gt;value pairs. |
+| device | [DeviceInfo](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#deviceinfo) | The last known active tracking device metadata |
+| active\_moments | [IMoment](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#imoment) | An unordered list of moments that are ongoing from the point of view of the platform. |
+| moment\_history | [IMoment](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#imoment) | An unordered list of moments we have detected for this user. |
+| semantic\_time | [UserSemanticTime](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#usersemantictime) | The user's semantic time averaged over time. |
+| anomaly\_history | [IAnomaly](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ianomaly) |  |
+| segments | [ISegment](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#isegment) | An unordered list of segments that are detected for this user. |
+| location\_clusters | [LocationCluster](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#locationcluster) | Locations this user has been stationary at and the features we have learned about those locations \(significance, point of interest, ...\) |
+| location | [Waypoint](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#waypoint) | The last known location we have for this user. |
+| health | [UserHealth](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#userhealth) | The historical health attributes. |
+| attributes | [IUserAttribute](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#iuserattribute) |  |
+| predictions | [IPrediction](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#iprediction) | Event/Moment predictions for this user |
+| prediction\_tree | [PredictionTree](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. |
+| feedback\_history | [IFeedback](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#ifeedback) | Feedback on this user |
 
 ### UserAccountRole
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'UserAccountRole' |
-| user_id | String |  |
-| account_id | String |  |
+| user\_id | String |  |
+| account\_id | String |  |
 | role | String |  |
-| account | [Account](data-reference-a-g#account) |  |
-
+| account | [Account](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#account) |  |
 
 ### UserAttributeType
+
 **Kind**: ENUM
 
-- **TransportTimeAggregate**
-- **CommuteTimeAggregate**
-- **StationaryTimeAggregate**
-- **WorkingTimeAggregate**
+* **TransportTimeAggregate**
+* **CommuteTimeAggregate**
+* **StationaryTimeAggregate**
+* **WorkingTimeAggregate**
 
 ### UserCarBehavior
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 The historical car behavior profile for a user.
@@ -606,33 +620,31 @@ The historical car behavior profile for a user.
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'UserCarBehavior' |
-| scores | [UserCarBehaviorScores](data-reference-q-z#usercarbehaviorscores) |  |
-| features | [UserCarBehaviorFeatures](data-reference-q-z#usercarbehaviorfeatures) |  |
-
+| scores | [UserCarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#usercarbehaviorscores) |  |
+| features | [UserCarBehaviorFeatures](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#usercarbehaviorfeatures) |  |
 
 ### UserCarBehaviorFeatures
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'UserCarBehaviorFeatures' |
-| l7d | [TimeWindowUserCarBehaviorFeatures](data-reference-q-z#timewindowusercarbehaviorfeatures) | Recent features based on the transports we have analyzed in the last 7 days of data. |
-| past | [TimeWindowUserCarBehaviorFeatures](data-reference-q-z#timewindowusercarbehaviorfeatures) | Historical features based on all transports we have available, excluding the last 7 days of data. |
-
+| l7d | [TimeWindowUserCarBehaviorFeatures](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#timewindowusercarbehaviorfeatures) | Recent features based on the transports we have analyzed in the last 7 days of data. |
+| past | [TimeWindowUserCarBehaviorFeatures](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#timewindowusercarbehaviorfeatures) | Historical features based on all transports we have available, excluding the last 7 days of data. |
 
 ### UserCarBehaviorScores
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'UserCarBehaviorScores' |
-| l7d | [ZoneCarBehaviorScores](data-reference-q-z#zonecarbehaviorscores) | Recent scores based on the transports we have analyzed in the last 7 days of data. |
-| past | [ZoneCarBehaviorScores](data-reference-q-z#zonecarbehaviorscores) | Historical scores based on all transports we have analysed excluding the last 7 days of data. |
-
+| l7d | [ZoneCarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#zonecarbehaviorscores) | Recent scores based on the transports we have analyzed in the last 7 days of data. |
+| past | [ZoneCarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#zonecarbehaviorscores) | Historical scores based on all transports we have analysed excluding the last 7 days of data. |
 
 ### UserHealth
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 The historical health attributes.
@@ -640,10 +652,10 @@ The historical health attributes.
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'UserHealth' |
-| scores | [UserHealthScores](data-reference-q-z#userhealthscores) |  |
-
+| scores | [UserHealthScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#userhealthscores) |  |
 
 ### UserHealthScores
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 This scoring system is used to track an individuals health.
@@ -651,20 +663,22 @@ This scoring system is used to track an individuals health.
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'UserHealthScores' |
-| activity | [FloatAttribute](data-reference-a-g#floatattribute) | Score that measures a general overview of user health. It takes into account sport duration, walking/biking distance & walking/biking speed. A higher score means you are more active in regard to physical activity and exercise. |
-| mobility | [FloatAttribute](data-reference-a-g#floatattribute) | Score that measures a general overview of user mobility, the higher the score, the more ability to pursue various activities in life. It combines the locations visited frequency, distance travelled and user action radius. It is independent of transport mode. |
-| work_social | [FloatAttribute](data-reference-a-g#floatattribute) | Score that measures a general overview of user's social activities. It is calculated considering two components: the social score and work score. It takes into account how much time the user spends in locations, as well as how many locations the user visits. It is a measure of the number user social relationships together with their duration. It doesn't count user's home and work location, but remote work locations are considered. The higher the score, the more and the longer social interactions the user has. |
-
+| activity | [FloatAttribute](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#floatattribute) | Score that measures a general overview of user health. It takes into account sport duration, walking/biking distance & walking/biking speed. A higher score means you are more active in regard to physical activity and exercise. |
+| mobility | [FloatAttribute](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#floatattribute) | Score that measures a general overview of user mobility, the higher the score, the more ability to pursue various activities in life. It combines the locations visited frequency, distance travelled and user action radius. It is independent of transport mode. |
+| work\_social | [FloatAttribute](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#floatattribute) | Score that measures a general overview of user's social activities. It is calculated considering two components: the social score and work score. It takes into account how much time the user spends in locations, as well as how many locations the user visits. It is a measure of the number user social relationships together with their duration. It doesn't count user's home and work location, but remote work locations are considered. The higher the score, the more and the longer social interactions the user has. |
 
 ### UserRole
+
 **Kind**: ENUM
 
-- **developer**
-- **spectator**
-- **basic**
-The roles a user can have, both on accounts and apps.
+* **developer**
+* **spectator**
+* **basic**
+
+  The roles a user can have, both on accounts and apps.
 
 ### UserSdkSettings
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 User overrides that are used by the SDK configuration. This is not the SDK configuration model.
@@ -672,40 +686,40 @@ User overrides that are used by the SDK configuration. This is not the SDK confi
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'UserSdkSettings' |
-| flavor | [SdkFlavor](data-reference-q-z#sdkflavor) | If null, app-wide settings or defaults are active. |
-| killswitch_action | String |  |
-| debug_logging | String | If null, app-wide settings or defaults are active. |
-
+| flavor | [SdkFlavor](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#sdkflavor) | If null, app-wide settings or defaults are active. |
+| killswitch\_action | String |  |
+| debug\_logging | String | If null, app-wide settings or defaults are active. |
 
 ### UserSemanticTime
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'UserSemanticTime' |
-| all_days | [SemanticTimeAggregate](data-reference-q-z#semantictimeaggregate) | Historical semantic time averaged for all days over all data. |
-
+| all\_days | [SemanticTimeAggregate](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#semantictimeaggregate) | Historical semantic time averaged for all days over all data. |
 
 ### UserTimeAggregatedScores
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 Car transport scores by month, week, day.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| month | [CarBehaviorScores](data-reference-a-g#carbehaviorscores) |  |
-| week | [CarBehaviorScores](data-reference-a-g#carbehaviorscores) |  |
-| day | [CarBehaviorScores](data-reference-a-g#carbehaviorscores) |  |
-
+| month | [CarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#carbehaviorscores) |  |
+| week | [CarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#carbehaviorscores) |  |
+| day | [CarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#carbehaviorscores) |  |
 
 ### UserType
+
 **Kind**: ENUM
 
-- **User**: An anonymous SDK user that authenticates using the token strategy, can push data and can query only it's own data.
-- **ControlUser**: A user that can authenticate using either password or token strategies, has an email address, might have access to dashboards, might have multiple roles, might manage multiple accounts and applications.
+* **User**: An anonymous SDK user that authenticates using the token strategy, can push data and can query only it's own data.
+* **ControlUser**: A user that can authenticate using either password or token strategies, has an email address, might have access to dashboards, might have multiple roles, might manage multiple accounts and applications.
 
 ### UsersConnection
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 Access the user nodes
@@ -713,13 +727,12 @@ Access the user nodes
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'UsersConnection' |
-| slice | [IUser](data-reference-h-p#iuser) | The individual user nodes. Provide the right paging parameters to slice your response data. By default a slice holds 100 users, which you can increase to 1000. |
-| paging | [Paging](data-reference-h-p#paging) |  |
-
+| slice | [IUser](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#iuser) | The individual user nodes. Provide the right paging parameters to slice your response data. By default a slice holds 100 users, which you can increase to 1000. |
+| paging | [Paging](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#paging) |  |
 
 ### Waypoint
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -729,10 +742,9 @@ Access the user nodes
 | timestamp | String |  |
 | accuracy | Int | The estimated horizontal accuracy of this location, radial, in meters. |
 
-
 ### Weather
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -753,20 +765,18 @@ Access the user nodes
 | visibility | Float |  |
 | ozone | Float |  |
 
-
 ### WeatherRange
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| start | [Weather](data-reference-q-z#weather) | Weather data at the start of this event. |
-| end | [Weather](data-reference-q-z#weather) | Weather data at the end of this event. Could be the same as the start if the event was short-lived. |
-
+| start | [Weather](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#weather) | Weather data at the start of this event. |
+| end | [Weather](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#weather) | Weather data at the end of this event. Could be the same as the start if the event was short-lived. |
 
 ### WeightedLocation
-**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -775,28 +785,29 @@ Access the user nodes
 | longitude | Float |  |
 | weight | Float |  |
 
-
 ### WorkingTimeAggregate
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-**Implements**: [ITimeAggregateAttribute](data-reference-h-p#itimeaggregateattribute), [IUserAttribute](data-reference-h-p#iuserattribute)
+**Implements**: [ITimeAggregateAttribute](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#itimeaggregateattribute), [IUserAttribute](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-h-p/README.md#iuserattribute)
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| type | [UserAttributeType](data-reference-q-z#userattributetype) | 'WorkingTimeAggregate' |
-| period | [TimePeriod](data-reference-q-z#timeperiod) |  |
+| type | [UserAttributeType](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#userattributetype) | 'WorkingTimeAggregate' |
+| period | [TimePeriod](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#timeperiod) |  |
 | duration | Float |  |
-| whereabouts | [WorkingTimeWhereabouts](data-reference-q-z#workingtimewhereabouts) |  |
-
+| whereabouts | [WorkingTimeWhereabouts](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-q-z/README.md#workingtimewhereabouts) |  |
 
 ### WorkingTimeWhereabouts
+
 **Kind**: ENUM
 
-- **all_locations**: When at either regular work or remote locations visited during working time, excluding transports.
-- **at_work**: When working at work moment has been active, excluding nothing.
-- **remote**: When working remote moment has been active, including transports in between.
+* **all\_locations**: When at either regular work or remote locations visited during working time, excluding transports.
+* **at\_work**: When working at work moment has been active, excluding nothing.
+* **remote**: When working remote moment has been active, including transports in between.
 
 ### ZoneCarBehaviorScores
+
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
 Car transport behavior scores by road type
@@ -804,10 +815,9 @@ Car transport behavior scores by road type
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | type | String | 'ZoneCarBehaviorScores' |
-| all | [CarBehaviorScores](data-reference-a-g#carbehaviorscores) | Scores based on aggregated features across all zones. |
-| total | [CarBehaviorScores](data-reference-a-g#carbehaviorscores) | Scores based on the average of features per zone. |
-| motorway | [CarBehaviorScores](data-reference-a-g#carbehaviorscores) | Scores based on features in the motorway zones. |
-| city | [CarBehaviorScores](data-reference-a-g#carbehaviorscores) | Scores based on features in non-motorway city zones. |
-| non_city | [CarBehaviorScores](data-reference-a-g#carbehaviorscores) | Scores based on features in non-motorway non-city zones. |
-
+| all | [CarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#carbehaviorscores) | Scores based on aggregated features across all zones. |
+| total | [CarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#carbehaviorscores) | Scores based on the average of features per zone. |
+| motorway | [CarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#carbehaviorscores) | Scores based on features in the motorway zones. |
+| city | [CarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#carbehaviorscores) | Scores based on features in non-motorway city zones. |
+| non\_city | [CarBehaviorScores](https://github.com/sentiance/documentation/tree/8d430b0f81241c4a8bf1504385f388ada086df67/backend/data-reference/data-reference-a-g/README.md#carbehaviorscores) | Scores based on features in non-motorway non-city zones. |
 
