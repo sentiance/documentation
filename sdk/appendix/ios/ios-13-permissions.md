@@ -6,7 +6,7 @@ description: Technical document
 
 Please refer to the document below in order to get a high-level overview about the changes iOS 13 brings to location permissions.
 
-{% file src="../../../.gitbook/assets/sentiance-sdk-setting-permissions-on-ios13-20190828.pdf" caption="iOS 13 permissions" %}
+{% file src="../../../.gitbook/assets/sentiance-sdk-setting-permissions-on-ios13-20190828 \(1\).pdf" caption="iOS 13 Location Permissions" %}
 
 
 
