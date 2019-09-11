@@ -7,12 +7,13 @@ The latest version of the Sentiance SDK is **4.10.1**.
 Add the Sentiance repository to your ****project \(top-level\) **build.gradle** file.
 
 ```groovy
-buildscript {
-    repositories {
+allprojects {
+  repositories {
     ...
     maven {
-        url "http://repository.sentiance.com"
+      url "http://repository.sentiance.com"
     }
+  }
 }
 ```
 
