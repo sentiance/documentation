@@ -1,5 +1,12 @@
 # iOS
 
+## \[5.5.2\] - 17 Sept 2019
+
+#### Fixed
+
+* iOS 13 crash fix
+* Payload submission stability fixes
+
 ## \[5.5.1\] - 27 Aug 2019
 
 #### Added
