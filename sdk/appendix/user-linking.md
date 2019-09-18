@@ -69,7 +69,7 @@ During initialization, the SDK will call the [`link(String)`](../api-reference/a
 {% endtab %}
 {% endtabs %}
 
-See our User Linking guide and the [API documentation](https://developers.sentiance.com/docs/metausers-api) to learn more about the server-to-server linking.
+See our User Linking guide and the [API documentation](../../backend/rest-api.md#user-link) to learn more about the server-to-server linking.
 
 ## Limitations
 

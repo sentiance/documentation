@@ -36,9 +36,9 @@ For details please check out: [SDK Config for User Linking](../sdk/appendix/user
 
 ## API
 
-Check out the [reference for the Linking call.](../backend/rest-api.md#meta-user-link)
+Check out the [reference for the Linking call.](../backend/rest-api.md#user-link)
 
 If Linking succeeds you will receive the Sentiance ID associated with the user. All future associations of an Install-ID with one of your system's user IDs will return this same Sentiance ID.
 
-If the Linking fails, you will be returned an error. For details please check out: [User Linking API Reference](../backend/rest-api.md#meta-user-link)
+If the Linking fails, you will be returned an error. For details please check out: [User Linking API Reference](../backend/rest-api.md#user-link)
 
