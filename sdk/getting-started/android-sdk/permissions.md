@@ -12,7 +12,7 @@ When running the SDK on Android 6 and above, it is required to ask the user for 
 On Android 10 and above, without the background location access permission, SDK detections will not work. This permission enables the use of Geofences via Google Play Services, which the Sentiance SDK utilizes for detection stability and battery efficiency.
 {% endhint %}
 
-The SDK automatically adds the `ACCESS_FINE_LOCATION` and `ACCESS_BACKGROUND_LOCATION` permissions to your app's manifest.
+The SDK automatically adds the `ACCESS_FINE_LOCATION` and `ACCESS_BACKGROUND_LOCATION` permissions to your app's manifest. If any of these permissions is not granted, [`SdkStatus.isLocationPermGranted`](../../api-reference/android/sdkstatus/#islocationpermgranted) will be `false`.
 
 ## Activity Recognition \(Android 10+\)
 
@@ -31,6 +31,8 @@ The SDK **does not** add the `android.permission.ACTIVITY_RECOGNITION` permissio
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+When this permission is not granted, the [`SdkStatus.isActivityRecognitionPermGranted`](../../api-reference/android/sdkstatus/#isactivityrecognitionpermgranted) will be `false`.
 
 {% hint style="danger" %}
 **If you're not targeting API level 29**

@@ -1,5 +1,38 @@
 # Android
 
+## \[4.11.0\] - 23 Sep 2019
+
+{% hint style="info" %}
+This version targets API level 29, adding Android 10 support.
+{% endhint %}
+
+#### Added
+
+* Android 10 permission support.
+  * The `ACCESS_BACKGROUND_LOCATION` permission has been added to the SDK's manifest. Background location access is mandatory to support proper detections. See [Location Permission](../getting-started/android-sdk/permissions.md#location).
+  * The `android.permission.ACTIVITY_RECOGNITION` permission is required on Android 10 and above to prevent degradation in the detection quality. See [Activity Recognition Permission](../getting-started/android-sdk/permissions.md#activity-recognition-android-10).
+* Ability to obtain a user's nearby points of interest during stationary. You can now obtain a list of POIs and their type directly from the SDK instead of querying the Sentiance API. See [`getPointsOfInterest()`](../api-reference/android/stationaryinfo.md#getpointsofinterest).
+* Report the app's notification setting \(enabled/disabled\) to the Sentiance Platform.
+* Report the device's Google Play Services version to the Sentiance Platform.
+* Keep a metadata journal to prevent sending duplicate user metadata requests.
+
+#### Changed
+
+* Target API level is now 29.
+* Use Android's network capability API on Android 10.
+* The return type of [`StationaryInfo.getLocation()`](../api-reference/android/stationaryinfo.md#getlocation) is no longer nullable. A stationary activity is guaranteed to have a proper location.
+
+#### Fixed
+
+* Rare crash caused by a null pointer exception during call detection.
+* Rare crash caused by concurrent modification exception.
+* Properly capture unhandled exceptions \(reported to the Sentiance Platform\).
+* Incorrect [user activity type](../api-reference/android/useractivitytype.md) reported during SDK startup.
+
+#### Security
+
+* The Sentiance app secret is no longer stored by the SDK.
+
 ## \[4.10.1\] - 26 Aug 2019
 
 #### Added

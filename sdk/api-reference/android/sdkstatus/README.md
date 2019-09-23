@@ -13,6 +13,7 @@ A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementa
 | boolean  | [canDetect](./#candetect) |
 | boolean  | [isRemoteEnabled](./#isremoteenabled) |
 | boolean  | [isLocationPermGranted](./#islocationpermgranted) |
+| boolean | [isActivityRecognitionPermGranted](./#isactivityrecognitionpermgranted) |
 | [LocationSetting](locationsetting.md)  | [locationSetting](./#locationsetting) |
 | boolean  | [isAirplaneModeEnabled](./#isairplanemodeenabled) |
 | boolean  | [isLocationAvailable](./#islocationavailable) |
@@ -46,6 +47,10 @@ A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementa
 ### `isLocationPermGranted`
 
 > Whether the user has granted location permission to the app.
+
+### `isActivityRecognitionPermGranted`
+
+> Whether the activity recognition permission has been granted.
 
 ### `locationSetting`
 
