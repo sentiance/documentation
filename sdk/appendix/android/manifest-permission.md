@@ -1,6 +1,6 @@
 # Manifest Permissions
 
-The gradle build system will merge the following permissions from the Sentiance SDK during the process of generating the final application manifest.
+The gradle build system will merge the following Sentiance SDK permissions during the process of generating the final application manifest.
 
 * android.permission.INTERNET
 * android.permission.WAKE\_LOCK
@@ -12,4 +12,5 @@ The gradle build system will merge the following permissions from the Sentiance 
 * android.permission.FOREGROUND\_SERVICE
 * android.permission.READ\_PHONE\_STATE \(api level 22 and lower\)
 * com.google.android.gms.permission.ACTIVITY\_RECOGNITION
+* android.permission.ACCESS\_BACKGROUND\_LOCATION
 
