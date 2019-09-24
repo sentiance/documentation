@@ -2,7 +2,7 @@
 
 To do proper detections, the Sentiance SDK requires a few permissions to be granted by the user at application runtime. The SDK does not ask for these permissions itself. Instead, after explaining to the user why you need each permission, you must present the permission dialogs as part of your application's flow.
 
-An example implementation of a permission dialog is available in our Github app.
+An example implementation of a permission dialog is available in our [Github app](https://github.com/sentiance/sdk-starter-android/blob/master/app/src/main/java/com/sentiance/sdkstarter/PermissionCheckActivity.java).
 
 ## Location
 
