@@ -10,7 +10,7 @@ Our SDK consumes about 8000 \(12%\) of the available 65,536 method reference cou
 
 ### What app permissions are required by the SDK?
 
-Please see our list of [manifest permissions](../appendix/android/manifest-permission.md). The only permission that requires user consent is the location permission, and is mandatory for the proper operation of the SDK detections.
+Please see our list of [manifest permissions](../appendix/android/manifest-permission.md). The location and activity recognition permissions require user consent, of which the location permission is mandatory for the proper operation of the SDK detections.
 
 ### I see a lot of missed trips and stationary moments in the timeline
 
