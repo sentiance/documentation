@@ -3,7 +3,7 @@
 ## Migrating from 3.x to 4.x
 
 {% hint style="info" %}
-This update brings Android Oreo compatibility. You will now be able to target API level 28.
+This update brings Android Oreo compatibility. You will now be able to target API level 26.
 {% endhint %}
 
 ### SDK Initialization
