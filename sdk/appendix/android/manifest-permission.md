@@ -12,5 +12,4 @@ The gradle build system will merge the following Sentiance SDK permissions durin
 * android.permission.FOREGROUND\_SERVICE
 * android.permission.READ\_PHONE\_STATE \(api level 22 and lower\)
 * com.google.android.gms.permission.ACTIVITY\_RECOGNITION
-* android.permission.ACCESS\_BACKGROUND\_LOCATION
 

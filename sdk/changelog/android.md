@@ -1,5 +1,11 @@
 # Android
 
+## \[4.12.0\] - 4 Oct 2019
+
+#### Removed
+
+* The `ACCESS_BACKGROUND_LOCATION` permission is now removed from the SDK's manifest. If you are targeting API level 29+, please add this permission to your app's manifest instead. The inclusion of this permission affected apps targeting API level 28 or lower. For more information about this change, please see [here](../appendix/android/android-10-update-behavior.md).
+
 ## \[4.11.0\] - 23 Sep 2019
 
 {% hint style="info" %}

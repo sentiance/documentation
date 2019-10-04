@@ -12,7 +12,19 @@ When running the SDK on Android 6 and above, it is required to ask the user for 
 On Android 10 and above, without the background location access permission, SDK detections will not work. This permission enables the use of Geofences via Google Play Services, which the Sentiance SDK utilizes for detection stability and battery efficiency.
 {% endhint %}
 
-The SDK automatically adds the `ACCESS_FINE_LOCATION` and `ACCESS_BACKGROUND_LOCATION` permissions to your app's manifest. If any of these permissions is not granted, [`SdkStatus.isLocationPermGranted`](../../api-reference/android/sdkstatus/#islocationpermgranted) will be `false`.
+The SDK automatically adds the `ACCESS_FINE_LOCATION` permission to your app's manifest, however it **does not** add the `ACCESS_BACKGROUND_LOCATION` permissions \(see [here](../../appendix/android/android-10-update-behavior.md#background-location-permission)\). Instead, you must explicitly add it to your app as follows:
+
+{% code-tabs %}
+{% code-tabs-item title="AndroidManifest.xml" %}
+```markup
+<manifest...>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION">
+    ...
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+If any of these permissions is not granted, [`SdkStatus.isLocationPermGranted`](../../api-reference/android/sdkstatus/#islocationpermgranted) will be `false`.
 
 ## Activity Recognition \(Android 10+\)
 
@@ -22,25 +34,19 @@ When targeting API level 29 and above, it is required to ask the user for the [a
 If this permission is not granted, the SDK detection quality will be degraded.
 {% endhint %}
 
-The SDK **does not** add the `android.permission.ACTIVITY_RECOGNITION` permission to your app's manifest \(for the reason stated below\). Instead, you must explicitly add it to your app as follows:
+The SDK **does not** add the `android.permission.ACTIVITY_RECOGNITION` permission to your app's manifest \(see [here](../../appendix/android/android-10-update-behavior.md#activity-recognition-permission)\). Instead, you must explicitly add it to your app as follows:
 
 {% code-tabs %}
 {% code-tabs-item title="AndroidManifest.xml" %}
 ```markup
-<uses-permission android:name="android.permission.ACTIVITY_RECOGNITION">
+<manifest...>
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION">
+    ...
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
 When this permission is not granted, the [`SdkStatus.isActivityRecognitionPermGranted`](../../api-reference/android/sdkstatus/#isactivityrecognitionpermgranted) will be `false`.
-
-{% hint style="danger" %}
-**If you're not targeting API level 29**
-
-The [Android documentation](https://developer.android.com/about/versions/10/privacy/changes#physical-activity-recognition) states that when targeting API level 28 and lower, Android will auto-grant this permission on Android 10 as long as the `com.google.android.gms.permission.ACTIVITY_RECOGNITION` permission is present in the manifest \(already added by the Sentiance SDK\).
-
-However, note that by adding`android.permission.ACTIVITY_RECOGNITION` to your manifest even when targeting API level 28, you will break the auto-grant feature. As a result, do not add this permission to your manifest. Only after updating your target API level to 29, add the permission and ask the user to grant it.
-{% endhint %}
 
 
 

@@ -31,6 +31,7 @@
     * [Notification Management](sdk/appendix/android/notification-management.md)
     * [Android Battery Optimization](sdk/appendix/android/android-battery-optimization.md)
     * [Manifest Permissions](sdk/appendix/android/manifest-permission.md)
+    * [Android 10 Update Behavior](sdk/appendix/android/android-10-update-behavior.md)
   * [iOS](sdk/appendix/ios/README.md)
     * [Swift Support](sdk/appendix/ios/swift-support.md)
     * [App Store Release](sdk/appendix/ios/app-store-release.md)
