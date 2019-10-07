@@ -1,10 +1,18 @@
 # iOS
 
+## \[5.5.3\] - 7 Oct 2019
+
+**Fixed**
+
+* _iOS 13_ background tasks crash
+* Stuck in stationary \(missing some trips\)
+* On base url change submission fix
+
 ## \[5.5.2\] - 17 Sept 2019
 
 #### Fixed
 
-* iOS 13 crash fix
+* _iOS 13_ crash fix
 * Payload submission stability fixes
 
 ## \[5.5.1\] - 27 Aug 2019
