@@ -1,6 +1,6 @@
 # Android 10 Update Behavior
 
-If you are still targeting API level 28 or lower, read the following information to understand the impact upgrading to Android 10 has on your app's location and activity recognition permissions.
+If you are still targeting API level 28 or lower, read the following information to understand the impact of upgrading to Android 10 on the location and activity recognition permissions.
 
 ## Location Permission
 
