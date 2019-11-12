@@ -170,9 +170,9 @@ Every csv file in the lifestyle offloads uses semicolon ‘;’ as a field separ
 
 The complete data model for every file is described in the spreadsheet named ‘Sentiance - Offloads - Data Model - **XXXX**.xlsx’ accompanying this document. 
 
-{% file src="../.gitbook/assets/sentiance-offloads-access-and-data-model-0.1.0-20170704.docx" caption="Offloads detailed data model" %}
+{% file src="../.gitbook/assets/sentiance-offloads-data-model-0.1.2-201801122.xlsx" %}
 
-{% file src="../.gitbook/assets/sentiance-anonymized-offload-samples-20171213.zip" caption="Sample files" %}
+{% file src="../.gitbook/assets/sentiance-anonymized-offload-samples-20190114.zip" %}
 
 #### **Stationaries** 
 

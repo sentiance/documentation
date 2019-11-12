@@ -14,15 +14,15 @@ On Android 10 and above, without the background location access permission, SDK 
 
 The SDK automatically adds the `ACCESS_FINE_LOCATION` permission to your app's manifest, however it **does not** add the `ACCESS_BACKGROUND_LOCATION` permission \(see [here](../../appendix/android/android-10-update-behavior.md)\). Instead, you must explicitly add it to your app as follows:
 
-{% code-tabs %}
-{% code-tabs-item title="AndroidManifest.xml" %}
+{% tabs %}
+{% tab title="AndroidManifest.xml" %}
 ```markup
 <manifest...>
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION">
     ...
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 If any of these permissions is not granted, [`SdkStatus.isLocationPermGranted`](../../api-reference/android/sdkstatus/#islocationpermgranted) will be `false`.
 
@@ -36,15 +36,15 @@ If this permission is not granted, the SDK detection quality will be degraded.
 
 The SDK **does not** add the `android.permission.ACTIVITY_RECOGNITION` permission to your app's manifest \(see [here](../../appendix/android/android-10-update-behavior.md)\). Instead, you must explicitly add it to your app as follows:
 
-{% code-tabs %}
-{% code-tabs-item title="AndroidManifest.xml" %}
+{% tabs %}
+{% tab title="AndroidManifest.xml" %}
 ```markup
 <manifest...>
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION">
     ...
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 When this permission is not granted, the [`SdkStatus.isActivityRecognitionPermGranted`](../../api-reference/android/sdkstatus/#isactivityrecognitionpermgranted) will be `false`.
 

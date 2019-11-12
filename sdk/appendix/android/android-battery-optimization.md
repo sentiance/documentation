@@ -12,14 +12,14 @@ Sentiance.getInstance(context).disableBatteryOptimization();
 
 The Sentiance SDK does not define the `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` permission required for this feature. You must therefore explicitly add this permission to your app.
 
-{% code-tabs %}
-{% code-tabs-item title="AndroidManifest.xml" %}
+{% tabs %}
+{% tab title="AndroidManifest.xml" %}
 ```markup
 <uses-permission 
 	android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 {% hint style="danger" %}
 Please note that Google Play policies prohibit apps from requesting this permission unless the app's core functionality is affected. For more information about the supported use cases, see [here](https://developer.android.com/training/monitoring-device-state/doze-standby#whitelisting-cases).
