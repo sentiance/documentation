@@ -1,5 +1,9 @@
 # iOS
 
+## \[5.5.5\] - 13 Nov 2019
+
+* Fixed the SDK start/stop infinite loop when the user was selecting “Allow Once” for iOS 13 location permission
+
 ## \[5.5.3\] - 7 Oct 2019
 
 **Fixed**

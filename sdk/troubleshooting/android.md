@@ -91,12 +91,10 @@ NoClassDefFoundError: Failed resolution of: Landroid/support/v4/util/ArrayMap
 
 **Solution:** The Sentiance SDK depends on several `com.android.support` libraries. Therefore, you must enable Jetifier to migrate the SDK's support dependencies to the AndroidX equivalent ones. To do so, add the following lines to your project's gradle.properties file:
 
-{% tabs %}
-{% tab title="gradle.properties" %}
+{% code title="gradle.properties" %}
 ```groovy
 android.useAndroidX=true
 android.enableJetifier=true
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 

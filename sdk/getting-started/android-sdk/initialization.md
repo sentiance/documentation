@@ -27,8 +27,7 @@ Then reference this new class in the application tag of the `AndroidManifest.xml
 
 In the `onCreate()` method of your `Application` class, call [`init()`](../../api-reference/android/sentiance.md#init) and pass the [`SdkConfig`](../../api-reference/android/sdkconfig/) you created in the previous step, plus an instance of [`OnInitCallback`](../../api-reference/android/oninitcallback/) to handle the initialization result. 
 
-{% tabs %}
-{% tab title="MyApplication.java" %}
+{% code title="MyApplication.java" %}
 ```java
 @Override
 public void onCreate() {
@@ -46,8 +45,7 @@ public void onCreate() {
     Sentiance.getInstance(this).init(sdkConfig, initCallback);
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Upon successful initialization, [`onInitSuccess()`](../../api-reference/android/oninitcallback/#oninitsuccess) will be called. If it fails, [`onInitFailure()`](../../api-reference/android/oninitcallback/#oninitfailure) will be called with an appropriate [`InitIssue`](../../api-reference/android/oninitcallback/initissue.md).
 
