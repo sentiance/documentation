@@ -24,7 +24,7 @@ During initialization, the Sentiance SDK authenticates and creates a new Install
 
 For the User Linking feature to work it has to be enabled for your app.
 
-The feature uses a process we call Linking, in which we need to receive an HTTP call from your backend telling us which External UserID \(from your system\) you wish to associate with a specific Install-ID \(from our system\). This requires the use of a server token for authentication and thus a server side implementation on your end.
+The feature uses a process we call Linking, in which we need to receive an HTTPS call from your backend telling us which External UserID \(from your system\) you wish to associate with a specific Install-ID \(from our system\). This requires the use of a server token for authentication and thus a server side implementation on your end.
 
 Do not send us the Linking request directly from a mobile device. This would require the server token to be present on the mobile device and could lead to a security breach.
 
