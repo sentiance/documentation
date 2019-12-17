@@ -20,6 +20,8 @@ By linking these disparate Install-IDs with a single UserID on our system, we un
 
 During initialization, the Sentiance SDK authenticates and creates a new Install-ID to associate with the app. If the app is re-installed or the user moves to another device, a new install-ID is created. User Linking is a way to associate these disparate install-IDs to one canonical person, using your app's user ID.
 
+![](../.gitbook/assets/screenshot-2019-12-17-at-16.25.57.png)
+
 ## Prerequisites
 
 For the User Linking feature to work it has to be enabled for your app.
