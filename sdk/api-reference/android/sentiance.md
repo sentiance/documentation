@@ -295,6 +295,8 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 >
 > When this process has finished, [`OnStartFinishedHandler.onStartFinished(SdkStatus)`](onstartfinishedhandler.md#onstartfinished) will be called. This does not necessarily mean that the SDK is actually performing detections. You may use the [`SdkStatus`](sdkstatus/) passed to the [`onStartFinished(SdkStatus)`](onstartfinishedhandler.md#onstartfinished) method to determine why.
 >
+> To automatically stop detections, call the [`start(Date, OnStartFinishedHandler)`](sentiance.md#start-1) method instead. You do not need to call [`stop()`](sentiance.md#stop) beforehand as all start calls override each other.
+>
 > | Parameters |  |
 > | :--- | :--- |
 > | handler | A [`OnStartFinishedHandler`](trip/triptimeoutlistener.md) used to notify that the SDK start has finished. Note that the SDK holds a [weak reference](https://developer.android.com/reference/java/lang/ref/WeakReference) to this handler to in order to prevent component leaks. Make sure you have a strong reference to it in order to guarantee its execution. |
@@ -309,7 +311,7 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 >
 > This method has the same behaviour as [`start(OnStartFinishedHandler)`](sentiance.md#start) except an absolute date is passed to automatically stop the SDK some time in the future. A typical use-case is when the app provides a free trial period for its users after which the SDK should stop running.
 >
-> To cancel the auto-stop functionality, the app can call this method with a null stopDate or just call [`start(OnStartFinishedHandler)`](sentiance.md#start).
+> To cancel the auto-stop functionality, you can call this method with a null stopDate or just call [`start(OnStartFinishedHandler)`](sentiance.md#start). You do not need to call [`stop()`](sentiance.md#stop) beforehand as all start calls override each other.
 >
 > | Parameters |  |
 > | :--- | :--- |
