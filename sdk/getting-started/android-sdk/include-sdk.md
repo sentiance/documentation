@@ -12,7 +12,7 @@ allprojects {
   repositories {
     ...
     maven {
-      url "http://repository.sentiance.com"
+      url "https://repository.sentiance.com"
     }
   }
 }
