@@ -18,7 +18,7 @@ Initializing the SDK in the `onCreate()` or `didFinishLaunchingWithOptions` meth
 The only exception to the above rule is the first ever SDK initialization call. This can be delayed since the SDK has not yet set any alarms, geofences, etc. A good reason to delay this first call for example, is when you need to download the Sentiance credentials from a remote server, or you need to handle a first user login.
 {% endhint %}
 
-Another important consideration is that initialization **must be done on the main application \(UI\) thread**. When `onCreate()` or `didFinishLaunchingWithOptions` is finished, `init` should have already returned.
+Another important consideration is that when initializing inside `onCreate()` and `didFinishLaunchingWithOptions`, it **must be done synchronously on the main application \(UI\) thread**. When `onCreate()` or `didFinishLaunchingWithOptions` is finished, `init` should have already returned. Therefore, using `DispatchQueue.main.async` or `Handler.post(Runnable)` is not permitted.
 
 {% hint style="info" %}
 On Android, when the SDK detects improper initialization, it will output the following error to logcat: "**SDK is not initialized. Make sure to call Sentiance.init\(\) in your Application.onCreate\(\) method.**"
