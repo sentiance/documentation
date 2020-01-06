@@ -1,6 +1,6 @@
 # Android
 
-## \[4.13.0\] - 4 Oct 2019
+## \[4.13.0\] - 6 Jan 2020
 
 {% hint style="info" %}
 Starting from 4.13.0, we are no longer releasing the -R variant of the Sentiance SDK. If you are currently using the -R version, please update to the regular version. This change will not have any impact on your integration or user data.
