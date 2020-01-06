@@ -1,5 +1,20 @@
 # Android
 
+## \[4.13.0\] - 4 Oct 2019
+
+{% hint style="info" %}
+Starting from 4.13.0, we are no longer releasing the -R variant of the Sentiance SDK. If you are currently using the -R version, please update to the regular version. This change will not have any impact on your integration or user data.
+{% endhint %}
+
+#### **Changed**
+
+* The `WRITE_EXTERNAL_STORAGE` manifest permission is now limited to API level 18 and lower.
+
+#### Fixed
+
+* Stop the internal heartbeat task when the SDK is stopped.
+* Fix an occasional NullPointerException that occurs during detections.
+
 ## \[4.12.0\] - 4 Oct 2019
 
 #### Removed
