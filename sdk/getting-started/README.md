@@ -1,5 +1,9 @@
 # Getting Started
 
+{% hint style="success" %}
+You can find us on [Github](https://github.com/sentiance/).
+{% endhint %}
+
 {% hint style="info" %}
 **Make sure to think about your development environments before you get started**
 
