@@ -20,7 +20,20 @@ By linking these disparate Install-IDs with a single UserID on our system, we un
 
 During initialization, the Sentiance SDK authenticates and creates a new Install-ID to associate with the app. If the app is re-installed or the user moves to another device, a new install-ID is created. User Linking is a way to associate these disparate install-IDs to one canonical person, using your app's user ID.
 
-![](../.gitbook/assets/screenshot-2019-12-17-at-16.25.57.png)
+![User linking diagram](../.gitbook/assets/screenshot-2019-12-17-at-16.25.57.png)
+
+1. User login completes on the app.
+2. As a result, the app initializes the Sentiance SDK for the first time.
+3. The SDK sends a user creation request to the Sentiance API.
+4. The Sentiance API returns an install ID in response.
+5. The SDK calls the link method of the app's UserLinker implementation, passing the install ID.
+6. The app creates a request containing the install ID and the possibly the third party ID, and sends it to the client backend.
+7. The client backend, after authenticating the request, creates a new linking request with the install ID and third party ID, and send it to the Sentiance API.
+8. The Sentiance API authenticates the requests with the app token, then performs user linking by associating a person ID and a third party ID to the install ID, and finally returns the response.
+9. The client backend forwards the response to the app.
+10. The app calls the SDK's success callback method.
+11. The SDK sends a request to the Sentiance API to fetch the person ID just associated with the install ID.
+12. The SDK receives the Person ID and completes the initalization.
 
 ## Prerequisites
 
