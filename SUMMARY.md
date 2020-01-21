@@ -104,6 +104,7 @@
 * [Troubleshooting](sdk/troubleshooting/README.md)
   * [Android](sdk/troubleshooting/android.md)
   * [iOS](sdk/troubleshooting/ios/README.md)
+    * [Bundle format unrecognized, invalid, or unsuitable](sdk/troubleshooting/ios/bundle-format-unrecognized-invalid-or-unsuitable.md)
     * [Error: Undefined symbols for architecture arm64](sdk/troubleshooting/ios/error-undefined-symbols-for-architecture-arm64.md)
 * [Changelog](sdk/changelog/README.md)
   * [Android](sdk/changelog/android.md)
