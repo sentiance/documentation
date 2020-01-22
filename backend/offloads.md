@@ -48,7 +48,7 @@ As a prerequisite, share your AWS Account number with the Sentiance team to setu
 
 If you don’t have an AWS Account, please create one. You need a mobile phone number and credit card to register an account, see “[Create and Activate a new Amazon Web Services account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)”.
 
-Offloads will be generated in your client-specific root folder \(e.g. s3://sentiance-u1-offloads/client-name\). The name of the root folder will be provided by Sentiance. You might get different root folders for different appIds \(e.g. development, staging, production\). Contact the team to check your configuration. 
+**Offloads will be generated in your client-specific root folder \(e.g. s3://sentiance-u1-offloads/client-name\).** The name of the root folder will be provided by Sentiance. You might get different root folders for different appIds \(e.g. development, staging, production\). Contact the team to check your configuration. 
 
 Once Sentiance has set the permissions, [create an IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) that can access the resources. You need the client-specific root folder to configure the access rules, see placeholder {{offload\_client\_root\_directory}} in the example below. An example of IAM user permissions:
 
@@ -198,6 +198,13 @@ The long attributes offloads contains a separate row per attribute per user. Mul
 
 Segments represent a particular long-term characteristic of the user, e.g. long commuter, dog walker, brand loyalty. Every row represents a single Segment of a user. Multi-part file inside the segments.&lt;appid&gt;.csv folder.
 
+{% hint style="warning" %}
+**Lifestyle // Batch offloads** will only contain data for users who have been active in the last 7 days. Our definition of an active user is based on the criteria that the user has sent at least one of the following payloads in this period:  
+`- Trip event  
+- Trip  
+- Stationary event`
+{% endhint %}
+
 ### **Driving // Realtime offloads**
 
 Our daily realtime transport offloads contains all the transports that were processed by our backend system during the previous day. We currently consider a day between midnight UTC. The files can be in either a json or csv format.
@@ -224,7 +231,7 @@ Sentiance allows clients to make a link between their internal ID, referred to a
 
 Upon enabling them for a particular app\_id, the client receive**s** a single file containing two columns: user\_id and external\_id on a daily basis.
 
-The result files are stored in the following location on Amazon S3: s3://sentiance.offloads/\_mapping/user\_external.csv.
-
-###  <a id="Offloads-Drivingoffloads"></a>
+{% hint style="success" %}
+The **Mapping // User linking offloads** are stored on Amazon S3 in the same bucket as your other offloads.
+{% endhint %}
 
