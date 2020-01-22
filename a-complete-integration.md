@@ -16,7 +16,7 @@ Our guide\(s\) are pretty extensive and should get you to a correct integration.
 
 **Non-developers**
 
-To investigate your data without any real code integration you can refer to our [Inisghts dashboard](https://insights.sentiance.com/#/). Please note that this is for demo purposes only and should **not** be used in a production scenario.
+To investigate your data without any real code integration you can refer to our [Insights dashboard](https://insights.sentiance.com/#/). Please note that this is for demo purposes only and should **not** be used in a production scenario.
 
 **Developers**
 

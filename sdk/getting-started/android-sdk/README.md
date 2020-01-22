@@ -14,5 +14,5 @@ The Sentiance SDK targets version 12.0.1 of the Google Play Location service. Th
 
 If you want to get started quickly, you can check out our [sample application](https://github.com/sentiance/sdk-starter-android). If you prefer to manually integrate the SDK in your existing app, please read on.
 
-For testing on emulators, see our [FAQ section]() about how to resolve common issues.
+For testing on emulators, see our [FAQ section](../../faq/android.md#why-does-the-sdk-stay-in-pending-state-when-running-on-an-emulator) about how to resolve common issues.
 
