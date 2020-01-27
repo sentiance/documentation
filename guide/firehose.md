@@ -16,7 +16,15 @@ Delivery of messages in Firehose is done via Webhooks. Webhooks are a well-known
 
 ### Things We Need from You
 
-In order to receive events over Firehose we need you to set up an endpoint capable of receiving **HTTP POST** requests in **JSON format**, compressed with **gzip**. Messages are based on events that take place on the Sentiance platform. You tell us which events you want to listen to and the details of your endpoint and we start sending you messages whenever we have a new event for a user of your app.
+In order to receive events over Firehose we need you to set up an endpoint capable of receiving **HTTP POST** requests in **JSON format**, compressed with **gzip**. Messages are based on events that take place on the Sentiance platform. You tell us which events you want to listen to and the details of your endpoint through the Insights [webhooks dashboard](https://insights.sentiance.com/) and we start sending you messages whenever we have a new event for a user of your app.
+
+We also need you to create a **HTTP GET** version of the webhook endpoint. This should be secured with the same Basic Auth credentials as the POST version and should respond with a JSON in the following format.
+
+```javascript
+{ "app_id": "<yourAppID>" }
+```
+
+This ensures that the data gets sent to the correct Application ID.
 
 ### Message Format
 
@@ -58,11 +66,11 @@ On each successful delivery we expect a **200 OK** Status Code. If we don't get 
 
 ### Security
 
-To ensure that your messages originate from Sentiance and not from a malicious third party, we will set a **BasicAuth** header on every request. You can send us the credentials in `username:password` form \([https://onetimesecret.com/](https://onetimesecret.com/) for security\) and we will attach them to every request.
+We perform a list of security checks before activating webhooks. We check for valid SSL, valid BasicAuth credentials and the ability to successfully receive payloads. We will be calling the GET endpoint to ensure the data gets sent to the correct Application ID. We will be sending test payloads to the POST endpoint to ensure that the endpoint can handle our data formats. These test payloads can be identified by looking for the HTTP header `sentiance-payload-type: test`
+
+To ensure that your messages originate from Sentiance and not from a malicious third party, we will set a **BasicAuth** header on every request as per the requested configuration in the [webhooks dashboard](https://insights.sentiance.com/).
 
 Furthermore, we request that you secure your connection with TLS. [https://www.ssllabs.com/](https://www.ssllabs.com/) is a great place to inspect your endpoint and ensure it meets ongoing security standards. We **require** a B grade or above to ensure all data is transmitted securely.
-
-**Both these security measures are mandatory.**
 
 Furthermore all our calls originate from the following dedicated IPs, if you wish to protect your endpoint with IP whitelisting please add these to your whitelist.
 
@@ -81,7 +89,7 @@ Every webhook has a **retention period**. This is the **amount of time we will k
 
 For example, if your retention period has been set to 30 minutes and your endpoint has been down for 40 minutes, on resuming you will only receive messages that are up to 30 minutes old. Messages from the first 10 minutes of downtime will have been dropped.
 
-You can request a specific retention period when requesting the webhook setup. The retention period can be set up to as high as **24 hours**.
+You can request a specific retention period when requesting the webhook setup. 
 
 ## Testing
 
