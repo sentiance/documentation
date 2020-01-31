@@ -4,7 +4,7 @@
 
 #### Added
 
-* Support resetting the SDK to a "never initialized" state, clearing all SDK user data and allowing the creation of a new Sentiance user. See `reset(ResetCallback)`.
+* Support resetting the SDK to a "never initialized" state, clearing all SDK user data and allowing the creation of a new Sentiance user. See [`reset(ResetCallback)`](../api-reference/android/sentiance.md#reset).
 * Improve the detection of granting the background location access permission on Android 10+. 
 
 #### Changed

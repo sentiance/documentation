@@ -10,5 +10,4 @@ Indicates the SDK initialization failure reason.
 | **LINK\_FAILED** | An issue was encountered when trying to link the installation ID to the meta-user. |
 | **REMOTE\_DISABLED** | This user was remote disabled. If this is not what you expect, double check the rollout settings of your Sentiance app. |
 | **INITIALIZATION\_ERROR** | Initialization was aborted due to an unexpected exception or error.  |
-| **SDK\_RESET\_IN\_PROGRESS** | Initializing the SDK is not allowed while a reset operation is in progress. |
 
