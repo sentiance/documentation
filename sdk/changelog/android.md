@@ -1,5 +1,22 @@
 # Android
 
+## \[4.14.0\] - 31 Jan 2020
+
+#### Added
+
+* Support resetting the SDK to a "never initialized" state, clearing all SDK user data and allowing the creation of a new Sentiance user. See `reset(ResetCallback)`.
+* Improve the detection of granting the background location access permission on Android 10+. 
+
+#### Changed
+
+* Update and replace the use of deprecated Google Play Services APIs.
+
+#### Fixed
+
+* Motion activity detection issue during trips.
+* A rare token refresh issue that causes an unreleased wakelock.
+* Other minor bugs.
+
 ## \[4.13.0\] - 6 Jan 2020
 
 {% hint style="info" %}
