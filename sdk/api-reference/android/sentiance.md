@@ -30,6 +30,7 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 | void | [init](sentiance.md#init) \([SdkConfig](sdkconfig/) sdkConfig, [OnInitCallback](oninitcallback/) initCallback\) |
 | boolean  | [isTripOngoing](sentiance.md#istripongoing) \([TripType](trip/triptype.md) tripType\) |
 | void  | [removeUserMetadataField](sentiance.md#removeusermetadatafield) \(String label\) |
+| void | [reset](sentiance.md#reset) \([ResetCallback](resetcallback/) callback\) |
 | void  | [setCrashCallback](sentiance.md#setcrashcallback) \(@Nullable [CrashCallback](crashdetection/crashcallback.md) callback\) |
 | void  | [setTripTimeoutListener](sentiance.md#settriptimeoutlistener) \(@Nullable [TripTimeoutListener](trip/triptimeoutlistener.md) listener\) |
 | void | [setUserActivityListener](sentiance.md#setuseractivitylistener) \(@Nullable [UserActivityListener](useractivitylistener.md) listener\) |
@@ -214,14 +215,18 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 > void init(SdkConfig sdkConfig, final OnInitCallback initCallback)
 > ```
 >
-> Initializes the Sentiance Sdk. This method may only be called once, and will throw an [`SdkException`](sdkexception.md) if called multiple times.
+> Initializes the Sentiance Sdk. 
 >
-> All methods in this interface \(except this method, [`getInitState()`](sentiance.md#getinitstate) and [`getVersion()`](sentiance.md#getversion)\) will throw an [`SdkException`](sdkexception.md) when called before initialization has completed.
+> This method constructs internal SDK components and prepares the SDK for handling app and system requests. If a Sentiance user does not yet exist on the device, this method triggers user creation on the Sentiance Platform, which requires internet connectivity.
+>
+> During the lifetime of the app process, calling this method again after a successful initialization is not allowed. Doing so is regarded as an error and therefore throws an [`SdkException`](sdkexception.md) at runtime. To reinitialize the SDK with a different configuration or to create a new Sentiance user, first call `reset(ResetCallback)`.
+>
+> All methods in this class \(except this method, [`reset(ResetCallback)`](sentiance.md#reset), [`getInitState()`](sentiance.md#getinitstate) and [`getVersion()`](sentiance.md#getversion)\) will throw an [`SdkException`](sdkexception.md) when called before initialization has completed.
 >
 > | Parameters |  |
 > | :--- | :--- |
 > | sdkConfig | An [`SdkConfig`](sdkconfig/) representing the SDK configuration. |
-> | initCallback | An [`OnInitCallback`](oninitcallback/) object to handle the initialization of the Sdk. |
+> | initCallback | An [`OnInitCallback`](oninitcallback/) to handle the initialization of the Sdk. |
 
 ### `isTripOngoing()`
 
@@ -246,6 +251,24 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 > | Parameters |  |
 > | :--- | :--- |
 > | label | Metadata to remove. |
+
+### `reset()`
+
+> ```java
+> void reset(@Nullable ResetCallback callback)
+> ```
+>
+> Resets the Sentiance Sdk.
+>
+> Calling this method results in stopping of all SDK operations and deleting all SDK user data from the device. Additionally, the SDK will be uninitialized, allowing reinitialization and new Sentiance user creation.
+>
+> The reset operation may take a while, in which case the SDK's initialization state will be set to `InitState.RESETTING` until it's complete. Calling any other SDK method during this time will either be ignored or return a default value. While resetting, make sure your app is in the foreground to prevent process termination \(i.e. an activity is open, or a foreground service is running\).
+>
+> Note that calling this method during intermediate initialization states \(i.e. `INIT_IN_PROGRESS` and `RESETTING`\) will fail.
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | callback | A [`ResetCallback`](resetcallback/) to handle the reset completion. |
 
 ### `setCrashCallback()`
 

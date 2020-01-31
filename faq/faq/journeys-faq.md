@@ -2,7 +2,7 @@
 description: All FAQs below are subject to change. We update our applications frequently.
 ---
 
-# Journeys FAQ
+# Journeys \(FAQ\)
 
 ## Where can I find Journeys?
 
@@ -20,7 +20,7 @@ Project codes are dedicated identifiers for our client projects. If you are an i
 
 If you'd like to set up a dedicated environment please contact [sales@sentiance.com](mailto:sales@sentiance.com)
 
-## I've installed with the wrong or without a project code while I should have used one.
+## I have installed with the wrong or without a project code while I should have used one.
 
 Please contact your project point of contact or mail to [support@sentiance.com](mailto:support@sentiance.com).
 

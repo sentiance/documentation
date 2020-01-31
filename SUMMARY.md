@@ -1,8 +1,16 @@
 # Table of contents
 
 * [What is the Sentiance Platform?](README.md)
-* [Journeys FAQ](journeys-faq.md)
 * [A standard integration](a-complete-integration.md)
+
+## FAQ
+
+* [FAQ](faq/faq/README.md)
+  * [Integration \(FAQ\)](faq/faq/integration.md)
+  * [Detections \(FAQ\)](faq/faq/detections.md)
+  * [Data interface \(FAQ\)](faq/faq/getting-data.md)
+  * [Security, Privacy and Terms of Service \(FAQ\)](faq/faq/security-and-privacy.md)
+  * [Journeys \(FAQ\)](faq/faq/journeys-faq.md)
 
 ## SDK
 
@@ -68,6 +76,8 @@
     * [PoiLocation](sdk/api-reference/android/poilocation.md)
     * [PointOfInterest](sdk/api-reference/android/pointofinterest.md)
     * [PoiPlace](sdk/api-reference/android/poiplace.md)
+    * [ResetCallback](sdk/api-reference/android/resetcallback/README.md)
+      * [ResetFailureReason](sdk/api-reference/android/resetcallback/resetfailurereason.md)
     * [SdkConfig](sdk/api-reference/android/sdkconfig/README.md)
       * [Builder](sdk/api-reference/android/sdkconfig/sdkconfig-builder.md)
     * [SdkException](sdk/api-reference/android/sdkexception.md)
@@ -75,9 +85,9 @@
       * [LocationSetting](sdk/api-reference/android/sdkstatus/locationsetting.md)
       * [Quota Status](sdk/api-reference/android/sdkstatus/quota-status.md)
       * [StartStatus](sdk/api-reference/android/sdkstatus/startstatus.md)
+    * [Sentiance](sdk/api-reference/android/sentiance.md)
     * [SubmitDetectionsCallback](sdk/api-reference/android/submitdetectionscallback.md)
     * [Token](sdk/api-reference/android/token.md)
-    * [Sentiance](sdk/api-reference/android/sentiance.md)
     * [TokenResultCallback](sdk/api-reference/android/tokenresultcallback.md)
     * [StationaryInfo](sdk/api-reference/android/stationaryinfo.md)
     * [Trip](sdk/api-reference/android/trip/README.md)
@@ -138,18 +148,9 @@
 * [User Linking](guide/user-linking.md)
 * [Firehose](guide/firehose.md)
 * [Verifying your integration](guide/verifying-your-integration.md)
-
-## Terms of Service
-
 * [SDK Standard License](https://www.sentiance.com/terms/sdk-standard/)
 * [Journeys License](https://www.sentiance.com/terms/journeys/)
 * [Journeys Application](https://www.sentiance.com/terms/journeys-application/)
-
-## Privacy
-
 * [Journeys Privacy Policy](https://www.sentiance.com/privacy/)
-
-## Security
-
 * [Technical & Organizational Measures](https://www.sentiance.com/technical-and-organizational-measures/)
 
