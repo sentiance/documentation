@@ -8,7 +8,7 @@
 
 **Fixed**
 
-* Issues where SDK database might experience conflicts when the enclosing app also uses database instance\(s\) of CoreData
+* An issue where the SDK database might experience conflicts when the enclosing app also uses database instance\(s\) of CoreData
 
 **Changed**
 
