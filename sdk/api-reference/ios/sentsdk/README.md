@@ -311,3 +311,13 @@ Get SDK disk quota usage
 - (long) getDiskQuotaUsage;
 ```
 
+### reset
+
+Reset the sdk to initial state, cancel what is in progress and cleanup everyhing
+
+```objectivec
+- (void)reset:(void(^)(void))success failure:(void(^)(SENTResetFailureReason reason))failure;
+```
+
+
+

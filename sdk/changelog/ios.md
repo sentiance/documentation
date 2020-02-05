@@ -1,5 +1,19 @@
 # iOS
 
+## \[5.6.0\] - 5 Feb 2020
+
+**Added**
+
+* Support for resetting the SDK to factory settings, which clears all user data and allows creating a new Sentiance user
+
+**Fixed**
+
+* Issues where SDK database might experience conflicts when the enclosing app also uses database instance\(s\) of CoreData
+
+**Changed**
+
+* The geo-fence management policy so that the SDK does not intervene with the lifecycle of geo-fences owned by the enclosing app
+
 ## \[5.5.5\] - 13 Nov 2019
 
 * Fixed the SDK start/stop infinite loop when the user was selecting “Allow Once” for iOS 13 location permission

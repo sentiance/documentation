@@ -9,6 +9,7 @@ Indicates the SDK initialization status.
 | **SENTNotInitialized** | The SDK has not been initialized or a previous initialization attempt has failed. To initialize the SDK, call _`[[SENTSDK sharedInstance] initWithConfig:(SENTConfig *) success:^(void)success failure:^(SENTInitIssue issue)failure]`_ |
 | **SENTInitInProgress** | Initialization is in progress. When it completes, the SDK will call success\(\) and failure\(\) if something went wrong. Do not call init during this state. Doing so will throw an exception. |
 | **SENTInitialized** | The SDK has been initialized. Do not call init during this state. Doing so will throw an exception. |
+| **SENTResetting** | The SDK reset is in progress. All public method calls will be ignored and callbacks will not be triggered during this state.  |
 
 ### SENTQuotaStatus
 
@@ -19,6 +20,15 @@ Quota status applicable to disk and network usage.
 | **SENTQuotaStatusOK** | The quota is below the threshold. |
 | **SENTQuotaStatusWarning** | More than 90 percent of the quota is consumed. |
 | **SENTQuotaStatusExceeded** | The quota is fully consumed. |
+
+### SENTResetFailureReason
+
+Indicates the failure reason of the latest reset attempt.
+
+| Attributes | Description |
+| :--- | :--- |
+| **SENTResetFailureReasonInitInProgress** | SDK initialization is in progress. |
+| **SENTResetFailureReasonResetting** | Another SDK reset is in progress. |
 
 ### canDetect
 
