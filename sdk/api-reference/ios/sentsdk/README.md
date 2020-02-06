@@ -311,13 +311,20 @@ Get SDK disk quota usage
 - (long) getDiskQuotaUsage;
 ```
 
-### reset
+### reset: failure:
 
-Reset the sdk to initial state, cancel what is in progress and cleanup everyhing
+Resets the Sentiance SDK. Calling this method results in stopping of all SDK operations and deleting all SDK user data from the device. Additionally, the SDK will be uninitialized, allowing reinitialization and new Sentiance user creation.
+
+The reset operation may take a while, in which case the SDK's initialization state will be set to [InitState](sentsdkstatus.md#sentsdkinitstate) **SENTResetting** until it's complete. Calling any other SDK method during this time will either be ignored or return a default value. 
+
+Note that calling this method during intermediate initialization states \(i.e. [InitState ](sentsdkstatus.md#sentsdkinitstate)**SENTInitInProgress**} and [InitState](sentsdkstatus.md#sentsdkinitstate) **SENTResetting** will fail.
 
 ```objectivec
 - (void)reset:(void(^)(void))success failure:(void(^)(SENTResetFailureReason reason))failure;
 ```
 
-
+| Parameter |  |
+| :--- | :--- |
+| success | Success block callback when reset successfully done |
+| failure | Failure callback when with one of [SENTResetFailureReason](sentsdkstatus.md#sentresetfailurereason) happened |
 
