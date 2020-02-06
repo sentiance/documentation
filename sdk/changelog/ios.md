@@ -4,19 +4,20 @@
 
 **Added**
 
-* Support for [resetting](https://docs.sentiance.com/sdk/api-reference/ios/sentsdk#reset-failure) the SDK to factory settings, which clears all user data and allows creating a new Sentiance user
-
-**Fixed**
-
-* An issue where the SDK database might experience conflicts when the enclosing app also uses database instance\(s\) of CoreData
+* Support for [resetting](https://docs.sentiance.com/sdk/api-reference/ios/sentsdk#reset-failure) the SDK to factory settings, which clears all user data and allows creating a new Sentiance user**.**
 
 **Changed**
 
-* The geo-fence management policy so that the SDK does not intervene with the lifecycle of geo-fences owned by the enclosing app
+* The geo-fence management policy so that the SDK does not intervene with the lifecycle of geo-fences owned by the enclosing app.
+* Removed the motion activity permission prompt when starting the SDK. If you rely on the SDK for prompting the user, please make sure you update your app and prompt the user during the onboarding.
+
+**Fixed**
+
+* An issue where the SDK database might experience conflicts when the enclosing app also uses database instance\(s\) of CoreData.
 
 ## \[5.5.5\] - 13 Nov 2019
 
-* Fixed the SDK start/stop infinite loop when the user was selecting “Allow Once” for iOS 13 location permission
+* Fixed the SDK start/stop infinite loop when the user was selecting “Allow Once” for iOS 13 location permission.
 
 ## \[5.5.3\] - 7 Oct 2019
 
