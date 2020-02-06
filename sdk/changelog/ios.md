@@ -4,7 +4,7 @@
 
 **Added**
 
-* Support for [reset](https://docs.sentiance.com/sdk/api-reference/ios/sentsdk#reset)ting the SDK to factory settings, which clears all user data and allows creating a new Sentiance user
+* Support for [resetting](https://docs.sentiance.com/sdk/api-reference/ios/sentsdk#reset-failure) the SDK to factory settings, which clears all user data and allows creating a new Sentiance user
 
 **Fixed**
 
