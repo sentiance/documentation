@@ -104,7 +104,7 @@ curl -X POST \
   --data-binary @firehose-transport-example.gzip
 ```
 
-{% file src="../.gitbook/assets/firehose-transport-example.gzip" %}
+{% file src="../.gitbook/assets/firehose-transport-example.json.gz" caption="firehose-transport-example" %}
 
 You'll have to change the url being targeted, but for the rest you can use as is. The encoded basic auth credentials are `sentiance` and `securepassword`. The provided example file is a [Transports](firehose.md##transports) event as shown at the end of the page.
 
@@ -129,47 +129,124 @@ With `https://example.com/webhook/:appId` being the route that handles and parse
 
 ## Event Reference
 
-### Transports <a id="#transports"></a>
+### Car Transports <a id="#transports"></a>
 
 ```javascript
 {
-  "meta": {
-    "message_type": "transport",
-    "message_timestamp": "2018-07-14T17:21:00.000+00:00"
-  },
-  "data": {
-    "event_id": "8b1e30e2-4c51-480c-af26-fd312bcfd08c",
-    "user_id": "595a29d58fbb430700000027",
-    "mode": "car",
-    "start": "2018-07-14T14:31:58.416+00:00",
-    "end": "2018-07-14T17:21:00.000+00:00",
-    "distance": 282159,
-    "behavior_scores": {
-      "overall": 0.81,
-      "smooth": 0.88,
-      "legal": 0.7,
-      "anticipative": 0.86,
-      "focus": 1,
-      "mounted": 0,
-      "hard_accel": 0.25,
-      "hard_brake": 0.75,
-      "hard_events": 0.83,
-      "legal_v2": 0.65,
-      "hard_turn": 0.5,
-      "smooth_v2": 0.88,
-      "anticipative_v2": 0.68
-    },
-    "start_location": {
-      "timestamp": "2018-07-14T17:06:31.000+00:00",
-      "longitude": 4.0696,
-      "latitude": 49.23617
-    },
-    "end_location": {
-      "timestamp": "2018-07-14T17:11:08.000+00:00",
-      "longitude": 4.06919,
-      "latitude": 49.23614
-    }
-  }
+	"meta": {
+		"message_type": "transport",
+		"message_timestamp": "2020-02-02T12:24:44.000+01:00"
+	},
+	"data": {
+		"user_id": "5d0cb0d05160df0600000abc",
+		"event_id": "199ea63edee3f182d46d0ff5d138184113c16e4db9674587e49de786e20a7abc",
+		"mode": "car",
+		"start": "2020-02-02T12:05:09+01:00",
+		"end": "2020-02-02T12:24:44+01:00",
+		"distance": 10127,
+		"behavior_scores": {
+			"overall": 0.73,
+			"smooth": 0.73,
+			"legal": 0.74,
+			"anticipative": 0.71,
+			"focus": 0.89,
+			"mounted": 0.13,
+			"hard_accel": 0.9,
+			"hard_brake": 0.9,
+			"hard_events": 0.73,
+			"legal_v2": 1,
+			"hard_turn": 0.85,
+			"smooth_v2": 0.65,
+			"anticipative_v2": 0.65
+		},
+		"start_location": {
+			"timestamp": "2020-02-02T12:05:09+01:00",
+			"longitude": 13.36925,
+			"latitude": 52.53772
+		},
+		"end_location": {
+			"timestamp": "2020-02-02T12:24:44+01:00",
+			"longitude": 13.30897,
+			"latitude": 52.49215
+		}
+	}
+}
+```
+
+### All Transports <a id="predictions"></a>
+
+If you subscribe to **All Transports**, you will receive events for all transport modes including **car.** The primary difference between mode **car** and other modes is the presence of `behavior_scores` on car transports.
+
+#### Example 1
+
+```javascript
+{
+	"meta": {
+		"message_type": "transport",
+		"message_timestamp": "2020-02-04T11:40:00.000+09:00"
+	},
+	"data": {
+		"user_id": "5cc240cf42641b0600000abc",
+		"event_id": "15d4ab88085924a15d23667e6e969aa253d32f4169242908d6f74888036a9f03",
+		"mode": "biking",
+		"start": "2020-02-04T11:37:21+09:00",
+		"end": "2020-02-04T11:40:00+09:00",
+		"distance": 884,
+		"start_location": {
+			"timestamp": "2020-02-04T11:37:21+09:00",
+			"longitude": 139.79201,
+			"latitude": 35.737
+		},
+		"end_location": {
+			"timestamp": "2020-02-04T11:40:00+09:00",
+			"longitude": 139.78759,
+			"latitude": 35.74073
+		}
+	}
+}
+```
+
+#### Example 2
+
+```javascript
+{
+	"meta": {
+		"message_type": "transport",
+		"message_timestamp": "2020-02-02T12:24:44.000+01:00"
+	},
+	"data": {
+		"user_id": "5d0cb0d05160df0600000abc",
+		"event_id": "199ea63edee3f182d46d0ff5d138184113c16e4db9674587e49de786e20a7abc",
+		"mode": "car",
+		"start": "2020-02-02T12:05:09+01:00",
+		"end": "2020-02-02T12:24:44+01:00",
+		"distance": 10127,
+		"behavior_scores": {
+			"overall": 0.73,
+			"smooth": 0.73,
+			"legal": 0.74,
+			"anticipative": 0.71,
+			"focus": 0.89,
+			"mounted": 0.13,
+			"hard_accel": 0.9,
+			"hard_brake": 0.9,
+			"hard_events": 0.73,
+			"legal_v2": 1,
+			"hard_turn": 0.85,
+			"smooth_v2": 0.65,
+			"anticipative_v2": 0.65
+		},
+		"start_location": {
+			"timestamp": "2020-02-02T12:05:09+01:00",
+			"longitude": 13.36925,
+			"latitude": 52.53772
+		},
+		"end_location": {
+			"timestamp": "2020-02-02T12:24:44+01:00",
+			"longitude": 13.30897,
+			"latitude": 52.49215
+		}
+	}
 }
 ```
 
@@ -177,70 +254,97 @@ With `https://example.com/webhook/:appId` being the route that handles and parse
 
 ```javascript
 {
-  "meta": {
-    "message_type": "event_prediction",
-    "message_timestamp": "2019-06-13T08:25:54.496+00:00"
-  },
-  "data": {
-    "user_id": "000000000000000000000000",
-    "events": [
-      {
-        "type": "StationaryPrediction",
-        "start": "2019-06-13T09:34:56.024+01:00",
-        "end": "2019-06-13T19:37:30.000+01:00",
-        "probability": 0.31,
-        "location_type": "Work",
-        "significance": "work",
-        "latitude": 48.872234,
-        "longitude": 2.775808
-      },
-      {
-        "type": "TransportPrediction",
-        "start": "2019-06-13T19:37:30.000+01:00",
-        "end": "2019-06-13T19:45:00.000+01:00",
-        "probability": 0.32,
-        "mode": "car"
-      },
-      {
-        "type": "StationaryPrediction",
-        "start": "2019-06-13T19:45:00.000+01:00",
-        "end": "2019-06-14T08:22:30.000+01:00",
-        "probability": 0.36,
-        "location_type": "Home",
-        "significance": "home",
-        "latitude": 48.856613,
-        "longitude": 2.352222
-      }
-    ],
-    "trigger_time": "2019-06-13T08:24:56.024+00:00",
-    "probability": 0.0037640448000000005
-  }
+	"meta": {
+		"message_type": "event_prediction",
+		"message_timestamp": "2020-01-30T16:32:25.895Z"
+	},
+	"data": {
+		"user_id": "5db1c944f73d460600000abc",
+		"events": [{
+			"end": "2020-01-30T11:52:30.000-05:00",
+			"location_type": "Shop",
+			"significance": "regular",
+			"type": "StationaryPrediction",
+			"start": "2020-01-30T11:41:30.508-05:00",
+			"latitude": 43.7628,
+			"longitude": -79.41037,
+			"probability": 0.12,
+			"place": {
+				"name": "Yonge Sheppard Centre",
+				"category_hierarchy": ["shop", "general", "mall"]
+			}
+		}, {
+			"probability": 0.36,
+			"mode": "walking",
+			"type": "TransportPrediction",
+			"start": "2020-01-30T11:52:30.000-05:00",
+			"end": "2020-01-30T12:05:12.000-05:00"
+		}, {
+			"location_type": "Work",
+			"significance": "work",
+			"latitude": 43.76143,
+			"longitude": -79.41004,
+			"type": "StationaryPrediction",
+			"start": "2020-01-30T12:05:12.000-05:00",
+			"end": "2020-01-30T16:37:30.000-05:00"
+		}, {
+			"start": "2020-01-30T16:37:30.000-05:00",
+			"end": "2020-01-30T16:43:32.000-05:00",
+			"probability": 0.18,
+			"mode": "walking",
+			"type": "TransportPrediction"
+		}],
+		"trigger_time": "2020-01-30T16:31:30.508+00:00",
+		"probability": 0.0000011920713741376413
+	}
 }
 ```
 
-### Location
+### Locations
 
 ```javascript
 {
-  "meta": {
-    "message_type": "location",
-    "message_timestamp": "2018-07-14T17:21:00.000+00:00"
-  },
-  "data": {
-    "user_id": "595a29d58fbb430700000027",
-    "last_location": {
-      "latitude": 51.19661,
-      "longitude": 4.40805,
-      "accuracy": 14,
-      "time": "2018-10-01T16:03:50+02:00"
-    },
-    "previous_location": {
-      "latitude": 51.19512,
-      "longitude": 4.40805,
-      "accuracy": 19,
-      "time": "2018-10-01T15:03:50+02:00"
-    }
-  }
+	"meta": {
+		"message_type": "location",
+		"message_timestamp": "2020-01-30T16:31:48.592Z"
+	},
+	"data": {
+		"previous_location": {
+			"latitude": 43.76277,
+			"longitude": -79.4107,
+			"accuracy": "14",
+			"time": "2020-01-30T11:29:33.296-05:00"
+		},
+		"user_id": "5db1c944f73d460600000abc",
+		"last_location": {
+			"latitude": 43.76277,
+			"longitude": -79.4107,
+			"accuracy": 14,
+			"time": "2020-01-30T11:25:05.083-05:00"
+		}
+	}
+}
+```
+
+### Stationaries
+
+```javascript
+{
+	"meta": {
+		"message_type": "stationary",
+		"message_timestamp": "2020-01-29T12:03:10.000+01:00",
+		"updated_attributes": ["location"]
+	},
+	"data": {
+		"user_id": "5dadf781b8271f0600000b5c",
+		"event_id": "d945a24769b079eeae9e0305129b61d4fe426dc1b7560ba4b30378b5c5881997",
+		"start": "2020-01-29T11:58:38.000+01:00",
+		"end": "2020-01-29T12:03:10.000+01:00",
+		"location": {
+			"longitude": 4.54461,
+			"latitude": 50.93558
+		}
+	}
 }
 ```
 

@@ -10,5 +10,5 @@ To learn more about how our SDK works and what other features it offers, check o
 
 ## Troubleshooting
 
-You can reach out to us at [support@sentiance.com](mailto:support@sentiance.com) to troubleshoot integration issues or if you have additional questions. Be sure to check out our [FAQ](../../faq/android.md) as well.
+You can reach out to us at [support@sentiance.com](mailto:support@sentiance.com) to troubleshoot integration issues or if you have additional questions. Be sure to check out our [FAQ]() as well.
 
