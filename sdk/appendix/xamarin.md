@@ -1,6 +1,6 @@
 # Xamarin
 
-The latest version of our iOS and Android Xamarin SDKs can be downloaded from the following links:
+Xamarin bindings are not updated with every release but can be provided on request. The latest version of our iOS and Android Xamarin SDKs can be downloaded from the following links:
 
 | Platform | Download Link |
 | :--- | :--- |
