@@ -46,7 +46,7 @@ All messages will have a general envelope format and then a `data` field with a 
 }
 ```
 
-A message will always be a JSON object with a `data` field which is an array of multiple events. These events could be of different types and from different users, batched into one request.
+A message will always be a JSON object with a `data` field which is an array of multiple events. These events could be of [different types](firehose.md#event-reference) and from different users, batched into one request.
 
 Each item will have a `meta` JSON object with fields `message_type` and `message_timestamp`. On webhooks configured to listen to only one type of event, the `message_type` will always be the same. If you wish to receive more than one type of event on the same webhook, you will need to check the `message_type` field to determine which event you are looking at. The `message_timestamp` field will tell you when the event was generated in our system. These timestamps are in ISO 8601 format.
 
