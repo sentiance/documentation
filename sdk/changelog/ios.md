@@ -1,5 +1,11 @@
 # iOS
 
+## \[5.6.1\] - 21 Feb 2020
+
+**Fixed**
+
+* An issue where the SDK might quit unexpectedly during resetting due to an internal issue
+
 ## \[5.6.0\] - 5 Feb 2020
 
 **Added**
