@@ -9,7 +9,7 @@ A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementa
 
 |  |  |
 | :--- | :--- |
-| [StartStatus](enumcom_1_1sentiance_1_1sdk_1_1_sdk_status_1_1_start_status.html)  | [startStatus](./#startstatus) |
+| [StartStatus](startstatus.md)  | [startStatus](startstatus.md) |
 | boolean  | [canDetect](./#candetect) |
 | boolean  | [isRemoteEnabled](./#isremoteenabled) |
 | boolean  | [isLocationPermGranted](./#islocationpermgranted) |
