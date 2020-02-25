@@ -1,6 +1,6 @@
 # Authentication and Authorization
 
-The Sentiance Backend speaks REST and GraphQL, and the authentication mechanisms for both of these are the same.
+The Sentiance Backend speaks REST and GraphQL, and share the same authentication mechanism.
 
 An `authorization` header with content `Bearer <token>` authenticates and authorizes your request. Based on what kind of token is supplied, the level of access is determined and could affect the functionality of various calls.
 
@@ -16,7 +16,7 @@ To understand the usage of a User Token, let us first talk about the the two typ
 
 ### **SDKUser**
 
-**SDKUsers** are created when the [SDK initializes with an App ID and App Secret](../sdk/getting-started/android-sdk/initialization.md). They only have a userID and are only authenticated by their token. You can retrieve this token from an initialized SDK.
+**SDKUsers** are created when the [SDK initializes with an App ID and App Secret](../sdk/getting-started/android-sdk/initialization.md). They only have a userID and are only authenticated by their token. You can [retrieve this token from an initialized SDK](../sdk/appendix/user-credentials.md#get-user-and-token).
 
 ### ControlUsers
 
@@ -117,7 +117,7 @@ Place here the authorization code retrieved in the previous call.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="token\_type" type="string" required=true %}
-Set this to "self".
+Set this to "manage".
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
