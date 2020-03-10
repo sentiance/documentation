@@ -98,3 +98,16 @@ android.enableJetifier=true
 ```
 {% endcode %}
 
+## Permission revoked when adding the Sentiance SDK
+
+**Problem:** When adding the Sentiance SDK to an app, the `WRITE_EXTERNAL_STORAGE` or `READ_PHONE_STATE` permission gets revoked or can no longer be acquired at runtime.
+
+**Solution:** The Sentiance SDK adds these permissions to the app and specifies the `maxSdkVersion` attribute. To remove this attribute, add the `tools:remove="android:maxSdkVersion"` attribute to the permission in your app's manifest:
+
+{% code title="AndroidManifest.xml" %}
+```markup
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+                 tools:remove="android:maxSdkVersion"/>
+```
+{% endcode %}
+
