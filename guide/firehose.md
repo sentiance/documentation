@@ -4,9 +4,9 @@
 
 ### Why Firehose?
 
-A common desire among clients is to react to their user's activities when they happen. You might want to enhance their experience in a travel app based on their mode of transport or show them relevant offers when they plan to visit a store. Receiving updates of a user's activities as they happen is necessary in such cases.
+A common need among Sentiance customers is to react to _their_ user's activities. You might want to enhance their experience in a travel app based on their mode of transport, or show them relevant offers when they plan to visit a store. Receiving updates of a user's event stream in real-time is an invaluable tool.
 
-Enter the Firehose: our way of sending you updates on the activities of your users.
+Enter the **Firehose**: our way of sending you updates on the activity stream of your users.
 
 ## Webhooks
 
@@ -16,9 +16,11 @@ Delivery of messages in Firehose is done via Webhooks. Webhooks are a well-known
 
 ### Things We Need from You
 
-In order to receive events over Firehose we need you to set up an endpoint capable of receiving **HTTP POST** requests in **JSON format**, compressed with **gzip**. Messages are based on events that take place on the Sentiance platform. You tell us which events you want to listen to and the details of your endpoint through the Insights [webhooks dashboard](https://insights.sentiance.com/) and we start sending you messages whenever we have a new event for a user of your app.
+In order to receive events over Firehose we need you to set up an endpoint capable of receiving **HTTP POST** requests in **JSON format**, compressed with **gzip,** secured by [BasicAuth](https://www.httpwatch.com/httpgallery/authentication/). Messages are based on events that take place on the Sentiance platform. You tell us which events you want to listen to and the details of your endpoint through the Insights [webhooks dashboard](https://insights.sentiance.com/) and we start sending you messages whenever we have a new event for a user of your app.
 
-We also need you to create a **HTTP GET** version of the webhook endpoint. This should be secured with the same Basic Auth credentials as the POST version and should respond with a JSON in the following format.
+> Our US and Australian customers can go to `https://insights.d4.sentiance.com` and `https://insights.e6.sentiance.com` respectively.
+
+We also need you to create a **HTTP GET** version of the webhook endpoint. This should be secured with the same BasicAuth credentials as the POST version and should respond with a JSON in the following format.
 
 ```javascript
 { "app_id": "<yourAppID>" }
@@ -26,9 +28,11 @@ We also need you to create a **HTTP GET** version of the webhook endpoint. This 
 
 This ensures that the data gets sent to the correct Application ID.
 
+In case incorrect credentials are received by either POST or GET endpoint, a status **401** is expected as response.
+
 ### Message Format
 
-All messages will have a general envelope format and then a `data` field with a unique format per event type.
+All messages will have a general envelope format and a `data` field with a unique format per event type.
 
 ```javascript
 {
@@ -46,7 +50,7 @@ All messages will have a general envelope format and then a `data` field with a 
 }
 ```
 
-A message will always be a JSON object with a `data` field which is an array of multiple events. These events could be of [different types](firehose.md#event-reference) and from different users, batched into one request.
+The **POST body** will always be a **JSON object** with a `data` field which is an array of multiple events. These events could be of [different types](firehose.md#event-reference) and from different users, batched into one request.
 
 Each item will have a `meta` JSON object with fields `message_type` and `message_timestamp`. On webhooks configured to listen to only one type of event, the `message_type` will always be the same. If you wish to receive more than one type of event on the same webhook, you will need to check the `message_type` field to determine which event you are looking at. The `message_timestamp` field will tell you when the event was generated in our system. These timestamps are in ISO 8601 format.
 
@@ -56,40 +60,55 @@ All messages are gzipped before sending over the wire.
 
 ### Batching
 
-To save on network bandwidth we batch messages sent over the webhook. Batching is done over both time and space, the defaults are **5 seconds** and **1 MB**, that is to say that once we have 1 MB worth of data or 5 seconds have passed, we will create a batch of data and send a request. These values can be configured so let us know what you want. The ranges are **1 - 300 seconds** and **23kb - 4MB**.
+To save on network bandwidth we batch messages sent over the webhook. Batching is done over both time and space, the defaults are **5 seconds** and **1 MB.** 
 
-**Note:** The batching by size is done before gzip compression.
+That is to say that once _we have 1 MB worth of data_ or _5 seconds have passed_, we will create a batch of data and send a request. These values can be configured when creating or updating a webhook. The ranges are **1 - 300 seconds** and **23kb - 4MB**.
+
+**Note:** Batching by size is done before gzip compression.
 
 ### Delivery
 
-On each successful delivery we expect a **200 OK** Status Code. If we don't get one, we will keep retrying \(see below\). We try our best to guarantee **at least** **once** delivery. This means we might sometimes send multiples of the same message if our server fails to recognise a successful acceptance of our POST.
+On each successful delivery we expect a **200 OK** Status Code. If we don't get one, we will keep retrying \(see below\). We try our best to guarantee **at least** **once** delivery. This means we might sometimes send multiples of the same message if our server fails to recognise a successful acceptance of our POST. _We don't read the body when the response is a 200 OK._
 
 ### Security
 
-We perform a list of security checks before activating webhooks. We check for valid SSL, valid BasicAuth credentials and the ability to successfully receive payloads. We will be calling the GET endpoint to ensure the data gets sent to the correct Application ID. We will be sending test payloads to the POST endpoint to ensure that the endpoint can handle our data formats. These test payloads can be identified by looking for the HTTP header `sentiance-payload-type: test`
-
 To ensure that your messages originate from Sentiance and not from a malicious third party, we will set a **BasicAuth** header on every request as per the requested configuration in the [webhooks dashboard](https://insights.sentiance.com/).
 
-Furthermore, we request that you secure your connection with TLS. [https://www.ssllabs.com/](https://www.ssllabs.com/) is a great place to inspect your endpoint and ensure it meets ongoing security standards. We **require** a B grade or above to ensure all data is transmitted securely.
+Your connection _**must**_ be secured with TLS. [https://www.ssllabs.com/](https://www.ssllabs.com/) is a great place to inspect your endpoint and ensure it meets ongoing security standards. We _**require**_ a B grade or above to ensure all data is transmitted securely.
 
 Furthermore all our calls originate from the following dedicated IPs, if you wish to protect your endpoint with IP whitelisting please add these to your whitelist.
 
 * 52.213.134.71
 * 34.252.131.81
 
+We perform a list of verifications before activating webhooks. 
+
+We check for valid SSL
+
+* Valid BasicAuth credentials
+* Correct implementation of BasicAuth security
+* Intended AppID to which messages are being delivered.
+* The ability to successfully receive messages
+
+We will be calling the **GET** endpoint to ensure the data gets sent to the correct Application ID. We will also call the endpoints with _incorrect_ credentials to verify they are being rejected.
+
+We will be sending test payloads to the **POST** endpoint to ensure that the endpoint can handle our data formats. These test payloads can be identified by looking for the HTTP header `sentiance-payload-type: test`
+
+Once automated verifications have passed, your request will be forwarded to a member of the Sentiance Client team for final validation. If everything looks good your Webhook will be made active and you will be informed over email.
+
 ## Errors
 
 ### Handling them like a Champ
 
-If your endpoint is unreachable, whether it be network fluctuations or a temporary server outage, we aim to still send the message to you. Firehose expects a 200 OK response for every message sent. If it gets back anything else, it will keep **retrying with exponential backoff from 100 ms up to 5 minutes**.
+If your endpoint is unreachable, whether it be network fluctuations or a temporary server outage, we aim to still attempt delivery. Firehose expects a **200 OK** response for every message sent. If it gets back anything else, it will keep **retrying with exponential backoff starting from 100 ms up to 5 minutes**.
 
 ### Retention
 
-Every webhook has a **retention period**. This is the **amount of time we will keep messages** for that webhook before discarding them. This ensures that we avoid sending stale information.
+Every webhook has a **Message TTL**. This is the **amount of time we will keep messages** for that webhook before discarding them. This ensures that we avoid sending stale information.
 
-For example, if your retention period has been set to 30 minutes and your endpoint has been down for 40 minutes, on resuming you will only receive messages that are up to 30 minutes old. Messages from the first 10 minutes of downtime will have been dropped.
+For example, if your **Message TTL** has been set to 30 minutes and your endpoint has been down for 40 minutes, on resuming you will only receive messages that are up to 30 minutes old. Messages from the first 10 minutes of downtime will have been dropped.
 
-You can request a specific retention period when requesting the webhook setup. 
+You can request a specific **Message TTL** during Webhook setup.
 
 ## Testing
 
