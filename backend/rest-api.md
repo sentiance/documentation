@@ -2,9 +2,11 @@
 
 All endpoints speak JSON. A `Content-Type` header with value `application/json` is expected to always be present.
 
-The base url is `https://api.sentiance.com/<version>/` for all REST endpoints, where the currently supported versions are `v2` and `v3`. `v1` has been fully deprecated. Note that not all APIs are common between `v2` and `v3` versions.
+The base url is `https://api.sentiance.com/<version>/` for all REST endpoints, where the currently supported versions are `v2` and `v3`. `v1` has been fully deprecated except the user delete API. Note that not all APIs are common between `v2` and `v3` versions.
 
-> Our US and Australian customers can go to `https://api.d4.sentiance.com/<version>/` and `https://api.e6.sentiance.com/<version>/` respectively.
+{% hint style="danger" %}
+For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment. 
+{% endhint %}
 
 ### V2 Endpoints
 
@@ -106,7 +108,7 @@ User's Own Profile
 {% endapi-method-summary %}
 
 {% api-method-description %}
-When called with a User Token, returns the user's own data. It fails if an App Token is used.
+When called with a User Token, returns the user's own data. It fails if an API Key is used.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -164,9 +166,9 @@ Profile by User ID
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Can be used with both User and App tokens to retrieve profile data of a user identified by their ID.  
+Can be used with both User Token and API Key to retrieve profile data of a user identified by their ID.  
 If a User Token is used, the calling user must have permission to view the called user's data.  
-If an App Token is used, the user whose data is being fetched must belong to the App.
+If an API Key is used, the user whose data is being fetched must belong to the App to which the API Key belongs to.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -230,7 +232,7 @@ Timeline Events
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Returns all events on the timeline for a user from a specified start date to a specified end date.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -402,7 +404,7 @@ Trajectories by Start Time
 {% endapi-method-summary %}
 
 {% api-method-description %}
-**Note: This has been deprecated in favor of EventID based retrieval. Check below.**
+**Note: This has been deprecated in favour of EventID based retrieval. Check below.**
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -480,7 +482,7 @@ Behavior Scores by Start Time
 {% endapi-method-summary %}
 
 {% api-method-description %}
-**Note: This has been deprecated in favor of EventID based retrieval. Check below.**
+**Note: This has been deprecated in favour of EventID based retrieval. Check below.**
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -1291,7 +1293,7 @@ The ID of the user returned by the SDK into the Linker's callback function.
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-Unlike other endpoints, which can be called with both a user token and an app token, this endpoint can ONLY be called with an app token. User tokens will be rejected.
+Unlike other endpoints, which can be called with both a user token and an API Key, this endpoint can ONLY be called with an API Key with \`user.link\` scope. User tokens will be rejected.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -1677,6 +1679,46 @@ ID of the Transport whose Behavior Annotations are being retrieved.
         ]
     }
 ]
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+### V1 Routes
+
+{% api-method method="delete" host="" path="/users/:user\_id" %}
+{% api-method-summary %}
+Delete User
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Deletes the user data along with the history.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="user\_id" type="string" required=true %}
+ID of the user whose data is to be deleted.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+A user token or an API Key with \`user.delete\` scope
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```text
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
