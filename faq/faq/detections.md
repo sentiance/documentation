@@ -7,7 +7,7 @@ description: Frequently asked questions about false or missing detections.
 ## Why is there no data for a specific timeline?
 
 **I have installed the app less than 3 days ago**  
-Our platform needs a certain amount of data before we can start identifying your events, moments & segments correctly. Please make sure you've been tracking with the permissions set correctly for at least a few days. 
+Our platform needs a certain amount of data before we can start identifying your events, moments & segments correctly. Please make sure you've been tracking with the permissions set correctly for at least a few days. Specific venues, like home and work, could take up to a week to detect correctly.
 
 **I have installed the app more than 3 days ago**  
 Make sure your device has the required specifications.  
@@ -16,19 +16,21 @@ Make sure you've given the right [permissions](../../sdk/getting-started/android
 Also, specific android devices may require whitelisting.  
 If none of this works or you need more information, contact [support@sentiance.com](mailto:support@sentiance.com) for assistance.
 
-## **Why does a specific trip not show up on a timeline?**
+## **Why is a trip incorrectly or not detected?**
 
-There can be multiple reasons for a trip not showing up on your timeline:
+Both short trips and long trips will be correctly detected in almost all cases. When a trip is incorrectly detected or not detected at all, it might be because:
 
-* The trip was too short in duration \(&lt;5min\)
-* The trip was too short in distance \(&lt;2km\)
-* The phone was in flight mode during the trip
-* The phone was in low battery mode \(only on certain Android phones\) during the trip
-* The app did not get the required permissions \(always on\) during the trip
+* The phone was in flight mode during the trip.
+
+  The trip was very short in duration \(&lt; 3 min\).
+
+* The trip was very short in distance \(&lt; 2 km or 1.25 mi\).
+* The phone was in a battery saving mode during the trip.
+* The app did not get the required permissions \(always on\) during the trip.
 
 ## **Why was phone usage falsely detected during a trip?**
 
-Our algorithm that detects phone usage while driving might sometimes detect phone usage incorrectly. This is usually the result of a phone moving in the pocket while driving, or hitting a sequence of speed bumps on a certain trajectory. 
+Our algorithm that detects phone usage while driving might sometimes detect phone usage when the phone is moving in the pocket while driving, or when it hits a sequence of speed bumps. 
 
 ## **Why do some trips change after a few days?**
 
