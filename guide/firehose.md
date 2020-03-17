@@ -93,7 +93,7 @@ We will be calling the **GET** endpoint to ensure the data gets sent to the corr
 
 We will be sending test payloads to the **POST** endpoint to ensure that the endpoint can handle our data formats. These test payloads can be identified by looking for the HTTP header `sentiance-payload-type: test`
 
-Once automated verifications have passed, your request will be forwarded to a member of the Sentiance Client team for final validation. If everything looks good your Webhook will be made active and you will be informed over email.
+Once automated verifications have passed, your request will be forwarded to a member of the Sentiance Client team for final validation. If everything looks good your Webhook will be made active and you will be informed over email. In case there is a problem a Sentiance Delivery Team member will reach out to you.
 
 ## Errors
 
