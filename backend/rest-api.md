@@ -2,7 +2,9 @@
 
 All endpoints speak JSON. A `Content-Type` header with value `application/json` is expected to always be present.
 
-The base url is `https://api.sentiance.com/<version>/` for all REST endpoints, where the currently supported versions are `v2` and `v3`. `v1` has been fully deprecated except the user delete API. Note that not all APIs are common between `v2` and `v3` versions.
+The base url is `https://api.sentiance.com/<version>/` for all REST endpoints, where the currently supported versions are `v2` and `v3`. `v1` has been fully deprecated. Note that not all APIs are common between `v2` and `v3` versions.
+
+**Note:** The [user deletion API](rest-api.md#delete-user) is the only exception to the versioned endpoints rule. It stands on its own as `DELETE /users/:user_id`
 
 {% hint style="danger" %}
 For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment. 
@@ -1685,7 +1687,7 @@ ID of the Transport whose Behavior Annotations are being retrieved.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### V1 Routes
+### Unversioned Routes \(no version prefix applied\)
 
 {% api-method method="delete" host="" path="/users/:user\_id" %}
 {% api-method-summary %}
