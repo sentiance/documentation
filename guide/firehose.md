@@ -83,11 +83,10 @@ Furthermore all our calls originate from the following dedicated IPs, if you wis
 
 We perform a list of verifications before activating webhooks. 
 
-We check for valid SSL
-
+* We check for a valid SSL certificate present on your endpoint
 * Valid BasicAuth credentials
 * Correct implementation of BasicAuth security
-* Intended AppID to which messages are being delivered.
+* Intended AppID to which messages are being delivered
 * The ability to successfully receive messages
 
 We will be calling the **GET** endpoint to ensure the data gets sent to the correct Application ID. We will also call the endpoints with _incorrect_ credentials to verify they are being rejected.
