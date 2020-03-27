@@ -24,7 +24,7 @@ In order to get to a smooth roll-out there's some best practices you may want to
 
 ## [GraphQL / API](../backend/graphql.md)
 
-* Backend queries use the server token
+* Backend queries use the API Keys
 * App / user based queries use a user token
 * You are not using GraphQL / API queries for real-time use cases \(e.g. polling\)
 * Heavy / Large queries are validated by us

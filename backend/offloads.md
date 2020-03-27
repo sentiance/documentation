@@ -15,11 +15,11 @@ The offloads are accessible to you via the **Amazon S3 storage service** on the 
 
 There are three main types of offloads: lifestyle, driving, and mapping. Click below for more info.
 
-* \*\*\*\*[**Lifestyle // Batch offloads**](offloads.md#Offloads-Drivingoffloads-2)
+* **Lifestyle // Batch offloads**
   * Contain events, moments & segments. Are usually offloaded on a weekly basis.
-* \*\*\*\*[**Driving // Realtime offloads**](offloads.md#Offloads-Drivingoffloads-3) 
+* **Driving // Realtime offloads** 
   * Contain low level driving behaviour. Are usually offloaded on a daily basis.
-* \*\*\*\*[**Mapping // User linking offloads**](offloads.md#Offloads-Drivingoffloads-4) 
+* **Mapping // User linking offloads** 
   * Contain information for mapping our internal identifiers to client specific identifiers.
 
 {% hint style="danger" %}
@@ -31,7 +31,7 @@ _Please consult with your Sentiance contact person to discuss the offloads befor
 ## Connecting to the offloads \(Amazon S3\)
 
 {% hint style="warning" %}
-If you do not wish to setup an automated system \(yet\) please see "[Browsing the offloads](offloads.md#Offloads-Drivingoffloads-3)"
+If you do not wish to setup an automated system \(yet\) please see **browsing the offloads.**
 {% endhint %}
 
 ### 1\) You already have an AWS account or are willing to create one
@@ -40,11 +40,13 @@ If you do not wish to setup an automated system \(yet\) please see "[Browsing th
 This will allow you more fine grained control over your credentials and access methods.
 {% endhint %}
 
+{% hint style="info" %}
+**Beginning March 2021, Amazon S3 \(AWS\)** is moving to its own certificate authority. This may require you to update your operating system or browser. Read more about who is affected and which steps to take [here](https://aws.amazon.com/blogs/security/how-to-prepare-for-aws-move-to-its-own-certificate-authority/).
+{% endhint %}
+
 We will give permission to your AWS account to create IAM users that can access Sentiance’s offload bucket.
 
 As a prerequisite, share your AWS Account number with the Sentiance team to setup the required permissions. The easiest way to find your account number is to log in to the AWS console and open the ‘Support Center’. The account number is at the top of the page. \(This number might start with 0, make sure to copy the full number.\)
-
-![](https://lh5.googleusercontent.com/TUIIclFx4RN2w8VaWVSQ8NB2TberFNENLUBGlb0HvTn_hBs3bUxEOZd0Ee6vUSxAxr_EErkWCez_pZ3CabN7T8-N_GYC434MVih0NWC266gp3WqQTiUFvEr54RUt-iiTv_Lv-pc)
 
 If you don’t have an AWS Account, please create one. You need a mobile phone number and credit card to register an account, see “[Create and Activate a new Amazon Web Services account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)”.
 
@@ -220,8 +222,6 @@ We're always using the processing time of the transport to include it in the off
 
 We guarantee that everything processed the previous day will be in the offload. There might be some transports of the current day already included in the offload of the previous day, those will not be repeated in the next offload.  
 ****
-
-![](https://lh6.googleusercontent.com/Mw6tZWwd0mJyJpt_gT2bPIU3VksQr9v9P6YqstwfEgjDSXyAIUiEc41-I-QLA7JAGofN6DgI7_FP-Mm0oQXX7Bt03BZxb-APsL1ssbNWzyclmy3qD-oy-1lqcmIqDiZjwyQVFUk)
 
 ### **Mapping // User linking offloads**
 

@@ -27,9 +27,9 @@ During initialization, the Sentiance SDK authenticates and creates a new Install
 3. The SDK sends a user creation request to the Sentiance API.
 4. The Sentiance API returns an install ID in response.
 5. The SDK calls the link method of the app's UserLinker implementation, passing the install ID.
-6. The app creates a request containing the install ID and the possibly the third party ID, and sends it to the client backend.
+6. The app creates a request containing the install ID and possibly the third party ID, and sends it to the client backend.
 7. The client backend, after authenticating the request, creates a new linking request with the install ID and third party ID, and send it to the Sentiance API.
-8. The Sentiance API authenticates the requests with the app token, then performs user linking by associating a person ID and a third party ID to the install ID, and finally returns the response.
+8. The Sentiance API authenticates the requests with the API key, then performs user linking by associating a person ID and a third party ID to the install ID, and finally returns the response.
 9. The client backend forwards the response to the app.
 10. The app calls the SDK's success callback method.
 11. The SDK sends a request to the Sentiance API to fetch the person ID just associated with the install ID.
@@ -37,11 +37,13 @@ During initialization, the Sentiance SDK authenticates and creates a new Install
 
 ## Prerequisites
 
-**For the User Linking feature to work it has to be enabled for your app, please ask your sales representative about this or contact support at** [**support@sentiance.com**](mailto:support@sentiance.com). 
+**User linking should automatically be enabled for your app. If it looks like it is not enabled, please ask your sales representative about this or contact support at** [**support@sentiance.com**](mailto:support@sentiance.com). 
 
-The feature uses a process we call Linking, in which we need to receive an HTTPS call from your backend telling us which External UserID \(from your system\) you wish to associate with a specific Install-ID \(from our system\). This requires the use of a server token for authentication and thus a server side implementation on your end.
+The feature uses a process we call Linking, in which we need to receive an HTTPS call from your backend telling us which External UserID \(from your system\) you wish to associate with a specific Install-ID \(from our system\). This requires the use of a API Key for authentication and thus a server side implementation on your end. **For user linking to work, the API key used should have the scope 'user.link'.** 
 
-Do not send us the Linking request directly from a mobile device. This would require the server token to be present on the mobile device and could lead to a security breach.
+{% hint style="danger" %}
+Do not send us the Linking request directly from a mobile device. This would require the API Key to be present on the mobile device and could lead to a security breach.
+{% endhint %}
 
 ## SDK
 

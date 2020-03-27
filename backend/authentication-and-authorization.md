@@ -66,7 +66,7 @@ Scopes allow you to specify what operations an API Key can perform. Currently, w
 
 **Self-Expiring**
 
-To increase security, API keys will be self-expiring. The current expiry time is set to 90 days \(default\). After the 90 days, a new key will have to be created and the old key will stop working. We allow up to 10 active keys at a time for an app. An active key is one that hasn't been revoked or expired.
+For increased security, API Keys are self-expiring. The expiry time is 90 days from time of creation. After  90 days, the old API Key will stop working and a new one will have to be created. We allow up to 10 active API Keys at a time for an app. An active key is one that hasn't been revoked or expired.
 
 {% hint style="warning" %}
 Please make sure you add the renewal of API Keys to your existing maintenance process and keep track of expiry dates. **Developers on your account will receive a reminder e-mail one month before the expiry date and one week before the expiry date.**  
