@@ -16,7 +16,7 @@ If a specific user's data needs to be permanently removed from the Sentiance pla
 
 ## Where can I find the Journeys Privacy Policy?
 
-You can find the Journeys Privacy Policy [here](https://www.sentiance.com/privacy/).
+You can find the Journeys Privacy Policy [here](https://www.sentiance.com/privacy-and-security/journeys/).
 
 ## Where can I find the security measures Sentiance has implemented to protect its customers' data?
 
