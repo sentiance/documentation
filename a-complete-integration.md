@@ -4,7 +4,9 @@ description: High level integration guide
 
 # A standard integration
 
-Most of these steps can be done in parallel by different stakeholders and/or developers
+## Get important updates on bug fixes, changes and new features.
+
+[Subscribe to our Technical Release Notes](https://sentiance.us4.list-manage.com/subscribe/post?u=20d6a5a74b902f67b939e3648&amp;id=cdc37b7e30&name=).
 
 ## Getting data on the platform
 
