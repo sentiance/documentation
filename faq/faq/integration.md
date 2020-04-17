@@ -24,7 +24,13 @@ You can find all the steps required to set up user linking [here](https://docs.s
 
 It is recommended to do this for both iOS and Android and to perform multiple installs on multiple devices. When all of these are successful, you can be fairly confident user linking was successful.
 
+## When does UserID get deleted?
 
+Once a UserID is generated, it's stored within the device. There are three cases where Sentiance UserID is removed from the device. The cases are:
+
+1. Resetting the SDK \(calling reset\(\)\).
+2. Deleting the cache from the app settings.
+3. Uninstalling and installing the app again.
 
 
 
