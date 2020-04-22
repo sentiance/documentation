@@ -39,7 +39,7 @@ You can retrieve the Server Token by visiting [apps page on Insights](https://in
 Common use-cases of this token include building internal dashboards to view within your team, run batch processes on users, etc.
 
 {% hint style="warning" %}
-Server Tokens will be **deprecated on April 27th 2020.** 
+We will start **deprecating server tokens on April 27th 2020.** 
 {% endhint %}
 
 ## API Keys
@@ -59,24 +59,26 @@ Scopes allow you to specify what operations an API Key can perform. Currently, w
 | Scope | Description |
 | :--- | :--- |
 | **user.read** | Use this scope to read user data. This scope should be used with the GraphQL and Rest APIs that are exposed by the sentiance platform to read user data. |
-| **user.delete** | Use this scope to delete a user along with all historical data. This scope should be used with the [user delete API](https://docs.sentiance.com/backend/rest-api#user-delete)  |
-| **user.link** | Use this scope to link third party users with sentiance a user. This scope should be used with the [user link API](https://docs.sentiance.com/backend/rest-api#user-link) |
+| **user.delete** | Use this scope to delete a user along with all historical data. This scope should be used with the [user delete API](https://docs.sentiance.com/backend/rest-api#user-delete). |
+| **user.link** | Use this scope to link third party users with a sentiance user. This scope should be used with the [user link API](https://docs.sentiance.com/backend/rest-api#user-link). |
 
 ![API Key scopes](../.gitbook/assets/screenshot-2020-02-18-at-15.26.15.png)
 
 **Self-Expiring**
 
-For increased security, API Keys are self-expiring. The expiry time is 90 days from time of creation. After  90 days, the old API Key will stop working and a new one will have to be created. We allow up to 10 active API Keys at a time for an app. An active key is one that hasn't been revoked or expired.
+For increased security, API Keys are self-expiring. The expiry time is 1 year \(recently changed from 90 days\) from time of creation. After 1 year, the old API Key will stop working and a new one will have to be created. We allow up to 10 active API Keys at any given time, per app. An active key is one that hasn't been revoked or expired.
 
 {% hint style="warning" %}
-Please make sure you add the renewal of API Keys to your existing maintenance process and keep track of expiry dates. **Developers on your account will receive a reminder e-mail one month before the expiry date and one week before the expiry date.**  
+Please make sure you add the renewal of API Keys to your existing maintenance process and keep track of expiry dates. **Developers on your account will receive a reminder e-mail two weeks before the expiry date and one week before the expiry date.**  
 {% endhint %}
 
 #### Manage Your Own API Keys
 
-While in the past creating, revoking and general Server Token management required you to contact the Sentiance team, with API Keys, you can do it yourself. Our developer portal has all the tools you need, including a full history of API Keys created, revoked or expired. See it in action [here.](https://insights.sentiance.com/#/login)
+You can manage your own API Keys from our developer portal. Our developer portal has all the tools you need, including a full history of API Keys created, revoked or expired. See it in action [here.](https://insights.sentiance.com/#/login)
 
-> Customers who use one of our **platforms based in the US or Australia**, can go to `https://insights.d4.sentiance.com` and `https://insights.e6.sentiance.com` respectively.
+> Most of our clients **are based on our European platform** \(even US and Australian clients\) at `https://insights.sentiance.com`.   
+>   
+> If you are using our US-based or Australian-based platform, please use respectively `https://insights.d4.sentiance.com` and `https://insights.e6.sentiance.com.`
 
 ## Authenticating With a Control User
 
