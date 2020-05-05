@@ -145,7 +145,7 @@
 
 ## Guide
 
-* [User Linking](guide/user-linking.md)
+* [User linking](guide/user-linking-2.0.md)
 * [Firehose](guide/firehose.md)
 * [Verifying your integration](guide/verifying-your-integration.md)
 * [SDK Standard License](https://www.sentiance.com/terms/sdk-standard/)
@@ -153,5 +153,4 @@
 * [Journeys Application](https://www.sentiance.com/demo)
 * [Journeys Privacy Policy](https://www.sentiance.com/privacy/)
 * [Technical & Organizational Measures](https://www.sentiance.com/technical-and-organizational-measures/)
-* [User linking](user-linking-2.0.md)
 
