@@ -12,7 +12,7 @@ We always suggest to our clients to collect data from as many users as possible 
 
 ## **How can I test if user linking works for my app**?
 
-You can find all the steps required to set up user linking [here](https://docs.sentiance.com/guide/user-linking). After you have received a success callback, you can start testing it with real devices. We suggest to:
+You can find all the steps required to set up user linking [here](../../guide/user-linking-2.0.md). After you have received a success callback, you can start testing it with real devices. We suggest to:
 
 1. [ ] Install the app with the Sentiance SDK
 2. [ ] Make an account 
