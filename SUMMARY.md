@@ -153,4 +153,5 @@
 * [Journeys Application](https://www.sentiance.com/demo)
 * [Journeys Privacy Policy](https://www.sentiance.com/privacy/)
 * [Technical & Organizational Measures](https://www.sentiance.com/technical-and-organizational-measures/)
+* [User linking](user-linking-2.0.md)
 
