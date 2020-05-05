@@ -14,5 +14,5 @@ With Spectator access, you can view the data for all users of your application. 
 
 ### Developer
 
-With Developer access, you can view the **secret key** of your application along with [App Tokens.](../backend/authentication-and-authorization.md#the-app-token) If an App Token is not present, contact support.
+With Developer access, you can view the **secret key** of your application along with [App Tokens.](../important-topics/authentication-and-authorization.md#the-app-token) If an App Token is not present, contact support.
 

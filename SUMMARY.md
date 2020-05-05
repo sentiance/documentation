@@ -1,6 +1,6 @@
 # Table of contents
 
-* [What is the Sentiance Platform?](README.md)
+* [Introduction](README.md)
 * [A standard integration](a-complete-integration.md)
 
 ## FAQ
@@ -118,6 +118,11 @@
   * [Android](sdk/changelog/android.md)
   * [iOS](sdk/changelog/ios.md)
 
+## Important topics
+
+* [Authentication and Authorization](important-topics/authentication-and-authorization.md)
+* [User linking](important-topics/user-linking-2.0.md)
+
 ## Library
 
 * [Events](library/events.md)
@@ -127,7 +132,6 @@
 
 ## Backend
 
-* [Authentication and Authorization](backend/authentication-and-authorization.md)
 * [GraphQL](backend/graphql.md)
 * [REST API Reference](backend/rest-api.md)
 * [Offloads](backend/offloads.md)
@@ -145,7 +149,6 @@
 
 ## Guide
 
-* [User linking](guide/user-linking-2.0.md)
 * [Firehose](guide/firehose.md)
 * [Verifying your integration](guide/verifying-your-integration.md)
 * [SDK Standard License](https://www.sentiance.com/terms/sdk-standard/)
