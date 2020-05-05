@@ -60,7 +60,7 @@ The user linking process on the app-side involves the following steps:
 2. Receive the unique install id from the SDK in the MetaUserLinker
 3. Send that install id to your own backend.
 4. Link the install id to your external user id in your own database
-5. _\(Server-to-server\) Make linking request from your to Sentiance back-end_
+5. \_\_[_\(Server-to-server\)_](https://docs.sentiance.com/guide/user-linking-2.0#server-to-server-integration-api) _Make linking request from your to Sentiance back-end_
 6. Call **linkSuccess\(\)** or return **link\(true\)**
 
 You can find more details on each step below. After you have finished these steps, there are a few more steps involved for the actual server-to-server communication. You can find these in the next chapter.  
