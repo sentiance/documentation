@@ -90,7 +90,7 @@ A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementa
 
 ### `isBackgroundProcessingRestricted`
 
-> Whether background processing is [restricted](https://developer.android.com/reference/android/app/ActivityManager#isBackgroundRestricted%28%29%22) for the application. When `true`, SDK detections will be severely degraded. This will be set to `false` for devices running Oreo and lower.
+> Whether background processing is [restricted](https://developer.android.com/reference/android/app/ActivityManager#isBackgroundRestricted%28%29) for the application. When `true`, SDK detections will be severely degraded. This will be set to `false` for devices running Oreo and lower.
 
 ### `wifiQuotaStatus`
 
