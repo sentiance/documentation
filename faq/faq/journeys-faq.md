@@ -28,7 +28,7 @@ It is currently not possible to change this yourself due to privacy & GDPR conce
 
 ## I want to use a newly created project code with an existing Journeys account.
 
-Unfortunately, we do not support switching your existing Journeys code to a newly created project code. Our platform is built from the ground up with privacy and data security in mind, and as such, we enforce a strict separation of data. This allows no transfer or sharing of data between apps or project codes.
+Unfortunately, we do not support switching your existing Journeys account to a newly created project code. Our platform is built from the ground up with privacy and data security in mind, and as such, we enforce a strict separation of data. This allows no transfer or sharing of data between apps or project codes.
 
 ## App navigation & screen explanations
 
