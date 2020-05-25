@@ -44,7 +44,7 @@ We will start **deprecating server tokens on April 27th 2020.**
 
 ## API Keys
 
-Our current Server Token implementation does not have token expiry, scoping or naming. There is no revocation mechanism and no rotation mechanism. To remedy this we introduce **API Keys:** a revocable, rotatable, scopeable key with which to query the API**.** 
+To remedy the shortcomings of our legacy Server Tokens we introduce **API Keys:** a revocable, rotatable, scopeable key with which to query the API**.** 
 
 API Keys are generated on-demand with a **name**, **scope**, and **expiry date** and are disclosed to the creator **only once**. Please ensure the API Key is immediately stored somewhere secure.
 
