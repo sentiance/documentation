@@ -455,7 +455,9 @@ A possible series of events predicted for the user.
       <td style="text-align:left">A combined score of handheld_calling, handsfree_calling and handling_without_calling.</td>
     </tr>
   </tbody>
-</table>### CityMoment
+</table>
+
+### CityMoment
 
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 

@@ -313,6 +313,10 @@ Get SDK disk quota usage
 
 ### reset: failure:
 
+{% hint style="danger" %}
+The reset functionality is intended for removing all data in the device to handle a case such as a user logging out from an app or user requesting data deletion in the local app. It should not be used to reset the internal state of the SDK.
+{% endhint %}
+
 Resets the Sentiance SDK. Calling this method results in stopping of all SDK operations and deleting all SDK user data from the device. Additionally, the SDK will be uninitialized, allowing reinitialization and new Sentiance user creation.
 
 The reset operation may take a while, in which case the SDK's initialization state will be set to [InitState](sentsdkstatus.md#sentsdkinitstate) **SENTResetting** until it's complete. Calling any other SDK method during this time will either be ignored or return a default value. 

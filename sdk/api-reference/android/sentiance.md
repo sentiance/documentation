@@ -254,6 +254,10 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 
 ### `reset()`
 
+{% hint style="danger" %}
+The reset functionality is intended for removing all data in the device to handle a case such as a user logging out from an app or user requesting data deletion in the local app. It should not be used to reset the internal state of the SDK.
+{% endhint %}
+
 > ```java
 > void reset(@Nullable ResetCallback callback)
 > ```
