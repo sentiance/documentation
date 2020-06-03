@@ -6,6 +6,12 @@
 Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
 {% endhint %}
 
+## \[5.7.0\] - 3 Jun 2020
+
+#### Added 
+
+* Support added for on-device trip profiling and hard event detection.
+
 ## \[5.6.1\] - 21 Feb 2020
 
 **Fixed**

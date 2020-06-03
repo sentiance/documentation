@@ -79,6 +79,14 @@ Callback to receive current status of SDK. Returns [SENTSDKStatus](sentsdk/sents
 @property (nonatomic, copy) MetaUserLinker link;
 ```
 
+### isHardEventDetectionEnabled
+
+A boolean value indicating whether hard event detection should be enabled.
+
+```objectivec
+@property (nonatomic, assign) BOOL isHardEventDetectionEnabled;
+```
+
 ### initWithAppId: secret: launchOptions:
 
 SDK configuration initialization method. Returned SENTConfig object is passed to \[SENTSDK initWithConfig\].

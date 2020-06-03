@@ -332,3 +332,59 @@ Note that calling this method during intermediate initialization states \(i.e. [
 | success | Success block callback when reset successfully done |
 | failure | Failure callback when with one of [SENTResetFailureReason](sentsdkstatus.md#sentresetfailurereason) happened |
 
+### setTripProfileHandler:
+
+Sets a block to execute after a trip finishes and is profiled on device. The profiling data is returned with a [SENTTripProcessingTripProfile](../tripprofile-1/) object. 
+
+Each [SENTTripProcessingTripProfile](../tripprofile-1/) contains multiple transport segments which each is assigned a [SENTTripProcessingVehicleMode](../tripprofile-1/vehiclemode-1.md). The handler makes sure that only the transport segments that is assigned [SENTTripProcessingVehicleModeVehicle](../tripprofile-1/vehiclemode-1.md) are returned. 
+
+{% hint style="info" %}
+In order to use this handler, your app configuration must enable the trip profiling feature explicitly. Full trip profiling also needs to be disabled from the SDK. Please see [`[SENTSDK setFullTripProfilingEnabled:]`](./#setfulltripprofilingenabled) for more details.
+{% endhint %}
+
+```objectivec
+- (void)setTripProfileHandler:(void (^) (SENTTripProcessingTripProfile *tripProfile))tripProfileHandler;
+```
+
+| Parameter |  |
+| :--- | :--- |
+| tripProfileHandler | The block to execute after a trip finishes and is profiled on device. |
+
+### setFullTripProfilingEnabled:
+
+Changes the trip profiling mode the SDK is currently using.
+
+Pass YES to let the trips being profiled on the Sentiance platform. If you previously set an on-device trip profiling handler via [`[SENTSDK setTripProfileHandler:]`](./#settripprofilehandler), this also disables that handler. When NO is passed later, the handler continues to be called.
+
+Pass NO to enable on-device trip profiling without uploading trip information to the Sentiance platform.
+
+{% hint style="info" %}
+In order to use this method, your app configuration must enable the trip profiling feature explicitly. 
+{% endhint %}
+
+```objectivec
+- (void)setFullTripProfilingEnabled:(BOOL)enabled;
+```
+
+| Parameter |  |
+| :--- | :--- |
+| enabled | The flag that enables or disables trips being profiled on the Sentiance platform |
+
+### setSpeedLimit:
+
+Sets a custom speed limit in m/s that will be used during on-device speeding estimation. Any value that is less than or equal to "0" will be ignored.
+
+If a custom speed limit is not set, the SDK uses a value of 23 m/s as the default speed limit.
+
+{% hint style="info" %}
+In order to use this method, your app configuration must enable the trip profiling feature explicitly. 
+{% endhint %}
+
+```objectivec
+- (void)setSpeedLimit:(double)speedLimit;
+```
+
+| Parameter |  |
+| :--- | :--- |
+| speedLimit | The speed limit value that will be used during on-device speeding estimation |
+
