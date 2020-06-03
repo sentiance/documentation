@@ -3,7 +3,7 @@
 ## \[4.16.0\] - 3 Jun 2020
 
 {% hint style="info" %}
-Starting from 4.16.0, SDK detections will no longer be supported on Android 4.4. and lower. When initializing the SDK, [`onInitFailure`](../api-reference/android/oninitcallback/#oninitfailure) will return [`INITIALIZATION_ERROR`](../api-reference/android/oninitcallback/initissue.md) with an accompanying [`SdkException`](../api-reference/android/sdkexception.md) containing the message "Unsupported OS version."
+Starting from 4.16.0, SDK detections will no longer be supported on Android 4.4 and lower. When initializing the SDK, [`onInitFailure`](../api-reference/android/oninitcallback/#oninitfailure) will return [`INITIALIZATION_ERROR`](../api-reference/android/oninitcallback/initissue.md) with an accompanying [`SdkException`](../api-reference/android/sdkexception.md) containing the message "Unsupported OS version."
 
 This change does not impact the SDK's minimum supported API level \(i.e. minSdkVersion\).
 {% endhint %}
