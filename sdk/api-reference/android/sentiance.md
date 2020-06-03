@@ -32,15 +32,17 @@ Sentiance sentianceSDK = Sentiance.getInstance(context);
 | void  | [removeUserMetadataField](sentiance.md#removeusermetadatafield) \(String label\) |
 | void | [reset](sentiance.md#reset) \([ResetCallback](resetcallback/) callback\) |
 | void  | [setCrashCallback](sentiance.md#setcrashcallback) \(@Nullable [CrashCallback](crashdetection/crashcallback.md) callback\) |
+| void | [setTripProfileListener](sentiance.md#settripprofilelistener) \([TripProfileListener](tripprofilelistener.md) tripProfileListener\) |
 | void  | [setTripTimeoutListener](sentiance.md#settriptimeoutlistener) \(@Nullable [TripTimeoutListener](trip/triptimeoutlistener.md) listener\) |
 | void | [setUserActivityListener](sentiance.md#setuseractivitylistener) \(@Nullable [UserActivityListener](useractivitylistener.md) listener\) |
 | void  | [start](sentiance.md#start) \([OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
 | void | [start](sentiance.md#start-1) \([Date](https://developer.android.com/reference/java/util/Date) stopDate, [OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
-| void  | [startTrip](sentiance.md#starttrip) \(final @Nullable Map&lt;String, String&gt; metadata, final @Nullable [TransportMode](trip/transportmode.md) transportModeHint, @Nullable [StartTripCallback](trip/starttripcallback.md) callback\) |
+| void  | [startTrip](sentiance.md#starttrip) \(@Nullable Map&lt;String, String&gt; metadata, @Nullable [TransportMode](trip/transportmode.md) transportModeHint, @Nullable [StartTripCallback](trip/starttripcallback.md) callback\) |
 | void  | [stop](sentiance.md#stop) \(\) |
 | void  | [stopTrip](sentiance.md#stoptrip) \(@Nullable [StopTripCallback](trip/stoptripcallback.md) callback\) |
 | void  | [submitDetections](sentiance.md#submitdetections) \(@Nullable [SubmitDetectionsCallback](submitdetectionscallback.md) callback\) |
 | void | [updateSdkNotification](sentiance.md#updatesdknotification) \([Notification](https://developer.android.com/reference/android/app/Notification) notification\) |
+| void | [updateTripProfileConfig](sentiance.md#updatetripprofileconfig) \([TripProfileConfig](tripprofile-1/) tripProfileConfig\) |
 
 
 
@@ -286,6 +288,20 @@ The reset functionality is intended for removing all data in the device to handl
 > | :--- | :--- |
 > | callback | A [`CrashCallback`](crashdetection/crashcallback.md) object to receive crash time and location. |
 
+### `setTripProfileListener()`
+
+> ```java
+> void setTripProfileListener(@Nullable TripProfileListener tripProfileListener)
+> ```
+>
+> Sets a listener that is invoked after a completed trip has been profiled. This feature must first be enabled for your app since it is not enabled by default.
+>
+>  Note that profiling is only done on [`VehicleMode.VEHICLE`](tripprofile/vehiclemode.md) transports of a trip. The listener is invoked only if the profiled trip contains a [`TransportSegment`](tripprofile/transportsegment.md) of type [`VehicleMode.VEHICLE`](tripprofile/vehiclemode.md).
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | tripProfileListener | A [`TripProfileListener`](tripprofilelistener.md) to handle a new [`TripProfile`](tripprofile/), or null to remove the previous listener. |
+
 ### `setTripTimeoutListener()`
 
 > ```java
@@ -412,4 +428,16 @@ The reset functionality is intended for removing all data in the device to handl
 > | Parameters |  |
 > | :--- | :--- |
 > | notification | A [`Notification`](https://developer.android.com/reference/android/app/Notification) used by the SDK when starting a foreground service. |
+
+### `updateTripProfileConfig()`
+
+> ```java
+> void updateTripProfileConfig(TripProfileConfig tripProfileConfig)
+> ```
+>
+> Updates the [`TripProfileConfig`](tripprofile-1/). Configuration fields can be updated individually without the need to set all the other fields. Updating the configuration remains persistent so it doesn't have to be set after every SDK init. If the app passes a null configuration field, that field will be set to SDK default. All configuration fields will be set to SDK default if the app resets the SDK.
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | tripProfileConfig | trip profile configuration. |
 
