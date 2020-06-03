@@ -1,6 +1,6 @@
 # 1. Including the SDK
 
-The latest version of the Sentiance SDK is **4.14.0**.
+The latest version of the Sentiance SDK is **4.16.0**.
 
 ## Adding the Gradle Dependency
 
@@ -23,7 +23,7 @@ In the **build.gradle** file of your app module, add the following line to the d
 
 {% code title="" %}
 ```groovy
-implementation ('com.sentiance:sdk:4.14.0@aar') { transitive = true }
+implementation ('com.sentiance:sdk:4.16.0@aar') { transitive = true }
 ```
 {% endcode %}
 

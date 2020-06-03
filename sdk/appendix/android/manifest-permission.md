@@ -8,13 +8,12 @@ The gradle build system will merge the following Sentiance SDK permissions durin
 * android.permission.ACCESS\_NETWORK\_STATE
 * android.permission.ACCESS\_FINE\_LOCATION
 * android.permission.RECEIVE\_BOOT\_COMPLETED
-* android.permission.WRITE\_EXTERNAL\_STORAGE \(API level 18 and lower\)
 * android.permission.FOREGROUND\_SERVICE
 * android.permission.READ\_PHONE\_STATE \(API level 22 and lower\)
 * com.google.android.gms.permission.ACTIVITY\_RECOGNITION
 
 {% hint style="info" %}
-After adding the Sentiance SDK, if you have a permission issue with `WRITE_EXTERNAL_STORAGE` or `READ_PHONE_STATE` due to the API level restriction, please read [this troubleshooting guide](../../troubleshooting/android.md#permission-revoked-when-adding-the-sentiance-sdk) in order to resolve it.
+After adding the Sentiance SDK, if you have a permission issue with `READ_PHONE_STATE` due to the API level restriction, please read [this troubleshooting guide](../../troubleshooting/android.md#permission-revoked-when-adding-the-sentiance-sdk) in order to resolve it.
 {% endhint %}
 
 

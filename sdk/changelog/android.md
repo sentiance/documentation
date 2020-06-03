@@ -1,5 +1,34 @@
 # Android
 
+## \[4.16.0\] - 3 Jun 2020
+
+{% hint style="info" %}
+Starting from 4.16.0, SDK detections will no longer be supported on Android 4.4. and lower. When initializing the SDK, [`onInitFailure`](../api-reference/android/oninitcallback/#oninitfailure) will return [`INITIALIZATION_ERROR`](../api-reference/android/oninitcallback/initissue.md) with an accompanying [`SdkException`](../api-reference/android/sdkexception.md) containing the message "Unsupported OS version."
+
+This change does not impact the SDK's minimum supported API level \(i.e. minSdkVersion\).
+{% endhint %}
+
+#### Added
+
+* Support for on-device trip profiling and hard event detection. This feature is not enabled by default.
+* Support for remotely enabling "controlled trips only" detection mode.
+
+#### Changed
+
+* Disabled Proguard [method synchronization optimization](https://www.guardsquare.com/en/products/proguard/manual/usage/optimizations) \(method/marking/synchronized\) due to incorrect removal of `synchronized` method markings. This change is also carried over to any application code when using Proguard. If you're using R8, it will have no impact on your code.
+
+#### Removed
+
+* Detection support for Android 4.4. and lower is now disabled.
+* The `WRITE_EXTERNAL_STORAGE` permission is no longer requested by the SDK. Previously, this permission was requested up to API level 18. If you rely on the presence of this permission in the final manifest, please add it manually to your app's manifest instead.
+
+#### Fixed
+
+* Issues related to ANR and failed foregrounding of SDK services.
+* Properly reflect on the users timeline any SDK termination during trips.
+* Ensure long trips are split to no more than 4 hour durations.
+* Rare issue causing sensor timestamp misalignment.
+
 ## \[4.14.0\] - 31 Jan 2020
 
 #### Added
