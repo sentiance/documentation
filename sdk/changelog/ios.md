@@ -6,6 +6,12 @@
 Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
 {% endhint %}
 
+## \[5.7.1\] - 4 Jun 2020
+
+#### Fixed
+
+* An issue when using beacon regions was causing unexpected exits
+
 ## \[5.7.0\] - 3 Jun 2020
 
 #### Added 
