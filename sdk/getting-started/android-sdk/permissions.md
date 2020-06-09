@@ -29,7 +29,7 @@ If any of these permissions is not granted, [`SdkStatus.isLocationPermGranted`](
 When targeting API level 29 and above, it is required to ask the user for the [activity recognition permission](https://developer.android.com/reference/android/Manifest.permission#ACTIVITY_RECOGNITION). This permission grants access to the user's physical activity data \(idle, walking, etc.\).
 
 {% hint style="warning" %}
-If this permission is not granted, the SDK detection quality will be degraded.
+The Sentiance platform requires motion activities to improve the SDK detection quality and to do Lifestyle Profiling. Moreover, without this permission, some detections won't be possible \(e.g. running detection\). For any questions, please contact our [support](mailto:support@sentiance.com).
 {% endhint %}
 
 The SDK **does not** add the `android.permission.ACTIVITY_RECOGNITION` permission to your app's manifest \(see [here](../../appendix/android/android-10-update-behavior.md)\). Instead, you must explicitly add it to your app as follows:
