@@ -1,18 +1,26 @@
 # Glossary
 
-## Access Types
+## Access Roles
 
 As a Sentiance user you could have various access roles assigned to you which grant or restrict data access.
 
-### None
+### Default
 
-What everyone starts off with. By default no data access is granted which means you only have access to your own data.
+By default no data access is granted which means you only have access to your own data. Insights will show your own timeline and any GraphQL or REST queries for your own user will return data.
 
 ### Spectator
 
-With Spectator access, you can view the data for all users of your application. This includes user data in dashboards such as Insights.
+With the **Spectator** role granted to your user on your organisation's **Account**, you can view data for all users of all **Applications** which belong to that organisation's **Account**. This includes user data in dashboards such as Insights, and making GraphQL or REST queries.
 
 ### Developer
 
-With Developer access, you can view the **secret key** of your application along with [App Tokens.](../important-topics/authentication-and-authorization.md#the-app-token) If an App Token is not present, contact support.
+With the **Developer** role granted to your user on your organisation's **Account**, you have all the same data access capabilities as **Spectators**, and can, additionally, perform developer-centric operations on all **Applications** belonging to that organisation's **Account.** 
+
+Currently, as a **Developer**, you can do the following things:
+
+* View the **Secret Key** of any **Application** under that **Account.** This is the **Secret** used in initialising the SDK.
+* Administrate **Webhooks** of any **Application** under that **Account,** for the Firehose to connect to**.** You can submit requests for a new **Webhook** or update/delete/enable/disable an existing **Webhook**.
+* Administrate **API Keys** of any **Application** under that **Account.** You can view or revoke all existing **API Keys**, or create new ones.
+
+
 
