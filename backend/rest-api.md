@@ -1687,6 +1687,144 @@ ID of the Transport whose Behavior Annotations are being retrieved.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="get" host="" path="/v3/users/:user\_id/aggregated\_driving\_scores" %}
+{% api-method-summary %}
+Time Aggregated Driving Scores 
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Retrieve the time aggregated scores of a user, i.e. **daily**, **weekly**, **monthly** or **all** aggregated scores. The API can be used with or without a date parameter. If no date parameter is given, the API will default to the last available \(ongoing\) day, week or month. The **all** score will aggregate all available scores \(max. 9 weeks\).  
+  
+The date parameter accepts either the 1st day of the week \(Monday\) or the 1st day of the month for type: week and type: month respectively.  
+  
+_Note: this endpoint is available on the EU platform only._
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="type" type="string" required=true %}
+Type of aggregated scores you want to retrieve.  
+  
+**Accepts:** day, week, month, all.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="date" type="string" required=false %}
+Optional: if you want to retrieve aggregated scores for a different period than the current one.   
+  
+**Format:** YYYY-MM-DD  
+**Accepts:** any day, any monday, any 1st of month.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+A user token or an API Key with scope 'user.read'.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Depending on the type \(day, week, month or all\) you have chosen, you will be returned one of the responses below.
+{% endapi-method-response-example-description %}
+
+```
+{
+    "day": {
+        "smooth": 0.64,
+        "legal": 1,
+        "anticipative": 0.69,
+        "focus": 1,
+        "mounted": 0.17,
+        "hard_accel": 0.95,
+        "hard_brake": 0.9,
+        "hard_events": 0.69,
+        "legal_v2": 1,
+        "hard_turn": 1,
+        "smooth_v2": 0.68,
+        "anticipative_v2": 0.68,
+        "handheld_calling": 1,
+        "handheld_calling_duration": -1,
+        "handsfree_calling": 1,
+        "handling_without_calling": 0.95,
+        "handling_without_calling_duration": 10,
+        "attention": 0.95
+    }
+}
+{
+    "week": {
+        "smooth": 0.64,
+        "legal": 1,
+        "anticipative": 0.69,
+        "focus": 1,
+        "mounted": 0.17,
+        "hard_accel": 0.95,
+        "hard_brake": 0.9,
+        "hard_events": 0.69,
+        "legal_v2": 1,
+        "hard_turn": 1,
+        "smooth_v2": 0.68,
+        "anticipative_v2": 0.68,
+        "handheld_calling": 1,
+        "handheld_calling_duration": -1,
+        "handsfree_calling": 1,
+        "handling_without_calling": 0.95,
+        "handling_without_calling_duration": 10,
+        "attention": 0.95
+    }
+}
+{
+    "month": {
+        "smooth": 0.66,
+        "legal": 0.72,
+        "anticipative": 0.6,
+        "focus": 1,
+        "mounted": 0.96,
+        "hard_accel": 0.93,
+        "hard_brake": 0.9,
+        "hard_events": 0.68,
+        "legal_v2": 0.8,
+        "hard_turn": 0.95,
+        "smooth_v2": 0.61,
+        "anticipative_v2": 0.61,
+        "handheld_calling": 1,
+        "handheld_calling_duration": -1,
+        "handsfree_calling": 1,
+        "handling_without_calling": 0.95,
+        "handling_without_calling_duration": 705,
+        "attention": 0.95
+    }
+}
+{
+    "all": {
+        "smooth": 0.67,
+        "legal": 0.6,
+        "anticipative": 0.59,
+        "focus": 0.99,
+        "mounted": 0.85,
+        "hard_accel": 0.9,
+        "hard_brake": 0.92,
+        "hard_events": 0.7,
+        "legal_v2": 0.52,
+        "hard_turn": 0.93,
+        "smooth_v2": 0.63,
+        "anticipative_v2": 0.84,
+        "handheld_calling": 1,
+        "handheld_calling_duration": 0,
+        "handsfree_calling": 0.97,
+        "handling_without_calling": 0,
+        "handling_without_calling_duration": 2101,
+        "attention": 0
+    }
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 ### Unversioned Routes \(no version prefix applied\)
 
 {% api-method method="delete" host="" path="/users/:user\_id" %}
