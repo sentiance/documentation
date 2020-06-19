@@ -1,5 +1,11 @@
 # Android
 
+## \[4.16.1\] - 19 Jun 2020
+
+#### Fixed
+
+* Stability improvement in the SDK logging subsystem.
+
 ## \[4.16.0\] - 3 Jun 2020
 
 {% hint style="info" %}
