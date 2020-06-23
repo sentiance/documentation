@@ -6,7 +6,7 @@ A HardEvent is any unusual and/or rigorous force that is applied to the device a
 
 |  |  |
 | :--- | :--- |
-| long | [getMagnitude](hardevent.md#getmagnitude) \(\) |
+| Double | [getMagnitude](hardevent.md#getmagnitude) \(\) |
 | long | [getTimestamp](hardevent.md#gettimestamp) \(\) |
 
 
@@ -14,7 +14,7 @@ A HardEvent is any unusual and/or rigorous force that is applied to the device a
 ### `getMagnitude()`
 
 > ```java
-> public long getMagnitude()
+> public double getMagnitude()
 > ```
 >
 > Returns the magnitude of this hard event in m/s2.
