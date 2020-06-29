@@ -2,23 +2,45 @@
 
 In the `didFinishLaunchingWithOptions` method of your `AppDelegate`, create a [`SENTConfig`](../../api-reference/ios/sentconfig-1.md) object with your Sentiance app ID and secret.
 
-```text
+```objectivec
 @import SENTSDK;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     SENTConfig *conf = [[SENTConfig alloc] initWithAppId:@"APPID"
                                            secret:@"SECRET"
+                                           link:userLinker
                                            launchOptions:launchOptions];
 }
 ```
 
 If you don't have an appID and secret key yet, read [these instructions](../#create-an-application).
 
+{% hint style="danger" %}
+In the above example, we hard-code the the appID and secret key for testing purposes. However, this is not secure and can lead to leaked credentials. In your own app, load these credentials from a secure source such a remote server, and store them securely on the device.
+{% endhint %}
 
+`SENTConfig` accepts a `userLinker` which is responsible for handling [user linking](../../../important-topics/user-linking-2.0.md). The linker is invoked by the SDK when creating a Sentiance user \(during the first initialization\) to give you a chance to link your app's user to the Sentiance user. If linking succeeds, this linker does not get invoked during subsequent SDK intializations, unless [the SDK gets reset](../../api-reference/ios/sentsdk/#reset-failure).
+
+```objectivec
+MetaUserLinker userLinker = ^(NSString *installId, void (^linkSuccess)(void), void (^linkFailed)(void)) {
+    // Supply the 'installId' to your server, which should then initiate
+    // a user linking request with the Sentiance backend.
+    
+    [self requestLinking:installId completion:^(BOOL success) {
+        if (success) {
+            linkSuccess(); // Call if linking succeeds
+        } else {
+            linkFailed();  // Call if linking fails
+        }
+    }];
+};
+```
+
+You can learn more about user linking [here](../../../important-topics/user-linking-2.0.md).
 
 ## Optional: SDK Status update handler
 
-This step is optional, but indispensable if you want to be kept up-to-date of changes to the [SDK status](../../api-reference/ios/sentsdk/sentsdkstatus.md).
+This step is optional, but indispensable if you want to be kept up-to-date with changes to the [SDK status](../../api-reference/ios/sentsdk/sentsdkstatus.md).
 
 ```text
 [conf setDidReceiveSdkStatusUpdate:^(SENTSDKStatus *status) {
@@ -27,15 +49,13 @@ This step is optional, but indispensable if you want to be kept up-to-date of ch
 
 For more information related to the [`SENTSDKStatus`](../../api-reference/ios/sentsdk/sentsdkstatus.md) class, see [this guide](https://developers.sentiance.com/docs/sdk/ios/status).
 
-
-
 ## Initializing the SDK
 
 {% hint style="info" %}
 Until the SDK is properly initialized, none of the methods in the SDK will work, with the exception of `sharedInstance`, `initWithConfig` and `getInitState.`
 {% endhint %}
 
-In the project's AppDelegate file,
+In the project's `AppDelegate` file,
 
 ```objectivec
 @import SENTSDK;
@@ -44,6 +64,7 @@ In the project's AppDelegate file,
     // Creation of SENTConfig here, see previous step
    SENTConfig *conf = [[SENTConfig alloc] initWithAppId:@"APPID"
                                            secret:@"SECRET"
+                                           link:userLinker
                                            launchOptions:launchOptions];
    
    // Initialize SDK
@@ -74,7 +95,7 @@ We recommend that SDK startup is done within `didFinishLaunchingWithOptions` of 
 
 Call the `start` method from the `success` block of the [`initWithConfig`](../../api-reference/ios/sentsdk/#initwithconfig-success-failure) method:
 
-```text
+```objectivec
 [[SENTSDK sharedInstance] start:^(SENTSDKStatus *status) {
     if ([status startStatus] == SENTStartStatusStarted) {
         // SDK started properly.
@@ -88,7 +109,7 @@ Call the `start` method from the `success` block of the [`initWithConfig`](../..
 
 You can check the `status` to see whether starting has succeeded correctly or not.
 
-Overall Code:
+## Overall Code
 
 ```objectivec
 @import SENTSDK;
@@ -97,6 +118,7 @@ Overall Code:
     // Creation of SENTConfig here, see previous step
    SENTConfig *conf = [[SENTConfig alloc] initWithAppId:@"APPID"
                                            secret:@"SECRET"
+                                           link:userLinker
                                            launchOptions:launchOptions];
    
    // Initialize SDK

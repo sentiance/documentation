@@ -264,7 +264,7 @@ The reset functionality is intended for removing all data in the device to handl
 > void reset(@Nullable ResetCallback callback)
 > ```
 >
-> Resets the Sentiance Sdk.
+> Resets the Sentiance SDK.
 >
 > Calling this method results in stopping of all SDK operations and deleting all SDK user data from the device. Additionally, the SDK will be uninitialized, allowing reinitialization and new Sentiance user creation.
 >

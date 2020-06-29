@@ -40,7 +40,7 @@ For the server-to-server communication, you will need a way to authenticate the 
 It is important not to use the API Keys in any way or form from within the app. This would pose a serious security risk. API Keys should only be used in the server-to-server integration.
 {% endhint %}
 
-### **App- or server-side integration**
+### **App or server-side integration**
 
 After initializing the SDK, the SDK will try to initiate user linking. Subsequently, the app will have to contact your backend to pass through the install id mentioned above. Read more about the in-app methods that need to be called below.
 
@@ -50,7 +50,7 @@ After your backend has received the SDK install id, it will have to communicate 
 
 ![](../.gitbook/assets/screenshot-2020-05-05-at-14.10.34.png)
 
-## **App- or server-side integration**
+## **App or server-side integration**
 
 ### **Summary of steps involved**
 
@@ -61,7 +61,7 @@ The user linking process on the app-side involves the following steps:
 3. Send that install id to your own backend.
 4. Link the install id to your external user id in your own database
 5. \_\_[_\(Server-to-server\)_](https://docs.sentiance.com/guide/user-linking-2.0#server-to-server-integration-api) _Make linking request from your to Sentiance back-end_
-6. Call **linkSuccess\(\)** or return **link\(true\)**
+6. Call **linkSuccess\(\)/onSuccess\(\)** or return **link\(true\)**
 
 You can find more details on each step below. After you have finished these steps, there are a few more steps involved for the actual server-to-server communication. You can find these in the next chapter.  
 
