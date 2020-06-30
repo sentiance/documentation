@@ -833,7 +833,7 @@ ID of the user whose data is being retrieved.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/location\_cluster" %}
+{% api-method method="get" host="" path="/v2/users/:user\_id/location\_clusters" %}
 {% api-method-summary %}
 Location Clusters
 {% endapi-method-summary %}
