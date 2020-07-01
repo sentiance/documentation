@@ -6,6 +6,8 @@ The base url is `https://api.sentiance.com/<version>/` for all REST endpoints, w
 
 **Note:** The [user deletion API](rest-api.md#delete-user) is the only exception to the versioned endpoints rule. It stands on its own as `DELETE /users/:user_id`
 
+For details on how to authenticate requests, have a look at the [Authentication and Authorization page](../important-topics/authentication-and-authorization.md).
+
 {% hint style="danger" %}
 For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment. 
 {% endhint %}
