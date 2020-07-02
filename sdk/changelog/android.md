@@ -1,5 +1,11 @@
 # Android
 
+## \[4.16.2\] - 2 Jul 2020
+
+#### Fixed
+
+* Fatal exception when aborting service start-up due to uninitialized SDK.
+
 ## \[4.16.1\] - 19 Jun 2020
 
 #### Fixed
