@@ -6,11 +6,11 @@ description: All FAQs below are subject to change. We update our applications fr
 
 ## Where can I find Journeys?
 
-**Android**: Install Journeys directly from [Google Play](https://play.google.com/store/apps/details?id=com.sentiance.journeys&hl=en).
+**Android**: Install Journeys from [Google Play](https://play.google.com/store/apps/details?id=com.sentiance.journeys&hl=en).
 
 _Requirements operating system: Android 4.2 or higher phone sensors: Accelerometer, gyroscope, GPS data connections: Mobile data \(Edge/3G/4G\) and Wifi_
 
-**iOS**: Install Journeys directly from the [App Store](https://apps.apple.com/be/app/journeys-by-sentiance/id984087229?l=nl).
+**iOS**: Install Journeys from the [App Store](https://apps.apple.com/be/app/journeys-by-sentiance/id984087229?l=nl).
 
 _Requirements operating system: iOS 9.0 or higher iPhone: iPhone 4S or better data connections: Mobile data \(Edge/3G/4G\) and Wifi_
 
@@ -53,11 +53,11 @@ At the bottom of the app there are four options: Home, Profile, Timeline, Settin
 
 On the Home screen of the Journeys app you’ll see your current status and location — the Events and Moments, as we call them, that you’re currently experiencing. In the example, the user has been “Stationary” at their work location for the last two hours. They are “Working at work” in their semantic afternoon. This screen will be updated as we detect new Events and Moments throughout your day. For the full list of the Sentiance Events and Moments, please visit [https://developers.sentiance.com/docs](https://developers.sentiance.com/docs)
 
-**Profile: segments**
+**Profile: Segments**
 
 The next screen to the right shows your Profile. The first view in the Profile screen shows your Segments. Segments are actionable properties/tags we learn about your behavior over time. They show what kind of lifestyle you have, if and how you go to work, in what geographical areas you live, what kind of drivers you are, etc.
 
-These segments help our clients learn more about their customers and build better experiences. For the full list of the Sentiance Segments, please visit [https://developers.sentiance.com/docs/segments/](https://developers.sentiance.com/docs/segments/)
+These Segments help our clients learn more about their customers and build better experiences. For the full list of the Sentiance Segments, please visit [https://developers.sentiance.com/docs/segments/](https://developers.sentiance.com/docs/segments/)
 
 **Profile: stats**
 
@@ -87,7 +87,7 @@ In the Settings view you will find detail about your Journeys account, including
 
 **I have installed the app less than 3 days ago**
 
-Our platform needs a certain amount of data before we can start identifying your events, moments & segments correctly. Please make sure you've been tracking with the permissions set correctly for at least a few days. 
+Our platform needs a certain amount of data before we can start identifying your events, Moments & Segments correctly. Please make sure you've been tracking with the permissions set correctly for at least a few days. 
 
 **I have installed the app more than 3 days**
 
@@ -116,7 +116,7 @@ Feedback is used to train our models and improve our algorithms at Sentiance, bu
 
 We have a great blog post around this topic that you can read [here](https://www.sentiance.com/2019/07/03/when-context-is-king-time-is-queen/). But yes detections may change after the fact. Your current actions may give us more clues and insights into your past behaviour and thus we may want to retroactively update the detections to be more accurate. 
 
-## I see different scores in journeys but do not know what they mean
+## I see different scores in Journeys but do not know what they mean
 
 These scores aim to demonstrate our best effort to provide you with a number that you could use to compare drivers and take actions upon. Please note that these may change often.
 
@@ -124,7 +124,7 @@ These scores aim to demonstrate our best effort to provide you with a number tha
 
 We don't have built-in functionality for that at this time. You could disable location tracking on the OS level to make this happen.
 
-## The detected segments \(or other data points\) are incorrect, how can I change them?
+## The detected Segments \(or other data points\) are incorrect, how can I change them?
 
 _At the moment it's not possible to change detections on the fly._
 
