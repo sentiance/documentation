@@ -31,7 +31,7 @@ Please note it can take up to a few days for our team to confirm your account af
 
 Project codes are dedicated identifiers for our client projects. If you are an individual user testing out our solutions you do not have to fill this in.
 
-If you'd like to set up a dedicated environment please contact [sales@sentiance.com](mailto:sales@sentiance.com)
+If you'd like to set up your own testing group, please contact [sales@sentiance.com](mailto:sales@sentiance.com)
 
 ## I have installed with the wrong or without a project code while I should have used one.
 
