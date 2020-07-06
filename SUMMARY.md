@@ -10,7 +10,7 @@
   * [Detections \(FAQ\)](faq/faq/detections.md)
   * [Data interface \(FAQ\)](faq/faq/getting-data.md)
   * [Security, Privacy and Terms of Service \(FAQ\)](faq/faq/security-and-privacy.md)
-  * [Journeys \(FAQ\)](faq/faq/journeys-faq.md)
+  * [Journeys and Insights \(FAQ\)](faq/faq/journeys-faq.md)
 
 ## SDK
 

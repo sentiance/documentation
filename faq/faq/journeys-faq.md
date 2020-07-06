@@ -2,7 +2,7 @@
 description: All FAQs below are subject to change. We update our applications frequently.
 ---
 
-# Journeys \(FAQ\)
+# Journeys and Insights \(FAQ\)
 
 ## Where can I find Journeys?
 
@@ -13,6 +13,19 @@ _Requirements operating system: Android 4.2 or higher phone sensors: Acceleromet
 **iOS**: Install Journeys directly from the [App Store](https://apps.apple.com/be/app/journeys-by-sentiance/id984087229?l=nl).
 
 _Requirements operating system: iOS 9.0 or higher iPhone: iPhone 4S or better data connections: Mobile data \(Edge/3G/4G\) and Wifi_
+
+## Trouble logging into Journeys or Insights?
+
+You can use the same account for logging into Journeys and Insights. When you are unable to log in to Insights, make sure you:
+
+* Are using the right URL \([insights.sentiance.com](http://insights.sentiance.com)\)
+* Used the same e-mail and password you used to make your Journeys account
+* Confirmed your e-mail address \(you should have received a confirmation mail upon registration\)
+
+Please note it can take up to a few days for our team to confirm your account after you have first registered. If you are still unable to log in, please contact [support@sentiance.com](mailto:support@sentiance.com) with the following details:
+
+* Screenshot of your login screen or error message after logging in
+* Exact URL used for logging in
 
 ## What is a project code & where do I get one?
 
