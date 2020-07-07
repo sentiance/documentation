@@ -17,11 +17,3 @@ Then run the following command from Terminal:
 pod install --repo-update
 ```
 
-
-
-You'll also need to include the SDK bundle in your project:
-
-1. Go to the **Build Phases** tab of your target settings
-2. Expand the **Copy Bundle Resources** row and click the **+** button
-3. Choose the **SENTSDK.bundle** file located inside **SENTSDK.framework**
-
