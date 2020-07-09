@@ -6,6 +6,13 @@
 Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
 {% endhint %}
 
+## \[5.7.3\] - 9 Jul 2020
+
+#### Fixed
+
+* An issue where the SDK might not register geofences after determining that the user is stationary
+* An issue where the SDK might use outdated geofences during stationary state determination
+
 ## \[5.7.1\] - 4 Jun 2020
 
 #### Fixed
