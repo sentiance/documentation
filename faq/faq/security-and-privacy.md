@@ -6,6 +6,16 @@ description: >-
 
 # Security, Privacy and Terms of Service \(FAQ\)
 
+## How do I set up MFA for logging in on Insights as a Business User?
+
+For logging in as a Business User on Insights \(with access to personal data\) , you will be required to enable MFA \(Multi-Factor Authentication\). This reduces the risk of unwanted access to your account and thus significantly increases security. 
+
+When you are invited to Insights, you will automatically be requested to set up MFA. To do so, you will need to have a 3rd-party authentication app installed. Sentiance supports any TOTP-based authentication app, but we recommend using one from the vendors below:
+
+* Google Authenticator \([Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en), [iOS](https://apps.apple.com/us/app/google-authenticator/id388497605)\)
+* Authy \([Android](https://play.google.com/store/apps/details?id=com.authy.authy&hl=en), [iOS](https://apps.apple.com/us/app/twilio-authy/id494168017)\)
+* Microsoft Authenticator \([Android](https://play.google.com/store/apps/details?id=com.azure.authenticator&hl=en), [iOS](https://apps.apple.com/us/app/microsoft-authenticator/id983156458)\)
+
 ## How do I stop the SDK from tracking a user?
 
 The SDK has a built-in start-stop functionality, that can be used to manually stop the SDK from tracking when certain parameters are met. You can find more information [here.](https://docs.sentiance.com/sdk/appendix/controlled-detections)
