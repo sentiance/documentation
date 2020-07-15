@@ -2,7 +2,7 @@
 
 ## Including the SDK
 
-Download Sentiance iOS SDK: [Sentiance iOS SDK 5.7.3](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.7.3.framework.zip)
+Download Sentiance iOS SDK: [Sentiance iOS SDK 5.7.4](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.7.4.framework.zip)
 
 After you've downloaded and unzipped the SDK, import it as a linked framework in your Xcode project:
 
