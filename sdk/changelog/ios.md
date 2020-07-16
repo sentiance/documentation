@@ -10,8 +10,8 @@ Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK
 
 #### Fixed
 
-* The SQLCore I/O database error fix 
-* High frequency GPS configuration fix
+* The SQLCore I/O database error 
+* High frequency GPS configuration
 
 ## \[5.7.3\] - 9 Jul 2020
 
