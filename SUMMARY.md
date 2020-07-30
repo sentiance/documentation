@@ -27,6 +27,7 @@
   * [iOS Quick Start](sdk/getting-started/ios-sdk/README.md)
     * [1. Installation](sdk/getting-started/ios-sdk/1.-installation/README.md)
       * [Installation with CocoaPods](sdk/getting-started/ios-sdk/1.-installation/installation-with-cocoapods.md)
+      * [Installation with Carthage](sdk/getting-started/ios-sdk/1.-installation/installation-with-carthage.md)
       * [Manual Installation](sdk/getting-started/ios-sdk/1.-installation/manual-installation.md)
     * [2. Configuration](sdk/getting-started/ios-sdk/2.-configuration/README.md)
       * [Using Integration Guide](sdk/getting-started/ios-sdk/2.-configuration/integration-guide.md)
