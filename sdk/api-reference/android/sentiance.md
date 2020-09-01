@@ -6,6 +6,17 @@ The Sentiance class is the main entry point for interacting with the SDK. This c
 Sentiance sentianceSDK = Sentiance.getInstance(context);
 ```
 
+
+
+{% hint style="warning" %}
+With the exception of the following 4 methods, all other methods in this class will throw an exception when invoked before SDK initialization is complete \(see[`init()`](sentiance.md#init)\).
+
+* `init()`
+* `reset(ResetCallback)`
+* `getInitState()`
+* `getVersion()`
+{% endhint %}
+
 ## Sentiance API
 
 |  |  |
