@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Secret Keys Management on iOS](secret-keys-management-on-ios.md)
 * [A standard integration](a-complete-integration.md)
 
 ## FAQ
@@ -49,6 +48,7 @@
     * [External SDK Dependencies](sdk/appendix/android/external-sdk-dependencies.md)
     * [Manifest Permissions](sdk/appendix/android/manifest-permission.md)
     * [Notification Management](sdk/appendix/android/notification-management.md)
+  * [Untitled](sdk/appendix/untitled.md)
   * [iOS](sdk/appendix/ios/README.md)
     * [App Store Release](sdk/appendix/ios/app-store-release.md)
     * [iOS 13 permission changes](sdk/appendix/ios/ios-13-permissions.md)
