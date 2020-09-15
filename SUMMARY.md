@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Secret Keys Management on iOS](secret-keys-management-on-ios.md)
 * [A standard integration](a-complete-integration.md)
 
 ## FAQ
