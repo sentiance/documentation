@@ -10,8 +10,6 @@ description: >-
 
 Any user who has Spectator or Developer access to an account, will have to set up their Business User. Business Users have the same type of access, but use a more secure type of authentication and log in through the Business Portal on Insights. 
 
-Any user who has Spectator or Developer access to an account, will have to set up their Business User. Business Users have the same type of access, but use a more secure type of authentication and log in through the Business Portal on Insights. 
-
 ### How to set up your Business User
 
 1. Every user who is eligible for a Business User should have received an invitation mail titled **"Sentiance // Business user invite"**. 
