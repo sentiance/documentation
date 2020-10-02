@@ -8,13 +8,24 @@ description: >-
 
 ## How to set up MFA for logging in on Insights as a Business User?
 
-For logging in as a Business User on Insights \(with access to personal data\) , you will be required to enable MFA \(Multi-Factor Authentication\). This reduces the risk of unwanted access to your account and thus significantly increases security. 
+Any user who has Spectator or Developer access to an account, will have to set up their Business User. Business Users have the same type of access, but use a more secure type of authentication and log in through the Business Portal on Insights. 
 
-When you are invited to Insights, you will automatically be requested to set up MFA. To do so, you will need to have a 3rd-party authentication app installed. Sentiance supports any TOTP-based authentication app, but we recommend using one from the vendors below:
+Any user who has Spectator or Developer access to an account, will have to set up their Business User. Business Users have the same type of access, but use a more secure type of authentication and log in through the Business Portal on Insights. 
+
+### How to set up your Business User
+
+1. Every user who is eligible for a Business User should have received an invitation mail titled **"Sentiance // Business user invite"**. 
+2. In the invitation mail, you will find a link **\("Set up your account"\)** to start the process.
+3. This will generate a temporary password \(sent to your mail\) which you can use to log in at the [Business Portal](http://insights.sentiance.com). The password is valid for 24 hours.
+4. Once logged in with your temporary password, set up MFA \(Multi-Factor Authentication\) and your Business User is ready to be used.
+
+**To set up MFA, you will need to have a 3rd-party authentication app installed.** Sentiance supports any TOTP-based authentication app, but we recommend using one from the vendors below:
 
 * Google Authenticator \([Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en), [iOS](https://apps.apple.com/us/app/google-authenticator/id388497605)\)
 * Authy \([Android](https://play.google.com/store/apps/details?id=com.authy.authy&hl=en), [iOS](https://apps.apple.com/us/app/twilio-authy/id494168017)\)
 * Microsoft Authenticator \([Android](https://play.google.com/store/apps/details?id=com.azure.authenticator&hl=en), [iOS](https://apps.apple.com/us/app/microsoft-authenticator/id983156458)\)
+
+If you find any difficulties during the process, or have not received your invitation mail, don't hesitate to reach out to [support@sentiance.com](mailto:support@sentiance.com).
 
 ## How do I stop the SDK from tracking a user?
 
