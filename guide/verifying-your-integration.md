@@ -10,7 +10,7 @@ In order to get to a smooth roll-out there's some best practices you may want to
 
 * Each development environment uses it's own app-id
 * The mobile application has a clear user on-boarding flow that explains why you are collecting the end-users data.
-* If applicable you have a system set up to guide end-users through [whitelisting](www.dontkillmyapp.com).
+* If applicable you have a system set up to guide end-users through [whitelisting](https://dontkillmyapp.com/).
 * You have shared you rollout plan and volume with us.
 
 ## [SDK](../sdk/getting-started/android-sdk/include-sdk.md)
