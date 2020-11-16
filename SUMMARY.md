@@ -151,7 +151,8 @@
 ## Backend
 
 * [GraphQL](backend/graphql.md)
-* [REST API Reference](backend/rest-api.md)
+* [REST API Reference](backend/rest-api/README.md)
+  * [Error Codes \(REST API\)](backend/rest-api/error-codes.md)
 * [Offloads](backend/offloads.md)
 * [Data Reference](backend/data-reference/README.md)
   * [Data Reference A-G](backend/data-reference/data-reference-a-g.md)

@@ -82,7 +82,7 @@ You can manage your own API Keys from our developer portal. Our developer portal
 
 ## Authenticating With a Control User
 
-If you've signed up via the [Insights](https://insights.sentiance.com) dashboard or [Journeys](https://www.sentiance.com/demo/), you have a ControlUser to play around with. You can use the following steps to get a token for your user using your email/password pair. The token can then be used to call all GQL and [REST](../backend/rest-api.md) endpoints.
+If you've signed up via the [Insights](https://insights.sentiance.com) dashboard or [Journeys](https://www.sentiance.com/demo/), you have a ControlUser to play around with. You can use the following steps to get a token for your user using your email/password pair. The token can then be used to call all GQL and [REST](../backend/rest-api/) endpoints.
 
 This involves two steps:
 

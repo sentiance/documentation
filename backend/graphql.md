@@ -6,7 +6,7 @@ Here we will introduce the basic request response structure of the Sentiance Gra
 
 ## Endpoint and Authorization
 
-Our default GraphQL endpoint lives at **POST** `https://api.sentiance.com/v2/gql` and accepts the same [bearer token based authorization](../important-topics/authentication-and-authorization.md) as our[ REST endpoints.](rest-api.md)
+Our default GraphQL endpoint lives at **POST** `https://api.sentiance.com/v2/gql` and accepts the same [bearer token based authorization](../important-topics/authentication-and-authorization.md) as our[ REST endpoints.](rest-api/)
 
 We adhere to the [GraphQL specification](https://graphql.org/learn/serving-over-http/#post-request) but do not support multiple operation types.
 
