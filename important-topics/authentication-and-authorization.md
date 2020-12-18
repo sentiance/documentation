@@ -26,27 +26,15 @@ User Tokens identify one unique user and can be used to retrieve any data belong
 
 Common use-cases of this token included getting user timeline, retrieving segments, retrieving predictions, etc. to create a unique UI for the user to view their own data.
 
-## The Server Token \(Deprecated\)
-
-{% hint style="danger" %}
-Server Tokens \(a.k.a. App Tokens\) have been replaced by API Keys and should not be used anymore. **Please find more information on using API Keys below.** 
-{% endhint %}
-
-Server Tokens provide you access to all the user data under one application. As such they should only be used in server-side integrations and should never be transmitted to end-user devices.
-
-You can retrieve the Server Token by visiting [apps page on Insights](https://insights.sentiance.com/#/apps), if you have [Developer](../library/glossary.md#developer) access.
-
-Common use-cases of this token include building internal dashboards to view within your team, run batch processes on users, etc.
-
-{% hint style="warning" %}
-We will start **deprecating server tokens on April 27th 2020.** 
-{% endhint %}
-
 ## API Keys
 
-To remedy the shortcomings of our legacy Server Tokens we introduce **API Keys:** a revocable, rotatable, scopeable key with which to query the API**.** 
+**API Keys** are ****a revocable, rotatable, scopeable key with which to query the API**.** 
 
 API Keys are generated on-demand with a **name**, **scope**, and **expiry date** and are disclosed to the creator **only once**. Please ensure the API Key is immediately stored somewhere secure.
+
+{% hint style="danger" %}
+API Keys should be **stored securely** and should **never be shared outside your company**. A Sentiance employee will **never** ask for your API Key\(s\). Any leaked key \(even to Sentiance employees\) will immediately be revoked and flagged as a security incident.
+{% endhint %}
 
 #### Name
 
