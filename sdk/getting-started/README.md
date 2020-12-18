@@ -18,6 +18,10 @@ This will also allow us to enable debugging & analytics on your development envi
 
 In order to properly integrate the Sentiance SDK you will need an app id & secret. You can request these by emailing to [support@sentiance.com](mailto:support@sentiance.com) or your Sentiance project point of contact.
 
+{% hint style="danger" %}
+Please note that we don't recommend hard-coding the appID and secret key in your app. This is not secure and can lead to leaked credentials. Please load these credentials from a secure source such a remote server, and store them securely on the device.
+{% endhint %}
+
 ### Getting your app credentials
 
 1. Head over to[ insights.sentiance.com/\#/](http://insights.sentiance.com/#/)
