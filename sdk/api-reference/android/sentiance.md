@@ -39,6 +39,8 @@ With the exception of the following 4 methods, all other methods in this class w
 | long  | [getWiFiQuotaLimit](sentiance.md#getwifiquotalimit) \(\) |
 | long  | [getWiFiQuotaUsage](sentiance.md#getwifiquotausage) \(\) |
 | void | [init](sentiance.md#init) \([SdkConfig](sdkconfig/) sdkConfig, [OnInitCallback](oninitcallback/) initCallback\) |
+| void | [invokeDummyCrash](sentiance.md#invokedummycrash) \(\) |
+| boolean | [isCrashDetectionSupported](sentiance.md#iscrashdetectionsupported) \([TripType](trip/triptype.md) tripType\) |
 | boolean  | [isTripOngoing](sentiance.md#istripongoing) \([TripType](trip/triptype.md) tripType\) |
 | void  | [removeUserMetadataField](sentiance.md#removeusermetadatafield) \(String label\) |
 | void | [reset](sentiance.md#reset) \([ResetCallback](resetcallback/) callback\) |
@@ -46,6 +48,7 @@ With the exception of the following 4 methods, all other methods in this class w
 | void | [setTripProfileListener](sentiance.md#settripprofilelistener) \([TripProfileListener](tripprofilelistener.md) tripProfileListener\) |
 | void  | [setTripTimeoutListener](sentiance.md#settriptimeoutlistener) \(@Nullable [TripTimeoutListener](trip/triptimeoutlistener.md) listener\) |
 | void | [setUserActivityListener](sentiance.md#setuseractivitylistener) \(@Nullable [UserActivityListener](useractivitylistener.md) listener\) |
+| void | [setVehicleCrashListener](sentiance.md#setvehiclecrashlistener)\(@Nullable [VehicleCrashListener](crashdetection/vehiclecrashlistener.md) listener\) |
 | void  | [start](sentiance.md#start) \([OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
 | void | [start](sentiance.md#start-1) \([Date](https://developer.android.com/reference/java/util/Date) stopDate, [OnStartFinishedHandler](onstartfinishedhandler.md) handler\) |
 | void  | [startTrip](sentiance.md#starttrip) \(@Nullable Map&lt;String, String&gt; metadata, @Nullable [TransportMode](trip/transportmode.md) transportModeHint, @Nullable [StartTripCallback](trip/starttripcallback.md) callback\) |
@@ -241,6 +244,32 @@ With the exception of the following 4 methods, all other methods in this class w
 > | sdkConfig | An [`SdkConfig`](sdkconfig/) representing the SDK configuration. |
 > | initCallback | An [`OnInitCallback`](oninitcallback/) to handle the initialization of the Sdk. |
 
+### `invokeDummyCrash()`
+
+> ```java
+> void invokeDummyCrash()
+> ```
+>
+> Invokes a dummy crash event. Use this method to test your crash callback integration. 
+>
+> Calling this method will invoke the [`onCrash(long, Location)`](crashdetection/crashcallback.md#oncrash) method of your [`CrashCallback`](crashdetection/crashcallback.md) implementation, set via [`setCrashCallback(CrashCallback)`](sentiance.md#setcrashcallback).
+>
+> Note that this method is intended for testing your integration, and will only run on debug versions of your app \(i.e. when the `android:debuggable` manifest flag is set to `true`\).
+
+### `isCrashDetectionSupported()`
+
+> ```java
+> boolean isCrashDetectionSupported(TripType tripType)
+> ```
+>
+> Checks if crash detection is supported on the device for the specified trip type.
+>
+> The result depends on multiple criteria, such as if crash detection is enabled for your app, and if the necessary sensors are present on the device.
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | tripType | A [`TripType`](trip/triptype.md) enum indicating the type of trip for which you want to check. |
+
 ### `isTripOngoing()`
 
 > ```java
@@ -288,6 +317,10 @@ The reset functionality is intended for removing all data in the device to handl
 > | callback | A [`ResetCallback`](resetcallback/) to handle the reset completion. |
 
 ### `setCrashCallback()`
+
+{% hint style="warning" %}
+This method is deprecated. Use [`setVehicleCrashListener(VehicleCrashListener)`](sentiance.md#setvehiclecrashlistener) instead.
+{% endhint %}
 
 > ```java
 > void setCrashCallback(@Nullable CrashCallback callback)
@@ -338,6 +371,18 @@ The reset functionality is intended for removing all data in the device to handl
 > | Parameters |  |
 > | :--- | :--- |
 > | listener | A [`UserActivityListener`](useractivitylistener.md) to handle [`UserActivity`](useractivity.md) changes, or null to remove the previous listener. |
+
+### `setVehicleCrashListener()`
+
+> ```java
+> void setVehicleCrashListener(@Nullable VehicleCrashListener listener)
+> ```
+>
+> Sets a listener that is invoked when a vehicle crash is detected.
+>
+> | Parameters |  |
+> | :--- | :--- |
+> | listener | A [`VehicleCrashListener`](crashdetection/vehiclecrashlistener.md) to receive details about the crash. Set `null` to remove the previously set listener. |
 
 ### `start()`
 

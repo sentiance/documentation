@@ -111,3 +111,28 @@ android.enableJetifier=true
 ```
 {% endcode %}
 
+## Exclude native libraries for unsupported architectures
+
+**Problem:** When adding the Sentiance SDK to your app, your final apk may include native libraries for architectures you do not intend to support, unnecessarily increasing the size of your app.
+
+{% hint style="info" %}
+This problem does not affect you if you are publishing your app as an Android App Bundle \(aab\). Google Play takes care of stripping unnecessary binaries from your final apk.
+{% endhint %}
+
+**Solution:** You can restrict the architectures that you want to support by adding `abiFilters` to your build config. Below is an example of how to restrict it to `armeabi-v7a` and `arm64-v8a` only, in your release builds.
+
+{% code title="app/build.gradle" %}
+```groovy
+android {
+
+  buildTypes {
+    release {
+       ndk {
+         abiFilters = [ 'armeabi-v7a', 'arm64-v8a ' ]
+       }
+    }
+  }
+}
+```
+{% endcode %}
+

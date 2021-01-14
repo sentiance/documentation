@@ -36,7 +36,7 @@ A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementa
 
 ### `canDetect`
 
-> A synthesis of many of the other fields \([`isRemoteEnabled`](./#isremoteenabled), [`isLocationPermGranted`](./#islocationpermgranted), [`locationSetting`](./#locationsetting), [`isGpsPresent`](./#isgpspresent), [`isGooglePlayServicesMissing`](./#isgoogleplayservicesmissing), [`isAirplaneModeEnabled`](./#isairplanemodeenabled), [`isLocationAvailable`](./#islocationavailable), and disk quota status\).
+> A synthesis of many of the other fields \([`isRemoteEnabled`](./#isremoteenabled), [`isLocationPermGranted`](./#islocationpermgranted), [`locationSetting`](./#locationsetting), [`isGpsPresent`](./#isgpspresent), [`isGooglePlayServicesMissing`](./#isgoogleplayservicesmissing), [`isAirplaneModeEnabled`](./#isairplanemodeenabled), [`isLocationAvailable`](./#islocationavailable), [`diskQuotaStatus`](./#diskquotastatus), and [`isBackgroundProcessingRestricted`](./#isbackgroundprocessingrestricted)\).
 >
 > This field indicates whether the conditions are suitable for the SDK to run its detections. If this is true, it does not mean that detections are running; that also depends on [`startStatus`](./#startstatus).
 
@@ -90,7 +90,7 @@ A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementa
 
 ### `isBackgroundProcessingRestricted`
 
-> Whether background processing is [restricted](https://developer.android.com/reference/android/app/ActivityManager#isBackgroundRestricted%28%29) for the application. When `true`, SDK detections will be severely degraded. This will be set to `false` for devices running Oreo and lower.
+> Whether background processing is [restricted](https://developer.android.com/reference/android/app/ActivityManager#isBackgroundRestricted%28%29) for the application. When `true`, SDK detections will be will be paused. This will be set to `false` for devices running Oreo and lower.
 
 ### `wifiQuotaStatus`
 

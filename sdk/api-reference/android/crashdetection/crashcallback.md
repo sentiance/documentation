@@ -1,5 +1,9 @@
 # CrashCallback
 
+{% hint style="warning" %}
+This interface is deprecated. Use [`VehicleCrashListener`](vehiclecrashevent.md) instead. See [`setVehicleCrashListener(VehicleCrashListener)`](../sentiance.md#setvehiclecrashlistener).
+{% endhint %}
+
 This interface is used with [`setCrashCallback(CrashCallback)`](../sentiance.md#setcrashcallback).
 
 ## CrashCallback API

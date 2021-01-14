@@ -1,5 +1,29 @@
 # Android
 
+## \[4.18.0\] - 14 Jan 2021
+
+#### Added
+
+* An improved and a more accurate vehicle crash detection, backed by a machine learning model. You must switch to using the new Sentiance API method [`setVehicleCrashListener(VehicleCrashListener)`](../api-reference/android/sentiance.md#setvehiclecrashlistener) to activate it.
+* A new method to help test your crash detection integration. See [`invokeDummyCrash()`](../api-reference/android/sentiance.md#invokedummycrash).
+* A new method to check if crash detection is supported on the device for a specific trip type. See [`isCrashDetectionSupported(TripType)`](../api-reference/android/sentiance.md#iscrashdetectionsupported).
+
+#### Changed
+
+* Points of interest data is no longer provided in the [`StationaryInfo`](../api-reference/android/stationaryinfo.md) object \(returned by [`getStationaryInfo()`](../api-reference/android/useractivity.md#getstationaryinfo)\) by default. If you use this data, please reach out to us before updating to this SDK version.
+* On Android 9 and above, when [background execution is restricted](https://developer.android.com/reference/android/app/ActivityManager#isBackgroundRestricted%28%29) for your app \(by the user or an OS power saving feature\), SDK detections will no longer run. An [`SdkStatus`](../api-reference/android/sdkstatus/) update will be delivered to your app, with `startStatus` set to `PENDING` and `isBackgroundProcessingRestricted` set to `true` so that you can take the appropriate action.
+* Library dependency changes:
+  * Removed compile-time dependency on `com.google.code.findbugs:jsr305`
+  * Added runtime dependency on `org.tensorflow:tensorflow-lite:2.2.0`. This dependency adds native libraries to your app. To limit their architectures, see [here](../troubleshooting/android.md#exclude-native-libraries-for-unsupported-architectures).
+
+#### Deprecated
+
+*  [`setCrashCallback(CrashCallback)`](../api-reference/android/sentiance.md#setcrashcallback) is now deprecated. Use [`setVehicleCrashListener(VehicleCrashListener)`](../api-reference/android/sentiance.md#setvehiclecrashlistener) instead.
+
+#### Fixed
+
+* Minor stability and timeline quality improvements.
+
 ## \[4.16.2\] - 2 Jul 2020
 
 #### Fixed
