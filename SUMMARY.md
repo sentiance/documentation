@@ -49,6 +49,7 @@
     * [Manifest Permissions](sdk/appendix/android/manifest-permission.md)
     * [Notification Management](sdk/appendix/android/notification-management.md)
   * [iOS](sdk/appendix/ios/README.md)
+    * [App Store Privacy Section](sdk/appendix/ios/app-store-privacy-section.md)
     * [App Store Release](sdk/appendix/ios/app-store-release.md)
     * [iOS 13 permission changes](sdk/appendix/ios/ios-13-permissions.md)
     * [Swift Support](sdk/appendix/ios/swift-support.md)
