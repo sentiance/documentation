@@ -4,7 +4,7 @@ description: Details about the impact of our SDK on the iOS App Store Privacy Se
 
 # App Store Privacy Section
 
-The iOS App Store requires developers to include details about the data they capture and what they do with it, in the App Store privacy section. 
+The iOS App Store requires developers to include details about the data they capture and what they do with it, in the app's privacy section. 
 
 > "With the release of iOS/iPadOS 14.3 on Dec. 2020, any new or updated app must include a privacy label, otherwise it won't be allowed on the App Store. This requirement applies not just to third-party apps but to Apple's own programs, such as Apple Music, Apple TV, and Apple Wallet, though built-in apps aren't included."
 
