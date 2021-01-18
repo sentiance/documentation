@@ -10,7 +10,11 @@ The iOS App Store requires developers to include details about the data they cap
 
 ### Where to start?
 
-Being transparent about the data you capture is important to your users. We recommend you to keep you and your team informed and up-to-date with current and future changes to the App Store policies. Some useful links to get started:  
+{% hint style="warning" %}
+Being transparent about the data you capture is important to your users. We recommend you to keep you and your team informed and up-to-date with current and future changes to the App Store policies.
+{% endhint %}
+
+Some useful links to get started:  
 [App Store - Privacy Details](https://developer.apple.com/app-store/app-privacy-details/)  
 ****[App Store - Privacy and user data use](https://developer.apple.com/app-store/user-privacy-and-data-use/)  
 [App Store - Protecting the users' privacy ](https://developer.apple.com/documentation/uikit/protecting_the_user_s_privacy)  
@@ -18,89 +22,64 @@ Being transparent about the data you capture is important to your users. We reco
 
 ### Data captured by our SDK
 
-What follows will focus solely on the Sentiance SDK in relation to the new Apple privacy policy. It is important to stress that your privacy section should still be adjusted to the data captured by your specific app.  
+What follows will focus solely on the Sentiance SDK in relation to the new Apple privacy policy. It is important to stress that your privacy section should still be adjusted to the data captured by your specific app.
 
+{% tabs %}
+{% tab title="Health & Fitness" %}
+* Used for Analytics
+* Used for tracking purposes
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>Health &amp; Fitness</b>
-      </th>
-      <th style="text-align:left"><b>Location</b>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <p>Used for Analytics</p>
-        <p>Linked to the user&apos;s identity (if &#x2018;User Linking&#x2019; is
-          enabled).</p>
-        <p>Used for tracking purposes</p>
-      </td>
-      <td style="text-align:left">
-        <p>Used for Analytics</p>
-        <p>Linked to the user&apos;s identity (if &#x2018;User Linking&#x2019; is
-          enabled).</p>
-        <p>Used for tracking purposes</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+If User Linking is **enabled:**
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Identifiers</th>
-      <th style="text-align:left">Diagnostics</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <p><b>User ID</b>
-        </p>
-        <p>Used for Analytics</p>
-        <p>Linked to the user&apos;s identity (if &#x2018;User Linking&#x2019; is
-          enabled).</p>
-        <p>Used for tracking purposes</p>
-      </td>
-      <td style="text-align:left">
-        <p><b>Crash Data</b>
-        </p>
-        <p>Used for App Functionality</p>
-        <p>Linked to the user&apos;s identity (if &#x2018;User Linking&#x2019; is
-          enabled).</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <p><b>Device ID</b>
-        </p>
-        <p>Used for Analytics</p>
-        <p>Linked to the user&apos;s identity (if &#x2018;User Linking&#x2019; is
-          enabled).</p>
-        <p>Used for tracking purposes</p>
-      </td>
-      <td style="text-align:left">
-        <p><b>Performance Data</b>
-        </p>
-        <p>Used for App Functionality</p>
-        <p>Linked to the user&apos;s identity (if &#x2018;User Linking&#x2019; is
-          enabled).</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
-        <p><b>Other Diagnostic Data</b>
-        </p>
-        <p>Used for App FunctionalityLinked to the user&apos;s identity (if &#x2018;User
-          Linking&#x2019; is enabled).</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+* Linked to the user's identity
+{% endtab %}
+
+{% tab title="Location" %}
+* Used for Analytics
+* Used for tracking purposes
+
+If User Linking is **enabled:**
+
+* Linked to the user's identity
+{% endtab %}
+
+{% tab title="Identifiers" %}
+**User ID**
+
+* Used for Analytics
+* Used for tracking purposes
+
+If User Linking is **enabled:**
+
+* Linked to the user's identity
+
+**Device ID**
+
+* Used for Analytics
+* Used for tracking purposes
+
+If User Linking is **enabled:**
+
+* Linked to the user's identity
+{% endtab %}
+
+{% tab title="Diagnostics" %}
+**Crash Data**
+
+* Used for App Functionality
+* Linked to the user's identity \(if ‘User Linking’ is enabled\). 
+
+**Performance Data**
+
+* Used for App Functionality
+* Linked to the user's identity \(if ‘User Linking’ is enabled\). 
+
+**Other Diagnostic Data**
+
+* Used for App Functionality
+* Linked to the user's identity \(if ‘User Linking’ is enabled\).
+{% endtab %}
+{% endtabs %}
 
 
 
