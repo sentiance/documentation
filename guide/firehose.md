@@ -274,7 +274,7 @@ If you subscribe to **All Transports**, you will receive events for all transpor
 {
 	"meta": {
 		"message_type": "event_prediction",
-		"message_timestamp": "2020-01-30T16:32:25.895Z"
+		"message_timestamp": "2020-01-30T10:32:25.895Z"
 	},
 	"data": {
 		"user_id": "5db1c944f73d460600000abc",
