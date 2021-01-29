@@ -177,12 +177,52 @@ Set a trip timeout block.
 **tripDidTimeOut** block will be called each time trip will time out
 {% endhint %}
 
+### isVehicleCrashDetectionSupported:
+
+Checks if vehicle crash detection is supported on the device for the specified trip type.
+
+ The result depends on multiple criteria, such as if vehicle crash detection is enabled for your app, and if the necessary sensors are present on the device.
+
+```objectivec
+- (BOOL)isVehicleCrashDetectionSupported:(SENTTripType)tripType;
+```
+
+| Parameter |  |
+| :--- | :--- |
+| tripType | The type of trip for which you want to check |
+
+### invokeDummyVehicleCrash
+
+Invokes a dummy vehicle crash event. Use this method to test your vehicle crash detection integration.
+
+Calling this method will invoke the handler from [`setVehicleCrashHandler:`](./#setvehiclecrashhandler)or [`setCrashListener:`](./#setcrashlistener)depending on which handler was set last.
+
+```objectivec
+- (void)invokeDummyVehicleCrash;
+```
+
+{% hint style="info" %}
+This method is intended for testing your integration, and not for production use.
+{% endhint %}
+
 ### setCrashListener:
+
+{% hint style="warning" %}
+[`setCrashListener:`](./#setcrashlistener) is deprecated. Use [`setVehicleCrashHandler:`](./#setvehiclecrashhandler) instead.
+{% endhint %}
 
 Set vehicle crash detection block. 
 
 ```objectivec
 - (void)setCrashListener:(void (^)(NSDate *date, CLLocation *lastKnownLocation))crashCallback;
+```
+
+### setVehicleCrashHandler:
+
+Sets a handler that is invoked when a vehicle crash is detected with an instance of [`SENTVehicleCrashEvent`](../sentvehiclecrashevent.md).
+
+```objectivec
+- (void)setVehicleCrashHandler:(void (^)(SENTVehicleCrashEvent *crashEvent))vehicleCrashHandler;
 ```
 
 ### setUserActivityListener:

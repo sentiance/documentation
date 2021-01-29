@@ -24,8 +24,8 @@ Follow these steps below to activate the Integration Guide:
 1. In Xcode, select your project and go to **Build Phases.**
 2. Add a **New Run Script Phase** using the '+' sign at the top left corner.
 3. Add **"/bin/sh"** at the beginning of your script, followed by a space.
-4. Find the **Sentiance SDK framework file** in your Xcode project and **drag it** at the end of the script.
-5. Finally, finish your script adding **"/Resources/.main.sh".**
+4. If you are using the **SENTSDK framework**, find it in your Xcode project and **drag it** at the end of the script adding **"/Resources/.main.sh"** at the end**.**
+5. If you are using the **SENTSDK xcframework**, find it in your Xcode project and **drag it** at the end of the script adding **"/IntegrationValidator/.main.sh"** at the end**.**
 
 ![](../../../../.gitbook/assets/ezgif.com-crop-4.gif)
 

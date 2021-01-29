@@ -6,6 +6,45 @@
 Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
 {% endhint %}
 
+## \[5.9.0\] -  29 Jan 2021
+
+{% hint style="danger" %}
+**Sentiance iOS SDK 5.9.0 does not support arm64 simulator**
+
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.9.0 is not able to provide support for arm64 simulator. 
+
+We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
+{% endhint %}
+
+**Added**
+
+* New type to SDK artifacts which are now packaged as both Framework and XCFramework
+* **Beta Feature:** Support for host apps that enable[ Data Protection](https://developer.apple.com/documentation/uikit/protecting_the_user_s_privacy/encrypting_your_app_s_files). This functionality is released as a beta feature and not yet recommended for production use.
+* An improved and more accurate vehicle crash detection, backed by a machine learning model. You must switch to using the new Sentiance API method [`setVehicleCrashHandler:`](../api-reference/ios/sentsdk/#setvehiclecrashhandler) to activate it.
+* A new method to help test your crash detection integration. See [`invokeDummyVehicleCrash`](../api-reference/ios/sentsdk/#invokedummyvehiclecrashhandler).
+* A new method to check if crash detection is supported on the device for a specific trip type. See [`isVehicleCrashDetectionSupported:`](../api-reference/ios/sentsdk/#isvehiclecrashdetectionsupported).
+
+**Changed**
+
+* The trip serialization process utilizes a less intense and more optimized background processing model.
+
+**Deprecated**
+
+* [`setCrashListener:`](../api-reference/ios/sentsdk/#setcrashlistener) is now deprecated. Use [`setVehicleCrashHandler:`](../api-reference/ios/sentsdk/#setvehiclecrashhandler)instead.
+
+**Fixed**
+
+* An issue where portions of accelerometer and gyroscope data might be missed
+* An issue where stationary detection might overlap with past stationary and trip detections
+* An issue where the SDK might continuously report an initialization state of `SENTInitInProgress` after the initialization credentials are changed
+* An issue where the SDK might continue collecting location fixes even after the user becomes stationary and cause excessive energy consumption
+* An issue where the SDK might accidentally remove keychain items owned by the host app
+* An issue where the SDK might crash during a network operation
+
+**Removed**
+
+* Location permission prompt when starting the SDK. If you rely on the SDK for prompting the user, please make sure you update your app and prompt the user during the onboarding.
+
 ## \[5.7.4\] - 15 Jul 2020
 
 #### Fixed
