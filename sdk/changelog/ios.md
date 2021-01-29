@@ -19,10 +19,13 @@ We recommend users continue their development using either an iOS device or an x
 **Added**
 
 * New type to SDK artifacts which are now packaged as both Framework and XCFramework
-* **Beta Feature:** Support for host apps that enable[ Data Protection](https://developer.apple.com/documentation/uikit/protecting_the_user_s_privacy/encrypting_your_app_s_files). This functionality is released as a beta feature and not yet recommended for production use.
 * An improved and more accurate vehicle crash detection, backed by a machine learning model. You must switch to using the new Sentiance API method [`setVehicleCrashHandler:`](../api-reference/ios/sentsdk/#setvehiclecrashhandler) to activate it.
 * A new method to help test your crash detection integration. See [`invokeDummyVehicleCrash`](../api-reference/ios/sentsdk/#invokedummyvehiclecrashhandler).
 * A new method to check if crash detection is supported on the device for a specific trip type. See [`isVehicleCrashDetectionSupported:`](../api-reference/ios/sentsdk/#isvehiclecrashdetectionsupported).
+
+{% hint style="warning" %}
+**Beta Feature:** Support for host apps that enable[ Data Protection](https://developer.apple.com/documentation/uikit/protecting_the_user_s_privacy/encrypting_your_app_s_files). This functionality is released as a beta feature and not yet recommended for production use.
+{% endhint %}
 
 **Changed**
 
