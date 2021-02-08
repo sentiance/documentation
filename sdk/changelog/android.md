@@ -1,5 +1,11 @@
 # Android
 
+## \[4.18.1\] - 8 Feb 2021
+
+#### Fixed
+
+* Stability improvements to the user authentication and sensor data collection.
+
 ## \[4.18.0\] - 14 Jan 2021
 
 #### Added
