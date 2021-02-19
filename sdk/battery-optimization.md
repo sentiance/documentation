@@ -16,6 +16,8 @@ Below manufacturers are notoriously known for their strict requirements for back
 * [Xiaomi](https://dontkillmyapp.com/xiaomi)
 * [Others](https://dontkillmyapp.com/)
 
+[Programatically prompting battery optimization permission](https://docs.sentiance.com/sdk/appendix/android/android-battery-optimization).
+
 Please check them out, and if you have any questions, let us know at [support@sentiance.com](mailto:support@sentiance.com).
 
 
