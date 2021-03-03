@@ -108,7 +108,7 @@ s3://sentiance-u1-offloads/<CLIENT_APP_NAME>/crash_reports/<APP_ID>/<UTC_DATE>/<
 * REPORT_ID: A unique identifier for a crash report, belonging to a single crash event
 * UTC_TIMESTAMP: Unix timestamp (UTC) in milliseconds of when the report was generated
 
-The procedure to access the crash report files in Amazon s3 is the same as that of offload files. Please refer [here](../backend/offloads#connecting-to-the-offloads-amazon-s-3).
+The procedure to access the crash report files in Amazon s3 is the same as that of offload files. Please refer [here](https://docs.sentiance.com/backend/offloads#connecting-to-the-offloads-amazon-s-3).
 
 A single crash report file may consist multiple report segments. Each report segment contains different information related to the crash event.
 
