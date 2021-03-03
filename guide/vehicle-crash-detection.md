@@ -103,7 +103,7 @@ Crash reports are securely stored on Amazon S3. Reports will be generated in cli
 s3://sentiance-u1-offloads/<CLIENT_APP_NAME>/crash_reports/<APP_ID>/<UTC_DATE>/<REPORT_ID>-<UTC_TIMESTAMP>.json.gz
 ```
 * CLIENT_APP_NAME: The name of the client app (e.g. journeys)
-* APP_ID: The client app ID (e.g. 00000000000000000000000a)
+* APP_ID: The client app ID (e.g. 0000xxxxxxxxxxxxxxxxxxx)
 * UTC_DATE: The date of the crash event in UTC timezone
 * REPORT_ID: A unique identifier for a crash report, belonging to a single crash event
 * UTC_TIMESTAMP: Unix timestamp (UTC) in milliseconds of when the report was generated
