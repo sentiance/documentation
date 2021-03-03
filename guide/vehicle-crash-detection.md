@@ -94,7 +94,7 @@ Sentiance.getInstance(context).invokeDummyVehicleCrash();
 
 This should invoke a dummy crash event, passing it to the listener that you previously set. You can then test how your app handles the event at runtime.
 
-## App Integration
+## Crash Report
 
 A crash report contains contextual information pertaining to a crash event. This includes information specific to the crash, such as time, location, speed, and sensor data. It can also contain user timeline information before, during, and after the crash event, as well as weather and traffic data. A single crash event can produce one or more aggregative crash reports. Each new crash report is generated asynchronously as soon as new information is available on the Sentiance platform or on external data sources. So, we recommend to look for the latest file for a given crash event. 
 
