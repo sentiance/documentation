@@ -96,7 +96,7 @@ This should invoke a dummy crash event, passing it to the listener that you prev
 
 ## Crash Report
 
-A crash report contains contextual information pertaining to a crash event. This includes information specific to the crash, such as time, location, speed, and sensor data. It can also contain user timeline information before, during, and after the crash event, as well as weather and traffic data. A single crash event can produce one or more aggregative crash reports. Each new crash report is generated asynchronously as soon as new information is available on the Sentiance platform or on external data sources. So, we recommend to look for the latest file for a given crash event. 
+A crash report contains contextual information pertaining to a crash event. This includes information specific to the crash i.e., time, location, speed before impact, a severity indicator and sensor data. Also, it contains user timeline information before, during, and after the crash event, as well as weather and traffic data. A single crash event produces one or more aggregative crash reports. Each new crash report is generated asynchronously as soon as new information is available on the Sentiance platform or on external data sources. So, we recommend to look for the latest file for a given crash event. 
 
 Crash reports are securely stored on Amazon S3. Reports will be generated in client-specific root folders with the following directory structure:
 ```
