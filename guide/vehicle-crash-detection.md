@@ -44,7 +44,7 @@ Sentiance.getInstance(context).setVehicleCrashListener(new VehicleCrashListener(
     @Override
     public void onVehicleCrash(VehicleCrashEvent crashEvent) {
         // Handle the vehicle crash event
-        
+
         long epochTimeMs = crashEvent.getTime();
         Location location = crashEvent.getLocation();
         Float speedAtImpact = crashEvent.getSpeedAtImpact();
@@ -60,7 +60,7 @@ Sentiance.getInstance(context).setVehicleCrashListener(new VehicleCrashListener(
 ```objectivec
 [[SENTSDK sharedInstance] setVehicleCrashHandler:^(SENTVehicleCrashEvent *crashEvent) {
     // Handle the vehicle crash event
-    
+
     NSDate *date = crashEvent.date;
     CLLocation *location = crashEvent.location;
     Float32 speedAtImpact = crashEvent.speedAtImpact;
@@ -96,29 +96,31 @@ This should invoke a dummy crash event, passing it to the listener that you prev
 
 ## Crash Report
 
-A crash report contains contextual information pertaining to a crash event. This includes information specific to the crash i.e., time, location, speed before impact, a severity indicator and sensor data. Also, it contains user timeline information before, during, and after the crash event, as well as weather and traffic data. A single crash event produces one or more aggregative crash reports. Each new crash report is generated asynchronously as soon as new information is available on the Sentiance platform or on external data sources. So, we recommend to look for the latest file for a given crash event. 
+A crash report contains contextual information pertaining to a crash event. This includes information specific to the crash i.e., time, location, speed before impact, a severity indicator and sensor data. Also, it contains user timeline information before, during, and after the crash event, as well as weather and traffic data. A single crash event produces one or more aggregative crash reports. Each new crash report is generated asynchronously as soon as new information is available on the Sentiance platform or on external data sources. So, we recommend to look for the latest file for a given crash event.
 
 Crash reports are securely stored on Amazon S3. Reports will be generated in client-specific root folders with the following directory structure:
-```
+
+```text
 s3://sentiance-u1-offloads/<CLIENT_APP_NAME>/crash_reports/<APP_ID>/<UTC_DATE>/<REPORT_ID>-<UTC_TIMESTAMP>.json.gz
 ```
-* CLIENT_APP_NAME: The name of the client app (e.g. journeys)
-* APP_ID: The client app ID (e.g. 0000xxxxxxxxxxxxxxxxxxx)
-* UTC_DATE: The date of the crash event in UTC timezone
-* REPORT_ID: A unique identifier for a crash report, belonging to a single crash event
-* UTC_TIMESTAMP: Unix timestamp (UTC) in milliseconds of when the report was generated
 
-The procedure to access the crash report files in Amazon s3 is the same as that of offload files. Please refer [here](https://docs.sentiance.com/backend/offloads#connecting-to-the-offloads-amazon-s-3).
+* **CLIENT\_APP\_NAME**: The name of the client app \(e.g. journeys\).
+* **APP\_ID**: The client app ID \(e.g. 0000xxxxxxxxxxxxxxxxxxx\).
+* **UTC\_DATE**: The date of the crash event in UTC timezone.
+* **REPORT\_ID**: A unique identifier for a crash report, belonging to a single crash event.
+* **UTC\_TIMESTAMP**: Unix timestamp \(UTC\) in milliseconds of when the report was generated.
 
-A single crash report file may consist multiple report segments. Each report segment contains different information related to the crash event.
+The procedure to access the crash report files in Amazon S3 is the same as that of offload files. Please refer to [here](../backend/offloads.md#connecting-to-the-offloads-amazon-s-3).
 
-* CRASH EVENT: This segment contains the most basic information about a crash event and is usually generated first and as soon as possible after a crash event occurs (though this may change in the subsequent reports due to the asynchronous nature of the Sentiance platform).
-* TRANSPORTS:This segment contains information about one or more transports directly related to the crash event. Transports may include information like total distance traveled, trip waypoints, road types traveled, driving scores, and driving events.
-* TIMELINE: This segment contains information about the user’s timeline before, during, and after a crash event. This may include either stationaries (venues/locations where the user remained static) or other transports.
-* WEATHER: This segment contains information about the weather at the time and location of the crash event.
-* TRAFFIC: This segment contains information about traffic conditions (traffic incidents and the traffic flow) at the time and location of the crash event, as well as after the crash.
+A single crash report file may consist of multiple report segments. Each report segment contains different information related to the crash event.
 
-Here you can find sample data for each of those segments. 
+* **CRASH EVENT**: This segment contains the most basic information about a crash event and is usually generated first and as soon as possible after a crash event occurs \(though this may change in the subsequent reports due to the asynchronous nature of the Sentiance platform\).
+* **TRANSPORTS**: This segment contains information about one or more transports directly related to the crash event. Transports may include information like total distance traveled, trip waypoints, road types traveled, driving scores, and driving events.
+* **TIMELINE**: This segment contains information about the user’s timeline before, during, and after a crash event. This may include either stationaries \(venues/locations where the user remained static\) or other transports.
+* **WEATHER**: This segment contains information about the weather at the time and location of the crash event.
+* **TRAFFIC**: This segment contains information about traffic conditions \(traffic incidents and the traffic flow\) at the time and location of the crash event, as well as after the crash.
+
+Here you can find sample data for each of those segments:
 
 {% tabs %}
 {% tab title="CRASH EVENT" %}
@@ -191,7 +193,8 @@ Here you can find sample data for each of those segments.
     "transportEventId": null,
     "significantTransportMode": null,
     "significantStationaryIds": null
-}```
+}
+```
 {% endtab %}
 
 {% tab title="TRANSPORTS" %}
@@ -296,7 +299,8 @@ Here you can find sample data for each of those segments.
   "transportEventId": "52xxxxxxxxxxx578ee4a6cedcxxxxxxxxxxx33f0a441fxxxxxxxxxxxf63c",
   "significantTransportMode": true,
   "significantStationaryIds": []
-}```
+}
+```
 {% endtab %}
 
 {% tab title="TIMELINE" %}
@@ -352,7 +356,8 @@ Here you can find sample data for each of those segments.
   "transportEventId": null,
   "significantTransportMode": null,
   "significantStationaryIds": []
-}```
+}
+```
 {% endtab %}
 
 {% tab title="WEATHER" %}
@@ -401,7 +406,8 @@ Here you can find sample data for each of those segments.
   "transportEventId": null,
   "significantTransportMode": null,
   "significantStationaryIds": null
-}```
+}
+```
 {% endtab %}
 
 {% tab title="TRAFFIC" %}
@@ -471,12 +477,12 @@ Here you can find sample data for each of those segments.
   "transportEventId": null,
   "significantTransportMode": null,
   "significantStationaryIds": null
-}```
+}
+```
 {% endtab %}
-
-
 {% endtabs %}
 
-The data model of the fields in the above sample segments of the crash report are explained in the attached file. 
+The data model of the fields in the above sample segments of the crash report are explained in the attached file.
 
 {% file src="../.gitbook/assets/data-model-crash-reports.xlsx" caption="data model - crash report" %}
+
