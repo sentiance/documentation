@@ -63,6 +63,8 @@ The user linking process on the app-side involves the following steps:
 5. \_\_[_\(Server-to-server\)_](https://docs.sentiance.com/guide/user-linking-2.0#server-to-server-integration-api) _Make linking request from your to Sentiance back-end_
 6. Call **linkSuccess\(\)/onSuccess\(\)** or return **link\(true\)**
 
+It is important to mention that the linking request in step 5 has to be completed \(e.g. executed synchronously\) before indicating to the SDK that the linking request has been successful.
+
 You can find more details on each step below. After you have finished these steps, there are a few more steps involved for the actual server-to-server communication. You can find these in the next chapter.  
 
 
