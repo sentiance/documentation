@@ -168,7 +168,7 @@ Each offload consists of single folder containing multi-part, gzipped csv files.
 
 Multi-part offloads will start showing up once the userbase being tracked reaches into the thousands of users. 
 
-Every csv file in the lifestyle offloads uses semicolon ‘;’ as a field separator and every part contains the header with column names. 
+Every csv file in the lifestyle offloads uses a comma ‘,’ as a field separator and every part contains the header with column names. 
 
 The complete data model for every file is described in the spreadsheet named ‘Sentiance - Offloads - Data Model - **XXXX**.xlsx’ accompanying this document. 
 
