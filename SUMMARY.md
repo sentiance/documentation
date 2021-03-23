@@ -176,6 +176,7 @@
 * [Firehose](guide/firehose.md)
 * [Verifying your integration](guide/verifying-your-integration.md)
 * [Vehicle Crash Detection](guide/vehicle-crash-detection.md)
+* [Play Store Location Access Review](guide/play-store-location-access-review.md)
 * [SDK Standard License](https://www.sentiance.com/terms/sdk-standard/)
 * [Journeys License](https://www.sentiance.com/terms/journeys/)
 * [Journeys Application](https://www.sentiance.com/demo)
