@@ -3,7 +3,7 @@
 The Sentiance SDK requires background location access to gather insights. Without background location access, the SDK is currently designed to seize its operation.
 
   
-Effective from March 29, 2021, for existing apps, and since Jan 18, 2021, for new apps, any app that uses background location needs to submit the Permissions Declaration form in Play Console which will be reviewed by Google. **We anticipate that there will be a spike of review submissions around March 29, 2021**, which may cause delays in publishing a new app or an update to Play Store.
+Effective from March 29th 2021, for existing apps, and since Jan 18th 2021, for new apps, any app that uses background location needs to submit the Permissions Declaration form in the Play Console which will be reviewed by Google. **We anticipate that there will be a spike of review submissions around March 29th 2021**, which may cause delays in publishing a new app or an update to Play Store.
 
 {% file src="../.gitbook/assets/play-store-location-access-review.pdf" caption="Step by step guide" %}
 
