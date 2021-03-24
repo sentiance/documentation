@@ -366,3 +366,55 @@ If you subscribe to **All Transports**, you will receive events for all transpor
 }
 ```
 
+### Moments
+
+Moment message type sends moment upsert \(moment\_changed\) and moment removal \(moment\_removed\) actions which can be correlated by the moment identifier \(moment\_id\).
+
+```javascript
+{
+	"meta": {
+		"message_type": "moment",
+		"message_timestamp": "2021-03-10T14:00:26.029Z",
+		"updated_attributes": null
+	},
+	"data": {
+		"app_id": "000000000000000000000abc",
+		"events": [
+      {
+        "action": "moment_removed",
+        "moment_id": "4f78074e0a3e9ab5e8e03895d0bbeca343dc2a8fcb4519f1a3bdaf3caada2b87"
+      },
+      {
+        "action": "moment_removed",
+        "moment_id": "82adc6bac2af5d4f824a4900a4fc98a2ddc7efc099753ce643f59bcc019e2288"
+      },
+      {
+        "action": "moment_changed",
+        "category": "semantic_time",
+        "end": "2021-03-10T12:30:00.000-05:00",
+        "moment_id": "d1d74e92289d9447d261267434e5e2dc3e4ed28a02ba8e185f544e2bffb99155",
+        "start": "2021-03-10T10:00:00.000-05:00",
+        "type": "late_morning"
+      },
+      {
+        "action": "moment_changed",
+        "category": "semantic_time",
+        "end": "2021-03-10T14:32:00.000-05:00",
+        "moment_id": "105d7ef1e8746b75f2822f4e42afb3df24ea066cddd2e084bbd3afe82faceee5",
+        "start": "2021-03-10T12:30:00.000-05:00",
+        "type": "lunch"
+      },
+      {
+        "action": "moment_changed",
+        "category": "semantic_time",
+        "end": "2021-03-10T16:46:00.000-05:00",
+        "moment_id": "b74b6acc1534773fdabf278c22ab416a46a5ead5bb2be5442d2c5111b7217487",
+        "start": "2021-03-10T14:32:00.000-05:00",
+        "type": "afternoon"
+      }
+    ],
+		"user_id": "5cc0514c7af8ce0600000abc"
+	}
+}
+```
+
