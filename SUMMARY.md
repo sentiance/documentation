@@ -180,6 +180,6 @@
 * [SDK Standard License](https://www.sentiance.com/terms/sdk-standard/)
 * [Journeys License](https://www.sentiance.com/terms/journeys/)
 * [Journeys Application](https://www.sentiance.com/demo)
-* [Journeys Privacy Policy](https://www.sentiance.com/privacy/)
+* [Journeys Privacy Policy](https://www.sentiance.com/data-privacy/journeys-privacy-policy/)
 * [Technical & Organizational Measures](https://www.sentiance.com/technical-and-organizational-measures/)
 
