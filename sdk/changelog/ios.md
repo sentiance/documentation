@@ -6,6 +6,25 @@
 Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
 {% endhint %}
 
+## \[5.10.0\] - 9 Apr 2021
+
+#### Added <a id="markdown-header-added"></a>
+
+* Support for approximate location access available since iOS 14.
+* Support for detection of screen lock/unlock events.
+
+**Changed**
+
+* Add fail-fast mechanism during third party user linking if linking has not been completed.
+* Slightly adjust the actual stationary start time in the same way as the Android SDK.
+
+#### Fixed <a id="markdown-header-fixed"></a>
+
+* Missing sensor data for crash events in some cases.
+* Overlapping stationary events in case of trip timeouts.
+* Recovery of trip object creation in case the SDK got killed by the OS.
+* Trip object creation and submission in case of a crash event.
+
 ## \[5.9.0\] -  29 Jan 2021
 
 {% hint style="danger" %}
