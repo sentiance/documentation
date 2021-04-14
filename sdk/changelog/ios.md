@@ -6,7 +6,7 @@
 Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
 {% endhint %}
 
-## \[5.10.0\] - 9 Apr 2021
+## \[5.10.0\] - 14 Apr 2021
 
 #### Added <a id="markdown-header-added"></a>
 
