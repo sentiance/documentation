@@ -1,5 +1,23 @@
 # Android
 
+## \[4.19.0\] - 14 Apr 2021
+
+#### Added <a id="markdown-header-added"></a>
+
+* Support for tracking app foreground and background state changes.
+* Support for collecting accelerometer range and max supported frequency.
+* Improve detection of tablet devices by taking the device's smallest screen width into account.
+
+**Changed**
+
+* Use existing authentication token when submitting a token refresh request.
+* Add fail-fast mechanism during third party user linking if linking has not been completed.
+
+#### Fixed <a id="markdown-header-fixed"></a>
+
+* Improve handling of out of order sensor data
+* Fix skipped events in some rare cases.
+
 ## \[4.18.1\] - 8 Feb 2021
 
 #### Fixed
