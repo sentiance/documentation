@@ -8,6 +8,14 @@ Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK
 
 ## \[5.10.0\] - 14 Apr 2021
 
+{% hint style="danger" %}
+ **Sentiance iOS SDK 5.10.0 does not support arm64 simulator**
+
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.10.0 is not able to provide support for arm64 simulator. 
+
+We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
+{% endhint %}
+
 #### Added <a id="markdown-header-added"></a>
 
 * Support for approximate location access available since iOS 14.
