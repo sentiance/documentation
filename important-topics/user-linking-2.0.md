@@ -206,7 +206,9 @@ The unique id used by your backend to identify a user \(external user id\).
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "id": "5a18fc4b0962209e0000000d"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
