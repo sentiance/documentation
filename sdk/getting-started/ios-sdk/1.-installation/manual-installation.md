@@ -40,7 +40,7 @@
 1. Go to the **General** tab of your target settings
 2. Click the **+** button under the **Frameworks, Libraries, and Embedded Content** heading
 3. Click **Add Other** and then **Add Files**
-4. Go to the **Frameworks** folder inside the Sentiance framework, select **TensorFlowLiteC.framewrok** and click **Open**
+4. Go to the **Frameworks** folder inside the Sentiance framework, select **TensorFlowLiteC.framework** and click **Open**
 5. After the item has been added to the list, change the **Embed** option next to the framework to **Do Not Embed**
 
 ## Step 5
