@@ -2,13 +2,15 @@
 
 Our API primarily speaks [GraphQL](https://graphql.org/learn/) \(GQL, for short\). While explaining how GraphQL works is beyond the scope of this guide, there are excellent resources available on the interwebs.
 
-Here we will introduce the basic request response structure of the Sentiance GraphQL API.
+Here we will introduce the basic request-response structure of the Sentiance GraphQL API.
 
 ## Endpoint and Authorization
 
 Our default GraphQL endpoint lives at **POST** `https://api.sentiance.com/v2/gql` and accepts the same [bearer token based authorization](../important-topics/authentication-and-authorization.md) as our[ REST endpoints.](rest-api/)
 
 We adhere to the [GraphQL specification](https://graphql.org/learn/serving-over-http/#post-request) but do not support multiple operation types.
+
+Since it is possible for a single HTTP request to encompass multiple GraphQL queries with some of them succeeding and some of them failing, the endpoint always returns a 200 OK, unless something severe enough happens on the server-side to guarantee failure of the entire response \(such as a 500 status code\). After checking for the 200 status code, please also check the body of the response for `data` and `error` properties.
 
 {% hint style="danger" %}
 For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment. 
