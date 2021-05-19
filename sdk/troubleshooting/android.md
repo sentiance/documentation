@@ -15,6 +15,8 @@ com.example.myapp E/Sentiance: Failed to initialize the Sentiance SDK
 
 **Solution:**  Exclude the play-services-location library used by Sentiance and include a newer version.
 
+**Note:** Make sure to include the explicit play-services-location dependency in the app module to avoid potential problems with various versions of the Android gradle plugin, e.g. in a react-native project.
+
 ```java
 implementation ('com.sentiance:sdk:xxx@aar') { // xxx being the current version of the SDK that is used
     transitive = true
