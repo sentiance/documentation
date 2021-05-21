@@ -6,6 +6,25 @@
 Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
 {% endhint %}
 
+## \[5.10.1\] - 20 May 2021
+
+{% hint style="danger" %}
+ **Sentiance iOS SDK 5.10.1 does not support arm64 simulator**
+
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.10.1 is not able to provide support for arm64 simulator. 
+
+We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
+{% endhint %}
+
+**Changed**
+
+* Updated embedded TensorFlowLite framework to v2.4.0.
+
+**Fixed**
+
+* Fixed potential accelerometer data gaps in trip objects due to included data from previous trips.
+* Fixed swift compiler warning since Xcode 12.5 wrt a missing include in the umbrella header.
+
 ## \[5.10.0\] - 14 Apr 2021
 
 {% hint style="danger" %}
