@@ -1,5 +1,11 @@
 # Android
 
+## \[4.19.1\] - 9 Jun 2021
+
+#### Fixed <a id="markdown-header-added"></a>
+
+* Failure to run crash detection immediately after resetting the SDK.
+
 ## \[4.19.0\] - 14 Apr 2021
 
 #### Added <a id="markdown-header-added"></a>
