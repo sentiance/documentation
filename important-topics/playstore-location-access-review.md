@@ -99,21 +99,11 @@ This video will help [How to handle a policy violation on Google Play](https://w
 
 ### **References**
 
-[**Requesting access to location in the background - Play Console Help \(google.com\)**](https://support.google.com/googleplay/android-developer/answer/9799150)
-
-[**Tips for getting your app approved for background location access**](https://android-developers.googleblog.com/2020/11/tips-for-getting-your-app-approved-for-background-location-access.html)
-
-[**New guidelines for accessing background location in Android**](https://medium.com/@adrian.kajda/new-guidelines-for-accessing-background-location-in-android-d2e07d45ae79)
-
-[**Google Play Developer Policy Center**](https://play.google.com/about/developer-content-policy/)
-
-[**Prepare your app for review - Play Console Help**](https://support.google.com/googleplay/android-developer/answer/9859455?hl=en)
-
-[**My app has been removed from Google Play - Play Console Help**](https://support.google.com/googleplay/android-developer/answer/2477981)
-
-[**Enforcement Process - Play Console Help**](https://support.google.com/googleplay/android-developer/answer/9899234?hl=en)  
-  
-  
-  
-****
+* [Requesting access to location in the background - Play Console Help \(google.com\)](https://support.google.com/googleplay/android-developer/answer/9799150)
+* [Tips for getting your app approved for background location access](https://android-developers.googleblog.com/2020/11/tips-for-getting-your-app-approved-for-background-location-access.html)
+* [New guidelines for accessing background location in Android](https://medium.com/@adrian.kajda/new-guidelines-for-accessing-background-location-in-android-d2e07d45ae79)
+* [Google Play Developer Policy Center](https://play.google.com/about/developer-content-policy/)
+* [Prepare your app for review - Play Console Help](https://support.google.com/googleplay/android-developer/answer/9859455?hl=en)
+* [My app has been removed from Google Play - Play Console Help](https://support.google.com/googleplay/android-developer/answer/2477981)
+* [Enforcement Process - Play Console Help](https://support.google.com/googleplay/android-developer/answer/9899234?hl=en)    ****
 
