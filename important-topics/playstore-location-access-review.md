@@ -75,8 +75,7 @@ The language in the disclosure MUST include the following elements:
 
 Below is an example statement that can be used in your disclosure.
 
-“\[This app\] collects location data to enable \["feature"\], \["feature"\], & \["feature"\] even when the app is closed or not in use.”  
-****
+“\[This app\] collects location data to enable \["feature"\], \["feature"\], & \["feature"\] even when the app is closed or not in use.”
 
 ### **Privacy policy**
 
@@ -87,7 +86,7 @@ Adding a privacy policy to your app's store listing helps provide transparency a
 * If your app uses a location in the background, your privacy policy must contain appropriate related disclosures.
 * Ensure your privacy policy page is clearly labeled.
 
-## **Enforcement**
+### **Enforcement**
 
 “By publishing to Google Play, you agree to adhere to the [Google Play Program Policies](https://play.google.com/about/developer-content-policy.html) and [Developer Distribution Agreement](https://play.google.com/about/developer-distribution-agreement.html). Google is not required to send you a warning prior to suspension or termination.”
 
@@ -98,7 +97,7 @@ There have been \(unverified\) cases reported that Google Play would suspend the
 This video will help [How to handle a policy violation on Google Play](https://www.youtube.com/watch?v=xjRqFbTHUOQ&feature=youtu.be)  
 ****
 
-## **References**
+### **References**
 
 [**Requesting access to location in the background - Play Console Help \(google.com\)**](https://support.google.com/googleplay/android-developer/answer/9799150)
 
