@@ -145,6 +145,7 @@
 
 * [Authentication and Authorization](important-topics/authentication-and-authorization.md)
 * [User linking](important-topics/user-linking-2.0.md)
+* [PlayStore Location Access Review](important-topics/playstore-location-access-review.md)
 
 ## Library
 
