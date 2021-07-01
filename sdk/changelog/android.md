@@ -1,5 +1,11 @@
 # Android
 
+## \[4.19.2\] - 1 Jul 2021
+
+#### Fixed <a id="markdown-header-added"></a>
+
+* Failure to initialize the SDK on some emulator images due to a divide by zero error.
+
 ## \[4.19.1\] - 9 Jun 2021
 
 #### Fixed <a id="markdown-header-added"></a>
