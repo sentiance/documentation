@@ -147,6 +147,7 @@
 * [User linking](important-topics/user-linking-2.0.md)
 * [PlayStore Location Access Review](important-topics/playstore-location-access-review.md)
 * [Privacy Report & Dashboard](important-topics/privacy-report-and-dashboard.md)
+* [Vehicle Crash Detection](important-topics/vehicle-crash-detection.md)
 
 ## Library
 
@@ -177,7 +178,6 @@
 
 * [Firehose](guide/firehose.md)
 * [Verifying your integration](guide/verifying-your-integration.md)
-* [Vehicle Crash Detection](guide/vehicle-crash-detection.md)
 * [Play Store Location Access Review](guide/play-store-location-access-review.md)
 * [SDK Standard License](https://www.sentiance.com/terms/sdk-standard/)
 * [Journeys License](https://www.sentiance.com/terms/journeys/)
