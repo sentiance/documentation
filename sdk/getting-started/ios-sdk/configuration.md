@@ -47,8 +47,6 @@ This step is optional, but indispensable if you want to be kept up-to-date with 
 }];
 ```
 
-For more information related to the [`SENTSDKStatus`](../../api-reference/ios/sentsdk/sentsdkstatus.md) class, see [this guide](https://developers.sentiance.com/docs/sdk/ios/status).
-
 ## Initializing the SDK
 
 {% hint style="info" %}
