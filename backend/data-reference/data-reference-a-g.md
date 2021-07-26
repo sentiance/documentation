@@ -355,25 +355,142 @@ A possible series of events predicted for the user.
 
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| type | String | 'CarBehaviorScores' |
-| focus | Float | The proportion of time \(percentage\) the user is focused while driving, being focused means: not using the phone, which is detected through phone handling. |
-| mounted | Float | The proportion of time \(percentage\) the phone is mounted while driving. |
-| hard\_accel | Float | Measures how often you accelerate hard. Every hard acceleration will be penalised by subtracting a percentage of your score. When we do not have sufficient data this value will be -1. |
-| hard\_brake | Float | Measures how often you need to brake hard. Every hard brake will be penalised by subtracting a percentage of your score. When we do not have sufficient data this value will be -1. |
-| hard\_events | Float | This is a combination of hard\_accel and hard\_brake score. The hard brakes and accelerations are also normalized by the total number of events. When we do not have sufficient data this value will be -1. |
-| legal\_v2 | Float | The legal driving score measures how well you adhere to speed limits. The higher your score, the more you respect the speed limits! When we do not have sufficient data the value will be -1. |
-| hard\_turn | Float | Measures how often you turn hard. Every hard turn will be penalised by subtracting a percentage of your score. When we do not have sufficient data this value will be -1. |
-| smooth\_v2 | Float | The smooth driving score measures how smooth you drive. High accelerations, heavy braking and heavy turning result in a lower score. Scores are normalized with respect to a wide population. The higher your score, the smoother you drive! When we do not have sufficient sensor data characterizing your drive, the value will be -1. Beside an updated normalization, the difference with smooth score v1 is that turns are also taken in account. |
-| anticipative\_v2 | Float | The anticipative driving score measures how well you anticipate turns. Hard accelerations before or hard braking during a turn result in a lower score. The higher your score, the more anticipative you drive! When we do not have sufficient sensor data characterizing your drive, the value will be -1. Beside an updated normalization, this new version has a more accurate detection of brakes in turns. |
-| handheld\_calling | Float | A score based on how much time you spent using your phone and calling \(1 means good behavior\). |
-| handheld\_calling\_duration | Int | Total time in seconds the user was calling while holding the phone during the transport. |
-| handsfree\_calling | Float | A score based on how much time you spent calling without holding your phone \(1 means good behavior\). |
-| handsfree\_calling\_duration | Int | Total time in seconds the user was calling handsfree during the transport. |
-| handling\_without\_calling | Float | A score based on how much time you spent holding your phone without calling \(assume typing, texting etc.\) |
-| handling\_without\_calling\_duration | Int | Total time in seconds the user held the phone without calling \(assume typing, texting etc.\) during the transport. |
-| attention | Float | A combined score of handheld\_calling, handsfree\_calling and handling\_without\_calling. |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">type</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">&apos;CarBehaviorScores&apos;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">focus</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">The proportion of time (percentage) the user is focused while driving,
+        being focused means: not using the phone, which is detected through phone
+        handling.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">mounted</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">The proportion of time (percentage) the phone is mounted while driving.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">hard_accel</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">
+        <p>Measures how often you accelerate hard. Every hard acceleration will be
+          penalised by subtracting a percentage of your score. When we do not have
+          sufficient data this value will be -1.</p>
+        <p></p>
+        <p>A hard acceleration is detected when the magnitude of an acceleration
+          exceeds 2.5m/s2.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">hard_brake</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">
+        <p>Measures how often you need to brake hard. Every hard brake will be penalised
+          by subtracting a percentage of your score. When we do not have sufficient
+          data this value will be -1.</p>
+        <p></p>
+        <p>A hard brake is detected when the magnitude of a brake exceeds 3m/s2.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">hard_events</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">This is a combination of hard_accel and hard_brake score. The hard brakes
+        and accelerations are also normalized by the total number of events. When
+        we do not have sufficient data this value will be -1.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">legal_v2</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">The legal driving score measures how well you adhere to speed limits.
+        The higher your score, the more you respect the speed limits! When we do
+        not have sufficient data the value will be -1.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">hard_turn</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">
+        <p>Measures how often you turn hard. Every hard turn will be penalised by
+          subtracting a percentage of your score. When we do not have sufficient
+          data this value will be -1.</p>
+        <p></p>
+        <p>A hard turn is detected when the magnitude of a turn exceeds 3.75m/s2.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">smooth_v2</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">The smooth driving score measures how smooth you drive. High accelerations,
+        heavy braking and heavy turning result in a lower score. Scores are normalized
+        with respect to a wide population. The higher your score, the smoother
+        you drive! When we do not have sufficient sensor data characterizing your
+        drive, the value will be -1. Beside an updated normalization, the difference
+        with smooth score v1 is that turns are also taken in account.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">anticipative_v2</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">The anticipative driving score measures how well you anticipate turns.
+        Hard accelerations before or hard braking during a turn result in a lower
+        score. The higher your score, the more anticipative you drive! When we
+        do not have sufficient sensor data characterizing your drive, the value
+        will be -1. Beside an updated normalization, this new version has a more
+        accurate detection of brakes in turns.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">handheld_calling</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">A score based on how much time you spent using your phone and calling
+        (1 means good behavior).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">handheld_calling_duration</td>
+      <td style="text-align:left">Int</td>
+      <td style="text-align:left">Total time in seconds the user was calling while holding the phone during
+        the transport.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">handsfree_calling</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">A score based on how much time you spent calling without holding your
+        phone (1 means good behavior).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">handsfree_calling_duration</td>
+      <td style="text-align:left">Int</td>
+      <td style="text-align:left">Total time in seconds the user was calling handsfree during the transport.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">handling_without_calling</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">A score based on how much time you spent holding your phone without calling
+        (assume typing, texting etc.)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">handling_without_calling_duration</td>
+      <td style="text-align:left">Int</td>
+      <td style="text-align:left">Total time in seconds the user held the phone without calling (assume
+        typing, texting etc.) during the transport.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">attention</td>
+      <td style="text-align:left">Float</td>
+      <td style="text-align:left">A combined score of handheld_calling, handsfree_calling and handling_without_calling.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### CityMoment
 
