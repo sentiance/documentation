@@ -6,12 +6,28 @@
 Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
 {% endhint %}
 
+## \[5.11.1\] - 29 July 2021
+
+{% hint style="danger" %}
+ **Sentiance iOS SDK 5.11.1 does not support arm64 simulator**
+
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.1 is not able to provide support for arm64 simulator. 
+
+We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
+{% endhint %}
+
+#### Fixed
+
+* Fixed an issue where detections were not able to start on iOS 15 devices due to the updated authorization status.
+* Fixed TensorFLowLite model updating mechanism at runtime.
+* Removed embedded TensorFlowLite library from SENTSDK pod by providing a separate thinned package and adding a pod dependency to TensorFlowLite.
+
 ## \[5.11.0\] - 16 July 2021
 
 {% hint style="danger" %}
- **Sentiance iOS SDK 5.10.1 does not support arm64 simulator**
+ **Sentiance iOS SDK 5.11.0 does not support arm64 simulator**
 
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.10.1 is not able to provide support for arm64 simulator. 
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.0 is not able to provide support for arm64 simulator. 
 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
