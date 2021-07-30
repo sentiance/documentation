@@ -20,7 +20,7 @@ We recommend users continue their development using either an iOS device or an x
 
 * Fixed an issue where detections were not able to start on iOS 15 devices due to the updated authorization status.
 * Fixed TensorFLowLite model updating mechanism at runtime.
-* Removed embedded TensorFlowLite library from SENTSDK pod by providing a separate thinned package and adding a pod dependency to TensorFlowLite.
+* Removed embedded TensorFlowLite library from SENTSDK pod by providing a separate thinned package and adding a pod dependency to TensorFlowLite \(applies to CocoaPods integration only\).
 
 ## \[5.11.0\] - 16 July 2021
 
