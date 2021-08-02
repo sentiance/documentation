@@ -39,7 +39,7 @@ SENTConfig *config = [[SENTConfig alloc] initWithAppId:APPID
 
 During initialization, the SDK will pass the installID to the `MetaUserLinker`. In this method, you must initiate a link request towards the Sentiance API \(via your server\), supplying the installID and your app’s userID.
 
-After linking succeed, call `linkSuccess()`. If it fails, you must call `linkFailed()`. The SDK initialization will then fail with reason `LINK_FAILED`.
+After linking succeed, call `linkSuccess()`. If it fails, you must call `linkFailed()`. The SDK initialization will then fail with reason `LINK_FAILED`. To reattempt linking, you can then initialize the SDK again, which in turn will invoke the `MetaUserLinker` a second time.
 {% endtab %}
 
 {% tab title="Android" %}
