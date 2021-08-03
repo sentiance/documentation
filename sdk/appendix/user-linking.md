@@ -14,8 +14,27 @@ During the first initialization, the SDK will provide your app an **install-ID**
 
 {% tabs %}
 {% tab title="iOS" %}
-Specify a **MetaUserLinker** in the SENTConfig.
+Specify a **MetaUserLinker** in the **SENTConfig**.
 
+{% code title="Swift" %}
+```swift
+let metaUserLink: MetaUserLinker = { installId, linkSuccess, linkFailed in
+    // Use installId to initiate a link request here, and call
+    // linkSuccess() after linking succeeds.
+}
+let config = SENTConfig(appId: APPID, 
+                        secret: SECRET, 
+                        link: metaUserLink, 
+                        launchOptions: launchOptions)
+SENTSDK.sharedInstance().initWith(config, success: {
+    // Init success
+}, failure: { issue in
+    // Init failed with reason <issue>
+})
+```
+{% endcode %}
+
+{% code title="Objective-C" %}
 ```objectivec
 MetaUserLinker metaUserlink = ^(NSString *installId, 
   void (^linkSuccess)(void), void (^linkFailed)(void)) {
@@ -36,6 +55,7 @@ SENTConfig *config = [[SENTConfig alloc] initWithAppId:APPID
                 // Init failed with reason <issue>
             }];
 ```
+{% endcode %}
 
 During initialization, the SDK will pass the installID to the `MetaUserLinker`. In this method, you must initiate a link request towards the Sentiance API \(via your server\), supplying the installID and your app’s userID.
 
