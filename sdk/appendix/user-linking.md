@@ -67,13 +67,11 @@ Sentiance.getInstance(this).init(config, initCallback);
 
 {% code title="Kotlin" %}
 ```kotlin
-val linker = object: MetaUserLinker() {
-    override fun link(installId: String): Boolean {
-        // Use installId to initiate a link request here, and return 
-        // true after linking succeeds.
+val linker = MetaUserLinker { installId ->
+    // Use installId to initiate a link request here, and return 
+    // true after linking succeeds.
   
-        // This method will execute on a background thread.
-    }
+    // This method will execute on a background thread.
 }
 
 val config = SdkConfig.Builder(APP_ID, SECRET, notification)
