@@ -77,9 +77,9 @@ val linker = MetaUserLinker { installId ->
 val config = SdkConfig.Builder(APP_ID, SECRET, notification)
                       ...
                       .setMetaUserLinker(linker)
-                      .build();
+                      .build()
     
-Sentiance.getInstance(this).init(config, callback);
+Sentiance.getInstance(this).init(config, callback)
 ```
 {% endcode %}
 
