@@ -45,23 +45,45 @@ After linking succeed, call `linkSuccess()`. If it fails, you must call `linkFai
 {% tab title="Android" %}
 Specify a **MetaUserLinker** in the **SdkConfig**.
 
+{% code title="Java" %}
 ```java
 class CustomMetaUserLinker implements MetaUserLinker {
     boolean link(String installId) {
-      // Use installId to initiate a link request here, and return 
-      // true after linking succeeds.
+        // Use installId to initiate a link request here, and return 
+        // true after linking succeeds.
   
-      // This method will execute on a background thread.
+        // This method will execute on a background thread.
     }
 }
  
 SdkConfig config = new SdkConfig.Builder(APP_ID, SECRET, notification)
-                ...
-                .setMetaUserLinker(metaUserLinker)
-                .build();
+                                ...
+                                .setMetaUserLinker(metaUserLinker)
+                                .build();
  
 Sentiance.getInstance(this).init(config, initCallback);
 ```
+{% endcode %}
+
+{% code title="Kotlin" %}
+```kotlin
+val linker = object: MetaUserLinker() {
+    override fun link(installId: String): Boolean {
+        // Use installId to initiate a link request here, and return 
+        // true after linking succeeds.
+  
+        // This method will execute on a background thread.
+    }
+}
+
+val config = SdkConfig.Builder(APP_ID, SECRET, notification)
+                      ...
+                      .setMetaUserLinker(linker)
+                      .build();
+    
+Sentiance.getInstance(this).init(config, callback);
+```
+{% endcode %}
 
 During initialization, the SDK will call the [`link(String)`](../api-reference/android/metauserlinker.md#link) method of your [`MetaUserLinker`](../api-reference/android/metauserlinker.md) object from a background thread, passing to it the SDK install ID. In this method, you must initiate a link request towards the Sentiance API \(via your server\), supplying the install ID and your app’s User ID.
 
