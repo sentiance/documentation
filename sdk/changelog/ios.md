@@ -100,7 +100,7 @@ We recommend users continue their development using either an iOS device or an x
 
 **Added**
 
-* New type to SDK artifacts which are now packaged as both Framework and XCFramework
+* New type to SDK artifacts which are now packaged as both Framework and XCFramework \(Please make sure to have CocoaPods 1.10.0 or above installed on your machine if you integrate Sentiance SDK via CocoaPods\).
 * An improved and more accurate vehicle crash detection, backed by a machine learning model. You must switch to using the new Sentiance API method [`setVehicleCrashHandler:`](../api-reference/ios/sentsdk/#setvehiclecrashhandler) to activate it.
 * A new method to help test your crash detection integration. See [`invokeDummyVehicleCrash`](../api-reference/ios/sentsdk/#invokedummyvehiclecrashhandler).
 * A new method to check if crash detection is supported on the device for a specific trip type. See [`isVehicleCrashDetectionSupported:`](../api-reference/ios/sentsdk/#isvehiclecrashdetectionsupported).
