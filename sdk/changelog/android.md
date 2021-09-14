@@ -1,5 +1,13 @@
 # Android
 
+## \[4.19.3\] - 14 Sep 2021
+
+#### Fixed <a id="markdown-header-added"></a>
+
+* Occasional SecurityException when accessing the ConnectivityManager on Android 11+ devices.
+* Failure to detect some phone calls during trips.
+* A rare occurrence of a NullPointerException during internal SDK message handling.
+
 ## \[4.19.2\] - 1 Jul 2021
 
 #### Fixed <a id="markdown-header-added"></a>
