@@ -20,7 +20,9 @@ Below manufacturers are notoriously known for their strict requirements for back
 
 Please check them out, and if you have any questions, let us know at [support@sentiance.com](mailto:support@sentiance.com).
 
-
+{% hint style="success" %}
+Please take advantage of [SDK Status](https://docs.sentiance.com/sdk/getting-started/android-sdk/sdk-status-updates) updates to react to any incorrect configurations. 
+{% endhint %}
 
 ### Embeddable Projects 
 
