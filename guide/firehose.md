@@ -149,6 +149,8 @@ With `https://example.com/webhook/:appId` being the route that handles and parse
 
 ### Car Transports <a id="#transports"></a>
 
+> Note: This message is sent for both the driver and the passenger. Do not assume that the user of this transport is necessarily the driver.
+
 ```javascript
 {
 	"meta": {
