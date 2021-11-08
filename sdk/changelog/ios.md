@@ -6,12 +6,27 @@
 Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
 {% endhint %}
 
-## \[5.11.1\] - 29 July 2021
+## \[5.11.2] - 8 November 2021
 
 {% hint style="danger" %}
- **Sentiance iOS SDK 5.11.1 does not support arm64 simulator**
+** Sentiance iOS SDK 5.11.2 does not support arm64 simulator**
 
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.1 is not able to provide support for arm64 simulator. 
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.2 is not able to provide support for arm64 simulator.&#x20;
+
+We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
+{% endhint %}
+
+#### Fixed
+
+* Fixed updating debug log configuration received from backstage.
+* Removed obsolete linker flag '-all\_load' from podspec which lead to linker issues in recent react native environments.
+
+## \[5.11.1] - 29 July 2021
+
+{% hint style="danger" %}
+** Sentiance iOS SDK 5.11.1 does not support arm64 simulator**
+
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.1 is not able to provide support for arm64 simulator.&#x20;
 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
@@ -20,21 +35,21 @@ We recommend users continue their development using either an iOS device or an x
 
 * Fixed an issue where detections were not able to start on iOS 15 devices due to the updated authorization status.
 * Fixed TensorFLowLite model updating mechanism at runtime.
-* Removed embedded TensorFlowLite library from SENTSDK pod by providing a separate thinned package and adding a pod dependency to TensorFlowLite \(applies to CocoaPods integration only and requires CocoaPods 1.10.0 ****or above\).
+* Removed embedded TensorFlowLite library from SENTSDK pod by providing a separate thinned package and adding a pod dependency to TensorFlowLite (applies to CocoaPods integration only and requires CocoaPods 1.10.0** **or above).
 
-## \[5.11.0\] - 16 July 2021
+## \[5.11.0] - 16 July 2021
 
 {% hint style="danger" %}
- **Sentiance iOS SDK 5.11.0 does not support arm64 simulator**
+** Sentiance iOS SDK 5.11.0 does not support arm64 simulator**
 
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.0 is not able to provide support for arm64 simulator. 
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.0 is not able to provide support for arm64 simulator.&#x20;
 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
 
 #### Added
 
-* Support SDK artifacts without CallKit linkage 
+* Support SDK artifacts without CallKit linkage&#x20;
 
 #### Fixed
 
@@ -42,12 +57,12 @@ We recommend users continue their development using either an iOS device or an x
 * Fixed delayed uploading of payloads in case of outdated authentication tokens.
 * Fixed missing trip detections due to erroneous flip flop checks.
 
-## \[5.10.1\] - 20 May 2021
+## \[5.10.1] - 20 May 2021
 
 {% hint style="danger" %}
- **Sentiance iOS SDK 5.10.1 does not support arm64 simulator**
+** Sentiance iOS SDK 5.10.1 does not support arm64 simulator**
 
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.10.1 is not able to provide support for arm64 simulator. 
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.10.1 is not able to provide support for arm64 simulator.&#x20;
 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
@@ -61,17 +76,17 @@ We recommend users continue their development using either an iOS device or an x
 * Fixed potential accelerometer data gaps in trip objects due to included data from previous trips.
 * Fixed swift compiler warning since Xcode 12.5 wrt a missing include in the umbrella header.
 
-## \[5.10.0\] - 14 Apr 2021
+## \[5.10.0] - 14 Apr 2021
 
 {% hint style="danger" %}
- **Sentiance iOS SDK 5.10.0 does not support arm64 simulator**
+** Sentiance iOS SDK 5.10.0 does not support arm64 simulator**
 
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.10.0 is not able to provide support for arm64 simulator. 
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.10.0 is not able to provide support for arm64 simulator.&#x20;
 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
 
-#### Added <a id="markdown-header-added"></a>
+#### Added <a href="markdown-header-added" id="markdown-header-added"></a>
 
 * Support for approximate location access available since iOS 14.
 * Support for detection of screen lock/unlock events.
@@ -81,32 +96,32 @@ We recommend users continue their development using either an iOS device or an x
 * Add fail-fast mechanism during third party user linking if linking has not been completed.
 * Slightly adjust the actual stationary start time in the same way as the Android SDK.
 
-#### Fixed <a id="markdown-header-fixed"></a>
+#### Fixed <a href="markdown-header-fixed" id="markdown-header-fixed"></a>
 
 * Missing sensor data for crash events in some cases.
 * Overlapping stationary events in case of trip timeouts.
 * Recovery of trip object creation in case the SDK got killed by the OS.
 * Trip object creation and submission in case of a crash event.
 
-## \[5.9.0\] -  29 Jan 2021
+## \[5.9.0] -  29 Jan 2021
 
 {% hint style="danger" %}
 **Sentiance iOS SDK 5.9.0 does not support arm64 simulator**
 
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.9.0 is not able to provide support for arm64 simulator. 
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.9.0 is not able to provide support for arm64 simulator.&#x20;
 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
 
 **Added**
 
-* New type to SDK artifacts which are now packaged as both Framework and XCFramework \(Please make sure to have CocoaPods 1.10.0 or above installed on your machine if you integrate Sentiance SDK via CocoaPods\).
+* New type to SDK artifacts which are now packaged as both Framework and XCFramework (Please make sure to have CocoaPods 1.10.0 or above installed on your machine if you integrate Sentiance SDK via CocoaPods).
 * An improved and more accurate vehicle crash detection, backed by a machine learning model. You must switch to using the new Sentiance API method [`setVehicleCrashHandler:`](../api-reference/ios/sentsdk/#setvehiclecrashhandler) to activate it.
 * A new method to help test your crash detection integration. See [`invokeDummyVehicleCrash`](../api-reference/ios/sentsdk/#invokedummyvehiclecrashhandler).
 * A new method to check if crash detection is supported on the device for a specific trip type. See [`isVehicleCrashDetectionSupported:`](../api-reference/ios/sentsdk/#isvehiclecrashdetectionsupported).
 
 {% hint style="warning" %}
-**Beta Feature:** Support for host apps that enable[ Data Protection](https://developer.apple.com/documentation/uikit/protecting_the_user_s_privacy/encrypting_your_app_s_files). This functionality is released as a beta feature and not yet recommended for production use.
+**Beta Feature: **Support for host apps that enable[ Data Protection](https://developer.apple.com/documentation/uikit/protecting\_the\_user\_s\_privacy/encrypting\_your\_app\_s\_files). This functionality is released as a beta feature and not yet recommended for production use.
 {% endhint %}
 
 **Changed**
@@ -130,39 +145,39 @@ We recommend users continue their development using either an iOS device or an x
 
 * Location permission prompt when starting the SDK. If you rely on the SDK for prompting the user, please make sure you update your app and prompt the user during the onboarding.
 
-## \[5.7.4\] - 15 Jul 2020
+## \[5.7.4] - 15 Jul 2020
 
 #### Fixed
 
-* The SQLCore I/O database error 
+* The SQLCore I/O database error&#x20;
 * High frequency GPS configuration
 
-## \[5.7.3\] - 9 Jul 2020
+## \[5.7.3] - 9 Jul 2020
 
 #### Fixed
 
 * An issue where the SDK might not register geofences after determining that the user is stationary
 * An issue where the SDK might use outdated geofences during stationary state determination
 
-## \[5.7.1\] - 4 Jun 2020
+## \[5.7.1] - 4 Jun 2020
 
 #### Fixed
 
 * An issue when using beacon regions was causing unexpected exits
 
-## \[5.7.0\] - 3 Jun 2020
+## \[5.7.0] - 3 Jun 2020
 
-#### Added 
+#### Added&#x20;
 
 * Support added for on-device trip profiling and hard event detection.
 
-## \[5.6.1\] - 21 Feb 2020
+## \[5.6.1] - 21 Feb 2020
 
 **Fixed**
 
 * An issue where the SDK might quit unexpectedly during resetting due to an internal issue
 
-## \[5.6.0\] - 5 Feb 2020
+## \[5.6.0] - 5 Feb 2020
 
 **Added**
 
@@ -175,28 +190,28 @@ We recommend users continue their development using either an iOS device or an x
 
 **Fixed**
 
-* An issue where the SDK database might experience conflicts when the enclosing app also uses database instance\(s\) of CoreData.
+* An issue where the SDK database might experience conflicts when the enclosing app also uses database instance(s) of CoreData.
 
-## \[5.5.5\] - 13 Nov 2019
+## \[5.5.5] - 13 Nov 2019
 
 * Fixed the SDK start/stop infinite loop when the user was selecting “Allow Once” for iOS 13 location permission.
 
-## \[5.5.3\] - 7 Oct 2019
+## \[5.5.3] - 7 Oct 2019
 
 **Fixed**
 
 * _iOS 13_ background tasks crash
-* Stuck in stationary \(missing some trips\)
+* Stuck in stationary (missing some trips)
 * On base url change submission fix
 
-## \[5.5.2\] - 17 Sept 2019
+## \[5.5.2] - 17 Sept 2019
 
 #### Fixed
 
 * _iOS 13_ crash fix
 * Payload submission stability fixes
 
-## \[5.5.1\] - 27 Aug 2019
+## \[5.5.1] - 27 Aug 2019
 
 #### Added
 
@@ -207,27 +222,27 @@ We recommend users continue their development using either an iOS device or an x
 
 * An issue that caused location observation to not stop properly when [`startWithStopDate:completion:`](https://docs.sentiance.com/sdk/api-reference/ios/sentsdk#startwithstopdate) is used
 
-## \[5.4.0\] - 2 July 2019
+## \[5.4.0] - 2 July 2019
 
 #### Added
 
 * Method to [set stop date on SDK](../api-reference/ios/sentsdk/#startwithstopdate)
 * new SENTStartStatus: [SENTStartStatusExpired](../api-reference/ios/sentsdk/sentsdkstatus.md#startstatus)
 
-## \[5.3.2\] - 14 Jun 2019
+## \[5.3.2] - 14 Jun 2019
 
 #### Added
 
 * Method to set[ vehicle crash listener.](https://docs.sentiance.com/sdk/appendix/detecting-vehicle-crashes)
 
-## \[5.3.0\] - 4 Jun 2019
+## \[5.3.0] - 4 Jun 2019
 
 #### Added
 
 * Method to set [user activity listener](../api-reference/ios/sentsdk/#setuseractivitylisterner).
 * Method to get [current user activity](../api-reference/ios/sentsdk/#getuseractivity).
 
-## \[5.2.1\] - 29 May 2019
+## \[5.2.1] - 29 May 2019
 
 #### Added
 
@@ -242,13 +257,13 @@ We recommend users continue their development using either an iOS device or an x
 
 * Fix with reachability.
 
-## \[5.1.8\] - 28 Feb 2019
+## \[5.1.8] - 28 Feb 2019
 
 #### Changed
 
 * Stability improvements.
 
-## \[5.1.7\] - 28 Jan 2019
+## \[5.1.7] - 28 Jan 2019
 
 #### Added
 
@@ -259,7 +274,7 @@ We recommend users continue their development using either an iOS device or an x
 * Improved trip start detection.
 * Stability improvements.
 
-## \[5.1.5\] - 21 Dec 2018
+## \[5.1.5] - 21 Dec 2018
 
 #### Fixed
 
@@ -267,7 +282,7 @@ We recommend users continue their development using either an iOS device or an x
 * Trip overlays on off the grid events
 * Other fixes and improvements
 
-## \[5.1.4\] - 6 Nov 2018
+## \[5.1.4] - 6 Nov 2018
 
 #### Added
 
@@ -279,33 +294,32 @@ We recommend users continue their development using either an iOS device or an x
 * Trip duplication fix
 * Other fixes and improvements
 
-## \[5.1.3\] - 25 Oct 2018
+## \[5.1.3] - 25 Oct 2018
 
 #### Fixed
 
 * Fix with using beacons
 
-## \[5.1.2\] - 8 Oct 2018
+## \[5.1.2] - 8 Oct 2018
 
 #### Fixed
 
 * Triggered trip timeout, persisting started triggered trip
 
-## \[5.1.1\] - 26 Sep 2018
+## \[5.1.1] - 26 Sep 2018
 
 #### Fixed
 
 * SDK motion activity and start moving timing bug fixes
 
-## \[5.1.0\] - 27 Aug 2018
+## \[5.1.0] - 27 Aug 2018
 
 #### Added
 
 * Meta Users implemented. Documentation updated accordingly.
 
-## \[5.0.7\] - 9 Aug 2018
+## \[5.0.7] - 9 Aug 2018
 
 #### Fixed
 
 * Battery usage fix
-
