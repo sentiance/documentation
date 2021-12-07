@@ -5,28 +5,29 @@ This class exposes the status of the Sentiance SDK. You can get an instance of t
 * Using [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) as explained in the [SDK Status Updates](../../../getting-started/android-sdk/sdk-status-updates.md) step of the quick start guide;
 * using the [`getSdkStatus()`](../sentiance.md#getsdkstatus) method.
 
-A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementation can be found on our [Github](https://github.com/sentiance/sdk-starter-android/blob/master/app/src/main/java/com/sentiance/sdkstarter/SdkStatusUpdateHandler.java). 
+A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementation can be found on our [Github](https://github.com/sentiance/sdk-starter-android/blob/master/app/src/main/java/com/sentiance/sdkstarter/SdkStatusUpdateHandler.java).&#x20;
 
-|  |  |
-| :--- | :--- |
-| [StartStatus](startstatus.md)  | [startStatus](startstatus.md) |
-| boolean  | [canDetect](./#candetect) |
-| boolean  | [isRemoteEnabled](./#isremoteenabled) |
-| boolean  | [isLocationPermGranted](./#islocationpermgranted) |
-| boolean | [isActivityRecognitionPermGranted](./#isactivityrecognitionpermgranted) |
-| [LocationSetting](locationsetting.md)  | [locationSetting](./#locationsetting) |
-| boolean  | [isAirplaneModeEnabled](./#isairplanemodeenabled) |
-| boolean  | [isLocationAvailable](./#islocationavailable) |
-| boolean  | [isAccelPresent](./#isaccelpresent) |
-| boolean  | [isGyroPresent](./#isgyropresent) |
-| boolean  | [isGpsPresent](./#isgpspresent) |
-| boolean  | [isGooglePlayServicesMissing](./#isgoogleplayservicesmissing) |
-| boolean | [isBatteryOptimizationEnabled](./#isbatteryoptimizationenabled) |
-| boolean | [isBatterySavingEnabled](./#isbatterysavingenabled) |
-| boolean | [isBackgroundProcessingRestricted](./#isbackgroundprocessingrestricted) |
-| [QuotaStatus](quota-status.md)  | [wifiQuotaStatus](./#wifiquotastatus) |
-| [QuotaStatus](quota-status.md)  | [mobileQuotaStatus](./#mobilequotastatus) |
-| [QuotaStatus](quota-status.md)  | [diskQuotaStatus](./#diskquotastatus) |
+|                                        |                                                                         |
+| -------------------------------------- | ----------------------------------------------------------------------- |
+| [StartStatus](startstatus.md)          | [startStatus](startstatus.md)                                           |
+| boolean                                | [canDetect](./#candetect)                                               |
+| boolean                                | [isRemoteEnabled](./#isremoteenabled)                                   |
+| boolean                                | [isLocationPermGranted](./#islocationpermgranted)                       |
+| boolean                                | [isPreciseLocationPermGranted](./#islocationpermgranted-1)              |
+| boolean                                | [isActivityRecognitionPermGranted](./#isactivityrecognitionpermgranted) |
+| [LocationSetting](locationsetting.md)  | [locationSetting](./#locationsetting)                                   |
+| boolean                                | [isAirplaneModeEnabled](./#isairplanemodeenabled)                       |
+| boolean                                | [isLocationAvailable](./#islocationavailable)                           |
+| boolean                                | [isAccelPresent](./#isaccelpresent)                                     |
+| boolean                                | [isGyroPresent](./#isgyropresent)                                       |
+| boolean                                | [isGpsPresent](./#isgpspresent)                                         |
+| boolean                                | [isGooglePlayServicesMissing](./#isgoogleplayservicesmissing)           |
+| boolean                                | [isBatteryOptimizationEnabled](./#isbatteryoptimizationenabled)         |
+| boolean                                | [isBatterySavingEnabled](./#isbatterysavingenabled)                     |
+| boolean                                | [isBackgroundProcessingRestricted](./#isbackgroundprocessingrestricted) |
+| [QuotaStatus](quota-status.md)         | [wifiQuotaStatus](./#wifiquotastatus)                                   |
+| [QuotaStatus](quota-status.md)         | [mobileQuotaStatus](./#mobilequotastatus)                               |
+| [QuotaStatus](quota-status.md)         | [diskQuotaStatus](./#diskquotastatus)                                   |
 
 
 
@@ -36,7 +37,7 @@ A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementa
 
 ### `canDetect`
 
-> A synthesis of many of the other fields \([`isRemoteEnabled`](./#isremoteenabled), [`isLocationPermGranted`](./#islocationpermgranted), [`locationSetting`](./#locationsetting), [`isGpsPresent`](./#isgpspresent), [`isGooglePlayServicesMissing`](./#isgoogleplayservicesmissing), [`isAirplaneModeEnabled`](./#isairplanemodeenabled), [`isLocationAvailable`](./#islocationavailable), [`diskQuotaStatus`](./#diskquotastatus), and [`isBackgroundProcessingRestricted`](./#isbackgroundprocessingrestricted)\).
+> A synthesis of many of the other fields ([`isRemoteEnabled`](./#isremoteenabled), [`isLocationPermGranted`](./#islocationpermgranted), [`locationSetting`](./#locationsetting), [`isGpsPresent`](./#isgpspresent), [`isGooglePlayServicesMissing`](./#isgoogleplayservicesmissing), [`isAirplaneModeEnabled`](./#isairplanemodeenabled), [`isLocationAvailable`](./#islocationavailable), [`diskQuotaStatus`](./#diskquotastatus), and [`isBackgroundProcessingRestricted`](./#isbackgroundprocessingrestricted)).
 >
 > This field indicates whether the conditions are suitable for the SDK to run its detections. If this is true, it does not mean that detections are running; that also depends on [`startStatus`](./#startstatus).
 
@@ -47,6 +48,12 @@ A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementa
 ### `isLocationPermGranted`
 
 > Whether the user has granted location permission to the app.
+
+### `isPreciseLocationPermGranted`
+
+> Whether the user has granted precise location permission to the app.
+>
+> See [https://developer.android.com/about/versions/12/approximate-location](https://developer.android.com/about/versions/12/approximate-location)
 
 ### `isActivityRecognitionPermGranted`
 
@@ -62,7 +69,7 @@ A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementa
 
 ### `isLocationAvailable`
 
-> Whether the device's location is available. Several reasons may lead to failure to obtain a location \(e.g. no GPS or network signal\).
+> Whether the device's location is available. Several reasons may lead to failure to obtain a location (e.g. no GPS or network signal).
 
 ### `isAccelPresent`
 
@@ -90,7 +97,7 @@ A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementa
 
 ### `isBackgroundProcessingRestricted`
 
-> Whether background processing is [restricted](https://developer.android.com/reference/android/app/ActivityManager#isBackgroundRestricted%28%29) for the application. When `true`, SDK detections will be will be paused. This will be set to `false` for devices running Oreo and lower.
+> Whether background processing is [restricted](https://developer.android.com/reference/android/app/ActivityManager#isBackgroundRestricted\(\)) for the application. When `true`, SDK detections will be will be paused. This will be set to `false` for devices running Oreo and lower.
 
 ### `wifiQuotaStatus`
 
@@ -109,4 +116,3 @@ A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementa
 > A [`QuotaStatus`](quota-status.md) enum representing the disk quota status of the SDK.
 >
 > The actual usages and limits in bytes can be obtained using the [`getDiskQuotaUsage()`](../sentiance.md#getdiskquotausage), [`getDiskQuotaLimit()`](../sentiance.md#getdiskquotalimit).
-
