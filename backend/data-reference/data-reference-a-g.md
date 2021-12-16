@@ -443,6 +443,7 @@ A user that can authenticate using either password or token strategies, has an e
 | prediction_tree | [PredictionTree](data-reference-h-p.md#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. | True |
 | feedback | [IFeedback](data-reference-h-p.md#ifeedback) | Feedback on this user<br><br><code>**Deprecation notice**</code><br>feedback is deprecated.<br>Replaced by feedback_history | True |
 | feedback_history | [IFeedback](data-reference-h-p.md#ifeedback) | Feedback on this user | True |
+| step_count | [UserStepCount](data-reference-q-z.md#userstepcount) | Step count details of the given user on the given date range. This feature is currently in Beta, for additional information contact support@sentiance.com. | True |
 
 
 ### CountryMoment
@@ -730,3 +731,5 @@ An occurrence of a SegmentDefinition that we have detected for this user.
 | explanation | String | Reasoning why this segment was assigned to this user from a third person point of view. | True |
 | explanation_you | String | Reasoning why this segment was assigned to this from a second person point of view. | True |
 | segment_definition | [SegmentDefinition](data-reference-q-z.md#segmentdefinition) | The SegmentDefinition this segment relates to. | True |
+
+

@@ -355,6 +355,7 @@ An attribute that aggregates by TimePeriod.
 | prediction_tree | [PredictionTree](data-reference-h-p.md#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. | True |
 | feedback | [IFeedback](data-reference-h-p.md#ifeedback) | Feedback on this user<br><br><code>**Deprecation notice**</code><br>feedback is deprecated.<br>Replaced by feedback_history | True |
 | feedback_history | [IFeedback](data-reference-h-p.md#ifeedback) | Feedback on this user | True |
+| step_count | [UserStepCount](data-reference-q-z.md#userstepcount) | Step count details of the given user on the given date range. This feature is currently in Beta, for additional information contact support@sentiance.com. | True |
 
 
 ### IUserAttribute
