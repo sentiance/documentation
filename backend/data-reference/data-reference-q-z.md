@@ -34,6 +34,9 @@
 - [UserHealthScores](#userhealthscores)
 - [UserSdkSettings](#usersdksettings)
 - [UserSemanticTime](#usersemantictime)
+- [UserStepCount](#userstepcount)
+- [UserStepCountDaily](#userstepcountdaily)
+- [UserStepCountHourly](#userstepcounthourly)
 - [UserTimeAggregatedScores](#usertimeaggregatedscores)
 - [UsersConnection](#usersconnection)
 - [Waypoint](#waypoint)
@@ -568,6 +571,7 @@ An anonymous SDK user that authenticates using the token strategy, can push data
 | prediction_tree | [PredictionTree](data-reference-h-p.md#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. | True |
 | feedback | [IFeedback](data-reference-h-p.md#ifeedback) | Feedback on this user<br><br><code>**Deprecation notice**</code><br>feedback is deprecated.<br>Replaced by feedback_history | True |
 | feedback_history | [IFeedback](data-reference-h-p.md#ifeedback) | Feedback on this user | True |
+| step_count | [UserStepCount](data-reference-q-z.md#userstepcount) | Step count details of the given user on the given date range. This feature is currently in Beta, for additional information contact support@sentiance.com. | True |
 
 
 ### UserAccountRole
@@ -678,6 +682,42 @@ User overrides that are used by the SDK configuration. This is not the SDK confi
 | :--- | :--- | :--- | :--- |
 | type | String | 'UserSemanticTime' | True |
 | all_days | [SemanticTimeAggregate](data-reference-q-z.md#semantictimeaggregate) | Historical semantic time averaged for all days over all data. | True |
+
+
+### UserStepCount
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
+Access information on step count by different groupings. Note that only daily step counts are currently supported.
+
+| Property | Type | Description | Nullable |
+| :--- | :--- | :--- | :--- |
+| type | String | 'UserStepCount' | True |
+| daily | [UserStepCountDaily](data-reference-q-z.md#userstepcountdaily) | The daily step count activity data | True |
+
+
+### UserStepCountDaily
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
+Daily information for step count
+
+| Property | Type | Description | Nullable |
+| :--- | :--- | :--- | :--- |
+| type | String | 'UserStepCountDaily' | True |
+| date | String | Date | True |
+| count | Float | Count | True |
+| hourly | [UserStepCountHourly](data-reference-q-z.md#userstepcounthourly) | Hourly step count information | True |
+
+
+### UserStepCountHourly
+**Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
+
+Hourly information for step count
+
+| Property | Type | Description | Nullable |
+| :--- | :--- | :--- | :--- |
+| type | String | 'UserStepCountHourly' | True |
+| hour | Float | Hour | True |
+| count | Float | Count | True |
 
 
 ### UserTimeAggregatedScores
