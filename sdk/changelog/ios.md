@@ -6,10 +6,32 @@
 Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
 {% endhint %}
 
+##
+
+## \[5.12.0] - 4 January 2022
+
+{% hint style="danger" %}
+&#x20;**Sentiance iOS SDK 5.11.2 does not support arm64 simulator**
+
+Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.2 is not able to provide support for arm64 simulator.&#x20;
+
+We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
+{% endhint %}
+
+#### Fixed
+
+* Make sure a trip is started**,** if the SDK is in a moving state during startup.&#x20;
+* Improved background tasks handling.&#x20;
+* Improved ondevice crash detection.
+
+**Deprecated**
+
+* Legacy on-device trip profiling.
+
 ## \[5.11.2] - 8 November 2021
 
 {% hint style="danger" %}
-** Sentiance iOS SDK 5.11.2 does not support arm64 simulator**
+&#x20;**Sentiance iOS SDK 5.11.2 does not support arm64 simulator**
 
 Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.2 is not able to provide support for arm64 simulator.&#x20;
 
@@ -24,7 +46,7 @@ We recommend users continue their development using either an iOS device or an x
 ## \[5.11.1] - 29 July 2021
 
 {% hint style="danger" %}
-** Sentiance iOS SDK 5.11.1 does not support arm64 simulator**
+&#x20;**Sentiance iOS SDK 5.11.1 does not support arm64 simulator**
 
 Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.1 is not able to provide support for arm64 simulator.&#x20;
 
@@ -35,12 +57,12 @@ We recommend users continue their development using either an iOS device or an x
 
 * Fixed an issue where detections were not able to start on iOS 15 devices due to the updated authorization status.
 * Fixed TensorFLowLite model updating mechanism at runtime.
-* Removed embedded TensorFlowLite library from SENTSDK pod by providing a separate thinned package and adding a pod dependency to TensorFlowLite (applies to CocoaPods integration only and requires CocoaPods 1.10.0** **or above).
+* Removed embedded TensorFlowLite library from SENTSDK pod by providing a separate thinned package and adding a pod dependency to TensorFlowLite (applies to CocoaPods integration only and requires CocoaPods 1.10.0 **** or above).
 
 ## \[5.11.0] - 16 July 2021
 
 {% hint style="danger" %}
-** Sentiance iOS SDK 5.11.0 does not support arm64 simulator**
+&#x20;**Sentiance iOS SDK 5.11.0 does not support arm64 simulator**
 
 Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.0 is not able to provide support for arm64 simulator.&#x20;
 
@@ -60,7 +82,7 @@ We recommend users continue their development using either an iOS device or an x
 ## \[5.10.1] - 20 May 2021
 
 {% hint style="danger" %}
-** Sentiance iOS SDK 5.10.1 does not support arm64 simulator**
+&#x20;**Sentiance iOS SDK 5.10.1 does not support arm64 simulator**
 
 Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.10.1 is not able to provide support for arm64 simulator.&#x20;
 
@@ -79,14 +101,14 @@ We recommend users continue their development using either an iOS device or an x
 ## \[5.10.0] - 14 Apr 2021
 
 {% hint style="danger" %}
-** Sentiance iOS SDK 5.10.0 does not support arm64 simulator**
+&#x20;**Sentiance iOS SDK 5.10.0 does not support arm64 simulator**
 
 Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.10.0 is not able to provide support for arm64 simulator.&#x20;
 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
 
-#### Added <a href="markdown-header-added" id="markdown-header-added"></a>
+#### Added <a href="#markdown-header-added" id="markdown-header-added"></a>
 
 * Support for approximate location access available since iOS 14.
 * Support for detection of screen lock/unlock events.
@@ -96,7 +118,7 @@ We recommend users continue their development using either an iOS device or an x
 * Add fail-fast mechanism during third party user linking if linking has not been completed.
 * Slightly adjust the actual stationary start time in the same way as the Android SDK.
 
-#### Fixed <a href="markdown-header-fixed" id="markdown-header-fixed"></a>
+#### Fixed <a href="#markdown-header-fixed" id="markdown-header-fixed"></a>
 
 * Missing sensor data for crash events in some cases.
 * Overlapping stationary events in case of trip timeouts.
@@ -121,7 +143,7 @@ We recommend users continue their development using either an iOS device or an x
 * A new method to check if crash detection is supported on the device for a specific trip type. See [`isVehicleCrashDetectionSupported:`](../api-reference/ios/sentsdk/#isvehiclecrashdetectionsupported).
 
 {% hint style="warning" %}
-**Beta Feature: **Support for host apps that enable[ Data Protection](https://developer.apple.com/documentation/uikit/protecting\_the\_user\_s\_privacy/encrypting\_your\_app\_s\_files). This functionality is released as a beta feature and not yet recommended for production use.
+**Beta Feature:** Support for host apps that enable[ Data Protection](https://developer.apple.com/documentation/uikit/protecting\_the\_user\_s\_privacy/encrypting\_your\_app\_s\_files). This functionality is released as a beta feature and not yet recommended for production use.
 {% endhint %}
 
 **Changed**

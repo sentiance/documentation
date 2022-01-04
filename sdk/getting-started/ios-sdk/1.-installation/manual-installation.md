@@ -6,10 +6,10 @@
 
 #### Download Sentiance iOS SDK:
 
-| [Sentiance iOS SDK 5.11.2 Framework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.11.2.framework.zip) |
+| [Sentiance iOS SDK 5.12.0 Framework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.12.0.framework.zip) |
 | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| [Sentiance iOS SDK 5.11.2 XCFramework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.11.2.xcframework.zip) |
+| [Sentiance iOS SDK 5.12.0 XCFramework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.12.0.xcframework.zip) |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Step 2
@@ -18,9 +18,9 @@
 
 1. Go to the **General** tab of your target settings
 2. Click the **+** button under the **Frameworks, Libraries, and Embedded Content** heading
-3. Click **Add Other **and then **Add Files**
+3. Click **Add Other** and then **Add Files**
 4. Choose the **Sentiance XCFramework** file and click **Open**
-5. After the item has been added to the list, change the **Embed **option next to the framework to **Do Not Embed**
+5. After the item has been added to the list, change the **Embed** option next to the framework to **Do Not Embed**
 6. Depending on your Xcode setup, it might be required to add the following libraries: **libz.tbd (previously libz.dylib), CoreMotion, SystemConfiguration, CoreLocation, Foundation, CallKit, CoreTelephony, CoreData**
 
 ## Step 3
@@ -37,9 +37,9 @@
 
 1. Go to the **General** tab of your target settings
 2. Click the **+** button under the **Frameworks, Libraries, and Embedded Content** heading
-3. Click **Add Other **and then **Add Files**
+3. Click **Add Other** and then **Add Files**
 4. Go to the **Frameworks** folder inside the Sentiance framework, select **TensorFlowLiteC.framework** and click **Open**
-5. After the item has been added to the list, change the **Embed **option next to the framework to **Do Not Embed**
+5. After the item has been added to the list, change the **Embed** option next to the framework to **Do Not Embed**
 
 ## Step 5
 
