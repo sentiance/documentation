@@ -1,42 +1,32 @@
 # iOS
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 **Using Xcode 11 requires Sentiance SDK v5.5.2 and above**
 
 Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
 {% endhint %}
 
-##
+{% hint style="danger" %}
+&#x20;**Sentiance iOS SDK does not support arm64 simulator**
+
+Due to the latest changes on Xcode 12.3, the Sentiance iOS SDK is not able to provide support for arm64 simulator.&#x20;
+
+We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
+{% endhint %}
 
 ## \[5.12.0] - 4 January 2022
 
-{% hint style="danger" %}
-&#x20;**Sentiance iOS SDK 5.11.2 does not support arm64 simulator**
-
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.2 is not able to provide support for arm64 simulator.&#x20;
-
-We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
-{% endhint %}
-
 #### Fixed
 
-* Make sure a trip is started**,** if the SDK is in a moving state during startup.&#x20;
-* Improved background tasks handling.&#x20;
-* Improved ondevice crash detection.
+* Trip recording consistency upon unexpected app restart.
+* Stability of background task usage in the SDK.
+* Improved vehicle crash detection.
 
 **Deprecated**
 
-* Legacy on-device trip profiling.
+* Legacy on-device trip profiling. This feature will be removed in the next major release.
 
 ## \[5.11.2] - 8 November 2021
-
-{% hint style="danger" %}
-&#x20;**Sentiance iOS SDK 5.11.2 does not support arm64 simulator**
-
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.2 is not able to provide support for arm64 simulator.&#x20;
-
-We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
-{% endhint %}
 
 #### Fixed
 
@@ -45,14 +35,6 @@ We recommend users continue their development using either an iOS device or an x
 
 ## \[5.11.1] - 29 July 2021
 
-{% hint style="danger" %}
-&#x20;**Sentiance iOS SDK 5.11.1 does not support arm64 simulator**
-
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.1 is not able to provide support for arm64 simulator.&#x20;
-
-We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
-{% endhint %}
-
 #### Fixed
 
 * Fixed an issue where detections were not able to start on iOS 15 devices due to the updated authorization status.
@@ -60,14 +42,6 @@ We recommend users continue their development using either an iOS device or an x
 * Removed embedded TensorFlowLite library from SENTSDK pod by providing a separate thinned package and adding a pod dependency to TensorFlowLite (applies to CocoaPods integration only and requires CocoaPods 1.10.0 **** or above).
 
 ## \[5.11.0] - 16 July 2021
-
-{% hint style="danger" %}
-&#x20;**Sentiance iOS SDK 5.11.0 does not support arm64 simulator**
-
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.11.0 is not able to provide support for arm64 simulator.&#x20;
-
-We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
-{% endhint %}
 
 #### Added
 
@@ -81,14 +55,6 @@ We recommend users continue their development using either an iOS device or an x
 
 ## \[5.10.1] - 20 May 2021
 
-{% hint style="danger" %}
-&#x20;**Sentiance iOS SDK 5.10.1 does not support arm64 simulator**
-
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.10.1 is not able to provide support for arm64 simulator.&#x20;
-
-We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
-{% endhint %}
-
 **Changed**
 
 * Updated embedded TensorFlowLite framework to v2.4.0.
@@ -99,14 +65,6 @@ We recommend users continue their development using either an iOS device or an x
 * Fixed swift compiler warning since Xcode 12.5 wrt a missing include in the umbrella header.
 
 ## \[5.10.0] - 14 Apr 2021
-
-{% hint style="danger" %}
-&#x20;**Sentiance iOS SDK 5.10.0 does not support arm64 simulator**
-
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.10.0 is not able to provide support for arm64 simulator.&#x20;
-
-We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
-{% endhint %}
 
 #### Added <a href="#markdown-header-added" id="markdown-header-added"></a>
 
@@ -126,14 +84,6 @@ We recommend users continue their development using either an iOS device or an x
 * Trip object creation and submission in case of a crash event.
 
 ## \[5.9.0] -  29 Jan 2021
-
-{% hint style="danger" %}
-**Sentiance iOS SDK 5.9.0 does not support arm64 simulator**
-
-Due to the latest changes on Xcode 12.3, Sentiance iOS SDK 5.9.0 is not able to provide support for arm64 simulator.&#x20;
-
-We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
-{% endhint %}
 
 **Added**
 
