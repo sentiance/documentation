@@ -8,9 +8,9 @@ The Sentiance SDK requires background location access to gather insights. Withou
 
 Effective from March 29, 2021, for existing apps, and Jan 18, 2021, for new apps, any app that uses background location needs to submit the Permissions Declaration form in Play Console which will be reviewed by Google. We anticipate that there will be a spike of review submissions around March 29, 2021, which may cause delays in publishing a new app or an update to Play Store.
 
-[![](https://lh6.googleusercontent.com/JsIRsvqZakVDJCclutP9in0U1SO1kDNc8fp2fVnkkeQ4-0nmrPWLiOx_7g2u7LBPftDZgRjhzz6CrS-ISihhqmmX32KKZLmhlBQRAcgtzMCxZZwW9mtKih1WldTD_6rcpNmrJdu1)](https://www.youtube.com/watch?v=b0I1Xq_iSK4&feature=emb_title)
+[![](https://lh6.googleusercontent.com/JsIRsvqZakVDJCclutP9in0U1SO1kDNc8fp2fVnkkeQ4-0nmrPWLiOx\_7g2u7LBPftDZgRjhzz6CrS-ISihhqmmX32KKZLmhlBQRAcgtzMCxZZwW9mtKih1WldTD\_6rcpNmrJdu1)](https://www.youtube.com/watch?v=b0I1Xq\_iSK4\&feature=emb\_title)
 
-[**Google Play Policy - Declared permissions and in-app disclosures**](https://www.youtube.com/watch?v=b0I1Xq_iSK4&feature=emb_title)  
+[**Google Play Policy - Declared permissions and in-app disclosures**](https://www.youtube.com/watch?v=b0I1Xq\_iSK4\&feature=emb\_title)****\
 ****
 
 ### **Review Considerations**
@@ -22,25 +22,25 @@ Once an app is submitted for review for background location access, the below cr
 * Is the feature important to the core purpose of the app?
 * Can the app deliver the same experience without accessing the location in the background?
 
-The core functionality is defined as the main purpose of the app. This may comprise a set of core features, which must all be prominently documented and promoted in the app's description. Without the core feature\(s\), the app is "broken" or rendered unusable.
+The core functionality is defined as the main purpose of the app. This may comprise a set of core features, which must all be prominently documented and promoted in the app's description. Without the core feature(s), the app is "broken" or rendered unusable.
 
 ### **Make access to the location in the background clear to users**
 
-* Provide a short Play Store description to signal "location" \(for example, "find anywhere" or “always know where”\).
+* Provide a short Play Store description to signal "location" (for example, "find anywhere" or “always know where”).
 * Include an in-app screenshot that shows a map/user location or geotagged images.
 * If applicable, your app title or icon may also signal the location feature of your app.
 
 ### **Declaration requirements**
 
-![](https://lh6.googleusercontent.com/0TSr-e9FPCpFa4fiqyEPDUXioSr3YciF3RLA4VBb2cw6AohIx1hGpSNRTBlmGM3b--C1rD32l6ri_-Fba_K3KbL7s7qkuGDjptqkfBjoFTq_hLzkroS3hlz2zSUE1pCsZgvlLnM5)
+![](https://lh6.googleusercontent.com/0TSr-e9FPCpFa4fiqyEPDUXioSr3YciF3RLA4VBb2cw6AohIx1hGpSNRTBlmGM3b--C1rD32l6ri\_-Fba\_K3KbL7s7qkuGDjptqkfBjoFTq\_hLzkroS3hlz2zSUE1pCsZgvlLnM5)
 
-When completing the permissions declaration form \(above\), you’ll also need to complete the steps below so Google can evaluate your app’s access to the location in the background.
+When completing the permissions declaration form (above), you’ll also need to complete the steps below so Google can evaluate your app’s access to the location in the background.
 
 As part of the permissions declaration, you must provide a link to a short video that demonstrates the location-based feature in your app that requires access to the location in the background. Without the video, the app will be rejected.
 
-[![](https://lh4.googleusercontent.com/WbZ-3v4rSrMxFxYQkbg7oPxUhAZ_cJA0OTZG0FEYXfoSJ7aTyezxx7of6JwBmMP_5-DafttqA6X10rUbkfiGQ0DfZENTCyarvAzNXo4Itet0Bx4di6jNEE-GnhFg-BpWnR1VK57k)](https://www.youtube.com/watch?v=z35PrureI1w&feature=emb_title)
+[![](https://lh4.googleusercontent.com/WbZ-3v4rSrMxFxYQkbg7oPxUhAZ\_cJA0OTZG0FEYXfoSJ7aTyezxx7of6JwBmMP\_5-DafttqA6X10rUbkfiGQ0DfZENTCyarvAzNXo4Itet0Bx4di6jNEE-GnhFg-BpWnR1VK57k)](https://www.youtube.com/watch?v=z35PrureI1w\&feature=emb\_title)
 
-[**Play Policy Location in the background**](https://www.youtube.com/watch?v=z35PrureI1w&feature=emb_title)
+[**Play Policy Location in the background**](https://www.youtube.com/watch?v=z35PrureI1w\&feature=emb\_title)
 
 The video should demonstrate the background location feature and the required steps to encounter and enable this feature in-app. The video should show:
 
@@ -69,13 +69,13 @@ The language in the disclosure MUST include the following elements:
 1. The term “location.”
 2. An indication that the nature of usage is in the background by using one of the following phrases “background” / “when the app is closed” / “always in use” / “when the app is not in use.”
 3. A list of all the features that use location in the background.
-4. If you extend permitted usage to ads, you must include the following: “used to provide ads/support advertising/support ads.” \(Choose the most accurate phrasing\).
+4. If you extend permitted usage to ads, you must include the following: “used to provide ads/support advertising/support ads.” (Choose the most accurate phrasing).
 
 #### **Example disclosure statements**
 
 Below is an example statement that can be used in your disclosure.
 
-“\[This app\] collects location data to enable \["feature"\], \["feature"\], & \["feature"\] even when the app is closed or not in use.”
+“\[This app] collects location data to enable \["feature"], \["feature"], & \["feature"] even when the app is closed or not in use.”
 
 ### **Privacy policy**
 
@@ -92,18 +92,21 @@ Adding a privacy policy to your app's store listing helps provide transparency a
 
 App rejection can happen if the criteria above are not met. Once an app is rejected, do not resubmit the app until the violation has been fixed.
 
-There have been \(unverified\) cases reported that Google Play would suspend the account if an app is rejected consecutively for the same reason and this may incur irreversible damage to your account.
+There have been (unverified) cases reported that Google Play would suspend the account if an app is rejected consecutively for the same reason and this may incur irreversible damage to your account.
 
-This video will help [How to handle a policy violation on Google Play](https://www.youtube.com/watch?v=xjRqFbTHUOQ&feature=youtu.be)  
+This video will help [How to handle a policy violation on Google Play](https://www.youtube.com/watch?v=xjRqFbTHUOQ\&feature=youtu.be)****\
 ****
 
 ### **References**
 
-* [Requesting access to location in the background - Play Console Help \(google.com\)](https://support.google.com/googleplay/android-developer/answer/9799150)
+* [Requesting access to location in the background - Play Console Help (google.com)](https://support.google.com/googleplay/android-developer/answer/9799150)
 * [Tips for getting your app approved for background location access](https://android-developers.googleblog.com/2020/11/tips-for-getting-your-app-approved-for-background-location-access.html)
 * [New guidelines for accessing background location in Android](https://medium.com/@adrian.kajda/new-guidelines-for-accessing-background-location-in-android-d2e07d45ae79)
 * [Google Play Developer Policy Center](https://play.google.com/about/developer-content-policy/)
 * [Prepare your app for review - Play Console Help](https://support.google.com/googleplay/android-developer/answer/9859455?hl=en)
 * [My app has been removed from Google Play - Play Console Help](https://support.google.com/googleplay/android-developer/answer/2477981)
-* [Enforcement Process - Play Console Help](https://support.google.com/googleplay/android-developer/answer/9899234?hl=en)    ****
-
+* [Enforcement Process - Play Console Help](https://support.google.com/googleplay/android-developer/answer/9899234?hl=en)\
+  \
+  \
+  \
+  ****

@@ -1,11 +1,11 @@
 # Events
 
-Situational events describe what a user is doing. Events are derived from time, location and motion data.  
+Situational events describe what a user is doing. Events are derived from time, location and motion data.\
 They are available as a timeseries of stationaries and transports with duration.
 
-Is the user in transport? In a car? Or a train? Walking? What route?  
-Is the user stationary? What store or business is at that location?  
-Is the location a home or work location?  
+Is the user in transport? In a car? Or a train? Walking? What route?\
+Is the user stationary? What store or business is at that location?\
+Is the location a home or work location?\
 
 
 ### Stationary Events
@@ -14,15 +14,16 @@ When a user is stationary for a few minutes at a certain location, a Stationary 
 
 This Stationary Event is enriched with:
 
-* The significance of what this place means to the user based on historical data. Values: home, work, regular, non-regular, poi \(point of interest\), new.
+* The significance of what this place means to the user based on historical data.\
+  Values: home, work, regular, non-regular, poi (point of interest), new.
 * Place/venue information like name and categories
 * Basic address information like country, city and city\_type
 
 #### Example
 
-[Lookup the Stationary event in the data model reference](../backend/data-reference/data-reference-q-z.md#stationary).
+[Lookup the Stationary event in the data model reference](broken-reference).
 
-```text
+```
 {
   "type": "Stationary",
   "start": "2017-02-22T08:34:50.785+01:00",
@@ -55,9 +56,9 @@ When a user is not stationary at a location, the user is in transport. For each 
 
 Additional data derived from sensor data--distance, transport mode, advanced map-matching--is computed to build an accurate trajectory and driving behavior analysis.
 
-Transport Modes can include car, walking, biking, train, bus, tram, flight, etc. \(check the full list [here](../backend/data-reference/data-reference-q-z.md#transportmode)\).
+Transport Modes can include car, walking, biking, train, bus, tram, flight, etc. (check the full list [here](broken-reference)).
 
-Depending on SDK configuration, additional features are derived from the sensor data.   
+Depending on SDK configuration, additional features are derived from the sensor data. \
 Only available in full SDK configuration:
 
 * behavior\_scores
@@ -66,9 +67,9 @@ Only available in full SDK configuration:
 
 #### Example
 
-[Lookup the Transport event in the data model reference](../backend/data-reference/data-reference-q-z.md#transport).
+[Lookup the Transport event in the data model reference](broken-reference).
 
-```text
+```
 {
   "type": "Transport",
   "start": "2017-02-19T15:13:00.000+01:00",
@@ -136,4 +137,3 @@ Only available in full SDK configuration:
   }
 }
 ```
-

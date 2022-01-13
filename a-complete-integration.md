@@ -6,13 +6,13 @@ description: High level integration guide
 
 ## Get important updates on bug fixes, changes and new features.
 
-[Subscribe to our Technical Release Notes](https://sentiance.us4.list-manage.com/subscribe/post?u=20d6a5a74b902f67b939e3648&amp;id=cdc37b7e30&name=).
+[Subscribe to our Technical Release Notes](https://sentiance.us4.list-manage.com/subscribe/post?u=20d6a5a74b902f67b939e3648\&amp;id=cdc37b7e30\&name=).
 
 ## Getting data on the platform
 
-The first step should always be to start with the [SDK integration](sdk/getting-started/). In our experience this is where most issues pop-up that take some time to resolve. 
+The first step should always be to start with the [SDK integration](sdk/getting-started/). In our experience this is where most issues pop-up that take some time to resolve.&#x20;
 
-Our guide\(s\) are pretty extensive and should get you to a correct integration. But running over [the validation page](guide/verifying-your-integration.md) and sending us your integration code is usually a good way to prevent unexpected behaviour.
+Our guide(s) are pretty extensive and should get you to a correct integration. But running over [the validation page](guide/verifying-your-integration.md) and sending us your integration code is usually a good way to prevent unexpected behaviour.
 
 ## Looking at & investigating your data
 
@@ -30,7 +30,7 @@ _\*Pro tip: Hold "cmd" or the windows key while clicking a term and the data mod
 
 **Pull based**
 
-Use the[ API / GraphQL](backend/graphql.md). These end points can be used by both server and user based tokens. They are ideal for displaying information in your app or querying for data based on your internal triggers \(Or for example a firehose message\).
+Use the[ API / GraphQL](backend/graphql.md). These end points can be used by both server and user based tokens. They are ideal for displaying information in your app or querying for data based on your internal triggers (Or for example a firehose message).
 
 **Push based // Real-time**
 
@@ -38,5 +38,4 @@ Use the [firehose](guide/firehose.md) integration. If you need your data as quic
 
 **For analytics // Batch**
 
-Refer to the offloads. The offloads are a file based system that put a dozen or so files on a regular interval on a dedicated S3 bucket. The files will contain all of the data for all of your users. These are ideal to push into your own data crunching platform or to get a quick global overview of your population. 
-
+Refer to the offloads. The offloads are a file based system that put a dozen or so files on a regular interval on a dedicated S3 bucket. The files will contain all of the data for all of your users. These are ideal to push into your own data crunching platform or to get a quick global overview of your population.&#x20;

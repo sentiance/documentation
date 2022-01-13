@@ -9,30 +9,24 @@ The base url is `https://api.sentiance.com/<version>/` for all REST endpoints, w
 For details on how to authenticate requests, have a look at the [Authentication and Authorization page](../../important-topics/authentication-and-authorization.md).
 
 {% hint style="danger" %}
-For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment. 
+For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment.&#x20;
 {% endhint %}
 
 ### V2 Endpoints
 
-{% api-method method="get" host="" path="/v2/segment\_definitions" %}
-{% api-method-summary %}
-Segment Definitions
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/segment_definitions" method="get" summary="Segment Definitions" %}
+{% swagger-description %}
+Fetches all Moment Definitions available on the platform.
 
-{% api-method-description %}
-Fetches all Moment Definitions available on the platform.  
+\
+
+
+
+
 **Does not require authentication.**
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -55,30 +49,22 @@ Fetches all Moment Definitions available on the platform.
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/moment\_definitions" %}
-{% api-method-summary %}
-Moment Definitions
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/moment_definitions" method="get" summary="Moment Definitions" %}
+{% swagger-description %}
+Fetches all Moment Definitions available on the platform.
 
-{% api-method-description %}
-Fetches all Moment Definitions available on the platform.  
+\
+
+
+
+
 **Does not require authentication.**
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -101,35 +87,19 @@ Fetches all Moment Definitions available on the platform.
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/me" %}
-{% api-method-summary %}
-User's Own Profile
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="" path="/v2/users/me" method="get" summary="User's Own Profile" %}
+{% swagger-description %}
 When called with a User Token, returns the user's own data. It fails if an API Key is used.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
     "type": "ControlUser",
@@ -159,43 +129,33 @@ When called with a User Token, returns the user's own data. It fails if an API K
     ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id" %}
-{% api-method-summary %}
-Profile by User ID
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/users/:user_id" method="get" summary="Profile by User ID" %}
+{% swagger-description %}
+Can be used with both User Token and API Key to retrieve profile data of a user identified by their ID.
 
-{% api-method-description %}
-Can be used with both User Token and API Key to retrieve profile data of a user identified by their ID.  
-If a User Token is used, the calling user must have permission to view the called user's data.  
+\
+
+
+If a User Token is used, the calling user must have permission to view the called user's data.
+
+\
+
+
 If an API Key is used, the user whose data is being fetched must belong to the App to which the API Key belongs to.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose profile is being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
     "type": "ControlUser",
@@ -225,57 +185,77 @@ ID of the user whose profile is being retrieved.
     ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/events?from=:from&to=:to" %}
-{% api-method-summary %}
-Timeline Events
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="" path="/v2/users/:user_id/events?from=:from&to=:to" method="get" summary="Timeline Events" %}
+{% swagger-description %}
 Returns all events on the timeline for a user from a specified start date to a specified end date.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose timeline is being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="from" type="string" required=true %}
-Include results from this date.  
-  
-**Format**: YYYY-MM-DD  
-**Example**: 2019-01-01
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="from" type="string" %}
+Include results from this date.
 
-{% api-method-parameter name="to" type="string" required=true %}
-Include results up to this date.  
-  
-**Format**: YYYY-MM-DD  
-**Example**: 2019-01-02
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+\
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
 
-{% endapi-method-response-example-description %}
 
+
+\
+
+
+
+
+**Format**
+
+: YYYY-MM-DD
+
+\
+
+
+
+
+**Example**
+
+: 2019-01-01
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="to" type="string" %}
+Include results up to this date.
+
+\
+
+
+
+
+\
+
+
+
+
+**Format**
+
+: YYYY-MM-DD
+
+\
+
+
+
+
+**Example**
+
+: 2019-01-02
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -321,50 +301,46 @@ Include results up to this date.
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/events/:start" %}
-{% api-method-summary %}
-Timeline Event by Start Time
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/users/:user_id/events/:start" method="get" summary="Timeline Event by Start Time" %}
+{% swagger-description %}
+**Note: This has been deprecated in favour of EventID based retrieval.**
 
-{% api-method-description %}
-**Note: This has been deprecated in favour of EventID based retrieval.**  
+\
+
+
 Returns a single Event corresponding to the start time of the event.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose event is being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="start" type="string" required=true %}
-ISO Formatted Date String. Event fetched is the one that matches this timestamp.  
-  
-**Example**: 2019-03-21T20:08:00.000+01:00
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="query" name="start" type="string" %}
+ISO Formatted Date String. Event fetched is the one that matches this timestamp.
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
+\
 
-{% endapi-method-response-example-description %}
 
+
+
+\
+
+
+
+
+**Example**
+
+: 2019-03-21T20:08:00.000+01:00
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -397,47 +373,41 @@ ISO Formatted Date String. Event fetched is the one that matches this timestamp.
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/events/:start/trajectory" %}
-{% api-method-summary %}
-Trajectories by Start Time
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="" path="/v2/users/:user_id/events/:start/trajectory" method="get" summary="Trajectories by Start Time" %}
+{% swagger-description %}
 **Note: This has been deprecated in favour of EventID based retrieval. Check below.**
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="start" type="string" required=true %}
-ISO Formatted Date String. Transport whose Trajectories are fetched is the one that matches this timestamp.  
-  
-**Example**: 2019-02-22T08:37:45.000+01:00
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% swagger-parameter in="path" name="start" type="string" %}
+ISO Formatted Date String. Transport whose Trajectories are fetched is the one that matches this timestamp.
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+\
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
 
-{% endapi-method-response-example-description %}
 
+\
+
+
+
+
+**Example**
+
+: 2019-02-22T08:37:45.000+01:00
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
 ```javascript
 {
     "waypoints": [
@@ -475,47 +445,41 @@ ISO Formatted Date String. Transport whose Trajectories are fetched is the one t
     "encoded": "oa~tHqgmZcBaBKQIOCOAO@_Bc@C{@EYGAFGPs@zB{BnHy@|BUr@Qh@Y|@Wz@oA|DsAhEEJCLcBhFs@zBs@xBKZk@fBy@fCELEJk@jBa@nAu@zBq@zBCDUr@uBvGY`AITIX?BI`@]tBMt@GXIRMRa@`AOPk@|A]`AITk@fBkCrIYbAUv@yAzE_CtFi@fAKRkBhE?@Ul@wAfEsAfEiCdIs@zBOf@m@`AQZUv@]bAkAxDu@~Ba@jAa@lAi@~@g@bAQROHM?KAGAWMMIsAs@}A{@]QmDmBs@a@s@_@kAo@OEo@Q}DwByI}EwBiA}CeBgH{D{CaBwMgHWMmJgFkBcAaOgIeBaAmKiGgCkAoAe@eBq@eCg@gAImCKeEMeAGkAMu@QYK]MmAg@_C{A{YoPk@[aFuBoE{@_EOqF@uKVcBDsO\\}CVuCf@cBf@uChAiBbAGB}A~@cHxEeJrGcDxB{CvB}AfAq@b@q@d@kAv@kE|Ba@RkBt@eA\\s@VgE~@cBX}ARsAJaABy@DuAD{BF}@F_AFwAN{@Lg@JoCx@mAb@{Ap@kAl@mEfC}AbA}A`AwCdBoAt@mAr@YR_I|EoFhDiDvBaDpBiCbBsAx@eDjBeAj@WTe@Vc@V_FzCeHdEc@VkCzAqBnAwA|@{CjBcAn@mDtBqHnEcC|@{B^S@wAJoBFqBBsBLsCl@}BhA_CbByDrDgBbBeB`BaB|A_BpA_FtE}I|HQNaElEcDtE{BfE_AtBoAlDaBvEiGpQsBhG{BrGcChHeApB{@zB}@hBu@fAk@l@_@Xm@d@w@Xq@PcAHy@?A?g@Gi@Mc@Ms@]o@c@e@a@e@m@m@k@e@iAy@oCw@{C}@oDo@mC[gAsDyNoAmEiB{FEO}BuGmBeEcA{BwE{I[g@eAkBiE{FsCgDoCiC}A}A}@w@c@_@aBsAwAgAmCoBgBqAUQqByAcCgBwFaEAA}@s@cBmAkDeCyG}EaMaJwAcAqAaA_[_UuMqJ{DyCuBsAmBwAiBqAqAaA{BeBkGkEcTwOcAu@wImGcAq@yGaFiLeIiBoAsQqJ{LsEyAi@uPwFaPoFeEuAaPcF}GgByDm@kFy@qDc@qDOiFSoF@uEPkAFwALiFh@mB\\qDt@kIrBgJlDE@wEvBsEfCaAp@[R}DnCiBtAuCdCsCjC}B`CgBlBmGtHmFvHS\\_@h@uExHkEhIcDlGaCzEuFfJmCtDsDzEwB|BiBtBgG`HwHzIoB~BuDdEoAtAcEpEuEdFyArAyH~GeC|BkB|AsC~BoBbB{@p@wDvCQLWPqBtAyAbAwJrF_CpAcCtA}BpAk@ZOH}BpAcExBaAh@aBv@kCzAk@Ze@VoAp@uAr@mCrAeBz@]NmHzCaF|AYH_GtAcHjAk@J}N~@gFEW?eCEyEWaKcAYIsEcAkBa@c@Kk@SkAa@wDqAyEsBk@WsG_DmCsAeAk@aDcBa@S_@SsAq@}EcCYQmAk@kAg@e@S}@_@eAc@wAg@s@UkCs@gDi@gAGwCOkDCeADoAB}C^k@Jw@NwAXaAXUFiA\\_Bj@eBj@cDtAsAl@c@TwKzEaQxHyIzDoEnBaBt@_FhBeKxDwA`@yCz@sA`@y@VcE~@uBd@qIvAaC^yFp@yF`@G?oG\\aCF_EDyDD}PIK?qDAg@SaAGeAA}EA[AmD?aLCSGICEAKEA?ICMw@UuAIs@Is@KkAImBMwE?]Ao@EqAE{AQ\\KFU`@BpANN@@RNBbA?pAFdCJfCPhB?BBLBZBLVfBA^?V?b@GZQ^_@LwBv@qCbAwGjDD\\kBr@wHtCsBx@_C`AyM~EkC`AgFlBgJlDeXdKq@ViG|BwTlIwAh@iGtBaEdAiFvAuEx@oCf@gFx@eCVcFp@uHf@O@}DBwCDqBBeCBkCD}CBU?Y?qA@aZLeA@s@DI?M?gA@oNH{FD{@@_ADoGDcBBsDFkHDuCHoCHoA@yA@eCLsCVsBZSD{Bp@eA^eAb@iBz@iDnBiBdAeAp@_Al@sJzFy@d@aKjGsNpI}FnDsLhHeIbFmAv@kHhEq@`@}NbJsElCmCzAoB`AgDpAC@uBj@yA^UDeCZ}ALuCCS?cCKeAGkBOcAIwD_@gGm@}@KuEc@kHmAcGyByHsFwFmDs@]k@Ww@UoAWcCU}CCiDT_Dn@aC|@_IxCaHrCU\\]NkDpAoEbB}HtCkAb@{ElBqCdAc@PmAf@IBKFQHk@RMDy@XAr@BbBDVLl@Lf@Rr@Nb@HZJl@D^Jx@?bBIhBAVEXKt@Ql@a@KGAyB_AQImCcAQGWKgBi@OUIEOEWMQZELAJMf@Mb@WFw@Z_@RKLc@R??"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/events/:start/behavior\_scores" %}
-{% api-method-summary %}
-Behavior Scores by Start Time
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="" path="/v2/users/:user_id/events/:start/behavior_scores" method="get" summary="Behavior Scores by Start Time" %}
+{% swagger-description %}
 **Note: This has been deprecated in favour of EventID based retrieval. Check below.**
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=false %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="start" type="string" required=false %}
-ISO Formatted Date String. Transport whose Behavior Scores are fetched is the one that matches this timestamp.  
-  
-**Example:** 2019-02-22T08:37:45.000+01:00
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% swagger-parameter in="path" name="start" type="string" %}
+ISO Formatted Date String. Transport whose Behavior Scores are fetched is the one that matches this timestamp.
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+\
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
 
-{% endapi-method-response-example-description %}
 
+\
+
+
+
+
+**Example:**
+
+ 2019-02-22T08:37:45.000+01:00
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
 ```javascript
 {
     "type": "CarBehaviorScores",
@@ -532,47 +496,41 @@ ISO Formatted Date String. Transport whose Behavior Scores are fetched is the on
     "anticipative_v2": 0.85
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/events/:start/behavior\_annotations" %}
-{% api-method-summary %}
-Behavior Annotations by Start Time
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="" path="/v2/users/:user_id/events/:start/behavior_annotations" method="get" summary="Behavior Annotations by Start Time" %}
+{% swagger-description %}
 **Note: This has been deprecated in favor of EventID based retrieval. Check below.**
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="start" type="string" required=true %}
-ISO Formatted Date String. Transport whose Behavior Annotations are fetched is the one that matches this timestamp.  
-  
-**Example**: 2019-02-22T08:37:45.000+01:00
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% swagger-parameter in="path" name="start" type="string" %}
+ISO Formatted Date String. Transport whose Behavior Annotations are fetched is the one that matches this timestamp.
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+\
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
 
-{% endapi-method-response-example-description %}
 
+\
+
+
+
+
+**Example**
+
+: 2019-02-22T08:37:45.000+01:00
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -643,41 +601,23 @@ ISO Formatted Date String. Transport whose Behavior Annotations are fetched is t
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/segments" %}
-{% api-method-summary %}
-User's Segments
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/users/:user_id/segments" method="get" summary="User's Segments" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -692,57 +632,77 @@ ID of the user whose data is being retrieved.
     },
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/moments?from=:from&to=:to" %}
-{% api-method-summary %}
-Moment History
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/users/:user_id/moments?from=:from&to=:to" method="get" summary="Moment History" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="from" type="string" required=true %}
-Include results from this date.  
-  
-**Format**: YYYY-MM-DD  
-**Example**: 2019-03-21
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="from" type="string" %}
+Include results from this date.
 
-{% api-method-parameter name="to" type="string" required=true %}
-Include results up to this date.  
-  
-**Format**: YYYY-MM-DD  
-**Example**: 2019-03-22
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+\
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
 
-{% endapi-method-response-example-description %}
 
+
+\
+
+
+
+
+**Format**
+
+: YYYY-MM-DD
+
+\
+
+
+
+
+**Example**
+
+: 2019-03-21
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="to" type="string" %}
+Include results up to this date.
+
+\
+
+
+
+
+\
+
+
+
+
+**Format**
+
+: YYYY-MM-DD
+
+\
+
+
+
+
+**Example**
+
+: 2019-03-22
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -761,41 +721,23 @@ Include results up to this date.
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/active\_moments" %}
-{% api-method-summary %}
-Active Moments
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/users/:user_id/active_moments" method="get" summary="Active Moments" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -830,41 +772,23 @@ ID of the user whose data is being retrieved.
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/location\_clusters" %}
-{% api-method-summary %}
-Location Clusters
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/users/:user_id/location_clusters" method="get" summary="Location Clusters" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -915,41 +839,23 @@ ID of the user whose data is being retrieved.
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/location" %}
-{% api-method-summary %}
-Location
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/users/:user_id/location" method="get" summary="Location" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
     "type": "Waypoint",
@@ -958,41 +864,23 @@ ID of the user whose data is being retrieved.
     "timestamp": "2019-03-22T14:04:31.929+01:00"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/car\_behavior" %}
-{% api-method-summary %}
-Aggregated Behavior Scores
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/users/:user_id/car_behavior" method="get" summary="Aggregated Behavior Scores" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
     "type": "UserCarBehavior",
@@ -1163,57 +1051,77 @@ ID of the user whose data is being retrieved.
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v2/users/:user\_id/anomalies?from=:from&to=:to" %}
-{% api-method-summary %}
-Anomaly History
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/users/:user_id/anomalies?from=:from&to=:to" method="get" summary="Anomaly History" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="from" type="string" required=true %}
-Include results from this date.  
-  
-**Format**: YYYY-MM-DD  
-**Example**: 2019-03-21
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="from" type="string" %}
+Include results from this date.
 
-{% api-method-parameter name="to" type="string" required=true %}
-Include results up to this date.  
-  
-**Format**: YYYY-MM-DD  
-**Example**: 2019-03-21
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+\
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
 
-{% endapi-method-response-example-description %}
 
+
+\
+
+
+
+
+**Format**
+
+: YYYY-MM-DD
+
+\
+
+
+
+
+**Example**
+
+: 2019-03-21
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="to" type="string" %}
+Include results up to this date.
+
+\
+
+
+
+
+\
+
+
+
+
+**Format**
+
+: YYYY-MM-DD
+
+\
+
+
+
+
+**Example**
+
+: 2019-03-21
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -1272,60 +1180,40 @@ Include results up to this date.
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="post" host="" path="/v2/users/:install\_id/link" %}
-{% api-method-summary %}
-User Link
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v2/users/:install_id/link" method="post" summary="User Link" %}
+{% swagger-description %}
+Used to link an Install ID to your system's UserID. The JSON body should contain a single parameter as described below.
 
-{% api-method-description %}
-Used to link an Install ID to your system's UserID. The JSON body should contain a single parameter as described below.  
+\
+
+
 Check out the guide for further details on how User Linking work and how it can benefit you.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="install\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="install_id" type="string" %}
 The ID of the user returned by the SDK into the Linker's callback function.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Unlike other endpoints, which can be called with both a user token and an API Key, this endpoint can ONLY be called with an API Key with \`user.link\` scope. User tokens will be rejected.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Unlike other endpoints, which can be called with both a user token and an API Key, this endpoint can ONLY be called with an API Key with `user.link` scope. User tokens will be rejected.
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="external\_id" type="string" required=true %}
+{% swagger-parameter in="body" name="external_id" type="string" %}
 This is the unique ID of the user in your system.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-The returned \`person\_id\` is linked to all installs for the same user, going forward and should be used thenceforth.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="The returned `person_id` is linked to all installs for the same user, going forward and should be used thenceforth." %}
 ```javascript
 {
   "id": "5a18fc4b0962209e0000000d"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=403 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="403" description="" %}
 ```
 {
   "message": "Install does not belong to this application.",
@@ -1357,13 +1245,9 @@ The returned \`person\_id\` is linked to all installs for the same user, going f
   "ref": "403b03b1-35ea-4ae4-af0a-7ebb65211543"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="404" description="" %}
 ```
 {
   "message": "Install was not found by the install ID provided.",
@@ -1371,47 +1255,33 @@ The returned \`person\_id\` is linked to all installs for the same user, going f
   "ref": "403b03b1-35ea-4ae4-af0a-7ebb65211543"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### V3 Endpoints
 
-{% api-method method="get" host="" path="/v3/users/:user\_id/events/:event\_id" %}
-{% api-method-summary %}
-Timeline Event by EventId
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="" path="/v3/users/:user_id/events/:event_id" method="get" summary="Timeline Event by EventId" %}
+{% swagger-description %}
 Returns a single Event based on the type and ID provided.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose event is being retrieved.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="event\_id" type="string" required=true %}
-ID of the event being retrieved. This will be present in the **event\_id** field of the 
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% swagger-parameter in="path" name="event_id" type="string" %}
+ID of the event being retrieved. This will be present in the 
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+**event_id**
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+ field of the 
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-response-example-description %}
+{% endswagger-parameter %}
 
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -1444,45 +1314,27 @@ ID of the event being retrieved. This will be present in the **event\_id** field
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v3/users/:user\_id/events/:event\_id/trajectory" %}
-{% api-method-summary %}
-Trajectories by EventID
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="" path="/v3/users/:user_id/events/:event_id/trajectory" method="get" summary="Trajectories by EventID" %}
+{% swagger-description %}
 Retrieve Trajectories of a Transport by its EventID.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="event\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="event_id" type="string" %}
 ID of the Transport whose Trajectories are being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
     "waypoints": [
@@ -1520,45 +1372,27 @@ ID of the Transport whose Trajectories are being retrieved.
     "encoded": "oa~tHqgmZcBaBKQIOCOAO@_Bc@C{@EYGAFGPs@zB{BnHy@|BUr@Qh@Y|@Wz@oA|DsAhEEJCLcBhFs@zBs@xBKZk@fBy@fCELEJk@jBa@nAu@zBq@zBCDUr@uBvGY`AITIX?BI`@]tBMt@GXIRMRa@`AOPk@|A]`AITk@fBkCrIYbAUv@yAzE_CtFi@fAKRkBhE?@Ul@wAfEsAfEiCdIs@zBOf@m@`AQZUv@]bAkAxDu@~Ba@jAa@lAi@~@g@bAQROHM?KAGAWMMIsAs@}A{@]QmDmBs@a@s@_@kAo@OEo@Q}DwByI}EwBiA}CeBgH{D{CaBwMgHWMmJgFkBcAaOgIeBaAmKiGgCkAoAe@eBq@eCg@gAImCKeEMeAGkAMu@QYK]MmAg@_C{A{YoPk@[aFuBoE{@_EOqF@uKVcBDsO\\}CVuCf@cBf@uChAiBbAGB}A~@cHxEeJrGcDxB{CvB}AfAq@b@q@d@kAv@kE|Ba@RkBt@eA\\s@VgE~@cBX}ARsAJaABy@DuAD{BF}@F_AFwAN{@Lg@JoCx@mAb@{Ap@kAl@mEfC}AbA}A`AwCdBoAt@mAr@YR_I|EoFhDiDvBaDpBiCbBsAx@eDjBeAj@WTe@Vc@V_FzCeHdEc@VkCzAqBnAwA|@{CjBcAn@mDtBqHnEcC|@{B^S@wAJoBFqBBsBLsCl@}BhA_CbByDrDgBbBeB`BaB|A_BpA_FtE}I|HQNaElEcDtE{BfE_AtBoAlDaBvEiGpQsBhG{BrGcChHeApB{@zB}@hBu@fAk@l@_@Xm@d@w@Xq@PcAHy@?A?g@Gi@Mc@Ms@]o@c@e@a@e@m@m@k@e@iAy@oCw@{C}@oDo@mC[gAsDyNoAmEiB{FEO}BuGmBeEcA{BwE{I[g@eAkBiE{FsCgDoCiC}A}A}@w@c@_@aBsAwAgAmCoBgBqAUQqByAcCgBwFaEAA}@s@cBmAkDeCyG}EaMaJwAcAqAaA_[_UuMqJ{DyCuBsAmBwAiBqAqAaA{BeBkGkEcTwOcAu@wImGcAq@yGaFiLeIiBoAsQqJ{LsEyAi@uPwFaPoFeEuAaPcF}GgByDm@kFy@qDc@qDOiFSoF@uEPkAFwALiFh@mB\\qDt@kIrBgJlDE@wEvBsEfCaAp@[R}DnCiBtAuCdCsCjC}B`CgBlBmGtHmFvHS\\_@h@uExHkEhIcDlGaCzEuFfJmCtDsDzEwB|BiBtBgG`HwHzIoB~BuDdEoAtAcEpEuEdFyArAyH~GeC|BkB|AsC~BoBbB{@p@wDvCQLWPqBtAyAbAwJrF_CpAcCtA}BpAk@ZOH}BpAcExBaAh@aBv@kCzAk@Ze@VoAp@uAr@mCrAeBz@]NmHzCaF|AYH_GtAcHjAk@J}N~@gFEW?eCEyEWaKcAYIsEcAkBa@c@Kk@SkAa@wDqAyEsBk@WsG_DmCsAeAk@aDcBa@S_@SsAq@}EcCYQmAk@kAg@e@S}@_@eAc@wAg@s@UkCs@gDi@gAGwCOkDCeADoAB}C^k@Jw@NwAXaAXUFiA\\_Bj@eBj@cDtAsAl@c@TwKzEaQxHyIzDoEnBaBt@_FhBeKxDwA`@yCz@sA`@y@VcE~@uBd@qIvAaC^yFp@yF`@G?oG\\aCF_EDyDD}PIK?qDAg@SaAGeAA}EA[AmD?aLCSGICEAKEA?ICMw@UuAIs@Is@KkAImBMwE?]Ao@EqAE{AQ\\KFU`@BpANN@@RNBbA?pAFdCJfCPhB?BBLBZBLVfBA^?V?b@GZQ^_@LwBv@qCbAwGjDD\\kBr@wHtCsBx@_C`AyM~EkC`AgFlBgJlDeXdKq@ViG|BwTlIwAh@iGtBaEdAiFvAuEx@oCf@gFx@eCVcFp@uHf@O@}DBwCDqBBeCBkCD}CBU?Y?qA@aZLeA@s@DI?M?gA@oNH{FD{@@_ADoGDcBBsDFkHDuCHoCHoA@yA@eCLsCVsBZSD{Bp@eA^eAb@iBz@iDnBiBdAeAp@_Al@sJzFy@d@aKjGsNpI}FnDsLhHeIbFmAv@kHhEq@`@}NbJsElCmCzAoB`AgDpAC@uBj@yA^UDeCZ}ALuCCS?cCKeAGkBOcAIwD_@gGm@}@KuEc@kHmAcGyByHsFwFmDs@]k@Ww@UoAWcCU}CCiDT_Dn@aC|@_IxCaHrCU\\]NkDpAoEbB}HtCkAb@{ElBqCdAc@PmAf@IBKFQHk@RMDy@XAr@BbBDVLl@Lf@Rr@Nb@HZJl@D^Jx@?bBIhBAVEXKt@Ql@a@KGAyB_AQImCcAQGWKgBi@OUIEOEWMQZELAJMf@Mb@WFw@Z_@RKLc@R??"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v3/users/:user\_id/events/:event\_id/behavior\_scores" %}
-{% api-method-summary %}
-Behavior Scores by EventID
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="" path="/v3/users/:user_id/events/:event_id/behavior_scores" method="get" summary="Behavior Scores by EventID" %}
+{% swagger-description %}
 Retrieve Behavior Scores of a Transport by its EventID.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="event\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="event_id" type="string" %}
 ID of the Transport whose Behavior Scores are being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
     "type": "CarBehaviorScores",
@@ -1575,45 +1409,27 @@ ID of the Transport whose Behavior Scores are being retrieved.
     "anticipative_v2": 0.85
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v3/users/:user\_id/events/:event\_id/behavior\_annotations" %}
-{% api-method-summary %}
-Behavior Annotations by EventID
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v3/users/:user_id/events/:event_id/behavior_annotations" method="get" summary="Behavior Annotations by EventID" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is being retrieved.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="event\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="event_id" type="string" %}
 ID of the Transport whose Behavior Annotations are being retrieved.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 [
     {
@@ -1684,54 +1500,106 @@ ID of the Transport whose Behavior Annotations are being retrieved.
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="" path="/v3/users/:user\_id/aggregated\_driving\_scores" %}
-{% api-method-summary %}
-Time Aggregated Driving Scores 
-{% endapi-method-summary %}
+{% swagger baseUrl="" path="/v3/users/:user_id/aggregated_driving_scores" method="get" summary="Time Aggregated Driving Scores " %}
+{% swagger-description %}
+Retrieve the time aggregated scores of a user, i.e. 
 
-{% api-method-description %}
-Retrieve the time aggregated scores of a user, i.e. **daily**, **weekly**, **monthly** or **all** aggregated scores. The API can be used with or without a date parameter. If no date parameter is given, the API will default to the last available \(ongoing\) day, week or month. The **all** score will aggregate all available scores \(max. 9 weeks\).  
-  
-The date parameter accepts either the 1st day of the week \(Monday\) or the 1st day of the month for type: week and type: month respectively.  
-  
+**daily**
+
+, 
+
+**weekly**
+
+, 
+
+**monthly**
+
+ or 
+
+**all**
+
+ aggregated scores. The API can be used with or without a date parameter. If no date parameter is given, the API will default to the last available (ongoing) day, week or month. The 
+
+**all**
+
+ score will aggregate all available scores (max. 9 weeks).
+
+\
+
+
+
+
+\
+
+
+The date parameter accepts either the 1st day of the week (Monday) or the 1st day of the month for type: week and type: month respectively.
+
+\
+
+
+
+
+\
+
+
+
+
 _Note: this endpoint is available on the EU platform only._
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="type" type="string" required=true %}
-Type of aggregated scores you want to retrieve.  
-  
-**Accepts:** day, week, month, all.
-{% endapi-method-parameter %}
+{% swagger-parameter in="path" name="type" type="string" %}
+Type of aggregated scores you want to retrieve.
 
-{% api-method-parameter name="date" type="string" required=false %}
-Optional: if you want to retrieve aggregated scores for a different period than the current one.   
-  
-**Format:** YYYY-MM-DD  
-**Accepts:** any day, any monday, any 1st of month.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+\
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+
+
+
+\
+
+
+
+
+**Accepts:**
+
+ day, week, month, all.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="date" type="string" %}
+Optional: if you want to retrieve aggregated scores for a different period than the current one. 
+
+\
+
+
+
+
+\
+
+
+
+
+**Format:**
+
+ YYYY-MM-DD
+
+\
+
+
+
+
+**Accepts:**
+
+ any day, any monday, any 1st of month.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 A user token or an API Key with scope 'user.read'.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Depending on the type \(day, week, month or all\) you have chosen, you will be returned one of the responses below.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Depending on the type (day, week, month or all) you have chosen, you will be returned one of the responses below." %}
 ```
 {
     "day": {
@@ -1822,48 +1690,26 @@ Depending on the type \(day, week, month or all\) you have chosen, you will be r
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-### Unversioned Routes \(no version prefix applied\)
+### Unversioned Routes (no version prefix applied)
 
-{% api-method method="delete" host="" path="/users/:user\_id" %}
-{% api-method-summary %}
-Delete User
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="" path="/users/:user_id" method="delete" summary="Delete User" %}
+{% swagger-description %}
 Deletes the user data along with the history.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="user_id" type="string" %}
 ID of the user whose data is to be deleted.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-A user token or an API Key with \`user.delete\` scope
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+A user token or an API Key with `user.delete` scope
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
-
+{% swagger-response status="200" description="" %}
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+```
+{% endswagger-response %}
+{% endswagger %}

@@ -1,6 +1,6 @@
 # GraphQL
 
-Our API primarily speaks [GraphQL](https://graphql.org/learn/) \(GQL, for short\). While explaining how GraphQL works is beyond the scope of this guide, there are excellent resources available on the interwebs.
+Our API primarily speaks [GraphQL](https://graphql.org/learn/) (GQL, for short). While explaining how GraphQL works is beyond the scope of this guide, there are excellent resources available on the interwebs.
 
 Here we will introduce the basic request-response structure of the Sentiance GraphQL API.
 
@@ -10,50 +10,34 @@ Our default GraphQL endpoint lives at **POST** `https://api.sentiance.com/v2/gql
 
 We adhere to the [GraphQL specification](https://graphql.org/learn/serving-over-http/#post-request) but do not support multiple operation types.
 
-Since it is possible for a single HTTP request to encompass multiple GraphQL queries with some of them succeeding and some of them failing, the endpoint always returns a 200 OK, unless something severe enough happens on the server-side to guarantee failure of the entire response \(such as a 500 status code\). After checking for the 200 status code, please also check the body of the response for `data` and `error` properties.
+Since it is possible for a single HTTP request to encompass multiple GraphQL queries with some of them succeeding and some of them failing, the endpoint always returns a 200 OK, unless something severe enough happens on the server-side to guarantee failure of the entire response (such as a 500 status code). After checking for the 200 status code, please also check the body of the response for `data` and `error` properties.
 
 {% hint style="danger" %}
-For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment. 
+For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment.&#x20;
 {% endhint %}
 
-{% api-method method="post" host="https://api.sentiance.com" path="/v2/gql" %}
-{% api-method-summary %}
-GQL Request
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.sentiance.com" path="/v2/gql" method="post" summary="GQL Request" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <token>
+{% endswagger-parameter %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;token&gt;
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="Content-Type" type="string" required=true %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
 application/json
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="query" type="string" required=true %}
+{% swagger-parameter in="body" name="query" type="string" %}
 The GraphQL query.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="variables" type="object" required=true %}
+{% swagger-parameter in="body" name="variables" type="object" %}
 A flat JSON object describing the variables to substitute in the query.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-This would depend on the query made. An example of query/response is presented here.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="This would depend on the query made. An example of query/response is presented here." %}
 ```javascript
 REQUEST 
 {
@@ -85,10 +69,8 @@ RESPONSE
   }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Introspection
 
@@ -200,7 +182,7 @@ fragment TypeRef on __Type {
 
 ## Examples
 
-Some examples of various GQL queries with example response are presented here. With GraphQL you can fetch as much or as little as you wish. 
+Some examples of various GQL queries with example response are presented here. With GraphQL you can fetch as much or as little as you wish.&#x20;
 
 ### Moment Definitions
 
@@ -371,6 +353,4 @@ RESPONSE
   }
 }
 ```
-
-
 

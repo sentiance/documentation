@@ -6,11 +6,11 @@
 ## FAQ
 
 * [FAQ](faq/faq/README.md)
-  * [Integration \(FAQ\)](faq/faq/integration.md)
-  * [Detections \(FAQ\)](faq/faq/detections.md)
-  * [Data interface \(FAQ\)](faq/faq/getting-data.md)
-  * [Security, Privacy and Terms of Service \(FAQ\)](faq/faq/security-and-privacy.md)
-  * [Journeys and Insights \(FAQ\)](faq/faq/journeys-faq.md)
+  * [Integration (FAQ)](faq/faq/integration.md)
+  * [Detections (FAQ)](faq/faq/detections.md)
+  * [Data interface (FAQ)](faq/faq/getting-data.md)
+  * [Security, Privacy and Terms of Service (FAQ)](faq/faq/security-and-privacy.md)
+  * [Journeys and Insights (FAQ)](faq/faq/journeys-faq.md)
 
 ## SDK
 
@@ -160,17 +160,20 @@
 
 * [GraphQL](backend/graphql.md)
 * [REST API Reference](backend/rest-api/README.md)
-  * [Error Codes \(REST API\)](backend/rest-api/error-codes.md)
+  * [Error Codes (REST API)](backend/rest-api/error-codes.md)
 * [Offloads](backend/offloads.md)
 * [Data Reference](backend/data-reference/README.md)
-  * [Data Reference A-G](backend/data-reference/data-reference-a-g.md)
-  * [Data Reference H-P](backend/data-reference/data-reference-h-p.md)
-  * [Data Reference Q-Z](backend/data-reference/data-reference-q-z.md)
+  * [Data Reference A-B](backend/data-reference/data-reference-a-b.md)
+  * [Data Reference C-G](backend/data-reference/data-reference-c-g.md)
+  * [Data Reference M-P](backend/data-reference/data-reference-m-p.md)
+  * [Data Reference H-L](backend/data-reference/data-reference-h-l.md)
+  * [Data Reference U-Z](backend/data-reference/data-reference-u-z.md)
+  * [Data Reference Q-T](backend/data-reference/data-reference-q-t.md)
 
 ## Data Explorer
 
 * [Data Explorer](data-explorer/data-explorer/README.md)
-  * [Global \(EU\)](https://insights.sentiance.com/graphql)
+  * [Global (EU)](https://insights.sentiance.com/graphql)
   * [US](https://insights.d4.sentiance.com/graphql)
   * [Australia](https://insights.e6.sentiance.com/graphql)
 
@@ -183,4 +186,3 @@
 * [Journeys Application](https://www.sentiance.com/demo)
 * [Journeys Privacy Policy](https://www.sentiance.com/data-privacy/journeys-privacy-policy/)
 * [Technical & Organizational Measures](https://www.sentiance.com/technical-and-organizational-measures/)
-

@@ -4,15 +4,15 @@
 
 ### Updating compiler build settings
 
-1. Go to the **Build Settings** tab of your target settings   
-2. Look for **Other Linker Flags** in the **Linking** section.   
-3. Add `-lc++` flag
+1\. Go to the **Build Settings** tab of your target settings \
+2\. Look for **Other Linker Flags** in the **Linking** section. \
+3\. Add `-lc++` flag
 
 ### Include the SDK bundle in your project
 
-1. Go to the **Build Phases** tab of your target settings   
-2. Expand the **Copy Bundle Resources** row and click the `+` button   
-3. Choose the `SENTSDK.bundle` file located inside `SENTSDK.framework`
+1\. Go to the **Build Phases** tab of your target settings \
+2\. Expand the **Copy Bundle Resources** row and click the `+` button \
+3\. Choose the `SENTSDK.bundle` file located inside `SENTSDK.framework`
 
 ### Permission message
 
@@ -79,4 +79,3 @@ The `isTripOngoing()` method now expects a parameter of type `TripType`.
 ### Other
 
 `getWiFiLastSeenTimestamp()` is no longer available.
-
