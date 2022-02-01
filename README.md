@@ -1,18 +1,18 @@
-# What is Sentiance Platform?
+# Introduction
 
-## What is Sentiance Platform?
+## What is the Sentiance Platform?
 
-Sentiance platform helps improving your users' experience by learning and anticipating key moments that matter for the users.
+The Sentiance Platform helps to improve your app's user experience by learning and anticipating key moments that matter for end users.
 
 This is how it's done.
 
-First, collect GPS and motion sensor data from a user's phone or IOT devices via our SDK.
+First, GPS and motion sensor data from a user's phone or IOT devices is collected via our SDK.
 
 ![](.gitbook/assets/platform.png)
 
-Once the data is collected, we turn this into valuable insights about the user then group them into EVENTS, MOMENTS, and SEGMENTS.
+Once the data is collected, we turn this into valuable insights about the user, grouped into EVENTS, MOMENTS, and SEGMENTS. 
 
-In other words, we give you an understanding of where the user likes to go, what the user likes to, and the persona of the user.
+In other words, we give you an understanding of where the user likes to go, what the user likes to do, and provide an insight into the persona of the user.
 
 ![](.gitbook/assets/context-layers.png)
 
@@ -27,11 +27,11 @@ In other words, we give you an understanding of where the user likes to go, what
 
 ## API for all your needs
 
-We offer two types of API endpoints. [REST API](api/rest-api.md) that covers most of your needs and [GraphQL API](api/graphql-api.md) that will cover all your most complex use cases.
+We offer two types of API endpoints. A [REST API](backend/rest-api/) that covers common requests with pre-built resources and a [GraphQL API ](backend/graphql.md)that  covers more complex, customized use cases.
 
 ## Demo App
 
-Try Journeys to see how the Sentiance platform learns about your journey.
+Try Journeys to see how the Sentiance Platform learns about your journey.
 
 ![](.gitbook/assets/journeys-demo.gif)
 
