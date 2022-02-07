@@ -49,4 +49,4 @@
 2. Look for **Other Linker Flags** in the **Linking** section
 3. Add `-lz`, `-all_load` and `-lc++`
 
-![](../../../../.gitbook/assets/screen-shot-2020-05-05-at-3.41.04-pm.png)
+![](<../../../../.gitbook/assets/Screen Shot 2020-05-05 at 3.41.04 PM.png>)

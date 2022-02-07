@@ -1,9 +1,42 @@
 # Android
 
+## \[4.21.0] - 3 Feb 2021
+
+#### Added
+
+* Step count tracking (disabled by default).
+
+#### Changed
+
+* Improved the vehicle crash detection algorithm.
+* Added support for vehicle crash detection when activity recognition permission is not granted.
+* Improved trip detection under certain inaccurate location conditions.
+* Added more leniency towards short interruptions to the SDK detections that are caused by toggled airplane mode, or changing of available location providers (usually a result of OS power saving optimizations).
+* Limited foregrounding SDK services when the debugger is attached, to prevent potential ANRs.
+
+#### Deprecated
+
+* Legacy on-device trip profiling. This feature will be removed in the next major release.
+
+#### Fixed
+
+* Incompatible machine learning model usage when the SDK is downgraded.
+* SecurityException on Android 5 when the READ\_PHONE\_STATE permission is missing.
+
+#### Security
+
+* Avoid logging credentials in the SDK's private log files.
+
 ## \[4.20.0] - 7 Dec 2021
 
 {% hint style="info" %}
 This version targets API level 31, adding Android 12 support.
+{% endhint %}
+
+{% hint style="warning" %}
+If you app supports Android 5, you must add the _READ\_PHONE\_STATE_ permission in your app's manifest in order to allow the Sentiance SDK to detect phone calls. You can limit this permission to API level 22 by specifying _android:maxSdkVersion="22"_.
+
+Note: the absence of _READ\_PHONE\_STATE_ in your app's manifest will cause the application to crash on Android 5. This is a bug that will be fixed in the next SDK version.
 {% endhint %}
 
 #### Added

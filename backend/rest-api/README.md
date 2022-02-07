@@ -16,7 +16,7 @@ For other environments, please ask your sales representative or [support@sentian
 
 {% swagger baseUrl="" path="/v2/segment_definitions" method="get" summary="Segment Definitions" %}
 {% swagger-description %}
-Fetches all Moment Definitions available on the platform.
+Fetches all Segment Definitions available on the platform.
 
 \
 

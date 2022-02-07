@@ -38,7 +38,7 @@ Scopes allow you to specify what operations an API Key can perform. Currently, w
 | **user.delete** | Use this scope to delete a user along with all historical data. This scope should be used with the [user delete API](https://docs.sentiance.com/backend/rest-api#user-delete). |
 | **user.link**   | Use this scope to link third party users with a sentiance user. This scope should be used with the [user link API](https://docs.sentiance.com/backend/rest-api#user-link).     |
 
-![API Key scopes](../.gitbook/assets/screenshot-2020-02-18-at-15.26.15.png)
+![API Key scopes](<../.gitbook/assets/Screenshot 2020-02-18 at 15.26.15.png>)
 
 **Self-Expiring**
 

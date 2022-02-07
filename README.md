@@ -10,7 +10,7 @@ First, GPS and motion sensor data from a user's phone or IOT devices is collecte
 
 ![](.gitbook/assets/platform.png)
 
-Once the data is collected, we turn this into valuable insights about the user, grouped into EVENTS, MOMENTS, and SEGMENTS. 
+Once the data is collected, we turn this into valuable insights about the user, grouped into EVENTS, MOMENTS, and SEGMENTS.&#x20;
 
 In other words, we give you an understanding of where the user likes to go, what the user likes to do, and provide an insight into the persona of the user.
 
@@ -23,7 +23,7 @@ In other words, we give you an understanding of where the user likes to go, what
 * Optimized for accuracy and battery usage.
 * Minimal bandwidth usage during data collection.
 
-![](.gitbook/assets/screen-shot-2018-12-17-at-4.47.30-pm.png)
+![](<.gitbook/assets/Screen Shot 2018-12-17 at 4.47.30 PM.png>)
 
 ## API for all your needs
 
@@ -34,4 +34,3 @@ We offer two types of API endpoints. A [REST API](backend/rest-api/) that covers
 Try Journeys to see how the Sentiance Platform learns about your journey.
 
 ![](.gitbook/assets/journeys-demo.gif)
-

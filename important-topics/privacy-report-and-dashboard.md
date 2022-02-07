@@ -6,15 +6,15 @@ Sentiance is committed to handle user data with a high level of confidentiality,
 
 ### iOS 15 and App Privacy Report
 
-iOS 15 have a new section in the privacy settings called [**App Privacy Report**](https://www.apple.com/newsroom/2021/06/apple-advances-its-privacy-leadership-with-ios-15-ipados-15-macos-monterey-and-watchos-8/#:~:text=Check%20Up%20on%20App%20Privacy)**.** Disclosing to the users how often and when any apps use data like location, photos, camera, microphone, and contacts in the last seven days. It transparently shows which domains and when an app has contacted other domains. Sentiance SDK access location data and contacts Sentiance API to upload the collected data. Therefore, once Sentiance SDK is integrated into your app, the Report will disclose when the location data were accessed and that it has contacted Sentiance API.
+iOS 15 have a new section in the privacy settings called [**App Privacy Report**](https://www.apple.com/newsroom/2021/06/apple-advances-its-privacy-leadership-with-ios-15-ipados-15-macos-monterey-and-watchos-8/#:\~:text=Check%20Up%20on%20App%20Privacy)**.** Disclosing to the users how often and when any apps use data like location, photos, camera, microphone, and contacts in the last seven days. It transparently shows which domains and when an app has contacted other domains. Sentiance SDK access location data and contacts Sentiance API to upload the collected data. Therefore, once Sentiance SDK is integrated into your app, the Report will disclose when the location data were accessed and that it has contacted Sentiance API.
 
-![](../.gitbook/assets/untitled-drawing-1-.png)
+![](<../.gitbook/assets/Untitled drawing (1).png>)
 
 ### Android 12 and Privacy Dashboard
 
 To provide more transparency on when and what data are used, Google has added a new section with a timeline view of the last 24-hour access to location, microphone, and camera. Sentiance SDK access location data and the timing of location data access are disclosed in the Privacy Dashboard.
 
-To audit that your app and the third-party SDKs within the app are using the right amount of data at the right time, you can use [Data access auditing APIs](https://developer.android.com/guide/topics/data/audit-access) \(Added in Android 11\) which makes it easy to identify which part of the code access user's private data.
+To audit that your app and the third-party SDKs within the app are using the right amount of data at the right time, you can use [Data access auditing APIs](https://developer.android.com/guide/topics/data/audit-access) (Added in Android 11) which makes it easy to identify which part of the code access user's private data.
 
 ![](../.gitbook/assets/untitled.gif)
 
@@ -28,13 +28,13 @@ Users are more likely to disable location permission unless a compelling value p
 
 {% embed url="https://developer.android.com/training/location" %}
 
-Also, check if the correct permissions are authorized at every app start. If the permissions are not authorized or incorrect, then nudge the user to enable or correct the location settings. 
+Also, check if the correct permissions are authorized at every app start. If the permissions are not authorized or incorrect, then nudge the user to enable or correct the location settings.&#x20;
 
 Without the full location permission, Sentiance SDK will not start and this can be checked through SDKStatus objects.
 
 {% embed url="https://docs.sentiance.com/sdk/api-reference/android/sdkstatus" %}
 
-{% embed url="https://docs.sentiance.com/sdk/api-reference/ios/sentsdk\#getsdkstatus" %}
+{% embed url="https://docs.sentiance.com/sdk/api-reference/ios/sentsdk#getsdkstatus" %}
 
 
 
@@ -44,6 +44,4 @@ Without the full location permission, Sentiance SDK will not start and this can 
 
 * [What’s new in Android Privacy 18 May 2021](https://android-developers.googleblog.com/2021/05/android-security-and-privacy-recap.html)
 * [Apple advances its privacy leadership with iOS 15, iPadOS 15, macOS Monterey, and watchOS 8](https://www.apple.com/newsroom/2021/06/apple-advances-its-privacy-leadership-with-ios-15-ipados-15-macos-monterey-and-watchos-8)
-
-
 

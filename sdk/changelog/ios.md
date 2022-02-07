@@ -14,26 +14,38 @@ Due to the latest changes on Xcode 12.3, the Sentiance iOS SDK is not able to pr
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
 
-## \[5.12.0] - 4 January 2022
+## \[5.12.1] - 3 Feb 2022
+
+#### Changed
+
+* Improved the vehicle crash detection algorithm.
+* Added support for vehicle crash detection when motion activity permission is not granted.
+
+**Fixed**
+
+* A bug where reinstalling the app did not clear the previous Sentiance user.
+
+## \[5.12.0] - 4 Jan 2022
 
 #### Fixed
 
 * Trip recording consistency upon unexpected app restart.
 * Stability of background task usage in the SDK.
 * Improved vehicle crash detection.
+* Inability to detect trips after toggling the location precision setting on iOS 14+.
 
 **Deprecated**
 
 * Legacy on-device trip profiling. This feature will be removed in the next major release.
 
-## \[5.11.2] - 8 November 2021
+## \[5.11.2] - 8 Nov 2021
 
 #### Fixed
 
 * Fixed updating debug log configuration received from backstage.
 * Removed obsolete linker flag '-all\_load' from podspec which lead to linker issues in recent react native environments.
 
-## \[5.11.1] - 29 July 2021
+## \[5.11.1] - 29 Jul 2021
 
 #### Fixed
 
@@ -41,7 +53,7 @@ We recommend users continue their development using either an iOS device or an x
 * Fixed TensorFLowLite model updating mechanism at runtime.
 * Removed embedded TensorFlowLite library from SENTSDK pod by providing a separate thinned package and adding a pod dependency to TensorFlowLite (applies to CocoaPods integration only and requires CocoaPods 1.10.0 **** or above).
 
-## \[5.11.0] - 16 July 2021
+## \[5.11.0] - 16 Jul 2021
 
 #### Added
 

@@ -7,7 +7,7 @@ description: An optional interactive guide for integrating the Sentiance SDK
 Sentiance SDK is shipped with an optional feature to guide you through your integration process in an interactive way from Xcode. The Integration Guide diagnoses Sentiance SDK integration from Xcode during build and alerts upon issue discovery.
 
 {% hint style="warning" %}
- Using the Integration Guide is highly recommended but is not mandatory to benefit from all the features of Sentiance SDK.
+&#x20;Using the Integration Guide is highly recommended but is not mandatory to benefit from all the features of Sentiance SDK.
 {% endhint %}
 
 ## Minimum Requirements
@@ -33,9 +33,7 @@ Follow these steps below to activate the Integration Guide:
 
 Once the script is finished, the phase will run everytime you build your project and will notify you with the status of your integration details in **Report Navigator** panel of Xcode.
 
-![Make sure all validation steps are shown with checkmark.](../../../../.gitbook/assets/screen-shot-2019-07-29-at-2.23.30-pm.png)
-
-
+![Make sure all validation steps are shown with checkmark.](<../../../../.gitbook/assets/Screen Shot 2019-07-29 at 2.23.30 PM.png>)
 
 
 
