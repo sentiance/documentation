@@ -23,7 +23,7 @@ We recommend users continue their development using either an iOS device or an x
 
 **Fixed**
 
-* A bug where reinstalling the app did not clear the previous Sentiance user.
+* A bug that was introduced in v5.11.2, where reinstalling the app did not clear the previous Sentiance user.
 
 ## \[5.12.0] - 4 Jan 2022
 
