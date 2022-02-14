@@ -51,7 +51,7 @@ Note: the absence of _READ\_PHONE\_STATE_ in your app's manifest will cause the 
 * Improved crash detection with an update to the internal crash detection model.
 * Exported all manifest components that define intent filters.
 * Specified mutability for internal Pending Intents.
-* Updated mobile call detection to work without requiring the READ\_PHONE\_STATE permission.
+* Updated mobile call detection to work without requiring the READ\_PHONE\_STATE permission (on Android 6 and above).
 * Modified foreground service usage to support the new Android 12 restriction.
 * Handled the absence of the precise location permission. The SDK will stop detections if this permission (ACCESS\_FINE\_LOCATION) is not granted. A new status indicator called **isPreciseLocationPermGranted** has been added to the **SdkStatus** for this purpose.&#x20;
 
