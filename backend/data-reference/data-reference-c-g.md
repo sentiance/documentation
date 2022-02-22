@@ -419,3 +419,4 @@ An occurrence of a SegmentDefinition that we have detected for this user.
 | segment_definition | [SegmentDefinition](data-reference-q-t.md#segmentdefinition) | The SegmentDefinition this segment relates to. | True |
 
 
+...
