@@ -418,4 +418,3 @@ An occurrence of a SegmentDefinition that we have detected for this user.
 | explanation_you | String | Reasoning why this segment was assigned to this from a second person point of view.<br><br><code>**Deprecation notice**</code><br>explanation_you is deprecated.<br>No longer valid, clients will need to handle with their own explanation_you. | True |
 | segment_definition | [SegmentDefinition](data-reference-q-t.md#segmentdefinition) | The SegmentDefinition this segment relates to. | True |
 
-

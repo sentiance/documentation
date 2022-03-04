@@ -208,6 +208,7 @@ An Application refers to an integration of the mobile SDK and pools together the
 | logging | String | An optional override for the default debug logging behavior of the mobile SDKs. | True |
 | flavor | String | An optional override for the default flavor configuration of the mobile SDKs. | True |
 | project_code | String | An optional project code used to assign users from the demo applications to this application. | True |
+| is_deactivated | Boolean | Flag that defines if an app is disabled to process payloads, webhooks and querying. | True |
 | created_at | String | The time when this user was created, ISO8601.<br>Example:<br>2015-05-28T14:37:14.839+00:00. | True |
 | account_id | String | The developer account this application belongs to. | True |
 | activity | [ApplicationActivity](data-reference-a-b.md#applicationactivity) | Activity information for this application, contains active users and no of installs | True |
