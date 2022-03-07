@@ -4,7 +4,7 @@
 
 The Sentiance Platform helps to improve your app's user experience by learning and anticipating key moments that matter for end users.
 
-This is how it's done.
+This is how it's done.some
 
 First, GPS and motion sensor data from a user's phone or IOT devices is collected via our SDK.
 
