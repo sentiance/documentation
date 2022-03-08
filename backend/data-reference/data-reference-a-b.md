@@ -315,4 +315,3 @@ A possible series of events predicted for the user.
 | probability | Float | Percentage probability of the events of this beam taking place. | True |
 | events | [IBranchEvent](data-reference-h-l.md#ibranchevent) | The list of events predicted to occur. | True |
 
-
