@@ -1,4 +1,5 @@
 # Data Reference A-B
+
 ## Objects
 - [AccelerationBehaviorAnnotation](#accelerationbehaviorannotation)
 - [AccessToken](#accesstoken)
@@ -314,5 +315,4 @@ A possible series of events predicted for the user.
 | id | String | Id of the branch unique among all the branches returned for the user at the given time. | True |
 | probability | Float | Percentage probability of the events of this beam taking place. | True |
 | events | [IBranchEvent](data-reference-h-l.md#ibranchevent) | The list of events predicted to occur. | True |
-
 
