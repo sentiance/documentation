@@ -1,4 +1,5 @@
 # Data Reference Q-T
+
 ## Objects
 - [SegmentDefinition](#segmentdefinition)
 - [SemanticTimeAggregate](#semantictimeaggregate)
