@@ -1,5 +1,11 @@
 # SENTTripProcessingTransportSegment
 
+{% hint style="warning" %}
+**Deprecated**
+
+This class was deprecated in v5.12.0, as part of the Trip Profiling feature deprecation.
+{% endhint %}
+
 SENTTripProcessingTransportSegment is used to define a portion of the trip having the same characteristics.
 
 ### vehicleMode
@@ -69,4 +75,3 @@ Returns the array of hard events detected during the timeframe of the transport 
 {% hint style="info" %}
 The hard event detection must be explicitly enabled via [`[SENTConfig isHardEventDetectionEnabled:]`](../sentconfig-1.md#ishardeventdetectionenabled) before initializing the SDK.
 {% endhint %}
-

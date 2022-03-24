@@ -1,5 +1,11 @@
 # SENTTripProcessingTripProfile
 
+{% hint style="warning" %}
+**Deprecated**
+
+This class was deprecated in v5.12.0, as part of the Trip Profiling feature deprecation.
+{% endhint %}
+
 SENTTripProcessingTripProfile defines the profiling information about a trip that has finished. The profiling details are stored as a collection of SENTTripProcessingTransportSegment objects.
 
 ### tripId
@@ -17,4 +23,3 @@ The array of [SENTTripProcessingTransportSegment](transportsegment-1.md) objects
 ```objectivec
 @property (nonatomic, strong) NSArray <SENTTripProcessingTransportSegment *> *transportSegments;
 ```
-

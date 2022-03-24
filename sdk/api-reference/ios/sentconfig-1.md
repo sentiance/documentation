@@ -57,7 +57,7 @@ Secret token created along with App ID
 
 ### launchOptions
 
-Key value pair passed from \[AppDelegate application:application didFinishLaunchingWithOptions:launchOptions\]
+Key value pair passed from \[AppDelegate application:application didFinishLaunchingWithOptions:launchOptions]
 
 ```objectivec
 @property (nonatomic, strong) NSDictionary *launchOptions;
@@ -81,6 +81,12 @@ Callback to receive current status of SDK. Returns [SENTSDKStatus](sentsdk/sents
 
 ### isHardEventDetectionEnabled
 
+{% hint style="warning" %}
+**Deprecated**
+
+This property was deprecated in v5.12.0, as part of the Trip Profiling feature deprecation.
+{% endhint %}
+
 A boolean value indicating whether hard event detection should be enabled.
 
 ```objectivec
@@ -89,7 +95,7 @@ A boolean value indicating whether hard event detection should be enabled.
 
 ### initWithAppId: secret: launchOptions:
 
-SDK configuration initialization method. Returned SENTConfig object is passed to \[SENTSDK initWithConfig\].
+SDK configuration initialization method. Returned SENTConfig object is passed to \[SENTSDK initWithConfig].
 
 ```objectivec
 - (id)initWithAppId: (NSString *) appId 
@@ -97,11 +103,11 @@ SDK configuration initialization method. Returned SENTConfig object is passed to
       launchOptions: (NSDictionary *) launchOptions;
 ```
 
-| Parameter |  |
-| :--- | :--- |
-| appId | Application key which you get from Sentiance account. |
-| secret | Secret key which you get from Sentiance account. |
-| launchOptions | A dictionary indicating the reason the app was launched \(if any\). The contents of this dictionary may be empty in situations where the user launched the app directly. For information about the possible keys in this dictionary and how to handle them, see [Launch Options Keys](https://developer.apple.com/documentation/uikit/uiapplicationlaunchoptionskey?language=objc). |
+| Parameter     |                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appId         | Application key which you get from Sentiance account.                                                                                                                                                                                                                                                                                                                             |
+| secret        | Secret key which you get from Sentiance account.                                                                                                                                                                                                                                                                                                                                  |
+| launchOptions | A dictionary indicating the reason the app was launched (if any). The contents of this dictionary may be empty in situations where the user launched the app directly. For information about the possible keys in this dictionary and how to handle them, see [Launch Options Keys](https://developer.apple.com/documentation/uikit/uiapplicationlaunchoptionskey?language=objc). |
 
 ### initWithAppId: secret: link: launchOptions:
 
@@ -114,12 +120,12 @@ SDK config intialization method with linking to customer's user id. It creates a
       launchOptions :(NSDictionary *) launchOptions;
 ```
 
-| Parameter |  |
-| :--- | :--- |
-| appId | Application key which you get from Sentiance account. |
-| secret | Secret key which you get from Sentiance account. |
-| link | [MetaUsersLinker](../android/metauserlinker.md) type block which returns linkSuccess or linkFailed depended on how linking gone. Use InstallId to link with backend. |
-| launchOptions | A dictionary indicating the reason the app was launched \(if any\). The contents of this dictionary may be empty in situations where the user launched the app directly. For information about the possible keys in this dictionary and how to handle them, see [Launch Options Keys](https://developer.apple.com/documentation/uikit/uiapplicationlaunchoptionskey?language=objc). |
+| Parameter     |                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appId         | Application key which you get from Sentiance account.                                                                                                                                                                                                                                                                                                                             |
+| secret        | Secret key which you get from Sentiance account.                                                                                                                                                                                                                                                                                                                                  |
+| link          | [MetaUsersLinker](../android/metauserlinker.md) type block which returns linkSuccess or linkFailed depended on how linking gone. Use InstallId to link with backend.                                                                                                                                                                                                              |
+| launchOptions | A dictionary indicating the reason the app was launched (if any). The contents of this dictionary may be empty in situations where the user launched the app directly. For information about the possible keys in this dictionary and how to handle them, see [Launch Options Keys](https://developer.apple.com/documentation/uikit/uiapplicationlaunchoptionskey?language=objc). |
 
 ### isValidConfig
 
@@ -128,4 +134,3 @@ Check if App ID and Secret are valid
 ```objectivec
 - (BOOL)isValidConfig
 ```
-

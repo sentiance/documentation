@@ -1,6 +1,12 @@
 # SENTTripProcessingHardEvent
 
-Hard events are acceleration events detected over a certain threshold of velocity. 
+{% hint style="warning" %}
+**Deprecated**
+
+This class was deprecated in v5.12.0, as part of the Trip Profiling feature deprecation.
+{% endhint %}
+
+Hard events are acceleration events detected over a certain threshold of velocity.&#x20;
 
 ### date
 
@@ -17,4 +23,3 @@ Defines the acceleration velocity in m/s2.
 ```objectivec
 @property (nonatomic, readonly) double magnitude;
 ```
-
