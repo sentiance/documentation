@@ -4,13 +4,6 @@ Provides information about a stationary.
 
 ## StationaryInfo API
 
-|  |  |
-| :--- | :--- |
-| [Location](https://developer.android.com/reference/android/location/Location) | [getLocation](stationaryinfo.md#getlocation) \(\) |
-| List&lt;[PointOfInterest](pointofinterest.md)&gt; | [getPointsOfInterest](stationaryinfo.md#getpointsofinterest) \(\) |
-
-
-
 ### `getLocation()`
 
 > ```java
@@ -26,4 +19,3 @@ Provides information about a stationary.
 > ```
 >
 > Returns a list of [`PointOfInterest`](pointofinterest.md) objects representing the points of interest near the user's stationary location.
-

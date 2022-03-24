@@ -4,12 +4,6 @@ This interface is used with [`setUserActivityListener(UserActivityListener)`](se
 
 ## UserActivityListener API
 
-|  |  |
-| :--- | :--- |
-| void | [onUserActivityChange](useractivitylistener.md#onuseractivitychange) \([UserActivity](useractivity.md) activity\) |
-
-
-
 ### `onUserActivityChange()`
 
 > ```java
@@ -17,4 +11,3 @@ This interface is used with [`setUserActivityListener(UserActivityListener)`](se
 > ```
 >
 > Called whenever a new [`UserActivity`](useractivity.md) is created.
-

@@ -4,13 +4,6 @@ This interface is used with [`submitDetections(SubmitDetectionsCallback)`](senti
 
 ## SubmitDetectionsCallback API
 
-|  |  |
-| :--- | :--- |
-| void | [onSuccess](submitdetectionscallback.md#onsuccess) \(\) |
-| void  | [onFailure](submitdetectionscallback.md#onfailure) \(\) |
-
-
-
 ### `onSuccess()`
 
 > ```java
@@ -28,6 +21,4 @@ This interface is used with [`submitDetections(SubmitDetectionsCallback)`](senti
 > At least one detection was not successfully submitted.
 >
 > Due to constraints on detection submission order, failure to submit certain detections will cause the entire submission run to be stopped.
-
-
 

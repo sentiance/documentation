@@ -4,14 +4,6 @@ Represents a reverse geocoded location.
 
 ## PoiAddress API
 
-|  |  |
-| :--- | :--- |
-| String | [getCity](poiaddress.md#getcity) \(\) |
-| String  | [getCityType](poiaddress.md#getcitytype) \(\) |
-| String | [getCountry](poiaddress.md#getcountry) \(\) |
-
-
-
 ### `getCity()`
 
 > ```java
@@ -35,4 +27,3 @@ Represents a reverse geocoded location.
 > ```
 >
 > Returns the country.
-

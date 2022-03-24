@@ -4,23 +4,13 @@ A token can be used to communicate with the [Sentiance API](https://developers.s
 
 ## Token API
 
-|  |  |
-| :--- | :--- |
-| [Date](https://developer.android.com/reference/java/util/Date) | [getExpiryDate](token.md#getexpirydate) \(\) |
-| String | [getTokenId](token.md#gettokenid) \(\) |
-| boolean | [isExpired](token.md#isexpired) \(\) |
-| void | [setExpiryDate](token.md#setexpirydate) \([Date](https://developer.android.com/reference/java/util/Date) expiryDate\) |
-| void | [setTokenId](token.md#settokenid) \(String tokenId\) |
-
-
-
 ### `getExpiryDate()`
 
 > ```java
 > Date getExpiryDate()
 > ```
 >
-> Returns a [`Date`](https://developer.android.com/reference/java/util/Date) object indicating the token expiry date. 
+> Returns a [`Date`](https://developer.android.com/reference/java/util/Date) object indicating the token expiry date.&#x20;
 >
 > The SDK will always attempt to return a valid token, granted proper network connectivity exists to allow token refresh.
 
@@ -47,10 +37,10 @@ A token can be used to communicate with the [Sentiance API](https://developers.s
 > ```
 >
 > Sets the token expiryDate
->
-> | Parameters |  |
-> | :--- | :--- |
-> | expiryDate | A [`Date`](https://developer.android.com/reference/java/util/Date) object indicating the token expiry date. |
+
+| Parameters |                                                                                                             |
+| ---------- | ----------------------------------------------------------------------------------------------------------- |
+| expiryDate | A [`Date`](https://developer.android.com/reference/java/util/Date) object indicating the token expiry date. |
 
 ### `setTokenId()`
 
@@ -59,8 +49,7 @@ A token can be used to communicate with the [Sentiance API](https://developers.s
 > ```
 >
 > Sets the token ID.
->
-> | Parameters |  |
-> | :--- | :--- |
-> | tokenId | The token ID. |
 
+| Parameters |               |
+| ---------- | ------------- |
+| tokenId    | The token ID. |

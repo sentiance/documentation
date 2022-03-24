@@ -4,14 +4,6 @@ Represents a user activity detected by the SDK detections.
 
 ## UserActivity API
 
-|  |  |
-| :--- | :--- |
-| [UserActivityType](useractivitytype.md) | [getActivityType](useractivity.md#getactivitytype) \(\) |
-| [TripInfo](tripinfo.md) | [getTripInfo](useractivity.md#gettripinfo) \(\) |
-| [StationaryInfo](stationaryinfo.md) | [getStationaryInfo](useractivity.md#getstationaryinfo) \(\) |
-
-
-
 ### `getActivityType()`
 
 > ```java
@@ -35,4 +27,3 @@ Represents a user activity detected by the SDK detections.
 > ```
 >
 > Returns a [`StationaryInfo`](stationaryinfo.md) object containing info about the current stationary state. If the current activity is not a stationary, this method will return `null` instead.
-

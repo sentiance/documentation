@@ -1,21 +1,14 @@
 # TransportSegment
 
+{% hint style="warning" %}
+**Deprecated**
+
+This class was deprecated in v4.21.0, as part of the Trip Profiling feature deprecation.
+{% endhint %}
+
 A segment is a section of the trip where the user was using the same [`VehicleMode`](vehiclemode.md) for the specified time range. When the mode is `VehicleMode.VEHICLE`, certain transport metrics can be accessed using the methods below.
 
 ## TransportSegment API
-
-|  |  |
-| :--- | :--- |
-| Double | [getAverageSpeed](transportsegment.md#getaveragespeed) \(\) |
-| Double | [getDistance](transportsegment.md#getdistance) \(\) |
-| long | [getEndTime](transportsegment.md#getendtime) \(\) |
-| List&lt;[HardEvent](hardevent.md)&gt; | [getHardEvents](transportsegment.md#gethardevents) \(\) |
-| Integer | [getPercentOfTimeSpeeding](transportsegment.md#getpercentoftimespeeding) \(\) |
-| long | [getStartTime](transportsegment.md#getstarttime) \(\) |
-| Double | [getTopSpeed](transportsegment.md#gettopspeed) \(\) |
-| [VehicleMode](vehiclemode.md) | [getVehicleMode](transportsegment.md#getvehiclemode) \(\) |
-
-
 
 ### `getAverageSpeed()`
 
@@ -80,4 +73,3 @@ A segment is a section of the trip where the user was using the same [`VehicleMo
 > ```
 >
 > Returns the vehicle mode of this segment. See [`VehicleMode`](vehiclemode.md) for more details.
-

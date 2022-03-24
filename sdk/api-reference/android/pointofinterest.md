@@ -4,13 +4,6 @@ Represents a point of interest near a user's stationary location.
 
 ## PointOfInterest API
 
-|  |  |
-| :--- | :--- |
-| [PoiAddress](poiaddress.md) | [getPoiAddress](pointofinterest.md#getpoiaddress) \(\) |
-| [PoiLocation](poilocation.md) | [getPoiLocation](pointofinterest.md#getpoilocation) \(\) |
-
-
-
 ### `getPoiAddress()`
 
 > ```java
@@ -26,4 +19,3 @@ Represents a point of interest near a user's stationary location.
 > ```
 >
 > Returns the [`PoiLocation`](poilocation.md) of this point of interest.
-

@@ -4,13 +4,6 @@ This interface is used with [`startTrip(Map<String, String>, TransportMode, Star
 
 ## StartTripCallback API
 
-|  |  |
-| :--- | :--- |
-| void | [onSuccess](starttripcallback.md#onsuccess) \(\) |
-| void | [onFailure](starttripcallback.md#onfailure) \(@Nullable [SdkStatus](../sdkstatus/) sdkStatus\) |
-
-
-
 ### `onSuccess()`
 
 > ```java
@@ -26,10 +19,8 @@ This interface is used with [`startTrip(Map<String, String>, TransportMode, Star
 > ```
 >
 > Called when a trip start fails. Check the [`SdkStatus`](../sdkstatus/) object to find out why.
->
-> | Parameters |  |
-> | :--- | :--- |
-> | sdkStatus | An [`SdkStatus`](../sdkstatus/) object containing the current SDK status. |
 
-
+| Parameters |                                                                           |
+| ---------- | ------------------------------------------------------------------------- |
+| sdkStatus  | An [`SdkStatus`](../sdkstatus/) object containing the current SDK status. |
 

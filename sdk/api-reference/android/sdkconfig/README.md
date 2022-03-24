@@ -4,20 +4,6 @@ The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secr
 
 ## SdkConfig API
 
-|  |  |
-| :--- | :--- |
-| String | [getAppId](./#getappid) \(\) |
-| String | [getBaseURL](./#getbaseurl) \(\) |
-| [MetaUserLinker](../metauserlinker.md)  | [getMetaUserLinker](./#getmetauserlinker) \(\) |
-| [MetaUserLinkerAsync](../metauserlinkerasync.md) | [getMetaUserLinkerAsync](./#getmetauserlinkerasync) \(\) |
-| [Notification](https://developer.android.com/reference/android/app/Notification)  | [getNotification](./#getnotification) \(\) |
-| int  | [getNotificationId](./#getnotificationid) \(\) |
-| [OnSdkStatusUpdateHandler](../onsdkstatusupdatehandler.md)  | [getOnSdkStatusUpdateHandler](./#getonsdkstatusupdatehandler) \(\) |
-| String  | [getSecret](./#getsecret) \(\) |
-| boolean  | [isTriggeredTripsEnabled](./#istriggeredtripsenabled) \(\) |
-
-
-
 ### `getAppId()`
 
 > ```java
@@ -91,4 +77,3 @@ The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secr
 > Returns whether triggered trips is enabled or not.
 >
 > Learn more about triggered trip [here](../../../appendix/controlled-detections/controlled-trips-only.md).
-

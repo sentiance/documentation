@@ -4,14 +4,6 @@ Holds more information about a stationary location.
 
 ## PoiLocation API
 
-|  |  |
-| :--- | :--- |
-| List&lt;[PoiPlace](poiplace.md)&gt; | [getPlaceCandidates](poilocation.md#getplacecandidates) \(\) |
-| PoiPlace | [getPoiPlace](poilocation.md#getpoiplace) \(\) |
-| String | [getSignificance](poilocation.md#getsignificance) \(\) |
-
-
-
 ### `getPlaceCandidates()`
 
 > ```java
@@ -35,4 +27,3 @@ Holds more information about a stationary location.
 > ```
 >
 > Returns a string representation of what this location means for the user, or the frequency it's being visited.
-

@@ -1,15 +1,14 @@
 # TripProfileConfig
 
+{% hint style="warning" %}
+**Deprecated**
+
+This class was deprecated in v4.21.0, as part of the Trip Profiling feature deprecation.
+{% endhint %}
+
 This class allows you to control how the SDK should profile trips, i.e. on-device or via the Sentiance platform. It uses the builder pattern to provide additional options related to profiling trips on-device.
 
 ## TripProfileConfig API
-
-|  |  |
-| :--- | :--- |
-| Double | [getSpeedLimit](./#getspeedlimit) \(\) |
-| boolean | [isFullProfilingEnabled](./#isfullprofilingenabled) \(\) |
-
-
 
 ### `getSpeedLimit()`
 
@@ -26,4 +25,3 @@ This class allows you to control how the SDK should profile trips, i.e. on-devic
 > ```
 >
 > Returns true if the app set the profiling mode to true, otherwise returns false.
-

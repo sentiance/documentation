@@ -4,13 +4,6 @@ This interface is used with [`reset(ResetCallback)`](../sentiance.md#reset).
 
 ## ResetCallback API
 
-|  |  |
-| :--- | :--- |
-| void | [onResetFailure](./#onresetfailure) \([ResetFailureReason](resetfailurereason.md) reason\) |
-| void | [onResetSuccess](./#onresetsuccess) \(\) |
-
-
-
 ### `onResetFailure()`
 
 > ```java
@@ -18,10 +11,10 @@ This interface is used with [`reset(ResetCallback)`](../sentiance.md#reset).
 > ```
 >
 > Called when the SDK reset fails.
->
-> | Parameters |  |
-> | :--- | :--- |
-> | reason | A [`ResetFailureReason`](resetfailurereason.md) enum indicating the failure reason. |
+
+| Parameters |                                                                                     |
+| ---------- | ----------------------------------------------------------------------------------- |
+| reason     | A [`ResetFailureReason`](resetfailurereason.md) enum indicating the failure reason. |
 
 ### `onResetSuccess()`
 
@@ -30,4 +23,3 @@ This interface is used with [`reset(ResetCallback)`](../sentiance.md#reset).
 > ```
 >
 > Called when the SDK reset completes.
-

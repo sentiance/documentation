@@ -19,47 +19,6 @@ With the exception of the following 4 methods, all other methods in this class w
 
 ## Sentiance API
 
-|                                 |                                                                                                                                                                                                                      |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| void                            | [addUserMetadataField](sentiance.md#addusermetadatafield) (String label, String value)                                                                                                                               |
-| void                            | [addUserMetadataFields](sentiance.md#addusermetadatafields) (Map\<String, String> metadata)                                                                                                                          |
-| boolean                         | [addTripMetadata](sentiance.md#addtripmetadata) (Map\<String, String> metadata)                                                                                                                                      |
-| void                            | [disableBatteryOptimization](sentiance.md#disablebatteryoptimization) ()                                                                                                                                             |
-| long                            | [getDiskQuotaLimit](sentiance.md#getdiskquotalimit) ()                                                                                                                                                               |
-| long                            | [getDiskQuotaUsage](sentiance.md#getdiskquotausage) ()                                                                                                                                                               |
-| [InitState](initstate.md)       | [getInitState](sentiance.md#getinitstate) ()                                                                                                                                                                         |
-| [Sentiance](sentiance.md)       | [getInstance](sentiance.md#getinstance) ([Context](https://developer.android.com/reference/android/content/Context) context)                                                                                         |
-| long                            | [getMobileQuotaLimit](sentiance.md#getmobilequotalimit) ()                                                                                                                                                           |
-| long                            | [getMobileQuotaUsage](sentiance.md#getmobilequotausage) ()                                                                                                                                                           |
-| [SdkStatus](sdkstatus/)         | [getSdkStatus](sentiance.md#getsdkstatus) ()                                                                                                                                                                         |
-| void                            | [getUserAccessToken](sentiance.md#getuseraccesstoken) ([TokenResultCallback](tokenresultcallback.md) callback)                                                                                                       |
-| [UserActivity](useractivity.md) | [getUserActivity](sentiance.md#getuseractivity) ()                                                                                                                                                                   |
-| String                          | [getUserId](sentiance.md#getuserid) ()                                                                                                                                                                               |
-| String                          | [getVersion](sentiance.md#getversion) ()                                                                                                                                                                             |
-| long                            | [getWiFiQuotaLimit](sentiance.md#getwifiquotalimit) ()                                                                                                                                                               |
-| long                            | [getWiFiQuotaUsage](sentiance.md#getwifiquotausage) ()                                                                                                                                                               |
-| void                            | [init](sentiance.md#init) ([SdkConfig](sdkconfig/) sdkConfig, [OnInitCallback](oninitcallback/) initCallback)                                                                                                        |
-| void                            | [invokeDummyCrash](sentiance.md#invokedummycrash) ()                                                                                                                                                                 |
-| boolean                         | [isCrashDetectionSupported](sentiance.md#iscrashdetectionsupported) ([TripType](trip/triptype.md) tripType)                                                                                                          |
-| boolean                         | [isTripOngoing](sentiance.md#istripongoing) ([TripType](trip/triptype.md) tripType)                                                                                                                                  |
-| void                            | [removeUserMetadataField](sentiance.md#removeusermetadatafield) (String label)                                                                                                                                       |
-| void                            | [reset](sentiance.md#reset) ([ResetCallback](resetcallback/) callback)                                                                                                                                               |
-| void                            | [setCrashCallback](sentiance.md#setcrashcallback) (@Nullable [CrashCallback](crashdetection/crashcallback.md) callback)                                                                                              |
-| void                            | [setTripProfileListener](sentiance.md#settripprofilelistener) ([TripProfileListener](tripprofilelistener.md) tripProfileListener)                                                                                    |
-| void                            | [setTripTimeoutListener](sentiance.md#settriptimeoutlistener) (@Nullable [TripTimeoutListener](trip/triptimeoutlistener.md) listener)                                                                                |
-| void                            | [setUserActivityListener](sentiance.md#setuseractivitylistener) (@Nullable [UserActivityListener](useractivitylistener.md) listener)                                                                                 |
-| void                            | [setVehicleCrashListener](sentiance.md#setvehiclecrashlistener)(@Nullable [VehicleCrashListener](crashdetection/vehiclecrashlistener.md) listener)                                                                   |
-| void                            | [start](sentiance.md#start) ([OnStartFinishedHandler](onstartfinishedhandler.md) handler)                                                                                                                            |
-| void                            | [start](sentiance.md#start-1) ([Date](https://developer.android.com/reference/java/util/Date) stopDate, [OnStartFinishedHandler](onstartfinishedhandler.md) handler)                                                 |
-| void                            | [startTrip](sentiance.md#starttrip) (@Nullable Map\<String, String> metadata, @Nullable [TransportMode](trip/transportmode.md) transportModeHint, @Nullable [StartTripCallback](trip/starttripcallback.md) callback) |
-| void                            | [stop](sentiance.md#stop) ()                                                                                                                                                                                         |
-| void                            | [stopTrip](sentiance.md#stoptrip) (@Nullable [StopTripCallback](trip/stoptripcallback.md) callback)                                                                                                                  |
-| void                            | [submitDetections](sentiance.md#submitdetections) (@Nullable [SubmitDetectionsCallback](submitdetectionscallback.md) callback)                                                                                       |
-| void                            | [updateSdkNotification](sentiance.md#updatesdknotification) ([Notification](https://developer.android.com/reference/android/app/Notification) notification)                                                          |
-| void                            | [updateTripProfileConfig](sentiance.md#updatetripprofileconfig) ([TripProfileConfig](tripprofile-1/) tripProfileConfig)                                                                                              |
-
-
-
 ### `addUserMetadataField()`
 
 > ```java
@@ -333,6 +292,12 @@ This method is deprecated. Use [`setVehicleCrashListener(VehicleCrashListener)`]
 | callback   | A [`CrashCallback`](crashdetection/crashcallback.md) object to receive crash time and location. |
 
 ### `setTripProfileListener()`
+
+{% hint style="warning" %}
+**Deprecated**
+
+This method was deprecated in v4.21.0, as part of the Trip Profiling feature deprecation.
+{% endhint %}
 
 > ```java
 > void setTripProfileListener(@Nullable TripProfileListener tripProfileListener)

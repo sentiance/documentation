@@ -2,10 +2,8 @@
 
 Represents the location mode settings on the device.
 
-| **Attributes** |
-| :--- |
-| **OK** |
-| **DISABLED** |
+| **OK**              |
+| ------------------- |
+| **DISABLED**        |
 | **BATTERY\_SAVING** |
-| **DEVICE\_ONLY** |
-
+| **DEVICE\_ONLY**    |

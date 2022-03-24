@@ -4,16 +4,6 @@ A place selected from one of our data sources.
 
 ## PoiPlace API
 
-|  |  |
-| :--- | :--- |
-| List&lt;String&gt; | [getCategoryHierarchy](poiplace.md#getcategoryhierarchy) \(\) |
-| Double | [getLatitude](poiplace.md#getlatitude) \(\) |
-| Double | [getLongitude](poiplace.md#getlongitude) \(\) |
-| String | [getName](poiplace.md#getname) \(\) |
-| Double | [getProbability](poiplace.md#getprobability) \(\) |
-
-
-
 ### `getCategoryHierarchy()`
 
 > ```java
@@ -22,7 +12,7 @@ A place selected from one of our data sources.
 >
 > Returns a list of venue categories in hierarchical order, or `null` if not available.
 >
-> The first item represents the broadest category, with each subsequent item representing a more specific one. For example: \["shop", "food", "grocery", "supermarket"\].
+> The first item represents the broadest category, with each subsequent item representing a more specific one. For example: \["shop", "food", "grocery", "supermarket"].
 
 ### `getLatitude()`
 
@@ -55,4 +45,3 @@ A place selected from one of our data sources.
 > ```
 >
 > Returns the probability of the place's candidacy, or `null` if not available.
-

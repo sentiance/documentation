@@ -4,12 +4,6 @@ This interface is used with [`setTripTimeoutListener(TripTimeoutListener)`](../s
 
 ## TripTimeoutListener API
 
-|  |  |
-| :--- | :--- |
-| void | [onTripTimeout](triptimeoutlistener.md#ontriptimeout) \(\) |
-
-
-
 ### `onTripTimeout()`
 
 > ```java
@@ -19,4 +13,3 @@ This interface is used with [`setTripTimeoutListener(TripTimeoutListener)`](../s
 > Called when a trip has exceeded the maximum duration.
 >
 > This is only used when [triggered trips](../../../appendix/controlled-detections/controlled-trips-only.md) is enabled in the [`SdkConfig`](../sdkconfig/).
-

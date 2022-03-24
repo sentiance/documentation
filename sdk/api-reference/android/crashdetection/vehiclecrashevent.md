@@ -4,17 +4,6 @@ Represents a vehicle crash event detected by the Sentiance SDK.
 
 ## VehicleCrashEvent API
 
-|  |  |
-| :--- | :--- |
-| Integer | [getConfidence](vehiclecrashevent.md#getconfidence) \(\) |
-| Float | [getDeltaV](vehiclecrashevent.md#getdeltav) \(\) |
-| [Location](https://developer.android.com/reference/android/location/Location) | [getLocation](vehiclecrashevent.md#getlocation) \(\) |
-| Float | [getMagnitude](vehiclecrashevent.md#getmagnitude) \(\) |
-| Float | [getSpeedAtImpact](vehiclecrashevent.md#getspeedatimpact) \(\) |
-| long | [getTime](vehiclecrashevent.md#gettime) \(\) |
-
-
-
 ### `getConfidence()`
 
 > ```java
@@ -62,6 +51,4 @@ Represents a vehicle crash event detected by the Sentiance SDK.
 > ```
 >
 > Returns the UTC time of the crash event in milliseconds.
-
-
 

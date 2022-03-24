@@ -4,13 +4,6 @@ This interface is used with [`MetaUserLinkerAsync`](metauserlinkerasync.md#link)
 
 ## MetaUserLinkerCallback API
 
-|  |  |
-| :--- | :--- |
-| void | [onSuccess](metauserlinkercallback.md#onsuccess) \(\) |
-| void | [onFailure](metauserlinkercallback.md#onfailure) \(\) |
-
-
-
 ### `onSuccess()`
 
 > ```java
@@ -26,4 +19,3 @@ This interface is used with [`MetaUserLinkerAsync`](metauserlinkerasync.md#link)
 > ```
 >
 > Call this method after linking fails.
-

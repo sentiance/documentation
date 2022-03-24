@@ -1,15 +1,14 @@
 # HardEvent
 
+{% hint style="warning" %}
+**Deprecated**
+
+This class was deprecated in v4.21.0, as part of the Trip Profiling feature deprecation.
+{% endhint %}
+
 A HardEvent is any unusual and/or rigorous force that is applied to the device and detected by the SDK.
 
 ## HardEvent API
-
-|  |  |
-| :--- | :--- |
-| Double | [getMagnitude](hardevent.md#getmagnitude) \(\) |
-| long | [getTimestamp](hardevent.md#gettimestamp) \(\) |
-
-
 
 ### `getMagnitude()`
 
@@ -26,4 +25,3 @@ A HardEvent is any unusual and/or rigorous force that is applied to the device a
 > ```
 >
 > Returns the UTC time of this hard event, in milliseconds since January 1, 1970.
-

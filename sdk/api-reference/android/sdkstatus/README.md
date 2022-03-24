@@ -7,29 +7,7 @@ This class exposes the status of the Sentiance SDK. You can get an instance of t
 
 A sample [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) implementation can be found on our [Github](https://github.com/sentiance/sdk-starter-android/blob/master/app/src/main/java/com/sentiance/sdkstarter/SdkStatusUpdateHandler.java).&#x20;
 
-|                                        |                                                                         |
-| -------------------------------------- | ----------------------------------------------------------------------- |
-| [StartStatus](startstatus.md)          | [startStatus](startstatus.md)                                           |
-| boolean                                | [canDetect](./#candetect)                                               |
-| boolean                                | [isRemoteEnabled](./#isremoteenabled)                                   |
-| boolean                                | [isLocationPermGranted](./#islocationpermgranted)                       |
-| boolean                                | [isPreciseLocationPermGranted](./#islocationpermgranted-1)              |
-| boolean                                | [isActivityRecognitionPermGranted](./#isactivityrecognitionpermgranted) |
-| [LocationSetting](locationsetting.md)  | [locationSetting](./#locationsetting)                                   |
-| boolean                                | [isAirplaneModeEnabled](./#isairplanemodeenabled)                       |
-| boolean                                | [isLocationAvailable](./#islocationavailable)                           |
-| boolean                                | [isAccelPresent](./#isaccelpresent)                                     |
-| boolean                                | [isGyroPresent](./#isgyropresent)                                       |
-| boolean                                | [isGpsPresent](./#isgpspresent)                                         |
-| boolean                                | [isGooglePlayServicesMissing](./#isgoogleplayservicesmissing)           |
-| boolean                                | [isBatteryOptimizationEnabled](./#isbatteryoptimizationenabled)         |
-| boolean                                | [isBatterySavingEnabled](./#isbatterysavingenabled)                     |
-| boolean                                | [isBackgroundProcessingRestricted](./#isbackgroundprocessingrestricted) |
-| [QuotaStatus](quota-status.md)         | [wifiQuotaStatus](./#wifiquotastatus)                                   |
-| [QuotaStatus](quota-status.md)         | [mobileQuotaStatus](./#mobilequotastatus)                               |
-| [QuotaStatus](quota-status.md)         | [diskQuotaStatus](./#diskquotastatus)                                   |
-
-
+## SdkStatus API
 
 ### `startStatus`
 
