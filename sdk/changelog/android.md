@@ -1,5 +1,11 @@
 # Android
 
+## \[4.21.1] - 25 Mar 2022
+
+#### Fixed
+
+* A minor bug in the cash detector related to processing negative longitude and latitude coordinates.
+
 ## \[4.21.0] - 3 Feb 2022
 
 #### Added
