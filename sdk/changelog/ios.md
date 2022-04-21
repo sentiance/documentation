@@ -9,7 +9,7 @@ Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK
 {% hint style="danger" %}
 &#x20;**Sentiance iOS SDK does not support arm64 simulator**
 
-Due to the latest changes on Xcode 12.3, the Sentiance iOS SDK is not able to provide support for arm64 simulator.&#x20;
+Due to limitations in our TensorFlow Lite dependency, the Sentiance iOS SDK is not able to provide support for arm64 simulator.&#x20;
 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
