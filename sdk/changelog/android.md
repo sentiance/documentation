@@ -1,5 +1,11 @@
 # Android
 
+## \[4.21.3] - 27 Apr 2022
+
+#### Changed
+
+* Improved the vehicle crash detection algorithm.
+
 ## \[4.21.2] - 25 Mar 2022
 
 #### Fixed
