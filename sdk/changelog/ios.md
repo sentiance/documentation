@@ -14,6 +14,17 @@ Due to a limitation in our TensorFlow Lite dependency, the Sentiance iOS SDK is 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
 
+## \[5.13.0] - 5 May 2022
+
+#### Added
+
+* Step count tracking (disabled by default).
+* Support scheduling background tasks.
+
+**Changed**
+
+* Improved the vehicle crash detection algorithm.
+
 ## \[5.12.1] - 3 Feb 2022
 
 #### Changed
