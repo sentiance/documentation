@@ -132,6 +132,7 @@
       * [SENTTripProcessingHardEvent](sdk/api-reference/ios/tripprofile-1/hardevent-1.md)
       * [SENTTripProcessingVehicleMode](sdk/api-reference/ios/tripprofile-1/vehiclemode-1.md)
     * [SENTVehicleCrashEvent](sdk/api-reference/ios/sentvehiclecrashevent.md)
+  * [React Native](sdk/api-reference/react-native.md)
 * [Battery Optimization](sdk/battery-optimization.md)
 * [How To](sdk/howto/README.md)
   * [Check the Location Permissions](sdk/howto/get-notified-about-location-permissions-changes-or-get-current-location-permission-status.md)
