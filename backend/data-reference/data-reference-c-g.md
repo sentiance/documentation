@@ -123,8 +123,8 @@ A user that can authenticate using either password or token strategies, has an e
 | segments | [ISegment](data-reference-h-l.md#isegment) | An unordered list of segments that are detected for this user. | True |
 | location_clusters | [LocationCluster](data-reference-h-l.md#locationcluster) | Locations this user has been stationary at and the features we have learned about those locations (significance, point of interest, ...) | True |
 | location | [Waypoint](data-reference-u-z.md#waypoint) | The last known location we have for this user. | True |
-| health | [UserHealth](data-reference-u-z.md#userhealth) | The historical health attributes. | True |
-| attributes | [IUserAttribute](data-reference-h-l.md#iuserattribute) |  | True |
+| health | [UserHealth](data-reference-u-z.md#userhealth) | The historical health attributes.<br><br><code>**Deprecation notice**</code><br>health is deprecated.<br>No longer supported | True |
+| attributes | [IUserAttribute](data-reference-h-l.md#iuserattribute) | <br><code>**Deprecation notice**</code><br>attributes is deprecated.<br>No longer supported. | True |
 | predictions | [IPrediction](data-reference-h-l.md#iprediction) | Event/Moment predictions for this user<br><br><code>**Deprecation notice**</code><br>predictions is deprecated.<br>Please use `prediction_tree`. | True |
 | prediction_tree | [PredictionTree](data-reference-m-p.md#predictiontree) | Multiple possible predictions of events that are about to take place next. They are ordered by the highest probability of each sequence of events taking place. | True |
 | feedback | [IFeedback](data-reference-h-l.md#ifeedback) | Feedback on this user<br><br><code>**Deprecation notice**</code><br>feedback is deprecated.<br>Replaced by feedback_history | True |
