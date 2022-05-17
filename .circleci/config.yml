@@ -1,0 +1,45 @@
+version: 2.1
+
+orbs:
+  aws-ecr: circleci/aws-ecr@6.15.3
+  sentiance: sentiance/sentiance@2
+
+commands:
+    generate_github_pr_for_docs:
+      parameters:
+        checkout:
+          default: true
+          description: Boolean value used for whether or not to checkout bitbucket repo as a first step. Default is true.
+          type: boolean
+      steps:
+        - add_ssh_keys
+        - when:
+            condition: <<parameters.checkout>>
+            steps:
+            - checkout
+        - run:
+            name: Docs PR Generating
+            command: |
+              . ./.sentiance/doc-pr-gen.sh
+
+jobs:
+  generate_auto_pr_docs:
+    environment:
+      DOCKER_BUILDKIT: '1'
+    machine:
+      image: ubuntu-2004:202201-02
+    working_directory: ~/sentiance.documentation
+    steps:
+      - generate_github_pr_for_docs:
+          checkout: true
+
+workflows:
+  deploy-to-galactica:
+    jobs:
+      - generate_auto_pr_docs:
+          context: default
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only: /feature\/.*/
