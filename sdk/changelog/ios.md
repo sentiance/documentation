@@ -14,6 +14,17 @@ Due to a limitation in our TensorFlow Lite dependency, the Sentiance iOS SDK is 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
 
+## \[5.14.0] - 30 May 2022
+
+{% hint style="info" %}
+This release updates the SDK's TensorFlow Lite dependency version to 2.7.0. If your app depends on a different version of TensorFlow Lite, make sure to test it for compatibility before updating.
+{% endhint %}
+
+#### Changed
+
+* Updated the TensorFlow Lite dependency to v2.7.0.
+* Updated the vehicle crash detection ML model for TensorFlow Lite v2.7.0 compatibility.
+
 ## \[5.13.0] - 5 May 2022
 
 #### Added

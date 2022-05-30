@@ -1,5 +1,16 @@
 # Android
 
+## \[4.22.0] - 30 May 2022
+
+{% hint style="info" %}
+This release updates the SDK's TensorFlow Lite dependency version to 2.7.0. If your app depends on a different version of TensorFlow Lite, make sure to test it for compatibility before updating.
+{% endhint %}
+
+#### Changed
+
+* Updated the TensorFlow Lite dependency to v2.7.0.
+* Updated the vehicle crash detection ML model for TensorFlow Lite v2.7.0 compatibility.
+
 ## \[4.21.3] - 27 Apr 2022
 
 #### Changed
