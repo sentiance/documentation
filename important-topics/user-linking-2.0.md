@@ -208,5 +208,5 @@ Making this call will require the use of a [valid API Key](https://docs.sentianc
 
 ### **All of this comes together in the following diagram.**&#x20;
 
-![](https://lh3.googleusercontent.com/BMDZhkT0Tb5WAmeOAB1uhQOdztz3CryVFcXtDy\_aPyEZd7FPy4ZKljS6DPVGNumzZULaa1xVFoPkhAAWYfFnHJ\_9\_RiOFY9jvY5pIWacT15QquuEXWZqhlHYcHL1AgQVgohrV\_ua)
+![](../.gitbook/assets/user-linkling.png)
 

@@ -52,7 +52,7 @@ If you don’t have an AWS Account, please create one. You need a mobile phone n
 
 **Offloads will be generated in your client-specific root folder (e.g. s3://sentiance-u1-offloads/client-name).** The name of the root folder will be provided by Sentiance. You might get different root folders for different appIds (e.g. development, staging, production). Contact the team to check your configuration.&#x20;
 
-Once Sentiance has set the permissions, [create an IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_users\_create.html) that can access the resources. You need the client-specific root folder to configure the access rules, see placeholder {{offload\_client\_root\_directory}} in the example below. An example of IAM user permissions:
+Once Sentiance has set the permissions, [create an IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_users\_create.html) that can access the resources. You need the client-specific root folder to configure the access rules, see placeholder \{{offload\_client\_root\_directory\}} in the example below. An example of IAM user permissions:
 
 ```javascript
 {
@@ -107,7 +107,7 @@ Once Sentiance has set the permissions, [create an IAM user](https://docs.aws.am
 
 ```
 
-If you configured the user to have AWS Management Console access, then you should be able to login with this user and see the offloads in our bucket using the AWS Console. Either way, you can now generate [access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_credentials\_access-keys.html) for the user to get programmatic access to the bucket. You can use e.g. [CyberDuck](https://cyberduck.io) or [Forklift](https://binarynights.com) to test the keys.
+If you configured the user to have AWS Management Console access, then you should be able to login with this user and see the offloads in our bucket using the AWS Console. Either way, you can now generate [access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_credentials\_access-keys.html) for the user to get programmatic access to the bucket. You can use e.g. [CyberDuck](https://cyberduck.io/) or [Forklift](https://binarynights.com/) to test the keys.
 
 #### **Recommendations**
 
@@ -118,7 +118,7 @@ A couple of recommendations regarding AWS access keys:
   * Do not submit them to a version control system
   * Do not store them as plain text
 * Rotate the keys regularly. By rotating the keys, you minimize the impact if a key gets compromised.&#x20;
-  * If possible automate the rotation process (e.g. by using secrets-as-a-service, see [KMS](https://aws.amazon.com/kms/), [Vault](https://www.vaultproject.io)...)
+  * If possible automate the rotation process (e.g. by using secrets-as-a-service, see [KMS](https://aws.amazon.com/kms/), [Vault](https://www.vaultproject.io/)...)
   * Disable keys if you don’t need them anymore
 * Limit the permissions of the IAM user as much as possible. The less a user is allowed to do, the less can happen when keys get compromised.&#x20;
 
@@ -172,9 +172,9 @@ Every csv file in the lifestyle offloads uses a comma ‘,’ as a field separat
 
 The complete data model for every file is described in the spreadsheet named ‘Sentiance - Offloads - Data Model - **XXXX**.xlsx’ accompanying this document.&#x20;
 
-{% file src="../.gitbook/assets/sentiance-offloads-data-model-0.1.2-201801122.xlsx" %}
+{% file src="../.gitbook/assets/Sentiance - Offloads - Data Model - 0.1.2 - 201801122.xlsx" %}
 
-{% file src="../.gitbook/assets/sentiance-anonymized-offload-samples-20190114.zip" %}
+{% file src="../.gitbook/assets/Sentiance - Anonymized offload samples - 20190114.zip" %}
 
 #### **Stationaries**&#x20;
 

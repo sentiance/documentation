@@ -4,7 +4,7 @@ If you are still targeting API level 28 or lower, read the following information
 
 ## Location Permission
 
-![](../../../.gitbook/assets/android10\_location.png)
+![](../../../.gitbook/assets/Android10\_location.png)
 
 ### Summary
 
