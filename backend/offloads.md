@@ -221,6 +221,17 @@ We're always using the processing time of the transport to include it in the off
 
 
 We guarantee that everything processed the previous day will be in the offload. There might be some transports of the current day already included in the offload of the previous day, those will not be repeated in the next offload.\
+
+
+A zipped archive containing a sample for each type of driving offload file is available below. The four driving offloads files found in the archive are:
+
+*`driving_events_realtime.json`
+*`mapped_waypoints_realtime.json`
+*`scores_realtime.csv`
+*`transports_realtime.csv`
+
+{% file src="../.gitbook/assets/Sentiance - Anonymized driving offload samples - 20220628.zip" %}
+
 ****
 
 ### **Mapping // User linking offloads**
