@@ -225,10 +225,10 @@ We guarantee that everything processed the previous day will be in the offload. 
 
 A zipped archive containing a sample of each type of driving offloads file is available below. The four driving offloads files found in the archive are:
 
-*`driving_events_realtime.json`
-*`mapped_waypoints_realtime.json`
-*`scores_realtime.csv`
-*`transports_realtime.csv`
+* `driving_events_realtime.json`
+* `mapped_waypoints_realtime.json`
+* `scores_realtime.csv`
+* `transports_realtime.csv`
 
 {% file src="../.gitbook/assets/Sentiance - Anonymized driving offload samples - 20220628.zip" %}
 
