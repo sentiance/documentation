@@ -6,10 +6,10 @@
 
 #### Download Sentiance iOS SDK:
 
-| [Sentiance iOS SDK 5.14.1 Framework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.14.1.framework.zip) |
+| [Sentiance iOS SDK 5.14.0 Framework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.14.0.framework.zip) |
 | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| [Sentiance iOS SDK 5.14.1 XCFramework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.14.1.xcframework.zip) |
+| [Sentiance iOS SDK 5.14.0 XCFramework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.14.0.xcframework.zip) |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Step 2

@@ -81,7 +81,7 @@ Callback to receive current status of SDK. Returns [SENTSDKStatus](sentsdk/sents
 
 ### registerBackgroundTaskIdentifiers <a href="#registerbackgroundtaskidentifiers" id="registerbackgroundtaskidentifiers"></a>
 
-[MetaUserLinker](../android/metauserlinker.md) linking handler your own user to a Sentiance user.
+Set to **YES** to allow the SDK to register its own background task identifiers during initialization. By default, this is set to **NO**. You should set it to **YES** only when initializing the SDK within your app delegate’s `application:didFinishLaunchingWithOptions:launchOptions:` method, as registering tasks outside of this method can cause iOS to terminate your app.
 
 ```objectivec
 @property (nonatomic, assign) BOOL registerBackgroundTaskIdentifiers;

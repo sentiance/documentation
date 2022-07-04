@@ -14,20 +14,6 @@ Due to a limitation in our TensorFlow Lite dependency, the Sentiance iOS SDK is 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
 
-## \[5.14.1] - 4 July 2022
-
-{% hint style="info" %}
-This release updates the SDK's TensorFlow Lite dependency version to 2.7.0. If your app depends on a different version of TensorFlow Lite, make sure to test it for compatibility before updating.
-{% endhint %}
-
-#### Added
-
-* API to control background task identifiers registration. [Details](../api-reference/ios/sentconfig-1.md#registerbackgroundtaskidentifiers)
-
-#### Changed
-
-* Improved the vehicle crash detection algorithm.
-
 ## \[5.14.0] - 30 May 2022
 
 {% hint style="info" %}
