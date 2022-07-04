@@ -14,6 +14,20 @@ Due to a limitation in our TensorFlow Lite dependency, the Sentiance iOS SDK is 
 We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
 {% endhint %}
 
+## \[5.14.1] - 4 July 2022
+
+#### Added
+
+* API to control background task identifier registration ([details](../api-reference/ios/sentconfig-1.md#registerbackgroundtaskidentifiers)). This is currently relevant only when the SDK's step-counter feature is being utilized.
+
+#### Changed
+
+* Improved the vehicle crash detection algorithm.
+
+#### Fixed
+
+* An issue that was introduced in v5.14.0, where iOS terminates the app when scheduling a background task. This was caused by the SDK registering background task identifiers outside of the app delegate.
+
 ## \[5.14.0] - 30 May 2022
 
 {% hint style="info" %}
