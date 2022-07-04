@@ -79,6 +79,14 @@ Callback to receive current status of SDK. Returns [SENTSDKStatus](sentsdk/sents
 @property (nonatomic, copy) MetaUserLinker link;
 ```
 
+### registerBackgroundTaskIdentifiers <a href="#registerbackgroundtaskidentifiers" id="registerbackgroundtaskidentifiers"></a>
+
+[MetaUserLinker](../android/metauserlinker.md) linking handler your own user to a Sentiance user.
+
+```objectivec
+@property (nonatomic, assign) BOOL registerBackgroundTaskIdentifiers;
+```
+
 ### isHardEventDetectionEnabled
 
 {% hint style="warning" %}
