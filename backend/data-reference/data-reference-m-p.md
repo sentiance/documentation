@@ -100,6 +100,12 @@ Name of the models that were used to detect the crash. Mainly used as internal r
 - **android**
 - **ios**
 
+### OrderingEnum
+**Kind**: ENUM
+
+- **asc**
+- **desc**
+
 ### Paging
 **Kind**: [Object](https://graphql.org/learn/schema/#object-types-and-fields)
 

@@ -315,6 +315,7 @@ Details of the origin and destination locations of a Transport.
 - **HandlingWithoutCallingAnnotation**
 - **HandsfreeCallingAnnotation**
 - **HandheldCallingAnnotation**
+- **CrashAnnotation**
 
 ### TransportBehaviorFeatures
 **Kind**: UNION
