@@ -6,10 +6,10 @@
 
 #### Download Sentiance iOS SDK:
 
-| [Sentiance iOS SDK 5.14.0 Framework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.14.0.framework.zip) |
+| [Sentiance iOS SDK 5.14.1 Framework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.14.1.framework.zip) |
 | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| [Sentiance iOS SDK 5.14.0 XCFramework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.14.0.xcframework.zip) |
+| [Sentiance iOS SDK 5.14.1 XCFramework](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-5.14.1.xcframework.zip) |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Step 2
@@ -38,7 +38,7 @@
 1. Go to the **General** tab of your target settings
 2. Click the **+** button under the **Frameworks, Libraries, and Embedded Content** heading
 3. Click **Add Other** and then **Add Files**
-4. Go to the **Frameworks** folder inside the Sentiance framework, select **TensorFlowLiteC.framework** and click **Open**
+4. Go to the **Frameworks** folder inside the Sentiance framework, select **TensorFlowLiteC.xcframework** and click **Open**
 5. After the item has been added to the list, change the **Embed** option next to the framework to **Do Not Embed**
 
 ## Step 5

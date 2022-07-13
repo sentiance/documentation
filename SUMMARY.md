@@ -55,6 +55,7 @@
     * [App Store Privacy Section](sdk/appendix/ios/app-store-privacy-section.md)
     * [App Store Release](sdk/appendix/ios/app-store-release.md)
     * [iOS 13 permission changes](sdk/appendix/ios/ios-13-permissions.md)
+    * [M1 Simulator Support](sdk/appendix/ios/m1-simulator-support.md)
     * [Swift Support](sdk/appendix/ios/swift-support.md)
   * [Control Sending Data](sdk/appendix/control-sending-data.md)
   * [Controlled Detections](sdk/appendix/controlled-detections/README.md)

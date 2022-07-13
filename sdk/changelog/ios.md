@@ -1,18 +1,29 @@
 # iOS
 
-{% hint style="danger" %}
-**Using Xcode 11 requires Sentiance SDK v5.5.2 and above**
+{% hint style="info" %}
+#### M1 Mac Simulator Support
 
-Using Xcode 11 and targeting iOS SDK 13 breaks user linking on the Sentiance SDK. We have patched this in version **5.5.2** of our SDK. **Please make sure your app is up to date.**
+It's possible to build and run your Sentiance integrated app on an M1 Mac simulator, with the use of our customer TensorFlowLiteC framework. See [this guide](../appendix/ios/m1-simulator-support.md).
 {% endhint %}
 
-{% hint style="danger" %}
-&#x20;**Sentiance iOS SDK does not support arm64 simulator**
+## \[5.15.0] - 13 July 2022
 
-Due to a limitation in our TensorFlow Lite dependency, the Sentiance iOS SDK is not able to provide support for arm64 simulator.&#x20;
+#### Added
 
-We recommend users continue their development using either an iOS device or an x86\_64 simulator while we're working on fixing things as fast as we can.
-{% endhint %}
+* Support for arm64 (M1 Mac) simulators. See [this guide](../appendix/ios/m1-simulator-support.md).
+
+#### Changed
+
+* The TensorFlowLiteC framework bundled in our fat framework and xcframework artifacts have been replaced with a custom TensorFlowLiteC v2.7.0 framework, which includes support for arm64 (device), arm64 (simulator), and x86\_64 (simulator) architectures.
+
+#### Fixed
+
+* Failure to clean up the keychain under certain circumstances, after app reinstallation. This resulted in restoring the previous Sentiance user on the device.
+* Failure to run the vehicle crash detector when triggered-trips mode is enabled on the SDK.
+
+#### Removed
+
+* Support for armv7 (device) and i386 (simulator) architectures.
 
 ## \[5.14.1] - 4 July 2022
 
