@@ -15,6 +15,22 @@ platform :ios, '9.0'
 pod 'SENTSDK'
 ```
 
+<details>
+
+<summary>Building for the arm64 (M1 Mac) simulator</summary>
+
+The Sentiance SDK supports the arm64 simulator architecture. However, it has a dependency on TensorFlow Lite v2.7.0, which does not support it yet. To address this limitation, use our custom TensorFlow Lite v2.7.0 framework:
+
+{% code title="Podfile" %}
+```
+pod 'TensorFlowLiteC', :podspec => 'https://sentiance-u1-sdk-downloads.s3.eu-west-1.amazonaws.com/ios/frameworks/TensorFlowLiteC/2.7.0/TensorFlowLiteC.podspec'
+```
+{% endcode %}
+
+More information on this can be found on [this page](../../../appendix/ios/m1-simulator-support.md).
+
+</details>
+
 Then run the following command from Terminal:
 
 ```
