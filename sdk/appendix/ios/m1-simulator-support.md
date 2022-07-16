@@ -10,7 +10,7 @@ To address this limitation, we have prepared a custom TensorFlowLiteC framework 
 * TFL framework v2.7.0 for x86\_64 iphonesimulator.
 * TFL framework v2.9.1 for arm64 iphonesimulator.
 
-You can find the xcframework in [our repository](https://sentiance-u1-sdk-downloads.s3.eu-west-1.amazonaws.com/ios/frameworks/TensorFlowLiteC/2.7.0/TensorFlowLiteC-2.7.0.tar.gz), along with the [podspec file](https://sentiance-u1-sdk-downloads.s3.eu-west-1.amazonaws.com/ios/frameworks/TensorFlowLiteC/2.7.0/TensorFlowLiteC.podspec). This custom TFL framework is also bundled in our "fat" framework and xcframework artifacts.
+You can find the xcframework in [our repository](https://sentiance-u1-sdk-downloads.s3.eu-west-1.amazonaws.com/ios/frameworks/TensorFlowLiteC/2.7.0/TensorFlowLiteC-2.7.0.tar.gz), along with the [podspec file](https://sentiance-u1-sdk-downloads.s3.eu-west-1.amazonaws.com/ios/frameworks/TensorFlowLiteC/2.7.0/TensorFlowLiteC.podspec). This custom TFL framework is also bundled in our fat framework and xcframework artifacts.
 
 To make use of it with CocoaPods, you can add the following to your Podfile:
 
