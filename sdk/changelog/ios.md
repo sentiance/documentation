@@ -3,7 +3,7 @@
 {% hint style="info" %}
 #### M1 Mac Simulator Support
 
-It's possible to build and run your Sentiance integrated app on an M1 Mac simulator, with the use of our customer TensorFlowLiteC framework. See [this guide](../appendix/ios/m1-simulator-support.md).
+It's possible to build and run your Sentiance integrated app on an M1 Mac simulator, with the use of our custom TensorFlowLiteC framework. See [this guide](../appendix/ios/m1-simulator-support.md).
 {% endhint %}
 
 ## \[5.15.0] - 13 July 2022
