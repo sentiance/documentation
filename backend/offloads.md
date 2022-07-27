@@ -235,7 +235,7 @@ A zipped archive containing a sample of each type of driving offloads file is al
 * `scores_realtime.csv`
 * `transports_realtime.csv`
 
-{% file src="../.gitbook/assets/Sentiance - Anonymized driving offload samples - 20220628.zip" %}
+{% file src="../.gitbook/assets/Sentiance - Anonymized driving offload samples - 20220727.zip" %}
 
 ****
 
