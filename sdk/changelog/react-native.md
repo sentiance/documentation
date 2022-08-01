@@ -1,6 +1,6 @@
 # React Native
 
-## \[6.0.0] - 1 Aug 2022
+## \[6.0.1] - 1 Aug 2022
 
 {% hint style="info" %}
 **Breaking Changes**
