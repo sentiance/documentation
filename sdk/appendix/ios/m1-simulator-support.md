@@ -7,7 +7,7 @@ The SDK framework includes support for the arm64 simulator architecture, which i
 To address this limitation, we have prepared a custom TensorFlowLiteC framework which combines different the architectures, to make it possible to use the same TensorFlowLiteC framework on devices and simulators. The xcframework file is composed of:
 
 * TFL framework v2.7.0 for arm64 iphoneos.
-* TFL framework v2.7.0 for x86\_64 iphonesimulator.
+* TFL framework v2.9.1 for x86\_64 iphonesimulator.
 * TFL framework v2.9.1 for arm64 iphonesimulator.
 
 You can find the xcframework in [our repository](https://sentiance-u1-sdk-downloads.s3.eu-west-1.amazonaws.com/ios/frameworks/TensorFlowLiteC/2.7.0/TensorFlowLiteC-2.7.0.tar.gz), along with the [podspec file](https://sentiance-u1-sdk-downloads.s3.eu-west-1.amazonaws.com/ios/frameworks/TensorFlowLiteC/2.7.0/TensorFlowLiteC.podspec). This custom TFL framework is also bundled in our fat framework and xcframework artifacts.

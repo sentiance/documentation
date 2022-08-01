@@ -1,6 +1,6 @@
 # TokenResultCallback
 
-This interface is used with [`getUserAccessToken(TokenResultCallback)`](sentiance.md#submitdetections).
+This interface is used with [`getUserAccessToken(TokenResultCallback)`](sentiance.md.md#getuseraccesstoken).
 
 ## TokenResultCallback API
 

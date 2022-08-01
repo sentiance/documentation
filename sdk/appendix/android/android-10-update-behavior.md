@@ -4,7 +4,7 @@ If you are still targeting API level 28 or lower, read the following information
 
 ## Location Permission
 
-![](../../../.gitbook/assets/Android10\_location.png)
+![](<../../../.gitbook/assets/android10\_location (1).png>)
 
 ### Summary
 
@@ -19,7 +19,7 @@ So you have two options:
 
 `com.goo...ACTIVITY_RECOGNITION` represents Google Play Services' activity recognition permission, which is already added to your app by the Sentiance SDK.
 
-![](<../../../.gitbook/assets/Android10\_activity (1).png>)
+![](../../../.gitbook/assets/android10\_activity.png)
 
 ### Summary
 

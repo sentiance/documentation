@@ -1,6 +1,6 @@
 # OnInitCallback
 
-This interface is used with [`init(SdkConfig, OnInitCallback)`](../sentiance.md#init).
+This interface is used with [`init(SdkConfig, OnInitCallback)`](broken-reference).
 
 ## OnInitCallback API
 
@@ -23,5 +23,5 @@ This interface is used with [`init(SdkConfig, OnInitCallback)`](../sentiance.md#
 > void onInitSuccess()
 > ```
 >
-> Called when SDK initialization completed successfully. You can now start the SDK detections, and access any of the other methods on the [`Sentiance`](../sentiance.md) class.
+> Called when SDK initialization completed successfully. You can now start the SDK detections, and access any of the other methods on the [`Sentiance`](broken-reference) class.
 

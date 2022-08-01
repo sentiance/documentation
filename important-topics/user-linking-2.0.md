@@ -4,6 +4,12 @@ description: Allow users to switch devices without losing their data.
 
 # User linking
 
+{% hint style="danger" %}
+#### Deprecation
+
+The user linking concept described in this page has been deprecated in favor of a [new User Creation flow](../sdk/appendix/user-creation.md) introduced in v6.0.0 of the Sentiance SDK.
+{% endhint %}
+
 ### What is user linking?
 
 User linking is our way of linking the unique user identifier in your database to a unique user identifier in our database. This is needed to keep track of users when they switch from one device to another or when multiple users use the same device.
@@ -32,7 +38,7 @@ As we mentioned above, user linking requires setting up both in-app calls to you
 
 User linking should automatically be enabled for your app. If you think you are not getting the right response(s) from our database, it is worth double-checking if it is enabled by sending a quick mail to [support@sentiance.com](mailto:%20support@sentiance.com).&#x20;
 
-![](<../.gitbook/assets/Screenshot 2020-05-04 at 18.29.54.png>)
+![](../.gitbook/assets/screenshot-2020-05-04-at-18.29.54.png)
 
 For the server-to-server communication, you will need a way to authenticate the calls you are making. Backend authentication at Sentiance is done using [API Keys](https://docs.sentiance.com/backend/authentication-and-authorization#api-keys). For the user linking process to work, the API Key needs to have at least the ‘user.link’ scope assigned. Make sure you have the API Key set up before you proceed.
 
@@ -48,7 +54,7 @@ After initializing the SDK, the SDK will try to initiate user linking. Subsequen
 
 After your backend has received the SDK install id, it will have to communicate with our backend to inform us which external user id is now linked to this install id. Read more about user linking communication with our backend below.
 
-![](<../.gitbook/assets/Screenshot 2020-05-05 at 14.10.34.png>)
+![](../.gitbook/assets/screenshot-2020-05-05-at-14.10.34.png)
 
 ## **App or server-side integration**
 
@@ -70,9 +76,9 @@ You can find more details on each step below. After you have finished these step
 
 ### **Receive the unique install id from the SDK**
 
-The first step involves receiving the install id from the SDK so you can send it to your backend in the next step. The SDK will pass the install ID to the following method. In this method, you must initiate a link request towards the Sentiance API (via your server), supplying the install ID and the external user ID. On iOS, you need to call either `linkSuccess` or `linkFailed` to capture whether the request was successful. On Android, the `link` method of your [`MetaUserLinker`](../sdk/api-reference/android/metauserlinker.md) object will expect either a `true` or `false` returned from it. Alternatively, if you use [`MetaUserLinkerAsync`](../sdk/api-reference/android/metauserlinkerasync.md), you can initiate linking asynchronously and inform the SDK of the result by calling the [`MetaUserLinkerCallback`](../sdk/api-reference/android/metauserlinkercallback.md) object's `onSuccess` or `onFailure` method. [Read more about these calls here. ](https://docs.sentiance.com/sdk/appendix/user-linking#usage)
+The first step involves receiving the install id from the SDK so you can send it to your backend in the next step. The SDK will pass the install ID to the following method. In this method, you must initiate a link request towards the Sentiance API (via your server), supplying the install ID and the external user ID. On iOS, you need to call either `linkSuccess` or `linkFailed` to capture whether the request was successful. On Android, the `link` method of your [`MetaUserLinker`](../sdk/api-reference/android/userlinker.md) object will expect either a `true` or `false` returned from it. Alternatively, if you use [`MetaUserLinkerAsync`](../sdk/api-reference/android/userlinkerasync.md), you can initiate linking asynchronously and inform the SDK of the result by calling the [`MetaUserLinkerCallback`](../sdk/api-reference/android/userlinkercallback.md) object's `onSuccess` or `onFailure` method. [Read more about these calls here. ](https://docs.sentiance.com/sdk/appendix/user-linking#usage)
 
-![Receive the install id from the SDK in the user MetaUserLinker() method.](<../.gitbook/assets/Screenshot 2020-05-04 at 18.38.38.png>)
+![Receive the install id from the SDK in the user MetaUserLinker() method.](../.gitbook/assets/screenshot-2020-05-04-at-18.38.38.png)
 
 {% hint style="warning" %}
 To know if you need to return either a success or failure (see following), you will need to do the server-side integration first (see following sections). Only if you receive a ‘success’ response from our server, has linking actually been successful and can you call the linking success method. &#x20;
@@ -129,9 +135,9 @@ SdkConfig config = new SdkConfig.Builder(APP_ID, SECRET, notification)
 Sentiance.getInstance(this).init(config, initCallback);
 ```
 
-During initialization, the SDK will call the [`link(String)`](../sdk/api-reference/android/metauserlinker.md#link) method of your [`MetaUserLinker`](../sdk/api-reference/android/metauserlinker.md) object from a background thread, passing to it the SDK install ID. In this method, you must initiate a link request towards the Sentiance API (via your server), supplying the install ID and your app’s User ID.
+During initialization, the SDK will call the [`link(String)`](../sdk/api-reference/android/userlinker.md#link) method of your [`MetaUserLinker`](../sdk/api-reference/android/userlinker.md) object from a background thread, passing to it the SDK install ID. In this method, you must initiate a link request towards the Sentiance API (via your server), supplying the install ID and your app’s User ID.
 
-[`link(String)`](../sdk/api-reference/android/metauserlinker.md#link) must return true only after linking with the Sentiance API succeeds. If linking fails, you must return false. The SDK initialization will then fail with reason `LINK_FAILED`.
+[`link(String)`](../sdk/api-reference/android/userlinker.md#link) must return true only after linking with the Sentiance API succeeds. If linking fails, you must return false. The SDK initialization will then fail with reason `LINK_FAILED`.
 {% endtab %}
 {% endtabs %}
 
@@ -157,7 +163,7 @@ Like the previous step, there are numerous ways of linking the install id to the
 
 It is not required, but preferred to store the Sentiance user id in the same table. This will allow for easier debugging later on.
 
-![Send the install id to your backend (3) and add it to your user table (4).](<../.gitbook/assets/Screenshot 2020-05-04 at 19.15.57.png>)
+![Send the install id to your backend (3) and add it to your user table (4).](../.gitbook/assets/screenshot-2020-05-04-at-19.15.57.png)
 
 ## **Server-to-server integration (API)**
 

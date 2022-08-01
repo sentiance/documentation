@@ -1,33 +1,14 @@
+---
+description: >-
+  The SENTConfig class allows you to specify your Sentiance app ID and secret
+  when initializing the Sentiance SDK.
+---
+
 # SENTConfig
 
-The SENTConfig class allows you to specify your Sentiance app ID and secret when initializing the Sentiance SDK.
-
-### Enable Triggered Trips
-
-Triggered trips enables controlled detections from your app. To run the SDK in triggered trips mode, use the following configuration option:
-
-```objectivec
-[config setIsTriggeredTrip: TRUE];
-```
-
-Learn more about triggered trips [here](../../appendix/controlled-detections/controlled-trips-only.md).
-
-### Meta-User Linking
-
-Sentiance assigns to each user a unique ID. You can link your app's user to the Sentiance user using meta-user linking. The linking step involves server-to-server communication, and is triggered by the SDK via a meta-user linking callback. You can implement this callback method as follows:
-
-```objectivec
-MetaUserLinker metaUserlink = ^(NSString *installId, 
-                                void (^linkSuccess)(void), 
-                                void (^linkFailed)(void)) { }
-
-SENTConfig *config = [[SENTConfig alloc] initWithAppId:APPID
-                                                secret:SECRET
-                                                  link:metaUserlink
-                                         launchOptions:launchOptions];
-```
-
-Learn more about meta-users [here](../../appendix/user-linking.md).
+{% hint style="danger" %}
+This class is part of a deprecated Initialization flow. See [here](https://app.gitbook.com/o/-LTy4edtsWdQgbEsKB-i/s/-LTy4edu-AQHCZBbSxqI/\~/changes/-Mdvb7zVAg9mTiQeb82W/sdk/getting-started/ios-sdk/initialization) for the updated initialization steps.
+{% endhint %}
 
 ## SENTConfig API:
 
@@ -63,9 +44,19 @@ Key value pair passed from \[AppDelegate application:application didFinishLaunch
 @property (nonatomic, strong) NSDictionary *launchOptions;
 ```
 
+### registerBackgroundTaskIdentifiers
+
+Set to YES to allow the SDK to register its own background task identifiers during initialization.
+
+By default, this is set to NO. You should set it to YES only when initializing the SDK within your app delegate’s `application:didFinishLaunchingWithOptions:launchOptions:` method, as registering tasks outside of this method can cause iOS to terminate your app.
+
+```objectivec
+@property (nonatomic, assign) BOOL registerBackgroundTaskIdentifiers;
+```
+
 ### didReceiveSdkStatusUpdate
 
-Callback to receive current status of SDK. Returns [SENTSDKStatus](sentsdk/sentsdkstatus.md)
+Callback to receive current status of SDK. Returns [SENTSDKStatus](sentsdkstatus.md)
 
 ```objectivec
 @property (nonatomic, copy) void (^didReceiveSdkStatusUpdate)(SENTSDKStatus* issue);
@@ -73,13 +64,25 @@ Callback to receive current status of SDK. Returns [SENTSDKStatus](sentsdk/sents
 
 ### link
 
-[MetaUserLinker](../android/metauserlinker.md) linking handler your own user to a Sentiance user.
+[SENTUserLinker](user-creation-and-linking/user-linking/metauserlinker.md) linking handler your own user to a Sentiance user.
 
 ```objectivec
-@property (nonatomic, copy) MetaUserLinker link;
+@property (nonatomic, copy) SENTUserLinker link;
 ```
 
-### registerBackgroundTaskIdentifiers <a href="#registerbackgroundtaskidentifiers" id="registerbackgroundtaskidentifiers"></a>
+### isTriggeredTrip
+
+Configuration check on trip trigger availability
+
+```objectivec
+@property (nonatomic, assign) BOOL isTriggeredTrip;
+```
+
+### isValidConfig
+
+```objectivec
+- (BOOL)isValidConfig;registerBackgroundTaskIdentifiers
+```
 
 Set to **YES** to allow the SDK to register its own background task identifiers during initialization. By default, this is set to **NO**. You should set it to **YES** only when initializing the SDK within your app delegate’s `application:didFinishLaunchingWithOptions:launchOptions:` method, as registering tasks outside of this method can cause iOS to terminate your app.
 
@@ -89,17 +92,32 @@ Set to **YES** to allow the SDK to register its own background task identifiers 
 
 ### isHardEventDetectionEnabled
 
-{% hint style="warning" %}
-**Deprecated**
-
-This property was deprecated in v5.12.0, as part of the Trip Profiling feature deprecation.
-{% endhint %}
-
-A boolean value indicating whether hard event detection should be enabled.
+Check if App ID and Secret are valid
 
 ```objectivec
-@property (nonatomic, assign) BOOL isHardEventDetectionEnabled;
+- (BOOL)isValidConfig
 ```
+
+
+
+### User Linking
+
+Sentiance assigns to each user a unique ID. You can link your app's user to the Sentiance user using meta-user linking. The linking step involves server-to-server communication, and is triggered by the SDK via a meta-user linking callback. You can implement this callback method as follows:
+
+```objectivec
+SENTUserLinker userlinker = ^(NSString *installId, 
+                                void (^linkSuccess)(void), 
+                                void (^linkFailed)(void)) { }
+
+SENTConfig *config = [[SENTConfig alloc] initWithAppId:APPID
+                                                secret:SECRET
+                                                  link:SENTUserLinker
+                                         launchOptions:launchOptions];
+```
+
+Learn more about UserLinking [here](../../appendix/user-linking.md).
+
+
 
 ### initWithAppId: secret: launchOptions:
 
@@ -124,7 +142,7 @@ SDK config intialization method with linking to customer's user id. It creates a
 ```objectivec
 - (id)initWithAppId: (NSString *) appId 
              secret: (NSString *) secret 
-               link: (MetaUserLinker) link 
+               link: (SENTUserLinker) link 
       launchOptions :(NSDictionary *) launchOptions;
 ```
 
@@ -132,13 +150,7 @@ SDK config intialization method with linking to customer's user id. It creates a
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | appId         | Application key which you get from Sentiance account.                                                                                                                                                                                                                                                                                                                             |
 | secret        | Secret key which you get from Sentiance account.                                                                                                                                                                                                                                                                                                                                  |
-| link          | [MetaUsersLinker](../android/metauserlinker.md) type block which returns linkSuccess or linkFailed depended on how linking gone. Use InstallId to link with backend.                                                                                                                                                                                                              |
+| link          | SENT[metauserlinker.md](user-creation-and-linking/user-linking/metauserlinker.md "mention")UsersLinker type block which returns linkSuccess or linkFailed depended on how linking gone. Use InstallId to link with backend.                                                                                                                                                       |
 | launchOptions | A dictionary indicating the reason the app was launched (if any). The contents of this dictionary may be empty in situations where the user launched the app directly. For information about the possible keys in this dictionary and how to handle them, see [Launch Options Keys](https://developer.apple.com/documentation/uikit/uiapplicationlaunchoptionskey?language=objc). |
 
-### isValidConfig
-
-Check if App ID and Secret are valid
-
-```objectivec
-- (BOOL)isValidConfig
-```
+###

@@ -1,6 +1,6 @@
 # TripTimeoutListener
 
-This interface is used with [`setTripTimeoutListener(TripTimeoutListener)`](../sentiance.md#settriptimeoutlistener).
+This interface is used with [`setTripTimeoutListener(TripTimeoutListener)`](broken-reference).
 
 ## TripTimeoutListener API
 

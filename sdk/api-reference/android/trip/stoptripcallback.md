@@ -1,6 +1,6 @@
 # StopTripCallback
 
-This interface is used with [`stopTrip(StopTripCallback)`](../sentiance.md#starttrip).
+This interface is used with [`stopTrip(StopTripCallback)`](../sentiance.md.md#stoptrip-stoptripcallback).
 
 ## StopTripCallback API
 
@@ -20,7 +20,7 @@ This interface is used with [`stopTrip(StopTripCallback)`](../sentiance.md#start
 >
 > Called when a trip stop fails. Check the [`SdkStatus`](../sdkstatus/) object to find out why.
 >
-> This method is also called when [`stopTrip(StopTripCallback)`](../sentiance.md#stoptrip) is called while no external trip exists. To check if there is an ongoing external trip, call [`isTripOngoing()`](../sentiance.md#istripongoing).
+> This method is also called when [`stopTrip(StopTripCallback)`](../sentiance.md.md#stoptrip) is called while no external trip exists. To check if there is an ongoing external trip, call [`isTripOngoing()`](../sentiance.md.md#istripongoing).
 
 | Parameters |                                                                           |
 | ---------- | ------------------------------------------------------------------------- |

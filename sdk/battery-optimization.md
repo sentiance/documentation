@@ -6,7 +6,7 @@ description: >-
 
 # Battery Optimization
 
-[Don't Kill My App](https://dontkillmyapp.com/) \(No affiliation to [Sentiance](https://sentiance.com)\) keeps track of different manufacturers' practices on battery optimization techniques that severely restrict how your app can run in the background and the potential solutions. 
+[Don't Kill My App](https://dontkillmyapp.com/) (no affiliation to Sentiance) keeps track of different manufacturers' practices on battery optimization techniques that severely restrict how your app can run in the background and the potential solutions.&#x20;
 
 Below manufacturers are notoriously known for their strict requirements for background process restrictions, and without **proper user-onboarding, and correct battery-related settings, Sentiance SDK cannot guarantee a consistent output on these devices.**
 
@@ -16,23 +16,21 @@ Below manufacturers are notoriously known for their strict requirements for back
 * [Xiaomi](https://dontkillmyapp.com/xiaomi)
 * [Others](https://dontkillmyapp.com/)
 
-[Programatically prompting battery optimization permission](https://docs.sentiance.com/sdk/appendix/android/android-battery-optimization).
+[Programmatically prompting battery optimization permission](https://docs.sentiance.com/sdk/appendix/android/android-battery-optimization).
 
 Please check them out, and if you have any questions, let us know at [support@sentiance.com](mailto:support@sentiance.com).
 
 {% hint style="success" %}
-Please take advantage of [SDK Status](https://docs.sentiance.com/sdk/getting-started/android-sdk/sdk-status-updates) updates to react to any incorrect configurations. 
+Please take advantage of [SDK Status](https://docs.sentiance.com/sdk/getting-started/android-sdk/sdk-status-updates) updates to react to any incorrect configurations.&#x20;
 {% endhint %}
 
-### Embeddable Projects 
+### Embeddable Projects&#x20;
 
-#### \(These are not maintained by Sentiance\)
+#### (These are not maintained by Sentiance)
 
 {% embed url="https://github.com/DoubleDotLabs/doki" %}
 
 {% embed url="https://github.com/judemanutd/AutoStarter" %}
-
-
 
 
 

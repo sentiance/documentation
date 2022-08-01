@@ -1,6 +1,6 @@
 # ResetCallback
 
-This interface is used with [`reset(ResetCallback)`](../sentiance.md#reset).
+This interface is used with [`reset(ResetCallback)`](../sentiance.md.md#reset-resetcallback).
 
 ## ResetCallback API
 

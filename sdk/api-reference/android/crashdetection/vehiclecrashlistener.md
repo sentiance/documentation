@@ -1,6 +1,6 @@
 # VehicleCrashListener
 
-This interface is used with [`setVehicleCrashListener(VehicleCrashListener)`](../sentiance.md#setvehiclecrashlistener).
+This interface is used with [`setVehicleCrashListener(VehicleCrashListener)`](broken-reference).
 
 ## VehicleCrashListener API
 

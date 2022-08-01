@@ -10,14 +10,14 @@ Here we will add a single field "correlation\_id" to the metadata, with a value 
 
 {% tabs %}
 {% tab title="iOS" %}
-```objectivec
-[[SENTSDK sharedInstance] addUserMetadataField:@"correlation_id" value:@"3a5276ec-b2b2-4636-b893-eb9a9f014938"];
+```swift
+Sentiance.shared.addUserMetadataFields(["correlation_id": "3a5276ec-b2b2-4636-b893-eb9a9f014938"])
 ```
 {% endtab %}
 
 {% tab title="Android" %}
-```java
-sentianceSdk.addUserMetadataField("correlation_id", "3a5276ec-b2b2-4636-b893-eb9a9f014938");
+```kotlin
+sentiance.addUserMetadataField("correlation_id", "3a5276ec-b2b2-4636-b893-eb9a9f014938")
 ```
 {% endtab %}
 {% endtabs %}

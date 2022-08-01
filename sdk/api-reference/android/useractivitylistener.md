@@ -1,6 +1,6 @@
 # UserActivityListener
 
-This interface is used with [`setUserActivityListener(UserActivityListener)`](sentiance.md#setuseractivitylistener).
+This interface is used with [`setUserActivityListener(UserActivityListener)`](broken-reference).
 
 ## UserActivityListener API
 

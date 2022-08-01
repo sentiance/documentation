@@ -4,29 +4,9 @@ description: a.k.a Triggered trips
 
 # Controlled Trips Only
 
-The default SDK detection mode is set to [automatic detections](automatic-detections.md). You can change this behavior and have the SDK record trips only when instructed to do so.
+The default SDK detection mode is set to [automatic detections](automatic-detections.md). This behaviour can be changed by Sentiance to allow recording trips only when you instruct the SDK to do. We call this "controlled trips" or "triggered trips" mode, where automatic SDK detections are disabled.
 
-{% tabs %}
-{% tab title="iOS" %}
-First, enable triggered trips on `SENTConfig`:
-
-```objectivec
-[config setIsTriggeredTrip: TRUE];
-```
-{% endtab %}
-
-{% tab title="Android" %}
-First, enable triggered trips on [`SdkConfig`](../../api-reference/android/sdkconfig/):
-
-```java
-SdkConfig config = new SdkConfig.Builder(APP_ID, SECRET, notification)
-                                .setTriggeredTripsEnabled(true)
-                                .build();
-```
-{% endtab %}
-{% endtabs %}
-
-Having done so, you've disabled automatic detection on the SDK. You can now control when trips are recorded by calling `startTrip` and `stopTrip` as described in [this section](automatic-detections-with-forced-trips.md#starting-a-trip).
+Once your app has been configured to run in this mode, you can now control when trips are recorded by calling `startTrip` and `stopTrip` as described in [this section](automatic-detections-with-forced-trips.md#starting-a-trip).
 
 ## Trip Timeout
 
@@ -39,21 +19,19 @@ To handle trip timeouts, set a listener on the SDK instance:
 ```objectivec
 // Signature
 - (void) setTripTimeOutListener: (void (^)(void)) tripDidTimeOut;
+
 // Usage
-[[SENTSDK sharedInstance] setTripTimeOutListener:tripTimeoutListener];
+Sentiance.shared.setTripTimeoutListener {
+ // on trip timeout
+}
 ```
 {% endtab %}
 
 {% tab title="Android" %}
-```java
-sentianceSdk.setTripTimeoutListener(new TripTimeoutListener() {
-    @Override
-    public void onTripTimeout () {
-    }
-});
+```kotlin
+sentiance.setTripTimeoutListener {   
+ // on trip timeout
+}
 ```
 {% endtab %}
 {% endtabs %}
-
-
-

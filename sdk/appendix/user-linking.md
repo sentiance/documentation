@@ -1,42 +1,50 @@
 # User Linking
 
+{% hint style="warning" %}
+#### Deprecation
+
+The user linking concept described in this page has been deprecated in favor of a [new User Creation flow](user-creation.md) introduced in v6.0.0 of the Sentiance SDK.
+{% endhint %}
+
 User Linking can be used to connect your app’s user to a Sentiance user in a deeper way.
 
-A user in the Sentiance Platform is identified by a unique **userID**. An SDK instance \(or an app install\) on the other hand is identified by its **install-ID**. By default, every new installation gets its own install and user IDs. However, it is possible to link the installation to an existing user.
+A user in the Sentiance Platform is identified by a unique **user ID**. An SDK instance (or an app install) on the other hand is identified by its **install ID**. By default, every new installation gets its own install and user IDs. However, it is possible to link the installation to an existing user.
 
-To do so, we first link your app's user account \(e.g. email, UUID, etc.\) to the newly created Sentiance Platform user. Next time when the user re-installs your app, we'll use your app's user account to check for an existing link. If found, we will link this new installation to the existing user.
+To do so, we first link your app's user account (e.g. email, UUID, etc.) to the newly created Sentiance Platform user. Next time when the user re-installs your app, we'll use your app's user account to check for an existing link. If found, we will link this new installation to the existing user.
 
 The biggest benefit here is the ability to get single continuous timelines for your users across app reinstalls and device migration.
 
 ## Usage
 
-During the first initialization, the SDK will provide your app an **install-ID** associated with this particular instance of the app. In your app, you'll use this ID to link your user's account to a Sentiance user. This can only be done through server-to-server communication. Your app tells your server to contact the Sentiance Platform and request linking of your user account to this install-ID. 
+During the first initialization, the SDK will provide your app an **install ID** associated with this particular instance of the app. In your app, you'll use this ID to link your user's account to a Sentiance user. This can only be done through server-to-server communication. Your app tells your server to contact the Sentiance Platform and request linking of your user account to this install-ID.&#x20;
 
 {% tabs %}
 {% tab title="iOS" %}
-Specify a **MetaUserLinker** in the **SENTConfig**.
+Specify a SENT**UserLinker** in the **SENTConfig**.
 
 {% code title="Swift" %}
 ```swift
-let metaUserLink: MetaUserLinker = { installId, linkSuccess, linkFailed in
+let userLinker: SENTUserLinker = { installId, linkSuccess, linkFailed
     // Use installId to initiate a link request here, and call
     // linkSuccess() after linking succeeds.
 }
-let config = SENTConfig(appId: APPID, 
-                        secret: SECRET, 
-                        link: metaUserLink, 
+
+let config = SENTConfig(appId: APPID,
+                        secret: SECRET,
+                        link: userLinker,
                         launchOptions: launchOptions)
-SENTSDK.sharedInstance().initWith(config, success: {
-    // Init success
-}, failure: { issue in
-    // Init failed with reason <issue>
-})
+                        
+Sentiance().initWith(config) {
+    // Success
+} failure: { issue in
+    // Error Case with reason: issue
+}
 ```
 {% endcode %}
 
 {% code title="Objective-C" %}
 ```objectivec
-MetaUserLinker metaUserlink = ^(NSString *installId, 
+SENTUserLinker userLinker = ^(NSString *installId, 
   void (^linkSuccess)(void), void (^linkFailed)(void)) {
     // Use installId to initiate a link request here, and call
     // linkSuccess() after linking succeeds.
@@ -44,7 +52,7 @@ MetaUserLinker metaUserlink = ^(NSString *installId,
 //SDK configuration
 SENTConfig *config = [[SENTConfig alloc] initWithAppId:APPID
                                          secret:SECRET
-                                         link:metaUserlink
+                                         link:userLinker
                                          launchOptions:launchOptions];
 
 [sdk initWithConfig:config 
@@ -57,17 +65,17 @@ SENTConfig *config = [[SENTConfig alloc] initWithAppId:APPID
 ```
 {% endcode %}
 
-During initialization, the SDK will pass the installID to the `MetaUserLinker`. In this method, you must initiate a link request towards the Sentiance API \(via your server\), supplying the installID and your app’s userID.
+During initialization, the SDK will pass the installID to the `MetaUserLinker`. In this method, you must initiate a link request towards the Sentiance API (via your server), supplying the installID and your app’s userID.
 
 After linking succeed, call `linkSuccess()`. If it fails, you must call `linkFailed()`. The SDK initialization will then fail with reason `LINK_FAILED`. To reattempt linking, you can then initialize the SDK again, which in turn will invoke the `MetaUserLinker` a second time.
 {% endtab %}
 
 {% tab title="Android" %}
-Specify a **MetaUserLinker** in the **SdkConfig**.
+Specify a [`UserLinker`](../api-reference/android/userlinker.md) in the [**`SdkConfig`**](../api-reference/android/sdkconfig/).
 
 {% code title="Java" %}
 ```java
-class CustomMetaUserLinker implements MetaUserLinker {
+class CustomUserLinker implements UserLinker {
     boolean link(String installId) {
         // Use installId to initiate a link request here, and return 
         // true after linking succeeds.
@@ -78,7 +86,7 @@ class CustomMetaUserLinker implements MetaUserLinker {
  
 SdkConfig config = new SdkConfig.Builder(APP_ID, SECRET, notification)
                                 ...
-                                .setMetaUserLinker(metaUserLinker)
+                                .setUserLinker(metaUserLinker)
                                 .build();
  
 Sentiance.getInstance(this).init(config, initCallback);
@@ -87,7 +95,7 @@ Sentiance.getInstance(this).init(config, initCallback);
 
 {% code title="Kotlin" %}
 ```kotlin
-val linker = MetaUserLinker { installId ->
+val linker = UserLinker { installId ->
     // Use installId to initiate a link request here, and return 
     // true after linking succeeds.
   
@@ -96,16 +104,16 @@ val linker = MetaUserLinker { installId ->
 
 val config = SdkConfig.Builder(APP_ID, SECRET, notification)
                       ...
-                      .setMetaUserLinker(linker)
+                      .setUserLinker(linker)
                       .build()
     
 Sentiance.getInstance(this).init(config, callback)
 ```
 {% endcode %}
 
-During initialization, the SDK will call the [`link(String)`](../api-reference/android/metauserlinker.md#link) method of your [`MetaUserLinker`](../api-reference/android/metauserlinker.md) object from a background thread, passing to it the SDK install ID. In this method, you must initiate a link request towards the Sentiance API \(via your server\), supplying the install ID and your app’s User ID.
+During initialization, the SDK will call the [`link(String)`](../api-reference/android/userlinker.md#link) method of your [`UserLinker`](../api-reference/android/userlinker.md) object from a background thread, passing to it the SDK install ID. In this method, you must initiate a link request towards the Sentiance API (via your server), supplying the install ID and your app’s User ID.
 
-[`link(String)`](../api-reference/android/metauserlinker.md#link) must return true only after linking with the Sentiance API succeeds. If linking fails, you must return false. The SDK initialization will then fail with reason `LINK_FAILED`.
+[`link(String)`](../api-reference/android/userlinker.md#link) must return true only after linking with the Sentiance API succeeds. If linking fails, you must return false. The SDK initialization will then fail with reason `LINK_FAILED`.
 {% endtab %}
 {% endtabs %}
 
@@ -135,4 +143,3 @@ To ensure the security of your app and data, make sure your app is compliant wit
 ## Example
 
 An example app for both [iOS](https://github.com/sentiance/sdk-starter-ios-metauser) and [Android](https://github.com/sentiance/sdk-starter-android-metauser) can be found on our GitHub page.
-

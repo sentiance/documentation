@@ -6,9 +6,9 @@ Sentiance is committed to handle user data with a high level of confidentiality,
 
 ### iOS 15 and App Privacy Report
 
-iOS 15 have a new section in the privacy settings called [**App Privacy Report**](https://www.apple.com/newsroom/2021/06/apple-advances-its-privacy-leadership-with-ios-15-ipados-15-macos-monterey-and-watchos-8/#:\~:text=Check%20Up%20on%20App%20Privacy)**.** Disclosing to the users how often and when any apps use data like location, photos, camera, microphone, and contacts in the last seven days. It transparently shows which domains and when an app has contacted other domains. Sentiance SDK access location data and contacts Sentiance API to upload the collected data. Therefore, once Sentiance SDK is integrated into your app, the Report will disclose when the location data were accessed and that it has contacted Sentiance API.
+iOS 15 have a new section in the privacy settings called [**App Privacy Report**](https://www.apple.com/newsroom/2021/06/apple-advances-its-privacy-leadership-with-ios-15-ipados-15-macos-monterey-and-watchos-8/)**.** Disclosing to the users how often and when any apps use data like location, photos, camera, microphone, and contacts in the last seven days. It transparently shows which domains and when an app has contacted other domains. Sentiance SDK access location data and contacts Sentiance API to upload the collected data. Therefore, once Sentiance SDK is integrated into your app, the Report will disclose when the location data were accessed and that it has contacted Sentiance API.
 
-![](<../.gitbook/assets/Untitled drawing (1).png>)
+![](../.gitbook/assets/untitled-drawing-1-.png)
 
 ### Android 12 and Privacy Dashboard
 

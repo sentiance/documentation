@@ -1,6 +1,6 @@
 # TransportMode
 
-The transport mode hint used with [`startTrip(Map<String, String>, TransportMode, StartTripCallback)`](../sentiance.md#starttrip).
+The transport mode hint used with [`startTrip(Map<String, String>, TransportMode)`](../sentiance.md.md#starttrip-map-transportmode).
 
 | **CAR**      |
 | ------------ |

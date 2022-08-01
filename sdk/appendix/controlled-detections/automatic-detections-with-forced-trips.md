@@ -10,38 +10,33 @@ You can start a trip as follows:
 
 {% tabs %}
 {% tab title="iOS" %}
-```objectivec
-[[SENTSDK sharedInstance] startTrip:metadata 
-                          transportModeHint:SENTTransportModeUnknown
-    success:^{
-    }
-    failure:^(SENTSDKStatus *status) {
-}];
+```swift
+Sentiance.shared.startTrip(metadata: metadata, transportModeHint: hint) { result, error in
+}
 ```
 
-The `metadata` is an `NSDictionary` representing a map of string to string types. You can use it to attach any piece of information to this trip. The `transportModeHint` is a hint you can give the SDK about the type of transport the trip is \(e.g. car, bicycle, etc.\).
 
-In case starting a trip fails, you can check the `SENTSDKStatus` object to determine the reason. 
+
+The `metadata` is an `NSDictionary` representing a map of string to string types. You can use it to attach any piece of information to this trip. The `transportModeHint` is a hint you can give the SDK about the type of transport the trip is (e.g. car, bicycle, etc.).
+
+In case starting a trip fails, you can check the error to determine the reason.&#x20;
 {% endtab %}
 
 {% tab title="Android" %}
-```java
-startTrip(metadata, transportModeHint, new StartTripCallback() {
-    @Override
-    public void onSuccess () {
+```kotlin
+sentiance.startTrip(metadata, transportModeHint)
+    .addOnSuccessListener { startTripResult -> 
         // The trip was successfully started.
     }
-    @Override
-    public void onFailure (@Nullable SdkStatus sdkstatus) {
+    .addOnFailureListener { startTripError ->
         // Something prevented the trip to start.
         // Check the status object for more details.
     }
-});
 ```
 
-The `metadata` is a map of string to string types. You can use it to attach any piece of information to this trip. The `transportModeHint` is a hint of type [`TransportMode`](../../api-reference/android/trip/transportmode.md) you can give the SDK about the type of transport the trip is \(e.g. car, bicycle, etc.\).
+The `metadata` is a map of string to string types. You can use it to attach any piece of information to this trip. The `transportModeHint` is a hint of type [`TransportMode`](../../api-reference/android/trip/transportmode.md) you can give the SDK about the type of transport the trip is (e.g. car, bicycle, etc.).
 
-By passing a [`StartTripCallback`](../../api-reference/android/trip/starttripcallback.md) to the method, you will be notified when a trip is successfully started. If it fails, you can check the [`SdkStatus`](../../api-reference/android/sdkstatus/) object to determine the reason. 
+You can add an [OnSuccessListener](../../api-reference/android/pendingoperation/onsuccesslistener.md) and [`OnFailureListener`](../../api-reference/android/pendingoperation/onfailurelistener.md) to the returned [`PendingOperation`](../../api-reference/android/pendingoperation/), you will be notified when a trip is successfully started. If it fails, you can check the [`StartTripError`](../../api-reference/android/starttriperror/) object to determine the reason.
 {% endtab %}
 {% endtabs %}
 
@@ -51,36 +46,24 @@ To stop a trip that you've started, call `stopTrip` as follows:
 
 {% tabs %}
 {% tab title="iOS" %}
-```objectivec
-[[SENTSDK sharedInstance] stopTrip:^{
-    // successfully stopped the trip
-  } failure:^(SENTSDKStatus *status) {
-    // stopping the trip failed
-}];
+```swift
+Sentiance.shared.stopTrip { result, error in
+}
 ```
 
-If stopping the trip fails, you can check the `SENTSDKStatus` to determine why. Note that if no trip was ongoing, `failure`  will be called as well.
-
-To check if a trip is ongoing before calling `stopTrip`, see [this](checking-trip-status.md) guide.
+If stopping the trip fails, you can check the error to determine why. To check if a trip is ongoing before calling `stopTrip`, see [this](checking-trip-status.md) guide.
 {% endtab %}
 
 {% tab title="Android" %}
-```java
-stopTrip(new StopTripCallback() {
-    @Override
-    public void onSuccess () {
-    }
-    @Override
-    public void onFailure (@Nullable SdkStatus sdkstatus) {
-    }
-});
+```kotlin
+sentiance.stopTrip()
+    .addOnSuccessListener { stopTripResult -> }
+    .addOnFailureListener { stopTripError -> }
 ```
 
-You can pass a [`StopTripCallback`](../../api-reference/android/trip/stoptripcallback.md) to this method to be notified when the trip is stopped. If stopping the trip fails, you can check the [`SdkStatus`](../../api-reference/android/sdkstatus/) to determine why. Note that if no trip was ongoing, the [`onFailure()`](../../api-reference/android/trip/stoptripcallback.md#onfailure) method will be called as well.
+You can add an [OnSuccessListener](../../api-reference/android/pendingoperation/onsuccesslistener.md) and [`OnFailureListener`](../../api-reference/android/pendingoperation/onfailurelistener.md) to  the returned [`PendingOperation`](../../api-reference/android/pendingoperation/), you will be notified when a trip is successfully started. If it fails, you can check the [`StopTripError`](../../api-reference/android/stoptriperror/) object to determine the reason.
 
-To check if a trip is ongoing before calling [`stopTrip()`](../../api-reference/android/sentiance.md#starttrip), see [this](checking-trip-status.md) guide.
+To check if a trip is ongoing before calling [`stopTrip()`](../../api-reference/android/sentiance.md.md#stoptrip), see [this](checking-trip-status.md) guide.
 {% endtab %}
 {% endtabs %}
-
-
 

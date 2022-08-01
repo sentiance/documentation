@@ -1,10 +1,20 @@
 # MetaUserLinker
 
+{% hint style="warning" %}
+This class was replaced by UserLinker in v6.0.0.
+{% endhint %}
+
 This interface is used with [`setMetaUserLinker(MetaUserLinker)`](sdkconfig/sdkconfig-builder.md#setmetauserlinker).
 
 Learn more about Meta-Users [here](../../appendix/user-linking.md).
 
 ## MetaUserLinker API
+
+|         |                                               |
+| ------- | --------------------------------------------- |
+| boolean | [link](userlinker.md#link) (String installId) |
+
+
 
 ### `link()`
 

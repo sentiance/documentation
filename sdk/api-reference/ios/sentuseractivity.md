@@ -1,0 +1,10 @@
+# SENTUserActivity
+
+### SENTUserActivityType
+
+| Type                           | Description                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SENTUserActivityTypeTRIP       | The SDK detected the user is in a trip. Information about the trip can be accessed using SENTTripInfo                                                                                                                                                                                                                                                               |
+| SENTUserActivityTypeSTATIONARY | The SDK detected the user is in stationary state. More info about this state can be accessed using SENTStationaryInfo                                                                                                                                                                                                                                               |
+| SENTUserActivityTypeUNKNOWN    | <p>This state is set when it's not possible to determine the user's activity. This can be due to external reasons such as the device location setting being turned off, or the location permission not having been granted to the app, or the SDK not reporting accurate locations.<br></p><p>Note: In this state, SENTTripInfo and SENTStationaryInfo are nil.</p> |
+

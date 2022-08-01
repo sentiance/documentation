@@ -2,45 +2,28 @@
 
 ## What Does Initialization Do?
 
-During initialization, the Sentiance SDK will construct all the components necessary to do detections, networking, and maintenance work.
+If a Sentiance user has not yet been created on the device, initialization simply sets up internal SDK components to make it possible to create a user at a later time.
 
-The first time the SDK is initialized, a unique ID will be assigned to the device. All detections made on this device will be tagged with this ID as they get uploaded to the server to create a user timeline. Additionally, a configuration will be loaded from the server to determine detection parameters like location request intervals, sensors to record, and sampling rates. Last but not least, the SDK will schedule jobs and alarms for purposes of uploading data to the server and performing internal maintenance.
-
-Subsequent initializations will ensure the SDK components are constructed and ready to handle incoming broadcast intents and alarms.
+When a Sentiance user is already present on the device, during initialization, the SDK constructs all the components that are necessary to do detections, networking, and maintenance work. Moreover, if detections were previously enabled, initialization will resume these detections in the background, without requiring app intervention.
 
 ## Why Initialize in the Application / AppDelegate Class?
 
-Once the Sentiance SDK has been initialized, it will set jobs, alarms, and geofences as part of the detection process. When your app is not running and a geofence event occurs, the system will start the process and deliver the broadcast intent or notification directly to the SDK. Therefore, the SDK must already be initialized before handling this event.
+During initialization, aside from of setting up internal components, the SDK sets the necessary delegates and listeners at the OS level, to allow the capturing of OS generated events, such as geofence exits, significant location changes, and visits.
 
-Initializing the SDK in the `onCreate()` or `didFinishLaunchingWithOptions` method of your `Application` / `AppDelegate` class will ensure the SDK components are constructed, since these methods are guaranteed to finish before an intent or a notification is delivered to any broadcast receiver / delegate function.
-
-{% hint style="info" %}
-The only exception to the above rule is the first ever SDK initialization call. This can be delayed since the SDK has not yet set any alarms, geofences, etc. A good reason to delay this first call for example, is when you need to download the Sentiance credentials from a remote server, or you need to handle a first user login.
-{% endhint %}
-
-Another important consideration is that when initializing inside `onCreate()` and `didFinishLaunchingWithOptions`, it **must be done synchronously on the main application \(UI\) thread**. When `onCreate()` or `didFinishLaunchingWithOptions` is finished, `init` should have already returned. Therefore, using `DispatchQueue.main.async` or `Handler.post(Runnable)` is not permitted.
+When such events are detected, if your app is not alive, the OS starts it up in the background, and waits for your app to set up the necessary delegates and listeners during the _startup phase_, before delivering the events. In order to not miss such events, the SDK has to have its delegates and listeners set up during this startup phase too. This is the reason why the SDK must be initialized during app startup.
 
 {% hint style="info" %}
-On Android, when the SDK detects improper initialization, it will output the following error to logcat: "**SDK is not initialized. Make sure to call Sentiance.init\(\) in your Application.onCreate\(\) method.**"
+On iOS, during initialization, in addition to setting up delegates, the SDK registers its own background processing tasks with the OS. It is vital that the registration happens during the startup phase, otherwise the tasks will not run.
 {% endhint %}
 
-## Initialization Must be Done Only Once
+On iOS, the startup phase ends when `application(_:didFinishLaunchingWithOptions:)` __ returns. On Android, it ends when `Application.onCreate()` returns.
 
-You should only ever call [`init()`](../api-reference/android/sentiance.md#init) or `initWithConfig` if the SDK has not been initialized. Calling these methods more than once will throw an [`SdkException`](../api-reference/android/sdkexception.md) or `NSException`. This is intentional to guarantee single execution of the  logic you've implement in the success method of your initialization callback.
+Keep in mind that the app startup logic runs on the main thread. If you offload the SDK initialization to a background thread, even during the app's startup phase, there is no way to guarantee that the SDK initialization will happen before the startup phase ends. Therefore, it is important to do the initialization without branching off to a different thread. We have designed the initialization to be as quick as possible, in order to not delay your app's startup.
 
-To check whether the SDK has been initialized, call `getInitState`. This will return one of the following enums:
+## Initialize On Every Startup, Once
 
-{% tabs %}
-{% tab title="iOS" %}
-* `SENTInitialized`
-* `SENTNotInitialized`
-* `SENTInitInProgress`
-{% endtab %}
+You must initialize the SDK on every app startup. In most cases, you need to initialize it only once during the lifetime of the app process. Subsequent initialization requests will fail, unless you have reset the SDK.
 
-{% tab title="Android" %}
-* `INITIALIZED`
-* `NOT_INITIALIZED`
-* `INIT_IN_PROGRESS`
-{% endtab %}
-{% endtabs %}
+Technically, you can keep initializing the SDK as long as there is no Sentiance user, for example, to overwrite the Sentiance options that you had passed to the initializer. But once a Sentiance user is created, subsequent initializations during the same lifetime of the app will fail.
 
+To check whether the SDK has been initialized, call `getInitState()` on Android, or check the `initState` property on iOS.

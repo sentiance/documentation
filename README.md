@@ -23,7 +23,7 @@ In other words, we give you an understanding of where the user likes to go, what
 * Optimized for accuracy and battery usage.
 * Minimal bandwidth usage during data collection.
 
-![](<.gitbook/assets/Screen Shot 2018-12-17 at 4.47.30 PM.png>)
+![](.gitbook/assets/screen-shot-2018-12-17-at-4.47.30-pm.png)
 
 ## API for all your needs
 

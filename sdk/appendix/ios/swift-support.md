@@ -1,8 +1,19 @@
+---
+description: Sentiance SDK is compatible and is refined to be used with Swift Apps.
+---
+
 # Swift Support
 
-Import the Sentiance SDK into the Obj-C bridge.
+Steps to Integrate Sentiance SDK into iOS Apps written in Swift.
 
-![](../../../.gitbook/assets/swift-support.png)
+1. After the [integration steps](../../getting-started/ios-sdk/), in the [Bridging Header](https://developer.apple.com/documentation/swift/importing-objective-c-into-swift) for your application, import the Sentiance SDK in the files you want to use the API.
 
+```swift
+@import SENTSDK
+```
 
+2\. Access the API using the singleton instance `Sentiance.shared. Eg:`
 
+```swift
+Sentiance.shared.invokeDummyVehicleCrash()
+```

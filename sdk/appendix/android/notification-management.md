@@ -6,17 +6,16 @@ Setting the channel importance to `IMPORTANCE_LOW` and the notification priority
 
 Properly wording your notification is also important to let your users know why your application is running. State what value you are adding to your user at that moment. For example:
 
-> **Journeys is running**  
+> **Insights is running**\
 > Working in the background to improve your driving habits
 
 Finally, it's important to let your users know that they can easily prioritize and disable notifications. Using the following snippet on Android 8 and above, you can take your user to the channel configuration setting directly from within your app:
 
-```java
-Intent intent = new Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
-		.putExtra(Settings.EXTRA_APP_PACKAGE, context.getPackageName())
-		.putExtra(Settings.EXTRA_CHANNEL_ID, channelId);
-startActivity(intent);
+```kotlin
+val intent = Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
+            .putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
+            .putExtra(Settings.EXTRA_CHANNEL_ID, channelId)
+startActivity(intent)
 ```
 
 For more on notification channel best practices, check out Android's [design guidelines](https://material.io/design/platform-guidance/android-notifications.html#settings).
-

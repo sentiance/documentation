@@ -1695,6 +1695,29 @@ A user token or an API Key with scope 'user.read'.
 
 ### Unversioned Routes (no version prefix applied)
 
+{% swagger method="post" path="/users/auth-code" baseUrl="" summary="Authentication Code" %}
+{% swagger-description %}
+Used to request a temporary authentication code that allows the creation (or migration) of a Sentiance user that is linked to you system's UserID. The JSON body should contain a single parameter as described below.
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
+Unlike other endpoints, which can be called with both a user token and an API Key, this endpoint can ONLY be called with an API Key with `user.link` scope. User tokens will be rejected.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="external_id" type="string" required="true" %}
+This is the unique ID of the user in your system.
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="The returned authentication code along with an expiry date. The code can be passed to the Sentiance SDK to create (or migrate) a Sentiance user that is linked to your system's user." %}
+```javascript
+{
+  "authentication_code": "fd9c52001577fc8b2dd8af36db8550def2551e4416c44c9c448c309cc7cb4d692e10d65a9c3f93b76cd4f7c711e0d1d7750d8e46b0db0c7b980497c75631030d",
+  "expires_at": "2021-02-03T14:32:03.076Z"
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
 {% swagger baseUrl="" path="/users/:user_id" method="delete" summary="Delete User" %}
 {% swagger-description %}
 Deletes the user data along with the history.

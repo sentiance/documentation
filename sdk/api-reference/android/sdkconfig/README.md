@@ -22,19 +22,27 @@ The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secr
 
 ### `getMetaUserLinker()`
 
+{% hint style="warning" %}
+This method was replaced by **getUserLinker()** in v6.0.0.
+{% endhint %}
+
 > ```java
 > MetaUserLinker getMetaUserLinker()
 > ```
 >
-> Returns the [`MetaUserLinker`](../metauserlinker.md) used during [MetaUser linking](../../../appendix/user-linking.md).
+> Returns the [`MetaUserLinker`](../userlinker.md) used during [MetaUser linking](../../../appendix/user-linking.md).
 
 ### `getMetaUserLinkerAsync()`
+
+{% hint style="warning" %}
+This method was replaced by **getUserLinkerAsync()** in v6.0.0.
+{% endhint %}
 
 > ```java
 > MetaUserLinkerAsync getMetaUserLinkerAsync()
 > ```
 >
-> Returns the [`MetaUserLinkerAsync`](../metauserlinkerasync.md) used during [MetaUser linking](../../../appendix/user-linking.md).
+> Returns the [`MetaUserLinkerAsync`](../userlinkerasync.md) used during [MetaUser linking](../../../appendix/user-linking.md).
 
 ### `getNotification()`
 
@@ -77,3 +85,19 @@ The [`SdkConfig`](./) class allows you to specify your Sentiance app ID and secr
 > Returns whether triggered trips is enabled or not.
 >
 > Learn more about triggered trip [here](../../../appendix/controlled-detections/controlled-trips-only.md).
+
+### `getUserLinker()`
+
+> ```java
+> UserLinker getUserLinker()
+> ```
+>
+> Returns the [`UserLinker`](../userlinker.md) used during [user linking](../../../appendix/user-linking.md).
+
+### `getUserLinkerAsync()`
+
+> ```java
+> UserLinkerAsync getUserLinkerAsync()
+> ```
+>
+> Returns the [`UserLinkerAsync`](../userlinkerasync.md) used during [user linking](../../../appendix/user-linking.md).

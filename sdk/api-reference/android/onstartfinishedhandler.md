@@ -1,6 +1,6 @@
 # OnStartFinishedHandler
 
-This interface is used with [`start(OnStartFinishedHandler)`](sentiance.md#start).
+This interface is used with [`start(OnStartFinishedHandler)`](sentiance.md.md#start).
 
 ## OnStartFinishedHandler API
 

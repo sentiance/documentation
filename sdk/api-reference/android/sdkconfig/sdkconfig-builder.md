@@ -1,6 +1,6 @@
 # Builder
 
-This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentiance.md#init).
+This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentiance.md.md#init).
 
 ## Builder API
 
@@ -48,6 +48,10 @@ This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentian
 
 ### `setMetaUserLinker`
 
+{% hint style="warning" %}
+This method was replaced by **setUserLinker(UserLinker)** in v6.0.0.
+{% endhint %}
+
 > ```java
 > Builder setMetaUserLinker(MetaUserLinker linker)
 > ```
@@ -56,11 +60,15 @@ This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentian
 >
 > Learn more about Meta-User linking [here](../../../appendix/user-linking.md).
 
-| Parameters |                                                                           |
-| ---------- | ------------------------------------------------------------------------- |
-| linker     | A [`MetaUserLinker`](../metauserlinker.md) which will handle the linking. |
+| Parameters |                                                                       |
+| ---------- | --------------------------------------------------------------------- |
+| linker     | A [`MetaUserLinker`](../userlinker.md) which will handle the linking. |
 
 ### `setMetaUserLinker`
+
+{% hint style="warning" %}
+This method was replaced by **setUserLinker(UserLinkerAsync)** in v6.0.0.
+{% endhint %}
 
 > ```java
 > Builder setMetaUserLinker(MetaUserLinkerAsync linker)
@@ -68,9 +76,9 @@ This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentian
 >
 > Same as [`setMetaUserLinker(MetaUserLinker)`](sdkconfig-builder.md#setmetauserlinker) but accepts an async linker instead.
 
-| Parameters |                                                                                     |
-| ---------- | ----------------------------------------------------------------------------------- |
-| linker     | A [`MetaUserLinkerAsync`](../metauserlinkerasync.md) which will handle the linking. |
+| Parameters |                                                                                 |
+| ---------- | ------------------------------------------------------------------------------- |
+| linker     | A [`MetaUserLinkerAsync`](../userlinkerasync.md) which will handle the linking. |
 
 ### `setNotificationId`
 
@@ -109,3 +117,29 @@ This class is used with [`Sentiance.init(SdkConfig, OnInitCallback)`](../sentian
 | Parameters |                                   |
 | ---------- | --------------------------------- |
 | enabled    | `true` to enable triggered trips. |
+
+### `setUserLinker`
+
+> ```java
+> Builder setUserLinker(UserLinker linker)
+> ```
+>
+> Sentiance assigns to each user a unique ID. You can link your app's user to the Sentiance user using user linking. The linking step involves server-to-server communication, and is triggered by the SDK via this user linking callback.
+>
+> Learn more about user linking [here](../../../appendix/user-linking.md).
+
+| Parameters |                                                                   |
+| ---------- | ----------------------------------------------------------------- |
+| linker     | A [`UserLinker`](../userlinker.md) which will handle the linking. |
+
+### `setUserLinker`
+
+> ```java
+> Builder setUserLinker(UserLinkerAsync linker)
+> ```
+>
+> Same as [`setUserLinker(UserLinker)`](sdkconfig-builder.md#setuserlinker) but accepts an async linker instead.
+
+| Parameters |                                                                             |
+| ---------- | --------------------------------------------------------------------------- |
+| linker     | A [`UserLinkerAsync`](../userlinkerasync.md) which will handle the linking. |

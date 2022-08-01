@@ -6,6 +6,65 @@
 It's possible to build and run your Sentiance integrated app on an M1 Mac simulator, with the use of our custom TensorFlowLiteC framework. See [this guide](../appendix/ios/m1-simulator-support.md).
 {% endhint %}
 
+## \[6.0.0] - 1 Aug 2022
+
+{% hint style="info" %}
+**Breaking Changes**
+
+Version 6.0.0 is a major release and includes multiple deprecations and breaking changes. Please read our [migration guide](../appendix/migration-guide/ios.md) to learn how to upgrade to this version.
+
+Given the significance of the changes in this version, we recommend testing your app carefully, before making it available to your wider audience.
+{% endhint %}
+
+#### Added
+
+* A Sentiance user creation method that supports the existing user-linking flow, and a new authentication-code based flow. The new flow is the recommended approach for future integrations.
+* A dedicated SDK initializer that does not create a Sentiance user. To be used in combination with the user creation method.
+* Improved versions of asynchronous SDK methods that accept a result and error returning handler, offering more flexibility and Swift friendliness.
+* Detection enabling and disabling methods that are persistent across app restarts, and that replace the SDK's start and stop methods.
+* User Context information, which can be requested or subscribed for, and which includes a user's recent timeline events, the home and work locations (if detected), and a user's segments (if detected). This feature is released as [Early Access](../appendix/feature-production-readiness.md) and must be enabled by Sentiance first. For more information about it, see our [On-Device Features page](../appendix/on-device-features.md).
+* On-device user event timeline generation, with support for real-time transport classification using Sentiance's ML-based transport classifier. This feature is released as [Early Access](../appendix/feature-production-readiness.md) and must be enabled by Sentiance first. The timeline is made available via the User Context data.
+* On-device venue mapping of stationary locations, using Sentiance's ML-based classifier. This feature uses venue data that is downloaded and stored offline. It is released as [Early Access](../appendix/feature-production-readiness.md). The venue information is made available via the User Context. For more information about this feature, see our [On-Device Features page](../appendix/on-device-features.md).
+* On-device [segment](../../library/segments.md) detection. This feature is released as [Early Access](../appendix/feature-production-readiness.md) and must be enabled by Sentiance first. The segment data is made available via the User Context. For more information about this feature, see our [On-Device Features page](../appendix/on-device-features.md).
+* Limited support for running detections when the location permission is _while-in-use_, and when the app is in the foreground.
+* Nullability annotations for all public methods and classes.
+* `SENTSDKStatus.userExists`, `SENTSDKStatus.backgroundRefreshStatus`, and `SENTSDKStatus.detectionStatus`
+* `userExists` and `isUserLinked` methods in the `Sentiance` class, accessible without initializing the SDK.
+* `isPreciseLocationAuthorizationGranted` to indicate whether precise location permission is granted.
+
+#### Changed
+
+* Bumped the minimum support iOS version to 13.0.
+* The `SENTSDK` class has been renamed to `Sentiance`.
+* Most `Sentiance` methods can no longer be called without initializing the SDK first. Exceptions are mentioned in each method's corresponding documentation.
+* `MetaUserLinker` is renamed to `UserLinker`.
+* `isVehicleCrashDetectionSupported` no longer accepts an argument..
+* Modifications to `SENTConfig` after passing it to `initWithConfig:success:failure` are now ignored.
+
+#### Deprecated
+
+* `initWithConfig:success:failure:`
+* `reset:failure:`
+* `start:`, `startWithStopDate:completion:`, `stop`
+* `getUserId`, `getUserActivity`, `getInitState`, `getSdkStatus`, `getVersion`, `getWifiQuotaLimit`, `getWiFiQuotaUsage`, `getMobileQuotaLimit`, `getMobileQuotaUsage`, `getDiskQuotaLimit`, `getDiskQuotaUsage` (deprecated in favor of properties).
+* `getUserAccessToken:failure:`
+* `startTrip:transportModeHint:success:failure` and `stopTrip:failure`
+* `submitDetections:failure:`
+* `SENTSDKStatus.startStatus` and `SENTSDKStatus.locationPermission`
+
+#### Fixed
+
+* Prevent blocking the main thread during startup under certain conditions.
+* Improve the handling of false-trip detections.
+* Stability fixes when resetting the SDK.
+
+#### Removed
+
+* `setCrashListener:`
+* `isInitialized`
+* `setTripProfileHandler:`, `setFullTripProfilingEnabled:`, `setSpeedLimit:`&#x20;
+* `SdkStatus.isLocationPermGranted`
+
 ## \[5.15.0] - 13 July 2022
 
 #### Added
@@ -147,9 +206,9 @@ This release updates the SDK's TensorFlow Lite dependency version to 2.7.0. If y
 **Added**
 
 * New type to SDK artifacts which are now packaged as both Framework and XCFramework (Please make sure to have CocoaPods 1.10.0 or above installed on your machine if you integrate Sentiance SDK via CocoaPods).
-* An improved and more accurate vehicle crash detection, backed by a machine learning model. You must switch to using the new Sentiance API method [`setVehicleCrashHandler:`](../api-reference/ios/sentsdk/#setvehiclecrashhandler) to activate it.
-* A new method to help test your crash detection integration. See [`invokeDummyVehicleCrash`](../api-reference/ios/sentsdk/#invokedummyvehiclecrashhandler).
-* A new method to check if crash detection is supported on the device for a specific trip type. See [`isVehicleCrashDetectionSupported:`](../api-reference/ios/sentsdk/#isvehiclecrashdetectionsupported).
+* An improved and more accurate vehicle crash detection, backed by a machine learning model. You must switch to using the new Sentiance API method [`setVehicleCrashHandler:`](../api-reference/ios/sentiance.md#setvehiclecrashhandler) to activate it.
+* A new method to help test your crash detection integration. See [`invokeDummyVehicleCrash`](../api-reference/ios/sentiance.md#invokedummyvehiclecrashhandler).
+* A new method to check if crash detection is supported on the device for a specific trip type. See [`isVehicleCrashDetectionSupported:`](../api-reference/ios/sentiance.md#isvehiclecrashdetectionsupported).
 
 {% hint style="warning" %}
 **Beta Feature:** Support for host apps that enable[ Data Protection](https://developer.apple.com/documentation/uikit/protecting\_the\_user\_s\_privacy/encrypting\_your\_app\_s\_files). This functionality is released as a beta feature and not yet recommended for production use.
@@ -161,7 +220,7 @@ This release updates the SDK's TensorFlow Lite dependency version to 2.7.0. If y
 
 **Deprecated**
 
-* [`setCrashListener:`](../api-reference/ios/sentsdk/#setcrashlistener) is now deprecated. Use [`setVehicleCrashHandler:`](../api-reference/ios/sentsdk/#setvehiclecrashhandler)instead.
+* [`setCrashListener:`](../api-reference/ios/sentiance.md#setcrashlistener) is now deprecated. Use [`setVehicleCrashHandler:`](../api-reference/ios/sentiance.md#setvehiclecrashhandler)instead.
 
 **Fixed**
 
@@ -247,7 +306,7 @@ This release updates the SDK's TensorFlow Lite dependency version to 2.7.0. If y
 #### Added
 
 * Support for [CocoaPods](https://cocoapods.org)
-* [Integration Guide](../getting-started/ios-sdk/2.-configuration/integration-guide.md), to assist with installation and configuration of the SDK from Xcode
+* [Integration Guide](broken-reference), to assist with installation and configuration of the SDK from Xcode
 
 **Fixed**
 
@@ -257,8 +316,8 @@ This release updates the SDK's TensorFlow Lite dependency version to 2.7.0. If y
 
 #### Added
 
-* Method to [set stop date on SDK](../api-reference/ios/sentsdk/#startwithstopdate)
-* new SENTStartStatus: [SENTStartStatusExpired](../api-reference/ios/sentsdk/sentsdkstatus.md#startstatus)
+* Method to [set stop date on SDK](../api-reference/ios/sentiance.md#startwithstopdate)
+* new SENTStartStatus: [SENTStartStatusExpired](../api-reference/ios/sentsdkstatus.md#startstatus)
 
 ## \[5.3.2] - 14 Jun 2019
 
@@ -270,14 +329,14 @@ This release updates the SDK's TensorFlow Lite dependency version to 2.7.0. If y
 
 #### Added
 
-* Method to set [user activity listener](../api-reference/ios/sentsdk/#setuseractivitylisterner).
-* Method to get [current user activity](../api-reference/ios/sentsdk/#getuseractivity).
+* Method to set [user activity listener](../api-reference/ios/sentiance.md#setuseractivitylisterner).
+* Method to get [current user activity](../api-reference/ios/sentiance.md#getuseractivity).
 
 ## \[5.2.1] - 29 May 2019
 
 #### Added
 
-* Method to [add metadata during](../api-reference/ios/sentsdk/#addtripmetadata) the trip.
+* Method to [add metadata during](../api-reference/ios/sentiance.md#addtripmetadata) the trip.
 * Method to [set base API](../api-reference/ios/sentconfig-1.md#baseurl) url for SDK.
 
 #### Changed

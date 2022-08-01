@@ -1,5 +1,70 @@
 # Android
 
+## \[6.0.0] - 1 Aug 2022
+
+{% hint style="info" %}
+**Breaking Changes**
+
+Version 6.0.0 is a major release and includes multiple deprecations and breaking changes. Please read our [migration guide](../appendix/migration-guide/android.md#migrating-from-4-x-to-6-x) to learn how to upgrade to this version.
+
+Given the significance of the changes in this version, we recommend testing your app carefully, before making it available to your wider audience.
+{% endhint %}
+
+#### Added
+
+* A Sentiance user creation method that supports the existing user-linking flow, and a new authentication-code based flow. The new flow is the recommended approach for future integrations.
+* A dedicated SDK initializer that does not create a Sentiance user. To be used in combination with the user creation method.
+* Improved versions of asynchronous SDK methods that return `PendingOperation` as a result (akin to a Java Future), instead of accepting success/failure callbacks, offering more flexibility and Kotlin friendliness.
+* Detection enabling and disabling methods that are persistent across app restarts, and that replace the SDK's start and stop methods.
+* `CrashDetectionApi` for accessing and subscribing for vehicle crash detection info. This class is in the newly added _com.sentiance.sdk-crash-detection_ artifact.
+* User Context information, which can be requested or subscribed for, and which includes a user's recent timeline events, the home and work locations (if detected), and a user's segments (if detected). This feature is released as [Early Access](../appendix/feature-production-readiness.md) and must be enabled by Sentiance first. For more information about it, see our [On-Device Features page](../appendix/on-device-features.md).
+* On-device user event timeline generation, with support for real-time transport classification using Sentiance's ML-based transport classifier. This feature is released as [Early Access](../appendix/feature-production-readiness.md) and must be enabled by Sentiance first. The timeline is made available via the _UserContextApi_ class.
+* On-device venue mapping of stationary locations, using Sentiance's ML-based classifier. This feature uses venue data that is downloaded and stored offline. It is released as [Early Access](../appendix/feature-production-readiness.md). The venue information is made available via the _UserContextApi_ class. For more information about this feature, see our [On-Device Features page](../appendix/on-device-features.md).
+* On-device [segment](../../library/segments.md) detection. This feature is released as [Early Access](../appendix/feature-production-readiness.md) and must be enabled by Sentiance first. The segment data is made available via the _UserContextApi_ class. For more information about this feature, see our [On-Device Features page](../appendix/on-device-features.md).
+* Ability to capture mini-dumps of native process crashes.
+* Ability to capture ANR data for troubleshooting on Android 11+.
+* Limited support for running detections when the location permission is _while-in-use_, and when the app is in the foreground.
+* Support for collecting various sensor data when the app is in the foreground.
+* Nullability annotations for all public methods and classes.
+* `SdkStatus.userExists` and `SdkStatus.detectionStatus`
+* `userExists` and `isUserLinked` methods in the `Sentiance` class, accessible without initializing the SDK.
+
+#### Changed
+
+* Bumped the minimum support Android version to 6.0.
+* Required target Java language level is Java 8.
+* Switched to the R8 obfuscator/shrinker.
+* Switched to a modular artifact architecture. Some features are not extracted to their own modules. e.g. Crash detection is now in the _com.sentiance:sdk-crash-detection_ artifact, which must be added separately to your app.
+* Vehicle crash detection functionality has been moved to the artifact _com.sentiance:sdk-crash-detection_. Related methods and classes have been moved to a different package.
+* `MetaUserLinker` is renamed to `UserLinker`.
+* `MetaUserLinkerAsync` is renamed to `UserLinkerAsync`.
+* `MetaUserLinkerCallback` is renamed to `UserLinkerCallback`.
+* `SdkConfig.Builder.setMetaUserLinker()` is renamed to `SdkConfig.Builder.setUserLinker()`
+* Moved the following methods and classes to new package: `invokeDummyVehicleCrash`, `setVehicleCrashListener`, `isVehicleCrashDetectionSupported`, `VehicleCrashEvent`, `VehicleCrashListener`
+
+#### Deprecated
+
+* `init(SdkConfig, OnInitCallback)`
+* `reset(ResetCallback)`
+* `start(OnStartFinishedHandler),` `start(Date, OnStartFinishedHandler)` and `stop()`
+* `getUserAccessToken(TokenResultCallback)`
+* `startTrip(Map<String, String>,TransportMode, StartTripCallback)` and `stopTrip(StopTripCallback)`
+* `submitDetections(SubmitDetectionsCallback)`
+* `SdkStatus.startStatus` and `SdkStatus.locationPermission`
+
+#### Fixed
+
+* Occasional ANR events caused by the SDK during start.
+
+#### Removed
+
+* Proguard rule `-keepattributes SourceFile, LineNumberTable`
+* `setCrashCallback(CrashCallback)` and `CrashCallback`
+* `isInitialized()`
+* `SdkConfig.isForegroundEnabled()`
+* `TripProfileConfig`, `TripProfileListener`, `setTripProfileListener(TripProfileListener)`, and `updateTripProfileConfig(TripProfileConfig)`
+* `SdkStatus.isLocationPermGranted`
+
 ## \[4.22.1] - 04 July 2022
 
 #### Changed
@@ -142,9 +207,9 @@ Note: the absence of _READ\_PHONE\_STATE_ in your app's manifest will cause the 
 
 #### Added
 
-* An improved and a more accurate vehicle crash detection, backed by a machine learning model. You must switch to using the new Sentiance API method [`setVehicleCrashListener(VehicleCrashListener)`](../api-reference/android/sentiance.md#setvehiclecrashlistener) to activate it.
-* A new method to help test your crash detection integration. See [`invokeDummyCrash()`](../api-reference/android/sentiance.md#invokedummycrash).
-* A new method to check if crash detection is supported on the device for a specific trip type. See [`isCrashDetectionSupported(TripType)`](../api-reference/android/sentiance.md#iscrashdetectionsupported).
+* An improved and a more accurate vehicle crash detection, backed by a machine learning model. You must switch to using the new Sentiance API method [`setVehicleCrashListener(VehicleCrashListener)`](broken-reference) to activate it.
+* A new method to help test your crash detection integration. See [`invokeDummyCrash()`](broken-reference).
+* A new method to check if crash detection is supported on the device for a specific trip type. See [`isCrashDetectionSupported(TripType)`](broken-reference).
 
 #### Changed
 
@@ -152,11 +217,11 @@ Note: the absence of _READ\_PHONE\_STATE_ in your app's manifest will cause the 
 * On Android 9 and above, when [background execution is restricted](https://developer.android.com/reference/android/app/ActivityManager#isBackgroundRestricted\(\)) for your app (by the user or an OS power saving feature), SDK detections will no longer run. An [`SdkStatus`](../api-reference/android/sdkstatus/) update will be delivered to your app, with `startStatus` set to `PENDING` and `isBackgroundProcessingRestricted` set to `true` so that you can take the appropriate action.
 * Library dependency changes:
   * Removed compile-time dependency on `com.google.code.findbugs:jsr305`
-  * Added runtime dependency on `org.tensorflow:tensorflow-lite:2.2.0`. This dependency adds native libraries to your app. To limit their architectures, see [here](../troubleshooting/android.md#exclude-native-libraries-for-unsupported-architectures).
+  * Added runtime dependency on `org.tensorflow:tensorflow-lite:2.2.0`. This dependency adds native libraries to your app. To limit their architectures, see [here](../troubleshooting/android/#exclude-native-libraries-for-unsupported-architectures).
 
 #### Deprecated
 
-* &#x20;[`setCrashCallback(CrashCallback)`](../api-reference/android/sentiance.md#setcrashcallback) is now deprecated. Use [`setVehicleCrashListener(VehicleCrashListener)`](../api-reference/android/sentiance.md#setvehiclecrashlistener) instead.
+* &#x20;[`setCrashCallback(CrashCallback)`](broken-reference) is now deprecated. Use [`setVehicleCrashListener(VehicleCrashListener)`](broken-reference) instead.
 
 #### Fixed
 
@@ -207,7 +272,7 @@ This change does not impact the SDK's minimum supported API level (i.e. minSdkVe
 
 #### Added
 
-* Support resetting the SDK to a "never initialized" state, clearing all SDK user data and allowing the creation of a new Sentiance user. See [`reset(ResetCallback)`](../api-reference/android/sentiance.md#reset).
+* Support resetting the SDK to a "never initialized" state, clearing all SDK user data and allowing the creation of a new Sentiance user. See [`reset(ResetCallback)`](broken-reference).
 * Improve the detection of granting the background location access permission on Android 10+.&#x20;
 
 #### Changed
@@ -295,7 +360,7 @@ This version targets API level 29, adding Android 10 support.
 
 #### Added
 
-* Support automatic stopping of detections by specifying an expiry date when calling [`start()`](../api-reference/android/sentiance.md#start-1). The expired detection will cause the [`StartStatus`](../api-reference/android/sdkstatus/startstatus.md) to become `START_EXPIRED`.
+* Support automatic stopping of detections by specifying an expiry date when calling [`start()`](broken-reference). The expired detection will cause the [`StartStatus`](../api-reference/android/sdkstatus/startstatus.md) to become `START_EXPIRED`.
 * Support additional fine-tuning of the SDK's disk usage quota.
 
 #### Fixed
@@ -322,7 +387,7 @@ This version targets API level 29, adding Android 10 support.
 
 #### Added
 
-* Support adding trip metadata during an ongoing trip. See [`addTripMetadata()`](../api-reference/android/sentiance.md#addtripmetadata).
+* Support adding trip metadata during an ongoing trip. See [`addTripMetadata()`](broken-reference).
 * Support asynchronous user linking. See [`setMetaUserLinker()`](../api-reference/android/sdkconfig/sdkconfig-builder.md#setmetauserlinker-1).
 * Send user-agent info to API calls.
 
@@ -361,8 +426,8 @@ This version targets API level 29, adding Android 10 support.
 
 #### Added
 
-* Support updating the SDK notification at runtime with [`updateSdkNotification(Notification)`](../api-reference/android/sentiance.md#updatesdknotification).
-* Ability to register for user activity updates (trips and stationary moments) with [`setUserActivityListener(UserActivityListener)`](../api-reference/android/sentiance.md#setuseractivitylistener).
+* Support updating the SDK notification at runtime with [`updateSdkNotification(Notification)`](broken-reference).
+* Ability to register for user activity updates (trips and stationary moments) with [`setUserActivityListener(UserActivityListener)`](broken-reference).
 
 #### Fixed
 
@@ -435,7 +500,7 @@ This version targets API level 29, adding Android 10 support.
 
 #### Deprecated
 
-* `Sentiance.isInitialized()` is now deprecated. Use [`Sentiance.getInitState()`](../api-reference/android/sentiance.md#getinitstate) instead, which returns an [`InitState`](../api-reference/android/initstate.md) enum.
+* `Sentiance.isInitialized()` is now deprecated. Use [`Sentiance.getInitState()`](broken-reference) instead, which returns an [`InitState`](../api-reference/android/initstate.md) enum.
 
 #### Fixed
 

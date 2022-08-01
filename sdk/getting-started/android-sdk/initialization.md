@@ -1,19 +1,24 @@
-# 3. Initialization
+# 2. Initialization
 
-Initialization is a very important step; before initialization, none of the methods on the Sentiance SDK interface will work, with the exception of [`getInstance()`](../../api-reference/android/sentiance.md#getinitstate), [`init()`](../../api-reference/android/sentiance.md#init) and [`getInitState()`](../../api-reference/android/sentiance.md#getinitstate).
+Initialization sets up internal SDK components to allow the creation of a Sentiance user on the device, and perform detections in the background.&#x20;
 
-## Create an Application Class
+Only a limited set of SDK methods are allowed to be invoked before initializing the SDK.
+
+### 1. Create an Application Class
 
 Initialization [must be done](../../appendix/sdk-initialization.md#why-initialize-in-the-application-appdelegate-class) in the `onCreate()` method of your `Application` class. If you don't already have a custom application class, first create a new class that extends `Application`.
 
-```java
+{% code title="MyApplication.kt" %}
+```kotlin
 import android.app.Application;
-public class MyApplication extends Application {
-    @Override
-    public void onCreate() {
+
+class MyApplication: Application() {
+    override fun onCreate() {
+        super.onCreate()
     }
 }
 ```
+{% endcode %}
 
 Then reference this new class in the application tag of the `AndroidManifest.xml`
 
@@ -23,37 +28,50 @@ Then reference this new class in the application tag of the `AndroidManifest.xml
 </application>
 ```
 
-## Call the SDK init Method
+### 2. Initialize the SDK
 
-In the `onCreate()` method of your `Application` class, call [`init()`](../../api-reference/android/sentiance.md#init) and pass the [`SdkConfig`](../../api-reference/android/sdkconfig/) you created in the previous step, plus an instance of [`OnInitCallback`](../../api-reference/android/oninitcallback/) to handle the initialization result. 
+In the `onCreate()` method of your `Application` class, call `initialize()`.
 
-{% code title="MyApplication.java" %}
-```java
-@Override
-public void onCreate() {
-    // Creation of SdkConfig here, see previous step
-    
-    OnInitCallback initCallback = new OnInitCallback() {
-        @Override
-        public void onInitSuccess() {
-        }
-        @Override
-        public void onInitFailure(InitIssue issue, @Nullable Throwable th) {
-        }
-    };
-        
-    Sentiance.getInstance(this).init(sdkConfig, initCallback);
+{% code title="MyApplication.kt" %}
+```kotlin
+override fun onCreate() {
+    super.onCreate()
+
+    val result = Sentiance.getInstance(this).initialize()
+    if (result.isSuccessful) {
+        Log.d(TAG, "Initialization succeeded");
+    }
 }
 ```
 {% endcode %}
 
-Upon successful initialization, [`onInitSuccess()`](../../api-reference/android/oninitcallback/#oninitsuccess) will be called. If it fails, [`onInitFailure()`](../../api-reference/android/oninitcallback/#oninitfailure) will be called with an appropriate [`InitIssue`](../../api-reference/android/oninitcallback/initissue.md).
+Initialization will normally succeed, unless an unexpected error or exception is encountered. In case of failure, you can check the reason via the returned result.
 
-{% hint style="warning" %}
-The [`init()`](../../api-reference/android/sentiance.md#init) call must be executed before `onCreate()` returns. Therefore, you must call it synchronously on the main thread. If you plan to add a remote flag to control the initialization \(e.g. Firebase Remote Config\), make sure the check is synchronous \(e.g. using a cached flag\).
+```kotlin
+if (result.isSuccessful) {
+    Log.d(TAG, "Initialization succeeded");
+} else {
+    Log.e(TAG, "Intialization failed with reason ${result.failureReason!!.name}", result.throwable);
+}
+```
 
-See [here](../../appendix/sdk-initialization.md#why-initialize-in-the-application-appdelegate-class) to understand more about why this is important. An [example app](https://github.com/sentiance/sdk-starter-android-sdk-control/blob/master/app/src/main/java/com/sentiance/sdkstarter/MyApplication.java#L53) demonstrating this can be found on our [Github](https://github.com/sentiance/sdk-starter-android-sdk-control).
-{% endhint %}
+<details>
 
-To learn more about initialization, see the [SDK Initialization](../../appendix/sdk-initialization.md) section.
+<summary>Custom Notification</summary>
 
+The Sentiance SDK runs independently in the background when detections are enabled. To do so, it makes use of Android Foreground Services. To start a foreground service, the SDK has to pass a Notification to the Android API when foregrounding the service.
+
+You can specify the notification that the SDK should use by passing it to the SDK initializer as an option:
+
+```kotlin
+val options = SentianceOptions.Builder(context)
+    .setNotification(nofitication, id)
+    .build()
+Sentiance.getInstance(context).initialize(options)
+```
+
+You can find a sample code snippet for creating a notification [here](../../appendix/android/sample-notification.md). Be sure to check our [notification management](../../appendix/android/notification-management.md) page for more on the best practices of using service notifications.
+
+</details>
+
+To learn more about Initialization, see the [SDK Initialization](../../appendix/sdk-initialization.md) page.

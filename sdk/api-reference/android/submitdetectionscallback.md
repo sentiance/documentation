@@ -1,6 +1,6 @@
 # SubmitDetectionsCallback
 
-This interface is used with [`submitDetections(SubmitDetectionsCallback)`](sentiance.md#submitdetections).
+This interface is used with [`submitDetections(SubmitDetectionsCallback)`](sentiance.md.md#submitdetections-submitdetectionscallback).
 
 ## SubmitDetectionsCallback API
 

@@ -1,6 +1,6 @@
 # StartTripCallback
 
-This interface is used with [`startTrip(Map<String, String>, TransportMode, StartTripCallback)`](../sentiance.md#starttrip).
+This interface is used with [`startTrip(Map<String, String>, TransportMode, StartTripCallback)`](../sentiance.md.md#starttrip-map-transportmode-starttripcallback).
 
 ## StartTripCallback API
 
