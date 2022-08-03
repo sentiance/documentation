@@ -39,4 +39,4 @@ To learn more about these dependencies, see [this page](../../../appendix/ios/de
 
 1. Go to the **Build Settings** tab of your target settings.
 2. Look for **Other Linker Flags** in the **Linking** section.
-3. Add `-lz`  and `-lc+`
+3. Add `-lz` , `-all_load`, and `-lc++`
