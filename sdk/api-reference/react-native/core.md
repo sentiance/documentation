@@ -4,23 +4,25 @@
 import SentianceCore from "@sentiance-react-native/core";
 ```
 
+You can find a reference to all the types mentioned on this page [here](https://github.com/sentiance/react-native-sentiance/blob/main/packages/core/lib/index.d.ts).
+
 ### Create a Sentiance user&#x20;
 
-#### Without User Linking
+#### Using an Authentication Code (Recommended)
+
+Refer to [this guide](../../appendix/user-creation.md) for documentation on user creation.
 
 ```javascript
-const createUserResult = await SentianceCore.createUser({
-    appId, 
-    appSecret, 
-    platformUrl
-});
+// returns Promise<CreateUserResult>
+const createUserResult = await SentianceCore.createUser({authCode});
 ```
 
 #### With User Linking
 
-_Please refer to_ [_this guide_](../../appendix/user-linking.md) _for documentation on the user linking._
+Refer to [this guide](../../appendix/user-linking.md) for documentation on user linking.
 
 ```javascript
+// returns Promise<CreateUserResult>
 const createUserResult = await SentianceCore.createUser({
     appId, 
     appSecret, 
@@ -29,7 +31,8 @@ const createUserResult = await SentianceCore.createUser({
         // request your backend to perform user linking
         await linkUser(installId);
 
-        // return true to indicate to the SDK that user linking on your backend was successful
+        // return true to indicate to the SDK that user linking on your 
+        // backend was successful. return false otherwise.
         return true;
   }
 });
@@ -37,30 +40,49 @@ const createUserResult = await SentianceCore.createUser({
 
 > _If your backend was unable to link the user to the Sentiance platform, then `return false` instead to notify the SDK that the linking failed._
 
-### Link a Sentiance user on the device to a third party ID
+#### Without User Linking (Not Recommended)
 
-#### Using a linker
+Creates an unlinked (anonymous) Sentiance user.
 
 ```javascript
-const userLinkingResult = await SentianceCore.linkUser(async (installId) => {
-        // request your backend to perform user linking
-        await linkUser(installId);
-
-        // return true to indicate to the SDK that user linking on your backend was successful
-        return true;
-  }
-);
+// returns Promise<CreateUserResult>
+const createUserResult = await SentianceCore.createUser({
+    appId, 
+    appSecret, 
+    platformUrl
+});
 ```
 
-#### Using an authentication code
+### Link a Sentiance user on the device to a third party ID
+
+Use this function to link an anonymous Sentiance user, which you've created by not specifying a user-linker, to your app's user.
+
+#### Using an Authentication Code (Recommended)
 
 ```javascript
+// returns Promise<UserLinkingResult>
 const userLinkingResult = await SentianceCore.linkUser(authenticationCode);
+```
+
+#### Using a Linker
+
+```javascript
+// returns Promise<UserLinkingResult>
+const userLinkingResult = await SentianceCore.linkUser(async (installId) => {
+    // request your backend to perform user linking
+    await linkUser(installId);
+    
+    // return true to indicate to the SDK that user linking on your 
+    // backend was successful. return false otherwise.
+    return true;
+  }
+);
 ```
 
 ### Enabling detections on the SDK
 
 ```javascript
+// returns Promise<EnableDetectionsResult>
 const enableDetectionsResult = await SentianceCore.enableDetections();
 console.log('SDK detection status is now ' + enableDetectionsResult.detectionStatus);
 ```
@@ -75,15 +97,11 @@ console.log('SDK detection status is now ' + enableDetectionsResult.detectionSta
 
 ### Disabling detections on the SDK
 
-Stopping is only allowed after successful initialization. While it's possible to "pause" the detections modules of the Sentiance SDK's, it's not recommended.
+While it's possible to "pause" the detections of the Sentiance SDK's, it's not recommended, as it can lead to missed detections (e.g. trips).
 
 ```javascript
-try {
-  const disableDetectionsResult = await SentianceCore.disableDetections();
-  // SDK stopped properly.
-} catch (err) {
-  // An error prevented the SDK from stopping correctly
-}
+// returns Promise<DisableDetectionsResult>
+const disableDetectionsResult = await SentianceCore.disableDetections();
 ```
 
 ### Init status
@@ -91,15 +109,17 @@ try {
 Checking if SDK is initialized
 
 ```javascript
+// returns Promise<SdkInitState>
 const initState = await SentianceCore.getInitState();
 const isInitialized = initState == "INITIALIZED";
 ```
 
 ### SDK status
 
-The status of the Sentiance SDK
+Getting the status of the SDK:
 
 ```javascript
+// returns Promise<SdkStatus>
 const sdkStatus = await SentianceCore.getSdkStatus();
 ```
 
@@ -114,48 +134,54 @@ const subscription = SentianceCore.addSdkStatusUpdateListener(sdkStatus => {
 subscription.remove();
 ```
 
-### Get SDK version
+### Get the SDK version
 
 ```javascript
+// returns Promise<string>
 const version = await SentianceCore.getVersion();
 ```
 
-### Get user id
+### Get the user ID
 
-If the SDK is initialized, you can get the user id as follows. This user id will allow you to interact with the API's from Sentiance. You need a token and user to authorize requests and query the right data.
+If the SDK is initialized, you can get the user ID as follows. This user ID will allow you to interact with the APIs from Sentiance. You need a token and a user ID to authorize requests and query the right data.
 
 ```javascript
+// returns Promise<string>
 const userId = await SentianceCore.getUserId();
 ```
 
 ### Check if user exists on device
 
 ```javascript
+// returns Promise<boolean>
 const doesUserExist = await SentianceCore.userExists();
 ```
 
 ### Check if the current user is linked to a third party ID
 
 ```javascript
+// returns Promise<boolean>
 const isUserLinked = await SentianceCore.isUserLinked();
 ```
 
-### Get user access token
+### Get the user access token
 
-If the SDK is initialized, you can get a user access token as follows. This token will allow you to interact with the API's from Sentiance. You need a token and user to authorize requests and query the right data. If the token has expired, or will expire soon, the SDK will get a new bearer token before passing it to the callback. Generally, this operation will complete instantly by returning a cached bearer token, but if a new token has to be obtained from the Sentiance API, there is a possibility it will fail.
+If the SDK is initialized, you can get a user access token as follows. This token will allow you to interact with the APIs from Sentiance. You need a token and a user ID to authorize requests and query the right data. If the token has expired, or will expire soon, the SDK will get a new bearer token before returning it. Generally, this operation will complete instantly by returning a cached bearer token, but if a new token has to be obtained from the Sentiance API, there is a possibility that it will fail.
 
 ```javascript
+// returns Promise<UserAccessToken>
 const userAccessToken = await SentianceCore.requestUserAccessToken();
 ```
 
 ### Adding custom metadata
 
-Custom metadata allows you to store text-based key-value user properties into the Sentiance platform. Examples are custom user id's, application related properties you need after the processing, ...
+Custom metadata allows you to store text-based key-value user properties on the Sentiance platform, such as application related properties, which you can then obtain when processing data offloads (generated by Sentiance).
 
 ```javascript
 const label = "correlation_id";
 const value = "3a5276ec-b2b2-4636-b893-eb9a9f014938";
 
+// returns Promise<void>
 await SentianceCore.addUserMetadataField(label, value);
 ```
 
@@ -166,6 +192,7 @@ You can remove previously added metadata fields by passing the metadata label to
 ```javascript
 const label = "correlation_id";
 
+// returns Promise<void>
 await SentianceCore.removeUserMetadataField(label);
 ```
 
@@ -176,27 +203,30 @@ You can add multiple custom metadata fields by passing an object to the addUserM
 ```javascript
 const metadata = { corrolation_id: "3a5276ec-b2b2-4636-b893-eb9a9f014938" };
 
+// returns Promise<void>
 await SentianceCore.addUserMetadataFields(metadata);
 ```
 
 ### Starting trip
 
-Whenever you call startTrip on the SDK, you override moving state detection and the SDK will track the trip until you call stopTrip or until the timeout (2 hours) is reached. `startTrip` accepts a metadata object and a transport mode hint (`number`) as parameters.
+When you call `startTrip` on the SDK, you override automatic SDK detections and force trip data collection, until you call `stopTrip`, or until the trip times out (only applicable to the triggered trip SDK flavor). `startTrip` accepts a metadata object and a transport mode hint (numeric) as parameters.
 
 Transport mode hint:
 
 ```
-SENTTransportModeUnknown = 1,
-SENTTransportModeCar = 2,
-SENTTransportModeBicycle = 3,
-SENTTransportModeOnFoot = 4,
-SENTTransportModeTrain = 5,
-SENTTransportModeTram = 6,
-SENTTransportModeBus = 7,
-SENTTransportModePlane = 8,
-SENTTransportModeBoat = 9,
-SENTTransportModeMetro = 10,
-SENTTransportModeRunning = 11
+export enum TransportMode {
+    UNKNOWN = 1,
+    CAR,
+    BICYCLE,
+    ON_FOOT,
+    TRAIN,
+    TRAM,
+    BUS,
+    PLANE,
+    BOAT,
+    METRO,
+    RUNNING
+}
 ```
 
 Example:
@@ -206,6 +236,7 @@ const metadata = { corrolation_id: "3a5276ec-b2b2-4636-b893-eb9a9f014938" };
 const transportModeHint = 1;
 
 try {
+  // returns Promise<void>
   await SentianceCore.startTrip(metadata, transportModeHint);
   // Trip is started
 } catch (err) {
@@ -217,6 +248,7 @@ try {
 
 ```javascript
 try {
+  // returns Promise<void>
   const trip = await SentianceCore.stopTrip();
   // Stopped trip
 } catch (err) {
@@ -224,7 +256,7 @@ try {
 }
 ```
 
-The SDK can also signal trip timeouts to JavaScript. You can subscribe to these trip timeouts:
+You can also receive trip timeout events:
 
 ```javascript
 const subscription = SentianceCore.addTripTimeoutListener(() => {
@@ -237,18 +269,20 @@ subscription.remove();
 
 ### Trip status
 
-Checking trip status
+Checking an ongoing trip status:
 
 ```javascript
+// returns Promise<boolean>
 const isTripOngoing = await SentianceCore.isTripOngoing();
 ```
 
 ### Control sending data
 
-If you want to override the default behavior, you can initiate a forced submission of detections. Ideally, you use this method only after explaining to the user that your app will consume more bandwidth in case the device is not connected to Wi-Fi.
+If you want to override the default SDK data submission behavior, you can initiate a forced submission of detections. Ideally, you use this method only after explaining to the user that your app will consume more bandwidth in case the device is not connected to Wi-Fi.
 
 ```javascript
 try {
+  // returns Promise<void>
   await SentianceCore.submitDetections();
 } catch (err) {
   // Something went wrong with submitting data, for more information, see the error variable
@@ -257,9 +291,10 @@ try {
 
 ### Disk, mobile network and Wi-Fi quotas
 
-The actual usages and limits in bytes can be obtained using the getWiFiQuotaUsage, getWiFiQuotaLimit and similar methods on the Sentiance SDK interface.
+The usage and limits of network and disk capacity in bytes can be obtained using the getWiFiQuotaUsage, getWiFiQuotaLimit and similar methods on the Sentiance SDK interface.
 
 ```javascript
+// returns Promise<string>
 const limit = await SentianceCore.getWiFiQuotaLimit();
 ```
 
@@ -274,13 +309,14 @@ All quota functions:
 
 ### User Activity
 
-Get user current activity
+To get the user's current activity:
 
 ```javascript
+// returns Promise<UserActivity>
 const userActivity = await SentianceCore.getUserActivity();
 ```
 
-The SDK can signal user activity updates to JavaScript without being invoked directly. You can subscribe to these user activity updates:
+You can subscribe to receive user activity updates:
 
 ```javascript
 const subscription = SentianceCore.addSdkUserActivityUpdateListener(userActivity => {
@@ -310,23 +346,24 @@ if (type === "USER_ACTIVITY_TYPE_STATIONARY") {
 }
 ```
 
-### Update SDK foreground notification (ANDROID ONLY)
+### Update the SDK foreground notification (ANDROID ONLY)
 
 Updates the title and text of SDK notification. After calling this method, any notification shown by the SDK will be updated.
 
 Note that this change is valid only during the process's lifetime. After the app process restarts, the SDK will display the default notification.
 
 ```javascript
-/** {string} title {string} message */
+// returns Promise<void>
 await SentianceCore.updateSdkNotification("RN SDK Sample", "SDK is running");
 ```
 
-### Clearing/Resetting the SDK
+### Resetting the SDK
 
-To delete the Sentiance user and its data from the device, you can reset the SDK by calling `SentianceCore.reset()`. This allows you to create a new Sentiance user by reinitializing the SDK, and link it to a new third party ID.
+To delete the Sentiance user and its data from the device, you can reset the SDK by calling `SentianceCore.reset()`. This allows you to create a new Sentiance user afterwards.
 
 ```javascript
 try {
+  // returns Promise<ResetResult>
   await SentianceCore.reset();
   // The SDK was successfully cleared and reset
 } catch (err) {
@@ -338,21 +375,24 @@ try {
 
 ### Enable/Disable app session data collection
 
-Call `setAppSessionDataCollectionEnabled` and pass in a `boolean` to enable/disable app session data collection:
+When the app is foregrounded, the SDK may collect various sensor data for analytics purposes. You can enables or disable this. By default, it's disabled.
 
 ```javascript
+// returns Promise<void>
 await SentianceCore.setAppSessionDataCollectionEnabled(true);
 ```
 
 ### Check app session data collection status
 
 ```javascript
+// returns Promise<boolean>
 const isAppSessionDataCollectionEnabled = 
     await SentianceCore.isAppSessionDataCollectionEnabled();
 ```
 
-### Disable battery optimization
+### Disable battery optimization (Android)
 
 ```javascript
+// returns Promise<void>
 await SentianceCore.disableBatteryOptimization();
 ```

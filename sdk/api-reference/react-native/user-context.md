@@ -18,9 +18,12 @@ npm i @sentiance-react-native/user-context
 import SentianceUserContext from "@sentiance-react-native/user-context";
 ```
 
+You can find a reference to all the types mentioned on this page [here](https://github.com/sentiance/react-native-sentiance/blob/main/packages/user-context/lib/index.d.ts).
+
 #### Request the current user context data
 
 ```javascript
+// returns Promise<UserContext>
 const userContext = await SentianceUserContext.requestUserContext();
 ```
 

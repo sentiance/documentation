@@ -3,7 +3,7 @@
 There are several ways to add the Sentiance SDK in your project:
 
 * [Using CocoaPods](using-cocoapods.md)
-* [Using Carthage](broken-reference)
+* [Using Carthage](using-carthage.md)
 * [Manually adding the framework](broken-reference)
 
 {% hint style="info" %}

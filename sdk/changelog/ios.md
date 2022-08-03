@@ -11,7 +11,7 @@ It's possible to build and run your Sentiance integrated app on an M1 Mac simula
 {% hint style="info" %}
 **Breaking Changes**
 
-Version 6.0.0 is a major release and includes multiple deprecations and breaking changes. Please read our [migration guide](../appendix/migration-guide/ios.md) to learn how to upgrade to this version.
+Version 6.0 is a major release and includes multiple deprecations and breaking changes. Please read our [migration guide](../appendix/migration-guide/ios.md) to learn how to upgrade to this version.
 
 Given the significance of the changes in this version, we recommend testing your app carefully, before making it available to your wider audience.
 {% endhint %}
@@ -57,6 +57,7 @@ Given the significance of the changes in this version, we recommend testing your
 * Prevent blocking the main thread during startup under certain conditions.
 * Improve the handling of false-trip detections.
 * Stability fixes when resetting the SDK.
+* OOM when uploading data to the Sentiance platform continuously fails.
 
 #### Removed
 

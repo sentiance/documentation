@@ -14,12 +14,15 @@ npm i @sentiance-react-native/legacy
 import RNSentiance from "@sentiance-react-native/legacy";
 ```
 
+You can find a reference to all the types mentioned on this page [here](https://github.com/sentiance/react-native-sentiance/blob/main/packages/legacy/lib/index.d.ts).
+
 ### Initialize the SDK and create a user
 
 #### Without User Linking
 
 ```javascript
-const shouldStart = true; // start the SDK
+const shouldStart = true; // start the SDK too
+// returns Promise<boolean | SdkStatus>
 const result = await RNSentiance.init(appId, secret, baseUrl, shouldStart);
 ```
 
@@ -36,7 +39,8 @@ emitter.addListener('SDKUserLink',
       }
     );
 
-const shouldStart = true; // start the SDK
+const shouldStart = true; // start the SDK too
+// returns Promise<boolean | SdkStatus>
 const result = await RNSentiance.initWithUserLinkingEnabled(
     appId, secret, baseUrl, shouldStart);
 ```
@@ -44,6 +48,7 @@ const result = await RNSentiance.initWithUserLinkingEnabled(
 ### Starting the SDK
 
 ```javascript
+// returns Promise<SdkStatus>
 const result = await RNSentiance.start();
 ```
 
@@ -51,15 +56,17 @@ You can also enable detections while also setting a future expiry date for the S
 
 ```javascript
 const expiryDate = Date.now() + 60 * 60 * 1000; // 1 hour from now
+// returns Promise<SdkStatus>
 const result = await RNSentiance.startWithStopDate(expiryDate);
 ```
 
 ### Stopping the SDK
 
-Stopping is only allowed after successful initialization. While it's possible to "pause" the detections modules of the Sentiance SDK's, it's not recommended.
+While it's possible to "pause" the detections of the Sentiance SDK's, it's not recommended, as it can lead to missed detections (e.g. trips).
 
 ```javascript
 try {
+  // returns Promise<boolean>
   const result = await RNSentiance.stop();
   // SDK stopped properly.
 } catch (err) {
@@ -69,22 +76,24 @@ try {
 
 ### Init status
 
-Checking if SDK is initialized
+Checking if SDK is initialized:
 
 ```javascript
+// returns Promise<SdkInitState>
 const initState = await RNSentiance.getInitState();
 const isInitialized = initState == "INITIALIZED";
 ```
 
 ### SDK status
 
-The status of the Sentiance SDK
+Getting the status of the SDK:
 
 ```javascript
+// returns Promise<SdkStatus>
 const sdkStatus = await RNSentiance.getSdkStatus();
 ```
 
-The SDK can signal SDK status updates to JavaScript without being invoked directly. You can subscribe to these status updates by creating a new NativeEventEmitter instance around your module, and adding a listener for `SDKStatusUpdate`.
+The SDK can signal SDK status updates to JavaScript without being invoked directly. You can subscribe to these status updates:
 
 ```javascript
 import { NativeEventEmitter } from "react-native";
@@ -99,36 +108,40 @@ const subscription = sentianceEmitter.addListener(
 subscription.remove();
 ```
 
-### Get SDK version
+### Get the SDK version
 
 ```javascript
+// returns Promise<string>
 const version = await RNSentiance.getVersion();
 ```
 
-### Get user id
+### Get the user ID
 
-If the SDK is initialized, you can get the user id as follows. This user id will allow you to interact with the API's from Sentiance. You need a token and user to authorize requests and query the right data.
+If the SDK is initialized, you can get the user ID as follows. This user ID will allow you to interact with the APIs from Sentiance. You need a token and a user ID to authorize requests and query the right data.
 
 ```javascript
+// returns Promise<string>
 const userId = await RNSentiance.getUserId();
 ```
 
-### Get user access token
+### Get the user access token
 
-If the SDK is initialized, you can get a user access token as follows. This token will allow you to interact with the API's from Sentiance. You need a token and user to authorize requests and query the right data. If the token has expired, or will expire soon, the SDK will get a new bearer token before passing it to the callback. Generally, this operation will complete instantly by returning a cached bearer token, but if a new token has to be obtained from the Sentiance API, there is a possibility it will fail.
+If the SDK is initialized, you can get a user access token as follows. This token will allow you to interact with the APIs from Sentiance. You need a token and a user ID to authorize requests and query the right data. If the token has expired, or will expire soon, the SDK will get a new bearer token before returning it. Generally, this operation will complete instantly by returning a cached bearer token, but if a new token has to be obtained from the Sentiance API, there is a possibility that it will fail
 
 ```javascript
+// returns Promise<UserAccessToken>
 const { tokenId } = await RNSentiance.getUserAccessToken();
 ```
 
 ### Adding custom metadata
 
-Custom metadata allows you to store text-based key-value user properties into the Sentiance platform. Examples are custom user id's, application related properties you need after the processing, ...
+Custom metadata allows you to store text-based key-value user properties on the Sentiance platform, such as application related properties, which you can then obtain when processing data offloads (generated by Sentiance).
 
 ```javascript
 const label = "correlation_id";
 const value = "3a5276ec-b2b2-4636-b893-eb9a9f014938";
 
+// returns Promise<boolean>
 await RNSentiance.addUserMetadataField(label, value);
 ```
 
@@ -139,6 +152,7 @@ You can remove previously added metadata fields by passing the metadata label to
 ```javascript
 const label = "correlation_id";
 
+// returns Promise<boolean>
 await RNSentiance.removeUserMetadataField(label);
 ```
 
@@ -149,27 +163,30 @@ You can add multiple custom metadata fields by passing an object to the addUserM
 ```javascript
 const metadata = { corrolation_id: "3a5276ec-b2b2-4636-b893-eb9a9f014938" };
 
+// returns Promise<boolean>
 await RNSentiance.addUserMetadataFields(metadata);
 ```
 
 ### Starting trip
 
-Whenever you call startTrip on the SDK, you override moving state detection and the SDK will track the trip until you call stopTrip or until the timeout (2 hours) is reached. `startTrip` accepts a metadata object and a transport mode hint (`number`) as parameters.
+When you call `startTrip` on the SDK, you override automatic SDK detections and force trip data collection, until you call `stopTrip`, or until the trip times out (only applicable to the triggered trip SDK flavor). `startTrip` accepts a metadata object and a transport mode hint (numeric) as parameters.
 
 Transport mode hint:
 
 ```
-SENTTransportModeUnknown = 1,
-SENTTransportModeCar = 2,
-SENTTransportModeBicycle = 3,
-SENTTransportModeOnFoot = 4,
-SENTTransportModeTrain = 5,
-SENTTransportModeTram = 6,
-SENTTransportModeBus = 7,
-SENTTransportModePlane = 8,
-SENTTransportModeBoat = 9,
-SENTTransportModeMetro = 10,
-SENTTransportModeRunning = 11
+export enum TransportMode {
+    UNKNOWN = 1,
+    CAR,
+    BICYCLE,
+    ON_FOOT,
+    TRAIN,
+    TRAM,
+    BUS,
+    PLANE,
+    BOAT,
+    METRO,
+    RUNNING
+}
 ```
 
 Example:
@@ -179,6 +196,7 @@ const metadata = { corrolation_id: "3a5276ec-b2b2-4636-b893-eb9a9f014938" };
 const transportModeHint = 1;
 
 try {
+  // returns Promise<boolean>
   await RNSentiance.startTrip(metadata, transportModeHint);
   // Trip is started
 } catch (err) {
@@ -190,6 +208,7 @@ try {
 
 ```javascript
 try {
+  // returns Promise<boolean>
   const trip = await RNSentiance.stopTrip();
   // Stopped trip
 } catch (err) {
@@ -197,7 +216,7 @@ try {
 }
 ```
 
-The SDK can also signal trip timeouts to JavaScript. You can subscribe to these trip timeouts by creating a new NativeEventEmitter instance around your module, and adding a listener for `TripTimeout`.
+You can also receive trip timeout events:
 
 ```javascript
 import { NativeEventEmitter } from "react-native";
@@ -210,18 +229,20 @@ const subscription = sentianceEmitter.addListener("TripTimeout", () => {
 
 ### Trip status
 
-Checking trip status
+Checking an ongoing trip status:
 
 ```javascript
+// returns Promise<boolean>
 const isTripOngoing = await RNSentiance.isTripOngoing();
 ```
 
 ### Control sending data
 
-If you want to override the default behavior, you can initiate a force submission of detections. Ideally, you use this method only after explaining to the user that your app will consume more bandwidth in case the device is not connected to Wi-Fi.
+If you want to override the default SDK data submission behavior, you can initiate a forced submission of detections. Ideally, you use this method only after explaining to the user that your app will consume more bandwidth in case the device is not connected to Wi-Fi.
 
 ```javascript
 try {
+  // returns Promise<boolean>
   await RNSentiance.submitDetections();
 } catch (err) {
   // Something went wrong with submitting data, for more information, see the error variable
@@ -230,9 +251,10 @@ try {
 
 ### Disk, mobile network and Wi-Fi quotas
 
-The actual usages and limits in bytes can be obtained using the getWiFiQuotaUsage, getWiFiQuotaLimit and similar methods on the Sentiance SDK interface.
+The usage and limits of network and disk capacity in bytes can be obtained using the getWiFiQuotaUsage, getWiFiQuotaLimit and similar methods on the Sentiance SDK interface.
 
 ```javascript
+// returns Promise<string>
 const limit = await RNSentiance.getWiFiQuotaLimit();
 ```
 
@@ -247,13 +269,14 @@ All quota functions:
 
 ### User Activity
 
-Get user current activity
+To get the user's current activity:
 
 ```javascript
+// returns Promise<UserActivity>
 const userActivity = await RNSentiance.getUserActivity();
 ```
 
-The SDK can signal user activity updates to JavaScript without being invoked directly. You can subscribe to these user activity updates by creating a new NativeEventEmitter instance around your module, and adding a listener for `SDKUserActivityUpdate`.
+You can subscribe to receive user activity updates:
 
 ```javascript
 import { NativeEventEmitter } from "react-native";
@@ -272,7 +295,7 @@ RNSentiance.listenUserActivityUpdates();
 subscription.remove();
 ```
 
-Handling user activity
+Handling user activity:
 
 ```javascript
 const { type, tripInfo, stationaryInfo } = userActivity;
@@ -291,23 +314,24 @@ if (type === "USER_ACTIVITY_TYPE_STATIONARY") {
 }
 ```
 
-### Update SDK foreground notification (ANDROID ONLY)
+### Update the SDK foreground notification (ANDROID ONLY)
 
 Updates the title and text of SDK notification. After calling this method, any notification shown by the SDK will be updated.
 
 Note that this change is valid only during the process's lifetime. After the app process restarts, the SDK will display the default notification.
 
 ```javascript
-/** {string} title {string} message */
+// returns Promise<boolean>
 await RNSentiance.updateSdkNotification("RN SDK Sample", "SDK is running");
 ```
 
 ### Resetting the SDK
 
-To delete the Sentiance user and its data from the device, you can reset the SDK by calling `RNSentiance.clear`. This allows you to create a new Sentiance user by reinitializing the SDK, and link it to a new third party ID.
+To delete the Sentiance user and its data from the device, you can reset the SDK by calling `RNSentiance.clear`. This allows you to create a new Sentiance user by reinitializing the SDK, and linking it to a new external ID.
 
 ```javascript
 try {
+  // returns Promise<boolean>
   await RNSentiance.clear();
   // The SDK was successfully cleared and reset
 } catch (err) {
@@ -326,25 +350,9 @@ To disable native initialization, invoke `await RNSentiance.disableNativeInitial
 
 Please refer to our [example app](https://github.com/sentiance/react-native-sentiance-example) for a complete usage.
 
-#### Invoke a dummy vehicle crash event
-
-```javascript
-await RNSentiance.invokeDummyVehicleCrash();
-```
-
-#### Check if crash detection is supported
-
-```javascript
-const crashDetectionSupported =
-  await RNSentiance.isVehicleCrashDetectionSupported("TRIP_TYPE_SDK");
-if (crashDetectionSupported) {
-  // setup vehicle crash event listener
-}
-```
-
 ### Vehicle Crash Event Detection
 
-Listen to vehicle crash events.
+Listen to vehicle crash events:
 
 ```javascript
 import { NativeEventEmitter } from "react-native";
@@ -359,4 +367,29 @@ RNSentiance.listenVehicleCrashEvents();
 
 // To unsubscribe
 vehicleCrashEventSubscription.remove();
+```
+
+#### Invoke a dummy vehicle crash event
+
+```javascript
+// returns Promise<boolean>
+await RNSentiance.invokeDummyVehicleCrash();
+```
+
+#### Check if crash detection is supported
+
+```javascript
+// returns Promise<boolean>
+const crashDetectionSupported =
+  await RNSentiance.isVehicleCrashDetectionSupported("TRIP_TYPE_SDK");
+if (crashDetectionSupported) {
+  // setup vehicle crash event listener
+}
+```
+
+### Disable battery optimization (Android)
+
+```javascript
+// returns Promise<boolean>
+await SentianceCore.disableBatteryOptimization();
 ```

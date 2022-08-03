@@ -5,7 +5,7 @@
 {% hint style="info" %}
 **Breaking Changes**
 
-Version 6.0.0 is a major release and includes multiple deprecations and breaking changes. Please read our [migration guide](../appendix/migration-guide/react-native.md) to learn how to update to this version.
+Version 6.0 is a major release and includes multiple deprecations and breaking changes. Please read our [migration guide](../appendix/migration-guide/react-native.md) to learn how to update to this version.
 
 Given the significance of the changes in this version, we recommend testing your app carefully, before making it available to your wider audience.
 {% endhint %}
