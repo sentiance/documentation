@@ -51,6 +51,7 @@
     * [Manifest Permissions](sdk/appendix/android/manifest-permission.md)
     * [Notification Management](sdk/appendix/android/notification-management.md)
     * [Sample Notification](sdk/appendix/android/sample-notification.md)
+    * [Supported API Levels](sdk/appendix/android/supported-api-levels.md)
   * [iOS](sdk/appendix/ios/README.md)
     * [App Store Privacy Section](sdk/appendix/ios/app-store-privacy-section.md)
     * [App Store Release](sdk/appendix/ios/app-store-release.md)
