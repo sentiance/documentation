@@ -5,7 +5,7 @@
 
 The Sentiance SDK requires iOS 13.0 or higher. Apps should be built with the latest iOS SDK provided by Apple/Xcode.
 
-Building and running your app on M1 Mac simulators is possible with the use of our [custom TensorFlow Lite framework](../../appendix/ios/m1-simulator-support.md).
+Building and running your app on M1 Mac simulators is possible with the use of our [custom TensorFlow Lite framework](../../appendix/ios/m1-simulator-support.md). List of all support architectures can be found [here](../../appendix/ios/supported-ios-versions-and-architectures.md).
 {% endhint %}
 
 {% hint style="success" %}
