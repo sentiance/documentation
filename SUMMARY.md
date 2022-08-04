@@ -57,6 +57,7 @@
     * [Dependencies](sdk/appendix/ios/dependencies.md)
     * [iOS 13 permission changes](sdk/appendix/ios/ios-13-permissions.md)
     * [M1 Simulator Support](sdk/appendix/ios/m1-simulator-support.md)
+    * [Supported iOS Versions & Architectures](sdk/appendix/ios/supported-ios-versions-and-architectures.md)
     * [Swift Support](sdk/appendix/ios/swift-support.md)
   * [Control Sending Data](sdk/appendix/control-sending-data.md)
   * [Controlled Detections](sdk/appendix/controlled-detections/README.md)
