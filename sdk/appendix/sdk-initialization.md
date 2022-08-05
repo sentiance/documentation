@@ -4,7 +4,7 @@
 
 If a Sentiance user has not yet been created on the device, initialization simply sets up internal SDK components to make it possible to create a user at a later time.
 
-When a Sentiance user is already present on the device, during initialization, the SDK constructs all the components that are necessary to do detections, networking, and maintenance work. Moreover, if detections were previously enabled, initialization will resume these detections in the background, without requiring app intervention.
+If a Sentiance user is already present on the device, during initialization, the SDK constructs all the components that are necessary to do detections, networking, and maintenance work. Moreover, if detections were previously enabled, initialization will resume these detections in the background, without requiring app intervention.
 
 ## Why Initialize in the Application / AppDelegate Class?
 
@@ -26,4 +26,4 @@ You must initialize the SDK on every app startup. In most cases, you need to ini
 
 Technically, you can keep initializing the SDK as long as there is no Sentiance user, for example, to overwrite the Sentiance options that you had passed to the initializer. But once a Sentiance user is created, subsequent initializations during the same lifetime of the app will fail.
 
-To check whether the SDK has been initialized, call `getInitState()` on Android, or check the `initState` property on iOS.
+To check whether the SDK has been initialized, check the `initState` property of the `Sentiance` class..
