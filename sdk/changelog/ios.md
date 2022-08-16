@@ -17,6 +17,18 @@ It's possible to build and run your Sentiance integrated app on an M1 Mac simula
 * Failure to deliver SDK status updates when the location permission or precision changes.
 * Blocking of the main thread during app startup, under rare circumstances.
 
+## \[5.15.1] - 16 Aug 2022
+
+#### Added
+
+* Restored support for the armv7 architecture.
+
+#### Fixed
+
+* Failure to update the deep learning crash detection model under certain circumstances, after an SDK update.
+* Usage of incorrect trip-end location.
+* Rare stack overflow issue when submitting detections during SDK initialization.
+
 ## \[6.0.0] - 1 Aug 2022
 
 {% hint style="info" %}
