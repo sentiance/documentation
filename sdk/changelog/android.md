@@ -1,5 +1,12 @@
 # Android
 
+## \[6.0.1] - 16 Aug 2022
+
+#### Fixed
+
+* Failure to reset the SDK, when the SDK hasn't been initialized yet.
+* Invalid SDK state, when user creation is interrupted by app termination or unfinished user linking, requiring an SDK reset to be able to complete user creation.
+
 ## \[6.0.0] - 1 Aug 2022
 
 {% hint style="info" %}

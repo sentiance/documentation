@@ -1,5 +1,11 @@
 # React Native
 
+## \[6.0.2] - 16 Aug 2022
+
+#### Changed
+
+* Relax the target Sentiance SDK versions, to include patches.
+
 ## \[6.0.1] - 1 Aug 2022
 
 {% hint style="info" %}

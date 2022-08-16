@@ -6,6 +6,17 @@
 It's possible to build and run your Sentiance integrated app on an M1 Mac simulator, with the use of our custom TensorFlowLiteC framework. See [this guide](../appendix/ios/m1-simulator-support.md).
 {% endhint %}
 
+## \[6.0.1] - 16 Aug 2022
+
+#### Fixed
+
+* Failure to update the deep learning crash detection model under certain circumstances, after an SDK update.
+* Usage of incorrect trip-end location.
+* Incorrectly returned NSDictionary as the user creation error detail, instead of an NSString.
+* Invalid SDK state, when user creation is interrupted by app termination or unfinished user linking, requiring an SDK reset to be able to complete user creation.
+* Failure to deliver SDK status updates when the location permission or precision changes.
+* Blocking the main thread during app startup, under rare circumstances.
+
 ## \[6.0.0] - 1 Aug 2022
 
 {% hint style="info" %}

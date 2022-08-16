@@ -1,7 +1,5 @@
 # 1. Including the SDK
 
-The latest version of the Sentiance SDK is **6.0.0**.
-
 ## Adding the Gradle Dependency
 
 Add the Sentiance repository to your **** project (top-level) **build.gradle** file.
