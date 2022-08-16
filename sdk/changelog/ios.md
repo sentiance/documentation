@@ -15,7 +15,7 @@ It's possible to build and run your Sentiance integrated app on an M1 Mac simula
 * Incorrectly returned NSDictionary as the user creation error detail, instead of an NSString.
 * Invalid SDK state, when user creation is interrupted by app termination or unfinished user linking, requiring an SDK reset to be able to complete user creation.
 * Failure to deliver SDK status updates when the location permission or precision changes.
-* Blocking the main thread during app startup, under rare circumstances.
+* Blocking of the main thread during app startup, under rare circumstances.
 
 ## \[6.0.0] - 1 Aug 2022
 
