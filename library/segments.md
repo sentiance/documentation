@@ -109,5 +109,4 @@ See the SDK or [REST API](../backend/rest-api/) docs on how to access these segm
 | Work Life Balance | Person who has a good balance between work and home life | work_life.home.work_life_balance |
 | Work Traveller | Person who works a lot remotely (travelling or in remote environments) | work_life.work.work_traveller |
 | Workaholic | Person who works more than average | work_life.work.workaholic |
-
-_( based on decision engine v0.3.1 )_
+_( based on decision engine v0.3.2-SNAPSHOT )_
