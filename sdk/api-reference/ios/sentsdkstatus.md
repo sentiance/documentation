@@ -91,7 +91,9 @@ True if device has a GPS unit
 
 ### wifiQuotaStatus
 
-Indicates WiFi quota state
+Indicates WiFi quota state.
+
+Sentiance assigns a limited quota for the SDK to utilized over a period of 1 month. The quota usage is reset on the first day of each month. Once the quota is exceeded, data submission over WiFi stops. The default quota is 2048 MB, but is configurable by Sentiance.
 
 ```objectivec
 @property(nonatomic, assign) SENTQuotaStatus wifiQuotaStatus;
@@ -99,7 +101,9 @@ Indicates WiFi quota state
 
 ### mobileQuotaStatus
 
-Indicates mobile data quota state
+Indicates mobile data quota state.
+
+Sentiance assigns a limited quota for the SDK to utilized over a period of 1 month. The quota usage is reset on the first day of each month. Once the quota is exceeded, data submission over mobile data stops. The default quota is 250 MB, but is configurable by Sentiance.
 
 ```objectivec
 @property(nonatomic, assign) SENTQuotaStatus mobileQuotaStatus;
@@ -107,7 +111,9 @@ Indicates mobile data quota state
 
 ### diskQuotaStatus
 
-Indicates disk quota state
+Indicates disk quota state.
+
+Sentiance assigns a limited quota for the SDK to utilized. Once the quota is exceeded, SDK detections stop. The default quota is 128 MB, but is configurable by Sentiance.
 
 ```objectivec
 @property(nonatomic, assign) SENTQuotaStatus diskQuotaStatus;

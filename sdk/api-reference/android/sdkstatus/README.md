@@ -125,15 +125,21 @@ Use `detectionStatus` instead.
 > A [`QuotaStatus`](quota-status.md) enum representing the WiFi quota status of the SDK.
 >
 > The actual usages and limits in bytes can be obtained using the [`getWiFiQuotaUsage()`](../sentiance.md.md#getwifiquotausage), [`getWiFiQuotaLimit()`](../sentiance.md.md#getwifiquotalimit).
+>
+> Sentiance assigns a limited quota for the SDK to utilized over a period 30 days (sliding window). Once the quota is exceeded, data submission over WiFi stops. The default quota is 2048 MB, but is configurable by Sentiance.
 
 ### `mobileQuotaStatus`
 
 > A [`QuotaStatus`](quota-status.md) enum representing the mobile data quota status of the SDK.
 >
 > The actual usages and limits in bytes can be obtained using the [`getMobileQuotaUsage()`](../sentiance.md.md#getmobilequotausage), [`getMobileQuotaLimit()`](../sentiance.md.md#getmobilequotalimit).
+>
+> Sentiance assigns a limited quota for the SDK to utilized over a period of 30 days (sliding window). Once the quota is exceeded, data submission over mobile data stops. The default quota is 250 MB, but is configurable by Sentiance.
 
 ### `diskQuotaStatus`
 
 > A [`QuotaStatus`](quota-status.md) enum representing the disk quota status of the SDK.
 >
 > The actual usages and limits in bytes can be obtained using the [`getDiskQuotaUsage()`](../sentiance.md.md#getdiskquotausage), [`getDiskQuotaLimit()`](../sentiance.md.md#getdiskquotalimit).
+>
+> Sentiance assigns a limited quota for the SDK to utilized. Once the quota is exceeded, SDK detections stop. The default quota is 128 MB, but is configurable by Sentiance.
