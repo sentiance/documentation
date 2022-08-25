@@ -46,7 +46,17 @@ SDK current user activity state. It is a trip or stationary with some enriched i
 @property (nonatomic, readonly) SENTUserActivity * userActivity;
 ```
 
+### criteriaMaskForUserContextUpdates
 
+{% hint style="info" %}
+This method is part of an [Early Access](../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
+{% endhint %}
+
+The criteria for which the delegate property `userContextDelegate` will get invoked.
+
+```objectivec
+@property (nonatomic, assign) SENTUserContextUpdateCriteria criteriaMaskForUserContextUpdates;
+```
 
 ### userContextDelegate
 
@@ -68,8 +78,6 @@ SDK Version property
 @property (nonatomic, readonly) NSString * version;
 ```
 
-
-
 ### userId
 
 Returns the user ID.
@@ -77,8 +85,6 @@ Returns the user ID.
 ```objectivec
 @property (nonatomic, readonly, nullable) NSString * userId;
 ```
-
-
 
 ### userExists
 
@@ -88,8 +94,6 @@ Checks if a Sentiance user exists on the device. You may call this method withou
 @property (nonatomic, readonly) BOOL userExists;
 ```
 
-
-
 ### isUserLinked
 
 Checks if a Sentiance user exists on the device, and whether it is linked to your app's user. You may call this method without having initialized the SDK. Returns **** true if a Sentiance user exists and is linked.
@@ -97,8 +101,6 @@ Checks if a Sentiance user exists on the device, and whether it is linked to you
 ```objectivec
 @property (nonatomic, readonly) BOOL isUserLinked;
 ```
-
-
 
 ### isVehicleCrashDetectionSupported
 
@@ -108,8 +110,6 @@ Checks if vehicle crash detection is supported on the device. The result depends
 @property (nonatomic, readonly) BOOL isVehicleCrashDetectionSupported;
 ```
 
-
-
 ### wifiQuotaLimit
 
 SDK WiFi quota limit
@@ -117,8 +117,6 @@ SDK WiFi quota limit
 ```objectivec
 @property (nonatomic, readonly) long wifiQuotaLimit;
 ```
-
-
 
 ### wifiQuotaUsage
 
@@ -128,8 +126,6 @@ SDK WiFi quota usage
 @property (nonatomic, readonly) long wifiQuotaUsage;
 ```
 
-
-
 ### mobileQuotaLimit
 
 SDK mobile data quota limit
@@ -137,8 +133,6 @@ SDK mobile data quota limit
 ```
 @property (nonatomic, readonly) long mobileQuotaLimit;
 ```
-
-
 
 ### mobileQuotaUsage
 
@@ -148,8 +142,6 @@ Get SDK mobile data quota usage
 @property (nonatomic, readonly) long mobileQuotaUsage;
 ```
 
-
-
 ### diskQuotaLimit
 
 SDK disk quota limit
@@ -157,8 +149,6 @@ SDK disk quota limit
 ```
 @property (nonatomic, readonly) long diskQuotaLimit;
 ```
-
-
 
 ### diskQuotaUsage
 
