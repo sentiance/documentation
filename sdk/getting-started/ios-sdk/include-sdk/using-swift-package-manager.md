@@ -8,7 +8,7 @@
 2. In the search bar, enter [https://github.com/sentiance/sentsdk-package](https://github.com/sentiance/sentsdk-package).
 3. Select **sentsdk-package** from the results.
 4. Choose "Up to Next Minor Version" as the Dependency Rule, and enter the target SDK version.
-5. Select your project from the "Add to Project" section, and click Add Package. Wait for the product select dialog to load.
+5. Select your project from the "Add to Project" section, and click Add Package. Wait for the product selection dialog to load.
 6. From the dialog, select **SENTSDK**, and optionally the other products (see next section).
 7. Finally in your project build settings, add the following to the **Other Linker Flags**: `-lz`, `-lc++`, and `-all_load`.
 
