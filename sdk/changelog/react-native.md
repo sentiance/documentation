@@ -1,5 +1,12 @@
 # React Native
 
+## \[6.0.3] - 30 Aug 2022
+
+#### Fixed
+
+* The module names in the type definition files.
+* Starting and stopping a trip on iOS via the core package.
+
 ## \[6.0.2] - 16 Aug 2022
 
 #### Changed

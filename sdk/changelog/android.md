@@ -1,5 +1,17 @@
 # Android
 
+## \[6.0.2] - 30 Aug 2022
+
+#### Changed
+
+* Improved the vehicle crash detection algorithm.
+
+## \[4.22.2] - 30 Aug 2022
+
+#### Changed
+
+* Improved the vehicle crash detection algorithm.
+
 ## \[6.0.1] - 16 Aug 2022
 
 #### Fixed

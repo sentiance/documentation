@@ -2,7 +2,7 @@
 
 ### 1. Download the SDK
 
-Download the latest Sentiance iOS SDK [v6.0.1](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK-6.0.1.xcframework.zip).
+Download the latest Sentiance iOS SDK [v6.0.2](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK/6.0.2/SENTSDK-6.0.2.xcframework.zip).
 
 ### 2. Import the Framework <a href="#manual-integration-step-2" id="manual-integration-step-2"></a>
 
@@ -31,7 +31,14 @@ The SDK XCFramework bundles all its necessary dependencies under the **External*
 2. Click the **+** button under the **Frameworks, Libraries, and Embedded Content** heading.
 3. Click **Add Other** and then **Add Files**.
 4. Go to the **Frameworks** folder inside the Sentiance framework, select the dependency .**xcframework** file and click **Open**.
-5. After the item has been added to the list, change the **Embed** option next to the framework to **Do Not Embed**.
+5. After the item has been added to the list, update the **Embed** option next to the framework as follows:
+
+| Framework                       | Embed Option |
+| ------------------------------- | ------------ |
+| ProtocolBuffers.xcframework     | Do Not Embed |
+| UnzipKit.xcframework            | Do Not Embed |
+| SENTTensorFlowLiteC.xcframework | Embed & Sign |
+| mpde.xcframework                | Embed & Sign |
 
 To learn more about these dependencies, see [this page](../../../appendix/ios/dependencies.md).
 

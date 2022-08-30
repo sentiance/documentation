@@ -1,10 +1,33 @@
 # iOS
 
-{% hint style="info" %}
-#### M1 Mac Simulator Support
+## \[6.0.2] - 30 Aug 2022
 
-It's possible to build and run your Sentiance integrated app on an M1 Mac simulator, with the use of our custom TensorFlowLiteC framework. See [this guide](../appendix/ios/m1-simulator-support.md).
+{% hint style="info" %}
+#### Swift Package Manager Support
+
+Starting with this release, you can add the Sentiance SDK to your project as Swift Package. See [these](../getting-started/ios-sdk/include-sdk/using-swift-package-manager.md) instructions.
 {% endhint %}
+
+#### Changed
+
+* Sentiance's [custom](../appendix/ios/m1-simulator-support.md) TensorFlowLiteC v2.7.0 XCFramework has been repackaged as a dynamic library framework. If you've integrated the SDK manually or by using Carthage, and will use the TensorFlowLiteC framework bundled in this release, make sure to update your project settings to embed and sign the TensorFlowLiteC framework. For other integration types, no changes are required.
+* Improved the vehicle crash detection algorithm.
+
+#### Fixed
+
+* Occasional slow initialization while loading the SDK's resource bundle on some devices.
+* Unterminated background processing and app refresh tasks, after the tasks have finished.
+* Motion & Fitness permission dialog triggered by the SDK, when the step counting feature is activated.
+* Optimized the download of venue data, used for on-device processing.
+* An issue where a handler/listener that was set on the SDK would be lost after resetting the SDK.
+* An issue where the SDK stops immediately after being initialized, when using the deprecated initializer.
+* A rare issue where the main thread gets blocked while processing location data.
+
+## \[5.15.2] - 30 Aug 2022
+
+#### Changed
+
+* Improved the vehicle crash detection algorithm.
 
 ## \[6.0.1] - 16 Aug 2022
 
