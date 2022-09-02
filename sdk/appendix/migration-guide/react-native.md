@@ -28,6 +28,10 @@ The `@sentiance-react-native/core` module contains functionality that is needed 
 
 Version 6.x makes use of Java 8 language features. Make sure your app is configured to support Java 8. See [this](https://developer.android.com/studio/write/java8-support#supported\_features) guide.
 
+#### iOS Pod Update
+
+The iOS pod has changed from `RNSentiance` to `RNSentianceCore`, along with a new podspec file located under `../node_modules/react-native-sentiance/ios`.
+
 ### Code Changes & Deprecations
 
 Below is the list of deprecations and code changes that were made in 6.x.
@@ -208,7 +212,7 @@ Please note that it is only possible to do a minimal migration if you are using 
 
 Start by removing the `react-native-sentiance` dependency from your project's **package.json** file. You can do so by running the following command on your project's root folder:
 
-```shell
+```bash
 npm uninstall react-native-sentiance
 ```
 
@@ -255,7 +259,31 @@ dependencies {
 ```
 {% endcode %}
 
-#### 2. Update your Javascript imports
+#### 2. Add v6 dependency
+
+Run:
+
+```bash
+npm install @sentiance-react-native/core @sentiance-react-native/legacy
+```
+
+#### 3. Update your iOS Podfile
+
+Replace the following line:
+
+```
+pod 'RNSentiance', :path => '../node_modules/react-native-sentiance/ios/RNSentiance.podspec'
+```
+
+with:
+
+```
+pod 'RNSentianceCore', :path => '../node_modules/@sentiance-react-native/core/ios'
+```
+
+and then run `pod install` from within your project's **ios/** directory.
+
+#### 4. Update your Javascript imports
 
 Replace all occurrences of this import in your code:
 
@@ -269,11 +297,11 @@ with the following:
 import RNSentiance from '@sentiance-react-native/legacy';
 ```
 
-#### 3. Update the Sentiance SDK event names
+#### 5. Update the Sentiance SDK event names
 
 Refer to this [section](react-native.md#sdk-native-event-names) for more details on the changes to the SDK event names. Make sure to replace every occurrence of the old event names with their corresponding new ones.
 
-#### 4. Update the AndroidManifest.xml file
+#### 6. Update the AndroidManifest.xml file
 
 When running in the background, the Sentiance SDK needs to start a foreground service and supply a notification to Android, which gets shown to the user when the service is running.&#x20;
 
@@ -334,7 +362,31 @@ dependencies {
 ```
 {% endcode %}
 
-#### 2. Update your Javascript imports
+#### 2. Add v6 dependency
+
+Run:
+
+```bash
+npm install @sentiance-react-native/core @sentiance-react-native/crash-detection
+```
+
+#### 3. Update your iOS Podfile
+
+Replace the following line:
+
+```
+pod 'RNSentiance', :path => '../node_modules/react-native-sentiance/ios/RNSentiance.podspec'
+```
+
+with:
+
+```
+pod 'RNSentianceCore', :path => '../node_modules/@sentiance-react-native/core/ios'
+```
+
+and then run `pod install` from within your project's **ios/** directory.
+
+#### 4. Update your Javascript imports
 
 The previous version of the Sentiance React Native SDK provided the following crash-detection related functionality:
 
@@ -374,7 +426,7 @@ with the following:
 import RNSentiance from '@sentiance-react-native/core';
 ```
 
-#### 3. Update the SDK initialization
+#### 5. Update the SDK initialization
 
 In your existing integration, you may be initializing the Sentiance SDK in different ways:
 
@@ -422,7 +474,7 @@ If you are using the experimental methods for integrating the SDK, the ones intr
 
 Finally, enabling/disabling the native initialization is no longer supported. Make sure to remove any calls to the old `enableNativeInitialization`, `disableNativeInitialization`, `isNativeInitializationEnabled` functions from your code.
 
-#### 4. Update the user creation process
+#### 6. Update the user creation process
 
 In your existing integration, you will likely have some conditional logic that calls `init` or `initWithUserLinkingEnabled` in order to create a Sentiance user.
 
@@ -503,21 +555,21 @@ In addition to the user-linker based approach of creating users, we have introdu
 
 For more information on user creation, check out [this](../user-creation.md) page.
 
-#### 5. Update the AndroidManifest.xml file
+#### 7. Update the AndroidManifest.xml file
 
 When running in the background, the Sentiance SDK needs to start a foreground service and supply a notification to Android, which gets shown to the user when the service is running.&#x20;
 
 On Android, you could customize this notification via the **AndroidManifest.xml** file by specifying custom meta-data entries. The prefix to the names of these entries has changed from `com.sentiance.react.bridge` to `com.sentiance.react.bridge.core`. Make sure to update your code accordingly.
 
-#### 5. Update the Sentiance SDK event names
+#### 8. Update the Sentiance SDK event names
 
 Refer to this [section](react-native.md#sdk-native-event-names) for more details on the changes to the SDK event names. Make sure to replace every occurrence of the old event names with their corresponding new ones.
 
-#### 6. Update other deprecated function usages
+#### 9. Update other deprecated function usages
 
 Refer to this [section](react-native.md#deprecated-functions) to view the full list of functions that have been deprecated, and make sure to replace the existing usage of the deprecated functions on that list with their new counterparts.
 
-#### 7. Additional required changes (only if you are migrating from v4.7.1+)
+#### 10. Additional required changes (only if you are migrating from v4.7.1+)
 
 * The `createUserExperimental` function has been deprecated. Use `createUser` instead:
 
