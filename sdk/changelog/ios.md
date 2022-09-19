@@ -1,5 +1,17 @@
 # iOS
 
+## \[6.0.3] - 19 Sep 2022
+
+#### Fixed
+
+* Runtime exception when attempting to remove CLCircularRegions that were created by the SDK, while the app is also monitoring CLBeaconRegions.
+
+## \[5.15.3] - 19 Sep 2022
+
+#### Fixed
+
+* Runtime exception when attempting to remove CLCircularRegions that were created by the SDK, while the app is also monitoring CLBeaconRegions.
+
 ## \[6.0.2] - 30 Aug 2022
 
 {% hint style="info" %}
@@ -112,7 +124,7 @@ Given the significance of the changes in this version, we recommend testing your
 * `setTripProfileHandler:`, `setFullTripProfilingEnabled:`, `setSpeedLimit:`&#x20;
 * `SdkStatus.isLocationPermGranted`
 
-## \[5.15.0] - 13 July 2022
+## \[5.15.0] - 13 Jul 2022
 
 #### Added
 
@@ -131,7 +143,7 @@ Given the significance of the changes in this version, we recommend testing your
 
 * Support for armv7 (device) and i386 (simulator) architectures.
 
-## \[5.14.1] - 4 July 2022
+## \[5.14.1] - 4 Jul 2022
 
 #### Added
 
@@ -359,7 +371,7 @@ This release updates the SDK's TensorFlow Lite dependency version to 2.7.0. If y
 
 * An issue that caused location observation to not stop properly when [`startWithStopDate:completion:`](https://docs.sentiance.com/sdk/api-reference/ios/sentsdk#startwithstopdate) is used
 
-## \[5.4.0] - 2 July 2019
+## \[5.4.0] - 2 Jul 2019
 
 #### Added
 

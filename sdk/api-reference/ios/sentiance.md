@@ -378,23 +378,33 @@ NS_SWIFT_NAME(createUser(options:completionHandler:));
 
 Links the Sentiance user to your app's user on the Sentiance Platform.
 
-During the linking process, the SDK will invoke the supplied SENTUserLinker, and will pass to it an installation ID. Your app must then forward this installation ID to the Sentiance backend (via your backend), and initiate user linking. Finally, when the linking completes, you must invoke the proper linker callback to complete the process.
+During the linking process, the SDK will call the link method of the supplied UserLinker, and will pass to it an installation ID. Your app must then forward this installation ID to the Sentiance backend (via your backend), and initiate user linking.\
+
+
+Finally, when the linking completes, you must invoke the proper linker callback to complete the process.\
+
 
 Here are the complete steps:
 
-1. Call this method and supply a linker.
-2. Your linker will be invoked during the process, and an installation ID will be supplied.
-3. In your linker, forward the installation ID to your backend to initiate a linking request towards the Sentiance backend. This request will include the installation ID and your app's user identifier.
-4. Retrieve the response from the Sentiance backend and forward the result to the app.
-5. Based on the result, invoke the linker callback's success or failure method. The callback is supplied to your linker along with the installation ID.
-6. If it was successful, the SDK will confirm the result with the Sentiance backend to complete the link.
+1\. Call this method and supply a linker.
 
-This method is useful if you want to link a Sentiance user that was created without specifying a linker in the user creation options (thereby having created an unlinked user).
+2\. Your linker will be invoked during the process, and an installation ID will be supplied.
+
+3\. In your linker, forward the installation ID to your backend to initiate a linking request towards the Sentiance backend. This request will include the installation ID and your app's user identifier.
+
+4\. Retrieve the response from the Sentiance backend and forward the result to the app.
+
+5\. Based on the result, invoke the linker callback's success or failure method. The callback is supplied to  your linker along with the installation ID.
+
+6\. If it was successful, the SDK will confirm the result with the Sentiance backend to complete the link.
+
+This method is useful if you want to link a Sentiance user that was created by specifying the SENTNoOpUserLinker linker in the user creation options (thereby having created an unlinked user).
 
 {% hint style="info" %}
-With this method, a Sentiance user cannot be linked to an app user that already exists on the Sentiance Platform (i.e. with an app user identifier that you already supplied to Sentiance during a past linking request).
+Note that with this method, a Sentiance user cannot be linked to an app user that already exists on the Sentiance Platform (i.e. with an app user identifier that you already supplied to Sentiance during a past authentication code request). You can only link to an app user that is new to Sentiance.&#x20;
 
-You can only link to an app user that is new to Sentiance. This is because an existing app user will already have a corresponding Sentiance user on the platform, and that Sentiance user cannot be restored here anymore. To restore that user, you must reset the SDK and recreate a linked Sentiance user instead.
+This is because an existing app user will already have a corresponding Sentiance user on the platform, and that Sentiance user cannot be restored here anymore. To restore that user, you must reset the SDK and recreate a linked Sentiance user instead.\
+
 {% endhint %}
 
 **parameter:** [linker](user-creation-and-linking/user-linking/metauserlinker.md): the linker that the SDK will pass the installation ID to and execute success and failure closures according to result.
@@ -410,22 +420,29 @@ You can only link to an app user that is new to Sentiance. This is because an ex
 
 ### linkUserWithAuthCode: completionHandler:&#x20;
 
-Links the Sentiance user to your app's user on the Sentiance Platform.
+Links the Sentiance user to your app's user, on the Sentiance Platform.\
 
-Uses the supplied authentication code to find the app user. Therefore, before calling this method, make sure that you have obtained a valid code from the backend Sentiance API (thereby having initiated the first linking step). This code request is authenticated using a Sentiance API key, which must never be transmitted to the app. Hence why the request must come from your backend.
+
+Uses the supplied authentication code to find the app user. Therefore, before calling this method, make sure that you have obtained a valid code from the backend Sentiance API (thereby having initiated the first linking step).
+
+This code request is authenticated using a Sentiance API key, which must never be transmitted to the app. Hence why the request must come from your backend.
+
+&#x20;
 
 Here are the complete steps:
 
-1. Retrieve the code in your app and supply it to this method.
-2. Initiate an authentication code request via your backend towards the Sentiance backend. This request will include your app's user identifier, which will be temporarily coupled to the code that you will receive.
-3. The SDK will forward the code to the Sentiance backend to complete the link.
+1\.  Retrieve the code in your app and supply it to this method.
 
-This method is useful if you want to link a Sentiance user that was previously created without specifying a linker in the user creation options (thereby having created an unlinked user).
+2\.  Initiate an authentication code request via your backend towards the Sentiance backend. This request will include your app's user identifier, which will be temporarily coupled to the code that you will receive.
+
+3\.  The SDK will forward the code to the Sentiance backend to complete the link.
 
 {% hint style="info" %}
-With this method, a Sentiance user cannot be linked to an app user that already exists on the Sentiance Platform (i.e. with an app user identifier that you already supplied to Sentiance during a past authentication code request). You can only link to an app user that is new to Sentiance.
+Note that with this method, a Sentiance user cannot be linked to an app user that already exists on the Sentiance Platform (i.e. with an app user identifier that you already supplied to Sentiance during a past authentication code request). You can only link to an app user that is new to Sentiance. This is because an existing app user will already have a corresponding Sentiance user on the platform, and that Sentiance user cannot be restored here anymore. To restore that user, you must reset the SDK and recreate a linked Sentiance user instead.\
 
-This is because an existing app user will already have a corresponding Sentiance user on the platform, and that Sentiance user cannot be restored here anymore. To restore that user, you must reset the SDK and recreate a linked Sentiance user instead.
+
+This method is useful if you want to link a Sentiance user that was previously created by specifying the SENTNoOpUserLinker linker in the user creation options (thereby having created an unlinked user).\
+
 {% endhint %}
 
 **parameters:** authCode - a code obtained from the backend Sentiance API.
