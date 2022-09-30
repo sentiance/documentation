@@ -378,33 +378,23 @@ NS_SWIFT_NAME(createUser(options:completionHandler:));
 
 Links the Sentiance user to your app's user on the Sentiance Platform.
 
-During the linking process, the SDK will call the link method of the supplied UserLinker, and will pass to it an installation ID. Your app must then forward this installation ID to the Sentiance backend (via your backend), and initiate user linking.\
-
-
-Finally, when the linking completes, you must invoke the proper linker callback to complete the process.\
-
+During the linking process, the SDK will invoke the supplied SENTUserLinker, and will pass to it an installation ID. Your app must then forward this installation ID to the Sentiance backend (via your backend), and initiate user linking. Finally, when the linking completes, you must invoke the proper linker callback to complete the process.
 
 Here are the complete steps:
 
-1\. Call this method and supply a linker.
+1. Call this method and supply a linker.
+2. Your linker will be invoked during the process, and an installation ID will be supplied.
+3. In your linker, forward the installation ID to your backend to initiate a linking request towards the Sentiance backend. This request will include the installation ID and your app's user identifier.
+4. Retrieve the response from the Sentiance backend and forward the result to the app.
+5. Based on the result, invoke the linker callback's success or failure method. The callback is supplied to your linker along with the installation ID.
+6. If it was successful, the SDK will confirm the result with the Sentiance backend to complete the link.
 
-2\. Your linker will be invoked during the process, and an installation ID will be supplied.
-
-3\. In your linker, forward the installation ID to your backend to initiate a linking request towards the Sentiance backend. This request will include the installation ID and your app's user identifier.
-
-4\. Retrieve the response from the Sentiance backend and forward the result to the app.
-
-5\. Based on the result, invoke the linker callback's success or failure method. The callback is supplied to  your linker along with the installation ID.
-
-6\. If it was successful, the SDK will confirm the result with the Sentiance backend to complete the link.
-
-This method is useful if you want to link a Sentiance user that was created by specifying the SENTNoOpUserLinker linker in the user creation options (thereby having created an unlinked user).
+This method is useful if you want to link a Sentiance user that was created without specifying a linker in the user creation options (thereby having created an unlinked user).
 
 {% hint style="info" %}
-Note that with this method, a Sentiance user cannot be linked to an app user that already exists on the Sentiance Platform (i.e. with an app user identifier that you already supplied to Sentiance during a past authentication code request). You can only link to an app user that is new to Sentiance.&#x20;
+With this method, a Sentiance user cannot be linked to an app user that already exists on the Sentiance Platform (i.e. with an app user identifier that you already supplied to Sentiance during a past linking request).
 
-This is because an existing app user will already have a corresponding Sentiance user on the platform, and that Sentiance user cannot be restored here anymore. To restore that user, you must reset the SDK and recreate a linked Sentiance user instead.\
-
+You can only link to an app user that is new to Sentiance. This is because an existing app user will already have a corresponding Sentiance user on the platform, and that Sentiance user cannot be restored here anymore. To restore that user, you must reset the SDK and recreate a linked Sentiance user instead.
 {% endhint %}
 
 **parameter:** [linker](user-creation-and-linking/user-linking/metauserlinker.md): the linker that the SDK will pass the installation ID to and execute success and failure closures according to result.
@@ -420,29 +410,22 @@ This is because an existing app user will already have a corresponding Sentiance
 
 ### linkUserWithAuthCode: completionHandler:&#x20;
 
-Links the Sentiance user to your app's user, on the Sentiance Platform.\
+Links the Sentiance user to your app's user on the Sentiance Platform.
 
-
-Uses the supplied authentication code to find the app user. Therefore, before calling this method, make sure that you have obtained a valid code from the backend Sentiance API (thereby having initiated the first linking step).
-
-This code request is authenticated using a Sentiance API key, which must never be transmitted to the app. Hence why the request must come from your backend.
-
-&#x20;
+Uses the supplied authentication code to find the app user. Therefore, before calling this method, make sure that you have obtained a valid code from the backend Sentiance API (thereby having initiated the first linking step). This code request is authenticated using a Sentiance API key, which must never be transmitted to the app. Hence why the request must come from your backend.
 
 Here are the complete steps:
 
-1\.  Retrieve the code in your app and supply it to this method.
+1. Retrieve the code in your app and supply it to this method.
+2. Initiate an authentication code request via your backend towards the Sentiance backend. This request will include your app's user identifier, which will be temporarily coupled to the code that you will receive.
+3. The SDK will forward the code to the Sentiance backend to complete the link.
 
-2\.  Initiate an authentication code request via your backend towards the Sentiance backend. This request will include your app's user identifier, which will be temporarily coupled to the code that you will receive.
-
-3\.  The SDK will forward the code to the Sentiance backend to complete the link.
+This method is useful if you want to link a Sentiance user that was previously created without specifying a linker in the user creation options (thereby having created an unlinked user).
 
 {% hint style="info" %}
-Note that with this method, a Sentiance user cannot be linked to an app user that already exists on the Sentiance Platform (i.e. with an app user identifier that you already supplied to Sentiance during a past authentication code request). You can only link to an app user that is new to Sentiance. This is because an existing app user will already have a corresponding Sentiance user on the platform, and that Sentiance user cannot be restored here anymore. To restore that user, you must reset the SDK and recreate a linked Sentiance user instead.\
+With this method, a Sentiance user cannot be linked to an app user that already exists on the Sentiance Platform (i.e. with an app user identifier that you already supplied to Sentiance during a past authentication code request). You can only link to an app user that is new to Sentiance.
 
-
-This method is useful if you want to link a Sentiance user that was previously created by specifying the SENTNoOpUserLinker linker in the user creation options (thereby having created an unlinked user).\
-
+This is because an existing app user will already have a corresponding Sentiance user on the platform, and that Sentiance user cannot be restored here anymore. To restore that user, you must reset the SDK and recreate a linked Sentiance user instead.
 {% endhint %}
 
 **parameters:** authCode - a code obtained from the backend Sentiance API.
@@ -947,7 +930,13 @@ While resetting, make sure that your app is in the foreground to prevent process
 
 You may call this method without having initialized the SDK.
 
+| Parameter         |                                                                    |
+| ----------------- | ------------------------------------------------------------------ |
+| completionHandler | a completion handler to receive the result of the reset operation. |
 
+```objectivec
+- (void)resetWithCompletionHandler: (nullable SENTResetCompletionHandler)completionHandler;
+```
 
 ### reset: failure:
 
@@ -976,78 +965,44 @@ Note that calling this method during intermediate initialization states (i.e. [I
 | success   | Success block callback when reset successfully done                                                          |
 | failure   | Failure callback when with one of [SENTResetFailureReason](sentsdkstatus.md#sentresetfailurereason) happened |
 
+### setVehicleCrashDiagnosticHandler:
 
+Sets a handler that is invoked when a vehicle crash diagnostic is detected.
 
-### setTripProfileHandler:
+| Parameter                     |                                                                                                                    |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| vehicleCrashDiagnosticHandler | a handler to receive vehicle crash diagnostics of type [SENTVehicleCrashDiagnostic](sentvehiclecrashdiagnostic.md) |
 
-{% hint style="warning" %}
-**Deprecated**
-
-This method was deprecated in v5.12.0, as part of the Trip Profiling feature deprecation.
-{% endhint %}
-
-Sets a block to execute after a trip finishes and is profiled on device. The profiling data is returned with a [SENTTripProcessingTripProfile](broken-reference) object.&#x20;
-
-Each [SENTTripProcessingTripProfile](broken-reference) contains multiple transport segments which each is assigned a [SENTTripProcessingVehicleMode](broken-reference). The handler makes sure that only the transport segments that is assigned [SENTTripProcessingVehicleModeVehicle](broken-reference) are returned.&#x20;
-
-{% hint style="info" %}
-In order to use this handler, your app configuration must enable the trip profiling feature explicitly. Full trip profiling also needs to be disabled from the SDK. Please see [`[SENTSDK setFullTripProfilingEnabled:]`](sentiance.md#setfulltripprofilingenabled) for more details.
-{% endhint %}
+**throws:**  NSException if the SDK is not initialized.
 
 ```objectivec
-- (void)setTripProfileHandler:(void (^) (SENTTripProcessingTripProfile *tripProfile))tripProfileHandler;
+- (void)setVehicleCrashDiagnosticHandler:(void (^)(SENTVehicleCrashDiagnostic *vehicleCrashDiagnostic))vehicleCrashDiagnosticHandler;
 ```
 
-| Parameter          |                                                                       |
-| ------------------ | --------------------------------------------------------------------- |
-| tripProfileHandler | The block to execute after a trip finishes and is profiled on device. |
+### setTransmittableDataTypes:
 
-### setFullTripProfilingEnabled:
+Set the data types that are allowed to be sent to the Sentiance Cloud Platform.
 
-{% hint style="warning" %}
-**Deprecated**
+This configuration is persistent across app restarts, but will be cleared upon SDK reset.
 
-This method was deprecated in v5.12.0, as part of the Trip Profiling feature deprecation.
-{% endhint %}
+**Note:** this configuration is not applicable to logging and diagnostic data that may get uploaded to the Sentiance Cloud Platform (if enabled for your app).
 
-Changes the trip profiling mode the SDK is currently using.
+| Parameter              |                                                                               |
+| ---------------------- | ----------------------------------------------------------------------------- |
+| transmittableDataTypes | data types of type [SENTTransmittableDataType](senttransmittabledatatype.md). |
 
-Pass YES to let the trips being profiled on the Sentiance platform. If you previously set an on-device trip profiling handler via [`[SENTSDK setTripProfileHandler:]`](sentiance.md#settripprofilehandler), this also disables that handler. When NO is passed later, the handler continues to be called.
-
-Pass NO to enable on-device trip profiling without uploading trip information to the Sentiance platform.
-
-{% hint style="info" %}
-In order to use this method, your app configuration must enable the trip profiling feature explicitly.&#x20;
-{% endhint %}
+**throws:**  NSException if the SDK is not initialized.
 
 ```objectivec
-- (void)setFullTripProfilingEnabled:(BOOL)enabled;
+- (void)setTransmittableDataTypes:(NSSet<NSNumber *> *)transmittableDataTypes NS_REFINED_FOR_SWIFT;
 ```
 
-| Parameter |                                                                                  |
-| --------- | -------------------------------------------------------------------------------- |
-| enabled   | The flag that enables or disables trips being profiled on the Sentiance platform |
+### transmittableDataTypes
 
-### setSpeedLimit:
+Returns a set of [SENTTransmittableDataType](senttransmittabledatatype.md) data types that are allowed to be sent to the Sentiance Cloud Platform.
 
-{% hint style="warning" %}
-**Deprecated**
-
-This method was deprecated in v5.12.0, as part of the Trip Profiling feature deprecation.
-{% endhint %}
-
-Sets a custom speed limit in m/s that will be used during on-device speeding estimation. Any value that is less than or equal to "0" will be ignored.
-
-If a custom speed limit is not set, the SDK uses a value of 23 m/s as the default speed limit.
-
-{% hint style="info" %}
-In order to use this method, your app configuration must enable the trip profiling feature explicitly.&#x20;
-{% endhint %}
+**throws:**  NSException if the SDK is not initialized.
 
 ```objectivec
-- (void)setSpeedLimit:(double)speedLimit;
+- (NSSet<NSNumber *> *)transmittableDataTypes NS_REFINED_FOR_SWIFT;
 ```
-
-| Parameter  |                                                                              |
-| ---------- | ---------------------------------------------------------------------------- |
-| speedLimit | The speed limit value that will be used during on-device speeding estimation |

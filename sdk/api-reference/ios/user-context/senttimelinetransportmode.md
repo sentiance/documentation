@@ -11,7 +11,10 @@ typedef NS_ENUM(NSUInteger, SENTTimelineTransportMode)
     SENTTimelineTransportModeWalking,
     SENTTimelineTransportModeRunning,
     SENTTimelineTransportModeBicycle,
-    SENTTimelineTransportModeVehicle,
-    SENTTimelineTransportModeRail
+    SENTTimelineTransportModeTram,
+    SENTTimelineTransportModeTrain,
+    SENTTimelineTransportModeCar,
+    SENTTimelineTransportModeBus,
+    SENTTimelineTransportModeMotorcycle
 };
 ```

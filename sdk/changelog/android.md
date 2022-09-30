@@ -1,5 +1,27 @@
 # Android
 
+## \[6.1.0] - 30 Sep 2022
+
+#### Added
+
+* Diagnostic API for monitoring vehicle crash detection. See [setVehicleCrashDiagnosticListener](../api-reference/android/crashdetectionapi.md#setvehiclecrashlistener).
+* App-configurable rules to control SDK data transmission to the Sentiance Cloud Platform. The app can specify which of the following data types are allowed to be transmitted to the Sentiance platform: vehicle crash data, SDK and device info, general detection data, all data. See [setTransmittableDataTypes](../api-reference/android/sentiance.md.md#settransmittabledatatypes).
+* Support for car, bus, train, and tram/metro transport mode detection, part of the user's current context information.
+* Internal support in the SDK to notify the Sentiance Cloud Platform that the SDK has been reset.
+
+#### Changed
+
+* Improved the detection of user device interaction during trips.
+* Improved the error details that is returned to the app during failed user creation.
+
+#### Fixed
+
+* Detection of vehicle crashes that occur towards the end of a trip.
+
+#### Removed
+
+* BREAKING: _vehicle_ and _rail_ [transport modes](../api-reference/android/usercontext/event/transportmode.md) from the user's current context information.
+
 ## \[6.0.2] - 30 Aug 2022
 
 #### Changed

@@ -7,10 +7,13 @@ This type is part of an [Early Access](../../../../appendix/feature-production-r
 Enum representation of the type of transport.
 
 ```
-UNKNOWN
-BICYCLE
-WALKING
-RUNNING
-VEHICLE
-RAIL
+UNKNOWN,
+BICYCLE,
+WALKING,
+RUNNING,
+TRAM,
+TRAIN,
+CAR,
+BUS,
+MOTORCYCLE
 ```

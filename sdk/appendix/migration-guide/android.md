@@ -359,4 +359,4 @@ All callback and listener methods are now executed on the application's main thr
 
 `getWiFiLastSeenTimestamp()` is no longer available.
 
-The [`CrashCallback`](../../api-reference/android/crashdetection/crash-callback.md)'s Location parameter is now `@Nullable`.
+The `CrashCallback`'s Location parameter is now `@Nullable`.

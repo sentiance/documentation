@@ -14,7 +14,7 @@ This class is part of an [Early Access](../../../../appendix/feature-production-
 
 ### transportMode
 
-Returns the mode of transportation.
+Returns the mode of transportation as [SENTTimelineTransportMode](../senttimelinetransportmode.md).
 
 ```
 @property (nonatomic, assign) SENTTimelineTransportMode transportMode;

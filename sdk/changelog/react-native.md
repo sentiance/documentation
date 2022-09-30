@@ -1,5 +1,22 @@
 # React Native
 
+## \[6.1.0] - 30 Sep 2022
+
+#### Added
+
+* Diagnostic API for monitoring vehicle crash detection. See [here](../api-reference/react-native/crash-detection.md#vehicle-crash-diagnostic-data).
+* App-configurable rules to control SDK data transmission to the Sentiance Cloud Platform. The app can specify which of the following data types are allowed to be transmitted to the Sentiance platform: vehicle crash data, SDK and device info, general detection data, all data. See [here](../api-reference/react-native/core.md#control-transmittable-data-types).
+* Support for car, bus, train, and tram/metro transport mode detection, part of the user's current context information.
+
+#### Changed
+
+* Updated the Sentiance Android SDK dependency to version 6.1.
+* Updated the Sentiance iOS SDK dependency to version 6.1.
+
+#### Removed
+
+* BREAKING: _vehicle_ and _rail_ transport modes from the user's current context information
+
 ## \[6.0.3] - 30 Aug 2022
 
 #### Fixed

@@ -1,5 +1,26 @@
 # iOS
 
+## \[6.1.0] - 30 Sep 2022
+
+#### Added
+
+* Diagnostic API for monitoring vehicle crash detection. See [setVehicleCrashDiagnosticHandler:](../api-reference/ios/sentiance.md#setvehiclecrashdiagnostichandler)
+* App-configurable rules to control SDK data transmission to the Sentiance Cloud Platform. The app can specify which of the following data types are allowed to be transmitted to the Sentiance platform: vehicle crash data, SDK and device info, general detection data, all data. See [setTransmittableDataTypes:](../api-reference/ios/sentiance.md#settransmittabledatatypes)
+* Support for car, bus, train, and tram/metro transport mode detection, part of the user's current context information.
+* Internal support in the SDK to notify the Sentiance Cloud Platform that the SDK has been reset.
+* Support for specifying 'any' trip type when calling [isTripOngoing:](../api-reference/ios/sentiance.md#istripongoing) using SENTTripTypeAny.
+
+#### Fixed
+
+* Improve the detection of vehicle crashes that occur towards the end of a trip.
+* Rare occurrence of a EXC\_BAD\_ACCESS crash.
+* File operation exception at runtime, causing the process to crash.
+* Inaccurate stationary venue information in some instances.
+
+#### Removed
+
+* BREAKING: _vehicle_ and _rail_ [transport modes](../api-reference/ios/user-context/senttimelinetransportmode.md) from the user's current context information.
+
 ## \[6.0.3] - 19 Sep 2022
 
 #### Fixed

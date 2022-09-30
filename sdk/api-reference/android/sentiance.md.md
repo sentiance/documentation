@@ -211,6 +211,14 @@ With the exception of the following methods, all other methods in this class wil
 >
 > Returns an [`SdkStatus`](sdkstatus/) object representing the state of the SDK.
 
+### `getTransmittableDataTypes()`
+
+> ```java
+> Set<TransmittableDataType> getTransmittableDataTypes();
+> ```
+>
+> Returns the data types that are allowed to be sent to the Sentiance Cloud Platform.
+
 ### `getUserActivity()`
 
 > ```java
@@ -571,6 +579,22 @@ The reset functionality is intended for removing all data in the device to handl
 | Parameters |                                                                                                                          |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------ |
 | listener   | A [`TripTimeoutListener`](trip/triptimeoutlistener.md) to handle trip timeouts, or null to remove the previous listener. |
+
+### `setTransmittableDataTypes()`
+
+> ```java
+> void setTransmittableDataTypes(@NonNull Set<TransmittableDataType> transmittableDataTypes);
+> ```
+>
+> Sets the data types that are allowed to be sent to the Sentiance platform.
+>
+> This configuration is persistent across app restarts but will be cleared upon SDK reset. By default all data types are allowed to be sent.
+>
+> **Note:** this configuration is not applicable to logging and diagnostic data that may get uploaded to the Sentiance Cloud Platform (if enabled for your app).
+
+| Parameters             |                                  |
+| ---------------------- | -------------------------------- |
+| transmittableDataTypes | allowed transmittable data types |
 
 ### `setUserActivityListener()`
 

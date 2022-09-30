@@ -2,11 +2,6 @@
 
 ## CrashDetectionApi
 
-| void    | [invokeDummyVehicleCrash](crashdetectionapi.md#invokedummyvehiclecrash)()                     |
-| ------- | --------------------------------------------------------------------------------------------- |
-| boolean | [isVehicleCrashDetectionSupported](crashdetectionapi.md#isvehiclecrashdetectionsupported)()   |
-| void    | [setVehicleCrashListener(VehicleCrashListener)](crashdetectionapi.md#setvehiclecrashlistener) |
-
 
 
 ### `invokeDummyVehicleCrash()`
@@ -32,6 +27,22 @@
 > Returns whether vehicle crash detection is supported on the device.
 >
 > The result depends on multiple criteria, such as if vehicle crash detection is enabled for your app, and if the necessary sensors are present on the device.
+
+### `setVehicleCrashDiagnosticListener()`
+
+> ```java
+> void setVehicleCrashDiagnosticListener(@Nullable final VehicleCrashDiagnosticListener listener);
+> ```
+>
+> Sets a listener that is invoked when vehicle crash diagnostic data becomes available.
+>
+> Use this method to receive diagnostic data while vehicle crash detection is running.
+
+| Parameters |                                                                                                                                                                      |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| listener   | the [VehicleCrashDiagnosticListener](crashdetection/vehiclecrashdiagnosticlistener.md) to receive diagnostic data. Set `null` to remove the previously set listener. |
+
+
 
 ### `setVehicleCrashListener()`
 

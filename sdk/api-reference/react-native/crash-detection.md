@@ -48,3 +48,13 @@ if (isCrashDetectionSupported) {
   // setup vehicle crash event listener
 }
 ```
+
+### Vehicle Crash Diagnostic Data
+
+Listen to vehicle crash diagnostic data.
+
+```javascript
+await SentianceCrashDetection.addVehicleCrashDiagnosticListener(diagnostic => {
+    // New diagnostic data
+}
+```

@@ -396,3 +396,19 @@ const isAppSessionDataCollectionEnabled =
 // returns Promise<void>
 await SentianceCore.disableBatteryOptimization();
 ```
+
+### Control Transmittable Data Types
+
+Control which data types the SDK is allowed to upload to the Sentiance Cloud Platform.
+
+```javascript
+// type TransmittableDataType = "ALL" | "SDK_INFO" | "VEHICLE_CRASH_INFO" | "GENERAL_DETECTIONS";
+
+// returns Promise<void>
+await Sentiance.setTransmittableDataTypes(["SDK_INFO", "VEHICLE_CRASH_INFO"]);
+
+// returns Promise<Array<TransmittableDataType>>
+const types = await Sentiance.getTransmittableDataTypes();
+```
+
+Note that these rules are not applicable to log and diagnostic data that the SDK may upload (if enabled for your app).
