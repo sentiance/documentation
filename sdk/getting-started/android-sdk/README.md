@@ -3,7 +3,7 @@
 {% hint style="success" %}
 ### Platform requirements
 
-The Sentiance SDK works on Android 6.0 and above. If you support older Android versions, see [this](../../troubleshooting/android/#manifest-merger-failed-uses-sdk-minsdkversion-x-cannot-be-smaller-than-version-y-declared-in-library) troubleshooting guide. List of all supported API levels can be found [here](../../appendix/android/supported-api-levels.md).
+The Sentiance SDK works on Android 6.0 and above. If you support older Android versions, see [this](../../troubleshooting/android.md#manifest-merger-failed-uses-sdk-minsdkversion-x-cannot-be-smaller-than-version-y-declared-in-library) troubleshooting guide. List of all supported API levels can be found [here](../../appendix/android/supported-api-levels.md).
 {% endhint %}
 
 {% hint style="success" %}

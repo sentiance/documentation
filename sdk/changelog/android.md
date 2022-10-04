@@ -258,7 +258,7 @@ Note: the absence of _READ\_PHONE\_STATE_ in your app's manifest will cause the 
 * On Android 9 and above, when [background execution is restricted](https://developer.android.com/reference/android/app/ActivityManager#isBackgroundRestricted\(\)) for your app (by the user or an OS power saving feature), SDK detections will no longer run. An [`SdkStatus`](../api-reference/android/sdkstatus/) update will be delivered to your app, with `startStatus` set to `PENDING` and `isBackgroundProcessingRestricted` set to `true` so that you can take the appropriate action.
 * Library dependency changes:
   * Removed compile-time dependency on `com.google.code.findbugs:jsr305`
-  * Added runtime dependency on `org.tensorflow:tensorflow-lite:2.2.0`. This dependency adds native libraries to your app. To limit their architectures, see [here](../troubleshooting/android/#exclude-native-libraries-for-unsupported-architectures).
+  * Added runtime dependency on `org.tensorflow:tensorflow-lite:2.2.0`. This dependency adds native libraries to your app. To limit their architectures, see [here](../troubleshooting/android.md#exclude-native-libraries-for-unsupported-architectures).
 
 #### Deprecated
 

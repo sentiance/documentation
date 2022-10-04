@@ -12,7 +12,7 @@ Please note that new SDK features and functionality will be supported via the ne
 
 #### Minimum Supported Android Version
 
-We have bumped the minimum supported Android version to 6.0 (Marshmallow—API level 23). If you target an older version of Android, please see [this](../../troubleshooting/android/#manifest-merger-failed-uses-sdk-minsdkversion-x-cannot-be-smaller-than-version-y-declared-in-library) troubleshooting guide to learn how to resolve related issues.
+We have bumped the minimum supported Android version to 6.0 (Marshmallow—API level 23). If you target an older version of Android, please see [this](../../troubleshooting/android.md#manifest-merger-failed-uses-sdk-minsdkversion-x-cannot-be-smaller-than-version-y-declared-in-library) troubleshooting guide to learn how to resolve related issues.
 
 #### Java 8 Compatibility
 
@@ -100,7 +100,7 @@ Some features must be activated by Sentiance before you can start using them. Pl
 
 #### Android XML Backup Rules
 
-The [XML Android backup rules](https://developer.android.com/guide/topics/data/autobackup#IncludingFiles) that are applied by the Sentiance SDK have been updated. If you have overwritten the backup rules in your app's manifest, please update it by including any missing SDK rule. See [this](../../troubleshooting/android/#manifest-merger-failed-attribute-fullbackupcontent) troubleshooting guide.
+The [XML Android backup rules](https://developer.android.com/guide/topics/data/autobackup#IncludingFiles) that are applied by the Sentiance SDK have been updated. If you have overwritten the backup rules in your app's manifest, please update it by including any missing SDK rule. See [this](../../troubleshooting/android.md#manifest-merger-failed-attribute-fullbackupcontent) troubleshooting guide.
 
 ### Code Changes & Deprecations
 
@@ -221,7 +221,7 @@ If your app makes use of the vehicle crash detection feature, add the _com.senti
 
 #### 3. Update the Android XML Backup Rules
 
-If you have specified custom backup rules in your app's manifest file, add the missing SDK rules. See [here](../../troubleshooting/android/#manifest-merger-failed-attribute-fullbackupcontent).
+If you have specified custom backup rules in your app's manifest file, add the missing SDK rules. See [here](../../troubleshooting/android.md#manifest-merger-failed-attribute-fullbackupcontent).
 
 #### 4. Apply Code Changes
 
@@ -246,7 +246,7 @@ If your app makes use of the vehicle crash detection feature, add the _com.senti
 
 #### 3. Update the Android XML Backup Rules
 
-If you have specified custom backup rules in your app's manifest file, add the missing SDK rules. See [here](../../troubleshooting/android/#manifest-merger-failed-attribute-fullbackupcontent).
+If you have specified custom backup rules in your app's manifest file, add the missing SDK rules. See [here](../../troubleshooting/android.md#manifest-merger-failed-attribute-fullbackupcontent).
 
 #### 4. Update the SDK Initialization
 
