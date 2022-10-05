@@ -952,7 +952,7 @@ The reset functionality is intended for removing all data in the device to handl
 
 Resets the Sentiance SDK. Calling this method results in stopping of all SDK operations and deleting all SDK user data from the device. Additionally, the SDK will be uninitialized, allowing reinitialization and new Sentiance user creation.
 
-The reset operation may take a while, in which case the SDK's initialization state will be set to [InitState](sentsdkstatus.md#sentsdkinitstate) **SENTResetting** until it's complete. Calling any other SDK method during this time will either be ignored or return a default value.&#x20;
+The reset operation may take a while, in which case the SDK's initialization state will be set to [InitState](sentsdkstatus.md#sentsdkinitstate) **SENTResetting** until it is complete. Calling any other SDK method during this time will either be ignored or return a default value.&#x20;
 
 Note that calling this method during intermediate initialization states (i.e. [InitState ](sentsdkstatus.md#sentsdkinitstate)**SENTInitInProgress**} and [InitState](sentsdkstatus.md#sentsdkinitstate) **SENTResetting** will fail.
 
@@ -964,6 +964,18 @@ Note that calling this method during intermediate initialization states (i.e. [I
 | --------- | ------------------------------------------------------------------------------------------------------------ |
 | success   | Success block callback when reset successfully done                                                          |
 | failure   | Failure callback when with one of [SENTResetFailureReason](sentsdkstatus.md#sentresetfailurereason) happened |
+
+### setDidReceiveSdkStatusUpdateHandler:
+
+Sets a handler that is invoked when the SDK's status is updated.
+
+```objectivec
+- (void) setDidReceiveSdkStatusUpdateHandler:(void (^) (SENTSDKStatus * status))handler;
+```
+
+| Parameter |                                                                                       |
+| --------- | ------------------------------------------------------------------------------------- |
+| handler   | a handler to receive SDK status updates, or nil to remove the previously set handler. |
 
 ### setVehicleCrashDiagnosticHandler:
 
