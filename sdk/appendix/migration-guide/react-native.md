@@ -536,7 +536,7 @@ await createUser(
         appId: APP_ID,
         appSecret: APP_SECRET,
         platformUrl: SENTIANCE_PLATFORM_URL,
-        linker: installId => {
+        linker: async (installId) => {
             // This linker function must return a boolean, indicating if user 
             // linking to your backend was successful or not.
             return await linkUserToYourBackend(installId);
