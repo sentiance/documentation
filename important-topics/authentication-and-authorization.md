@@ -12,7 +12,7 @@ Authorization: Bearer e5c3b842284045d98ed042814f31543f
 
 ## User Tokens
 
-**SDKUsers** are created when the [SDK initializes with an App ID and App Secret](../sdk/getting-started/android-sdk/initialization.md). They have a userID and are only authenticated by their token. You can [retrieve this token from an initialized SDK](../sdk/appendix/user-access-token.md#get-user-and-token).
+**SDK Users** are created during [SDK User Creation](https://docs.sentiance.com/sdk/getting-started/android-sdk/3.-user-creation). They have a UserID and are only authenticated by their token. You can [retrieve this token from an initialized SDK](https://docs.sentiance.com/sdk/appendix/user-access-token).
 
 ## API Keys
 
