@@ -1,5 +1,12 @@
 # React Native
 
+## \[6.1.2] - 3 Nov 2022
+
+#### Fixed
+
+* Typescript definition for UserCreationOptions in the `core` package.
+* `npm i` installing an older beta package instead of latest stable, when no version is specified.
+
 ## \[6.1.1] - 30 Sep 2022
 
 #### Added
