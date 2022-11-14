@@ -1,5 +1,11 @@
 # iOS
 
+## \[6.1.1] - 14 Nov 2022
+
+#### Fixed
+
+* Potential runtime exception related to the vehicle crash diagnostic feature.
+
 ## \[6.1.0] - 30 Sep 2022
 
 #### Added
