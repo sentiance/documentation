@@ -1,5 +1,11 @@
 # iOS
 
+## \[5.15.4] - 18 Nov 2022
+
+#### Fixed
+
+* An issue where the SDK continues detections after the location permission is downgraded to "while using the app."
+
 ## \[6.1.1] - 14 Nov 2022
 
 #### Fixed
