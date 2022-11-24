@@ -1,5 +1,13 @@
 # iOS
 
+
+
+## \[6.1.2] - 24 Nov 2022
+
+#### Fixed
+
+* Missing vehicle crash information in the trip data that is uploaded to the Sentiance Platform.
+
 ## \[5.15.4] - 18 Nov 2022
 
 #### Fixed
