@@ -207,6 +207,7 @@
       * [SENTOptionsInitPurpose](sdk/api-reference/ios/sentoptions/sentoptionsinitpurpose.md)
     * [SENTPublicDefinitions](sdk/api-reference/ios/sentpublicdefinitions.md)
     * [SENTSDKStatus](sdk/api-reference/ios/sentsdkstatus.md)
+    * [SENTToken](sdk/api-reference/ios/senttoken.md)
     * [SENTTransmittableDataType](sdk/api-reference/ios/senttransmittabledatatype.md)
     * [SENTUserActivity](sdk/api-reference/ios/sentuseractivity.md)
     * [SENTVehicleCrashDetectionState](sdk/api-reference/ios/sentvehiclecrashdetectionstate.md)
