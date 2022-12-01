@@ -1,6 +1,10 @@
 # iOS
 
+## \[6.1.3] - 1 Dec 2022
 
+#### Fixed
+
+* Runtime exception when processing a detected stationary for venue mapping purposes.
 
 ## \[6.1.2] - 24 Nov 2022
 
