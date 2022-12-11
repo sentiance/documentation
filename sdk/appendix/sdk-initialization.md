@@ -8,7 +8,7 @@ If a Sentiance user is already present on the device, during initialization, the
 
 ## Why Initialize in the Application / AppDelegate Class?
 
-During initialization, aside from of setting up internal components, the SDK sets the necessary delegates and listeners at the OS level, to allow the capturing of OS generated events, such as geofence exits, significant location changes, and visits.
+During initialization, aside from setting up internal components, the SDK sets the necessary delegates and listeners at the OS level, to allow the capturing of OS generated events, such as geofence exits, significant location changes, and visits.
 
 When such events are detected, if your app is not alive, the OS starts it up in the background, and waits for your app to set up the necessary delegates and listeners during the _startup phase_, before delivering the events. In order to not miss such events, the SDK has to have its delegates and listeners set up during this startup phase too. This is the reason why the SDK must be initialized during app startup.
 
