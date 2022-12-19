@@ -5,7 +5,7 @@
 ## Steps
 
 1. In your Xcode project, go to File -> Add Packages.
-2. In the search bar, enter&#x20;
+2. In the search bar, enter the URL below:
 
 ```html
 https://github.com/sentiance/sentsdk-package
