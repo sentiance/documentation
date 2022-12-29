@@ -153,13 +153,13 @@ android {
 
 **Problem:** Your app supports an Android version that is older than what the Sentiance SDK supports (Android 6). During compilation, you get an error saying the compiler failed to merge the manifest files.
 
-**Solution:** You can use the **overrideLibrary** attribute to override the minSdkVersion defined in the conflicting Sentiance library, without changing the minimum supported Android version of your app. Here's an example on how to resolve the conflict with 3 different Sentiance libraries:
+**Solution:** You can use the **overrideLibrary** attribute to override the minSdkVersion defined in the conflicting Sentiance library, without changing the minimum supported Android version of your app. Here's an example on how to resolve the conflict with 2 different Sentiance libraries:
 
 ```markup
 <manifest ...
     xmlns:tools="http://schemas.android.com/tools">
     
-    <uses-sdk tools:overrideLibrary="com.sentiance.sdk, com.sentiance.sdk.crashdetection, ..."/>
+    <uses-sdk tools:overrideLibrary="com.sentiance.sdk, com.sentiance.sdk.crashdetection"/>
 ```
 
 When you initialize the SDK on an older Android version, initialization will gracefully fail with reason UNSUPPORTED\_OS\_VERSION.
