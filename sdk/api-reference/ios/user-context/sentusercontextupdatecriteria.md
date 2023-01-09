@@ -11,7 +11,6 @@ typedef NS_OPTIONS(NSUInteger, SENTUserContextUpdateCriteria)
 | Type                                            | Description                                      |
 | ----------------------------------------------- | ------------------------------------------------ |
 | **SENTUserContextUpdateCriteriaCurrentEvent**   | A change in the user's current or ongoing event. |
-| **SENTUserContextUpdateCriteriaActiveMoments**  | A change in the user's active moments.           |
 | **SENTUserContextUpdateCriteriaActiveSegments** | A change in the user's active segments.          |
 | **SENTUserContextUpdateCriteriaVisitedVenues**  | A change in the user's visited venues.           |
 | **SENTUserContextUpdateCriteriaAll**            | All criteria applied.                            |

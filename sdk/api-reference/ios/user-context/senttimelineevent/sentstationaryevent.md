@@ -14,33 +14,21 @@ This class is part of an [Early Access](../../../../appendix/feature-production-
 
 ### location
 
-Location where the user is stationary at. Nil only when timeline data is missing.
+Location where the user is stationary at. nil only when timeline data is missing.
 
 ```
 @property (nonatomic, strong, nullable, readonly) SENTGeolocation *location;
 ```
 
+### venue
 
-
-### venueSignificance
-
-```
-@property (nonatomic, assign, readonly) SENTVenueSignificance venueSignificance;
-```
-
-
-
-### venueCandidates
-
-Returns a list of likely venues the user is stationary at.
+The venue where the user is stationary at.
 
 ```
-@property (nonatomic, strong, nonnull, readonly) NSArray<SENTVenueCandidate *> *venueCandidates;
+@property (nonatomic, strong, readonly) SENTVenue *venue;
 ```
 
-###
-
-### stationaryEvent
+### isEqualToStationaryEvent:
 
 ```
 - (BOOL)isEqualToStationaryEvent:(SENTStationaryEvent *)stationaryEvent;

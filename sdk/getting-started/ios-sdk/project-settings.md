@@ -11,10 +11,10 @@ After adding the SDK, you need to configure your project to prepare it before st
 
 ## Setting Up Background Tasks
 
-Add the following background task identifiers to the project info (Info.plist), if you plan to utilize the SDK's [on-device features](../../appendix/on-device-features.md):
+Add the following background task identifiers to the project info (Info.plist):
 
 * com.sentiance.backgroundtask.tilerefresh
-* com.sentiance.backgroundtask.segment\_detection
+* com.sentiance.backgroundtask.task\_processing
 
 Add the following task identifier if you plan to utilize the step counting SDK feature (disabled by default):
 

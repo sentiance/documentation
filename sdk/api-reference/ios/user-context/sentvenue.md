@@ -12,40 +12,32 @@ This class is part of an [Early Access](../../../appendix/feature-production-rea
 @interface SENTVenue : NSObject <NSSecureCoding, NSCopying>
 ```
 
-
-
-### name
-
-Returns the name of the venue if available. Otherwise, returns nil.
-
-```
-@property (nonatomic, copy, nullable) NSString *name;
-```
-
 ### location
 
-Returns the location of the venue.
+Returns the location of the venue, as [SENTGeolocation](sentgeolocation.md), if known. Otherwise returns nil. For example, this value will be nil if the venue significance is "point of interest."
 
-```
-@property (nonatomic, strong, nonnull) SENTGeolocation *location;
-```
-
-### labels
-
-Returns a map of labels assigned to the venue.
-
-{% hint style="warning" %}
-Note: due to ongoing development, the contents of this mapping are subject to change.
-{% endhint %}
-
-```
-@property (nonatomic, strong, nonnull) NSDictionary<NSString *, NSString *> *labels;
+```objectivec
+@property (nonatomic, strong, nullable, readonly) SENTGeolocation *location;
 ```
 
+### significance
 
+Returns the significance of the venue (i.e. home, work, or a point of interest), as [SENTVenueSignificance](sentvenuesignificance.md).
+
+```objectivec
+@property (nonatomic, assign, readonly) SENTVenueSignificance significance;
+```
+
+### venueType
+
+Returns the type of the venue, as [SENTVenueType](sentvenuetype.md).
+
+```objectivec
+@property (nonatomic, assign, readonly) SENTVenueType type;
+```
 
 ### isEqualToVenue:
 
-```
+```objectivec
 - (BOOL)isEqualToVenue:(SENTVenue *)venue;
 ```

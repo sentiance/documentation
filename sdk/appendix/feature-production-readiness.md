@@ -2,8 +2,8 @@
 
 The Sentiance SDK includes two types of features:
 
-* Early Access: these are early releases of features that Sentiance is working on, and that have been tested for stability and acceptable quality. Early Access features are intended for trials, PoCs and MVPs while we finalize them for production use. The APIs are not final, and may change when the feature reaches production. We welcome your feedback to help us improve the features further.
-* Production Ready: these are features that have undergone rigorous quality and stability tests and checks, and are ready to be used for building production features in your app. The APIs are final, and remain backwards compatible across minor and patch version updates.
+* **Early Access**: these are early releases of features that Sentiance is working on, and that have been tested for stability and acceptable quality. Early Access features are intended for trials, PoCs and MVPs while we finalize them for production use. The APIs are not final, and may change until the feature reaches production. We welcome your feedback to help us improve the features further.
+* **Production Ready**: these are features that have undergone rigorous quality and stability tests and checks, and are ready to be used for building production features in your app. The APIs are final, and remain backwards compatible across minor and patch version updates.
 
 {% hint style="info" %}
 We generally release certain features as Early Access first, then update them to Production Ready in a subsequent major or minor SDK release.
@@ -26,3 +26,5 @@ The following table lists each SDK feature, with the version of the SDK it was f
 | Venue Type Mapping Information          | <p>Android: 6.0.0</p><p>iOS: 6.0.0</p>  |                                         |
 | User Segment Detection                  | <p>Android: 6.0.0</p><p>iOS: 6.0.0</p>  |                                         |
 | User Current Context Information        | <p>Android: 6.0.0</p><p>iOS: 6.0.0</p>  |                                         |
+| Semantic Time                           | <p>Android: 6.2.0</p><p>iOS: 6.2.0</p>  |                                         |
+

@@ -8,36 +8,26 @@ Represents a place of interest.
 
 ## Venue API
 
-|                                  |                                  |
-| -------------------------------- | -------------------------------- |
-| Map\<String, String>             | [getLabels](./#getlabels) ()     |
-| [GeoLocation](../geolocation.md) | [getLocation](./#getlocation) () |
-| String                           | [getName](./#getname) ()         |
-
-
-
-### `getLabels()`
-
-> ```java
-> Map<String, String> getLabels()
-> ```
->
-> Returns a map of labels assigned to the venue.
->
-> Note: due to ongoing development, the contents of this mapping are subject to change.
-
 ### `getLocation()`
 
 > ```java
-> GeoLocation getLocation()
+> @Nullable GeoLocation getLocation()
 > ```
 >
-> Returns the location of the venue.
+> Returns the location of the venue, as [GeoLocation](../geolocation.md), if known. Otherwise returns null.
 
-### `getName()`
+### `getSignificance()`
 
 > ```java
-> @Nullable String getName()
+> VenueSignificance getSignificance()
 > ```
 >
-> Returns the name of the venue if available. Otherwise, returns null.
+> Returns the significance of the venue (i.e. home, work, or a point of interest), as [VenueSignificance](segmenttype.md).
+
+### getType`()`
+
+> ```java
+> VenueType getType()
+> ```
+>
+> Returns the type of the venue, as [VenueType](venuetype.md).

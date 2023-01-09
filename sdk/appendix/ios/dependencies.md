@@ -6,4 +6,4 @@ This page lists the dependencies of the Sentiance iOS SDK. These dependencies ar
 * ProtocolBuffers (ObjectiveC): v3.18
 * UnzipKit: v1.9
 
-Apart from the above, all variants of the Sentiance SDK XCFramework include _mpde.xcframework_ under the framework's _External_ directory_,_ which must always be added to your project during manual integrations.
+Apart from the above, all variants of the Sentiance SDK XCFramework include _mpde.xcframework_ and _dskoball.xcframework_ under the framework's _External_ directory_,_ which must always be added to your project during manual integrations.

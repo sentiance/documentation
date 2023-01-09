@@ -1,5 +1,33 @@
 # React Native
 
+## \[6.2.0] - 9 Jan 2023
+
+{% hint style="warning" %}
+This version includes breaking changes for some [Early Access](../appendix/feature-production-readiness.md) features.
+{% endhint %}
+
+#### Added
+
+* Transport waypoint and distance information to `TransportEvent`, which is part of the event list returned in `UserContext`. Both waypoints and distance are based on unprocessed (i.e. raw) location data.
+* Venue information inside StationaryEvent, which is part of the events list returned in `UserContext`.
+* Venue significance and venue type information inside the `Venue` type.
+* Semantic time information inside to `UserContext` type.
+
+#### Changed
+
+* BREAKING: _`startTimeEpoch`_ and _`endTimeEpoch`_ properties of objects returned part of the `UserContext` are now of type 'numeric', instead of 'string', and represent the Unix epoch time in milliseconds.
+* BREAKING: _`longitude`_, _`latitude`_ and _`accuracy`_ properties of an `EventLocation` object returned part of the `UserContext` are now of type 'numeric', instead of 'string'.
+* BREAKING: _the_ `EventLocation` type of the `UserContext` has been renamed into `GeoLocation`.
+* Corrected the misspelled `BICYCLE` TransportMode type in the user context type definition file.
+* Updated the Sentiance Android SDK dependency to version 6.2.
+* Updated the Sentiance iOS SDK dependency to version 6.2.
+* Updated the `isBatterySavingEnabled` and `isActivityRecognitionPermGranted` fields of the `SdkStatus` to cover iOS as well. (previously Android only)
+
+#### Removed
+
+* BREAKING: the `venueSignificance` and `venueCandidates` properties from the `UserContext` type have been removed. `VenueCandidate` and `Visit` classes have also been removed.
+* BREAKING: venue `name` and `labels` properties are removed from `Venue`.
+
 ## \[6.1.2] - 3 Nov 2022
 
 #### Fixed
@@ -9,10 +37,14 @@
 
 ## \[6.1.1] - 30 Sep 2022
 
+{% hint style="warning" %}
+This version includes breaking changes for some [Early Access](../appendix/feature-production-readiness.md) features.
+{% endhint %}
+
 #### Added
 
-* Diagnostic API for monitoring vehicle crash detection. See [here](../api-reference/react-native/crash-detection.md#vehicle-crash-diagnostic-data).
-* App-configurable rules to control SDK data transmission to the Sentiance Cloud Platform. The app can specify which of the following data types are allowed to be transmitted to the Sentiance platform: vehicle crash data, SDK and device info, general detection data, all data. See [here](../api-reference/react-native/core.md#control-transmittable-data-types).
+* Diagnostic API for monitoring vehicle crash detection. See [here](../api-reference/react-native/crash-detection/#vehicle-crash-diagnostic-data).
+* App-configurable rules to control SDK data transmission to the Sentiance Cloud Platform. The app can specify which of the following data types are allowed to be transmitted to the Sentiance platform: vehicle crash data, SDK and device info, general detection data, all data. See [here](../api-reference/react-native/core/#control-transmittable-data-types).
 * Support for car, bus, train, and tram/metro transport mode detection, part of the user's current context information.
 
 #### Changed

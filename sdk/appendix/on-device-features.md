@@ -95,15 +95,31 @@ For iOS apps, the user's current context information is available via the main S
 
 For React Native apps, to activate and access the user's current context, install the _@sentiance-react-native/user-context_ module.
 
-### Venue Type Mapping & Home/Work Detection
+### Venue-Type Mapping, Home/Work Detection
 
 The Sentiance SDK can enrich a user's stationary data with information about the significance of the stationary (i.e. home, work, or a point of interest), and type of venue (i.e. restaurant, fitness center, etc). This is possible with Sentiance's on-device, fully offline, venue type mapping feature.
 
 The SDK uses venue data that is available for the entire globe, by downloading and storing it on the device on an as-needed basis. The data is divided into large geographic areas (town or city level), and is updated as the user navigates to different areas.
 
-With the use of Sentiance's state of the art deep learning model for venue type mapping and home/work detection, the user's stationary data gets enriched, and refined as more data gets collected.
+With the use of Sentiance's state of the art deep learning model for venue type mapping and home/work detection, the user's stationary data gets enriched, and refined as more data gets collected. Additionally, the user's semantic time gets determined
 
-The venue information is exposed in the user's context, part of the user's recent stationary events, and as separate home and work venue properties.
+The venue information is exposed in the user's context, part of the user's recent stationary events, and as separate home and work venue properties. An additional property indicates the user's current semantic time.
+
+#### Activation for Android
+
+For Android apps, this feature is included after adding a dependency on the _com.sentiance:sdk-user-context_ artifact.
+
+#### Activation for iOS
+
+For iOS apps, this feature is included in the main SDK framework. No additional steps are needed to activate it.
+
+#### Activation for React Native
+
+For React Native apps, this feature is included after installing the _@sentiance-react-native/user-context_ module.
+
+### Semantic Time
+
+The Sentiance SDK can enrich a user's context by providing information about the user's current semantic time. Semantic time (e.g. morning, lunch, etc.) is personalized based on a user's timeline data, and becomes more accurate over time.
 
 #### Activation for Android
 

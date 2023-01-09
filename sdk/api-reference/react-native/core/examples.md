@@ -1,16 +1,16 @@
-# core
+# Examples
 
 ```javascript
 import SentianceCore from "@sentiance-react-native/core";
 ```
 
-You can find a reference to all the types mentioned on this page [here](https://github.com/sentiance/react-native-sentiance/blob/main/packages/core/lib/index.d.ts).
+You can find a reference to all the types mentioned on this page [here](definitions.md).
 
 ### Create a Sentiance user&#x20;
 
 #### Using an Authentication Code (Recommended)
 
-Refer to [this guide](../../appendix/user-creation.md) for documentation on user creation.
+Refer to [this guide](../../../appendix/user-creation.md) for documentation on user creation.
 
 ```javascript
 // returns Promise<CreateUserResult>
@@ -19,7 +19,7 @@ const createUserResult = await SentianceCore.createUser({authCode});
 
 #### With User Linking
 
-Refer to [this guide](../../appendix/user-linking.md) for documentation on user linking.
+Refer to [this guide](../../../appendix/user-linking.md) for documentation on user linking.
 
 ```javascript
 // returns Promise<CreateUserResult>

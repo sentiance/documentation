@@ -82,6 +82,7 @@ You do not need to manually add this artifact as a dependency in your app.
 
 ```
 com.sentiance:sdk-on-device-common:<sentiance-version>
+org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30
 ```
 
 ### com.sentiance:sdk-venue-mapper
@@ -94,6 +95,10 @@ You do not need to manually add this artifact as a dependency in your app.
 
 ```
 com.sentiance:sdk-event-timeline:<sentiance-version>
+org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30
+org.jetbrains.kotlinx:kotlinx-datetime0.3.0:
+org.jetbrains.kotlinx:kotlinx-serialization-core:1.3.0
+org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0
 ```
 
 ### com.sentiance:sdk-user-context
@@ -136,6 +141,9 @@ org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30
 org.jetbrains.kotlinx:kotlinx-datetime:0.2.1
 org.jetbrains.kotlinx:kotlinx-serialization-core:1.2.1
 org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1
+co.touchlab:stately-common:1.10.0
+co.touchlab:stately-concurrency:1.10.0
+co.touchlab:kermit-jvm:1.0.0
 ```
 
 ### com.sentiance:sdk-lifestyle

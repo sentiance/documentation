@@ -1,4 +1,4 @@
-# legacy
+# Examples
 
 ### Install the module
 

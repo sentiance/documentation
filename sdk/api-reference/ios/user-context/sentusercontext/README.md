@@ -11,9 +11,10 @@ This class is part of an [Early Access](../../../../appendix/feature-production-
 The context includes:
 
 * a list of recent events, such as stationaries and transports;
-* the user's active moments and segments at the time this context was constructed;
+* the user's active segments at the time this context was constructed;
 * the user's home and work locations;
-* the user's last know location, if SDK detections were running.
+* the user's last know location, if SDK detections were running;
+* the user's current semantic time (e.g. morning, lunch, afternoon).
 
 
 
@@ -27,18 +28,6 @@ The list is ordered from the most recent event to the oldest one, and includes t
 @property (nonatomic, strong, nonnull) NSArray<SENTTimelineEvent *> *events;
 ```
 
-###
-
-### activeMoments
-
-Returns the active moments detected for the user at the time this context was constructed.
-
-```
-@property (nonatomic, strong, nonnull) NSArray<SENTMoment *> *activeMoments;
-```
-
-
-
 ### activeSegments
 
 Returns the active segments detected for the user at the time this context was constructed.
@@ -46,8 +35,6 @@ Returns the active segments detected for the user at the time this context was c
 ```
 @property (nonatomic, strong, nonnull) NSArray<SENTSegment *> *activeSegments;
 ```
-
-
 
 ### lastKnownLocation
 
@@ -57,8 +44,6 @@ Returns the user's last known location at the time this context was constructed.
 @property (nonatomic, strong, nullable) SENTGeolocation *lastKnownLocation;
 ```
 
-
-
 ### home
 
 Returns the user's home location if known, otherwise returns nil.
@@ -66,8 +51,6 @@ Returns the user's home location if known, otherwise returns nil.
 ```
 @property (nonatomic, strong, nullable) SENTVenue *home;
 ```
-
-###
 
 ### work
 
@@ -77,7 +60,13 @@ Returns the user's work location if known, otherwise returns nil.
 @property (nonatomic, strong, nullable) SENTVenue *work
 ```
 
+### semanticTime:
 
+Return's the user's current semantic time, as [SENTSemanticTime](../sentsemantictime.md).
+
+```
+@property (nonatomic, assign) SENTSemanticTime semanticTime;
+```
 
 ### isEqualToUserContext:
 

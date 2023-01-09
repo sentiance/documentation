@@ -8,12 +8,11 @@ Represents a duration of time when the user was stationary.
 
 ## StationaryEvent API
 
-|                                                    |                                                                |
-| -------------------------------------------------- | -------------------------------------------------------------- |
-| [EventType](eventtype.md)                          | [getEventType](stationaryevent.md#geteventtype) ()             |
-| [GeoLocation](../geolocation.md)                   | [getLocation](stationaryevent.md#getlocation) ()               |
-| List<[VenueCandidate](../venue/venuecandidate.md)> | [getVenueCandidates](stationaryevent.md#getvenuecandidates) () |
-| [VenueType](../venue/venuetype.md)                 | [getVenueType](stationaryevent.md#getvenuetype) ()             |
+|                                  |                                                    |
+| -------------------------------- | -------------------------------------------------- |
+| [EventType](eventtype.md)        | [getEventType](stationaryevent.md#geteventtype) () |
+| [GeoLocation](../geolocation.md) | [getLocation](stationaryevent.md#getlocation) ()   |
+| [Venue](../venue/)               | [getVenue](stationaryevent.md#getvenuetype) ()     |
 
 
 
@@ -28,23 +27,15 @@ Represents a duration of time when the user was stationary.
 ### `getLocation()`
 
 > ```java
-> GeoLocation getLocation()
+> @Nullable GeoLocation getLocation()
 > ```
 >
 > Returns the location where the user is stationary at.
 
-### `getVenueCandidates()`
+### `getVenue()`
 
 > ```java
-> List<VenueCandidate> getVenueCandidates()
+> Venue getVenue()
 > ```
 >
-> Returns a list of likely venues the user is stationary at.
-
-### `getVenueType()`
-
-> ```java
-> VenueType getVenueType()
-> ```
->
-> Returns the type of venue the user is stationary at.
+> Returns the venue of this stationary.

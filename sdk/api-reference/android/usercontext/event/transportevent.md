@@ -8,12 +8,13 @@ Represents a duration of the time when the user was in transport.
 
 ## TransportEvent API
 
-|                                   |                                                           |
-| --------------------------------- | --------------------------------------------------------- |
-| [EventType](eventtype.md)         | [getEventType](transportevent.md#geteventtype) ()         |
-| [TransportMode](transportmode.md) | [getTransportMode](transportevent.md#gettransportmode) () |
+### getDistanceInMeters`()`
 
-
+> ```java
+> @Nullable Integer getDistanceInMeters()
+> ```
+>
+> Returns the distance travelled during the transport in meters. If distance cannot be computed then returns null.
 
 ### `getEventType()`
 
@@ -30,3 +31,11 @@ Represents a duration of the time when the user was in transport.
 > ```
 >
 > Returns the mode of transportation.
+
+### getWaypoints`()`
+
+> ```java
+> List<Waypoint> getWaypoints()
+> ```
+>
+> Returns the waypoints collected during the transport, as [Waypoint](../transportevent.md).

@@ -1,6 +1,45 @@
 # Android
 
+## \[6.2.0] - 9 Jan 2023
+
+{% hint style="warning" %}
+This version includes breaking changes for some [Early Access](../appendix/feature-production-readiness.md) features.
+{% endhint %}
+
+#### Added
+
+* Transport waypoint and distance information to [TransportEvent](../api-reference/android/usercontext/event/transportevent.md), which is part of the event list returned in [UserContext](../api-reference/android/usercontext/). Both waypoints and distance are based on unprocessed (i.e. raw) location data.
+* User's current semantic time info to [UserContext](../api-reference/android/usercontext/) (e.g. morning, lunch, evening). See [SemanticTime](../api-reference/android/usercontext/segmenttype.md).
+* Support for uploading additional SDK status information to the Sentiance Cloud Platform.
+* New SDK dependencies. See [dependencies](../appendix/android/artifacts-dependencies.md).
+
+#### Changed
+
+* Stationary venue mapping has been update to an improved version, but that is limited to venue-type mapping. i.e. a stationary will no longer reference a specific venue, but a venue type instead.
+* Improved support for on-device user segment detection.
+* The Android target and compile API versions have been updated to 33.
+* Improved detection of delayed SDK initialization.
+
+#### Fixed
+
+* IllegalArgumentException caused by inconsistency during sorting a collection.
+* ForegroundServiceStartNotAllowedException when starting a service in the background.
+* NullPointerException when uploading logs to the Sentiance Cloud Platform.
+
+#### Removed
+
+* BREAKING: _UserContextUpdateCriteria.ACTIVE\_MOMENTS_.
+* BREAKING: The _Moment_ class. _UserContext_ no longer returns moments.
+* BREAKING: _venueSignificance_ is removed from _StationaryEvent_, and moved to the _Venue_ class. _StationaryEvent_ now references a _Venue_.
+* BREAKING: _VenueCandidates_ and _Visit_ classes are removed. _venueCandidates_ has been removed from _StationaryEvent_.
+* BREAKING: _Venue_ now has a nullable location, which previously was not nullable. The location can be null when it's unknown, such as when a stationary has a venue significance of "point of interest". In this case, only the venue type is known, but not its exact location.
+* BREAKING: _Venue_ no longer has venue name or labels.
+
 ## \[6.1.0] - 30 Sep 2022
+
+{% hint style="warning" %}
+This version includes breaking changes for some [Early Access](../appendix/feature-production-readiness.md) features.
+{% endhint %}
 
 #### Added
 

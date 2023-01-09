@@ -71,7 +71,21 @@ True if location accuracy authorization permission is granted. If false, canDete
 @property (nonatomic, assign) BOOL isPreciseLocationAuthorizationGranted;
 ```
 
+### isDeviceLowPowerModeEnabled
 
+Returns whether low power mode is enabled or not.
+
+```objectivec
+@property (nonatomic, assign) BOOL isDeviceLowPowerModeEnabled;
+```
+
+### isMotionActivityPermissionGranted
+
+Returns whether motion activity permission is granted or not.
+
+```objectivec
+@property (nonatomic, assign) BOOL isMotionActivityPermissionGranted;
+```
 
 ### isGyroPresent
 

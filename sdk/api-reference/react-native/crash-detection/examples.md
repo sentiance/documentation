@@ -1,4 +1,4 @@
-# crash-detection
+# Examples
 
 ### Install the module
 

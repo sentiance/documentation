@@ -8,11 +8,12 @@ Represents a geographic location.
 
 ## GeoLocation API
 
-|        |                                                              |
-| ------ | ------------------------------------------------------------ |
-| int    | [getAccuracyInMeters](geolocation.md#getaccuracyinmeters) () |
-| double | [getLatitude](geolocation.md#getlatitude) ()                 |
-| double | [getLongitude](geolocation.md#getlongitude) ()               |
+|         |                                                              |
+| ------- | ------------------------------------------------------------ |
+| int     | [getAccuracyInMeters](geolocation.md#getaccuracyinmeters) () |
+| double  | [getLatitude](geolocation.md#getlatitude) ()                 |
+| double  | [getLongitude](geolocation.md#getlongitude) ()               |
+| boolean | [hasAccuracy](geolocation.md#hasaccuracy) ()                 |
 
 
 
@@ -23,6 +24,8 @@ Represents a geographic location.
 > ```
 >
 > Returns the accuracy in meters.
+>
+> If this location does not have an accuracy, then -1 is returned.
 
 ### `getLatitude()`
 
@@ -39,3 +42,11 @@ Represents a geographic location.
 > ```
 >
 > Returns the longitude in degrees.
+
+### hasAccuracy`()`
+
+> ```java
+> boolean hasAccuracy()
+> ```
+>
+> Returns `true` if this location has a horizontal accuracy, `false` otherwise.

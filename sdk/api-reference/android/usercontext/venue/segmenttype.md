@@ -1,12 +1,14 @@
-# MomentType
+# VenueSignificance
 
 {% hint style="info" %}
 This type is part of an [Early Access](../../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
 {% endhint %}
 
-Enum representation of the type of moment.
+Enum representation of the venue significance.
 
 ```
-COMMUTE_TO_WORK
-COMMUTE_TO_HOME
+UNKNOWN
+HOME
+WORK
+POINT_OF_INTEREST
 ```

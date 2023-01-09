@@ -153,54 +153,99 @@ In addition, we added a new field called **notification\_id** that allows you to
 
 Below is a summary of all the functions that have been deprecated (**v4.7.0** and below), and their new counterparts from the `core` module:
 
-|                                                                         Deprecated function                                                                         |                                                                                    Replacement function                                                                                   |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                             <pre class="language-javascript"><code class="lang-javascript">start(): Promise&#x3C;SdkStatus></code></pre>                            |                        <pre class="language-javascript"><code class="lang-javascript">enableDetections(): Promise&#x3C;EnableDisableDetectionsResult></code></pre>                        |
-|        <pre class="language-javascript"><code class="lang-javascript">startWithStopDate(stopEpochTimeMs: number | null): Promise&#x3C;SdkStatus></code></pre>       | <pre class="language-javascript"><code class="lang-javascript">enableDetectionsWithExpiryDate(expiryEpochTimeMs: number | null): Promise&#x3C;EnableDisableDetectionsResult></code></pre> |
-|                              <pre class="language-javascript"><code class="lang-javascript">stop(): Promise&#x3C;boolean></code></pre>                              |                        <pre class="language-javascript"><code class="lang-javascript">disableDetections(): Promise&#x3C;EnableDisableDetectionsResult></code></pre>                       |
-|                              <pre class="language-javascript"><code class="lang-javascript">reset(): Promise&#x3C;boolean></code></pre>                             |                                       <pre class="language-javascript"><code class="lang-javascript">reset(): Promise&#x3C;ResetResult></code></pre>                                      |
-|                   <pre class="language-javascript"><code class="lang-javascript">getUserAccessToken(): Promise&#x3C;UserAccessToken></code></pre>                   |                            <pre class="language-javascript"><code class="lang-javascript">requestUserAccessToken(): Promise&#x3C;UserAccessToken></code></pre>                            |
-|        <pre class="language-javascript"><code class="lang-javascript">addUserMetadataField(label: string, value: string): Promise&#x3C;boolean></code></pre>        |                     <pre class="language-javascript"><code class="lang-javascript">addUserMetadataField(label: string, value: string): Promise&#x3C;void></code></pre>                    |
-|          <pre class="language-javascript"><code class="lang-javascript">addUserMetadataFields(metadata: MetadataObject): Promise&#x3C;boolean></code></pre>         |                        <pre class="language-javascript"><code class="lang-javascript">addUserMetadataFields(label: MetadataObject): Promise&#x3C;void></code></pre>                       |
-|              <pre class="language-javascript"><code class="lang-javascript">removeUserMetadataField(label: string): Promise&#x3C;boolean></code></pre>              |                           <pre class="language-javascript"><code class="lang-javascript">removeUserMetadataField(label: string): Promise&#x3C;void></code></pre>                          |
-|                   <pre class="language-javascript"><code class="lang-javascript">disableBatteryOptimization(): Promise&#x3C;boolean></code></pre>                   |                                <pre class="language-javascript"><code class="lang-javascript">disableBatteryOptimization(): Promise&#x3C;void></code></pre>                               |
-|                    <pre class="language-javascript"><code class="lang-javascript">listenUserActivityUpdates(): Promise&#x3C;boolean></code></pre>                   |                                <pre class="language-javascript"><code class="lang-javascript">listenUserActivityUpdates(): Promise&#x3C;void></code></pre>                                |
-| <pre class="language-javascript"><code class="lang-javascript">startTrip(metadata: MetadataObject | null,  hint: TransportMode): Promise&#x3C;boolean></code></pre> |              <pre class="language-javascript"><code class="lang-javascript">startTrip(metadata: MetadataObject | null, hint: TransportMode): Promise&#x3C;void></code></pre>              |
-|                            <pre class="language-javascript"><code class="lang-javascript">stopTrip(): Promise&#x3C;boolean></code></pre>                            |                                         <pre class="language-javascript"><code class="lang-javascript">stopTrip(): Promise&#x3C;void></code></pre>                                        |
-|                        <pre class="language-javascript"><code class="lang-javascript">submitDetections(): Promise&#x3C;boolean></code></pre>                        |                                     <pre class="language-javascript"><code class="lang-javascript">submitDetections(): Promise&#x3C;void></code></pre>                                    |
-|       <pre class="language-javascript"><code class="lang-javascript">updateSdkNotification(title: string, message: string): Promise&#x3C;boolean></code></pre>      |                   <pre class="language-javascript"><code class="lang-javascript">updateSdkNotification(title: string, message: string): Promise&#x3C;void></code></pre>                   |
-|                       <pre class="language-javascript"><code class="lang-javascript">isThirdPartyLinked(): Promise&#x3C;boolean></code></pre>                       |                                     <pre class="language-javascript"><code class="lang-javascript">isUserLinked(): Promise&#x3C;boolean></code></pre>                                     |
+|                                                                          Deprecated function                                                                         |                                                                                    Replacement function                                                                                    |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                             <pre class="language-javascript"><code class="lang-javascript">start(): Promise&#x3C;SdkStatus>
+</code></pre>                            |                        <pre class="language-javascript"><code class="lang-javascript">enableDetections(): Promise&#x3C;EnableDisableDetectionsResult>
+</code></pre>                        |
+|        <pre class="language-javascript"><code class="lang-javascript">startWithStopDate(stopEpochTimeMs: number | null): Promise&#x3C;SdkStatus>
+</code></pre>       | <pre class="language-javascript"><code class="lang-javascript">enableDetectionsWithExpiryDate(expiryEpochTimeMs: number | null): Promise&#x3C;EnableDisableDetectionsResult>
+</code></pre> |
+|                              <pre class="language-javascript"><code class="lang-javascript">stop(): Promise&#x3C;boolean>
+</code></pre>                              |                        <pre class="language-javascript"><code class="lang-javascript">disableDetections(): Promise&#x3C;EnableDisableDetectionsResult>
+</code></pre>                       |
+|                              <pre class="language-javascript"><code class="lang-javascript">reset(): Promise&#x3C;boolean>
+</code></pre>                             |                                       <pre class="language-javascript"><code class="lang-javascript">reset(): Promise&#x3C;ResetResult>
+</code></pre>                                      |
+|                   <pre class="language-javascript"><code class="lang-javascript">getUserAccessToken(): Promise&#x3C;UserAccessToken>
+</code></pre>                   |                            <pre class="language-javascript"><code class="lang-javascript">requestUserAccessToken(): Promise&#x3C;UserAccessToken>
+</code></pre>                            |
+|        <pre class="language-javascript"><code class="lang-javascript">addUserMetadataField(label: string, value: string): Promise&#x3C;boolean>
+</code></pre>        |                     <pre class="language-javascript"><code class="lang-javascript">addUserMetadataField(label: string, value: string): Promise&#x3C;void>
+</code></pre>                    |
+|          <pre class="language-javascript"><code class="lang-javascript">addUserMetadataFields(metadata: MetadataObject): Promise&#x3C;boolean>
+</code></pre>         |                        <pre class="language-javascript"><code class="lang-javascript">addUserMetadataFields(label: MetadataObject): Promise&#x3C;void>
+</code></pre>                       |
+|              <pre class="language-javascript"><code class="lang-javascript">removeUserMetadataField(label: string): Promise&#x3C;boolean>
+</code></pre>              |                           <pre class="language-javascript"><code class="lang-javascript">removeUserMetadataField(label: string): Promise&#x3C;void>
+</code></pre>                          |
+|                   <pre class="language-javascript"><code class="lang-javascript">disableBatteryOptimization(): Promise&#x3C;boolean>
+</code></pre>                   |                                <pre class="language-javascript"><code class="lang-javascript">disableBatteryOptimization(): Promise&#x3C;void>
+</code></pre>                               |
+|                    <pre class="language-javascript"><code class="lang-javascript">listenUserActivityUpdates(): Promise&#x3C;boolean>
+</code></pre>                   |                                <pre class="language-javascript"><code class="lang-javascript">listenUserActivityUpdates(): Promise&#x3C;void>
+</code></pre>                                |
+| <pre class="language-javascript"><code class="lang-javascript">startTrip(metadata: MetadataObject | null,  hint: TransportMode): Promise&#x3C;boolean>
+</code></pre> |              <pre class="language-javascript"><code class="lang-javascript">startTrip(metadata: MetadataObject | null, hint: TransportMode): Promise&#x3C;void>
+</code></pre>              |
+|                            <pre class="language-javascript"><code class="lang-javascript">stopTrip(): Promise&#x3C;boolean>
+</code></pre>                            |                                         <pre class="language-javascript"><code class="lang-javascript">stopTrip(): Promise&#x3C;void>
+</code></pre>                                        |
+|                        <pre class="language-javascript"><code class="lang-javascript">submitDetections(): Promise&#x3C;boolean>
+</code></pre>                        |                                     <pre class="language-javascript"><code class="lang-javascript">submitDetections(): Promise&#x3C;void>
+</code></pre>                                    |
+|       <pre class="language-javascript"><code class="lang-javascript">updateSdkNotification(title: string, message: string): Promise&#x3C;boolean>
+</code></pre>      |                   <pre class="language-javascript"><code class="lang-javascript">updateSdkNotification(title: string, message: string): Promise&#x3C;void>
+</code></pre>                   |
+|                       <pre class="language-javascript"><code class="lang-javascript">isThirdPartyLinked(): Promise&#x3C;boolean>
+</code></pre>                       |                                     <pre class="language-javascript"><code class="lang-javascript">isUserLinked(): Promise&#x3C;boolean>
+</code></pre>                                     |
 
 Most of the changes to the functions in the table above concern mainly their return values. Several functions returned a `Promise` that resolves to a `boolean` that does not add any useful information regarding whether the function call was successful or not. Their new counterparts return a `Promise` that resolves to `void` instead. To catch any errors, use a try/catch mechanism.
 
 The following the functions have also been deprecated:
 
-|                                                                                                                 Deleted functions                                                                                                                |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                <pre class="language-javascript"><code class="lang-javascript">getValueForKey(key: string, defaultValue: string): Promise&#x3C;string></code></pre>                                               |
-|                                                           <pre class="language-javascript"><code class="lang-javascript">setValueForKey(key: string, value: string): void</code></pre>                                                           |
-|                                                        <pre class="language-javascript"><code class="lang-javascript">isNativeInitializationEnabled(): Promise&#x3C;boolean></code></pre>                                                        |
-|                                                          <pre class="language-javascript"><code class="lang-javascript">enableNativeInitialization(): Promise&#x3C;boolean></code></pre>                                                         |
-|                                                         <pre class="language-javascript"><code class="lang-javascript">disableNativeInitialization(): Promise&#x3C;boolean></code></pre>                                                         |
+|                                                                                                                 Deleted functions                                                                                                                 |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                <pre class="language-javascript"><code class="lang-javascript">getValueForKey(key: string, defaultValue: string): Promise&#x3C;string>
+</code></pre>                                               |
+|                                                           <pre class="language-javascript"><code class="lang-javascript">setValueForKey(key: string, value: string): void
+</code></pre>                                                           |
+|                                                        <pre class="language-javascript"><code class="lang-javascript">isNativeInitializationEnabled(): Promise&#x3C;boolean>
+</code></pre>                                                        |
+|                                                          <pre class="language-javascript"><code class="lang-javascript">enableNativeInitialization(): Promise&#x3C;boolean>
+</code></pre>                                                         |
+|                                                         <pre class="language-javascript"><code class="lang-javascript">disableNativeInitialization(): Promise&#x3C;boolean>
+</code></pre>                                                         |
 |             <pre class="language-javascript"><code class="lang-javascript">init(
     appId: string,  
     secret: string,  
     baseURL: string | null,  
-    shouldStart: boolean): Promise&#x3C;boolean | SdkStatus>;</code></pre>             |
+    shouldStart: boolean): Promise&#x3C;boolean | SdkStatus>;
+</code></pre>             |
 | <pre class="language-javascript"><code class="lang-javascript">initWithUserLinkingEnabled(  
     appId: string,  
     secret: string,  
     baseURL: string | null,  
-    shouldStart: boolean): Promise&#x3C;boolean | SdkStatus>;</code></pre> |
+    shouldStart: boolean): Promise&#x3C;boolean | SdkStatus>;
+</code></pre> |
 
 In addition to the functions listed above, the following functions (provided by the **v4.7.1** and above) were also deprecated:
 
-|                                                             Deprecated function                                                            |                                                                                               Replacement function                                                                                              |
-| :----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <pre class="language-javascript"><code class="lang-javascript">createUserExperimental(configuration: CreateUserConfiguration)</code></pre> |                               <pre class="language-javascript"><code class="lang-javascript">createUser(options: UserCreationOptions): Promise&#x3C;CreateUserResult></code></pre>                              |
-|                    <pre class="language-javascript"><code class="lang-javascript">resetExperimental(): void</code></pre>                   |                                                  <pre class="language-javascript"><code class="lang-javascript">reset(): Promise&#x3C;ResetResult></code></pre>                                                 |
-|            <pre class="language-javascript"><code class="lang-javascript">disableExperimental(): Promise&#x3C;void></code></pre>           | <pre class="language-javascript"><code class="lang-javascript">disableDetections(): Promise&#x3C;EnableDisableDetectionsResult>In addition, the following the functions have also been deprecated:</code></pre> |
-|            <pre class="language-javascript"><code class="lang-javascript">enableExperimental() : Promise&#x3C;void></code></pre>           |                                   <pre class="language-javascript"><code class="lang-javascript">enableDetections(): Promise&#x3C;EnableDisableDetectionsResult></code></pre>                                   |
+|                                                             Deprecated function                                                             |                                                                                               Replacement function                                                                                               |
+| :-----------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <pre class="language-javascript"><code class="lang-javascript">createUserExperimental(configuration: CreateUserConfiguration)
+</code></pre> |                               <pre class="language-javascript"><code class="lang-javascript">createUser(options: UserCreationOptions): Promise&#x3C;CreateUserResult>
+</code></pre>                              |
+|                    <pre class="language-javascript"><code class="lang-javascript">resetExperimental(): void
+</code></pre>                   |                                                  <pre class="language-javascript"><code class="lang-javascript">reset(): Promise&#x3C;ResetResult>
+</code></pre>                                                 |
+|            <pre class="language-javascript"><code class="lang-javascript">disableExperimental(): Promise&#x3C;void>
+</code></pre>           | <pre class="language-javascript"><code class="lang-javascript">disableDetections(): Promise&#x3C;EnableDisableDetectionsResult>In addition, the following the functions have also been deprecated:
+</code></pre> |
+|            <pre class="language-javascript"><code class="lang-javascript">enableExperimental() : Promise&#x3C;void>
+</code></pre>           |                                   <pre class="language-javascript"><code class="lang-javascript">enableDetections(): Promise&#x3C;EnableDisableDetectionsResult>
+</code></pre>                                   |
 
 ### **Minimal Migration Steps (only for v4.7.0 and below)**
 

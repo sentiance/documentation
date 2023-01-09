@@ -1,5 +1,41 @@
 # iOS
 
+## \[6.2.0] - 9 Jan 2023
+
+{% hint style="warning" %}
+This version includes breaking changes for some [Early Access](../appendix/feature-production-readiness.md) features.
+{% endhint %}
+
+#### Added
+
+* Transport waypoint and distance information to [SENTTransportEvent](../api-reference/ios/user-context/senttimelineevent/senttransportevent.md), which is part of the event list returned in [SENTUserContext](../api-reference/ios/user-context/sentusercontext/). Both waypoints and distance are based on unprocessed (i.e raw) location data.
+* User's current semantic time info to [SENTUserContext](../api-reference/ios/user-context/sentusercontext/) (e.g. morning, lunch, evening). See [SENTSemanticTime](../api-reference/ios/user-context/sentsemantictime.md).
+* A new multi-purpose SDK background task, with identifier `com.sentiance.backgroundtask.task_processing`_._ **Adding this identifier to your app's Info.plist is mandatory**. Please update your [project settings](../getting-started/ios-sdk/project-settings.md#setting-up-background-tasks).
+* isDeviceLowPowerModeEnabled property to [SENTSDKStatus](../api-reference/ios/sentsdkstatus.md), to indicate whether the device is in low power mode.
+* isMotionActivityPermissionGranted property to [SENTSDKStatus](../api-reference/ios/sentsdkstatus.md), to indicate whether the motion activity permission has been granted.
+* Support for uploading additional SDK status information to the Sentiance Cloud Platform.
+* New SDK dependency called dskoball. See [dependencies](../appendix/ios/dependencies.md).
+
+#### Changed
+
+* Stationary venue mapping has been update to an improved version, but that is limited to venue-type mapping. i.e. a stationary will no longer reference a specific venue, but a venue _type_ instead.
+* Improved support for on-device user segment detection.
+* The SDK's background task identifier _com.sentiance.backgroundtask.segment\_detection_ is no longer required. You may remove it from your app's Info.plist file.
+* Disabled SDK logging to the device system log (i.e. console).
+
+#### Fixed
+
+* Rare exception when uploading logs to the Sentiance Cloud Platform.
+
+#### Removed
+
+* BREAKING: _SENTUserContextUpdateCriteriaActiveMoments criteria type._
+* BREAKING: _SENTMoment_ class. _SENTUserContext_ no longer returns _moments_.
+* BREAKING: _venueSignificance_ is removed from _SENTStationaryEvent_, and moved to _SENTVenue_. _SENTStationaryEvent_ now references a _SENTVenue_.
+* BREAKING: SENTVenueCandidates and SENTVisit classes are removed. _venueCandidates_ has been removed from _SENTStationaryEvent_.
+* BREAKING: _SENTVenue_ now has a nullable location, which previously was not nullable. The location can be nil when it's unknown, such as when a stationary has a venue significance of "point of interest". In this case, only the venue type is known, but not its exact location.
+* BREAKING: _SENTVenue_ no longer has venue name or labels.
+
 ## \[6.1.3] - 1 Dec 2022
 
 #### Fixed
@@ -25,6 +61,10 @@
 * Potential runtime exception related to the vehicle crash diagnostic feature.
 
 ## \[6.1.0] - 30 Sep 2022
+
+{% hint style="warning" %}
+This version includes breaking changes for some [Early Access](../appendix/feature-production-readiness.md) features.
+{% endhint %}
 
 #### Added
 
