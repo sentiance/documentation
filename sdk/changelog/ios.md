@@ -10,7 +10,7 @@ This version includes breaking changes for some [Early Access](../appendix/featu
 
 * Transport waypoint and distance information to [SENTTransportEvent](../api-reference/ios/user-context/senttimelineevent/senttransportevent.md), which is part of the event list returned in [SENTUserContext](../api-reference/ios/user-context/sentusercontext/). Both waypoints and distance are based on unprocessed (i.e raw) location data.
 * User's current semantic time info to [SENTUserContext](../api-reference/ios/user-context/sentusercontext/) (e.g. morning, lunch, evening). See [SENTSemanticTime](../api-reference/ios/user-context/sentsemantictime.md).
-* A new multi-purpose SDK background task, with identifier `com.sentiance.backgroundtask.task_processing`_._ **Adding this identifier to your app's Info.plist is mandatory**. Please update your [project settings](../getting-started/ios-sdk/project-settings.md#setting-up-background-tasks).
+* A new multi-purpose SDK background task, with identifier `com.sentiance.backgroundtask.task_processing`_._ **Adding this identifier to your app's Info.plist is mandatory**. Please update your [project settings](../getting-started/ios-sdk/project-settings.md#setting-up-background-tasks), and enable Background fetch and processing capabilities.
 * isDeviceLowPowerModeEnabled property to [SENTSDKStatus](../api-reference/ios/sentsdkstatus.md), to indicate whether the device is in low power mode.
 * isMotionActivityPermissionGranted property to [SENTSDKStatus](../api-reference/ios/sentsdkstatus.md), to indicate whether the motion activity permission has been granted.
 * Support for uploading additional SDK status information to the Sentiance Cloud Platform.
