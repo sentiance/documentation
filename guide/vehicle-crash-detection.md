@@ -12,7 +12,7 @@ Follow the below steps to set up vehicle crash detection in you app.
 
 If you haven't already integrated the Sentiance SDK, follow the steps in our [Getting Started](../sdk/getting-started/) guide to complete the integration. Once you have completed those steps, continue along with the steps documented below.
 
-### 2. \[Android Only] Add the Crash Detection Feature
+### 2. \[Android Only] Add the Crash Detection Dependency
 
 To support crash detection, add a dependency to the crash detection library artifact in your app. This will make the `CrashDetectionApi` class available for you to subscribe for crash events.
 
@@ -113,7 +113,13 @@ addVehicleCrashEventListener(crashEvent => {
 {% endtab %}
 {% endtabs %}
 
-The crash event contains the time and location of the detected crash, in addition to a number of metrics to estimate the severity of the crash.
+The crash event contains the time and location of the detected crash, in addition to a number of metrics to estimate the severity of the crash:
+
+| Speed at impact | The estimated speed of the vehicle before the impact, in m/s.                                                                                                           |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Magnitude       | The magnitude of the impact, in m/s².                                                                                                                                   |
+| Delta-V         | The estimated change in velocity at impact, in m/s.                                                                                                                     |
+| Confidence      | The level of confidence that the accelerometer signal reflects a true crash pattern (range 0 - 100). It is recommended to filter out events below the confidence of 50. |
 
 ### 5. Test Your Integration
 
@@ -144,6 +150,47 @@ invokeDummyVehicleCrash();
 {% endtabs %}
 
 This should invoke a dummy crash event, passing it to the listener that you previously set. You can then test how your app handles the event at runtime.
+
+It's also possible to subscribe for additional diagnostic information that the SDK outputs at runtime, and receive a human-readable form of the state of the crash detector, which can be used to facilitate testing, when simulating a crash.
+
+{% tabs %}
+{% tab title="Android" %}
+```kotlin
+CrashDetectionApi.getInstance(context).setVehicleCrashDiagnosticListener { diagnostic ->
+    val state = diagnostic.crashDetectionState
+    val description = diagnostic.crashDetectionStateDescription
+}
+```
+{% endtab %}
+
+{% tab title="iOS" %}
+```swift
+Sentiance.shared.setVehicleCrashDiagnosticHandler { diagnostic in
+    let state = diagnostic.crashDetectionState
+    let description = diagnostic.crashDetectionStateDescription
+}
+```
+{% endtab %}
+
+{% tab title="React Native" %}
+```javascript
+await SentianceCrashDetection.addVehicleCrashDiagnosticListener(diagnostic => {
+    const state = diagnostic.crashDetectionState;
+    const description = diagnostic.crashDetectionStateDescription;
+}
+```
+{% endtab %}
+{% endtabs %}
+
+The result will reflect one of the following detection states:
+
+* crash candidate detected
+* crash candidate discarded - impact is too weak
+* crash candidate discarded - transport mode is not a vehicle
+* crash candidate discarded - pre-impact signal contains too much noise
+* crash candidate discarded - speed before impact is too low
+* crash candidate discarded - post-impact signal contains too much noise
+* crash candidate discarded - speed after impact is too high
 
 ## Crash Report
 
