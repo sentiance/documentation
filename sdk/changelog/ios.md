@@ -1,5 +1,15 @@
 # iOS
 
+## \[6.2.1] - 19 Jan 2023
+
+#### Removed
+
+* CocoaPods: `$(PODS_ROOT)/**` path from `SWIFT_INCLUDE_PATHS` that was being set by the SDK Podspec configuration. This was resulting in build errors when compiling Swift files.
+
+#### Fixed
+
+* High CPU usage when some on-device features were enabled, such as User Segment Detection and Stationary Venue-Type Mapping.
+
 ## \[6.2.0] - 9 Jan 2023
 
 {% hint style="warning" %}

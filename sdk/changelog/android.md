@@ -1,5 +1,11 @@
 # Android
 
+## \[6.2.1] - 19 Jan 2023
+
+#### Fixed
+
+* Runtime exception when targeting Google Play Services Location library v21.
+
 ## \[6.2.0] - 9 Jan 2023
 
 {% hint style="warning" %}
