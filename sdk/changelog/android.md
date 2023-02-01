@@ -1,5 +1,11 @@
 # Android
 
+## \[6.2.2] - 31 Jan 2023
+
+#### Added
+
+* Proguard rules for Google Play Service Location library classes, which are required since SDK v6.2.1.
+
 ## \[6.2.1] - 19 Jan 2023
 
 #### Fixed

@@ -1,5 +1,11 @@
 # React Native
 
+## \[6.2.2] - 31 Jan 2023
+
+#### Changed
+
+* Updated the target Sentiance Android SDK version from `6.2.0` to `6.2.+`.
+
 ## \[6.2.0] - 9 Jan 2023
 
 {% hint style="warning" %}

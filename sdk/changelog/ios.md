@@ -1,5 +1,13 @@
 # iOS
 
+## \[6.2.2] - 31 Jan 2023
+
+#### Fixed
+
+* An exception related to incompatible bundled models, caused by build-time SDK Bundle merge by Xcode.
+* An issue where the SDK would start running in the background without detections being started, due to a conflict with a geofence set at the app level.
+* An exception caused by deadlocking logic, when checking if the device is in low power mode.
+
 ## \[6.2.1] - 19 Jan 2023
 
 #### Removed
