@@ -1,6 +1,6 @@
 # React Native
 
-## \[6.2.2] - 31 Jan 2023
+## \[6.2.3] - 1 Feb 2023
 
 #### Changed
 
