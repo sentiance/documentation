@@ -1,5 +1,15 @@
 # Android
 
+## \[6.1.1] - 3 Feb 2023
+
+{% hint style="info" %}
+This patched version should be used only if you intend to remain on version 6.1. Otherwise, it is recommended to use the latest 6.2 version instead.
+{% endhint %}
+
+#### Fixed
+
+* A stability issue in v6.1.0 impacting http requests.
+
 ## \[6.2.2] - 31 Jan 2023
 
 #### Added
@@ -47,7 +57,7 @@ This version includes breaking changes for some [Early Access](../appendix/featu
 * BREAKING: _Venue_ now has a nullable location, which previously was not nullable. The location can be null when it's unknown, such as when a stationary has a venue significance of "point of interest". In this case, only the venue type is known, but not its exact location.
 * BREAKING: _Venue_ no longer has venue name or labels.
 
-## \[6.1.0] - 30 Sep 2022
+## \[6.1.0] - 30 Sep 2022 (Unpublished. Use 6.1.1)
 
 {% hint style="warning" %}
 This version includes breaking changes for some [Early Access](../appendix/feature-production-readiness.md) features.
