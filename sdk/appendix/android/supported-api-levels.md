@@ -8,5 +8,5 @@
 
 If your app supports an API level that is lower than the minimum specified above, you can check out [this troubleshooting guide](../../troubleshooting/android.md#manifest-merger-failed-uses-sdk-minsdkversion-x-cannot-be-smaller-than-version-y-declared-in-library) to learn how to work around the limitation.
 
-When the SDK is initialized on an Android version that is lower than the one specified in **Required API Level for Detections**, initialization will fail with reason `UNSUPPORTED_OS_VERSION`.
+When the SDK is initialized on an Android version that has a lower API level than the one specified in **Required API Level for Detections**, initialization will fail with reason `UNSUPPORTED_OS_VERSION`.
 
