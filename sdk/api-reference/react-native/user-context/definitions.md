@@ -1,10 +1,6 @@
----
-description: >-
-  Page containing the full index of the Sentiance React Native user context
-  SDK's reference API types.
----
-
 # Definitions
+
+
 
 ```typescript
 declare module "@sentiance-react-native/user-context" {

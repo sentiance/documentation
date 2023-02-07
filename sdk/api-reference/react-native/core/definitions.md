@@ -1,9 +1,3 @@
----
-description: >-
-  Page containing the full index of the Sentiance React Native core SDK's
-  reference API types.
----
-
 # Definitions
 
 ```typescript
