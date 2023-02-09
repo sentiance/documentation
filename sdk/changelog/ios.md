@@ -1,5 +1,11 @@
 # iOS
 
+## \[6.2.3] - 9 Feb 2023
+
+#### Fixed
+
+* An exception caused by deadlocking logic, when checking the background app refresh status and device thermal state.
+
 ## \[6.2.2] - 31 Jan 2023
 
 #### Fixed
