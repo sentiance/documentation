@@ -1,5 +1,11 @@
 # iOS
 
+## \[6.2.4] - 16 Feb 2023
+
+#### Fixed
+
+* Incorrect device low-power-mode indicator when checking the SDK status. This bug also impacted the system API result when calling `ProcessInfo.isLowPowerModeEnabled`.
+
 ## \[6.2.3] - 9 Feb 2023
 
 #### Fixed

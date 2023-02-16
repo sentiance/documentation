@@ -11,7 +11,7 @@ To address this limitation, we have prepared a custom TensorFlowLiteC framework 
 
 You can find the XCFramework in [our repository](https://sentiance-u1-sdk-downloads.s3.eu-west-1.amazonaws.com/ios/frameworks/TensorFlowLiteC/2.7.0/SENTTensorFlowLiteC.xcframework.zip), along with the [podspec file](https://sentiance-u1-sdk-downloads.s3.eu-west-1.amazonaws.com/ios/frameworks/TensorFlowLiteC/2.7.0/TensorFlowLiteC.podspec). This custom TFL framework is also bundled in our umbrella framework and XCFramework artifacts.
 
-To make use of it with CocoaPods, you can add the following to your Podfile:
+To use it with CocoaPods, you can add the following to your Podfile:
 
 ```ruby
 pod 'TensorFlowLiteC', :podspec => 'https://sentiance-u1-sdk-downloads.s3.eu-west-1.amazonaws.com/ios/frameworks/TensorFlowLiteC/2.7.0/TensorFlowLiteC.podspec'

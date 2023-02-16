@@ -1,5 +1,11 @@
 # Android
 
+## \[6.2.3] - 16 Feb 2023
+
+#### Fixed
+
+* Runtime exception when retrieving historic app exit reasons, as a result of buggy Android framework code on some Samsung devices.
+
 ## \[6.1.1] - 3 Feb 2023
 
 {% hint style="info" %}
