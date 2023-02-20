@@ -6,7 +6,7 @@ The Sentiance SDK includes two types of features:
 * **Production Ready**: these are features that have undergone rigorous quality and stability tests and checks, and are ready to be used for building production features in your app. The APIs are final, and remain backwards compatible across minor and patch version updates.
 
 {% hint style="info" %}
-We generally release certain features as Early Access first, then update them to Production Ready in a subsequent major or minor SDK release.
+We generally release certain features as Early Access first, then update them to Production Ready in subsequent major or minor SDK releases.
 {% endhint %}
 
 ### Production Ready State of Current Features
