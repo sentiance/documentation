@@ -165,6 +165,8 @@
         * [TransportMode](sdk/api-reference/android/usercontext/event/transportmode.md)
       * [GeoLocation](sdk/api-reference/android/usercontext/geolocation.md)
       * [Segment](sdk/api-reference/android/usercontext/segment/README.md)
+        * [SegmentCategory](sdk/api-reference/android/usercontext/segment/segmentcategory.md)
+        * [SegmentSubcategory](sdk/api-reference/android/usercontext/segment/segmentsubcategory.md)
         * [SegmentType](sdk/api-reference/android/usercontext/segment/segmenttype.md)
       * [SemanticTime](sdk/api-reference/android/usercontext/segmenttype.md)
       * [Venue](sdk/api-reference/android/usercontext/venue/README.md)
