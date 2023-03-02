@@ -1,5 +1,9 @@
 # Android Quick Start
 
+{% hint style="danger" %}
+If you are migrating from version 4.x to 6.x, please use our [migration guide](../../appendix/migration-guide/android.md#migrating-from-4.x-to-6.x) instead of this quick start guide.&#x20;
+{% endhint %}
+
 {% hint style="success" %}
 ### Platform requirements
 
@@ -9,13 +13,10 @@ The Sentiance SDK works on Android 6.0 and above. If you support older Android v
 {% hint style="success" %}
 ### Dependency requirements
 
-#### Google Play Services
+The Sentiance SDK has the following external library dependencies. If your app depends on versions other than the ones mentioned here, please reach out to us to address possible incompatibility issues.
 
-The Sentiance SDK uses version 18.0.0 of the Google Play Location service library. This is the minimum required version to ensure optimal SDK detections. If your app depends on a lower version, please be aware that it will be forced to use v18.0.0.
-
-#### TensorFlow Lite
-
-The Sentiance SDK uses version 2.7.0 of the TensorFlow Lite library. If your app depends on a different version, please reach out to Sentiance to address possible incompatibility issues.
+* **Google Play Services**: v18.0.0
+* **TensorFlow Lite**: v2.7.0
 {% endhint %}
 
 If you want to get started quickly, you can check out our [sample application](https://github.com/sentiance/sample-apps-android). If you prefer to manually integrate the SDK in your existing app, please read on.

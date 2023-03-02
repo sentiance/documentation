@@ -2,6 +2,10 @@
 
 
 
+{% hint style="danger" %}
+If you are migrating from version 4.x to 6.x, please use our [migration guide](../../appendix/migration-guide/react-native.md#migrating-from-4.x-to-6.x) instead of this quick start guide.&#x20;
+{% endhint %}
+
 {% hint style="success" %}
 ### Platform requirements
 
