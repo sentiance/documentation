@@ -12,6 +12,7 @@ Represents an occurrence of an event that was detected for a user.
 | -------------------------- | -------------------------------------------------- |
 | Long                       | [getDurationInSeconds](./#getdurationinseconds) () |
 | [DateTime](../datetime.md) | [getEndTime](./#getendtime) ()                     |
+| [EventType](eventtype.md)  | [getEventType](./#geteventtype) ()                 |
 | [DateTime](../datetime.md) | [getStartTime](./#getstarttime) ()                 |
 | boolean                    | [hasEnded](./#hasended) ()                         |
 
@@ -32,6 +33,14 @@ Represents an occurrence of an event that was detected for a user.
 > ```
 >
 > Returns the end time of the event, if the event has ended. Otherwise, returns null.
+
+### `getEventType()`
+
+> ```java
+> EventType getEventType()
+> ```
+>
+> Returns the event type. Based on this type, you can cast an event to the corresponding event class (e.g. [TransportEvent](transportevent.md), [StationaryEvent](stationaryevent.md)) to access type specific properties.
 
 ### `getStartTime()`
 
