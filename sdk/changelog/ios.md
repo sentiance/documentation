@@ -1,5 +1,11 @@
 # iOS
 
+## \[6.2.5] - 9 Mar 2023
+
+#### Fixed
+
+* [distanceInMeters](../api-reference/ios/user-context/senttimelineevent/senttransportevent.md#distanceinmeters) property of TransportEvent returns `nil` instead of a proper result.
+
 ## \[6.2.4] - 16 Feb 2023
 
 #### Fixed
