@@ -31,6 +31,6 @@ We offer two types of API endpoints. A [REST API](backend/rest-api/) that covers
 
 ## Demo App
 
-Try Journeys to see how the Sentiance Platform learns about your journey.
+Try Insights App to see how the Sentiance Platform learns about your journey.
 
-![](.gitbook/assets/journeys-demo.gif)
+![](https://lh4.googleusercontent.com/HbPb1-ybRhKRwll0pRepGaIaHbPiXZm1695pe3\_W0fH7uBmLfh-rWnYz386hYGSTsGFvQB9mwGO10zDrcU6G1DQlmx62yMGICAWuLGIH6kXUtgjBekbbaipaJH4aUgPl9QnNwzi3K33aYbwYPlg777Tx6ex7qU6kq9i95l4ibESbgUBK8ZsUAe0rCA)![](https://lh4.googleusercontent.com/6MotwNE\_e0NII123tJqog59b4-7Ow1mulYZ6eIeOTrAHLpL2o81qF78vVYOH7tuDmIYNIO9k91P6neB0jeye4RYb6fSGEUXdYmZ6vQX3jIqnxgXcQLa42z8xxXazKArhVdXnf2Sp8tSNCf75vdy4tvXf7JLMlFZzWa\_f1aTJ-mg59L3oEvzWNUuwGw)![](https://lh6.googleusercontent.com/bPzty3btiTc6fkc9wNJxzSLjoMPmMo2UlkYsMoP5T\_3qkn909vh8-RcK5K4a7ukWXbKJX3js\_s89yBKbk9jajtrNLJm0jCDmfItmsbh8ywo94AqnPyVa02kLAbarNoSSuS40N0eyRVgN9hETLaynlwVksqHJPks-b98U3u2rk\_cfFu6nfpcxaq0ayQ)
