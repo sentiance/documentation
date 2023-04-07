@@ -1,5 +1,21 @@
 # Android
 
+## \[6.3.0] - 7 Apr 2023
+
+#### Added
+
+* A new feature called Driving Insights, which provides information about a user's driving behaviour. In this first version, the SDK detects harsh driving events (e.g. acceleration, braking, and turning), which are then used to compute a vehicular transport's smooth driving score. This data is available via the new DrivingInsightsApi, which allows the subscription to, and retrieval of DrivingInsights and HarshDrivingEvents. This feature is accessible via the _sdk-driving-insights_ artifact, and must be enabled by Sentiance before use.
+* A new API class called TransportSessionApi, which allows the subscription to, and retrieval of TransportSessions. A transport session corresponds to a transport that was detected by the SDK, and includes information such as the mode of transport, and the raw sensor data that was used to classify it. This API is primarily intended to be used for accessing the raw sensor data. To simply be notified of new transports, it's more efficient to utilize the [UserContextApi](../api-reference/android/usercontextapi/).
+* A short history of locations inside [VehicleCrashEvent](../api-reference/android/crashdetection/vehiclecrashevent.md), which represent the preceding locations leading up to the crash event.
+
+#### Fixed
+
+* Rare issue that causes the incorrect determination of the end of a stationary.
+
+#### Removed
+
+* BREAKING: a number of [user segments](../api-reference/android/usercontext/segment/segmenttype.md) that are no longer supported.
+
 ## \[6.2.3] - 16 Feb 2023
 
 #### Fixed

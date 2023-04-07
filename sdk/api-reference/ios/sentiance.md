@@ -96,7 +96,7 @@ Checks if a Sentiance user exists on the device. You may call this method withou
 
 ### isUserLinked
 
-Checks if a Sentiance user exists on the device, and whether it is linked to your app's user. You may call this method without having initialized the SDK. Returns **** true if a Sentiance user exists and is linked.
+Checks if a Sentiance user exists on the device, and whether it is linked to your app's user. You may call this method without having initialized the SDK. Returns true if a Sentiance user exists and is linked.
 
 ```objectivec
 @property (nonatomic, readonly) BOOL isUserLinked;
@@ -157,6 +157,20 @@ SDK disk quota usage
 ```
 @property (nonatomic, readonly) long diskQuotaUsage;
 ```
+
+### `drivingInsightsProcessedDelegate`
+
+Sets a delegate that will be invoked when the driving insights for a completed transport becomes ready.
+
+Note: calling this method on an uninitialized SDK will throw an SdkException.
+
+```objectivec
+@property (nonatomic, strong) id <SENTDrivingInsightsReadyDelegate> _Nullable drivingInsightsProcessedDelegate;
+```
+
+| Parameters                       |                                                                                                                                                                              |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| drivingInsightsProcessedDelegate | A [`SENTDrivingInsightsReadyDelegate`](driving-insights/sentdrivinginsightsreadydelegate.md) to receive the driving insights. Set `nil` to remove a previously set delegate. |
 
 
 
@@ -438,13 +452,13 @@ This is because an existing app user will already have a corresponding Sentiance
 NS_SWIFT_NAME(linkUser(authCode:completionHandler:));
 ```
 
-### ****
+###
 
 ### **requestUserAccessTokenWithCompletionHandler:**
 
 Returns the user's API access token as a Token object, via the completion Handler.
 
-The token might be refreshed during this call, in which case, a valid network connection is required. You can use this token to **** query the Sentiance API for the user's data.
+The token might be refreshed during this call, in which case, a valid network connection is required. You can use this token to query the Sentiance API for the user's data.
 
 **throws:**  NSException if the SDK is not initialized.
 
@@ -861,7 +875,7 @@ Get SDK WiFi quota usage
 {% hint style="warning" %}
 **Deprecated**
 
-Use [`mobileQuotaLimit`](sentiance.md#mobilequotalimit) `` instead.
+Use [`mobileQuotaLimit`](sentiance.md#mobilequotalimit) instead.
 {% endhint %}
 
 Get SDK mobile data quota limit
@@ -907,7 +921,7 @@ Get SDK disk quota limit
 {% hint style="warning" %}
 **Deprecated**
 
-Use [diskQuotaUsage:](sentiance.md#diskquotausage) **** instead.
+Use [diskQuotaUsage:](sentiance.md#diskquotausage) instead.
 {% endhint %}
 
 Get SDK disk quota usage
@@ -1018,3 +1032,124 @@ Returns a set of [SENTTransmittableDataType](senttransmittabledatatype.md) data 
 ```objectivec
 - (NSSet<NSNumber *> *)transmittableDataTypes NS_REFINED_FOR_SWIFT;
 ```
+
+### enableTransportSessionRecording
+
+Enables transport session recording.
+
+This setting is persistent across app restarts, so you only need to enable session recording once. Note however that the setting is reset to `disabled` after an SDK reset. See [reset](sentiance.md#resetwithcompletionhandler).
+
+Recorded sessions are stored on the device until the time that you request their deletion. See [`deleteTransportSession(String)`](sentiance.md#deletetransportsession).
+
+Note: calling this method on an uninitialized SDK will throw an SdkException.
+
+```objectivec
+- (void)enableTransportSessionRecording;
+```
+
+### `disableTransportSessionRecording`
+
+Disables transport session recording.
+
+This setting is persistent across app restarts, so you only need to disable session recording once.
+
+If you no longer need session recording, make sure to delete previously recorded sessions if you no longer need them. See [`deleteAllTransportSessions()`](sentiance.md#deletealltransportsessions).
+
+Note: calling this method on an uninitialized SDK will throw an SdkException.
+
+```objectivec
+- (void)disableTransportSessionRecording;
+```
+
+### `getAvailableTransportSessions`
+
+Returns a list of recorded and completed transport sessions.
+
+Note: calling this method on an uninitialized SDK will throw an SdkException.
+
+```objectivec
+- (NSArray<SENTTransportSession *> *)getAvailableTransportSessions;
+```
+
+### `isTransportSessionRecordingEnabled`
+
+Returns whether transport session recording is enabled.
+
+Note: calling this method on an uninitialized SDK will throw an SdkException.
+
+```objectivec
+- (BOOL)isTransportSessionRecordingEnabled;
+```
+
+### `setTransportSessionHandler`
+
+Sets a handler that will be invoked to deliver transport sessions. A session is delivered after a transport ends.
+
+Transport sessions are stored on the device until the time that you request their deletion. See [`deleteTransportSession(String)`](sentiance.md#deletetransportsession).
+
+Note: calling this method on an uninitialized SDK will throw an SdkException.
+
+```objectivec
+- (void)setTransportSessionHandler:(void (^)(SENTTransportSession *transportSession))transportSessionHandler;
+```
+
+| Parameters              |                                                                                                                                                     |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| transportSessionHandler | A transportSessionHandler to receive [transport sessions,](transport-sessions/senttransportsession.md) or `nil` to remove a previously set handler. |
+
+### `deleteAllTransportSessions`
+
+Deletes all recorded transport sessions.
+
+Recorded sessions are stored on the device. It is your responsibility to call this method, or [`deleteTransportSession(String)`](sentiance.md#deletetransportsession), to request their deletion, when you no longer need them.
+
+Note: calling this method on an uninitialized SDK will throw an SdkException.
+
+```objectivec
+- (void)deleteAllTransportSessions;
+```
+
+### `deleteTransportSession`
+
+Deletes the transport session with the specified ID.
+
+Recorded sessions are stored on the device. It is your responsibility to call this method, or [`deleteAllTransportSessions`](sentiance.md#deletealltransportsessions), to request their deletion, when you no longer need them.
+
+Note: calling this method on an uninitialized SDK will throw an SdkException.
+
+```objectivec
+- (void)deleteTransportSession:(NSString *)sessionId NS_SWIFT_NAME(deleteTransportSession(sessionId:));
+```
+
+| Parameters |                                  |
+| ---------- | -------------------------------- |
+| sessionId  | The ID of the session to delete. |
+
+### `getDrivingInsights()`
+
+Returns the [driving insights](driving-insights/sentdrivinginsights.md) for a given transport, or `nil` if there are no driving insights or the transport ID is invalid.
+
+Note: calling this method on an uninitialized SDK will throw an SdkException.
+
+```objectivec
+- (SENTDrivingInsights * _Nullable)getDrivingInsightsForTransportId:(NSString * _Nonnull)transportId;
+```
+
+| Parameters  |                                  |
+| ----------- | -------------------------------- |
+| transportId | The ID of the desired transport. |
+
+### `getHarshDrivingEvents()`
+
+Returns the [harsh driving events](driving-insights/sentharshdrivingevent.md) for a completed transport.
+
+Note: calling this method on an uninitialized SDK will throw an SdkException.
+
+```objectivec
+- (NSArray<SENTHarshDrivingEvent *> * _Nonnull)getHarshDrivingEventsForTransportId:(NSString * _Nonnull)transportId; 
+```
+
+| Parameters  |                                  |
+| ----------- | -------------------------------- |
+| transportId | The ID of the desired transport. |
+

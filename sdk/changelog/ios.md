@@ -1,5 +1,21 @@
 # iOS
 
+## \[6.3.0] - 7 Apr 2023
+
+#### Added
+
+* A new feature called Driving Insights, which provides information about a user's driving behaviour. In this first version, the SDK detects harsh driving events (e.g. acceleration, braking, and turning), which are then used to compute a vehicular transport's smooth driving score. This data is available via the new APIs in the Sentiance class, which allows the subscription to, and retrieval of [DrivingInsights](../api-reference/ios/driving-insights/sentdrivinginsights.md) and [HarshDrivingEvents](../api-reference/ios/driving-insights/sentharshdrivingevent.md). This feature must be enabled by Sentiance before use.
+* New API methods in the Sentiance class which allow the subscription to, and retrieval of [TransportSessions](../api-reference/ios/transport-sessions/senttransportsession.md). A transport session corresponds to a transport that was detected by the SDK, and includes information such as the mode of transport, and the raw sensor data that was used to classify it. This API is primarily intended to be used for accessing the raw sensor data. To simply be notified of new transports, it's more efficient to utilize the [UserContext](../api-reference/ios/user-context/sentusercontext/) info.
+* A short history of locations inside [SENTVehicleCrashEvent](../api-reference/ios/sentvehiclecrashevent.md), which represent the preceding locations leading up to the crash event.
+
+#### Fixed
+
+* Several minor stability issues.
+
+#### Removed
+
+* BREAKING: a number of [user segments](../api-reference/ios/user-context/sentsegment/sentsegmenttype.md) that are no longer supported.
+
 ## \[6.2.5] - 9 Mar 2023
 
 #### Fixed
@@ -337,7 +353,7 @@ This release updates the SDK's TensorFlow Lite dependency version to 2.7.0. If y
 
 * Fixed an issue where detections were not able to start on iOS 15 devices due to the updated authorization status.
 * Fixed TensorFLowLite model updating mechanism at runtime.
-* Removed embedded TensorFlowLite library from SENTSDK pod by providing a separate thinned package and adding a pod dependency to TensorFlowLite (applies to CocoaPods integration only and requires CocoaPods 1.10.0 **** or above).
+* Removed embedded TensorFlowLite library from SENTSDK pod by providing a separate thinned package and adding a pod dependency to TensorFlowLite (applies to CocoaPods integration only and requires CocoaPods 1.10.0 or above).
 
 ## \[5.11.0] - 16 Jul 2021
 

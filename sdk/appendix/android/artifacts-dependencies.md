@@ -159,6 +159,19 @@ com.sentiance:sdk-user-context:<sentiance-version>
 com.sentiance:sdk-segments:<sentiance-version>
 ```
 
+### com.sentiance:sdk-driving-insights
+
+This library artifact adds the driving insights SDK functionality, and makes the `DrivingInsightsApi` available to your app. The driving insights includes information about detected transports, such as scores for various safe driving attributes (e.g. smooth driving).
+
+You must add this artifact as a dependency in your app if you want to access the driving insights information.
+
+#### Dependencies
+
+```
+com.sentiance:sdk-event-timeline:<sentiance-version>
+org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30
+```
+
 ## Version 4.x
 
 ```

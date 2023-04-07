@@ -4,15 +4,9 @@
 This interface is part of an [Early Access](../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
 {% endhint %}
 
-An interface for handling updates to the user's context. Used with [`UserContextApi.addUserContextUpdateListener(UserContextUpdateListener)`](./#addusercontextupdatelistener)``
+An interface for handling updates to the user's context. Used with [`UserContextApi.addUserContextUpdateListener(UserContextUpdateListener)`](./#addusercontextupdatelistener)
 
 ## UserContextUpdateListener API
-
-|      |                                                                                                                                                                                                  |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| void | [onUserContextUpdated](usercontextupdatelistener.md#onusercontextupdated) (List<[UserContextUpdateCriteria](usercontextupdatecriteria.md)> criteria, [UserContext](../usercontext/) userContext) |
-
-
 
 ### `onUserContextUpdated()`
 

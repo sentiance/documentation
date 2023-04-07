@@ -8,13 +8,6 @@ Represents a segment that was detected for the user.
 
 ## Segment API
 
-|                                    |                                      |
-| ---------------------------------- | ------------------------------------ |
-| List<[Attribute](../attribute.md)> | [getAttributes](./#getattributes) () |
-| [DateTime](../datetime.md)         | [getEndTime](./#getendtime) ()       |
-| [DateTime](../datetime.md)         | [getStartTime](./#getstarttime) ()   |
-| [SegmentType](segmenttype.md)      | [getType](./#gettype) ()             |
-
 
 
 ### `getAttributes()`

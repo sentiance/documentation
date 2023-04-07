@@ -4,17 +4,9 @@
 This class is part of an [Early Access](../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
 {% endhint %}
 
-Use this api to access and listen to the user's context.
+Use this API to access and listen to the user's context.
 
-## UserContextApi
-
-| void                                                                                                                                            | [addUserContextUpdateListener](./#addusercontextupdatelistener) ([UserContextUpdateListener](usercontextupdatelistener.md) listener)                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| void                                                                                                                                            | [addUserContextUpdateListener](./#addusercontextupdatelistener) (List<[UserContextUpdateCriteria](usercontextupdatecriteria.md)> criteria, [UserContextUpdateListener](usercontextupdatelistener.md) listener) |
-| PendingOperation<[UserContext](../usercontext/#usercontext-api), [RequestUserContextError](requestusercontexterror.md#requestusercontexterror)> | [requestUserContext](./#requestusercontext)()                                                                                                                                                                  |
-| void                                                                                                                                            | [removeUserContextUpdateListener](./#removeusercontextupdatelistener) ([UserContextUpdateListener](usercontextupdatelistener.md) listener)                                                                     |
-
-
+## UserContextApi API
 
 ### `addUserContextUpdateListener()`
 
@@ -45,13 +37,15 @@ Use this api to access and listen to the user's context.
 | criteria   | A list that filters which [`UserContextUpdateCriteria`](usercontextupdatecriteria.md) to return.                     |
 | listener   | A [`UserContextUpdateListener`](usercontextupdatelistener.md) that gets triggered when the user context has changed. |
 
-### requestUserContext`()`
+### `requestUserContext()`
 
 > ```java
 > PendingOperation<UserContext, RequestUserContextError> requestUserContext()
 > ```
 >
 > Retrieves the user's current context.
+>
+> Note: calling this method on an uninitialized SDK will throw an [SdkException](../sdkexception.md).
 
 ### `removeUserContextUpdateListener()`
 

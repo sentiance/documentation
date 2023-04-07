@@ -8,6 +8,10 @@ Represents a duration of the time when the user was in transport.
 
 ## TransportEvent API
 
+{% hint style="info" %}
+This class extends [Event](./). See [Event](./) for additional properties and methods.
+{% endhint %}
+
 ### getDistanceInMeters`()`
 
 > ```java
@@ -15,14 +19,6 @@ Represents a duration of the time when the user was in transport.
 > ```
 >
 > Returns the distance travelled during the transport in meters. If distance cannot be computed then returns null.
-
-### `getEventType()`
-
-> ```java
-> EvenType getEventType()
-> ```
->
-> Returns the type of this event.
 
 ### `getTransportMode()`
 

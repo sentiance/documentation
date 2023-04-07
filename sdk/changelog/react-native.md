@@ -1,5 +1,21 @@
 # React Native
 
+## \[6.3.0] - 7 Apr 2023
+
+#### Added
+
+* A new feature called Driving Insights, which provides information about a user's driving behaviour. In this first version, the SDK detects harsh driving events (e.g. acceleration, braking, and turning), which are then used to compute a vehicular transport's smooth driving score. This data is available via the new [DrivingInsights package](../api-reference/react-native/driving-insights/definitions.md), which allows the subscription to, and retrieval of DrivingInsights and HarshDrivingEvents. This feature must be enabled by Sentiance before use.
+* A short history of locations inside [CrashEvent](../api-reference/react-native/crash-detection/definitions.md), which represent the preceding locations leading up to the crash event.
+
+#### Changed
+
+* Updated the Sentiance Android SDK dependency to version 6.3.
+* Updated the Sentiance iOS SDK dependency to version 6.3.
+
+#### Removed
+
+* BREAKING: a number of [user segments](../api-reference/react-native/user-context/definitions.md) that are no longer supported.
+
 ## \[6.2.3] - 1 Feb 2023
 
 #### Changed

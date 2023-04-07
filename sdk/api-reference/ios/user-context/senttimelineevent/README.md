@@ -7,6 +7,8 @@ This class is part of an [Early Access](../../../../appendix/feature-production-
 ```objectivec
 @interface SENTTimelineEvent : NSObject <NSSecureCoding, NSCopying>
 
+@property (nonatomic, strong, nonnull) NSString *eventId;
+
 /**
  * Returns the event type. Based on this type, you can cast an event to the 
  * corresponding event class (e.g. SENTTransportEvent, SENTStationaryEvent) 

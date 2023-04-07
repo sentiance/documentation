@@ -27,4 +27,4 @@ The following table lists each SDK feature, with the version of the SDK it was f
 | User Segment Detection                  | <p>Android: 6.0.0</p><p>iOS: 6.0.0</p>  |                                         |
 | User Current Context Information        | <p>Android: 6.0.0</p><p>iOS: 6.0.0</p>  |                                         |
 | Semantic Time                           | <p>Android: 6.2.0</p><p>iOS: 6.2.0</p>  |                                         |
-
+| Driving Insights                        | <p>Android: 6.3.0</p><p>iOS: 6.3.0</p>  |                                         |

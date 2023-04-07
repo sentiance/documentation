@@ -8,16 +8,6 @@ Represents an occurrence of an event that was detected for a user.
 
 ## Event API
 
-|                            |                                                    |
-| -------------------------- | -------------------------------------------------- |
-| Long                       | [getDurationInSeconds](./#getdurationinseconds) () |
-| [DateTime](../datetime.md) | [getEndTime](./#getendtime) ()                     |
-| [EventType](eventtype.md)  | [getEventType](./#geteventtype) ()                 |
-| [DateTime](../datetime.md) | [getStartTime](./#getstarttime) ()                 |
-| boolean                    | [hasEnded](./#hasended) ()                         |
-
-
-
 ### `getDurationInSeconds()`
 
 > ```java
@@ -41,6 +31,14 @@ Represents an occurrence of an event that was detected for a user.
 > ```
 >
 > Returns the event type. Based on this type, you can cast an event to the corresponding event class (e.g. [TransportEvent](transportevent.md), [StationaryEvent](stationaryevent.md)) to access type specific properties.
+
+### `getId()`
+
+> ```java
+> String getId()
+> ```
+>
+> Returns the unique identifiers of the event.
 
 ### `getStartTime()`
 

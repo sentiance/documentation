@@ -36,6 +36,14 @@ Represents a vehicle crash event detected by the Sentiance SDK.
 >
 > Returns the magnitude of the crash event in meter per second squared.
 
+### `getPrecedingLocations()`
+
+> ```java
+> List<Location> getPrecedingLocations()
+> ```
+>
+> Returns a list of recent locations (from the oldest to the most recent) leading up to this crash, within a certain timeframe.
+
 ### `getSpeedAtImpact()`
 
 > ```java

@@ -8,21 +8,9 @@ Represents a duration of time when the user was stationary.
 
 ## StationaryEvent API
 
-|                                  |                                                    |
-| -------------------------------- | -------------------------------------------------- |
-| [EventType](eventtype.md)        | [getEventType](stationaryevent.md#geteventtype) () |
-| [GeoLocation](../geolocation.md) | [getLocation](stationaryevent.md#getlocation) ()   |
-| [Venue](../venue/)               | [getVenue](stationaryevent.md#getvenuetype) ()     |
-
-
-
-### `getEventType()`
-
-> ```java
-> EventType getEventType()
-> ```
->
-> Returns the type of this event.
+{% hint style="info" %}
+This class extends [Event](./). See [Event](./) for additional properties and methods.
+{% endhint %}
 
 ### `getLocation()`
 

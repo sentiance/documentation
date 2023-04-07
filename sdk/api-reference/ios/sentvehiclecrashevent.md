@@ -6,7 +6,7 @@ Represents a vehicle crash event detected by the Sentiance SDK.
 
 Returns the date of the crash in the UTC
 
-```text
+```
 @property (strong, nonatomic) NSDate *date;
 ```
 
@@ -14,7 +14,7 @@ Returns the date of the crash in the UTC
 
 Returns the last known location prior to the crash.
 
-```text
+```
 @property (strong, nonatomic) CLLocation *location;
 ```
 
@@ -22,7 +22,7 @@ Returns the last known location prior to the crash.
 
 Returns the magnitude of the crash event in m/s2.
 
-```text
+```
 @property (assign) Float32 magnitude;
 ```
 
@@ -30,7 +30,7 @@ Returns the magnitude of the crash event in m/s2.
 
 Returns the delta-v estimated over the peak duration, in m/s.
 
-```text
+```
 @property (assign) Float32 deltaV;
 ```
 
@@ -38,7 +38,7 @@ Returns the delta-v estimated over the peak duration, in m/s.
 
 Returns the inferred speed at the moment of impact, in m/s.
 
-```text
+```
 @property (assign) Float32 speedAtImpact;
 ```
 
@@ -46,7 +46,15 @@ Returns the inferred speed at the moment of impact, in m/s.
 
 Returns a confidence value between 0 and 100.
 
-```text
+```
 @property (assign) NSInteger confidence;
+```
+
+### precedingLocations
+
+Returns a list of recent locations that lead up to this crash. Locations are ordered from oldest to most recent.
+
+```
+@property (strong, nonatomic) NSArray<CLLocation *> *precedingLocations;
 ```
 

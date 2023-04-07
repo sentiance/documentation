@@ -148,3 +148,19 @@ For iOS apps, this feature is included in the main SDK framework. No additional 
 #### Activation for React Native
 
 For React Native apps, to activate this feature, add a dependency on the _com.sentiance:sdk-lifestyle_ artifact in your android app. For iOS apps, no additional steps are needed to activate it.
+
+### Driving Insights
+
+The Sentiance SDK can provide insights about the driving behaviour for vehicular transports. For example, for a given transport, scores can be computed for various safe driving attributes, such as attention, smooth and legal driving. These scores are based on a variety of detections that the SDK does during transports, such as harsh driving, phone usage, and call detection. These insights are made available via the Driving Insights API.
+
+#### Activation for Android
+
+For Android apps, this feature is included after adding a dependency on the _com.sentiance:sdk-driving-insights_ artifact.
+
+#### Activation for iOS
+
+For iOS apps, this feature is included in the main SDK framework. No additional steps are needed to activate it.
+
+#### Activation for React Native
+
+For React Native apps, this feature is included after installing the _@sentiance-react-native/driving-insights_ module.
