@@ -1,5 +1,12 @@
 # iOS
 
+## \[6.3.1] - 18 Apr 2023
+
+#### Fixed
+
+* Runtime exception when using the [TransportSession](../api-reference/ios/transport-sessions/senttransportsession.md) feature.
+* A bug introduced in v6.3.0, which delayed the SDK's reaction to location permission changes.
+
 ## \[6.3.0] - 7 Apr 2023
 
 #### Added
