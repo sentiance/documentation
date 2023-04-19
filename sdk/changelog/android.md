@@ -1,5 +1,11 @@
 # Android
 
+## \[6.3.1] - 19 Apr 2023
+
+#### Fixed
+
+* Runtime exception when using the [TransportSession](../api-reference/android/transport-sessions/transportsession.md) feature.
+
 ## \[6.3.0] - 7 Apr 2023
 
 #### Added

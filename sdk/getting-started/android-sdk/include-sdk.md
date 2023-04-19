@@ -2,7 +2,7 @@
 
 ## Adding the Gradle Dependency
 
-Add the Sentiance repository to your **** project (top-level) **build.gradle** file.
+Add the Sentiance repository to your project (top-level) **build.gradle** file.
 
 ```groovy
 allprojects {
@@ -18,7 +18,7 @@ allprojects {
 In the **build.gradle** file of your app module, add the following line to the dependencies section.
 
 ```groovy
-implementation (platform('com.sentiance:sdk-bom:6.2.+'))
+implementation (platform('com.sentiance:sdk-bom:6.3.+'))
 implementation ('com.sentiance:sdk')
 ```
 
