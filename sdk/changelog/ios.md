@@ -9,6 +9,10 @@
 
 ## \[6.3.0] - 7 Apr 2023
 
+{% hint style="warning" %}
+This version includes breaking changes for some [Early Access](../appendix/feature-production-readiness.md) features.
+{% endhint %}
+
 #### Added
 
 * A new Driving Insights feature, which provides information about a user's driving behaviour. In this first version, the SDK detects harsh driving events (e.g. acceleration, braking, and turning), which are then used to compute a vehicular transport's smooth driving score. This data is available via the new APIs in the Sentiance class, which allows the subscription to, and retrieval of [DrivingInsights](../api-reference/ios/driving-insights/sentdrivinginsights.md) and [HarshDrivingEvents](../api-reference/ios/driving-insights/sentharshdrivingevent.md). This feature must be enabled by Sentiance before use.
