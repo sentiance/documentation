@@ -1,5 +1,12 @@
 # Android
 
+## \[6.3.2] - 8 May 2023
+
+#### Fixed
+
+* Runtime exception caused by stack overflow during stationary venue-type mapping.
+* Stability improvements to home and work venue detection.
+
 ## \[6.3.1] - 19 Apr 2023
 
 #### Fixed
