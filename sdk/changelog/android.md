@@ -1,5 +1,11 @@
 # Android
 
+## \[6.3.3] - 23 May 2023
+
+#### Fixed
+
+* Excessive battery usage while detections are disabled, caused by an unterminated Android job.
+
 ## \[6.3.2] - 8 May 2023
 
 #### Fixed
