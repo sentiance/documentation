@@ -107,7 +107,7 @@ The venue information is exposed in the user's context, part of the user's recen
 
 #### Activation for Android
 
-For Android apps, this feature is included after adding a dependency on the _com.sentiance:sdk-user-context_ artifact.
+For Android apps, this feature is included after adding a dependency on the _com.sentiance:sdk-user-context_ artifact. See [here](on-device-features.md#user-current-context-information).
 
 #### Activation for iOS
 
@@ -151,11 +151,22 @@ For React Native apps, to activate this feature, add a dependency on the _com.se
 
 ### Driving Insights
 
-The Sentiance SDK can provide insights about the driving behaviour for vehicular transports. For example, for a given transport, scores can be computed for various safe driving attributes, such as attention, smooth and legal driving. These scores are based on a variety of detections that the SDK does during transports, such as harsh driving, phone usage, and call detection. These insights are made available via the Driving Insights API.
+The Sentiance SDK can provide insights about the driving behaviour for vehicular transports. For example, for a given transport, scores can be computed for various safe driving attributes, such as attention, smooth and legal driving. These scores are based on a variety of detections that the SDK does during transports, such as harsh driving, phone usage, and call detections. These insights are made available via the Driving Insights API.
 
 #### Activation for Android
 
 For Android apps, this feature is included after adding a dependency on the _com.sentiance:sdk-driving-insights_ artifact.
+
+{% code title="app/build.gradle" %}
+```groovy
+dependencies {
+    implementation(platform('com.sentiance:sdk-bom:<sentiance-version>'))
+    implementation('com.sentiance:sdk-driving-insights')
+}
+```
+{% endcode %}
+
+You can then subscribe for driving insights updates, or request it directly via the `DrivingInsightsApi` class.
 
 #### Activation for iOS
 
