@@ -10,7 +10,7 @@ The features listed on this page must first be enabled by Sentiance for your app
 Some features that are listed here are released as [Early Access](feature-production-readiness.md). Please check out our [Production Readiness page](feature-production-readiness.md) to find out more.
 {% endhint %}
 
-### Vehicle Crash Detection
+## Vehicle Crash Detection
 
 This feature offers the ability to detect vehicle crashes (collisions) in real time, during trips. Sentiance processes various sensor and location data in real time on the device, in order to detect crashes and notify your app.
 
@@ -40,7 +40,7 @@ For iOS apps, crash detection is included in the main SDK framework. No addition
 
 For React Native apps, to activate and access crash detection, install the _@sentiance-react-native/crash-detection_ module.
 
-### Transport Classification
+## Transport Classification
 
 The Sentiance SDK processes various sensor and location data in real-time, directly on the device, to segment a user's trips into the various transport methods used, such as walking, biking, vehicle. The SDK uses Sentiance's state of the art deep learning model to achieve this.
 
@@ -58,7 +58,7 @@ For iOS apps, transport classification is included in the main SDK framework. No
 
 For React Native apps, this feature is included after installing the _@sentiance-react-native/user-context_ module.
 
-### User Current Context Information
+## User Current Context Information
 
 A user's current context includes contextual information about the current state of the user. This includes things like:
 
@@ -95,7 +95,7 @@ For iOS apps, the user's current context information is available via the main S
 
 For React Native apps, to activate and access the user's current context, install the _@sentiance-react-native/user-context_ module.
 
-### Venue-Type Mapping, Home/Work Detection
+## Venue-Type Mapping, Home/Work Detection
 
 The Sentiance SDK can enrich a user's stationary data with information about the significance of the stationary (i.e. home, work, or a point of interest), and type of venue (i.e. restaurant, fitness center, etc). This is possible with Sentiance's on-device, fully offline, venue type mapping feature.
 
@@ -117,7 +117,7 @@ For iOS apps, this feature is included in the main SDK framework. No additional 
 
 For React Native apps, this feature is included after installing the _@sentiance-react-native/user-context_ module.
 
-### Semantic Time
+## Semantic Time
 
 The Sentiance SDK can enrich a user's context by providing information about the user's current semantic time. Semantic time (e.g. morning, lunch, etc.) is personalized based on a user's timeline data, and becomes more accurate over time.
 
@@ -133,7 +133,7 @@ For iOS apps, this feature is included in the main SDK framework. No additional 
 
 For React Native apps, this feature is included after installing the _@sentiance-react-native/user-context_ module.
 
-### Segment Detection
+## Segment Detection
 
 The Sentiance SDK can enrich a user's context by assigning different segmentation profiles, e.g. heavy commuter, low/medium/high social activity, and more. This is possible with Sentiance's multi-platform decision engine which runs directly on the device. It consumes a user's timeline data, and in return produces segments that apply to the user.
 
@@ -149,7 +149,7 @@ For iOS apps, this feature is included in the main SDK framework. No additional 
 
 For React Native apps, to activate this feature, add a dependency on the _com.sentiance:sdk-lifestyle_ artifact in your android app. For iOS apps, no additional steps are needed to activate it.
 
-### Driving Insights
+## Driving Insights
 
 The Sentiance SDK can provide insights about the driving behaviour for vehicular transports. For example, for a given transport, scores can be computed for various safe driving attributes, such as attention, smooth and legal driving. These scores are based on a variety of detections that the SDK does during transports, such as harsh driving, phone usage, and call detections. These insights are made available via the Driving Insights API.
 
