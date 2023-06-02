@@ -9,7 +9,7 @@ This protocol is part of an [Early Access](../../../../appendix/feature-producti
 ```swift
 public protocol SENTUserContextDelegate : NSObjectProtocol {
     optional func didUpdate(_ userContext: SENTUserContext, 
-             forCriteriaMask criteriaMask: Any!)
+             forCriteriaMask criteriaMask: SENTUserContextUpdateCriteria)
 }
 ```
 {% endtab %}
