@@ -163,3 +163,64 @@ android {
 ```
 
 When you initialize the SDK on an older Android version, initialization will gracefully fail with reason UNSUPPORTED\_OS\_VERSION.
+
+## Exceptions Related to Foregrounding an SDK Service&#x20;
+
+**Problem:** You encounter an exception related to the SDK foreground service, where Android terminates the app due to the service not being foregrounded on time. The crash log includes a message similar to the following:
+
+```
+Fatal Exception: android.app.RemoteServiceException: Context.startForegroundService() 
+    did not then call Service.startForeground(): ServiceRecord{xxxxxxx u0 
+    com.example.app/com.sentiance.sdk.services.ForegroundService}
+
+Fatal Exception: android.app.RemoteServiceException$ForegroundServiceDidNotStartInTimeException: 
+    Context.startForegroundService() did not then call Service.startForeground(): 
+    ServiceRecord{xxxxxxx u0 com.example.app/com.sentiance.sdk.services.ForegroundService}
+```
+
+On Android, starting a foreground service is a two-step process:
+
+1. Request Android to start a foreground service;
+2. After the service is created or started, foreground the service by calling [startForegroundMode](https://developer.android.com/reference/android/app/Service#startForeground\(int,%20android.app.Notification\)).
+
+This exception happens because the Sentiance SDK requests Android to start a foreground service, but after starting, the service does not get foregrounded in time (i.e. step 2 does not happen). To understand why this happens, let's first understand how Android operates.
+
+After receiving the service start request in step 1, Android creates an instance of the service, and starts counting down the time, to track the foregrounding of the service. It then tries to invoke [onCreate](https://developer.android.com/reference/android/app/Service#onCreate\(\)) and [onStartCommand](https://developer.android.com/reference/android/app/Service#onStartCommand\(android.content.Intent,%20int,%20int\)) on the service instance, on the application's main thread. Both methods present an opportunity for the Sentiance SDK to foreground the service, by calling startForegroundMode. However, **if the main thread is busy or blocked, Android will not get the chance to call these methods**. And when the countdown expires, Android considers it too late, and so it terminates the app.
+
+**Solution:** The Sentiance SDK always foregrounds its service when onCreate is called. This is done unconditionally. Therefore, when this exception happens, the cause is due to Android not getting the chance to call the onCreate method. It's therefore important to identify what the application's main thread was doing at the time of the exception.
+
+When Android terminates an app with this exception, it also generates an ANR (application not responding) log. This log contains a snapshot of the stack trace of all of the application's threads at the time of the exception. The stack trace can be used to identify the state of the main thread when the exception happened. You can find out more about how to capture this information in [this](https://medium.com/@yangweigbh/monitoring-app-termination-on-android-11-97d514a3f9) external blog post.
+
+Here's an example of the main thread's stack trace. Some lines were omitted for brevity.
+
+{% code lineNumbers="true" %}
+```
+"main" prio=5 tid=1 Waiting
+  | group="main" sCount=1 ucsCount=0 flags=1 obj=0x7222d218 self=0x7691660010
+  | sysTid=5542 nice=0 cgrp=default sched=0/0 handle=0x7845798500
+  | state=S schedstat=( 449640551 123141372 731 ) utm=29 stm=15 core=2 HZ=100
+  | stack=0x7ffd50e000-0x7ffd510000 stackSize=8188KB
+  | held mutexes=
+  at java.lang.Object.wait(Native method)
+  - waiting on <0x003c6057> (a okhttp3.internal.http2.Http2Stream)
+  at java.lang.Object.wait(Object.java:442)
+  at java.lang.Object.wait(Object.java:568)
+  at okhttp3.internal.http2.Http2Stream.waitForIo$okhttp(Http2Stream.kt:716)
+  at okhttp3.internal.http2.Http2Stream.takeHeaders(Http2Stream.kt:140)
+  - locked <0x003c6057> (a okhttp3.internal.http2.Http2Stream)
+  at okhttp3.internal.http2.Http2ExchangeCodec.readResponseHeaders(Http2ExchangeCodec.kt:96)
+  ...
+  at android.os.Handler.handleCallback(Handler.java:938)
+  at android.os.Handler.dispatchMessage(Handler.java:99)
+  at android.os.Looper.loopOnce(Looper.java:226)
+  at android.os.Looper.loop(Looper.java:313)
+  at android.app.ActivityThread.main(ActivityThread.java:8751)
+  at java.lang.reflect.Method.invoke(Native method)
+  at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:571)
+  at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1135)
+```
+{% endcode %}
+
+Here, we see an OkHttp request executing on the main thread, and waiting for a response. On line 8, we see the main thread waiting on an Http2Stream object. In this example, the main thread is blocked due to a network request, which should actually be offloaded to a background thread.
+
+Once you obtain the ANR log corresponding to the exception in your app, look at the main thread and try to identify what it was doing, and whether it was blocked, or executing a long operation.
