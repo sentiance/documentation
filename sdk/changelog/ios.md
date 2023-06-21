@@ -1,5 +1,11 @@
 # iOS
 
+## \[6.3.3] - 21 Jun 2023
+
+#### Fixed
+
+* Stability fixes to the home/work detection and venue-type mapping features.
+
 ## \[6.3.2] - 8 May 2023
 
 #### Fixed

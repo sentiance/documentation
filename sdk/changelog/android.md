@@ -1,5 +1,11 @@
 # Android
 
+## \[6.3.4] - 21 Jun 2023
+
+#### Fixed
+
+* Stability fixes to the home/work detection and venue-type mapping features.
+
 ## \[6.3.3] - 23 May 2023
 
 #### Fixed
@@ -212,7 +218,7 @@ Given the significance of the changes in this version, we recommend testing your
 * `TripProfileConfig`, `TripProfileListener`, `setTripProfileListener(TripProfileListener)`, and `updateTripProfileConfig(TripProfileConfig)`
 * `SdkStatus.isLocationPermGranted`
 
-## \[4.22.1] - 04 July 2022
+## \[4.22.1] - 04 Jul 2022
 
 #### Changed
 
