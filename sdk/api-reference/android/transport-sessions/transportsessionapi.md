@@ -1,9 +1,5 @@
 # TransportSessionApi
 
-{% hint style="info" %}
-This class is part of an [Early Access](../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
-{% endhint %}
-
 Use this API to subscribe to, and retrieve transport sessions. A transport session contains information about a completed transport, such as the transport mode and the raw sensor data used during it classification.
 
 ## TransportSessionApi API
@@ -68,9 +64,7 @@ Use this API to subscribe to, and retrieve transport sessions. A transport sessi
 >
 > Note: calling this method on an uninitialized SDK will throw an [SdkException](../sdkexception.md).
 
-| Parameters |                                                                                                          |
-| ---------- | -------------------------------------------------------------------------------------------------------- |
-| listener   | A TransportSessionListener to receive transport sessions, or `null` to remove a previously set listener. |
+<table><thead><tr><th width="182">Parameters</th><th></th></tr></thead><tbody><tr><td>listener</td><td>A TransportSessionListener to receive transport sessions, or <code>null</code> to remove a previously set listener.</td></tr></tbody></table>
 
 ### `deleteAllTransportSessions()`
 
@@ -96,6 +90,4 @@ Use this API to subscribe to, and retrieve transport sessions. A transport sessi
 >
 > Note: calling this method on an uninitialized SDK will throw an [SdkException](../sdkexception.md).
 
-| Parameters |                                  |
-| ---------- | -------------------------------- |
-| sessionId  | The ID of the session to delete. |
+<table><thead><tr><th width="183">Parameters</th><th></th></tr></thead><tbody><tr><td>sessionId</td><td>The ID of the session to delete.</td></tr></tbody></table>

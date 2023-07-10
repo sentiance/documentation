@@ -34,6 +34,9 @@ const safetyScores = drivingInsights.safetyScores;
 
 // Smooth driving score value, between 0 and 1, where 1 is the perfect score.
 const smoothScore = safetyScores.smoothScore;
+
+// Focused driving score value, between 0 and 1, where 1 is the perfect score.
+const focusScore = safetyScores.focusScore;
 ```
 
 #### Get Harsh Driving Events

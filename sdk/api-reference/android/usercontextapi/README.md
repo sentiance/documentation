@@ -1,9 +1,5 @@
 # UserContextApi
 
-{% hint style="info" %}
-This class is part of an [Early Access](../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
-{% endhint %}
-
 Use this API to access and listen to the user's context.
 
 ## UserContextApi API

@@ -1,9 +1,5 @@
 # TransportSessionListener
 
-{% hint style="info" %}
-This interface is part of an [Early Access](../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
-{% endhint %}
-
 This interface is used in combination with [`setTransportSessionListener(TransportSessionListener)`](transportsessionapi.md#settransportsessionlistener).
 
 ## TransportSessionListener API
@@ -16,6 +12,4 @@ This interface is used in combination with [`setTransportSessionListener(Transpo
 >
 > Invoked when a transport session is completed.
 
-| Parameters |                                                                                      |
-| ---------- | ------------------------------------------------------------------------------------ |
-| session    | a [TransportSession](transportsession.md) object containing the session information. |
+<table><thead><tr><th width="172">Parameters</th><th></th></tr></thead><tbody><tr><td>session</td><td>a <a href="transportsession.md">TransportSession</a> object containing the session information.</td></tr></tbody></table>

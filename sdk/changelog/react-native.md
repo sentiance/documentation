@@ -1,5 +1,44 @@
 # React Native
 
+## \[6.4.0] - 10 Jul 2023
+
+{% hint style="info" %}
+**Production Readiness Update**
+
+In this release, the following features have been promoted from [Early Access](../appendix/feature-production-readiness.md) to [Production Ready](../appendix/feature-production-readiness.md):
+
+* Transport classification
+* Home & work detection
+* User segment detection
+* User's current context information
+
+See our [On-Device Features](../appendix/on-device-features.md) page for more information about these features. Detailed overview of feature production readiness can be found on [this page](../appendix/feature-production-readiness.md).
+{% endhint %}
+
+{% hint style="warning" %}
+This version includes breaking changes for some [Early Access](../appendix/feature-production-readiness.md) features.
+{% endhint %}
+
+#### Breaking
+
+* [HarshDrivingEvent](../api-reference/react-native/driving-insights/definitions.md) now provides separate start and end dates, instead of a single event date.
+
+#### Added
+
+* Phone usage detection during vehicular transports. This feature is part of the on-device [Driving Insights](../appendix/on-device-features.md#driving-insights) feature. It uses a custom machine learning model to accurately detect phone usages. The detected events can be obtained using the [getPhoneUsageEvents](../api-reference/react-native/driving-insights/definitions.md).
+* Focused driving safety score, which is calculated by taking into account the detected phone usage events during vehicular transports. See [here](../api-reference/react-native/driving-insights/definitions.md).
+
+#### Changed
+
+* Updated the Sentiance Android SDK dependency to version 6.4.
+* Updated the Sentiance iOS SDK dependency to version 6.4.
+* The iOS Podspec path is now `'../node_modules/@sentiance-react-native/core'`. Please update your Podfile if necessary.
+
+#### Fixed
+
+* Multiple compatibility issues with React Native 0.65+.
+* [Autolinking](https://github.com/react-native-community/cli/blob/main/docs/autolinking.md) for iOS projects. With this fix, you no longer need to manually specify the iOS pod dependency in your Podfile.
+
 ## \[6.3.1] - 7 Apr 2023
 
 #### Added

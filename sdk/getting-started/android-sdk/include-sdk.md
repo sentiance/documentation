@@ -18,7 +18,7 @@ allprojects {
 In the **build.gradle** file of your app module, add the following line to the dependencies section.
 
 ```groovy
-implementation (platform('com.sentiance:sdk-bom:6.3.+'))
+implementation (platform('com.sentiance:sdk-bom:6.4.+'))
 implementation ('com.sentiance:sdk')
 ```
 

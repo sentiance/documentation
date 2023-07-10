@@ -1,18 +1,9 @@
 # SENTUserContextUpdateCriteria
 
-{% hint style="info" %}
-This type is part of an [Early Access](../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
-{% endhint %}
-
 ```objectivec
 typedef NS_OPTIONS(NSUInteger, SENTUserContextUpdateCriteria)
 ```
 
-| Type                                            | Description                                      |
-| ----------------------------------------------- | ------------------------------------------------ |
-| **SENTUserContextUpdateCriteriaCurrentEvent**   | A change in the user's current or ongoing event. |
-| **SENTUserContextUpdateCriteriaActiveSegments** | A change in the user's active segments.          |
-| **SENTUserContextUpdateCriteriaVisitedVenues**  | A change in the user's visited venues.           |
-| **SENTUserContextUpdateCriteriaAll**            | All criteria applied.                            |
+<table><thead><tr><th width="442.9656646315383">Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>SENTUserContextUpdateCriteriaCurrentEvent</strong></td><td>A change in the user's current or ongoing event.</td></tr><tr><td><strong>SENTUserContextUpdateCriteriaActiveSegments</strong></td><td>A change in the user's active segments.</td></tr><tr><td><strong>SENTUserContextUpdateCriteriaVisitedVenues</strong></td><td>A change in the user's visited venues.</td></tr><tr><td><strong>SENTUserContextUpdateCriteriaAll</strong></td><td>All criteria applied.</td></tr></tbody></table>
 
 ##

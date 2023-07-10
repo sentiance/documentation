@@ -162,15 +162,13 @@ SDK disk quota usage
 
 Sets a delegate that will be invoked when the driving insights for a completed transport becomes ready.
 
-Note: calling this method on an uninitialized SDK will throw an SdkException.
+Note: calling this method on an uninitialized SDK will throw an NSException.
 
 ```objectivec
 @property (nonatomic, strong) id <SENTDrivingInsightsReadyDelegate> _Nullable drivingInsightsProcessedDelegate;
 ```
 
-| Parameters                       |                                                                                                                                                                              |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| drivingInsightsProcessedDelegate | A [`SENTDrivingInsightsReadyDelegate`](driving-insights/sentdrivinginsightsreadydelegate.md) to receive the driving insights. Set `nil` to remove a previously set delegate. |
+<table><thead><tr><th width="318">Parameters</th><th></th></tr></thead><tbody><tr><td>drivingInsightsProcessedDelegate</td><td>A <a href="driving-insights/sentdrivinginsightsreadydelegate.md"><code>SENTDrivingInsightsReadyDelegate</code></a> to receive the driving insights. Set <code>nil</code> to remove a previously set delegate.</td></tr></tbody></table>
 
 
 
@@ -238,10 +236,7 @@ You should initialize the SDK at most once, during app startup. Initializing it 
 unless a user does not exist yet (e.g. before user creation or after an SDK reset), in which case multiple initializations are still allowed.
 {% endhint %}
 
-| Parameter     | Description                                                                                                          |
-| ------------- | -------------------------------------------------------------------------------------------------------------------- |
-| options       | the SDK initialization options.                                                                                      |
-| launchOptions | the launch options obtained from `[AppDelegate application:application didFinishLaunchingWithOptions:launchOptions]` |
+<table><thead><tr><th width="236">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>options</td><td>the SDK initialization options.</td></tr><tr><td>launchOptions</td><td>the launch options obtained from <code>[AppDelegate application:application didFinishLaunchingWithOptions:launchOptions]</code></td></tr></tbody></table>
 
 #### Returns: [SENTInitializationResult](https://app.gitbook.com/o/-LTy4edtsWdQgbEsKB-i/s/-LTy4edu-AQHCZBbSxqI/\~/changes/-Mdvb7zVAg9mTiQeb82W/sdk/api-reference/ios/sentinitializationresult)
 
@@ -328,9 +323,7 @@ Enabling detections does not mean that the SDK is successfully able to start all
 
 To automatically disable detections after some time, use the enableDetectionsWithExpiryDate: variant of this method.
 
-{% hint style="info" %}
-method throws _**SdkException**_ if the SDK is not initialized.
-{% endhint %}
+Note: calling this method on an uninitialized SDK will throw an NSException.
 
 ```
 - (void) enableDetectionsWithCompletionHandler: (nullable SENTEnableDetectionsCompletionHandler) completionHandler;
@@ -413,7 +406,7 @@ You can only link to an app user that is new to Sentiance. This is because an ex
 
 **parameter:** [linker](user-creation-and-linking/user-linking/metauserlinker.md): the linker that the SDK will pass the installation ID to and execute success and failure closures according to result.
 
-**throws:** SdkException if the SDK is not initialized.
+**throws:** NSException if the SDK is not initialized.
 
 ```objectivec
 - (void)linkUserWithLinker: (SENTUserLinker) linker
@@ -944,9 +937,7 @@ While resetting, make sure that your app is in the foreground to prevent process
 
 You may call this method without having initialized the SDK.
 
-| Parameter         |                                                                    |
-| ----------------- | ------------------------------------------------------------------ |
-| completionHandler | a completion handler to receive the result of the reset operation. |
+<table><thead><tr><th width="219">Parameter</th><th></th></tr></thead><tbody><tr><td>completionHandler</td><td>a completion handler to receive the result of the reset operation.</td></tr></tbody></table>
 
 ```objectivec
 - (void)resetWithCompletionHandler: (nullable SENTResetCompletionHandler)completionHandler;
@@ -995,9 +986,7 @@ Sets a handler that is invoked when the SDK's status is updated.
 
 Sets a handler that is invoked when a vehicle crash diagnostic is detected.
 
-| Parameter                     |                                                                                                                    |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| vehicleCrashDiagnosticHandler | a handler to receive vehicle crash diagnostics of type [SENTVehicleCrashDiagnostic](sentvehiclecrashdiagnostic.md) |
+<table><thead><tr><th width="291">Parameter</th><th></th></tr></thead><tbody><tr><td>vehicleCrashDiagnosticHandler</td><td>a handler to receive vehicle crash diagnostics of type <a href="sentvehiclecrashdiagnostic.md">SENTVehicleCrashDiagnostic</a></td></tr></tbody></table>
 
 **throws:**  NSException if the SDK is not initialized.
 
@@ -1013,9 +1002,7 @@ This configuration is persistent across app restarts, but will be cleared upon S
 
 **Note:** this configuration is not applicable to logging and diagnostic data that may get uploaded to the Sentiance Cloud Platform (if enabled for your app).
 
-| Parameter              |                                                                               |
-| ---------------------- | ----------------------------------------------------------------------------- |
-| transmittableDataTypes | data types of type [SENTTransmittableDataType](senttransmittabledatatype.md). |
+<table><thead><tr><th width="291">Parameter</th><th></th></tr></thead><tbody><tr><td>transmittableDataTypes</td><td>data types of type <a href="senttransmittabledatatype.md">SENTTransmittableDataType</a>.</td></tr></tbody></table>
 
 **throws:**  NSException if the SDK is not initialized.
 
@@ -1041,7 +1028,7 @@ This setting is persistent across app restarts, so you only need to enable sessi
 
 Recorded sessions are stored on the device until the time that you request their deletion. See [`deleteTransportSession(String)`](sentiance.md#deletetransportsession).
 
-Note: calling this method on an uninitialized SDK will throw an SdkException.
+Note: calling this method on an uninitialized SDK will throw an NSException.
 
 ```objectivec
 - (void)enableTransportSessionRecording;
@@ -1055,7 +1042,7 @@ This setting is persistent across app restarts, so you only need to disable sess
 
 If you no longer need session recording, make sure to delete previously recorded sessions if you no longer need them. See [`deleteAllTransportSessions()`](sentiance.md#deletealltransportsessions).
 
-Note: calling this method on an uninitialized SDK will throw an SdkException.
+Note: calling this method on an uninitialized SDK will throw an NSException.
 
 ```objectivec
 - (void)disableTransportSessionRecording;
@@ -1065,7 +1052,7 @@ Note: calling this method on an uninitialized SDK will throw an SdkException.
 
 Returns a list of recorded and completed transport sessions.
 
-Note: calling this method on an uninitialized SDK will throw an SdkException.
+Note: calling this method on an uninitialized SDK will throw an NSException.
 
 ```objectivec
 - (NSArray<SENTTransportSession *> *)getAvailableTransportSessions;
@@ -1075,7 +1062,7 @@ Note: calling this method on an uninitialized SDK will throw an SdkException.
 
 Returns whether transport session recording is enabled.
 
-Note: calling this method on an uninitialized SDK will throw an SdkException.
+Note: calling this method on an uninitialized SDK will throw an NSException.
 
 ```objectivec
 - (BOOL)isTransportSessionRecordingEnabled;
@@ -1087,15 +1074,13 @@ Sets a handler that will be invoked to deliver transport sessions. A session is 
 
 Transport sessions are stored on the device until the time that you request their deletion. See [`deleteTransportSession(String)`](sentiance.md#deletetransportsession).
 
-Note: calling this method on an uninitialized SDK will throw an SdkException.
+Note: calling this method on an uninitialized SDK will throw an NSException.
 
 ```objectivec
 - (void)setTransportSessionHandler:(void (^)(SENTTransportSession *transportSession))transportSessionHandler;
 ```
 
-| Parameters              |                                                                                                                                                     |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| transportSessionHandler | A transportSessionHandler to receive [transport sessions,](transport-sessions/senttransportsession.md) or `nil` to remove a previously set handler. |
+<table><thead><tr><th width="182">Parameters</th><th></th></tr></thead><tbody><tr><td>transportSessionHandler</td><td>A transportSessionHandler to receive <a href="transport-sessions/senttransportsession.md">transport sessions,</a> or <code>nil</code> to remove a previously set handler.</td></tr></tbody></table>
 
 ### `deleteAllTransportSessions`
 
@@ -1103,7 +1088,7 @@ Deletes all recorded transport sessions.
 
 Recorded sessions are stored on the device. It is your responsibility to call this method, or [`deleteTransportSession(String)`](sentiance.md#deletetransportsession), to request their deletion, when you no longer need them.
 
-Note: calling this method on an uninitialized SDK will throw an SdkException.
+Note: calling this method on an uninitialized SDK will throw an NSException.
 
 ```objectivec
 - (void)deleteAllTransportSessions;
@@ -1115,41 +1100,46 @@ Deletes the transport session with the specified ID.
 
 Recorded sessions are stored on the device. It is your responsibility to call this method, or [`deleteAllTransportSessions`](sentiance.md#deletealltransportsessions), to request their deletion, when you no longer need them.
 
-Note: calling this method on an uninitialized SDK will throw an SdkException.
+Note: calling this method on an uninitialized SDK will throw an NSException.
 
 ```objectivec
 - (void)deleteTransportSession:(NSString *)sessionId NS_SWIFT_NAME(deleteTransportSession(sessionId:));
 ```
 
-| Parameters |                                  |
-| ---------- | -------------------------------- |
-| sessionId  | The ID of the session to delete. |
+<table><thead><tr><th width="253">Parameters</th><th></th></tr></thead><tbody><tr><td>sessionId</td><td>The ID of the session to delete.</td></tr></tbody></table>
 
-### `getDrivingInsights()`
+### `getDrivingInsights`
 
 Returns the [driving insights](driving-insights/sentdrivinginsights.md) for a given transport, or `nil` if there are no driving insights or the transport ID is invalid.
 
-Note: calling this method on an uninitialized SDK will throw an SdkException.
+Note: calling this method on an uninitialized SDK will throw an NSException.
 
 ```objectivec
 - (SENTDrivingInsights * _Nullable)getDrivingInsightsForTransportId:(NSString * _Nonnull)transportId;
 ```
 
-| Parameters  |                                  |
-| ----------- | -------------------------------- |
-| transportId | The ID of the desired transport. |
+<table><thead><tr><th width="243">Parameters</th><th></th></tr></thead><tbody><tr><td>transportId</td><td>The ID of the desired transport.</td></tr></tbody></table>
 
-### `getHarshDrivingEvents()`
+### `getHarshDrivingEvents`
 
 Returns the [harsh driving events](driving-insights/sentharshdrivingevent.md) for a completed transport.
 
-Note: calling this method on an uninitialized SDK will throw an SdkException.
+Note: calling this method on an uninitialized SDK will throw an NSException.
 
 ```objectivec
 - (NSArray<SENTHarshDrivingEvent *> * _Nonnull)getHarshDrivingEventsForTransportId:(NSString * _Nonnull)transportId; 
 ```
 
-| Parameters  |                                  |
-| ----------- | -------------------------------- |
-| transportId | The ID of the desired transport. |
+<table><thead><tr><th width="244">Parameters</th><th></th></tr></thead><tbody><tr><td>transportId</td><td>The ID of the desired transport.</td></tr></tbody></table>
 
+### `getPhoneUsageEvents`
+
+Returns the [phone usage events](driving-insights/sentphoneusageevent.md) for a completed transport.
+
+Note: calling this method on an uninitialized SDK will throw an NSException.
+
+```objectivec
+- (NSArray<SENTPhoneUsageEvent *> * _Nonnull)getPhoneUsageEventsForTransportId:(NSString * _Nonnull)transportId; 
+```
+
+<table><thead><tr><th width="244">Parameters</th><th></th></tr></thead><tbody><tr><td>transportId</td><td>The ID of the desired transport.</td></tr></tbody></table>

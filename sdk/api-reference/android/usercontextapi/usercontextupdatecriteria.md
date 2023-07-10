@@ -1,9 +1,5 @@
 # UserContextUpdateCriteria
 
-{% hint style="info" %}
-This type is part of an [Early Access](../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
-{% endhint %}
-
 Enum that represents that different types of user context.
 
 ```

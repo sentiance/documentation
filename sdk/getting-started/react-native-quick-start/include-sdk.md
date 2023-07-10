@@ -1,14 +1,14 @@
 # 1. Including the SDK
 
-## Install the 'core' module
+## React Native
 
-Run the following command in your terminal, inside the project directory:
+Install the Sentiance Core React Native module, by running the following command in your terminal, inside the project directory:
 
 ```bash
 npm install @sentiance-react-native/core
 ```
 
-The Sentiance Core React Native module should now be added to your **** project's **package.json** file.
+The module should now be added to your project's **package.json** file.
 
 {% code title="package.json" %}
 ```groovy
@@ -24,19 +24,13 @@ The Sentiance Core React Native module should now be added to your **** project'
 
 The `@sentiance-react-native/core` module must be installed before using any other Sentiance service.
 
-## iOS Setup
+## Native
 
-#### Update the Podfile
+All Sentiance modules support [autolinking](https://github.com/react-native-community/cli/blob/main/docs/autolinking.md), which is available since React Native v0.60, the minimum supported React Native version by Sentiance. Autolinking takes care of discovering and linking the native code dependencies to your project.
 
-Add the following line to the **Podfile** file in your project's **ios** directory:
+### iOS Setup
 
-{% code title="ios/Podfile" %}
-```ruby
-pod 'RNSentianceCore', :path => '../node_modules/@sentiance-react-native/core/ios'
-```
-{% endcode %}
-
-Then in the terminal, run the following command inside your project's **ios** directory:
+In the terminal, run the following command inside your project's **ios** directory:
 
 ```bash
 pod install --repo-update
@@ -58,9 +52,7 @@ More information about this custom framework can be found on [this page](../../a
 
 </details>
 
-## Android setup
-
-#### Update Project Repositories
+### Android setup
 
 Add the Sentiance maven repository to the **build.gradle** file in your project's **android** directory:
 
@@ -75,4 +67,4 @@ allprojects {
 ```
 {% endcode %}
 
-Once that's done, the Sentiance Core library needs to be linked to your project and your application needs to be rebuilt. The [autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) feature that comes with React Native 0.60 will take care of linking the library for you. Sentiance libraries are supported for React Native **0.60** and above, so you normally do not need to do any manual linking step.&#x20;
+This will allow Gradle to find and download the necessary native Sentiance SDK libraries.

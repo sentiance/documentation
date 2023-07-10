@@ -2,7 +2,7 @@
 
 ### 1. Download the SDK
 
-Download the latest Sentiance iOS SDK [v6.3.3](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK/6.3.3/SENTSDK-6.3.3.xcframework.zip).
+Download the latest Sentiance iOS SDK [6.4.0](https://sentiance-u1-sdk-downloads.s3-eu-west-1.amazonaws.com/ios/frameworks/SENTSDK/6.4.0/SENTSDK-6.4.0.xcframework.zip).
 
 ### 2. Import the Framework <a href="#manual-integration-step-2" id="manual-integration-step-2"></a>
 

@@ -1,6 +1,8 @@
 # Definitions
 
-
+{% hint style="info" %}
+Note that the driving insights feature is in [Early Access](../../../appendix/feature-production-readiness.md). The API is subject to change in the future.
+{% endhint %}
 
 ```typescript
 declare module "@sentiance-react-native/driving-insights" {
@@ -15,13 +17,26 @@ declare module "@sentiance-react-native/driving-insights" {
     /**
      * Smooth driving score, between 0 and 1, where 1 is the perfect score.
      */
-    smoothScore?: number
+    smoothScore?: number;
+    
+    /**
+     * Focused driving score, between 0 and 1, where 1 is the perfect score.
+     */
+    focusScore?: number;
   }
 
-  export interface HarshDrivingEvent {
-    time: string;
-    timeEpoch: number; // in milliseconds
-    magnitude: number; // in m/s^2
+  export interface DrivingEvent {
+    startTime: string;
+    startTimeEpoch: number; // in milliseconds
+    endTime: string;
+    endTimeEpoch: number;   // in milliseconds
+  }
+
+  export interface HarshDrivingEvent extends DrivingEvent {
+    magnitude: number
+  }
+
+  export interface PhoneUsageEvent extends DrivingEvent {
   }
 
   export interface TransportEvent {
@@ -61,6 +76,8 @@ declare module "@sentiance-react-native/driving-insights" {
     getDrivingInsights(transportId: string): Promise<DrivingInsights>;
 
     getHarshDrivingEvents(transportId: string): Promise<HarshDrivingEvent[]>;
+    
+    getPhoneUsageEvents(transportId: string): Promise<PhoneUsageEvent[]>;
   }
 
   const SentianceDrivingInsights: SentianceDrivingInsights;

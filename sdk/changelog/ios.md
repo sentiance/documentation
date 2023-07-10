@@ -1,5 +1,42 @@
 # iOS
 
+## \[6.4.0] - 10 Jul 2023
+
+{% hint style="info" %}
+**Production Readiness Update**
+
+In this release, the following features have been promoted from [Early Access](../appendix/feature-production-readiness.md) to [Production Ready](../appendix/feature-production-readiness.md):
+
+* Transport classification
+* Home & work detection
+* User segment detection
+* User's current context information
+
+See our [On-Device Features](../appendix/on-device-features.md) page for more information about these features. Detailed overview of feature production readiness can be found on [this page](../appendix/feature-production-readiness.md).
+{% endhint %}
+
+{% hint style="warning" %}
+This version includes breaking changes for some [Early Access](../appendix/feature-production-readiness.md) features.
+{% endhint %}
+
+#### Breaking
+
+* [SENTHarshDrivingEvent](../api-reference/ios/driving-insights/sentharshdrivingevent.md) now provides separate start and end dates, instead of a single event date.
+
+#### Added
+
+* Phone usage detection during vehicular transports. This feature is part of the on-device [Driving Insights](../appendix/on-device-features.md#driving-insights) feature. It uses a custom machine learning model to accurately detect phone usages. The detected events can be obtained using the [getPhoneUsageEvents](../api-reference/ios/sentiance.md#getphoneusageevents).
+* Focused driving safety score, which is calculated by taking into account the detected phone usage events during vehicular transports. See [SENTSafetyScore](../api-reference/ios/driving-insights/sentsafetyscores.md).
+
+#### Fixed
+
+* Stability improvements to the movement detection subsystem.
+* Improvements to the on-device home and work location detection.
+* Runtime warnings about the usage of `NSKeyedUnarchiveFromData`.
+* Rare crash caused by blocked the main thread during SDK initialization.
+* Excessive device storage usage during the lifetime of the SDK.
+* Compile time warnings about category method overriding a class method.
+
 ## \[6.3.3] - 21 Jun 2023
 
 #### Fixed

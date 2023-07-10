@@ -1,9 +1,5 @@
 # Event
 
-{% hint style="info" %}
-This class is part of an [Early Access](../../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
-{% endhint %}
-
 Represents an occurrence of an event that was detected for a user.
 
 ## Event API

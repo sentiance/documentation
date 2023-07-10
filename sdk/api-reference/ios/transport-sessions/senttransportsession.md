@@ -1,9 +1,5 @@
 # SENTTransportSession
 
-{% hint style="info" %}
-This class is part of an [Early Access](../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
-{% endhint %}
-
 Represents a session that was recorded during a transport. A session includes information about the transport, such as its ID and mode, in addition to a reference to the sensor data that was used to determine the mode of transport (e.g. accelerometer, location).
 
 ```objectivec

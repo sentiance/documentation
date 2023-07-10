@@ -12,5 +12,13 @@ This class is part of an [Early Access](../../../appendix/feature-production-rea
 > @Nullable Float getSmoothScore()
 > ```
 >
-> Returns smooth driving score, which is between 0 and 1, where 1 is the perfect score.
+> Returns the smooth driving score, which is between 0 and 1, where 1 is the perfect score.
+
+### `getFocusScore()`
+
+> ```java
+> @Nullable Float getFocusScore()
+> ```
+>
+> Returns the focused driving score, which is between 0 and 1, where 1 is the perfect score.
 

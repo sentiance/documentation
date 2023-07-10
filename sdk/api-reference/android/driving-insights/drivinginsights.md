@@ -6,7 +6,7 @@ This class is part of an [Early Access](../../../appendix/feature-production-rea
 
 ## DrivingInsights API
 
-### `getDrivingInsights()`
+### `getTransportEvent()`
 
 > ```java
 > TransportEvent getTransportEvent()

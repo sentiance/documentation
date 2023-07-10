@@ -1,9 +1,5 @@
 # UserContext
 
-{% hint style="info" %}
-This class is part of an [Early Access](../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
-{% endhint %}
-
 Represents the user's context during a specific moment in time. The context includes:‌
 
 * a list of recent events, such as stationaries and transports;

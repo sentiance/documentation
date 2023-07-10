@@ -1,9 +1,5 @@
 # SENTUserContextDelegate
 
-{% hint style="info" %}
-This protocol is part of an [Early Access](../../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
-{% endhint %}
-
 {% tabs %}
 {% tab title="Swift" %}
 ```swift

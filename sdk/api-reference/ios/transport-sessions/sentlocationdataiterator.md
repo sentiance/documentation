@@ -1,9 +1,5 @@
 # SENTLocationDataIterator
 
-{% hint style="info" %}
-This class is part of an [Early Access](../../../appendix/feature-production-readiness.md) feature, and is subject to change in the future.
-{% endhint %}
-
 An iterator that can be used to retrieve locations.
 
 Iterating over the locations may be expensive, so avoid doing it directly on the main application thread.
