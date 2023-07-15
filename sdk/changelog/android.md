@@ -1,5 +1,11 @@
 # Android
 
+## \[6.4.1] - 14 Jul 2023
+
+#### Fixed
+
+* On certain devices, the venue type of stationary events returned by the user context API is always set to unknown.
+
 ## \[6.4.0] - 10 Jul 2023
 
 {% hint style="info" %}
