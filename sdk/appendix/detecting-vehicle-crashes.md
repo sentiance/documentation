@@ -11,7 +11,6 @@ The Sentiance SDK can be configured to detect vehicle accidents/crashes during t
 [[SENTSDK sharedInstance] setCrashListener:^(NSDate *date, CLLocation *lastKnownLocation) {
         // Handle vehicle crash event
     }];
-
 ```
 {% endtab %}
 
@@ -26,4 +25,3 @@ sentianceSdk.setCrashCallback(new CrashCallback() {
 ```
 {% endtab %}
 {% endtabs %}
-

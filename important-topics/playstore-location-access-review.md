@@ -10,8 +10,9 @@ Effective from March 29, 2021, for existing apps, and Jan 18, 2021, for new apps
 
 [![](https://lh6.googleusercontent.com/JsIRsvqZakVDJCclutP9in0U1SO1kDNc8fp2fVnkkeQ4-0nmrPWLiOx\_7g2u7LBPftDZgRjhzz6CrS-ISihhqmmX32KKZLmhlBQRAcgtzMCxZZwW9mtKih1WldTD\_6rcpNmrJdu1)](https://www.youtube.com/watch?v=b0I1Xq\_iSK4\&feature=emb\_title)
 
-[**Google Play Policy - Declared permissions and in-app disclosures**](https://www.youtube.com/watch?v=b0I1Xq\_iSK4\&feature=emb\_title)****\
-****
+[**Google Play Policy - Declared permissions and in-app disclosures**](https://www.youtube.com/watch?v=b0I1Xq\_iSK4\&feature=emb\_title)\*\*\*\*\\
+
+
 
 ### **Review Considerations**
 
@@ -94,8 +95,9 @@ App rejection can happen if the criteria above are not met. Once an app is rejec
 
 There have been (unverified) cases reported that Google Play would suspend the account if an app is rejected consecutively for the same reason and this may incur irreversible damage to your account.
 
-This video will help [How to handle a policy violation on Google Play](https://www.youtube.com/watch?v=xjRqFbTHUOQ\&feature=youtu.be)****\
-****
+This video will help [How to handle a policy violation on Google Play](https://www.youtube.com/watch?v=xjRqFbTHUOQ\&feature=youtu.be)\*\*\*\*\\
+
+
 
 ### **References**
 
@@ -105,8 +107,8 @@ This video will help [How to handle a policy violation on Google Play](https://w
 * [Google Play Developer Policy Center](https://play.google.com/about/developer-content-policy/)
 * [Prepare your app for review - Play Console Help](https://support.google.com/googleplay/android-developer/answer/9859455?hl=en)
 * [My app has been removed from Google Play - Play Console Help](https://support.google.com/googleplay/android-developer/answer/2477981)
-* [Enforcement Process - Play Console Help](https://support.google.com/googleplay/android-developer/answer/9899234?hl=en)\
-  \
-  \
-  \
-  ****
+*   [Enforcement Process - Play Console Help](https://support.google.com/googleplay/android-developer/answer/9899234?hl=en)\
+    \
+    \
+    \\
+

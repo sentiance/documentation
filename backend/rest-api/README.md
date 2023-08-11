@@ -9,7 +9,7 @@ The base url is `https://api.sentiance.com/<version>/` for all REST endpoints, w
 For details on how to authenticate requests, have a look at the [Authentication and Authorization page](../../important-topics/authentication-and-authorization.md).
 
 {% hint style="danger" %}
-For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment.&#x20;
+For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment.
 {% endhint %}
 
 ### V2 Endpoints
@@ -18,10 +18,7 @@ For other environments, please ask your sales representative or [support@sentian
 {% swagger-description %}
 Fetches all Segment Definitions available on the platform.
 
-\
-
-
-
+\\
 
 **Does not require authentication.**
 {% endswagger-description %}
@@ -56,10 +53,7 @@ Fetches all Segment Definitions available on the platform.
 {% swagger-description %}
 Fetches all Moment Definitions available on the platform.
 
-\
-
-
-
+\\
 
 **Does not require authentication.**
 {% endswagger-description %}
@@ -90,12 +84,12 @@ Fetches all Moment Definitions available on the platform.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="" path="/v2/users/me" method="get" summary="User's Own Profile" %}
+{% swagger baseUrl="" path="/v2/users/me" method="get" summary="User" %}
 {% swagger-description %}
 When called with a User Token, returns the user's own data. It fails if an API Key is used.
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -136,22 +130,20 @@ When called with a User Token, returns the user's own data. It fails if an API K
 {% swagger-description %}
 Can be used with both User Token and API Key to retrieve profile data of a user identified by their ID.
 
-\
-
+\\
 
 If a User Token is used, the calling user must have permission to view the called user's data.
 
-\
-
+\\
 
 If an API Key is used, the user whose data is being fetched must belong to the App to which the API Key belongs to.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose profile is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -193,62 +185,44 @@ ID of the user whose profile is being retrieved.
 Returns all events on the timeline for a user from a specified start date to a specified end date.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose timeline is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="from" type="string" %}
+{% swagger-parameter in="query" name="from" type="string" required="false" %}
 Include results from this date.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Format**
 
 : YYYY-MM-DD
 
-\
-
-
-
+\\
 
 **Example**
 
 : 2019-01-01
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="to" type="string" %}
+{% swagger-parameter in="query" name="to" type="string" required="false" %}
 Include results up to this date.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Format**
 
 : YYYY-MM-DD
 
-\
-
-
-
+\\
 
 **Example**
 
@@ -308,32 +282,25 @@ Include results up to this date.
 {% swagger-description %}
 **Note: This has been deprecated in favour of EventID based retrieval.**
 
-\
-
+\\
 
 Returns a single Event corresponding to the start time of the event.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose event is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="start" type="string" %}
+{% swagger-parameter in="query" name="start" type="string" required="false" %}
 ISO Formatted Date String. Event fetched is the one that matches this timestamp.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Example**
 
@@ -381,29 +348,23 @@ ISO Formatted Date String. Event fetched is the one that matches this timestamp.
 **Note: This has been deprecated in favour of EventID based retrieval. Check below.**
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="start" type="string" %}
+{% swagger-parameter in="path" name="start" type="string" required="false" %}
 ISO Formatted Date String. Transport whose Trajectories are fetched is the one that matches this timestamp.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Example**
 
 : 2019-02-22T08:37:45.000+01:00
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -453,29 +414,23 @@ ISO Formatted Date String. Transport whose Trajectories are fetched is the one t
 **Note: This has been deprecated in favour of EventID based retrieval. Check below.**
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="start" type="string" %}
+{% swagger-parameter in="path" name="start" type="string" required="false" %}
 ISO Formatted Date String. Transport whose Behavior Scores are fetched is the one that matches this timestamp.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Example:**
 
- 2019-02-22T08:37:45.000+01:00
+2019-02-22T08:37:45.000+01:00
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -504,29 +459,23 @@ ISO Formatted Date String. Transport whose Behavior Scores are fetched is the on
 **Note: This has been deprecated in favor of EventID based retrieval. Check below.**
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="start" type="string" %}
+{% swagger-parameter in="path" name="start" type="string" required="false" %}
 ISO Formatted Date String. Transport whose Behavior Annotations are fetched is the one that matches this timestamp.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Example**
 
 : 2019-02-22T08:37:45.000+01:00
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -604,16 +553,16 @@ ISO Formatted Date String. Transport whose Behavior Annotations are fetched is t
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="" path="/v2/users/:user_id/segments" method="get" summary="User's Segments" %}
+{% swagger baseUrl="" path="/v2/users/:user_id/segments" method="get" summary="User" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -640,62 +589,44 @@ ID of the user whose data is being retrieved.
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="from" type="string" %}
+{% swagger-parameter in="query" name="from" type="string" required="false" %}
 Include results from this date.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Format**
 
 : YYYY-MM-DD
 
-\
-
-
-
+\\
 
 **Example**
 
 : 2019-03-21
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="to" type="string" %}
+{% swagger-parameter in="query" name="to" type="string" required="false" %}
 Include results up to this date.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Format**
 
 : YYYY-MM-DD
 
-\
-
-
-
+\\
 
 **Example**
 
@@ -729,11 +660,11 @@ Include results up to this date.
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -780,11 +711,11 @@ ID of the user whose data is being retrieved.
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -847,11 +778,11 @@ ID of the user whose data is being retrieved.
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -872,11 +803,11 @@ ID of the user whose data is being retrieved.
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -1059,62 +990,44 @@ ID of the user whose data is being retrieved.
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="from" type="string" %}
+{% swagger-parameter in="query" name="from" type="string" required="false" %}
 Include results from this date.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Format**
 
 : YYYY-MM-DD
 
-\
-
-
-
+\\
 
 **Example**
 
 : 2019-03-21
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="to" type="string" %}
+{% swagger-parameter in="query" name="to" type="string" required="false" %}
 Include results up to this date.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Format**
 
 : YYYY-MM-DD
 
-\
-
-
-
+\\
 
 **Example**
 
@@ -1187,21 +1100,24 @@ Include results up to this date.
 {% swagger-description %}
 Used to link an Install ID to your system's UserID. The JSON body should contain a single parameter as described below.
 
-\
-
+\\
 
 Check out the guide for further details on how User Linking work and how it can benefit you.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="install_id" type="string" %}
+{% swagger-parameter in="path" name="install_id" type="string" required="false" %}
 The ID of the user returned by the SDK into the Linker's callback function.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Unlike other endpoints, which can be called with both a user token and an API Key, this endpoint can ONLY be called with an API Key with `user.link` scope. User tokens will be rejected.
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+Unlike other endpoints, which can be called with both a user token and an API Key, this endpoint can ONLY be called with an API Key with 
+
+`user.link`
+
+ scope. User tokens will be rejected.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="external_id" type="string" %}
+{% swagger-parameter in="body" name="external_id" type="string" required="false" %}
 This is the unique ID of the user in your system.
 {% endswagger-parameter %}
 
@@ -1265,19 +1181,19 @@ This is the unique ID of the user in your system.
 Returns a single Event based on the type and ID provided.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose event is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="event_id" type="string" %}
-ID of the event being retrieved. This will be present in the 
+{% swagger-parameter in="path" name="event_id" type="string" required="false" %}
+ID of the event being retrieved. This will be present in the
 
-**event_id**
+**event\_id**
 
- field of the 
+field of the
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -1322,15 +1238,15 @@ ID of the event being retrieved. This will be present in the
 Retrieve Trajectories of a Transport by its EventID.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="event_id" type="string" %}
+{% swagger-parameter in="path" name="event_id" type="string" required="false" %}
 ID of the Transport whose Trajectories are being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -1380,15 +1296,15 @@ ID of the Transport whose Trajectories are being retrieved.
 Retrieve Behavior Scores of a Transport by its EventID.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="event_id" type="string" %}
+{% swagger-parameter in="path" name="event_id" type="string" required="false" %}
 ID of the Transport whose Behavior Scores are being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -1417,15 +1333,15 @@ ID of the Transport whose Behavior Scores are being retrieved.
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="event_id" type="string" %}
+{% swagger-parameter in="path" name="event_id" type="string" required="false" %}
 ID of the Transport whose Behavior Annotations are being retrieved.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 
 {% endswagger-parameter %}
 
@@ -1505,97 +1421,72 @@ ID of the Transport whose Behavior Annotations are being retrieved.
 
 {% swagger baseUrl="" path="/v3/users/:user_id/aggregated_driving_scores" method="get" summary="Time Aggregated Driving Scores " %}
 {% swagger-description %}
-Retrieve the time aggregated scores of a user, i.e. 
+Retrieve the time aggregated scores of a user, i.e.
 
 **daily**
 
-, 
+,
 
 **weekly**
 
-, 
+,
 
 **monthly**
 
- or 
+or
 
 **all**
 
- aggregated scores. The API can be used with or without a date parameter. If no date parameter is given, the API will default to the last available (ongoing) day, week or month. The 
+aggregated scores. The API can be used with or without a date parameter. If no date parameter is given, the API will default to the last available (ongoing) day, week or month. The
 
 **all**
 
- score will aggregate all available scores (max. 9 weeks).
+score will aggregate all available scores (max. 9 weeks).
 
-\
+\\
 
-
-
-
-\
-
+\\
 
 The date parameter accepts either the 1st day of the week (Monday) or the 1st day of the month for type: week and type: month respectively.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 _Note: this endpoint is available on the EU platform only._
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="type" type="string" %}
+{% swagger-parameter in="path" name="type" type="string" required="false" %}
 Type of aggregated scores you want to retrieve.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Accepts:**
 
- day, week, month, all.
+day, week, month, all.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="date" type="string" %}
-Optional: if you want to retrieve aggregated scores for a different period than the current one. 
+{% swagger-parameter in="path" name="date" type="string" required="false" %}
+Optional: if you want to retrieve aggregated scores for a different period than the current one.
 
-\
+\\
 
-
-
-
-\
-
-
-
+\\
 
 **Format:**
 
- YYYY-MM-DD
+YYYY-MM-DD
 
-\
-
-
-
+\\
 
 **Accepts:**
 
- any day, any monday, any 1st of month.
+any day, any monday, any 1st of month.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
 A user token or an API Key with scope 'user.read'.
 {% endswagger-parameter %}
 
@@ -1700,12 +1591,16 @@ A user token or an API Key with scope 'user.read'.
 Deletes the user data along with the history.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="user_id" type="string" %}
+{% swagger-parameter in="path" name="user_id" type="string" required="false" %}
 ID of the user whose data is to be deleted.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-A user token or an API Key with `user.delete` scope
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+A user token or an API Key with 
+
+`user.delete`
+
+ scope
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}

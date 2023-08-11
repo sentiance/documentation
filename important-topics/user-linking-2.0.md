@@ -28,9 +28,9 @@ The user linking process below will clarify both the in-app calls to your backen
 
 As we mentioned above, user linking requires setting up both in-app calls to your backend and server-to-server communication from your backend to our backend. We recommend starting with the app-side integration.
 
-### **Before you start**&#x20;
+### **Before you start**
 
-User linking should automatically be enabled for your app. If you think you are not getting the right response(s) from our database, it is worth double-checking if it is enabled by sending a quick mail to [support@sentiance.com](mailto:%20support@sentiance.com).&#x20;
+User linking should automatically be enabled for your app. If you think you are not getting the right response(s) from our database, it is worth double-checking if it is enabled by sending a quick mail to [support@sentiance.com](mailto:%20support@sentiance.com).
 
 ![](<../.gitbook/assets/Screenshot 2020-05-04 at 18.29.54.png>)
 
@@ -60,22 +60,21 @@ The user linking process on the app-side involves the following steps:
 2. Receive the unique install id from the SDK in the MetaUserLinker
 3. Send that install id to your own backend.
 4. Link the install id to your external user id in your own database
-5. __[_(Server-to-server)_](https://docs.sentiance.com/guide/user-linking-2.0#server-to-server-integration-api) _Make linking request from your to Sentiance back-end_
+5. \_\_[_(Server-to-server)_](https://docs.sentiance.com/guide/user-linking-2.0#server-to-server-integration-api) _Make linking request from your to Sentiance back-end_
 6. Call **linkSuccess()/onSuccess()** or return **link(true)**
 
 It is important to mention that the linking request in step 5 has to be completed (e.g. executed synchronously) before indicating to the SDK that the linking request has been successful.
 
-You can find more details on each step below. After you have finished these steps, there are a few more steps involved for the actual server-to-server communication. You can find these in the next chapter.\
-
+You can find more details on each step below. After you have finished these steps, there are a few more steps involved for the actual server-to-server communication. You can find these in the next chapter.\\
 
 ### **Receive the unique install id from the SDK**
 
-The first step involves receiving the install id from the SDK so you can send it to your backend in the next step. The SDK will pass the install ID to the following method. In this method, you must initiate a link request towards the Sentiance API (via your server), supplying the install ID and the external user ID. On iOS, you need to call either `linkSuccess` or `linkFailed` to capture whether the request was successful. On Android, the `link` method of your [`MetaUserLinker`](../sdk/api-reference/android/metauserlinker.md) object will expect either a `true` or `false` returned from it. Alternatively, if you use [`MetaUserLinkerAsync`](../sdk/api-reference/android/metauserlinkerasync.md), you can initiate linking asynchronously and inform the SDK of the result by calling the [`MetaUserLinkerCallback`](../sdk/api-reference/android/metauserlinkercallback.md) object's `onSuccess` or `onFailure` method. [Read more about these calls here. ](https://docs.sentiance.com/sdk/appendix/user-linking#usage)
+The first step involves receiving the install id from the SDK so you can send it to your backend in the next step. The SDK will pass the install ID to the following method. In this method, you must initiate a link request towards the Sentiance API (via your server), supplying the install ID and the external user ID. On iOS, you need to call either `linkSuccess` or `linkFailed` to capture whether the request was successful. On Android, the `link` method of your [`MetaUserLinker`](../sdk/api-reference/android/metauserlinker.md) object will expect either a `true` or `false` returned from it. Alternatively, if you use [`MetaUserLinkerAsync`](../sdk/api-reference/android/metauserlinkerasync.md), you can initiate linking asynchronously and inform the SDK of the result by calling the [`MetaUserLinkerCallback`](../sdk/api-reference/android/metauserlinkercallback.md) object's `onSuccess` or `onFailure` method. [Read more about these calls here.](https://docs.sentiance.com/sdk/appendix/user-linking#usage)
 
 ![Receive the install id from the SDK in the user MetaUserLinker() method.](<../.gitbook/assets/Screenshot 2020-05-04 at 18.38.38.png>)
 
 {% hint style="warning" %}
-To know if you need to return either a success or failure (see following), you will need to do the server-side integration first (see following sections). Only if you receive a ‘success’ response from our server, has linking actually been successful and can you call the linking success method. &#x20;
+To know if you need to return either a success or failure (see following), you will need to do the server-side integration first (see following sections). Only if you receive a ‘success’ response from our server, has linking actually been successful and can you call the linking success method.
 {% endhint %}
 
 {% tabs %}
@@ -137,21 +136,21 @@ During initialization, the SDK will call the [`link(String)`](../sdk/api-referen
 
 ### **Send that install id to your own backend**
 
-As mentioned in the previous section, the call to your back-end should happen in the metaUserLinking() method. How you make this call depends entirely on your own preferences and there are numerous ways of doing this.&#x20;
+As mentioned in the previous section, the call to your back-end should happen in the metaUserLinking() method. How you make this call depends entirely on your own preferences and there are numerous ways of doing this.
 
 ### **Link the install id to your external user id**
 
 Like the previous step, there are numerous ways of linking the install id to the external id in your backend. The resulting data structure should look something like this:
 
-**Adding new install id’s to a new column every time there is a new install.**&#x20;
+**Adding new install id’s to a new column every time there is a new install.**
 
-| ****               |                          |                  |                   |
-| ------------------ | ------------------------ | ---------------- | ----------------- |
-| Install id (old  ) | Install id (most recent) | External user id | Sentiance user id |
+| \*\*\*\*          |                          |                  |                   |
+| ----------------- | ------------------------ | ---------------- | ----------------- |
+| Install id (old ) | Install id (most recent) | External user id | Sentiance user id |
 
-**Replacing the install id every time there is a new install.**&#x20;
+**Replacing the install id every time there is a new install.**
 
-| ****       |                  |                   |
+| \*\*\*\*   |                  |                   |
 | ---------- | ---------------- | ----------------- |
 | Install id | External user id | Sentiance user id |
 
@@ -165,8 +164,8 @@ The server-side integration will make sure the install id and the external id yo
 
 The call requires you to share both the **install id** and the **external user id** for that user. When received by our back-end, either one of three things can happen:
 
-1. The external id **is recognized by our backend** and we now link the new install id to the existing sentiance user id. You will get back the sentiance user id.&#x20;
-2. The external id **is not recognized by our backend** and we now assume you are trying to create a new user. Any subsequent linking call for that same external user id will now be linked to the now created sentiance user id. You will get back the sentiance user id.&#x20;
+1. The external id **is recognized by our backend** and we now link the new install id to the existing sentiance user id. You will get back the sentiance user id.
+2. The external id **is not recognized by our backend** and we now assume you are trying to create a new user. Any subsequent linking call for that same external user id will now be linked to the now created sentiance user id. You will get back the sentiance user id.
 3. The install id **is not recognized as belonging to this application**. You will be denied from linking to this install id and be returned a 403 (or 404 if the install id does not exist).
 
 {% swagger baseUrl="" path=" /v2/users/:install_id/link" method="post" summary="User link" %}
@@ -174,15 +173,19 @@ The call requires you to share both the **install id** and the **external user i
 Used to link an Install ID to your system's UserID. The JSON body should contain a single parameter as described below.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="install_id" type="string" %}
+{% swagger-parameter in="path" name="install_id" type="string" required="false" %}
 The unique id of the install returned by the SDK in the linker callback method (install id).
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="authorization" type="string" %}
-This endpoint can ONLY be called with an API Key with `user.link` scope. User tokens will be rejected.
+{% swagger-parameter in="header" name="authorization" type="string" required="false" %}
+This endpoint can ONLY be called with an API Key with 
+
+`user.link`
+
+ scope. User tokens will be rejected.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="external_id" type="string" %}
+{% swagger-parameter in="body" name="external_id" type="string" required="false" %}
 The unique id used by your backend to identify a user (external user id).
 {% endswagger-parameter %}
 
@@ -206,7 +209,6 @@ Making this call will require the use of a [valid API Key](https://docs.sentianc
 * Use certificate pinning if possible.
 * Use Android's SafetyNet Attestation to verify that requests to your server are coming from a certified apk.
 
-### **All of this comes together in the following diagram.**&#x20;
+### **All of this comes together in the following diagram.**
 
 ![](../.gitbook/assets/user-linkling.png)
-

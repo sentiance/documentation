@@ -13,7 +13,7 @@ We adhere to the [GraphQL specification](https://graphql.org/learn/serving-over-
 Since it is possible for a single HTTP request to encompass multiple GraphQL queries with some of them succeeding and some of them failing, the endpoint always returns a 200 OK, unless something severe enough happens on the server-side to guarantee failure of the entire response (such as a 500 status code). After checking for the 200 status code, please also check the body of the response for `data` and `error` properties.
 
 {% hint style="danger" %}
-For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment.&#x20;
+For other environments, please ask your sales representative or [support@sentiance.com](mailto:support@sentiance.com) for the custom endpoint linked to your environment.
 {% endhint %}
 
 {% swagger baseUrl="https://api.sentiance.com" path="/v2/gql" method="post" summary="GQL Request" %}
@@ -21,19 +21,19 @@ For other environments, please ask your sales representative or [support@sentian
 
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer <token>
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+Bearer
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Content-Type" type="string" %}
+{% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}
 application/json
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="query" type="string" %}
+{% swagger-parameter in="body" name="query" type="string" required="false" %}
 The GraphQL query.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="variables" type="object" %}
+{% swagger-parameter in="body" name="variables" type="object" required="false" %}
 A flat JSON object describing the variables to substitute in the query.
 {% endswagger-parameter %}
 
@@ -177,12 +177,11 @@ fragment TypeRef on __Type {
     }
   }
 }
-
 ```
 
 ## Examples
 
-Some examples of various GQL queries with example response are presented here. With GraphQL you can fetch as much or as little as you wish.&#x20;
+Some examples of various GQL queries with example response are presented here. With GraphQL you can fetch as much or as little as you wish.
 
 ### Moment Definitions
 
@@ -353,4 +352,3 @@ RESPONSE
   }
 }
 ```
-

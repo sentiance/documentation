@@ -1,9 +1,7 @@
 # React Native Quick Start
 
-
-
 {% hint style="success" %}
-### Platform requirements
+#### Platform requirements
 
 The Sentiance React Native Module works on React Native 0.59 and above. Apps should be built with the latest React Native version.
 

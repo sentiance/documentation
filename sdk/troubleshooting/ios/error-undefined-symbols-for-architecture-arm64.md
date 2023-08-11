@@ -17,4 +17,3 @@ It means that framework is not included. Please check [step 1 in the iOS Quick s
 4. Open **Link Binary With Libraries**
 5. Press **+** to Add the **SENTSDK.framework** (use **Add Other** button if needed)
 
-****

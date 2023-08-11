@@ -2,7 +2,7 @@
 
 ## What is the Sentiance Platform?
 
-The Sentiance Platform helps to improve your app's user experience by learning and anticipating key moments that matter for end users.
+The Sentiance Platform helps to improve your app's user experience by learning and anticipating key moments that matter for end users. Yolo.
 
 This is how it's done.
 
@@ -10,7 +10,7 @@ First, GPS and motion sensor data from a user's phone or IOT devices is collecte
 
 ![](.gitbook/assets/platform.png)
 
-Once the data is collected, we turn this into valuable insights about the user, grouped into EVENTS, MOMENTS, and SEGMENTS.&#x20;
+Once the data is collected, we turn this into valuable insights about the user, grouped into EVENTS, MOMENTS, and SEGMENTS.
 
 In other words, we give you an understanding of where the user likes to go, what the user likes to do, and provide an insight into the persona of the user.
 
@@ -27,7 +27,7 @@ In other words, we give you an understanding of where the user likes to go, what
 
 ## API for all your needs
 
-We offer two types of API endpoints. A [REST API](backend/rest-api/) that covers common requests with pre-built resources and a [GraphQL API ](backend/graphql.md)that  covers more complex, customized use cases.
+We offer two types of API endpoints. A [REST API](backend/rest-api/) that covers common requests with pre-built resources and a [GraphQL API ](backend/graphql.md)that covers more complex, customized use cases.
 
 ## Demo App
 

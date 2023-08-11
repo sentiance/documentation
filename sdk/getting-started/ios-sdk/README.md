@@ -1,7 +1,7 @@
 # iOS Quick Start
 
 {% hint style="success" %}
-### Platform requirements
+#### Platform requirements
 
 The Sentiance SDK requires iOS 9.0 or higher. Apps should be built with the latest iOS SDK provided by Apple/Xcode.
 
