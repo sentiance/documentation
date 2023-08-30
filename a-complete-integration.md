@@ -4,13 +4,17 @@ description: High level integration guide
 
 # A standard integration
 
+{% hint style="danger" %}
+This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com.
+{% endhint %}
+
 ## Get important updates on bug fixes, changes and new features.
 
 [Subscribe to our Technical Release Notes](https://sentiance.us4.list-manage.com/subscribe/post?u=20d6a5a74b902f67b939e3648\&amp;id=cdc37b7e30\&name=).
 
 ## Getting data on the platform
 
-The first step should always be to start with the [SDK integration](sdk/getting-started/). In our experience this is where most issues pop-up that take some time to resolve.&#x20;
+The first step should always be to start with the [SDK integration](sdk/getting-started/). In our experience this is where most issues pop-up that take some time to resolve.
 
 Our guide(s) are pretty extensive and should get you to a correct integration. But running over [the validation page](guide/verifying-your-integration.md) and sending us your integration code is usually a good way to prevent unexpected behaviour.
 
@@ -38,4 +42,4 @@ Use the [firehose](guide/firehose.md) integration. If you need your data as quic
 
 **For analytics // Batch**
 
-Refer to the offloads. The offloads are a file based system that put a dozen or so files on a regular interval on a dedicated S3 bucket. The files will contain all of the data for all of your users. These are ideal to push into your own data crunching platform or to get a quick global overview of your population.&#x20;
+Refer to the offloads. The offloads are a file based system that put a dozen or so files on a regular interval on a dedicated S3 bucket. The files will contain all of the data for all of your users. These are ideal to push into your own data crunching platform or to get a quick global overview of your population.
