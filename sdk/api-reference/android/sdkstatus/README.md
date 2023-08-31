@@ -1,5 +1,7 @@
 # SdkStatus
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 This class exposes the status of the Sentiance SDK. You can get an instance of this object in two ways.
 
 * Using [`OnSdkStatusUpdateHandler`](../onsdkstatusupdatehandler.md) as explained in the [SDK Status Updates](../../../getting-started/android-sdk/sdk-status-updates.md) step of the quick start guide;

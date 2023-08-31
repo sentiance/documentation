@@ -1,5 +1,7 @@
 # User Linking
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 User Linking can be used to connect your app’s user to a Sentiance user in a deeper way.
 
 A user in the Sentiance Platform is identified by a unique **userID**. An SDK instance \(or an app install\) on the other hand is identified by its **install-ID**. By default, every new installation gets its own install and user IDs. However, it is possible to link the installation to an existing user.

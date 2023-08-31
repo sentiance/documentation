@@ -1,5 +1,7 @@
 # SDK Initialization
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 ## What Does Initialization Do?
 
 During initialization, the Sentiance SDK will construct all the components necessary to do detections, networking, and maintenance work.

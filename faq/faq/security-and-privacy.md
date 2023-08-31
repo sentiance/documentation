@@ -6,6 +6,8 @@ description: >-
 
 # Security, Privacy and Terms of Service (FAQ)
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 ## How to set up MFA for logging in on Insights as a Business User?
 
 Any user who has Spectator or Developer access to an account, will have to set up their Business User. Business Users have the same type of access, but use a more secure type of authentication and log in through the Business Portal on Insights.&#x20;

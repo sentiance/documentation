@@ -1,5 +1,7 @@
 # Sample Notification
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 The example below shows how to create a notification that can be passed to [`SdkConfig.Builder`](../../../api-reference/android/sdkconfig/sdkconfig-builder.md). We use the `android.support.v7.app.NotificationCompat` class to build a notification suitable for both old and new Android versions.
 
 The notification channel, necessary for Android 8 and above, has the channel importance set to `IMPORTANCE_LOW`, the minimum [recommended](https://developer.android.com/reference/android/app/NotificationManager#IMPORTANCE_MIN) by Google for notifications used for running services.

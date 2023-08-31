@@ -4,6 +4,8 @@ description: An optional interactive guide for integrating the Sentiance SDK
 
 # Using Integration Guide
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 Sentiance SDK is shipped with an optional feature to guide you through your integration process in an interactive way from Xcode. The Integration Guide diagnoses Sentiance SDK integration from Xcode during build and alerts upon issue discovery.
 
 {% hint style="warning" %}

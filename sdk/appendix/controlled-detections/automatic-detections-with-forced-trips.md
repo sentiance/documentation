@@ -1,5 +1,7 @@
 # Automatic Detections with Forced Trips
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 While in [automatic detection mode](automatic-detections.md), the SDK can be forced to start a trip. Doing so will prevent the SDK from detecting stationary moments and force it to continue collecting trip data until the trip is explicitly stopped.
 
 Once the forced trip is stopped, the SDK will resume automatic detections.

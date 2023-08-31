@@ -1,5 +1,7 @@
 # Notification Management
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 When specifying a channel/priority for the SDK notification, use a separate channel/priority configured to show non-intrusive notifications. When the SDK is running, your application should show a subtle notification icon, with an appropriate message informing your users about the ongoing detection.
 
 Setting the channel importance to `IMPORTANCE_LOW` and the notification priority to `PRIORITY_MIN` will create notifications that do not pop up in front of the user, or cause sounds and device vibrations. The goal is to not distract the user every time the Sentiance SDK runs, as this will cause frustration and lead to eventual app removal.

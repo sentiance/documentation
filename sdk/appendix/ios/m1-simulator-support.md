@@ -1,5 +1,7 @@
 # M1 Simulator Support
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 It's possible to build your Sentiance integrated app for the M1 Mac Simulator.
 
 The SDK framework includes support for the arm64 simulator architecture, which is the target architecture for the M1 Mac simulator. However, the SDK has a dependency on TensorFlow Lite (TFL) v2.7.0, which does not support arm64 simulators. Support was added in v2.9.1.
