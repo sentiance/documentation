@@ -1,6 +1,6 @@
 # Privacy Report & Dashboard
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 A personal device and the apps need to gain trust from its users when it comes to personal and sensitive information. In iOS 15 and Android 12, both Apple and Google are expanding their commitment to privacy and data access transparency to their users and Sentiance welcomes this change.
 

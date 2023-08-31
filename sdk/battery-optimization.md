@@ -6,7 +6,7 @@ description: >-
 
 # Battery Optimization
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 [Don't Kill My App](https://dontkillmyapp.com/) \(No affiliation to [Sentiance](https://sentiance.com)\) keeps track of different manufacturers' practices on battery optimization techniques that severely restrict how your app can run in the background and the potential solutions. 
 

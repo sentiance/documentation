@@ -1,6 +1,6 @@
 # 2. Configuration
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 To initialize the Sentiance SDK, you first need to prepare a configuration object of type [`SdkConfig`](../../../api-reference/android/sdkconfig/) that includes your Sentiance appID and secret key. Head over to the [apps section](https://developers.sentiance.com/apps) of your developer account to grab these.
 

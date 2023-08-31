@@ -1,6 +1,6 @@
 # PlayStore Location Access Review
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 For a general app review preparation information, please refer to [Prepare your app for review - Play Console Help](https://support.google.com/googleplay/android-developer/answer/9859455?hl=en)
 
