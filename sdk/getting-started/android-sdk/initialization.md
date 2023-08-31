@@ -1,6 +1,6 @@
 # 3. Initialization
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 Initialization is a very important step; before initialization, none of the methods on the Sentiance SDK interface will work, with the exception of [`getInstance()`](../../api-reference/android/sentiance.md#getinitstate), [`init()`](../../api-reference/android/sentiance.md#init) and [`getInitState()`](../../api-reference/android/sentiance.md#getinitstate).
 

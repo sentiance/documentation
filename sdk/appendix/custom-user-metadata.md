@@ -1,6 +1,6 @@
 # Custom User Metadata
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 Custom metadata allows you to store text-based key-value user properties into the Sentiance Platform. These keys and values are treated as opaque strings and are meant for retrieval only. There is a limit of 50 properties per user and a limit of 500 characters for keys and values.
 

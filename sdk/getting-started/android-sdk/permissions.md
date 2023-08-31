@@ -1,6 +1,6 @@
 # 6. Permissions
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 To do proper detections, the Sentiance SDK requires a few permissions to be granted by the user at application runtime. The SDK does not ask for these permissions itself. Instead, after explaining to the user why you need each permission, you must present the permission dialogs as part of your application's flow.
 

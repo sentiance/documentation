@@ -1,6 +1,6 @@
 # Moments
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 Moments bring meaning and context to what a user is doing. You can use these Moments to build a better and more contextual user experience. Multiple Moments can be active at the same time.
 

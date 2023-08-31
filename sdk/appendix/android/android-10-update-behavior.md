@@ -1,6 +1,6 @@
 # Android 10 Update Behavior
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 If you are still targeting API level 28 or lower, read the following information to understand the impact of upgrading to Android 10 on the location and activity recognition permissions.
 

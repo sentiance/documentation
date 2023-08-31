@@ -1,6 +1,6 @@
 # Android Battery Optimization
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 When running the SDK on Android 6 and higher, it is recommended to ask the user to disable battery optimization for your app. This makes sure that SDK detections continue to work properly when the device is in Doze mode. This is particularly important with manufacturers like OnePlus and Nokia (HMD Global) who customize Android to do aggressive battery optimization, keeping the device in Doze mode longer than intended.
 

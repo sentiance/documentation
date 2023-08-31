@@ -4,7 +4,7 @@ description: Technical document
 
 # iOS 13 permission changes
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 Please refer to the document below in order to get a high-level overview about the changes iOS 13 brings to location permissions.
 

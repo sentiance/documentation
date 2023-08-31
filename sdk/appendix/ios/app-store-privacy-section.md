@@ -4,7 +4,7 @@ description: Details about the impact of our SDK on the iOS App Store Privacy Se
 
 # App Store Privacy Section
 
-'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
 
 The iOS App Store requires developers to include details about the data they capture and what they do with it, in the app's privacy section.&#x20;
 
