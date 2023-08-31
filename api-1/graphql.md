@@ -1,5 +1,7 @@
 # GraphQL
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 Our API primarily speaks [GraphQL](https://graphql.org/learn/) \(GQL, for short\). While explaining how GraphQL works is beyond the scope of this guide, there are excellent resources available on the interwebs.
 
 Here we will introduce the basic request response structure of the Sentiance GraphQL API.

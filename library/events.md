@@ -1,5 +1,7 @@
 # Events
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 Situational events describe what a user is doing. Events are derived from time, location and motion data.\
 They are available as a timeseries of stationaries and transports with duration.
 

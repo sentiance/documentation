@@ -6,6 +6,8 @@ description: >-
 
 # Integration \(FAQ\)
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 ## How do I know if the integration was successful?
 
 We always suggest to our clients to collect data from as many users as possible for at least a few days and then compare with our Journeys app for ground-truth. When the timelines in your app and Journeys look the same, you can be fairly confident that the integration was successful. For more detailed steps, look [here](https://docs.sentiance.com/guide/verifying-your-integration).

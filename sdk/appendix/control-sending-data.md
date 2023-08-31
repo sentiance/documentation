@@ -1,5 +1,7 @@
 # Control Sending Data
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 The Sentiance SDK optimizes under which circumstances data submission occurs, to optimize network and battery usage.
 
 For certain users with specific usage patterns (e.g. someone who rarely connects to Wi-Fi), it could take a long time before detections are finally submitted.

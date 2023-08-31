@@ -1,5 +1,7 @@
 # REST API Reference
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 All endpoints speak JSON. A `Content-Type` header with value `application/json` is expected to always be present.
 
 The base url is `https://api.sentiance.com/<version>/` for all REST endpoints, where the currently supported versions are `v2` and `v3`. `v1` has been fully deprecated. Note that not all APIs are common between `v2` and `v3` versions.

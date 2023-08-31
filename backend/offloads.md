@@ -7,6 +7,8 @@ description: >-
 
 # Offloads
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 ## What are offloads
 
 The Sentiance platform provides multiple ways to access and analyse your end-users data. The offloads are our take on a _(csv)_ file based system. Offloads will usually contain all data for all of your users for a specific timeframe _(By default this will be a 9 week sliding window.)_ More detailed descriptions of the fields and data are available [below](offloads.md#Offloads-Drivingoffloads-5).

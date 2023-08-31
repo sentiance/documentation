@@ -1,5 +1,7 @@
 # 3. Usage
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 You can use the SDK calls in your App code in both Swift and Objective-C. If your app is written in Swift, You will need to add a bridging header \(if you don't have one already in your project\).
 
 Import SENTSDK public header in your bridging header file to access the SDK:

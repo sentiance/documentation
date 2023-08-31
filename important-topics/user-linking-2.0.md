@@ -4,6 +4,8 @@ description: Allow users to switch devices without losing their data.
 
 # User linking
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 ### What is user linking?
 
 User linking is our way of linking the unique user identifier in your database to a unique user identifier in our database. This is needed to keep track of users when they switch from one device to another or when multiple users use the same device.

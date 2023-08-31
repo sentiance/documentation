@@ -1,5 +1,7 @@
 # 4. Starting Detections
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 By starting detections, the Sentiance SDK will intelligently detect a user's real-world movements while collecting sensor, location, and motion activity data.
 
 Starting detections is only allowed after a successful initialization. Ideally, this step is done immediately after initialization succeeds, as this will guarantee that the SDK is detecting as early and often as possible.

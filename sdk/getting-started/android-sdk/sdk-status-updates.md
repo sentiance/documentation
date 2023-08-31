@@ -1,5 +1,7 @@
 # 5. SDK Status Updates
 
+'{% hint style='danger' %} This document refers to deprecated parts of the platform and has been left intact to help customers with legacy integrations. In order to access the latest platform features and documentation, please go to https://docs.sentiance.com. {% endhint %}
+
 This step is optional, but recommended if you want to be kept up-to-date with changes to the SDK detection status. Status updates are usually triggered by changes to the device state and settings \(e.g. airplane mode, location permission/mode, etc.\). Handling these updates gives you the chance to instruct your user, when applicable, to properly adjust the device configuration for optimal SDK detections.
 
 To get notified of status updates, implement the [`OnSdkStatusUpdatehandler`](../../api-reference/android/onsdkstatusupdatehandler.md) interface:
