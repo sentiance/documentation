@@ -9,11 +9,6 @@ Enum that represents that different types of user context.
 CURRENT_EVENT,
 
 /**
- * A change in the user's active moments.
- */
-ACTIVE_MOMENTS,
-
-/**
  * A change in the user's active segments.
  */
 ACTIVE_SEGMENTS,
